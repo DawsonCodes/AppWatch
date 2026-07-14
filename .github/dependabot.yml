@@ -4,14 +4,25 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # One combined PR per week instead of one PR per package.
     groups:
-      dev-dependencies:
-        dependency-type: development
+      npm-dependencies:
+        patterns: ['*']
         update-types: [minor, patch]
-    open-pull-requests-limit: 5
+    ignore:
+      # Major version bumps are handled manually. In particular, TypeScript
+      # majors must stay within typescript-eslint's supported range, and
+      # @types/node must match the Node version the workflows run on.
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    open-pull-requests-limit: 3
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
-    open-pull-requests-limit: 5
+    # One combined PR for all action bumps.
+    groups:
+      github-actions:
+        patterns: ['*']
+    open-pull-requests-limit: 2
