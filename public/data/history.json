@@ -1,4 +1,61 @@
 {
   "schemaVersion": 1,
-  "entries": {}
+  "entries": {
+    "apple:324715238": [
+      {
+        "version": "8.2.1",
+        "releaseDate": "2026-07-08T22:15:48.000Z",
+        "releaseNotes": "An archive of past games is now available in \"Which came first?\", so you can go back and play any round you missed. Find it after completing your daily game. A bug was also addressed, where BC dates were displaying incorrectly within the game.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "google:org.wikipedia": [
+      {
+        "version": "50597-r-2026-07-06",
+        "releaseDate": "2026-07-07T17:39:05.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "apple:570060128": [
+      {
+        "version": "7.131.0",
+        "releaseDate": "2026-07-13T16:31:13.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "apple:874139669": [
+      {
+        "version": "8.19.1",
+        "releaseDate": "2026-07-11T02:55:45.000Z",
+        "releaseNotes": "• Polls can now be created in individual chats too. Present a curated list of choices to your indecisive friend, or recapture the magic of passing a note to your crush by creating a “Do you like me? Y/N/Maybe” poll.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.18.2",
+        "releaseDate": "2026-07-13T18:06:03.000Z",
+        "releaseNotes": "Polls can now be created in individual chats too. Present a curated list of choices to your indecisive friend, or recapture the magic of passing a note to your crush by creating a “Do you like me? Y/N/Maybe” poll.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "apple:989804926": [
+      {
+        "version": "152.4",
+        "releaseDate": "2026-07-12T08:01:43.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "google:org.mozilla.firefox": [
+      {
+        "version": "152.0.6",
+        "releaseDate": "2026-07-13T22:12:08.000Z",
+        "releaseNotes": "- World Cup widget: Follow live scores, match schedules and results in one place.\n- Page summaries: Get key points from long articles with a tap or shake. Now available to all users in English.\n- 152.0.5: Fixed \"Remove from download history\" also deleting the downloaded file from the device.\n- 152.0.6: Security fixes.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ]
+  }
 }

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "lastRunAt": null,
-  "lastSuccessAt": null,
-  "totalApps": 0,
-  "okCount": 0,
+  "lastRunAt": "2026-07-14T19:51:49.638Z",
+  "lastSuccessAt": "2026-07-14T19:51:49.638Z",
+  "totalApps": 8,
+  "okCount": 8,
   "errorCount": 0,
   "updatesDetected": 0
 }
