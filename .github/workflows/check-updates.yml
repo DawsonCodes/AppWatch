@@ -1,0 +1,75 @@
+name: Check app updates
+
+on:
+  schedule:
+    # Every 6 hours, at a random-ish minute to be polite to the store APIs.
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run two checkers at once (overlapping pushes would conflict).
+concurrency:
+  group: check-updates
+  cancel-in-progress: false
+
+jobs:
+  check:
+    # Skip on forks: they should configure their own schedule deliberately.
+    if: github.repository == 'DawsonCodes/AppWatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Check stores for updates
+        id: check
+        run: npm run check:updates
+
+      - name: Validate generated data
+        run: npm run validate:data
+
+      - name: Commit updated data
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          git commit -m "chore(data): update tracked app metadata"
+          git push origin main
+
+  # Pushes made with GITHUB_TOKEN do not fire the deploy workflow's `push`
+  # trigger (GitHub's recursion protection), so deploy explicitly when the
+  # data changed.
+  deploy:
+    needs: check
+    if: needs.check.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

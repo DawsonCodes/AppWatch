@@ -1,0 +1,14 @@
+{
+  "country": "us",
+  "language": "en",
+  "apps": [
+    "https://apps.apple.com/us/app/wikipedia/id324715238",
+    "https://play.google.com/store/apps/details?id=org.wikipedia",
+    "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+    "https://play.google.com/store/apps/details?id=com.duolingo",
+    "https://apps.apple.com/us/app/signal-private-messenger/id874139669",
+    "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms",
+    "https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926",
+    "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+  ]
+}

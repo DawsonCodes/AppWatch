@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppWatch — App Store & Google Play update tracker</title>
+    <meta
+      name="description"
+      content="AppWatch tracks App Store and Google Play app updates: versions, release notes, release dates and full version history — in one clean dashboard."
+    />
+    <meta name="author" content="DawsonCodes" />
+    <meta name="theme-color" content="#0a0e17" />
+    <link rel="canonical" href="https://dawsoncodes.github.io/AppWatch/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AppWatch" />
+    <meta property="og:title" content="AppWatch — App Store & Google Play update tracker" />
+    <meta
+      property="og:description"
+      content="Track app updates, versions, release notes and version history across the App Store and Google Play."
+    />
+    <meta property="og:url" content="https://dawsoncodes.github.io/AppWatch/" />
+    <meta property="og:image" content="https://dawsoncodes.github.io/AppWatch/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AppWatch — App Store & Google Play update tracker" />
+    <meta
+      name="twitter:description"
+      content="Track app updates, versions, release notes and version history across the App Store and Google Play."
+    />
+    <meta name="twitter:image" content="https://dawsoncodes.github.io/AppWatch/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AppWatch",
+        "url": "https://dawsoncodes.github.io/AppWatch/",
+        "description": "A dashboard that tracks App Store and Google Play app updates, version history, release dates, and what changed.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "DawsonCodes" },
+        "license": "https://github.com/DawsonCodes/AppWatch/blob/main/LICENSE"
+      }
+    </script>
+
+    <script src="/theme-init.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <div class="noscript-banner">
+        <strong>AppWatch needs JavaScript.</strong> This dashboard renders app data in your browser
+        and cannot run with JavaScript disabled. The underlying data is public JSON — you can read
+        it directly at <a href="./data/apps.json">data/apps.json</a>.
+      </div>
+    </noscript>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

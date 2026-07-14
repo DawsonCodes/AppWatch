@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dawsoncodes.github.io/AppWatch/sitemap.xml

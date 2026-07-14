@@ -1,0 +1,61 @@
+{
+  "name": "appwatch",
+  "version": "1.0.0",
+  "description": "A modern dashboard that tracks App Store and Google Play app updates, version history, release dates, and what changed.",
+  "type": "module",
+  "private": true,
+  "author": "DawsonCodes",
+  "license": "MIT",
+  "homepage": "https://dawsoncodes.github.io/AppWatch/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DawsonCodes/AppWatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DawsonCodes/AppWatch/issues"
+  },
+  "keywords": [
+    "app-store",
+    "google-play",
+    "update-tracker",
+    "version-history",
+    "dashboard",
+    "github-pages"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:updates": "tsx scripts/check-updates.ts",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run validate:data && npm run build"
+  },
+  "dependencies": {
+    "preact": "^10.29.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@preact/preset-vite": "^2.10.5",
+    "@types/node": "^22.19.0",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "google-play-scraper": "^10.1.3",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.9.5",
+    "tsx": "^4.23.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.64.0",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
+  }
+}

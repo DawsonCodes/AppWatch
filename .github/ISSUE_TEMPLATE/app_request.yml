@@ -1,0 +1,21 @@
+name: Track a new app
+description: Suggest an app for the public AppWatch dashboard to track.
+labels: [app-request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Apps are configured in `apps.config.json`. You can also open a pull
+        request that adds the store link there directly.
+  - type: input
+    id: store-url
+    attributes:
+      label: Store URL
+      description: Full App Store or Google Play URL.
+      placeholder: https://apps.apple.com/us/app/wikipedia/id324715238
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this app worth tracking?
