@@ -3,72 +3,76 @@ import { isRecentlyUpdated } from '../lib/filtering.ts';
 import { formatDate, relativeTime } from '../lib/format.ts';
 import { truncate } from '../shared/text.ts';
 import { AppIcon } from './AppIcon.tsx';
-import { AlertIcon, ExternalIcon, StarIcon } from './Icons.tsx';
+import { AlertIcon, ExternalIcon } from './Icons.tsx';
 import { PlatformBadge, platformLabel } from './PlatformBadge.tsx';
+import { WatchButton } from './WatchButton.tsx';
+
+export type AppSource = 'tracked' | 'local';
 
 interface AppCardProps {
   app: AppRecord;
+  source: AppSource;
   watched: boolean;
+  open: boolean;
   onToggleWatch: (id: string) => void;
   onOpenDetail: (id: string) => void;
 }
 
-export function AppCard({ app, watched, onToggleWatch, onOpenDetail }: AppCardProps) {
+/**
+ * One app in the collection. Distinct visual states, deliberately different
+ * from one another: hover (slight lift), keyboard focus (focus ring on the
+ * controls), recently updated (left accent stripe + label), watched (filled
+ * star), open (accent border while its detail panel is showing), and check
+ * failed (small alert badge). A recently updated card never borrows the
+ * hover/selected treatment.
+ */
+export function AppCard({ app, source, watched, open, onToggleWatch, onOpenDetail }: AppCardProps) {
   const recent = isRecentlyUpdated(app);
-  const released = formatDate(app.releaseDate);
-  const releasedAgo = relativeTime(app.releaseDate);
-  const notes = app.releaseNotes ? truncate(app.releaseNotes, 160) : null;
+  const updatedWhen = relativeTime(app.releaseDate);
+  const notes = app.releaseNotes ? truncate(app.releaseNotes, 120) : null;
+
+  const classes = ['card'];
+  if (recent) classes.push('card--recent');
+  if (open) classes.push('card--open');
 
   return (
-    <article class={`card${recent ? ' card--recent' : ''}`} aria-label={app.name}>
+    <article class={classes.join(' ')} aria-label={app.name}>
       <div class="card__top">
-        <AppIcon name={app.name} iconUrl={app.iconUrl} size={56} />
+        <AppIcon name={app.name} iconUrl={app.iconUrl} size={48} />
         <div class="card__title">
           <h3 class="card__name">{app.name}</h3>
-          {app.developer ? <p class="card__developer">{app.developer}</p> : null}
+          <p class="card__developer">{app.developer ?? ' '}</p>
         </div>
-        <button
-          type="button"
-          class={`icon-button icon-button--watch${watched ? ' is-watched' : ''}`}
-          aria-pressed={watched}
-          aria-label={watched ? `Unwatch ${app.name}` : `Watch ${app.name}`}
-          title={watched ? 'Remove from watchlist' : 'Add to watchlist'}
-          onClick={() => onToggleWatch(app.id)}
-        >
-          <StarIcon size={17} filled={watched} />
-        </button>
+        <WatchButton appName={app.name} watched={watched} onToggle={() => onToggleWatch(app.id)} />
       </div>
 
-      <div class="card__badges">
+      <div class="card__meta">
+        {app.currentVersion ? <span class="version-chip">{app.currentVersion}</span> : null}
+        {app.previousVersion ? (
+          <span class="card__prev" title={`Previous version: ${app.previousVersion}`}>
+            was {app.previousVersion}
+          </span>
+        ) : null}
         <PlatformBadge platform={app.platform} />
-        {recent ? <span class="badge badge--recent">Recently updated</span> : null}
+        {source === 'local' ? (
+          <span class="badge badge--local" title="Watched only in this browser">
+            Local
+          </span>
+        ) : null}
+        {recent ? <span class="badge badge--recent">Updated</span> : null}
         {app.checkStatus === 'error' ? (
           <span class="badge badge--error" title={app.checkError ?? 'The last check failed'}>
-            <AlertIcon size={12} /> Check failed
+            <AlertIcon size={11} /> Check failed
           </span>
         ) : null}
       </div>
 
-      <dl class="card__meta">
-        <div>
-          <dt>Version</dt>
-          <dd>
-            <span class="version-chip">{app.currentVersion ?? 'unknown'}</span>
-            {app.previousVersion ? (
-              <span class="card__prev-version"> from {app.previousVersion}</span>
-            ) : null}
-          </dd>
-        </div>
-        {released ? (
-          <div>
-            <dt>Released</dt>
-            <dd>
-              {released}
-              {releasedAgo ? <span class="card__relative"> · {releasedAgo}</span> : null}
-            </dd>
-          </div>
-        ) : null}
-      </dl>
+      {updatedWhen ? (
+        <p class="card__when">
+          {source === 'local' ? 'Store release' : 'Released'} {formatDate(app.releaseDate)} ·{' '}
+          {updatedWhen}
+        </p>
+      ) : null}
 
       {notes ? <p class="card__notes">{notes}</p> : null}
 
@@ -77,13 +81,13 @@ export function AppCard({ app, watched, onToggleWatch, onOpenDetail }: AppCardPr
           Details
         </button>
         <a
-          class="button"
+          class="button button--ghost"
           href={app.storeUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${app.name} on the ${platformLabel(app.platform)} (opens in a new tab)`}
         >
-          {platformLabel(app.platform)} <ExternalIcon size={13} />
+          {platformLabel(app.platform)} <ExternalIcon size={12} />
         </a>
       </div>
     </article>

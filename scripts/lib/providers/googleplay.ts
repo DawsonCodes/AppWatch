@@ -15,7 +15,7 @@ import { htmlToPlainText } from '../../../src/shared/text.ts';
 import { withRetry, withTimeout } from '../net.ts';
 import type { TrackTarget } from '../config.ts';
 import type { AppSnapshot, ProviderFetch } from './types.ts';
-import { asIsoDate, asNonEmptyString, ProviderError } from './types.ts';
+import { asFiniteNumber, asIsoDate, asNonEmptyString, ProviderError } from './types.ts';
 
 /** The subset of google-play-scraper's app() result that AppWatch reads. */
 export interface PlayAppDetails {
@@ -27,6 +27,13 @@ export interface PlayAppDetails {
   updated?: unknown;
   recentChanges?: unknown;
   genre?: unknown;
+  free?: unknown;
+  priceText?: unknown;
+  contentRating?: unknown;
+  androidVersionText?: unknown;
+  score?: unknown;
+  ratings?: unknown;
+  developerWebsite?: unknown;
 }
 
 export type PlayAppFn = (options: {
@@ -105,5 +112,25 @@ export function normalizePlayResult(details: PlayAppDetails, target: TrackTarget
     releaseNotes: rawNotes ? htmlToPlainText(rawNotes) : null,
     category: asNonEmptyString(details.genre),
     bundleId: null,
+    price: asNonEmptyString(details.priceText) ?? (details.free === true ? 'Free' : null),
+    contentRating: asNonEmptyString(details.contentRating),
+    requiresOs: minimumAndroid(details.androidVersionText),
+    // Google Play no longer exposes a reliable download size.
+    sizeBytes: null,
+    rating: roundedRating(details.score),
+    ratingCount: asFiniteNumber(details.ratings),
+    developerWebsite: asNonEmptyString(details.developerWebsite),
   };
+}
+
+function minimumAndroid(value: unknown): string | null {
+  const text = asNonEmptyString(value);
+  if (!text || /^var/i.test(text)) return null;
+  return /android/i.test(text) ? text : `Android ${text}`;
+}
+
+function roundedRating(value: unknown): number | null {
+  const rating = asFiniteNumber(value);
+  if (rating === null || rating <= 0 || rating > 5) return null;
+  return Math.round(rating * 100) / 100;
 }

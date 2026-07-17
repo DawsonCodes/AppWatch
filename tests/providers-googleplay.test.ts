@@ -23,6 +23,13 @@ const sampleDetails: PlayAppDetails = {
   updated: 1750000000000,
   recentChanges: 'Fixed crashes<br>Improved search &amp; reading lists',
   genre: 'Books & Reference',
+  free: true,
+  priceText: 'Free',
+  contentRating: 'Everyone',
+  androidVersionText: '8.0',
+  score: 4.5678,
+  ratings: 987654,
+  developerWebsite: 'https://wikimediafoundation.org/',
 };
 
 describe('normalizePlayResult', () => {
@@ -40,7 +47,25 @@ describe('normalizePlayResult', () => {
       releaseNotes: 'Fixed crashes\nImproved search & reading lists',
       category: 'Books & Reference',
       bundleId: null,
+      price: 'Free',
+      contentRating: 'Everyone',
+      requiresOs: 'Android 8.0',
+      sizeBytes: null,
+      rating: 4.57,
+      ratingCount: 987654,
+      developerWebsite: 'https://wikimediafoundation.org/',
     });
+  });
+
+  it('normalizes the minimum Android requirement and skips "varies" values', () => {
+    expect(
+      normalizePlayResult({ ...sampleDetails, androidVersionText: '8.0 and up' }, target)
+        .requiresOs,
+    ).toBe('Android 8.0 and up');
+    expect(
+      normalizePlayResult({ ...sampleDetails, androidVersionText: 'Varies with device' }, target)
+        .requiresOs,
+    ).toBeNull();
   });
 
   it('treats "Varies with device" as no version rather than a fake one', () => {

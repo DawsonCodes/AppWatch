@@ -27,6 +27,13 @@ const sampleResult = {
       trackViewUrl: 'https://apps.apple.com/us/app/wikipedia/id324715238',
       primaryGenreName: 'Reference',
       bundleId: 'org.wikimedia.wikipedia',
+      formattedPrice: 'Free',
+      contentAdvisoryRating: '4+',
+      minimumOsVersion: '15.5',
+      fileSizeBytes: '123456789',
+      averageUserRating: 4.71234,
+      userRatingCount: 54321,
+      sellerUrl: 'https://wikimediafoundation.org',
     },
   ],
 };
@@ -63,6 +70,13 @@ describe('normalizeAppleResult', () => {
       releaseNotes: 'Bug fixes and performance improvements.',
       category: 'Reference',
       bundleId: 'org.wikimedia.wikipedia',
+      price: 'Free',
+      contentRating: '4+',
+      requiresOs: 'iOS 15.5 or later',
+      sizeBytes: 123456789,
+      rating: 4.71,
+      ratingCount: 54321,
+      developerWebsite: 'https://wikimediafoundation.org',
     });
   });
 
@@ -77,6 +91,25 @@ describe('normalizeAppleResult', () => {
     expect(snapshot.releaseNotes).toBeNull();
     expect(snapshot.releaseDate).toBeNull();
     expect(snapshot.storeUrl).toBe('https://apps.apple.com/us/app/id324715238');
+    expect(snapshot.price).toBeNull();
+    expect(snapshot.contentRating).toBeNull();
+    expect(snapshot.requiresOs).toBeNull();
+    expect(snapshot.sizeBytes).toBeNull();
+    expect(snapshot.rating).toBeNull();
+    expect(snapshot.ratingCount).toBeNull();
+    expect(snapshot.developerWebsite).toBeNull();
+  });
+
+  it('derives "Free" from a zero price and rejects out-of-range ratings', () => {
+    const snapshot = normalizeAppleResult(
+      {
+        resultCount: 1,
+        results: [{ trackName: 'Zero', price: 0, averageUserRating: 7 }],
+      },
+      target,
+    );
+    expect(snapshot.price).toBe('Free');
+    expect(snapshot.rating).toBeNull();
   });
 
   it('throws a clear error when the app is not found', () => {

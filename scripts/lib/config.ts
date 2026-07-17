@@ -10,6 +10,7 @@
 
 import type { Platform } from '../../src/shared/types.ts';
 import { appId } from '../../src/shared/types.ts';
+import { parseStoreUrl, PLAY_PACKAGE_RE } from '../../src/shared/storeRefs.ts';
 
 export interface TrackTarget {
   platform: Platform;
@@ -31,39 +32,23 @@ interface Defaults {
   language: string;
 }
 
-const APPLE_URL = /^https?:\/\/(?:apps|itunes)\.apple\.com\/(?:([a-z]{2})\/)?.*?id(\d+)/i;
-const PLAY_URL = /^https?:\/\/play\.google\.com\/store\/apps\/details/i;
-const PLAY_PACKAGE = /^[a-zA-Z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)+$/;
 const APPLE_ID = /^\d+$/;
 
 function parseUrlEntry(url: string, defaults: Defaults): TrackTarget {
-  const apple = APPLE_URL.exec(url);
-  if (apple) {
-    const [, country, id] = apple;
-    if (!id) throw new ConfigError(`Could not find a numeric app ID in App Store URL: ${url}`);
+  const ref = parseStoreUrl(url);
+  if (ref) {
     return {
-      platform: 'apple',
-      storeId: id,
-      country: (country ?? defaults.country).toLowerCase(),
+      platform: ref.platform,
+      storeId: ref.storeId,
+      country: ref.country ?? defaults.country,
       language: defaults.language,
     };
   }
-  if (PLAY_URL.test(url)) {
-    let packageName: string | null;
-    try {
-      packageName = new URL(url).searchParams.get('id');
-    } catch {
-      packageName = null;
-    }
-    if (!packageName || !PLAY_PACKAGE.test(packageName)) {
-      throw new ConfigError(`Could not find a package name ("?id=...") in Play URL: ${url}`);
-    }
-    return {
-      platform: 'google',
-      storeId: packageName,
-      country: defaults.country,
-      language: defaults.language,
-    };
+  if (/^https?:\/\/play\.google\.com/i.test(url)) {
+    throw new ConfigError(`Could not find a package name ("?id=...") in Play URL: ${url}`);
+  }
+  if (/^https?:\/\/(?:apps|itunes)\.apple\.com/i.test(url)) {
+    throw new ConfigError(`Could not find a numeric app ID in App Store URL: ${url}`);
   }
   throw new ConfigError(
     `Unrecognized app URL: ${url}\n` +
@@ -88,7 +73,7 @@ function parseObjectEntry(entry: Record<string, unknown>, defaults: Defaults): T
       `Entry ${JSON.stringify(entry)}: Apple IDs are numeric (e.g. "324715238").`,
     );
   }
-  if (platform === 'google' && !PLAY_PACKAGE.test(id)) {
+  if (platform === 'google' && !PLAY_PACKAGE_RE.test(id)) {
     throw new ConfigError(
       `Entry ${JSON.stringify(entry)}: Google Play IDs are package names (e.g. "org.wikipedia").`,
     );

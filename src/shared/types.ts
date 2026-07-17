@@ -43,6 +43,25 @@ export interface AppRecord {
   category: string | null;
   /** Apple bundle identifier when available; null for Google Play. */
   bundleId: string | null;
+  /**
+   * Extended metadata, collected when the store exposes it reliably.
+   * All of these are optional so data generated before they existed stays
+   * valid, and null whenever the store does not provide a usable value.
+   */
+  /** Formatted price label, e.g. "Free" or "$4.99". */
+  price?: string | null;
+  /** Store content/age rating label, e.g. "4+" or "Everyone". */
+  contentRating?: string | null;
+  /** Minimum OS requirement as human-readable text, e.g. "iOS 15.0 or later". */
+  requiresOs?: string | null;
+  /** Download size in bytes (Apple only; Google Play no longer exposes size). */
+  sizeBytes?: number | null;
+  /** Average user rating on a 0–5 scale, rounded to two decimals. */
+  rating?: number | null;
+  /** Number of user ratings behind the average. */
+  ratingCount?: number | null;
+  /** Developer/publisher website URL when the store lists one. */
+  developerWebsite?: string | null;
   /** When AppWatch first tracked this app (ISO 8601). */
   firstTrackedAt: string;
   /** Last time the store was successfully queried for this app (ISO 8601). */

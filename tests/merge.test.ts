@@ -23,6 +23,13 @@ const snapshot: AppSnapshot = {
   releaseNotes: 'Initial release',
   category: 'Utilities',
   bundleId: 'com.example.app',
+  price: 'Free',
+  contentRating: '4+',
+  requiresOs: 'iOS 15.0 or later',
+  sizeBytes: 120_000_000,
+  rating: 4.62,
+  ratingCount: 12_345,
+  developerWebsite: 'https://example.com',
 };
 
 describe('mergeSnapshot — first check', () => {
@@ -107,12 +114,24 @@ describe('mergeSnapshot — updates', () => {
     const { record } = mergeSnapshot(
       base.record,
       base.history,
-      { ...snapshot, developer: null, iconUrl: null, category: null },
+      { ...snapshot, developer: null, iconUrl: null, category: null, price: null, rating: null },
       LATER,
     );
     expect(record.developer).toBe('Example Corp');
     expect(record.iconUrl).toBe('https://is1-ssl.mzstatic.com/icon.png');
     expect(record.category).toBe('Utilities');
+    expect(record.price).toBe('Free');
+    expect(record.rating).toBe(4.62);
+  });
+
+  it('stores the extended metadata fields on new and merged records', () => {
+    expect(base.record.contentRating).toBe('4+');
+    expect(base.record.requiresOs).toBe('iOS 15.0 or later');
+    expect(base.record.sizeBytes).toBe(120_000_000);
+    expect(base.record.ratingCount).toBe(12_345);
+    expect(base.record.developerWebsite).toBe('https://example.com');
+    const merged = mergeSnapshot(base.record, base.history, { ...snapshot, rating: 4.7 }, LATER);
+    expect(merged.record.rating).toBe(4.7);
   });
 });
 
@@ -216,6 +235,28 @@ describe('hasMeaningfulChange', () => {
   it('flags a check-status transition so failures become visible', () => {
     const failed = mergeFailure(base.record, base.history, 'apple', '100', 'url', 'boom', LATER);
     const [appsB, historyB] = filesFor(failed.record, { 'apple:100': failed.history });
+    expect(hasMeaningfulChange(appsA, appsB, historyA, historyB)).toBe(true);
+  });
+
+  it('treats live rating drift as volatile, not worth a commit on its own', () => {
+    const drifted = mergeSnapshot(
+      base.record,
+      base.history,
+      { ...snapshot, rating: 4.63, ratingCount: 12_399 },
+      LATER,
+    );
+    const [appsB, historyB] = filesFor(drifted.record, { 'apple:100': drifted.history });
+    expect(hasMeaningfulChange(appsA, appsB, historyA, historyB)).toBe(false);
+  });
+
+  it('still flags non-volatile metadata changes such as price', () => {
+    const repriced = mergeSnapshot(
+      base.record,
+      base.history,
+      { ...snapshot, price: '$1.99' },
+      LATER,
+    );
+    const [appsB, historyB] = filesFor(repriced.record, { 'apple:100': repriced.history });
     expect(hasMeaningfulChange(appsA, appsB, historyA, historyB)).toBe(true);
   });
 });

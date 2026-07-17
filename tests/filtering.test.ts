@@ -82,6 +82,42 @@ describe('applyFilters — searching', () => {
   it('returns everything for a blank query', () => {
     expect(applyFilters(all, { ...DEFAULT_FILTERS, query: '   ' }, none, NOW)).toHaveLength(3);
   });
+
+  it('matches a pasted store URL to the exact tracked listing', () => {
+    const withIds = [
+      app({ id: 'apple:324715238', name: 'Wikipedia', storeId: '324715238' }),
+      app({ id: 'apple:999', name: 'Other', storeId: '999' }),
+    ];
+    const result = applyFilters(
+      withIds,
+      { ...DEFAULT_FILTERS, query: 'https://apps.apple.com/us/app/wikipedia/id324715238' },
+      none,
+      NOW,
+    );
+    expect(result.map((a) => a.name)).toEqual(['Wikipedia']);
+  });
+
+  it('matches bare package names, store IDs and bundle IDs', () => {
+    const withIds = [
+      app({
+        id: 'google:org.wikipedia',
+        name: 'Wikipedia',
+        platform: 'google',
+        storeId: 'org.wikipedia',
+      }),
+      app({ id: 'apple:100', name: 'Bundled', storeId: '100', bundleId: 'com.example.bundle' }),
+    ];
+    expect(
+      applyFilters(withIds, { ...DEFAULT_FILTERS, query: 'org.wikipedia' }, none, NOW).map(
+        (a) => a.name,
+      ),
+    ).toEqual(['Wikipedia']);
+    expect(
+      applyFilters(withIds, { ...DEFAULT_FILTERS, query: 'com.example.bundle' }, none, NOW).map(
+        (a) => a.name,
+      ),
+    ).toEqual(['Bundled']);
+  });
 });
 
 describe('applyFilters — filters', () => {

@@ -34,6 +34,32 @@ function checkNullableIso(errors: string[], value: unknown, path: Path): void {
   }
 }
 
+/** Optional extended-metadata fields: absent is fine, present must be typed. */
+function checkOptionalNullableString(
+  errors: string[],
+  record: Record<string, unknown>,
+  key: string,
+  path: Path,
+): void {
+  if (!(key in record) || record[key] === undefined) return;
+  checkNullableString(errors, record[key], `${path}.${key}`);
+}
+
+function checkOptionalNullableNumber(
+  errors: string[],
+  record: Record<string, unknown>,
+  key: string,
+  path: Path,
+  max = Number.POSITIVE_INFINITY,
+): void {
+  if (!(key in record) || record[key] === undefined) return;
+  const value = record[key];
+  if (value === null) return;
+  if (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > max) {
+    errors.push(`${path}.${key}: expected number in range or null`);
+  }
+}
+
 function checkHistoryEntry(errors: string[], value: unknown, path: Path): void {
   if (!isRecord(value)) {
     errors.push(`${path}: expected object`);
@@ -75,6 +101,13 @@ function checkAppRecord(errors: string[], value: unknown, path: Path): void {
   checkNullableString(errors, value.releaseNotes, `${path}.releaseNotes`);
   checkNullableString(errors, value.category, `${path}.category`);
   checkNullableString(errors, value.bundleId, `${path}.bundleId`);
+  checkOptionalNullableString(errors, value, 'price', path);
+  checkOptionalNullableString(errors, value, 'contentRating', path);
+  checkOptionalNullableString(errors, value, 'requiresOs', path);
+  checkOptionalNullableString(errors, value, 'developerWebsite', path);
+  checkOptionalNullableNumber(errors, value, 'sizeBytes', path);
+  checkOptionalNullableNumber(errors, value, 'rating', path, 5);
+  checkOptionalNullableNumber(errors, value, 'ratingCount', path);
   if (!isIsoDate(value.firstTrackedAt)) {
     errors.push(`${path}.firstTrackedAt: expected ISO 8601 date string`);
   }
