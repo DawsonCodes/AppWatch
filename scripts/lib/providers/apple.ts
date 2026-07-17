@@ -9,7 +9,7 @@
 import { fetchJson, withRetry } from '../net.ts';
 import type { TrackTarget } from '../config.ts';
 import type { AppSnapshot, ProviderFetch } from './types.ts';
-import { asIsoDate, asNonEmptyString, ProviderError } from './types.ts';
+import { asFiniteNumber, asIsoDate, asNonEmptyString, ProviderError } from './types.ts';
 
 interface AppleProviderOptions {
   fetchFn?: typeof fetch;
@@ -72,5 +72,24 @@ export function normalizeAppleResult(payload: unknown, target: TrackTarget): App
     releaseNotes: asNonEmptyString(raw.releaseNotes),
     category: asNonEmptyString(raw.primaryGenreName),
     bundleId: asNonEmptyString(raw.bundleId),
+    price:
+      asNonEmptyString(raw.formattedPrice) ?? (asFiniteNumber(raw.price) === 0 ? 'Free' : null),
+    contentRating: asNonEmptyString(raw.contentAdvisoryRating),
+    requiresOs: minimumOs(raw.minimumOsVersion),
+    sizeBytes: asFiniteNumber(raw.fileSizeBytes),
+    rating: roundedRating(raw.averageUserRating),
+    ratingCount: asFiniteNumber(raw.userRatingCount),
+    developerWebsite: asNonEmptyString(raw.sellerUrl),
   };
+}
+
+function minimumOs(value: unknown): string | null {
+  const version = asNonEmptyString(value);
+  return version ? `iOS ${version} or later` : null;
+}
+
+function roundedRating(value: unknown): number | null {
+  const rating = asFiniteNumber(value);
+  if (rating === null || rating < 0 || rating > 5) return null;
+  return Math.round(rating * 100) / 100;
 }

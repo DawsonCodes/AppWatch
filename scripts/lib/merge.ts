@@ -71,6 +71,13 @@ export function mergeSnapshot(
         releaseNotes: snapshot.releaseNotes,
         category: snapshot.category,
         bundleId: snapshot.bundleId,
+        price: snapshot.price,
+        contentRating: snapshot.contentRating,
+        requiresOs: snapshot.requiresOs,
+        sizeBytes: snapshot.sizeBytes,
+        rating: snapshot.rating,
+        ratingCount: snapshot.ratingCount,
+        developerWebsite: snapshot.developerWebsite,
         firstTrackedAt: now,
         lastCheckedAt: now,
         lastUpdatedAt: null,
@@ -107,6 +114,13 @@ export function mergeSnapshot(
       releaseNotes: snapshot.releaseNotes ?? (versionChanged ? null : previous.releaseNotes),
       category: snapshot.category ?? previous.category,
       bundleId: snapshot.bundleId ?? previous.bundleId,
+      price: snapshot.price ?? previous.price ?? null,
+      contentRating: snapshot.contentRating ?? previous.contentRating ?? null,
+      requiresOs: snapshot.requiresOs ?? previous.requiresOs ?? null,
+      sizeBytes: snapshot.sizeBytes ?? previous.sizeBytes ?? null,
+      rating: snapshot.rating ?? previous.rating ?? null,
+      ratingCount: snapshot.ratingCount ?? previous.ratingCount ?? null,
+      developerWebsite: snapshot.developerWebsite ?? previous.developerWebsite ?? null,
       lastCheckedAt: now,
       lastUpdatedAt: versionChanged ? now : previous.lastUpdatedAt,
       checkStatus: 'ok',
@@ -172,7 +186,9 @@ export function mergeFailure(
 /**
  * Decide whether the new data is worth committing. Timestamp-only churn
  * (lastCheckedAt, generatedAt, the updateDetected flag flipping back to false,
- * and status.json counters) is not meaningful on its own.
+ * and status.json counters) is not meaningful on its own. Live rating
+ * aggregates drift on almost every run, so they are also treated as volatile —
+ * stored values refresh whenever something else meaningful changes.
  */
 export function hasMeaningfulChange(
   previousApps: AppsFile | null,
@@ -182,7 +198,9 @@ export function hasMeaningfulChange(
 ): boolean {
   if (!previousApps || !previousHistory) return true;
   const strip = (file: AppsFile): unknown =>
-    file.apps.map(({ lastCheckedAt: _c, updateDetected: _u, ...rest }) => rest);
+    file.apps.map(
+      ({ lastCheckedAt: _c, updateDetected: _u, rating: _r, ratingCount: _n, ...rest }) => rest,
+    );
   return (
     JSON.stringify(strip(previousApps)) !== JSON.stringify(strip(nextApps)) ||
     JSON.stringify(previousHistory.entries) !== JSON.stringify(nextHistory.entries)

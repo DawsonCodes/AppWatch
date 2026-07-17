@@ -43,6 +43,13 @@ function snapshotFor(platform: 'apple' | 'google', version: string): AppSnapshot
     releaseNotes: `Notes for ${version}`,
     category: null,
     bundleId: null,
+    price: null,
+    contentRating: null,
+    requiresOs: null,
+    sizeBytes: null,
+    rating: null,
+    ratingCount: null,
+    developerWebsite: null,
   };
 }
 

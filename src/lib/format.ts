@@ -21,6 +21,28 @@ export function formatDateTime(iso: string | null): string | null {
   return dateTimeFormat.format(time);
 }
 
+/** "213 MB" style download sizes (powers of 1000, one decimal under 10). */
+export function formatBytes(bytes: number | null | undefined): string | null {
+  if (typeof bytes !== 'number' || !Number.isFinite(bytes) || bytes < 0) return null;
+  const units = ['B', 'kB', 'MB', 'GB'];
+  let value = bytes;
+  let unit = 0;
+  while (value >= 1000 && unit < units.length - 1) {
+    value /= 1000;
+    unit += 1;
+  }
+  const rounded = value < 10 && unit > 0 ? value.toFixed(1) : String(Math.round(value));
+  return `${rounded} ${units[unit]}`;
+}
+
+/** "1.2M" style compact counts for rating totals. */
+export function formatCount(count: number | null | undefined): string | null {
+  if (typeof count !== 'number' || !Number.isFinite(count) || count < 0) return null;
+  return new Intl.NumberFormat(undefined, { notation: 'compact', maximumFractionDigits: 1 }).format(
+    count,
+  );
+}
+
 const UNITS: Array<[Intl.RelativeTimeFormatUnit, number]> = [
   ['year', 365 * 24 * 3600],
   ['month', 30 * 24 * 3600],

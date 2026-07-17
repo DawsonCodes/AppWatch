@@ -1,6 +1,8 @@
 /** Pure filtering and sorting for the dashboard. Kept framework-free for testing. */
 
 import type { AppRecord, Platform } from '../shared/types.ts';
+import { appId } from '../shared/types.ts';
+import { parseStoreInput } from '../shared/storeRefs.ts';
 
 export type SortKey = 'updated' | 'name' | 'platform';
 
@@ -45,12 +47,16 @@ export function hasActiveFilters(state: FilterState): boolean {
   );
 }
 
-function matchesQuery(app: AppRecord, query: string): boolean {
+function matchesQuery(app: AppRecord, query: string, refId: string | null): boolean {
   const q = query.trim().toLowerCase();
   if (q === '') return true;
+  // A pasted store URL / ID / package name matches the exact listing.
+  if (refId !== null && app.id === refId) return true;
   return (
     app.name.toLowerCase().includes(q) ||
-    (app.developer !== null && app.developer.toLowerCase().includes(q))
+    (app.developer !== null && app.developer.toLowerCase().includes(q)) ||
+    app.storeId.toLowerCase() === q ||
+    (app.bundleId !== null && app.bundleId.toLowerCase() === q)
   );
 }
 
@@ -61,17 +67,20 @@ function updatedSortTime(app: AppRecord): number {
   return Number.isNaN(time) ? 0 : time;
 }
 
-export function applyFilters(
-  apps: readonly AppRecord[],
+export function applyFilters<T extends AppRecord>(
+  apps: readonly T[],
   state: FilterState,
   watchedIds: ReadonlySet<string>,
   now: Date = new Date(),
-): AppRecord[] {
+): T[] {
+  const parsedRef = parseStoreInput(state.query);
+  const refId = parsedRef ? appId(parsedRef.platform, parsedRef.storeId) : null;
+
   const result = apps.filter((app) => {
     if (state.platform !== 'all' && app.platform !== state.platform) return false;
     if (state.recentOnly && !isRecentlyUpdated(app, now)) return false;
     if (state.watchedOnly && !watchedIds.has(app.id)) return false;
-    return matchesQuery(app, state.query);
+    return matchesQuery(app, state.query, refId);
   });
 
   const byName = (a: AppRecord, b: AppRecord) =>

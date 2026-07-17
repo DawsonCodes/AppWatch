@@ -27,19 +27,21 @@ export function SearchIcon({ size }: IconProps) {
   );
 }
 
-export function SunIcon({ size }: IconProps) {
+export function ChevronDownIcon({ size }: IconProps) {
   return (
-    <svg {...base(size)}>
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4" />
+    <svg {...base(size)} class="chevron">
+      <path d="m6 9 6 6 6-6" />
     </svg>
   );
 }
 
-export function MoonIcon({ size }: IconProps) {
+export function PaletteIcon({ size }: IconProps) {
   return (
     <svg {...base(size)}>
-      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+      <path d="M12 3a9 9 0 1 0 0 18h1.6a2.4 2.4 0 0 0 1.8-4 2.4 2.4 0 0 1 1.8-4H20a2 2 0 0 0 2-2c0-4.6-4.5-8-10-8Z" />
+      <circle cx="7.5" cy="11.5" r="0.6" fill="currentColor" />
+      <circle cx="10.5" cy="7.8" r="0.6" fill="currentColor" />
+      <circle cx="15" cy="7.5" r="0.6" fill="currentColor" />
     </svg>
   );
 }
@@ -104,24 +106,35 @@ export function AlertIcon({ size }: IconProps) {
   );
 }
 
-/** The AppWatch logo: a radar ring with a scanning pulse. Original artwork. */
-export function LogoIcon({ size = 28 }: IconProps) {
+export function PlusIcon({ size }: IconProps) {
+  return (
+    <svg {...base(size)}>
+      <path d="M12 5v14M5 12h14" />
+    </svg>
+  );
+}
+
+export function RefreshIcon({ size }: IconProps) {
+  return (
+    <svg {...base(size)}>
+      <path d="M21 12a9 9 0 1 1-2.6-6.4" />
+      <path d="M21 3v6h-6" />
+    </svg>
+  );
+}
+
+/** The AppWatch mark: a watch/radar ring with a sweep, in the brand blue. */
+export function LogoIcon({ size = 26 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden>
-      <defs>
-        <linearGradient id="aw-logo-grad" x1="0" y1="0" x2="32" y2="32">
-          <stop offset="0" stop-color="#38d6f5" />
-          <stop offset="1" stop-color="#8b5cf6" />
-        </linearGradient>
-      </defs>
       <rect
-        x="1"
-        y="1"
-        width="30"
-        height="30"
-        rx="8"
+        x="1.5"
+        y="1.5"
+        width="29"
+        height="29"
+        rx="7.5"
         fill="none"
-        stroke="url(#aw-logo-grad)"
+        stroke="var(--logo-ring, #3b82d4)"
         stroke-width="2"
       />
       <circle
@@ -129,17 +142,17 @@ export function LogoIcon({ size = 28 }: IconProps) {
         cy="16"
         r="8.5"
         fill="none"
-        stroke="url(#aw-logo-grad)"
+        stroke="var(--logo-ring, #3b82d4)"
         stroke-width="2"
-        opacity="0.55"
+        opacity="0.45"
       />
       <path
         d="M16 7.5a8.5 8.5 0 0 1 8.5 8.5"
         fill="none"
-        stroke="url(#aw-logo-grad)"
+        stroke="var(--logo-ring, #3b82d4)"
         stroke-width="2.5"
       />
-      <circle cx="16" cy="16" r="2.6" fill="url(#aw-logo-grad)" />
+      <circle cx="16" cy="16" r="2.6" fill="var(--logo-ring, #3b82d4)" />
     </svg>
   );
 }

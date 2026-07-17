@@ -25,14 +25,16 @@
 
 ## Preview
 
-|                      Dashboard (dark)                      |                     App detail                      |
-| :--------------------------------------------------------: | :-------------------------------------------------: |
-| ![Dashboard, dark theme](assets/screenshots/dashboard.png) | ![App detail dialog](assets/screenshots/detail.png) |
+|                       Gray Dark (default)                       |                     App detail                     |
+| :-------------------------------------------------------------: | :------------------------------------------------: |
+| ![Dashboard, Gray Dark theme](assets/screenshots/dashboard.png) | ![App detail panel](assets/screenshots/detail.png) |
 
 <details>
-<summary>Light theme</summary>
+<summary>Light and MS Paint themes</summary>
 
-![Dashboard, light theme](assets/screenshots/light-theme.png)
+![Dashboard, Light theme](assets/screenshots/light-theme.png)
+
+![Dashboard, MS Paint theme](assets/screenshots/ms-paint.png)
 
 </details>
 
@@ -43,8 +45,8 @@
 
 ## What it does
 
-AppWatch checks the App Store and Google Play a few times a day and records
-what changed. For every tracked app it shows:
+AppWatch checks the App Store and Google Play **twice a day** and records what
+changed. For every tracked app it shows:
 
 - Name, icon, developer and category
 - Platform (App Store / Google Play) with a direct store link
@@ -52,11 +54,68 @@ what changed. For every tracked app it shows:
 - Release date and how long ago that was
 - The full "What's New" release notes, rendered safely as plain text
 - Complete stored version history with detection timestamps
+- Price, user rating, content rating, minimum OS requirement, download size
+  and developer website, where the store exposes them
 - Whether an update was detected recently, and when the last check ran
 - Per-app check failures, without breaking the rest of the dashboard
 
-Visitors can search, filter by store or recency, sort, and keep a personal
+Visitors can search (by name, developer, store URL, Apple ID or package name),
+filter, sort, discover apps beyond the built-in list, and keep a personal
 **watchlist** — stored only in their own browser.
+
+## Themes
+
+Three complete themes, selectable from the header:
+
+- **Gray Dark** — the default dark theme: neutral charcoal, restrained blue
+  accent, no glow.
+- **Light** — clean off-white surfaces with the same blue accent family.
+- **MS Paint** — a playful tribute to classic desktop paint software: raised
+  and inset bevels, silver window chrome, a navy title bar in the detail view
+  and a color-palette strip in the footer. It uses no Microsoft trademarks,
+  logos or proprietary assets, and it stays fully readable and accessible.
+
+Your choice is saved in the browser (`localStorage`). On a first visit the
+operating-system light/dark preference picks Gray Dark or Light; MS Paint is
+only ever active because you chose it.
+
+## Store-wide discovery & your local watchlist
+
+The dashboard is not limited to the repository-configured apps — but honesty
+matters about how far that goes:
+
+- **Repository-tracked apps** (from `apps.config.json`) are checked twice a
+  day by GitHub Actions for everyone, with stored version history.
+- **App Store discovery** works live in your browser: paste an App Store URL
+  or numeric ID, or press Enter on a name search, and AppWatch queries Apple's
+  public keyless lookup/search API — one request per action, no key, no proxy.
+  Some networks/regions don't send the CORS headers this needs; when that
+  happens AppWatch says so and offers external store-search links instead.
+- **Google Play has no browser-readable metadata API.** Play URLs and package
+  names are recognized and can be added with a store link, but their metadata
+  cannot be fetched client-side, and AppWatch does not fake it or route it
+  through some third-party proxy.
+- Apps you add this way become **local watches**: they live only in your
+  browser's localStorage, are labeled "Local" everywhere, are _not_ checked by
+  the scheduled pipeline, and never sync anywhere. The detail view offers a
+  copyable `apps.config.json` line and a link to the tracking-request issue
+  form if you want an app promoted to real repository tracking (nothing is
+  ever submitted automatically).
+
+## Data freshness (is it real time?)
+
+No — and AppWatch won't pretend otherwise. Neither store pushes update events
+to third parties, and a GitHub Pages site has no server to poll continuously,
+so "instant" universal detection is not honestly possible with this
+architecture. What AppWatch does instead:
+
+- The checker runs twice a day (see the schedule below) and deploys fresh JSON
+  whenever something meaningful changed.
+- While the page is open, it revalidates the site's **own** tiny
+  `status.json` every 5 minutes (visible tabs only). When a newer run has been
+  deployed, a quiet toast offers a one-click data refresh — no page reload.
+- Your browser never queries the App Store or Google Play for tracked data;
+  only the explicit discovery search above contacts Apple's public API.
 
 ## How it works
 
@@ -64,7 +123,7 @@ Visitors can search, filter by store or recency, sort, and keep a personal
 apps.config.json          (human-edited: which apps to track)
         │
         ▼
-GitHub Actions (every 6 h) ──►  scripts/check-updates.ts
+GitHub Actions (twice a day) ─►  scripts/check-updates.ts
         │                        ├─ Apple provider  → iTunes Lookup API
         │                        └─ Google provider → google-play-scraper
         ▼
@@ -169,8 +228,11 @@ The checker writes these files into `public/data/` (do not edit by hand):
   `name`, `developer`, `iconUrl`, `storeUrl`, `currentVersion`,
   `previousVersion`, `releaseDate`, `releaseNotes`, `category`, `bundleId`,
   `firstTrackedAt`, `lastCheckedAt`, `lastUpdatedAt`, `checkStatus`,
-  `checkError`, `updateDetected`). Fields a store doesn't provide are `null`,
-  never faked.
+  `checkError`, `updateDetected`, plus extended metadata where the store
+  exposes it: `price`, `contentRating`, `requiresOs`, `sizeBytes`, `rating`,
+  `ratingCount`, `developerWebsite`). Fields a store doesn't provide are
+  `null`, never faked, and files generated before these fields existed remain
+  valid — the extended fields are optional in the schema.
 - **`history.json`** — version history per app id, newest first; one entry per
   version with release date, notes and the detection timestamp.
 - **`status.json`** — last run time, success/failure counts, updates detected.
@@ -189,10 +251,29 @@ Workflows:
 - **`deploy.yml`** — builds, validates and deploys on every push to `main`
   (also manually via _Run workflow_). The Vite `base` is `/AppWatch/`, so the
   site works correctly at `https://dawsoncodes.github.io/AppWatch/`.
-- **`check-updates.yml`** — runs every 6 hours and on demand; commits
+- **`check-updates.yml`** — runs twice a day and on demand; commits
   `chore(data): update tracked app metadata` only when data actually changed,
   then triggers a deployment. Commits made with `GITHUB_TOKEN` cannot re-trigger
   workflows, so the checker → deploy chain is loop-safe by construction.
+
+### Check schedule and timezone
+
+The checker targets **12:00 AM and 12:00 PM in America/Detroit** (the
+product's home timezone). GitHub Actions cron only understands UTC and knows
+nothing about daylight saving, so the workflow handles the conversion
+explicitly:
+
+| Detroit season          | UTC offset | Midnight Detroit | Noon Detroit |
+| ----------------------- | ---------- | ---------------- | ------------ |
+| EDT (mid-Mar–early Nov) | UTC−4      | 04:00 UTC        | 16:00 UTC    |
+| EST (early Nov–mid-Mar) | UTC−5      | 05:00 UTC        | 17:00 UTC    |
+
+The cron fires at **all four** candidate hours (`0 4,5,16,17 * * *`) and a
+tiny gate job lets a run proceed only when the current hour in
+`America/Detroit` is actually `00` or `12`. Exactly two of the four candidates
+pass every day, year-round, across DST changes. Manual `workflow_dispatch`
+runs always pass the gate. (GitHub delivers scheduled runs best-effort — a
+run can start some minutes after the hour.)
 
 ## Known limitations
 
@@ -210,6 +291,13 @@ Workflows:
   the git history meaningful).
 - **Apple storefront matters.** Version metadata can differ per country; the
   configured storefront (default `us`) is what gets tracked.
+- **In-browser App Store discovery depends on CORS.** Apple's public
+  lookup/search endpoint does not send cross-origin headers on every
+  network/region. When a browser can't reach it, discovery degrades to
+  external store-search links — it never proxies or fabricates results.
+- **Ratings drift constantly.** Stored `rating`/`ratingCount` values refresh
+  whenever a run commits for other reasons; pure rating drift alone is not
+  worth a data commit, so those two fields can lag slightly.
 
 ## Troubleshooting
 
@@ -224,9 +312,10 @@ Workflows:
 ## Privacy
 
 AppWatch collects nothing. No analytics, no cookies, no fingerprinting, no ads.
-The personal watchlist is kept in your browser's localStorage and never leaves
-your device. The site talks only to its own origin (data JSON) and loads app
-icons from the stores' CDNs.
+Your watchlist, local watches, theme choice and panel preferences are kept in
+your browser's localStorage and never leave your device. The site talks to its
+own origin (data JSON), loads app icons from the stores' CDNs, and contacts
+Apple's public search API only when you explicitly use the discovery search.
 
 ## Contributing
 

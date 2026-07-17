@@ -15,7 +15,6 @@ export function LoadingGrid() {
           </div>
           <span class="skeleton skeleton--line" style={{ width: '35%' }} />
           <span class="skeleton skeleton--line" style={{ width: '90%' }} />
-          <span class="skeleton skeleton--line" style={{ width: '75%' }} />
         </div>
       ))}
     </div>
@@ -26,7 +25,7 @@ export function LoadingGrid() {
 export function LoadFailed({ message, onRetry }: { message: string; onRetry: () => void }) {
   return (
     <div class="empty-state" role="alert">
-      <AlertIcon size={36} />
+      <AlertIcon size={32} />
       <h2>Couldn’t load app data</h2>
       <p>{message}</p>
       <button type="button" class="button button--primary" onClick={onRetry}>
@@ -40,11 +39,12 @@ export function LoadFailed({ message, onRetry }: { message: string; onRetry: () 
 export function NoAppsYet() {
   return (
     <div class="empty-state">
-      <LogoIcon size={44} />
+      <LogoIcon size={40} />
       <h2>No app data yet</h2>
       <p>
         Tracked apps are configured in <code>apps.config.json</code>, and the scheduled checker
-        publishes data after its first run. Check back soon.
+        publishes data after its first run. Check back soon — or search above to watch apps locally
+        in the meantime.
       </p>
     </div>
   );
@@ -53,10 +53,10 @@ export function NoAppsYet() {
 /** Filters/search produced zero matches. */
 export function NoResults({ onClear }: { onClear: () => void }) {
   return (
-    <div class="empty-state">
-      <h2>No matching apps</h2>
-      <p>Try a different search term, or reset the active filters.</p>
-      <button type="button" class="button button--primary" onClick={onClear}>
+    <div class="empty-state empty-state--compact">
+      <h2>No matching apps here</h2>
+      <p>Adjust the filters, or use the store search below to look further.</p>
+      <button type="button" class="button" onClick={onClear}>
         Clear filters
       </button>
     </div>

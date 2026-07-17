@@ -69,6 +69,47 @@ describe('validateAppsFile', () => {
       validateAppsFile({ schemaVersion: 1, generatedAt: null, apps: [validApp, validApp] }),
     ).toContainEqual(expect.stringContaining('duplicate'));
   });
+
+  it('accepts records without the extended metadata fields (pre-1.1 data)', () => {
+    // validApp deliberately has no price/rating/etc — exactly like data
+    // generated before the fields existed.
+    expect(validateAppsFile({ schemaVersion: 1, generatedAt: null, apps: [validApp] })).toEqual([]);
+  });
+
+  it('accepts well-typed extended metadata and rejects bad values', () => {
+    const extended = {
+      ...validApp,
+      price: 'Free',
+      contentRating: '4+',
+      requiresOs: 'iOS 15.0 or later',
+      sizeBytes: 123456,
+      rating: 4.5,
+      ratingCount: 1000,
+      developerWebsite: 'https://example.com',
+    };
+    expect(validateAppsFile({ schemaVersion: 1, generatedAt: null, apps: [extended] })).toEqual([]);
+    expect(
+      validateAppsFile({
+        schemaVersion: 1,
+        generatedAt: null,
+        apps: [{ ...validApp, rating: 9 }],
+      }),
+    ).toContainEqual(expect.stringContaining('rating'));
+    expect(
+      validateAppsFile({
+        schemaVersion: 1,
+        generatedAt: null,
+        apps: [{ ...validApp, sizeBytes: 'big' }],
+      }),
+    ).toContainEqual(expect.stringContaining('sizeBytes'));
+    expect(
+      validateAppsFile({
+        schemaVersion: 1,
+        generatedAt: null,
+        apps: [{ ...validApp, price: 42 }],
+      }),
+    ).toContainEqual(expect.stringContaining('price'));
+  });
 });
 
 describe('validateHistoryFile', () => {
