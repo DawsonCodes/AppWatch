@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-17T03:44:21.494Z",
+  "generatedAt": "2026-07-18T16:57:20.344Z",
   "apps": [
     {
       "id": "apple:324715238",
@@ -17,11 +17,18 @@
       "category": "Reference",
       "bundleId": "org.wikimedia.wikipedia",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": null,
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": false
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "9+",
+      "requiresOs": "iOS 17.6 or later",
+      "sizeBytes": 263708672,
+      "rating": 4.33,
+      "ratingCount": 6180,
+      "developerWebsite": "https://m.mediawiki.org/wiki/Wikimedia_Apps/Team/iOS"
     },
     {
       "id": "apple:570060128",
@@ -38,11 +45,18 @@
       "category": "Education",
       "bundleId": "com.duolingo.DuolingoMobile",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": null,
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": false
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "4+",
+      "requiresOs": "iOS 17.0 or later",
+      "sizeBytes": 508754944,
+      "rating": 4.73,
+      "ratingCount": 5330139,
+      "developerWebsite": "https://www.duolingo.com"
     },
     {
       "id": "apple:874139669",
@@ -59,11 +73,18 @@
       "category": "Social Networking",
       "bundleId": "org.whispersystems.signal",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": "2026-07-17T03:44:21.494Z",
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": true
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "12+",
+      "requiresOs": "iOS 15.0 or later",
+      "sizeBytes": 213349376,
+      "rating": 4.74,
+      "ratingCount": 1061473,
+      "developerWebsite": "https://signal.org/"
     },
     {
       "id": "apple:989804926",
@@ -80,11 +101,18 @@
       "category": "Utilities",
       "bundleId": "org.mozilla.ios.Firefox",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": null,
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": false
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "17+",
+      "requiresOs": "iOS 15.0 or later",
+      "sizeBytes": 385198080,
+      "rating": 4.65,
+      "ratingCount": 214886,
+      "developerWebsite": "https://www.mozilla.org/firefox/ios/"
     },
     {
       "id": "google:com.duolingo",
@@ -101,11 +129,18 @@
       "category": "Education",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": null,
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": false
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "Everyone",
+      "requiresOs": null,
+      "sizeBytes": null,
+      "rating": 4.73,
+      "ratingCount": 47253557,
+      "developerWebsite": "https://www.duolingo.com/help/support-request"
     },
     {
       "id": "google:org.mozilla.firefox",
@@ -122,11 +157,18 @@
       "category": "Communication",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": null,
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": false
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "Everyone",
+      "requiresOs": "Android 8.0",
+      "sizeBytes": null,
+      "rating": 4.61,
+      "ratingCount": 6445463,
+      "developerWebsite": "https://www.mozilla.org/firefox/mobile/"
     },
     {
       "id": "google:org.thoughtcrime.securesms",
@@ -143,11 +185,18 @@
       "category": "Communication",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": "2026-07-15T19:42:00.472Z",
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": false
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "Everyone",
+      "requiresOs": "Android 6.0",
+      "sizeBytes": null,
+      "rating": 4.52,
+      "ratingCount": 2889633,
+      "developerWebsite": "https://signal.org"
     },
     {
       "id": "google:org.wikipedia",
@@ -164,11 +213,18 @@
       "category": "Books & Reference",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-07-17T03:44:21.494Z",
+      "lastCheckedAt": "2026-07-18T16:57:20.344Z",
       "lastUpdatedAt": "2026-07-17T03:44:21.494Z",
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": true
+      "updateDetected": false,
+      "price": "Free",
+      "contentRating": "Everyone 10+",
+      "requiresOs": "Android 6.0",
+      "sizeBytes": null,
+      "rating": 4.32,
+      "ratingCount": 693697,
+      "developerWebsite": "http://wikimediafoundation.org"
     }
   ]
 }
