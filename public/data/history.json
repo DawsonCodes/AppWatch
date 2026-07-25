@@ -3,6 +3,12 @@
   "entries": {
     "apple:324715238": [
       {
+        "version": "8.2.2",
+        "releaseDate": "2026-07-22T00:56:48.000Z",
+        "releaseNotes": "Minor updates and enhancements",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
+      {
         "version": "8.2.1",
         "releaseDate": "2026-07-08T22:15:48.000Z",
         "releaseNotes": "An archive of past games is now available in \"Which came first?\", so you can go back and play any round you missed. Find it after completing your daily game. A bug was also addressed, where BC dates were displaying incorrectly within the game.",
@@ -10,6 +16,12 @@
       }
     ],
     "google:org.wikipedia": [
+      {
+        "version": "50599-r-2026-07-20",
+        "releaseDate": "2026-07-22T17:49:32.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
       {
         "version": "50598-r-2026-07-13",
         "releaseDate": "2026-07-16T19:25:42.000Z",
@@ -25,6 +37,12 @@
     ],
     "apple:570060128": [
       {
+        "version": "7.132.0",
+        "releaseDate": "2026-07-21T15:41:47.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
+      {
         "version": "7.131.0",
         "releaseDate": "2026-07-13T16:31:13.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
@@ -32,6 +50,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.21.1",
+        "releaseDate": "2026-07-24T17:30:33.000Z",
+        "releaseNotes": "• Introducing disappearing call events: Missed, outgoing, and received calls that occur after you install this update will now automatically disappear in any chat where disappearing messages are enabled.",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
       {
         "version": "8.20.1",
         "releaseDate": "2026-07-16T16:47:34.000Z",
@@ -66,6 +90,12 @@
       }
     ],
     "apple:989804926": [
+      {
+        "version": "153.0",
+        "releaseDate": "2026-07-20T02:07:08.000Z",
+        "releaseNotes": "Save passwords with confidence: We've fixed password-saving issues and improved the experience when using saved passwords.\nSmoother browsing: Fixed homepage flickering, tab counter alignment and made other stability improvements.\nVisual refinements: Updated icons and other visual refinements throughout Firefox.",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
       {
         "version": "152.4",
         "releaseDate": "2026-07-12T08:01:43.000Z",
