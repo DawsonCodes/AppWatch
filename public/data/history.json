@@ -37,6 +37,12 @@
     ],
     "apple:570060128": [
       {
+        "version": "7.133.0",
+        "releaseDate": "2026-07-27T16:19:19.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-01T16:58:14.033Z"
+      },
+      {
         "version": "7.132.0",
         "releaseDate": "2026-07-21T15:41:47.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
@@ -50,6 +56,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.22",
+        "releaseDate": "2026-07-30T15:07:46.000Z",
+        "releaseNotes": "• Now you can link another iPhone to your Signal account to send and receive messages and stay in sync with your main phone. Previously only iPads and laptops were supported as linked devices, but after this update one pocket no longer needs to be jealous of the other.",
+        "detectedAt": "2026-08-01T16:58:14.033Z"
+      },
       {
         "version": "8.21.1",
         "releaseDate": "2026-07-24T17:30:33.000Z",
@@ -77,6 +89,12 @@
     ],
     "google:org.thoughtcrime.securesms": [
       {
+        "version": "8.20.5",
+        "releaseDate": "2026-07-30T22:15:15.000Z",
+        "releaseNotes": "★ Now you can easily add an Android tablet as a linked device and bring your chats to the big screen.\n★ Introducing disappearing call events: Missed, outgoing, and received calls that occur after you install this update will automatically disappear in any chat where disappearing messages are enabled.\n★ This update also improves video quality and increases the maximum length of sent videos, which will hopefully make your summer vacation feel a little longer too.",
+        "detectedAt": "2026-08-01T16:58:14.033Z"
+      },
+      {
         "version": "8.19.2",
         "releaseDate": "2026-07-13T18:06:03.000Z",
         "releaseNotes": "★ Group admins can now bring chats to their natural conclusion with the new \"End Group\" option in group settings. Ending a group prevents group members from sending messages or starting calls, and also disables invites. Now you can make sure everyone stays on the right thread by ending last year's sewing meetup group before stitching a new one together.\n★ We also made it easier to search for group members on the group settings page too.",
@@ -91,6 +109,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "153.1",
+        "releaseDate": "2026-07-27T02:11:38.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-08-01T16:58:14.033Z"
+      },
+      {
         "version": "153.0",
         "releaseDate": "2026-07-20T02:07:08.000Z",
         "releaseNotes": "Save passwords with confidence: We've fixed password-saving issues and improved the experience when using saved passwords.\nSmoother browsing: Fixed homepage flickering, tab counter alignment and made other stability improvements.\nVisual refinements: Updated icons and other visual refinements throughout Firefox.",
@@ -104,6 +128,12 @@
       }
     ],
     "google:org.mozilla.firefox": [
+      {
+        "version": "153.0.1",
+        "releaseDate": "2026-07-30T18:38:18.000Z",
+        "releaseNotes": "Tab groups: Keep related tabs together in labeled, color-coded groups.\nPrivacy Dashboard: See the types of trackers Firefox blocks.\nShake to summarize: Cut through long articles with quick page summaries, now available in German, French, Spanish, Portuguese, Italian and Japanese.\nDownloads: Choose your default download location and rename files before downloading.\nBookmark import: Import your bookmarks from a CSV file.\nVisual refinements: Updated icons and other visual refinements.",
+        "detectedAt": "2026-08-01T16:58:14.033Z"
+      },
       {
         "version": "152.0.6",
         "releaseDate": "2026-07-13T22:12:08.000Z",
