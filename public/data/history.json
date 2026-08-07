@@ -3,6 +3,12 @@
   "entries": {
     "apple:324715238": [
       {
+        "version": "2026.07.31",
+        "releaseDate": "2026-08-03T13:26:43.000Z",
+        "releaseNotes": "New: the Random Article widget, a small square of serendipity on your home screen.\nOther improvements:\n• Widgets refreshing daily as intended\n• Find-in-page results no longer hidden by the keyboard",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
         "version": "8.2.2",
         "releaseDate": "2026-07-22T00:56:48.000Z",
         "releaseNotes": "Minor updates and enhancements",
@@ -16,6 +22,12 @@
       }
     ],
     "google:org.wikipedia": [
+      {
+        "version": "50600-r-2026-07-28",
+        "releaseDate": "2026-08-05T17:26:52.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
       {
         "version": "50599-r-2026-07-20",
         "releaseDate": "2026-07-22T17:49:32.000Z",
@@ -37,6 +49,12 @@
     ],
     "apple:570060128": [
       {
+        "version": "7.134.0",
+        "releaseDate": "2026-08-03T18:03:04.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
         "version": "7.133.0",
         "releaseDate": "2026-07-27T16:19:19.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
@@ -56,6 +74,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.23",
+        "releaseDate": "2026-08-06T13:45:02.000Z",
+        "releaseNotes": "• Now you can link another iPhone to your Signal account to send and receive messages and stay in sync with your main phone. Previously only iPads and laptops were supported as linked devices, but after this update one pocket no longer needs to be jealous of the other.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
       {
         "version": "8.22",
         "releaseDate": "2026-07-30T15:07:46.000Z",
@@ -89,6 +113,12 @@
     ],
     "google:org.thoughtcrime.securesms": [
       {
+        "version": "8.21.5",
+        "releaseDate": "2026-08-05T00:15:22.000Z",
+        "releaseNotes": "★ Now you can easily add an Android tablet as a linked device and bring your chats to the big screen.\n★ Introducing disappearing call events: Missed, outgoing, and received calls that occur after you install this update will automatically disappear in any chat where disappearing messages are enabled.\n★ This update also improves video quality and increases the maximum length of sent videos, which will hopefully make your summer vacation feel a little longer too.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
         "version": "8.20.5",
         "releaseDate": "2026-07-30T22:15:15.000Z",
         "releaseNotes": "★ Now you can easily add an Android tablet as a linked device and bring your chats to the big screen.\n★ Introducing disappearing call events: Missed, outgoing, and received calls that occur after you install this update will automatically disappear in any chat where disappearing messages are enabled.\n★ This update also improves video quality and increases the maximum length of sent videos, which will hopefully make your summer vacation feel a little longer too.",
@@ -109,6 +139,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "153.2",
+        "releaseDate": "2026-08-03T00:07:34.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
         "version": "153.1",
         "releaseDate": "2026-07-27T02:11:38.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
@@ -128,6 +164,12 @@
       }
     ],
     "google:org.mozilla.firefox": [
+      {
+        "version": "153.0.3",
+        "releaseDate": "2026-08-03T18:42:09.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/AndroidSupport.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
       {
         "version": "153.0.1",
         "releaseDate": "2026-07-30T18:38:18.000Z",
