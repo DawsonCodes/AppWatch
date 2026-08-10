@@ -139,6 +139,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "153.3",
+        "releaseDate": "2026-08-10T03:02:54.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-08-10T16:53:06.994Z"
+      },
+      {
         "version": "153.2",
         "releaseDate": "2026-08-03T00:07:34.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
