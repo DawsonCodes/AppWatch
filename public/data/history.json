@@ -131,6 +131,12 @@
     ],
     "google:org.thoughtcrime.securesms": [
       {
+        "version": "8.22.2",
+        "releaseDate": "2026-08-10T20:49:51.000Z",
+        "releaseNotes": "★ Now you can easily add an Android tablet as a linked device and bring your chats to the big screen.\n★ Introducing disappearing call events: Missed, outgoing, and received calls that occur after you install this update will automatically disappear in any chat where disappearing messages are enabled.\n★ This update also improves video quality and increases the maximum length of sent videos, which will hopefully make your summer vacation feel a little longer too.",
+        "detectedAt": "2026-08-14T16:50:43.796Z"
+      },
+      {
         "version": "8.21.6",
         "releaseDate": "2026-08-10T20:49:51.000Z",
         "releaseNotes": "★ Now you can easily add an Android tablet as a linked device and bring your chats to the big screen.\n★ Introducing disappearing call events: Missed, outgoing, and received calls that occur after you install this update will automatically disappear in any chat where disappearing messages are enabled.\n★ This update also improves video quality and increases the maximum length of sent videos, which will hopefully make your summer vacation feel a little longer too.",
