@@ -55,6 +55,12 @@
     ],
     "apple:570060128": [
       {
+        "version": "7.135.2",
+        "releaseDate": "2026-08-14T13:02:48.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-15T16:22:00.331Z"
+      },
+      {
         "version": "7.135.1",
         "releaseDate": "2026-08-12T14:32:07.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
