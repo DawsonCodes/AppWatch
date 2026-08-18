@@ -181,6 +181,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "154.0",
+        "releaseDate": "2026-08-17T03:01:57.000Z",
+        "releaseNotes": "Updated icons: Enjoy a fresh new look with updated icons.\nNew gestures: Open the Tab Tray and delete tabs faster with new gestures.\nSmoother experience: Bug fixes and improvements keep Firefox running smoothly and reliably.\nQuick answers: Ask by voice and get a clear answer right from your New Tab. Now available for US English.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-08-18T04:33:48.121Z"
+      },
+      {
         "version": "153.3",
         "releaseDate": "2026-08-10T03:02:54.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
