@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T16:29:38.500Z",
+  "generatedAt": "2026-08-20T04:35:36.230Z",
   "apps": [
     {
       "id": "apple:324715238",
@@ -17,7 +17,7 @@
       "category": "Reference",
       "bundleId": "org.wikimedia.wikipedia",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-12T16:55:40.058Z",
       "checkStatus": "ok",
       "checkError": null,
@@ -27,7 +27,7 @@
       "requiresOs": "iOS 17.6 or later",
       "sizeBytes": 273787904,
       "rating": 4.33,
-      "ratingCount": 6217,
+      "ratingCount": 6216,
       "developerWebsite": "https://m.mediawiki.org/wiki/Wikimedia_Apps/Team/iOS"
     },
     {
@@ -45,11 +45,11 @@
       "category": "Education",
       "bundleId": "com.duolingo.DuolingoMobile",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-19T16:29:38.500Z",
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": true,
+      "updateDetected": false,
       "price": "Free",
       "contentRating": "4+",
       "requiresOs": "iOS 17.0 or later",
@@ -73,7 +73,7 @@
       "category": "Social Networking",
       "bundleId": "org.whispersystems.signal",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-15T04:29:29.872Z",
       "checkStatus": "ok",
       "checkError": null,
@@ -83,7 +83,7 @@
       "requiresOs": "iOS 15.0 or later",
       "sizeBytes": 215577600,
       "rating": 4.74,
-      "ratingCount": 1073707,
+      "ratingCount": 1074010,
       "developerWebsite": "https://signal.org/"
     },
     {
@@ -101,7 +101,7 @@
       "category": "Utilities",
       "bundleId": "org.mozilla.ios.Firefox",
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-18T04:33:48.121Z",
       "checkStatus": "ok",
       "checkError": null,
@@ -124,12 +124,12 @@
       "storeUrl": "https://play.google.com/store/apps/details?id=com.duolingo&hl=en&gl=us",
       "currentVersion": null,
       "previousVersion": null,
-      "releaseDate": "2026-08-17T21:13:05.000Z",
+      "releaseDate": "2026-08-19T18:30:57.000Z",
       "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\n    For more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
       "category": "Education",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": null,
       "checkStatus": "ok",
       "checkError": null,
@@ -139,7 +139,7 @@
       "requiresOs": null,
       "sizeBytes": null,
       "rating": 4.73,
-      "ratingCount": 48789447,
+      "ratingCount": 48812756,
       "developerWebsite": "https://www.duolingo.com/help/support-request"
     },
     {
@@ -157,7 +157,7 @@
       "category": "Communication",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-12T16:55:40.058Z",
       "checkStatus": "ok",
       "checkError": null,
@@ -167,7 +167,7 @@
       "requiresOs": "Android 8.0",
       "sizeBytes": null,
       "rating": 4.61,
-      "ratingCount": 6500430,
+      "ratingCount": 6501894,
       "developerWebsite": "https://www.mozilla.org/firefox/mobile/"
     },
     {
@@ -185,17 +185,17 @@
       "category": "Communication",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-19T16:29:38.500Z",
       "checkStatus": "ok",
       "checkError": null,
-      "updateDetected": true,
+      "updateDetected": false,
       "price": "Free",
       "contentRating": "Everyone",
       "requiresOs": "Android 6.0",
       "sizeBytes": null,
       "rating": 4.52,
-      "ratingCount": 2903814,
+      "ratingCount": 2904056,
       "developerWebsite": "https://signal.org"
     },
     {
@@ -213,7 +213,7 @@
       "category": "Books & Reference",
       "bundleId": null,
       "firstTrackedAt": "2026-07-14T19:51:49.638Z",
-      "lastCheckedAt": "2026-08-19T16:29:38.500Z",
+      "lastCheckedAt": "2026-08-20T04:35:36.230Z",
       "lastUpdatedAt": "2026-08-07T16:53:01.895Z",
       "checkStatus": "ok",
       "checkError": null,
@@ -223,7 +223,7 @@
       "requiresOs": "Android 6.0",
       "sizeBytes": null,
       "rating": 4.33,
-      "ratingCount": 693475,
+      "ratingCount": 693482,
       "developerWebsite": "http://wikimediafoundation.org"
     }
   ]
