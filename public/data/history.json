@@ -231,6 +231,12 @@
     ],
     "google:org.mozilla.firefox": [
       {
+        "version": "154.0",
+        "releaseDate": "2026-08-17T11:14:08.000Z",
+        "releaseNotes": "Translations: Get more reliable automatic translations when you have multiple languages selected in your system settings.\nDownloads: Choose the file name and where your downloads are saved.\nUpdated icons: Enjoy a fresh new look with updated icons.\nAddress autofill: Save addresses automatically, with no manual setup required.\nBookmark Search: Find bookmarks faster with dedicated search and up to 75 results per search.",
+        "detectedAt": "2026-08-21T04:36:21.923Z"
+      },
+      {
         "version": "153.0.4",
         "releaseDate": "2026-08-10T21:07:12.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/AndroidSupport.",
