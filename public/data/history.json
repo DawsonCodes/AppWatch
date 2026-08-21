@@ -105,6 +105,12 @@
     ],
     "apple:874139669": [
       {
+        "version": "8.25",
+        "releaseDate": "2026-08-20T16:46:59.000Z",
+        "releaseNotes": "• We added a convenient shortcut to quickly lower your hand after you start speaking during a Signal group call. It's hands down our favorite feature in this release.",
+        "detectedAt": "2026-08-21T16:32:34.265Z"
+      },
+      {
         "version": "8.24",
         "releaseDate": "2026-08-13T16:20:52.000Z",
         "releaseNotes": "• Now you can link another iPhone to your Signal account to send and receive messages and stay in sync with your main phone. Previously only iPads and laptops were supported as linked devices, but after this update one pocket no longer needs to be jealous of the other.",
