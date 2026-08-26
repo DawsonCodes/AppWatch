@@ -249,6 +249,12 @@
     ],
     "google:org.mozilla.firefox": [
       {
+        "version": "154.0.1",
+        "releaseDate": "2026-08-25T00:28:49.000Z",
+        "releaseNotes": "-Fixed an issue where inactive tabs were also being closed when all active tabs were selected for closing.\n-Fixed an error that was appearing after signing in to the built-in VPN.",
+        "detectedAt": "2026-08-26T16:47:35.825Z"
+      },
+      {
         "version": "154.0",
         "releaseDate": "2026-08-17T11:14:08.000Z",
         "releaseNotes": "Translations: Get more reliable automatic translations when you have multiple languages selected in your system settings.\nDownloads: Choose the file name and where your downloads are saved.\nUpdated icons: Enjoy a fresh new look with updated icons.\nAddress autofill: Save addresses automatically, with no manual setup required.\nBookmark Search: Find bookmarks faster with dedicated search and up to 75 results per search.",
