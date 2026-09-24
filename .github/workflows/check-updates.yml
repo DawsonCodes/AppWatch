@@ -27,12 +27,12 @@ jobs:
       changed: ${{ steps.check.outputs.changed }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -72,7 +72,7 @@ jobs:
       # time stays accurate) but only committed alongside real data changes.
       # Hand the freshly generated data to the deploy job either way.
       - name: Upload checked data for deployment
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: appwatch-data
           path: public/data
