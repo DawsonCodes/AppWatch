@@ -1,0 +1,495 @@
+/* ==========================================================================
+   AppWatch motion
+   --------------------------------------------------------------------------
+   One vocabulary everywhere: things enter by rising and settling on a spring,
+   leave by sinking and fading faster than they arrived, and state changes
+   morph rather than cut. Choreography:
+     - first load    hero lines rise, then cards cascade in
+     - grid changes  View Transitions: cards glide to new slots, leavers
+                     shrink away, newcomers pop in (html[data-vt='grid'])
+     - app detail    the card's icon flies into the panel as it slides in
+                     (html[data-vt='detail']); a sheet on phones
+     - view switch   Apps <-> Updates slide in the direction of travel
+     - theme         a circle reveal from the theme button (motion.ts)
+     - scrolling     timeline releases rise as they enter (scroll-driven)
+   All of it is removed under prefers-reduced-motion (bottom of file).
+   ========================================================================== */
+
+/* Entrances animate the individual translate/scale properties so they never
+   fight hover and press effects, which use transform. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+    scale: 0.985;
+  }
+  to {
+    opacity: 1;
+    translate: none;
+    scale: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    scale: 0.86;
+  }
+}
+
+@keyframes shrink-out {
+  to {
+    opacity: 0;
+    scale: 0.86;
+  }
+}
+
+@keyframes line-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes panel-in-right {
+  from {
+    transform: translateX(104%);
+  }
+}
+
+@keyframes panel-out-right {
+  to {
+    transform: translateX(104%);
+  }
+}
+
+@keyframes panel-in-up {
+  from {
+    transform: translateY(104%);
+  }
+}
+
+@keyframes panel-out-down {
+  to {
+    transform: translateY(104%);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+}
+
+@keyframes slide-to-right {
+  to {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70%,
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@keyframes sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 24px) scale(0.94);
+  }
+}
+
+@keyframes toast-timer {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes header-lift {
+  to {
+    border-bottom-color: var(--border);
+  }
+}
+
+/* ----------------------------- First impression -------------------------- */
+
+.hero__line {
+  animation: line-up 800ms var(--ease-out) both;
+}
+
+.hero__line--accent {
+  animation-delay: 110ms;
+}
+
+.hero__sub {
+  animation: rise-in 700ms var(--ease-out) 220ms both;
+}
+
+.hero__pulse {
+  animation: pop-in 600ms var(--spring) 380ms both;
+}
+
+.controls,
+.collections,
+.filters-area {
+  animation: rise-in 700ms var(--ease-out) 300ms both;
+}
+
+.collections {
+  animation-delay: 360ms;
+}
+
+.filters-area {
+  animation-delay: 420ms;
+}
+
+.logo__sweep {
+  animation: sweep 1.3s var(--ease-in-out) 200ms 1 both;
+}
+
+.brand:hover .logo__sweep {
+  animation: sweep 1.1s var(--ease-in-out) infinite;
+}
+
+.grid--intro .card,
+.grid--loading .card {
+  animation: rise-in 650ms var(--spring-soft) both;
+  animation-delay: calc(var(--i, 0) * 38ms + 120ms);
+}
+
+.skeleton {
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.card--skeleton .skeleton:nth-child(2n) {
+  animation-delay: 200ms;
+}
+
+/* ------------------------------- Live status ----------------------------- */
+
+.health--ok .health__dot::after,
+.hero__pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: ping 2.6s var(--ease-out) infinite;
+}
+
+.hero__pulse-dot::after {
+  animation-delay: 600ms;
+}
+
+/* The header gains its hairline once the page scrolls. */
+@supports (animation-timeline: scroll()) {
+  .site-header {
+    animation: header-lift linear both;
+    animation-timeline: scroll();
+    animation-range: 0 60px;
+  }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .site-header {
+    border-bottom-color: var(--border);
+  }
+}
+
+/* ----------------------------- Detail (no VT) ---------------------------- */
+
+.detail-root:not(.detail-root--vt) .detail-backdrop {
+  animation: fade-in var(--dur-3) var(--ease-out) both;
+}
+
+.detail-root:not(.detail-root--vt) .detail {
+  animation: panel-in-right var(--dur-4) var(--spring-soft) both;
+}
+
+.detail-root.is-closing .detail-backdrop {
+  animation: fade-out 220ms var(--ease-in) both;
+}
+
+.detail-root.is-closing .detail {
+  animation: panel-out-right 240ms var(--ease-in) both;
+}
+
+@media (max-width: 699px) {
+  .detail-root:not(.detail-root--vt) .detail {
+    animation-name: panel-in-up;
+  }
+  .detail-root.is-closing .detail {
+    animation-name: panel-out-down;
+  }
+}
+
+.detail__listing {
+  animation: rise-in var(--dur-4) var(--ease-out) 60ms both;
+}
+
+.history__entry {
+  animation: rise-in 500ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 45ms + 120ms);
+}
+
+.copy.is-done .copy__icon {
+  animation: pop-in 420ms var(--spring) both;
+}
+
+/* --------------------------------- Toast --------------------------------- */
+
+.toast {
+  animation: toast-in var(--dur-4) var(--spring) both;
+}
+
+.toast__timer {
+  animation: toast-timer var(--toast-ms, 5000ms) linear both;
+}
+
+.toast:hover .toast__timer {
+  animation-play-state: paused;
+}
+
+/* --------------------------- Scroll-driven reveals ----------------------- */
+
+@supports (animation-timeline: view()) {
+  .timeline__item {
+    animation: rise-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+
+  .grid:not(.grid--intro):not(.grid--loading) .card {
+    animation: rise-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+
+  .insights {
+    animation: rise-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+
+/* ============================ View Transitions =========================== */
+
+/* Default document crossfade (used for data refreshes and fallbacks). */
+::view-transition-group(*) {
+  animation-duration: var(--dur-4);
+  animation-timing-function: var(--spring-soft);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--dur-3);
+}
+
+/* Grid: every card gets a name so it can glide to its new slot. */
+html[data-vt='grid'] .card {
+  view-transition-name: var(--vt-name);
+  view-transition-class: card;
+}
+
+html[data-vt='grid']::view-transition-group(.card) {
+  animation-duration: 560ms;
+  animation-timing-function: var(--spring-soft);
+}
+
+html[data-vt='grid']::view-transition-old(.card):only-child {
+  animation: shrink-out 220ms var(--ease-in) both;
+}
+
+html[data-vt='grid']::view-transition-new(.card):only-child {
+  animation: pop-in 520ms var(--spring) 80ms both;
+}
+
+html[data-vt='grid']::view-transition-old(root),
+html[data-vt='grid']::view-transition-new(root) {
+  animation-duration: 260ms;
+}
+
+/* Detail: the page stays put; the panel, backdrop and hero icon move. */
+html[data-vt='detail']::view-transition-old(root),
+html[data-vt='detail']::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-vt='detail']::view-transition-new(detail-panel) {
+  animation: panel-in-right 520ms var(--spring-soft) both;
+}
+
+html[data-vt='detail']::view-transition-old(detail-panel) {
+  animation: panel-out-right 260ms var(--ease-in) both;
+}
+
+html[data-vt='detail']::view-transition-new(detail-backdrop) {
+  animation: fade-in 320ms var(--ease-out) both;
+}
+
+html[data-vt='detail']::view-transition-old(detail-backdrop) {
+  animation: fade-out 240ms var(--ease-in) both;
+}
+
+html[data-vt='detail']::view-transition-group(hero-icon) {
+  animation-duration: 520ms;
+  animation-timing-function: var(--spring-soft);
+  z-index: 10;
+}
+
+@media (max-width: 699px) {
+  html[data-vt='detail']::view-transition-new(detail-panel) {
+    animation-name: panel-in-up;
+  }
+  html[data-vt='detail']::view-transition-old(detail-panel) {
+    animation-name: panel-out-down;
+  }
+}
+
+/* View switch: the content slides in the direction of travel. */
+html[data-vt='view'] .view {
+  view-transition-name: main-view;
+}
+
+html[data-vt='view']::view-transition-old(root),
+html[data-vt='view']::view-transition-new(root) {
+  animation: none;
+}
+
+html[data-vt='view']::view-transition-group(main-view) {
+  animation-duration: 420ms;
+}
+
+html[data-vt='view'][data-vt-dir='forward']::view-transition-old(main-view) {
+  animation: slide-to-left 200ms var(--ease-in) both;
+}
+
+html[data-vt='view'][data-vt-dir='forward']::view-transition-new(main-view) {
+  animation: slide-from-right 460ms var(--spring-soft) 60ms both;
+}
+
+html[data-vt='view'][data-vt-dir='back']::view-transition-old(main-view) {
+  animation: slide-to-right 200ms var(--ease-in) both;
+}
+
+html[data-vt='view'][data-vt-dir='back']::view-transition-new(main-view) {
+  animation: slide-from-left 460ms var(--spring-soft) 60ms both;
+}
+
+/* Theme: motion.ts animates the new snapshot's clip-path; no crossfade. */
+html[data-vt='theme']::view-transition-old(root),
+html[data-vt='theme']::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-vt='theme']::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* While any transition runs, sticky/fixed chrome keeps its own layer. */
+html[data-vt='grid'] .site-header,
+html[data-vt='view'] .site-header {
+  view-transition-name: site-header;
+}
+
+html[data-vt='grid']::view-transition-group(site-header),
+html[data-vt='view']::view-transition-group(site-header) {
+  animation: none;
+  z-index: 5;
+}
+
+html[data-vt='grid'] .collections,
+html[data-vt='view'] .collections {
+  view-transition-name: collections-bar;
+}
+
+html[data-vt='grid']::view-transition-group(collections-bar),
+html[data-vt='view']::view-transition-group(collections-bar) {
+  animation: none;
+  z-index: 4;
+}
+
+html[data-vt='grid']::view-transition-old(site-header),
+html[data-vt='grid']::view-transition-new(site-header),
+html[data-vt='view']::view-transition-old(site-header),
+html[data-vt='view']::view-transition-new(site-header),
+html[data-vt='grid']::view-transition-old(collections-bar),
+html[data-vt='grid']::view-transition-new(collections-bar),
+html[data-vt='view']::view-transition-old(collections-bar),
+html[data-vt='view']::view-transition-new(collections-bar) {
+  animation: none;
+}
+
+/* ============================== Reduced motion =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

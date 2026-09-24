@@ -67,3 +67,20 @@ export function relativeTime(iso: string | null, now: Date = new Date()): string
   }
   return 'just now';
 }
+
+/** "22h ago", "3d ago", "5w ago" — compact relative time for tight rows. */
+export function compactAgo(iso: string | null, now: Date = new Date()): string | null {
+  if (!iso) return null;
+  const time = Date.parse(iso);
+  if (Number.isNaN(time)) return null;
+  const minutes = Math.max(0, Math.round((now.getTime() - time) / 60000));
+  if (minutes < 1) return 'just now';
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.floor(hours / 24);
+  if (days < 7) return `${days}d ago`;
+  if (days < 35) return `${Math.floor(days / 7)}w ago`;
+  if (days < 365) return `${Math.floor(days / 30.44)}mo ago`;
+  return `${Math.floor(days / 365)}y ago`;
+}

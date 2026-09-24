@@ -27,7 +27,7 @@ export const THEMES: readonly ThemeOption[] = [
 
 /** Page background per theme, used for the browser UI theme-color. */
 const THEME_COLORS: Record<ThemeId, string> = {
-  'gray-dark': '#17191d',
+  'gray-dark': '#131518',
   light: '#f4f5f7',
   'ms-paint': '#c0c0c0',
 };

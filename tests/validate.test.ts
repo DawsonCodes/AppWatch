@@ -133,6 +133,22 @@ describe('validateHistoryFile', () => {
     ).toContainEqual(expect.stringContaining('duplicate version'));
   });
 
+  it('accepts version-less entries identified by release date', () => {
+    const dated = { ...entry, version: null, releaseDate: '2026-09-20T00:00:00.000Z' };
+    expect(validateHistoryFile({ schemaVersion: 1, entries: { 'google:a.b': [dated] } })).toEqual(
+      [],
+    );
+    expect(
+      validateHistoryFile({ schemaVersion: 1, entries: { 'google:a.b': [dated, dated] } }),
+    ).toContainEqual(expect.stringContaining('duplicate release'));
+    expect(
+      validateHistoryFile({
+        schemaVersion: 1,
+        entries: { 'google:a.b': [{ ...dated, releaseDate: null }] },
+      }),
+    ).toContainEqual(expect.stringContaining('required when version is null'));
+  });
+
   it('rejects entries with missing fields', () => {
     expect(
       validateHistoryFile({ schemaVersion: 1, entries: { 'apple:100': [{ version: '1' }] } }),

@@ -1,95 +1,111 @@
-import type { AppRecord } from '../shared/types.ts';
+import { memo } from 'preact/compat';
+import type { AppGroup } from '../lib/groups.ts';
+import { groupDeveloper, groupIconUrl, primaryListing } from '../lib/groups.ts';
 import { isRecentlyUpdated } from '../lib/filtering.ts';
-import { formatDate, relativeTime } from '../lib/format.ts';
+import { compactAgo, formatDate } from '../lib/format.ts';
 import { truncate } from '../shared/text.ts';
 import { AppIcon } from './AppIcon.tsx';
-import { AlertIcon, ExternalIcon } from './Icons.tsx';
-import { PlatformBadge, platformLabel } from './PlatformBadge.tsx';
+import { AlertIcon } from './Icons.tsx';
+import { storeLabel } from './StoreBadge.tsx';
 import { WatchButton } from './WatchButton.tsx';
 
-export type AppSource = 'tracked' | 'local';
-
 interface AppCardProps {
-  app: AppRecord;
-  source: AppSource;
+  group: AppGroup;
   watched: boolean;
   open: boolean;
-  onToggleWatch: (id: string) => void;
-  onOpenDetail: (id: string) => void;
+  index: number;
+  onToggleWatch: (group: AppGroup) => void;
+  onOpen: (listingId: string, trigger: HTMLElement) => void;
 }
 
 /**
- * One app in the collection. Distinct visual states, deliberately different
- * from one another: hover (slight lift), keyboard focus (focus ring on the
- * controls), recently updated (left accent stripe + label), watched (filled
- * star), open (accent border while its detail panel is showing), and check
- * failed (small alert badge). A recently updated card never borrows the
- * hover/selected treatment.
+ * One app, across both stores. States are deliberately distinct: hover lifts
+ * the card, keyboard focus rings the whole card, "New" marks a store row that
+ * updated this week, a filled star means watched, and the open card keeps an
+ * accent outline while its detail panel is showing.
  */
-export function AppCard({ app, source, watched, open, onToggleWatch, onOpenDetail }: AppCardProps) {
-  const recent = isRecentlyUpdated(app);
-  const updatedWhen = relativeTime(app.releaseDate);
-  const notes = app.releaseNotes ? truncate(app.releaseNotes, 120) : null;
+function AppCardImpl({ group, watched, open, index, onToggleWatch, onOpen }: AppCardProps) {
+  const primary = primaryListing(group);
+  const developer = groupDeveloper(group);
+  const notes = primary.releaseNotes ? truncate(primary.releaseNotes, 140) : null;
+  const recent = group.listings.some((listing) => isRecentlyUpdated(listing));
+  const local = group.source === 'local';
 
   const classes = ['card'];
-  if (recent) classes.push('card--recent');
+  if (recent) classes.push('card--fresh');
   if (open) classes.push('card--open');
 
   return (
-    <article class={classes.join(' ')} aria-label={app.name}>
-      <div class="card__top">
-        <AppIcon name={app.name} iconUrl={app.iconUrl} size={48} />
+    <article
+      class={classes.join(' ')}
+      data-group={group.key}
+      style={{ '--vt-name': `card-${group.key}`, '--i': Math.min(index, 16) }}
+    >
+      <button
+        type="button"
+        class="card__open"
+        aria-label={`${group.name}: show details`}
+        onClick={(event) => onOpen(primary.id, event.currentTarget)}
+      />
+      <header class="card__head">
+        <AppIcon name={group.name} iconUrl={groupIconUrl(group)} size={52} class="card__icon" />
         <div class="card__title">
-          <h3 class="card__name">{app.name}</h3>
-          <p class="card__developer">{app.developer ?? ' '}</p>
+          <h3 class="card__name">{group.name}</h3>
+          <p class="card__dev">{local ? 'Watched in this browser' : (developer ?? ' ')}</p>
         </div>
-        <WatchButton appName={app.name} watched={watched} onToggle={() => onToggleWatch(app.id)} />
-      </div>
+        <WatchButton appName={group.name} watched={watched} onToggle={() => onToggleWatch(group)} />
+      </header>
 
-      <div class="card__meta">
-        {app.currentVersion ? <span class="version-chip">{app.currentVersion}</span> : null}
-        {app.previousVersion ? (
-          <span class="card__prev" title={`Previous version: ${app.previousVersion}`}>
-            was {app.previousVersion}
-          </span>
-        ) : null}
-        <PlatformBadge platform={app.platform} />
-        {source === 'local' ? (
-          <span class="badge badge--local" title="Watched only in this browser">
-            Local
-          </span>
-        ) : null}
-        {recent ? <span class="badge badge--recent">Updated</span> : null}
-        {app.checkStatus === 'error' ? (
-          <span class="badge badge--error" title={app.checkError ?? 'The last check failed'}>
-            <AlertIcon size={11} /> Check failed
-          </span>
-        ) : null}
-      </div>
-
-      {updatedWhen ? (
-        <p class="card__when">
-          {source === 'local' ? 'Store release' : 'Released'} {formatDate(app.releaseDate)} ·{' '}
-          {updatedWhen}
-        </p>
-      ) : null}
+      <ul class="card__stores">
+        {group.listings.map((listing) => {
+          const fresh = isRecentlyUpdated(listing);
+          const when = compactAgo(listing.releaseDate);
+          return (
+            <li
+              class={`store-row store-row--${listing.platform}${fresh ? ' store-row--fresh' : ''}`}
+              key={listing.id}
+            >
+              <span class="store-row__store">
+                <span class="store-row__dot" aria-hidden="true" />
+                {storeLabel(listing.platform)}
+              </span>
+              <span class="store-row__version">
+                {listing.currentVersion ? (
+                  <span class="mono store-row__number" title={listing.currentVersion}>
+                    {listing.currentVersion}
+                  </span>
+                ) : (
+                  <span class="store-row__varies" title="The store lists no single version">
+                    {listing.source === 'local' ? '—' : 'Varies'}
+                  </span>
+                )}
+                {listing.checkStatus === 'error' ? (
+                  <span
+                    class="store-row__alert"
+                    title={`Last check failed: ${listing.checkError ?? 'unknown error'}`}
+                  >
+                    <AlertIcon size={13} />
+                    <span class="visually-hidden">Last check failed</span>
+                  </span>
+                ) : null}
+              </span>
+              <span
+                class="store-row__when"
+                title={
+                  listing.releaseDate ? `Released ${formatDate(listing.releaseDate)}` : undefined
+                }
+              >
+                {fresh ? <span class="visually-hidden">New this week, </span> : null}
+                {when ?? ''}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
 
       {notes ? <p class="card__notes">{notes}</p> : null}
-
-      <div class="card__actions">
-        <button type="button" class="button button--primary" onClick={() => onOpenDetail(app.id)}>
-          Details
-        </button>
-        <a
-          class="button button--ghost"
-          href={app.storeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`${app.name} on the ${platformLabel(app.platform)} (opens in a new tab)`}
-        >
-          {platformLabel(app.platform)} <ExternalIcon size={12} />
-        </a>
-      </div>
     </article>
   );
 }
+
+export const AppCard = memo(AppCardImpl);

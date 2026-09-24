@@ -33,7 +33,9 @@ function outcomeLabel(summary: AppRunSummary): string {
     case 'new':
       return 'first snapshot';
     case 'updated':
-      return `update detected (${summary.previousVersion ?? '?'} → ${summary.version ?? '?'})`;
+      return summary.version
+        ? `update detected (${summary.previousVersion ?? '?'} → ${summary.version})`
+        : 'update detected (new store release date)';
     case 'unchanged':
       return 'up to date';
     case 'failed':

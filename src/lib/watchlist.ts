@@ -12,6 +12,8 @@ export interface Watchlist {
   readonly persistent: boolean;
   has(id: string): boolean;
   toggle(id: string): boolean;
+  /** Watch or unwatch several listings at once (an app on both stores). */
+  setMany(ids: readonly string[], watched: boolean): void;
   ids(): ReadonlySet<string>;
 }
 
@@ -65,6 +67,13 @@ export function createWatchlist(storageCandidate: Storage | null = defaultStorag
   return {
     persistent: storage !== null,
     has: (id) => ids.has(id),
+    setMany(many, watched) {
+      for (const id of many) {
+        if (watched) ids.add(id);
+        else ids.delete(id);
+      }
+      persist();
+    },
     toggle(id) {
       if (ids.has(id)) {
         ids.delete(id);

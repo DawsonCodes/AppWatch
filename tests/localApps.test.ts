@@ -91,9 +91,22 @@ describe('createLocalAppsStore', () => {
 });
 
 describe('configSnippetFor', () => {
-  it('produces the exact apps.config.json line', () => {
-    expect(configSnippetFor({ storeUrl: 'https://apps.apple.com/us/app/id1' })).toBe(
-      '"https://apps.apple.com/us/app/id1"',
+  it('produces an apps.config.json app entry for the right store field', () => {
+    expect(
+      configSnippetFor({
+        name: 'Example',
+        platform: 'apple',
+        storeUrl: 'https://apps.apple.com/us/app/id1',
+      }),
+    ).toBe('{"name":"Example","appStore":"https://apps.apple.com/us/app/id1"}');
+    expect(
+      configSnippetFor({
+        name: 'Wiki',
+        platform: 'google',
+        storeUrl: 'https://play.google.com/store/apps/details?id=org.wikipedia',
+      }),
+    ).toBe(
+      '{"name":"Wiki","googlePlay":"https://play.google.com/store/apps/details?id=org.wikipedia"}',
     );
   });
 });

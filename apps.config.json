@@ -1,106 +1,340 @@
 {
   "country": "us",
   "language": "en",
-  "apps": [
-    "https://apps.apple.com/us/app/wikipedia/id324715238",
-    "https://play.google.com/store/apps/details?id=org.wikipedia",
-    "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
-    "https://play.google.com/store/apps/details?id=com.duolingo",
-    "https://apps.apple.com/us/app/signal-private-messenger/id874139669",
-    "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms",
-    "https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926",
-    "https://play.google.com/store/apps/details?id=org.mozilla.firefox",
-    "https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
-    "https://play.google.com/store/apps/details?id=com.whatsapp",
-    "https://apps.apple.com/us/app/telegram-messenger/id686449807",
-    "https://play.google.com/store/apps/details?id=org.telegram.messenger",
-    "https://apps.apple.com/us/app/messenger/id454638411",
-    "https://play.google.com/store/apps/details?id=com.facebook.orca",
-    "https://apps.apple.com/us/app/discord-chat-talk-hangout/id985746746",
-    "https://play.google.com/store/apps/details?id=com.discord",
-    "https://apps.apple.com/us/app/instagram/id389801252",
-    "https://play.google.com/store/apps/details?id=com.instagram.android",
-    "https://apps.apple.com/us/app/facebook/id284882215",
-    "https://play.google.com/store/apps/details?id=com.facebook.katana",
-    "https://apps.apple.com/us/app/threads/id6446901002",
-    "https://play.google.com/store/apps/details?id=com.instagram.barcelona",
-    "https://apps.apple.com/us/app/x/id333903271",
-    "https://play.google.com/store/apps/details?id=com.twitter.android",
-    "https://apps.apple.com/us/app/reddit/id1064216828",
-    "https://play.google.com/store/apps/details?id=com.reddit.frontpage",
-    "https://apps.apple.com/us/app/snapchat/id447188370",
-    "https://play.google.com/store/apps/details?id=com.snapchat.android",
-    "https://apps.apple.com/us/app/pinterest/id429047995",
-    "https://play.google.com/store/apps/details?id=com.pinterest",
-    "https://apps.apple.com/us/app/linkedin/id288429040",
-    "https://play.google.com/store/apps/details?id=com.linkedin.android",
-    "https://apps.apple.com/us/app/youtube/id544007664",
-    "https://play.google.com/store/apps/details?id=com.google.android.youtube",
-    "https://apps.apple.com/us/app/netflix/id363590051",
-    "https://play.google.com/store/apps/details?id=com.netflix.mediaclient",
-    "https://apps.apple.com/us/app/disney-plus/id1446075923",
-    "https://play.google.com/store/apps/details?id=com.disney.disneyplus",
-    "https://apps.apple.com/us/app/twitch/id460177396",
-    "https://play.google.com/store/apps/details?id=tv.twitch.android.app",
-    "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580",
-    "https://play.google.com/store/apps/details?id=com.spotify.music",
-    "https://apps.apple.com/us/app/shazam/id284993459",
-    "https://play.google.com/store/apps/details?id=com.shazam.android",
-    "https://apps.apple.com/us/app/vlc-media-player/id650377962",
-    "https://play.google.com/store/apps/details?id=org.videolan.vlc",
-    "https://apps.apple.com/us/app/roblox/id431946152",
-    "https://play.google.com/store/apps/details?id=com.roblox.client",
-    "https://apps.apple.com/us/app/slack/id618783545",
-    "https://play.google.com/store/apps/details?id=com.Slack",
-    "https://apps.apple.com/us/app/zoom-workplace/id546505307",
-    "https://play.google.com/store/apps/details?id=us.zoom.videomeetings",
-    "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
-    "https://play.google.com/store/apps/details?id=com.microsoft.teams",
-    "https://apps.apple.com/us/app/microsoft-outlook/id951937596",
-    "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook",
-    "https://apps.apple.com/us/app/gmail-email-by-google/id422689480",
-    "https://play.google.com/store/apps/details?id=com.google.android.gm",
-    "https://apps.apple.com/us/app/notion/id1232780281",
-    "https://play.google.com/store/apps/details?id=notion.id",
-    "https://apps.apple.com/us/app/dropbox/id327630330",
-    "https://play.google.com/store/apps/details?id=com.dropbox.android",
-    "https://apps.apple.com/us/app/canva/id897446215",
-    "https://play.google.com/store/apps/details?id=com.canva.editor",
-    "https://apps.apple.com/us/app/chatgpt/id6448311069",
-    "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
-    "https://apps.apple.com/us/app/google-chrome/id535886823",
-    "https://play.google.com/store/apps/details?id=com.android.chrome",
-    "https://apps.apple.com/us/app/brave-browser/id1052879175",
-    "https://play.google.com/store/apps/details?id=com.brave.browser",
-    "https://apps.apple.com/us/app/duckduckgo-private-browser/id663592361",
-    "https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android",
-    "https://apps.apple.com/us/app/proton-mail/id979659905",
-    "https://play.google.com/store/apps/details?id=ch.protonmail.android",
-    "https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744",
-    "https://play.google.com/store/apps/details?id=com.x8bit.bitwarden",
-    "https://apps.apple.com/us/app/google-maps/id585027354",
-    "https://play.google.com/store/apps/details?id=com.google.android.apps.maps",
-    "https://apps.apple.com/us/app/waze/id323229106",
-    "https://play.google.com/store/apps/details?id=com.waze",
-    "https://apps.apple.com/us/app/uber/id368677368",
-    "https://play.google.com/store/apps/details?id=com.ubercab",
-    "https://apps.apple.com/us/app/lyft/id529379082",
-    "https://play.google.com/store/apps/details?id=me.lyft.android",
-    "https://apps.apple.com/us/app/airbnb/id401626263",
-    "https://play.google.com/store/apps/details?id=com.airbnb.android",
-    "https://apps.apple.com/us/app/amazon-shopping/id297606951",
-    "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping",
-    "https://apps.apple.com/us/app/ebay/id282614216",
-    "https://play.google.com/store/apps/details?id=com.ebay.mobile",
-    "https://apps.apple.com/us/app/doordash/id719972451",
-    "https://play.google.com/store/apps/details?id=com.dd.doordash",
-    "https://apps.apple.com/us/app/paypal/id283646709",
-    "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile",
-    "https://apps.apple.com/us/app/venmo/id351727428",
-    "https://play.google.com/store/apps/details?id=com.venmo",
-    "https://apps.apple.com/us/app/cash-app/id711923939",
-    "https://play.google.com/store/apps/details?id=com.squareup.cash",
-    "https://apps.apple.com/us/app/strava/id426826309",
-    "https://play.google.com/store/apps/details?id=com.strava"
+  "collections": [
+    {
+      "id": "ai",
+      "label": "AI",
+      "apps": [
+        {
+          "name": "ChatGPT",
+          "appStore": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.openai.chatgpt"
+        },
+        {
+          "name": "Gemini",
+          "appStore": "https://apps.apple.com/us/app/google-gemini/id6477489729",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard"
+        },
+        {
+          "name": "Grok",
+          "appStore": "https://apps.apple.com/us/app/grok/id6670324846",
+          "googlePlay": "https://play.google.com/store/apps/details?id=ai.x.grok"
+        },
+        {
+          "name": "Microsoft Copilot",
+          "appStore": "https://apps.apple.com/us/app/microsoft-copilot/id6472538445",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.copilot"
+        },
+        {
+          "name": "Perplexity",
+          "appStore": "https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334",
+          "googlePlay": "https://play.google.com/store/apps/details?id=ai.perplexity.app.android"
+        },
+        {
+          "name": "DeepSeek",
+          "appStore": "https://apps.apple.com/us/app/deepseek-ai-assistant/id6737597349",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.deepseek.chat"
+        },
+        {
+          "name": "Character.AI",
+          "appStore": "https://apps.apple.com/us/app/character-ai/id1671705818",
+          "googlePlay": "https://play.google.com/store/apps/details?id=ai.character.app"
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social",
+      "apps": [
+        {
+          "name": "Instagram",
+          "appStore": "https://apps.apple.com/us/app/instagram/id389801252",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.instagram.android"
+        },
+        {
+          "name": "Facebook",
+          "appStore": "https://apps.apple.com/us/app/facebook/id284882215",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.facebook.katana"
+        },
+        {
+          "name": "X",
+          "appStore": "https://apps.apple.com/us/app/x/id333903271",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.twitter.android"
+        },
+        {
+          "name": "Threads",
+          "appStore": "https://apps.apple.com/us/app/threads/id6446901002",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.instagram.barcelona"
+        },
+        {
+          "name": "YouTube",
+          "appStore": "https://apps.apple.com/us/app/youtube/id544007664",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.youtube"
+        },
+        {
+          "name": "Snapchat",
+          "appStore": "https://apps.apple.com/us/app/snapchat/id447188370",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.snapchat.android"
+        },
+        {
+          "name": "Reddit",
+          "appStore": "https://apps.apple.com/us/app/reddit/id1064216828",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.reddit.frontpage"
+        },
+        {
+          "name": "Pinterest",
+          "appStore": "https://apps.apple.com/us/app/pinterest/id429047995",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.pinterest"
+        },
+        {
+          "name": "LinkedIn",
+          "appStore": "https://apps.apple.com/us/app/linkedin/id288429040",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.linkedin.android"
+        }
+      ]
+    },
+    {
+      "id": "messaging",
+      "label": "Messaging",
+      "apps": [
+        {
+          "name": "WhatsApp",
+          "appStore": "https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.whatsapp"
+        },
+        {
+          "name": "Signal",
+          "appStore": "https://apps.apple.com/us/app/signal-private-messenger/id874139669",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
+        },
+        {
+          "name": "Telegram",
+          "appStore": "https://apps.apple.com/us/app/telegram-messenger/id686449807",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.telegram.messenger"
+        },
+        {
+          "name": "Messenger",
+          "appStore": "https://apps.apple.com/us/app/messenger/id454638411",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.facebook.orca"
+        },
+        {
+          "name": "Discord",
+          "appStore": "https://apps.apple.com/us/app/discord-chat-talk-hangout/id985746746",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.discord"
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "label": "Entertainment",
+      "apps": [
+        {
+          "name": "Netflix",
+          "appStore": "https://apps.apple.com/us/app/netflix/id363590051",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.netflix.mediaclient"
+        },
+        {
+          "name": "Disney+",
+          "appStore": "https://apps.apple.com/us/app/disney-plus/id1446075923",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.disney.disneyplus"
+        },
+        {
+          "name": "Spotify",
+          "appStore": "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.spotify.music"
+        },
+        {
+          "name": "Twitch",
+          "appStore": "https://apps.apple.com/us/app/twitch/id460177396",
+          "googlePlay": "https://play.google.com/store/apps/details?id=tv.twitch.android.app"
+        },
+        {
+          "name": "Shazam",
+          "appStore": "https://apps.apple.com/us/app/shazam/id284993459",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.shazam.android"
+        },
+        {
+          "name": "VLC",
+          "appStore": "https://apps.apple.com/us/app/vlc-media-player/id650377962",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.videolan.vlc"
+        },
+        {
+          "name": "Roblox",
+          "appStore": "https://apps.apple.com/us/app/roblox/id431946152",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.roblox.client"
+        }
+      ]
+    },
+    {
+      "id": "productivity",
+      "label": "Productivity",
+      "apps": [
+        {
+          "name": "Gmail",
+          "appStore": "https://apps.apple.com/us/app/gmail-email-by-google/id422689480",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.gm"
+        },
+        {
+          "name": "Microsoft Outlook",
+          "appStore": "https://apps.apple.com/us/app/microsoft-outlook/id951937596",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook"
+        },
+        {
+          "name": "Slack",
+          "appStore": "https://apps.apple.com/us/app/slack/id618783545",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.Slack"
+        },
+        {
+          "name": "Microsoft Teams",
+          "appStore": "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.teams"
+        },
+        {
+          "name": "Zoom",
+          "appStore": "https://apps.apple.com/us/app/zoom-workplace/id546505307",
+          "googlePlay": "https://play.google.com/store/apps/details?id=us.zoom.videomeetings"
+        },
+        {
+          "name": "Notion",
+          "appStore": "https://apps.apple.com/us/app/notion/id1232780281",
+          "googlePlay": "https://play.google.com/store/apps/details?id=notion.id"
+        },
+        {
+          "name": "Dropbox",
+          "appStore": "https://apps.apple.com/us/app/dropbox/id327630330",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.dropbox.android"
+        },
+        {
+          "name": "Canva",
+          "appStore": "https://apps.apple.com/us/app/canva/id897446215",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.canva.editor"
+        }
+      ]
+    },
+    {
+      "id": "browsers-privacy",
+      "label": "Browsers & Privacy",
+      "apps": [
+        {
+          "name": "Firefox",
+          "appStore": "https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+        },
+        {
+          "name": "Google Chrome",
+          "appStore": "https://apps.apple.com/us/app/google-chrome/id535886823",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.android.chrome"
+        },
+        {
+          "name": "Brave",
+          "appStore": "https://apps.apple.com/us/app/brave-browser/id1052879175",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.brave.browser"
+        },
+        {
+          "name": "DuckDuckGo",
+          "appStore": "https://apps.apple.com/us/app/duckduckgo-private-browser/id663592361",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android"
+        },
+        {
+          "name": "Proton Mail",
+          "appStore": "https://apps.apple.com/us/app/proton-mail/id979659905",
+          "googlePlay": "https://play.google.com/store/apps/details?id=ch.protonmail.android"
+        },
+        {
+          "name": "Bitwarden",
+          "appStore": "https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.x8bit.bitwarden"
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "label": "Travel & Maps",
+      "apps": [
+        {
+          "name": "Google Maps",
+          "appStore": "https://apps.apple.com/us/app/google-maps/id585027354",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps"
+        },
+        {
+          "name": "Waze",
+          "appStore": "https://apps.apple.com/us/app/waze/id323229106",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.waze"
+        },
+        {
+          "name": "Uber",
+          "appStore": "https://apps.apple.com/us/app/uber/id368677368",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.ubercab"
+        },
+        {
+          "name": "Lyft",
+          "appStore": "https://apps.apple.com/us/app/lyft/id529379082",
+          "googlePlay": "https://play.google.com/store/apps/details?id=me.lyft.android"
+        },
+        {
+          "name": "Airbnb",
+          "appStore": "https://apps.apple.com/us/app/airbnb/id401626263",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.airbnb.android"
+        }
+      ]
+    },
+    {
+      "id": "shopping-money",
+      "label": "Shopping & Money",
+      "apps": [
+        {
+          "name": "Amazon Shopping",
+          "appStore": "https://apps.apple.com/us/app/amazon-shopping/id297606951",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping"
+        },
+        {
+          "name": "eBay",
+          "appStore": "https://apps.apple.com/us/app/ebay/id282614216",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.ebay.mobile"
+        },
+        {
+          "name": "DoorDash",
+          "appStore": "https://apps.apple.com/us/app/doordash/id719972451",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.dd.doordash"
+        },
+        {
+          "name": "PayPal",
+          "appStore": "https://apps.apple.com/us/app/paypal/id283646709",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile"
+        },
+        {
+          "name": "Venmo",
+          "appStore": "https://apps.apple.com/us/app/venmo/id351727428",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.venmo"
+        },
+        {
+          "name": "Cash App",
+          "appStore": "https://apps.apple.com/us/app/cash-app/id711923939",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.squareup.cash"
+        }
+      ]
+    },
+    {
+      "id": "learning-fitness",
+      "label": "Learning & Fitness",
+      "apps": [
+        {
+          "name": "Duolingo",
+          "appStore": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.duolingo"
+        },
+        {
+          "name": "Wikipedia",
+          "appStore": "https://apps.apple.com/us/app/wikipedia/id324715238",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.wikipedia"
+        },
+        {
+          "name": "Strava",
+          "appStore": "https://apps.apple.com/us/app/strava/id426826309",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.strava"
+        }
+      ]
+    }
   ]
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDate, relativeTime } from '../src/lib/format.ts';
+import { compactAgo, formatDate, relativeTime } from '../src/lib/format.ts';
 
 const NOW = new Date('2026-07-14T12:00:00.000Z');
 
@@ -23,5 +23,21 @@ describe('formatDate', () => {
     expect(formatDate('2026-07-01T00:00:00.000Z')).toBeTruthy();
     expect(formatDate(null)).toBeNull();
     expect(formatDate('nope')).toBeNull();
+  });
+});
+describe('compactAgo', () => {
+  const now = new Date('2026-09-24T12:00:00Z');
+  it('uses short units', () => {
+    expect(compactAgo('2026-09-24T11:59:40Z', now)).toBe('just now');
+    expect(compactAgo('2026-09-24T11:15:00Z', now)).toBe('45m ago');
+    expect(compactAgo('2026-09-23T14:00:00Z', now)).toBe('22h ago');
+    expect(compactAgo('2026-09-21T12:00:00Z', now)).toBe('3d ago');
+    expect(compactAgo('2026-09-03T12:00:00Z', now)).toBe('3w ago');
+    expect(compactAgo('2026-06-24T12:00:00Z', now)).toBe('3mo ago');
+    expect(compactAgo('2024-09-24T12:00:00Z', now)).toBe('2y ago');
+  });
+  it('returns null for missing or invalid dates', () => {
+    expect(compactAgo(null, now)).toBeNull();
+    expect(compactAgo('nope', now)).toBeNull();
   });
 });

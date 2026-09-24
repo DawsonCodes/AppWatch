@@ -95,7 +95,11 @@ export function makeLocalApp(
   };
 }
 
-/** The apps.config.json line the visitor can copy to request repository tracking. */
-export function configSnippetFor(app: Pick<LocalApp, 'storeUrl'>): string {
-  return `"${app.storeUrl}"`;
+/**
+ * The apps.config.json entry the visitor can copy to request repository
+ * tracking (paste it into a collection's "apps" list).
+ */
+export function configSnippetFor(app: Pick<LocalApp, 'storeUrl' | 'name' | 'platform'>): string {
+  const field = app.platform === 'apple' ? 'appStore' : 'googlePlay';
+  return JSON.stringify({ name: app.name, [field]: app.storeUrl });
 }

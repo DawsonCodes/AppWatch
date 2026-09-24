@@ -1,5 +1,5 @@
 import type { StatusFile } from '../shared/types.ts';
-import { relativeTime } from '../lib/format.ts';
+import { formatDateTime, relativeTime } from '../lib/format.ts';
 import type { ThemeId } from '../lib/theme.ts';
 import { THEMES } from '../lib/theme.ts';
 import { Dropdown } from './Dropdown.tsx';
@@ -8,7 +8,7 @@ import { GitHubIcon, LogoIcon, PaletteIcon, SearchIcon } from './Icons.tsx';
 interface HeaderProps {
   status: StatusFile | null;
   theme: ThemeId;
-  onThemeChange: (theme: ThemeId) => void;
+  onThemeChange: (theme: ThemeId, origin: HTMLElement | null) => void;
   onSearchJump: () => void;
 }
 
@@ -23,36 +23,37 @@ function HealthChip({ status }: { status: StatusFile | null }) {
     );
   }
   const when = relativeTime(status.lastRunAt) ?? 'recently';
+  const exact = formatDateTime(status.lastRunAt) ?? '';
   if (status.errorCount > 0) {
     return (
       <span
         class="health health--warn"
-        title={`${status.errorCount} of ${status.totalApps} checks failed · last run ${when}`}
+        title={`${status.errorCount} of ${status.totalApps} checks failed · last run ${exact}`}
       >
         <span class="health__dot" aria-hidden="true" />
         <span class="health__text">
-          {status.errorCount} failing <span class="health__when">· {when}</span>
+          {status.errorCount} failing<span class="health__when"> · {when}</span>
         </span>
       </span>
     );
   }
   return (
-    <span class="health health--ok" title={`All checks passing · last run ${when}`}>
+    <span class="health health--ok" title={`All ${status.totalApps} checks passing · ${exact}`}>
       <span class="health__dot" aria-hidden="true" />
       <span class="health__text">
-        Checks OK <span class="health__when">· {when}</span>
+        Checked<span class="health__when"> {when}</span>
       </span>
     </span>
   );
 }
 
 export function Header({ status, theme, onThemeChange, onSearchJump }: HeaderProps) {
-  const currentTheme = THEMES.find((option) => option.id === theme);
+  const current = THEMES.find((option) => option.id === theme);
   return (
     <header class="site-header">
       <div class="site-header__inner">
         <a class="brand" href="#top" aria-label="AppWatch — back to top">
-          <LogoIcon size={26} />
+          <LogoIcon size={28} />
           <span class="brand__name">
             <span class="brand__app">App</span>
             <span class="brand__watch">Watch</span>
@@ -64,9 +65,9 @@ export function Header({ status, theme, onThemeChange, onSearchJump }: HeaderPro
         <div class="site-header__actions">
           <button
             type="button"
-            class="icon-button"
-            aria-label="Jump to search"
-            title="Search apps"
+            class="icon-button search-jump"
+            aria-label="Search apps"
+            title="Search apps ( / )"
             onClick={onSearchJump}
           >
             <SearchIcon size={17} />
@@ -77,15 +78,16 @@ export function Header({ status, theme, onThemeChange, onSearchJump }: HeaderPro
               value: id,
               label,
               description,
+              icon: <span class={`swatch swatch--${id}`} aria-hidden="true" />,
             }))}
             value={theme}
             onChange={onThemeChange}
             align="end"
-            buttonClass="dropdown__button--icon"
+            buttonClass="dropdown__button--theme"
             buttonContent={
               <>
                 <PaletteIcon size={16} />
-                <span class="theme-label">{currentTheme?.label ?? 'Theme'}</span>
+                <span class="theme-label">{current?.label ?? 'Theme'}</span>
               </>
             }
           />

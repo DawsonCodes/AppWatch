@@ -1,11 +1,13 @@
 import type { ComponentChildren } from 'preact';
 import { useCallback, useEffect, useId, useRef, useState } from 'preact/hooks';
-import { ChevronDownIcon } from './Icons.tsx';
+import { CheckIcon, ChevronDownIcon } from './Icons.tsx';
 
 export interface DropdownOption<T extends string> {
   value: T;
   label: string;
   description?: string;
+  /** Small leading visual, e.g. a theme swatch. */
+  icon?: ComponentChildren;
 }
 
 interface DropdownProps<T extends string> {
@@ -13,7 +15,8 @@ interface DropdownProps<T extends string> {
   label: string;
   options: readonly DropdownOption<T>[];
   value: T;
-  onChange: (value: T) => void;
+  /** Receives the option's button so callers can animate from it. */
+  onChange: (value: T, origin: HTMLElement | null) => void;
   /** What the closed button shows. Defaults to the selected option's label. */
   buttonContent?: ComponentChildren;
   align?: 'start' | 'end';
@@ -21,11 +24,11 @@ interface DropdownProps<T extends string> {
 }
 
 /**
- * Accessible select-style dropdown (button + listbox popup) with an animated
- * chevron and menu. Built by hand because native <select> arrows cannot be
- * animated honestly; keyboard behavior follows the WAI-ARIA listbox pattern:
- * Enter/Space/ArrowDown open, arrows move, Home/End jump, Escape closes and
- * restores focus, Tab or outside click closes.
+ * Select-style dropdown (button + listbox popup). The menu unfolds from the
+ * button with a spring and its options cascade in; the chevron flips. Keyboard
+ * follows the WAI-ARIA listbox pattern: Enter/Space/ArrowDown open, arrows
+ * move, Home/End jump, Escape closes and restores focus, Tab or an outside
+ * click closes.
  */
 export function Dropdown<T extends string>({
   label,
@@ -49,7 +52,6 @@ export function Dropdown<T extends string>({
     if (refocus) buttonRef.current?.focus();
   }, []);
 
-  // Close when clicking/tapping outside or when focus leaves the control.
   useEffect(() => {
     if (!open) return;
     const onPointerDown = (event: PointerEvent) => {
@@ -59,13 +61,12 @@ export function Dropdown<T extends string>({
     return () => document.removeEventListener('pointerdown', onPointerDown);
   }, [open, close]);
 
-  // Focus the selected option when the menu opens.
   useEffect(() => {
     if (!open) return;
     const target =
       listRef.current?.querySelector<HTMLElement>('[aria-selected="true"]') ??
       listRef.current?.querySelector<HTMLElement>('[role="option"]');
-    target?.focus();
+    target?.focus({ preventScroll: true });
   }, [open]);
 
   function optionElements(): HTMLElement[] {
@@ -85,6 +86,7 @@ export function Dropdown<T extends string>({
     switch (event.key) {
       case 'Escape':
         event.preventDefault();
+        event.stopPropagation();
         close(true);
         break;
       case 'ArrowDown':
@@ -110,7 +112,7 @@ export function Dropdown<T extends string>({
   }
 
   return (
-    <div class={`dropdown${open ? ' dropdown--open' : ''}`} ref={rootRef}>
+    <div class={`dropdown${open ? ' is-open' : ''}`} ref={rootRef}>
       <button
         type="button"
         ref={buttonRef}
@@ -133,23 +135,31 @@ export function Dropdown<T extends string>({
         ref={listRef}
         onKeyDown={onMenuKeyDown}
       >
-        {options.map((option) => (
+        {options.map((option, index) => (
           <button
             type="button"
             key={option.value}
             role="option"
             aria-selected={option.value === value}
             class="dropdown__option"
+            style={{ '--i': index }}
             tabIndex={open ? 0 : -1}
-            onClick={() => {
-              onChange(option.value);
+            onClick={(event) => {
+              const origin = buttonRef.current ?? event.currentTarget;
               close(true);
+              if (option.value !== value) onChange(option.value, origin);
             }}
           >
-            <span class="dropdown__option-label">{option.label}</span>
-            {option.description ? (
-              <span class="dropdown__option-desc">{option.description}</span>
-            ) : null}
+            {option.icon ? <span class="dropdown__option-icon">{option.icon}</span> : null}
+            <span class="dropdown__option-text">
+              <span class="dropdown__option-label">{option.label}</span>
+              {option.description ? (
+                <span class="dropdown__option-desc">{option.description}</span>
+              ) : null}
+            </span>
+            <span class="dropdown__check" aria-hidden="true">
+              <CheckIcon size={14} />
+            </span>
           </button>
         ))}
       </div>

@@ -30,7 +30,9 @@
 | ![Dashboard, Gray Dark theme](assets/screenshots/dashboard.png) | ![App detail panel](assets/screenshots/detail.png) |
 
 <details>
-<summary>Light and MS Paint themes</summary>
+<summary>Updates timeline, Light and MS Paint themes</summary>
+
+![Updates timeline](assets/screenshots/updates.png)
 
 ![Dashboard, Light theme](assets/screenshots/light-theme.png)
 
@@ -38,15 +40,25 @@
 
 </details>
 
-> Screenshots show example data; the live site reflects whatever the checker
-> most recently collected.
+> Screenshots use real tracked data but were captured offline, so app icons
+> show their letter fallback; the live site loads the real icons.
 
 ---
 
 ## What it does
 
-AppWatch tracks 50 App Store and 50 Google Play apps out of the box, checks
-every one of them **every two hours**, and records what changed. For every tracked app it shows:
+AppWatch tracks 56 popular apps out of the box — each on both the App Store
+and Google Play, 112 listings in all — checks every one of them **every two
+hours**, and records what changed. Apps are organized into collections that
+appear as tabs: **AI** (ChatGPT, Gemini, Grok, Copilot, Perplexity, DeepSeek,
+Character.AI), **Social** (Instagram, Facebook, X, Threads, YouTube, Snapchat,
+Reddit, Pinterest, LinkedIn), **Messaging**, **Entertainment**,
+**Productivity**, **Browsers & Privacy**, **Travel & Maps**, **Shopping &
+Money** and **Learning & Fitness**.
+
+Each app is one card covering both stores, with the **App Store in blue** and
+**Google Play in green** everywhere (store names are always written out too,
+so color is never the only cue). For every tracked app it shows:
 
 - Name, icon, developer and category
 - Platform (App Store / Google Play) with a direct store link
@@ -60,8 +72,29 @@ every one of them **every two hours**, and records what changed. For every track
 - Per-app check failures, without breaking the rest of the dashboard
 
 Visitors can search (by name, developer, store URL, Apple ID or package name),
-filter, sort, discover apps beyond the built-in list, and keep a personal
-**watchlist** — stored only in their own browser.
+switch collections, filter by store, recency or watchlist, sort, discover apps
+beyond the built-in list, and keep a personal **watchlist** — stored only in
+their own browser.
+
+### The Updates timeline
+
+The **Updates** view lists every release AppWatch has recorded, newest first
+and grouped by day (Today, Yesterday, weekday, date). Each entry shows the app,
+the store, the version change (`1.4 → 1.5`) and the start of its release
+notes; tap one to open the full detail. It honors the same collection, store,
+watchlist and search filters as the grid, and it only contains releases the
+checker actually saw — the version each listing had when tracking began
+(marked "first recorded") plus every change since.
+
+### Can AppWatch keep old versions to download?
+
+No. The App Store doesn't offer old app binaries to download, Google Play only
+serves the current version, and re-hosting app packages would be a licensing
+and security problem. What AppWatch does keep is the **text history**: every
+version it has seen, with its release date, when the change was detected and
+the full release notes, stored in `public/data/history.json` and shown in the
+detail panel and the Updates timeline. History starts from when an app was
+first tracked; it can't be backfilled from before that.
 
 ## Themes
 
@@ -78,6 +111,24 @@ Three complete themes, selectable from the header:
 Your choice is saved in the browser (`localStorage`). On a first visit the
 operating-system light/dark preference picks Gray Dark or Light; MS Paint is
 only ever active because you chose it.
+
+### Motion
+
+Animation is part of the design, built on the platform rather than a library:
+
+- **View Transitions** morph discrete changes: switching collections or
+  filters glides every card to its new slot (leavers shrink away, newcomers pop
+  in), opening an app flies its icon into the detail panel as the panel slides
+  in (a bottom sheet on phones), Apps ↔ Updates slides in the direction of
+  travel, and changing theme reveals the new one in a circle from the theme
+  button — in chunky pixel steps for MS Paint.
+- **Springs** (CSS `linear()` easing) drive the sliding tab indicators, menus,
+  presses and card hovers; watching an app pops the star and throws a small
+  spark burst (square palette pixels in MS Paint).
+- **Scroll-driven** reveals raise timeline entries as they enter the viewport,
+  and the first load cascades the cards in once.
+- Everything degrades to instant state changes in browsers without these APIs
+  and is switched off entirely under `prefers-reduced-motion`.
 
 ## Store-wide discovery & your local watchlist
 
@@ -96,11 +147,12 @@ matters about how far that goes:
   cannot be fetched client-side, and AppWatch does not fake it or route it
   through some third-party proxy.
 - Apps you add this way become **local watches**: they live only in your
-  browser's localStorage, are labeled "Local" everywhere, are _not_ checked by
-  the scheduled pipeline, and never sync anywhere. The detail view offers a
-  copyable `apps.config.json` line and a link to the tracking-request issue
-  form if you want an app promoted to real repository tracking (nothing is
-  ever submitted automatically).
+  browser's localStorage, appear under a **Your watches** tab and are labeled
+  "Only in this browser", are _not_ checked by the scheduled pipeline, and
+  never sync anywhere. The detail view offers a copyable `apps.config.json`
+  entry and a link to the tracking-request issue form if you want an app
+  promoted to real repository tracking (nothing is ever submitted
+  automatically).
 
 ## Data freshness (is it real time?)
 
@@ -154,6 +206,13 @@ When the checker sees a version different from the stored one it:
 3. prepends a history entry (duplicates by version are rejected),
 4. stamps `lastUpdatedAt` so the UI can badge the app as recently updated.
 
+Some Google Play listings publish no single version ("Varies with device").
+For those, a **newer store release date** counts as an update: the history
+entry is recorded with `version: null` and keyed by its release date, so these
+apps get update badges, timeline entries and release notes too. Only a forward
+move of the date counts, and nothing is invented when the store gives no
+date.
+
 History is never fabricated: each app's history starts from the first
 successful snapshot and grows as real updates are detected. Failed checks keep
 the last good data and surface a per-app error instead.
@@ -163,6 +222,7 @@ the last good data and surface a per-app error instead.
 | Layer       | Choice                                                                                                      |
 | ----------- | ----------------------------------------------------------------------------------------------------------- |
 | Frontend    | [Vite](https://vite.dev) + [Preact](https://preactjs.com) + TypeScript, hand-written CSS                    |
+| Type        | Onest (UI) and Geist Mono (versions), self-hosted via Fontsource — no font CDN                              |
 | Checker     | Node.js 22 + [tsx](https://tsx.is), no framework                                                            |
 | Apple data  | iTunes Lookup API (public, keyless)                                                                         |
 | Google data | [google-play-scraper](https://github.com/facundoolano/google-play-scraper), isolated in one provider module |
@@ -197,31 +257,42 @@ npm run dev          # dev server at http://localhost:5173/AppWatch/
 
 ## Adding and removing tracked apps
 
-Edit **`apps.config.json`**. Every entry in the `apps` array is either a store
-URL or a small object — paste whichever you have:
+Edit **`apps.config.json`**. Apps live in **collections**, and each
+collection becomes a tab on the site. An app is a name plus its store links —
+one or both; the IDs are extracted from the URLs automatically:
 
 ```jsonc
 {
   "country": "us", // default App Store storefront / Play country
   "language": "en", // language for Google Play metadata
-  "apps": [
-    // App Store URL (numeric ID is extracted automatically)
-    "https://apps.apple.com/us/app/wikipedia/id324715238",
-
-    // Google Play URL (package name is extracted automatically)
-    "https://play.google.com/store/apps/details?id=org.wikipedia",
-
-    // …or explicit objects:
-    { "platform": "apple", "id": "570060128" },
-    { "platform": "google", "id": "com.duolingo" },
+  "collections": [
+    {
+      "id": "ai", // short lowercase id
+      "label": "AI", // tab label
+      "apps": [
+        {
+          "name": "ChatGPT",
+          "appStore": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+        },
+        // Bare IDs work too: an Apple numeric ID or an Android package name.
+        { "name": "Wikipedia", "appStore": "324715238", "googlePlay": "org.wikipedia" },
+      ],
+    },
   ],
 }
 ```
 
+- Collections appear in the order written; add, rename or reorder them freely.
+- A listing can belong to only one app; duplicates are reported and ignored.
+- The older flat format — a top-level `"apps"` array of store URLs or
+  `{ "platform", "id" }` objects — still works; those apps land in an "Other"
+  tab.
+
 Removing an entry removes the app (and its stored history) from the dashboard
-on the next check. Duplicates are ignored automatically. After changing the
-config you can wait for the next scheduled run or trigger **Actions → Check app
-updates → Run workflow**.
+on the next check. After changing the config you can wait for the next
+scheduled run or trigger **Actions → Check app updates → Run workflow**.
+Newly added apps appear once that run has resolved them.
 
 ## Data files
 
@@ -237,7 +308,9 @@ The checker writes these files into `public/data/` (do not edit by hand):
   `null`, never faked, and files generated before these fields existed remain
   valid — the extended fields are optional in the schema.
 - **`history.json`** — version history per app id, newest first; one entry per
-  version with release date, notes and the detection timestamp.
+  version with release date, notes and the detection timestamp. For listings
+  that publish no version, entries have `version: null` and are unique by
+  release date.
 - **`status.json`** — last run time, success/failure counts, updates detected.
   Rewritten on every run and deployed straight to the site; it is only
   committed alongside real app changes, so the git history stays meaningful.
