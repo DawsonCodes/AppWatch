@@ -5,6 +5,8 @@ import { ChevronDownIcon } from './Icons.tsx';
 
 interface InsightsPanelProps {
   apps: readonly AppRecord[];
+  /** Configured apps the checker has never resolved (no card is shown for them). */
+  unresolved: readonly AppRecord[];
   localCount: number;
   status: StatusFile | null;
   open: boolean;
@@ -27,7 +29,14 @@ function Row({ label, value, detail }: { label: string; value: string; detail?: 
  * The quiet, collapsible replacement for the old row of large stat cards.
  * Collapsed by default; the open/closed choice persists locally.
  */
-export function InsightsPanel({ apps, localCount, status, open, onToggle }: InsightsPanelProps) {
+export function InsightsPanel({
+  apps,
+  unresolved,
+  localCount,
+  status,
+  open,
+  onToggle,
+}: InsightsPanelProps) {
   const now = new Date();
   const recent = apps.filter((app) => isRecentlyUpdated(app, now)).length;
   const apple = apps.filter((app) => app.platform === 'apple').length;
@@ -39,6 +48,7 @@ export function InsightsPanel({ apps, localCount, status, open, onToggle }: Insi
     `${apps.length} tracked`,
     recent > 0 ? `${recent} updated this week` : null,
     failing > 0 ? `${failing} failing` : null,
+    unresolved.length > 0 ? `${unresolved.length} unresolved` : null,
     lastRun ? `checked ${lastRun}` : 'no checks yet',
   ]
     .filter(Boolean)
@@ -81,7 +91,17 @@ export function InsightsPanel({ apps, localCount, status, open, onToggle }: Insi
                 status?.lastRunAt ? (formatDateTime(status.lastRunAt) ?? undefined) : undefined
               }
             />
-            <Row label="Schedule" value="12:00 AM & 12:00 PM" detail="Detroit time, daily" />
+            {unresolved.length > 0 ? (
+              <Row
+                label="Couldn't resolve"
+                value={String(unresolved.length)}
+                detail={`(${unresolved
+                  .slice(0, 4)
+                  .map((app) => app.storeId)
+                  .join(', ')}${unresolved.length > 4 ? ', …' : ''})`}
+              />
+            ) : null}
+            <Row label="Schedule" value="Every 2 hours" detail="automatic, all tracked apps" />
           </dl>
         </div>
       </div>

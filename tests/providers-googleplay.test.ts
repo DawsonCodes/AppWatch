@@ -91,7 +91,11 @@ describe('normalizePlayResult', () => {
 describe('createGooglePlayProvider', () => {
   it('uses the injected scraper and passes target options through', async () => {
     const appFn = vi.fn(async () => sampleDetails);
-    const provider = createGooglePlayProvider({ loadAppFn: async () => appFn, retries: 0 });
+    const provider = createGooglePlayProvider({
+      loadAppFn: async () => appFn,
+      retries: 0,
+      minIntervalMs: 0,
+    });
     const snapshot = await provider(target);
     expect(snapshot.name).toBe('Wikipedia');
     expect(appFn).toHaveBeenCalledWith({ appId: 'org.wikipedia', lang: 'en', country: 'us' });
@@ -105,6 +109,7 @@ describe('createGooglePlayProvider', () => {
       loadAppFn: async () => appFn,
       retries: 2,
       retryDelayMs: 1,
+      minIntervalMs: 0,
     });
     await expect(provider(target)).rejects.toThrow(/404/);
     expect(appFn).toHaveBeenCalledTimes(3);
@@ -116,7 +121,29 @@ describe('createGooglePlayProvider', () => {
       loadAppFn: async () => appFn,
       retries: 0,
       timeoutMs: 20,
+      minIntervalMs: 0,
     });
     await expect(provider(target)).rejects.toThrow(/timed out/);
+  });
+});
+
+describe('Google Play politeness', () => {
+  it('spaces consecutive scrapes by the configured interval', async () => {
+    const times: number[] = [];
+    const appFn = vi.fn(async () => {
+      times.push(Date.now());
+      return sampleDetails;
+    });
+    const provider = createGooglePlayProvider({
+      loadAppFn: async () => appFn,
+      retries: 0,
+      minIntervalMs: 60,
+    });
+    await provider(target);
+    await provider({ ...target, storeId: 'org.example.two' });
+    await provider({ ...target, storeId: 'org.example.three' });
+    expect(appFn).toHaveBeenCalledTimes(3);
+    expect(times[1]! - times[0]!).toBeGreaterThanOrEqual(55);
+    expect(times[2]! - times[1]!).toBeGreaterThanOrEqual(55);
   });
 });

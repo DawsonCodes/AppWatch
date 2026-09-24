@@ -4,6 +4,7 @@ import {
   DEFAULT_FILTERS,
   hasActiveFilters,
   isRecentlyUpdated,
+  isUnresolved,
 } from '../src/lib/filtering.ts';
 import type { AppRecord } from '../src/shared/types.ts';
 
@@ -175,5 +176,28 @@ describe('hasActiveFilters', () => {
     expect(hasActiveFilters({ ...DEFAULT_FILTERS, query: 'x' })).toBe(true);
     expect(hasActiveFilters({ ...DEFAULT_FILTERS, platform: 'apple' })).toBe(true);
     expect(hasActiveFilters({ ...DEFAULT_FILTERS, sort: 'name' })).toBe(true);
+  });
+});
+
+describe('isUnresolved', () => {
+  it('flags configured apps that have never been fetched successfully', () => {
+    expect(
+      isUnresolved(app({ id: 'apple:1', name: '1', checkStatus: 'error', currentVersion: null })),
+    ).toBe(true);
+  });
+
+  it('keeps apps with last-known-good data (a failed re-check still gets a card)', () => {
+    expect(
+      isUnresolved(
+        app({
+          id: 'apple:2',
+          name: 'Two',
+          checkStatus: 'error',
+          currentVersion: '1.0',
+          lastCheckedAt: '2026-07-01T00:00:00.000Z',
+        }),
+      ),
+    ).toBe(false);
+    expect(isUnresolved(app({ id: 'apple:3', name: 'Three' }))).toBe(false);
   });
 });

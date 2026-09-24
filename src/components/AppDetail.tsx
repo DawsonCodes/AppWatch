@@ -267,7 +267,10 @@ export function AppDetail({
         </div>
 
         <dl class="detail__facts">
-          <Fact label="Current version">{app.currentVersion ?? 'unknown'}</Fact>
+          <Fact label="Current version">
+            {app.currentVersion ??
+              (app.platform === 'google' ? 'Not listed (varies by device)' : 'Unknown')}
+          </Fact>
           {app.previousVersion ? <Fact label="Previous version">{app.previousVersion}</Fact> : null}
           {app.releaseDate ? (
             <Fact label="Released">

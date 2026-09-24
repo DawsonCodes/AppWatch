@@ -11,10 +11,16 @@ import { Header } from './components/Header.tsx';
 import { CloseIcon } from './components/Icons.tsx';
 import { InsightsPanel } from './components/InsightsPanel.tsx';
 import { Toolbar } from './components/Toolbar.tsx';
-import { DataLoadError, isDataStale, loadDashboardData, loadHistory } from './lib/data.ts';
+import {
+  DataLoadError,
+  isDataStale,
+  loadDashboardData,
+  loadHistory,
+  STALE_AFTER_HOURS,
+} from './lib/data.ts';
 import type { DiscoveredApp } from './lib/discovery.ts';
 import { lookupAppleById, searchAppleByName } from './lib/discovery.ts';
-import { applyFilters, DEFAULT_FILTERS } from './lib/filtering.ts';
+import { applyFilters, DEFAULT_FILTERS, isUnresolved } from './lib/filtering.ts';
 import type { FilterState } from './lib/filtering.ts';
 import { FRESHNESS_POLL_MS, hasNewerRun, pollStatus } from './lib/freshness.ts';
 import { createLocalAppsStore, makeLocalApp } from './lib/localApps.ts';
@@ -118,11 +124,12 @@ export function App() {
   const [insightsOpen, setInsightsOpen] = useState(() => readPref(INSIGHTS_PREF_KEY) === '1');
   const [discovery, setDiscovery] = useState<DiscoveryState>({ phase: 'idle' });
   const [localRefreshing, setLocalRefreshing] = useState(false);
-  const [newDataAvailable, setNewDataAvailable] = useState(false);
-  const [freshnessDismissed, setFreshnessDismissed] = useState(false);
+  const [refreshNotice, setRefreshNotice] = useState<{ updates: number } | null>(null);
 
   const searchRef = useRef<HTMLInputElement>(null);
   const detailTrigger = useRef<Element | null>(null);
+  const noticeTimer = useRef<ReturnType<typeof setTimeout>>();
+  const refreshing = useRef(false);
 
   const watchlist = useMemo(() => createWatchlist(), []);
   const [watchedIds, setWatchedIds] = useState<ReadonlySet<string>>(() => watchlist.ids());
@@ -130,13 +137,25 @@ export function App() {
   const localStore = useMemo(() => createLocalAppsStore(), []);
   const [localApps, setLocalApps] = useState<LocalApp[]>(() => localStore.list());
 
+  /**
+   * Load the dashboard data. A soft refresh (used when the freshness poll
+   * sees a newer deployed check) swaps the data in place — filters, scroll
+   * position and an open detail panel are kept — and briefly confirms it.
+   */
   const fetchData = useCallback((soft = false) => {
+    if (soft && refreshing.current) return;
+    refreshing.current = true;
     if (!soft) setLoad({ phase: 'loading' });
     loadDashboardData()
       .then(({ apps, status }) => {
         setLoad({ phase: 'ready', apps: apps.apps, status });
-        setNewDataAvailable(false);
-        setFreshnessDismissed(false);
+        if (soft) {
+          // History is cached lazily; drop it so the next view fetches fresh.
+          setHistoryLoad((current) => (current.phase === 'idle' ? current : { phase: 'idle' }));
+          setRefreshNotice({ updates: status?.updatesDetected ?? 0 });
+          clearTimeout(noticeTimer.current);
+          noticeTimer.current = setTimeout(() => setRefreshNotice(null), 6000);
+        }
       })
       .catch((error: unknown) => {
         if (soft) return; // keep showing the data we already have
@@ -145,10 +164,16 @@ export function App() {
           message:
             error instanceof DataLoadError ? error.message : 'Something unexpected went wrong.',
         });
+      })
+      .finally(() => {
+        refreshing.current = false;
       });
   }, []);
 
-  useEffect(() => fetchData(), [fetchData]);
+  useEffect(() => {
+    fetchData();
+    return () => clearTimeout(noticeTimer.current);
+  }, [fetchData]);
 
   // Deep links: #app=<id> opens the detail view; back/forward keeps working.
   useEffect(() => {
@@ -167,9 +192,10 @@ export function App() {
   }, [selectedId, historyLoad.phase]);
 
   // Deploy freshness: while the page is visible, revalidate the site's own
-  // status.json on a restrained interval and offer a refresh when the
-  // scheduled checker has deployed newer data. This never contacts the
-  // stores from the visitor's browser.
+  // status.json on a restrained interval (and whenever the tab regains
+  // focus). When the scheduled checker has deployed a newer run, the new
+  // data is applied automatically. This never contacts the stores from the
+  // visitor's browser.
   const loadedRunAt = load.phase === 'ready' ? (load.status?.lastRunAt ?? null) : null;
   useEffect(() => {
     if (load.phase !== 'ready') return;
@@ -178,7 +204,7 @@ export function App() {
       if (document.visibilityState !== 'visible') return;
       const polled = await pollStatus();
       if (!cancelled && polled && hasNewerRun(loadedRunAt, polled.lastRunAt)) {
-        setNewDataAvailable(true);
+        fetchData(true);
       }
     };
     const interval = setInterval(check, FRESHNESS_POLL_MS);
@@ -188,7 +214,7 @@ export function App() {
       clearInterval(interval);
       document.removeEventListener('visibilitychange', check);
     };
-  }, [load.phase, loadedRunAt]);
+  }, [load.phase, loadedRunAt, fetchData]);
 
   const changeTheme = useCallback((next: ThemeId) => {
     applyTheme(next);
@@ -203,7 +229,11 @@ export function App() {
     });
   }, []);
 
-  const trackedApps = load.phase === 'ready' ? load.apps : [];
+  const loadedApps = load.phase === 'ready' ? load.apps : [];
+  // Configured apps the checker has never resolved get no card (there is
+  // nothing to show); Insights lists them so they stay visible.
+  const trackedApps = useMemo(() => loadedApps.filter((app) => !isUnresolved(app)), [loadedApps]);
+  const unresolvedApps = useMemo(() => loadedApps.filter(isUnresolved), [loadedApps]);
   const status = load.phase === 'ready' ? load.status : null;
 
   const trackedIds = useMemo(() => new Set(trackedApps.map((app) => app.id)), [trackedApps]);
@@ -372,16 +402,19 @@ export function App() {
           <h1 class="intro__title">Store updates, without the noise.</h1>
           <p class="intro__sub">
             AppWatch follows App Store and Google Play listings, keeps honest version history, and
-            checks twice a day. Search by name, store link, Apple ID, or package name.
+            checks every app every two hours. Search by name, store link, Apple ID, or package name.
           </p>
         </section>
 
         {load.phase === 'loading' ? <LoadingGrid /> : null}
-        {load.phase === 'error' ? <LoadFailed message={load.message} onRetry={fetchData} /> : null}
+        {load.phase === 'error' ? (
+          <LoadFailed message={load.message} onRetry={() => fetchData()} />
+        ) : null}
 
         {ready && isDataStale(status) ? (
           <p class="notice notice--warn" role="status">
-            The last completed check is more than a day old — this data may be slightly out of date.
+            The last completed check was more than {STALE_AFTER_HOURS} hours ago — this data may be
+            out of date.
           </p>
         ) : null}
 
@@ -435,6 +468,7 @@ export function App() {
 
             <InsightsPanel
               apps={trackedApps}
+              unresolved={unresolvedApps}
               localCount={localIds.size}
               status={status}
               open={insightsOpen}
@@ -461,17 +495,20 @@ export function App() {
         />
       ) : null}
 
-      {newDataAvailable && !freshnessDismissed ? (
+      {refreshNotice ? (
         <div class="toast" role="status">
-          <span class="toast__text">A newer check was just published.</span>
-          <button type="button" class="button button--primary" onClick={() => fetchData(true)}>
-            Refresh data
-          </button>
+          <span class="toast__text">
+            Updated with the latest check
+            {refreshNotice.updates > 0
+              ? ` · ${refreshNotice.updates} new version${refreshNotice.updates === 1 ? '' : 's'}`
+              : ''}
+            .
+          </span>
           <button
             type="button"
             class="icon-button"
             aria-label="Dismiss"
-            onClick={() => setFreshnessDismissed(true)}
+            onClick={() => setRefreshNotice(null)}
           >
             <CloseIcon size={14} />
           </button>

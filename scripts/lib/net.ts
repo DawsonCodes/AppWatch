@@ -6,6 +6,29 @@ export function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+/**
+ * Returns a function that resolves once at least `minIntervalMs` has passed
+ * since the previous call resolved. Providers use it to space out requests
+ * to a store, so politeness is enforced per store rather than per app.
+ */
+export function createThrottle(
+  minIntervalMs: number,
+  wait: (ms: number) => Promise<void> = sleep,
+  clock: () => number = Date.now,
+): () => Promise<void> {
+  let last = Number.NEGATIVE_INFINITY;
+  let queue: Promise<void> = Promise.resolve();
+  return () => {
+    const turn = queue.then(async () => {
+      const remaining = last + minIntervalMs - clock();
+      if (remaining > 0) await wait(remaining);
+      last = clock();
+    });
+    queue = turn.catch(() => {});
+    return turn;
+  };
+}
+
 export class TimeoutError extends Error {
   constructor(label: string, timeoutMs: number) {
     super(`${label} timed out after ${timeoutMs}ms`);

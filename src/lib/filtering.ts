@@ -37,6 +37,17 @@ export function isRecentlyUpdated(
   return age >= 0 && age <= days * 24 * 3600 * 1000;
 }
 
+/**
+ * A configured app the checker has never managed to resolve (for example a
+ * mistyped ID or a listing removed from the store). It has no name, icon or
+ * version worth a card, so the dashboard lists it in Insights instead.
+ */
+export function isUnresolved(
+  app: Pick<AppRecord, 'checkStatus' | 'lastCheckedAt' | 'currentVersion'>,
+): boolean {
+  return app.checkStatus === 'error' && app.lastCheckedAt === null && app.currentVersion === null;
+}
+
 export function hasActiveFilters(state: FilterState): boolean {
   return (
     state.query.trim() !== '' ||

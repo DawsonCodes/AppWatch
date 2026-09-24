@@ -31,7 +31,10 @@ export interface RunOptions {
   providers: Record<Platform, ProviderFetch>;
   /** Directory holding apps.json / history.json / status.json. */
   dataDir: string;
-  /** Politeness delay between store requests, in milliseconds. */
+  /**
+   * Extra delay between apps, in milliseconds. Providers already space their
+   * own store requests, so this defaults to 0.
+   */
   delayMs?: number;
   now?: () => Date;
   log?: (message: string) => void;
@@ -70,7 +73,7 @@ export async function runCheck(options: RunOptions): Promise<RunResult> {
     config,
     providers,
     dataDir,
-    delayMs = 1500,
+    delayMs = 0,
     now = () => new Date(),
     log = () => {},
   } = options;
@@ -101,6 +104,20 @@ export async function runCheck(options: RunOptions): Promise<RunResult> {
   const records: AppRecord[] = [];
   const historyEntries: Record<string, VersionHistoryEntry[]> = {};
   const summaries: AppRunSummary[] = [];
+
+  // Let providers warm up in bulk first (e.g. one batched App Store lookup
+  // for many apps). A failure here only means per-app requests are used.
+  for (const platform of ['apple', 'google'] as const) {
+    const provider = providers[platform];
+    const targets = config.targets.filter((target) => target.platform === platform);
+    if (provider.prime && targets.length > 0) {
+      try {
+        await provider.prime(targets);
+      } catch (error) {
+        log(`warning: ${platform} bulk lookup failed (${errorMessage(error)})`);
+      }
+    }
+  }
 
   for (const [index, target] of config.targets.entries()) {
     if (index > 0 && delayMs > 0) await sleep(delayMs);
@@ -171,23 +188,26 @@ export async function runCheck(options: RunOptions): Promise<RunResult> {
 
   const changed = hasMeaningfulChange(previousApps, apps, previousHistory, history);
 
-  if (changed) {
-    for (const [label, value, validate] of [
-      ['apps.json', apps, validateAppsFile],
-      ['history.json', history, validateHistoryFile],
-      ['status.json', status, validateStatusFile],
-    ] as const) {
-      const errors = validate(value);
-      if (errors.length > 0) {
-        throw new Error(`Generated ${label} failed validation:\n  ${errors.join('\n  ')}`);
-      }
+  for (const [label, value, validate] of [
+    ['apps.json', apps, validateAppsFile],
+    ['history.json', history, validateHistoryFile],
+    ['status.json', status, validateStatusFile],
+  ] as const) {
+    const errors = validate(value);
+    if (errors.length > 0) {
+      throw new Error(`Generated ${label} failed validation:\n  ${errors.join('\n  ')}`);
     }
+  }
+
+  // status.json is always refreshed so the published "last checked" time is
+  // accurate. The workflow only commits it together with meaningful changes.
+  writeJsonFile(statusPath, status);
+  if (changed) {
     writeJsonFile(appsPath, apps);
     writeJsonFile(historyPath, history);
-    writeJsonFile(statusPath, status);
     log('data files updated');
   } else {
-    log('no meaningful changes — data files left untouched');
+    log('no meaningful app changes — apps.json and history.json left untouched');
   }
 
   return { changed, apps, history, status, summaries, okCount, errorCount, updatesDetected };

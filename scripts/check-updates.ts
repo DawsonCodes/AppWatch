@@ -8,7 +8,8 @@
  *   npm run check:updates
  *
  * Environment variables:
- *   APPWATCH_DELAY_MS  politeness delay between store requests (default 1500)
+ *   APPWATCH_DELAY_MS  minimum spacing between Google Play requests (default 1500).
+ *                      App Store apps are resolved with a few batched lookups.
  *
  * Exit codes: 0 = success (even with some per-app failures),
  *             1 = configuration error or every single check failed.
@@ -76,15 +77,15 @@ async function main(): Promise<void> {
   const config = parseConfig(rawConfig);
   log(`Tracking ${config.targets.length} app(s)`);
 
-  const delayMs = Number(process.env.APPWATCH_DELAY_MS ?? 1500);
+  const configuredDelay = Number(process.env.APPWATCH_DELAY_MS ?? 1500);
+  const playIntervalMs = Number.isFinite(configuredDelay) ? configuredDelay : 1500;
   const result = await runCheck({
     config,
     providers: {
       apple: createAppleProvider({ log }),
-      google: createGooglePlayProvider({ log }),
+      google: createGooglePlayProvider({ log, minIntervalMs: playIntervalMs }),
     },
     dataDir: join(root, 'public', 'data'),
-    delayMs: Number.isFinite(delayMs) ? delayMs : 1500,
     log,
   });
 
