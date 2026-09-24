@@ -1,130 +1,266 @@
 {
   "schemaVersion": 1,
   "entries": {
-    "apple:324715238": [
+    "apple:6448311069": [
       {
-        "version": "2026.09.15",
-        "releaseDate": "2026-09-16T22:24:05.000Z",
-        "releaseNotes": "Minor updates and enhancements",
+        "version": "1.2026.258",
+        "releaseDate": "2026-09-23T09:36:36.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
-      },
-      {
-        "version": "2026.08.11",
-        "releaseDate": "2026-08-12T14:06:20.000Z",
-        "releaseNotes": "Minor updates and enhancements",
-        "detectedAt": "2026-08-12T16:55:40.058Z"
-      },
-      {
-        "version": "2026.07.31",
-        "releaseDate": "2026-08-03T13:26:43.000Z",
-        "releaseNotes": "New: the Random Article widget, a small square of serendipity on your home screen.\nOther improvements:\n• Widgets refreshing daily as intended\n• Find-in-page results no longer hidden by the keyboard",
-        "detectedAt": "2026-08-07T16:53:01.895Z"
-      },
-      {
-        "version": "8.2.2",
-        "releaseDate": "2026-07-22T00:56:48.000Z",
-        "releaseNotes": "Minor updates and enhancements",
-        "detectedAt": "2026-07-25T16:55:53.188Z"
-      },
-      {
-        "version": "8.2.1",
-        "releaseDate": "2026-07-08T22:15:48.000Z",
-        "releaseNotes": "An archive of past games is now available in \"Which came first?\", so you can go back and play any round you missed. Find it after completing your daily game. A bug was also addressed, where BC dates were displaying incorrectly within the game.",
-        "detectedAt": "2026-07-14T19:51:49.638Z"
       }
     ],
-    "google:org.wikipedia": [
+    "google:com.openai.chatgpt": [
       {
-        "version": "50608-r-2026-09-15",
-        "releaseDate": "2026-09-15T19:30:54.000Z",
-        "releaseNotes": "- General bug fixes and enhancements.",
+        "version": "1.2026.258",
+        "releaseDate": "2026-09-20T17:18:36.000Z",
+        "releaseNotes": null,
         "detectedAt": "2026-09-24T19:25:13.022Z"
-      },
-      {
-        "version": "50600-r-2026-07-28",
-        "releaseDate": "2026-08-05T17:26:52.000Z",
-        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
-        "detectedAt": "2026-08-07T16:53:01.895Z"
-      },
-      {
-        "version": "50599-r-2026-07-20",
-        "releaseDate": "2026-07-22T17:49:32.000Z",
-        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
-        "detectedAt": "2026-07-25T16:55:53.188Z"
-      },
-      {
-        "version": "50598-r-2026-07-13",
-        "releaseDate": "2026-07-16T19:25:42.000Z",
-        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
-        "detectedAt": "2026-07-17T03:44:21.494Z"
-      },
-      {
-        "version": "50597-r-2026-07-06",
-        "releaseDate": "2026-07-07T17:39:05.000Z",
-        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
-        "detectedAt": "2026-07-14T19:51:49.638Z"
       }
     ],
-    "apple:570060128": [
+    "apple:6477489729": [
       {
-        "version": "7.141.1",
-        "releaseDate": "2026-09-23T13:42:13.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "version": "1.2026.3770306",
+        "releaseDate": "2026-09-23T14:55:51.000Z",
+        "releaseNotes": "- UI improvements and bug fixes",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "google:com.google.android.apps.bard": [
+      {
+        "version": "1.0.971139365",
+        "releaseDate": "2026-08-31T15:22:27.000Z",
+        "releaseNotes": "• Unlock a new world of productivity and creativity with Gemini 3.5 Flash and Gemini Omni.\n• Gemini Spark 24/7 personal AI agent proactively manages tasks and helps you navigate your digital life.\n• Daily Brief agent gives you a personalized morning brief and organizes exactly what you need to know to start your day.\n• Show Gemini what you’re seeing and try saying “reimagine this” to dream up creative new surroundings with Nano Banana in Gemini Live.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:6670324846": [
+      {
+        "version": "1.4.43",
+        "releaseDate": "2026-09-23T10:11:30.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "google:ai.x.grok": [
+      {
+        "version": "1.2.38-release.00",
+        "releaseDate": "2026-09-24T21:54:03.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:1668000334": [
+      {
+        "version": "26.37.0",
+        "releaseDate": "2026-09-18T04:34:59.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "google:ai.perplexity.app.android": [
+      {
+        "version": "2.99.0",
+        "releaseDate": "2026-09-17T22:19:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:6737597349": [
+      {
+        "version": "2.5.2",
+        "releaseDate": "2026-09-20T05:21:53.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "google:com.deepseek.chat": [
+      {
+        "version": "2.5.3",
+        "releaseDate": "2026-09-17T13:43:09.000Z",
+        "releaseNotes": "- New model update: Instant, Expert, and Vision modes are now unified\n- Thinking process now collapses automatically\n- Fixed some known issues",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:1671705818": [
+      {
+        "version": "1.17.3",
+        "releaseDate": "2026-09-08T15:38:31.000Z",
+        "releaseNotes": "Bug fixes and other improvements",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "google:ai.character.app": [
+      {
+        "version": "1.17.3",
+        "releaseDate": "2026-09-03T21:06:02.000Z",
+        "releaseNotes": "Bug fixes and other improvements",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:389801252": [
+      {
+        "version": "448.0.0",
+        "releaseDate": "2026-09-21T15:59:55.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.instagram.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-21T13:00:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:284882215": [
+      {
+        "version": "580.0.0",
+        "releaseDate": "2026-09-23T07:37:44.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.facebook.katana": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T03:54:10.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:333903271": [
+      {
+        "version": "12.29",
+        "releaseDate": "2026-09-24T15:01:26.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.twitter.android": [
+      {
+        "version": "12.28.0-prod.01",
+        "releaseDate": "2026-09-22T00:09:13.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:6446901002": [
+      {
+        "version": "448.0",
+        "releaseDate": "2026-09-21T15:10:31.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.instagram.barcelona": [
+      {
+        "version": "447.0.0.54.81",
+        "releaseDate": "2026-09-21T20:35:50.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:544007664": [
+      {
+        "version": "21.38.2",
+        "releaseDate": "2026-09-21T14:05:16.000Z",
+        "releaseNotes": "Fixed bugs, improved performance, drank way too much coffee.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T22:41:27.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:447188370": [
+      {
+        "version": "14.25.0.48",
+        "releaseDate": "2026-09-23T11:01:36.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.snapchat.android": [
+      {
+        "version": "14.25.0.43",
+        "releaseDate": "2026-09-22T18:40:02.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:1064216828": [
+      {
+        "version": "2026.38.0",
+        "releaseDate": "2026-09-22T15:47:58.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.reddit.frontpage": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-21T17:39:09.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our Android app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:429047995": [
+      {
+        "version": "14.36",
+        "releaseDate": "2026-09-16T15:11:28.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.pinterest": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-21T23:38:37.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:288429040": [
+      {
+        "version": "9.1.575",
+        "releaseDate": "2026-09-24T17:01:15.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.linkedin.android": [
+      {
+        "version": "4.1.1252.1",
+        "releaseDate": "2026-09-23T22:54:35.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
       },
       {
-        "version": "7.137.0",
-        "releaseDate": "2026-08-24T16:07:00.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-25T16:35:36.748Z"
-      },
+        "version": "4.1.1250",
+        "releaseDate": "2026-09-23T22:54:35.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:310633997": [
       {
-        "version": "7.136.0",
-        "releaseDate": "2026-08-18T14:00:10.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-19T16:29:38.500Z"
-      },
+        "version": "26.37.76",
+        "releaseDate": "2026-09-23T13:45:17.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.whatsapp": [
       {
-        "version": "7.135.2",
-        "releaseDate": "2026-08-14T13:02:48.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-15T16:22:00.331Z"
-      },
-      {
-        "version": "7.135.1",
-        "releaseDate": "2026-08-12T14:32:07.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-13T16:55:02.910Z"
-      },
-      {
-        "version": "7.135.0",
-        "releaseDate": "2026-08-10T16:23:52.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-11T16:56:52.214Z"
-      },
-      {
-        "version": "7.134.0",
-        "releaseDate": "2026-08-03T18:03:04.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-07T16:53:01.895Z"
-      },
-      {
-        "version": "7.133.0",
-        "releaseDate": "2026-07-27T16:19:19.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-08-01T16:58:14.033Z"
-      },
-      {
-        "version": "7.132.0",
-        "releaseDate": "2026-07-21T15:41:47.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-07-25T16:55:53.188Z"
-      },
-      {
-        "version": "7.131.0",
-        "releaseDate": "2026-07-13T16:31:13.000Z",
-        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
-        "detectedAt": "2026-07-14T19:51:49.638Z"
+        "version": null,
+        "releaseDate": "2026-09-19T00:49:04.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
     "apple:874139669": [
@@ -233,6 +369,294 @@
         "detectedAt": "2026-07-14T19:51:49.638Z"
       }
     ],
+    "apple:686449807": [
+      {
+        "version": "12.9.4",
+        "releaseDate": "2026-09-12T06:27:05.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-22T21:15:42.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:454638411": [
+      {
+        "version": "580.0.0",
+        "releaseDate": "2026-09-23T00:13:33.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.facebook.orca": [
+      {
+        "version": "579.0.0.61.91",
+        "releaseDate": "2026-09-22T14:55:23.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:985746746": [
+      {
+        "version": "346.0",
+        "releaseDate": "2026-09-21T16:07:45.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.discord": [
+      {
+        "version": "346.13 - Stable",
+        "releaseDate": "2026-09-18T22:33:00.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:363590051": [
+      {
+        "version": "18.50.0",
+        "releaseDate": "2026-09-21T16:11:28.000Z",
+        "releaseNotes": "Keep your app updated to get the latest Netflix experience on your iPhone and iPad.\n\nAnd in this release, we fixed bugs and made performance improvements. Just for you.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.netflix.mediaclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-22T19:31:48.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:1446075923": [
+      {
+        "version": "5.18.0",
+        "releaseDate": "2026-09-23T21:46:35.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.disney.disneyplus": [
+      {
+        "version": "26.16.0+rc2-2026.09.08",
+        "releaseDate": "2026-09-18T16:05:10.000Z",
+        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:324684580": [
+      {
+        "version": "9.1.86",
+        "releaseDate": "2026-09-23T17:49:27.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-18T07:51:07.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:460177396": [
+      {
+        "version": "31.3.2",
+        "releaseDate": "2026-09-22T15:06:54.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:tv.twitch.android.app": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-18T18:23:09.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:284993459": [
+      {
+        "version": "27.0",
+        "releaseDate": "2026-09-22T13:37:11.000Z",
+        "releaseNotes": "Thanks for using Shazam! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. \n\nDon’t forget to keep your Shazam History safe and in sync between your devices. Simply turn on iCloud sync in Shazam Settings. \n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.shazam.com.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.shazam.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-20T17:39:46.000Z",
+        "releaseNotes": "You can now choose how Shazam listens when wired or wireless headphones are connected for even more accurate results. Select the Headphones icon to identify music playing in your favorite apps, including TikTok, Instagram, and YouTube.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:650377962": [
+      {
+        "version": "3.7.3",
+        "releaseDate": "2026-04-24T04:45:38.000Z",
+        "releaseNotes": "· stability improvements\n· fix expansion of playlists stored on the network",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:org.videolan.vlc": [
+      {
+        "version": null,
+        "releaseDate": "2026-05-11T06:43:41.000Z",
+        "releaseNotes": "* Equalizer fixes\n * Remote access: allow playing audio media in the browser\n * Add back the deletion for multiple file sin the browser\n * Update the remote access OTP code length\n * Improve the feedback UI\n * Add more size options for the subtitle size\n * Crash fixes",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:431946152": [
+      {
+        "version": "2.739.687",
+        "releaseDate": "2026-09-16T17:28:39.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.roblox.client": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T17:46:18.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:422689480": [
+      {
+        "version": "6.0.260914",
+        "releaseDate": "2026-09-21T17:18:45.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-24T16:41:18.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:951937596": [
+      {
+        "version": "5.2637.0",
+        "releaseDate": "2026-09-21T16:01:42.000Z",
+        "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.microsoft.office.outlook": [
+      {
+        "version": "5.2635.3",
+        "releaseDate": "2026-09-18T23:36:16.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:618783545": [
+      {
+        "version": "26.09.40",
+        "releaseDate": "2026-09-23T19:01:12.000Z",
+        "releaseNotes": "Bug Fixes\n• Don’t mind us — just making a few small adjustments to keep the app in tip-top shape. More to come soon. Cheerio!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.Slack": [
+      {
+        "version": "26.09.30.0",
+        "releaseDate": "2026-09-21T21:11:39.000Z",
+        "releaseNotes": "Bug Fixes\n• All bugs that were fixed in this release were too small for the eye to see or too fiddly for human words to describe. Nevertheless, work was done, things tinkered with and the app became subtly better.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:1113153706": [
+      {
+        "version": "8.17.0",
+        "releaseDate": "2026-09-23T16:06:56.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.microsoft.teams": [
+      {
+        "version": "1416/1.0.0.2026163804",
+        "releaseDate": "2026-09-11T15:51:46.000Z",
+        "releaseNotes": "Use Copilot to summarize channel meetings",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:546505307": [
+      {
+        "version": "7.2.0",
+        "releaseDate": "2026-09-19T08:19:12.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:us.zoom.videomeetings": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-21T14:17:47.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:1232780281": [
+      {
+        "version": "1.7.341",
+        "releaseDate": "2026-09-24T17:52:51.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:notion.id": [
+      {
+        "version": "0.6.4176",
+        "releaseDate": "2026-09-24T01:47:26.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:327630330": [
+      {
+        "version": "490.2",
+        "releaseDate": "2026-09-14T17:35:06.000Z",
+        "releaseNotes": "We release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.dropbox.android": [
+      {
+        "version": "490.2.2",
+        "releaseDate": "2026-09-14T17:30:07.000Z",
+        "releaseNotes": "What’s new?\n• You can now search and select device contacts directly through the contact picker.\n\nWe release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:897446215": [
+      {
+        "version": "4.227.0",
+        "releaseDate": "2026-09-17T23:34:58.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.canva.editor": [
+      {
+        "version": "2.378.0",
+        "releaseDate": "2026-09-23T07:37:31.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes.\n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
     "apple:989804926": [
       {
         "version": "156.1",
@@ -327,356 +751,20 @@
         "detectedAt": "2026-07-14T19:51:49.638Z"
       }
     ],
-    "apple:310633997": [
-      {
-        "version": "26.37.76",
-        "releaseDate": "2026-09-23T13:45:17.000Z",
-        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:686449807": [
-      {
-        "version": "12.9.4",
-        "releaseDate": "2026-09-12T06:27:05.000Z",
-        "releaseNotes": "Bug fixes, minor improvements, and more.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:454638411": [
-      {
-        "version": "580.0.0",
-        "releaseDate": "2026-09-23T00:13:33.000Z",
-        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.facebook.orca": [
-      {
-        "version": "579.0.0.61.91",
-        "releaseDate": "2026-09-22T14:55:23.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:985746746": [
-      {
-        "version": "346.0",
-        "releaseDate": "2026-09-21T16:07:45.000Z",
-        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.discord": [
-      {
-        "version": "346.13 - Stable",
-        "releaseDate": "2026-09-18T22:33:00.000Z",
-        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:389801252": [
-      {
-        "version": "448.0.0",
-        "releaseDate": "2026-09-21T15:59:55.000Z",
-        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:284882215": [
-      {
-        "version": "580.0.0",
-        "releaseDate": "2026-09-23T07:37:44.000Z",
-        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:6446901002": [
-      {
-        "version": "448.0",
-        "releaseDate": "2026-09-21T15:10:31.000Z",
-        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.instagram.barcelona": [
-      {
-        "version": "447.0.0.54.81",
-        "releaseDate": "2026-09-21T20:35:50.000Z",
-        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:333903271": [
-      {
-        "version": "12.29",
-        "releaseDate": "2026-09-24T15:01:26.000Z",
-        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.twitter.android": [
-      {
-        "version": "12.28.0-prod.01",
-        "releaseDate": "2026-09-22T00:09:13.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:1064216828": [
-      {
-        "version": "2026.38.0",
-        "releaseDate": "2026-09-22T15:47:58.000Z",
-        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:447188370": [
-      {
-        "version": "14.25.0.48",
-        "releaseDate": "2026-09-23T11:01:36.000Z",
-        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.snapchat.android": [
-      {
-        "version": "14.25.0.43",
-        "releaseDate": "2026-09-22T18:40:02.000Z",
-        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:429047995": [
-      {
-        "version": "14.36",
-        "releaseDate": "2026-09-16T15:11:28.000Z",
-        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:288429040": [
-      {
-        "version": "9.1.575",
-        "releaseDate": "2026-09-24T17:01:15.000Z",
-        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.linkedin.android": [
-      {
-        "version": "4.1.1250",
-        "releaseDate": "2026-09-23T22:54:35.000Z",
-        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:544007664": [
-      {
-        "version": "21.38.2",
-        "releaseDate": "2026-09-21T14:05:16.000Z",
-        "releaseNotes": "Fixed bugs, improved performance, drank way too much coffee.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:363590051": [
-      {
-        "version": "18.50.0",
-        "releaseDate": "2026-09-21T16:11:28.000Z",
-        "releaseNotes": "Keep your app updated to get the latest Netflix experience on your iPhone and iPad.\n\nAnd in this release, we fixed bugs and made performance improvements. Just for you.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:1446075923": [
-      {
-        "version": "5.18.0",
-        "releaseDate": "2026-09-23T21:46:35.000Z",
-        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.disney.disneyplus": [
-      {
-        "version": "26.16.0+rc2-2026.09.08",
-        "releaseDate": "2026-09-18T16:05:10.000Z",
-        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:460177396": [
-      {
-        "version": "31.3.2",
-        "releaseDate": "2026-09-22T15:06:54.000Z",
-        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:324684580": [
-      {
-        "version": "9.1.86",
-        "releaseDate": "2026-09-23T17:49:27.000Z",
-        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:284993459": [
-      {
-        "version": "27.0",
-        "releaseDate": "2026-09-22T13:37:11.000Z",
-        "releaseNotes": "Thanks for using Shazam! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. \n\nDon’t forget to keep your Shazam History safe and in sync between your devices. Simply turn on iCloud sync in Shazam Settings. \n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.shazam.com.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:650377962": [
-      {
-        "version": "3.7.3",
-        "releaseDate": "2026-04-24T04:45:38.000Z",
-        "releaseNotes": "· stability improvements\n· fix expansion of playlists stored on the network",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:431946152": [
-      {
-        "version": "2.739.687",
-        "releaseDate": "2026-09-16T17:28:39.000Z",
-        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:618783545": [
-      {
-        "version": "26.09.40",
-        "releaseDate": "2026-09-23T19:01:12.000Z",
-        "releaseNotes": "Bug Fixes\n• Don’t mind us — just making a few small adjustments to keep the app in tip-top shape. More to come soon. Cheerio!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.Slack": [
-      {
-        "version": "26.09.30.0",
-        "releaseDate": "2026-09-21T21:11:39.000Z",
-        "releaseNotes": "Bug Fixes\n• All bugs that were fixed in this release were too small for the eye to see or too fiddly for human words to describe. Nevertheless, work was done, things tinkered with and the app became subtly better.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:546505307": [
-      {
-        "version": "7.2.0",
-        "releaseDate": "2026-09-19T08:19:12.000Z",
-        "releaseNotes": "Bug fixes and improvements",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:1113153706": [
-      {
-        "version": "8.17.0",
-        "releaseDate": "2026-09-23T16:06:56.000Z",
-        "releaseNotes": "Bug fixes and performance improvements",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.microsoft.teams": [
-      {
-        "version": "1416/1.0.0.2026163804",
-        "releaseDate": "2026-09-11T15:51:46.000Z",
-        "releaseNotes": "Use Copilot to summarize channel meetings",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:951937596": [
-      {
-        "version": "5.2637.0",
-        "releaseDate": "2026-09-21T16:01:42.000Z",
-        "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.microsoft.office.outlook": [
-      {
-        "version": "5.2635.3",
-        "releaseDate": "2026-09-18T23:36:16.000Z",
-        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:422689480": [
-      {
-        "version": "6.0.260914",
-        "releaseDate": "2026-09-21T17:18:45.000Z",
-        "releaseNotes": "Bug fixes and performance improvements.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:1232780281": [
-      {
-        "version": "1.7.341",
-        "releaseDate": "2026-09-24T17:52:51.000Z",
-        "releaseNotes": "Bug fixes and performance improvements.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:notion.id": [
-      {
-        "version": "0.6.4176",
-        "releaseDate": "2026-09-24T01:47:26.000Z",
-        "releaseNotes": "Bug fixes and performance improvements.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:327630330": [
-      {
-        "version": "490.2",
-        "releaseDate": "2026-09-14T17:35:06.000Z",
-        "releaseNotes": "We release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.dropbox.android": [
-      {
-        "version": "490.2.2",
-        "releaseDate": "2026-09-14T17:30:07.000Z",
-        "releaseNotes": "What’s new?\n• You can now search and select device contacts directly through the contact picker.\n\nWe release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:897446215": [
-      {
-        "version": "4.227.0",
-        "releaseDate": "2026-09-17T23:34:58.000Z",
-        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.canva.editor": [
-      {
-        "version": "2.378.0",
-        "releaseDate": "2026-09-23T07:37:31.000Z",
-        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes.\n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "apple:6448311069": [
-      {
-        "version": "1.2026.258",
-        "releaseDate": "2026-09-23T09:36:36.000Z",
-        "releaseNotes": "Bug fixes and small improvements.",
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
-    "google:com.openai.chatgpt": [
-      {
-        "version": "1.2026.258",
-        "releaseDate": "2026-09-20T17:18:36.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-09-24T19:25:13.022Z"
-      }
-    ],
     "apple:535886823": [
       {
         "version": "154.0.8037.55",
         "releaseDate": "2026-09-22T15:58:10.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• Stability and performance improvements.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T17:57:24.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
     "apple:1052879175": [
@@ -751,6 +839,14 @@
         "detectedAt": "2026-09-24T19:25:13.022Z"
       }
     ],
+    "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T18:27:04.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
     "apple:323229106": [
       {
         "version": "5.24.0.1",
@@ -759,12 +855,28 @@
         "detectedAt": "2026-09-24T19:25:13.022Z"
       }
     ],
+    "google:com.waze": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-15T20:10:19.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
     "apple:368677368": [
       {
         "version": "3.740.10001",
         "releaseDate": "2026-09-21T00:05:20.000Z",
         "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.ubercab": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-18T16:50:55.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to help make it faster and more reliable for you. This version includes several bug fixes and performance improvements.\n\nLove the app? Rate us! Your feedback helps us to improve the Uber app.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
     "apple:529379082": [
@@ -809,6 +921,12 @@
     ],
     "google:com.amazon.mShop.android.shopping": [
       {
+        "version": "32.18.0.100",
+        "releaseDate": "2026-09-16T18:21:25.000Z",
+        "releaseNotes": "Access popular pages quickly with our new shortcuts. Tap and hold the Amazon app icon to access your Orders, Daily Deals, Shopping Cart, and Search.\nEnjoy our latest update where we have fixed some bugs and improved our app to provide you a seamless shopping experience",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      },
+      {
         "version": "32.17.0.100",
         "releaseDate": "2026-09-16T18:21:25.000Z",
         "releaseNotes": "Access popular pages quickly with our new shortcuts. Tap and hold the Amazon app icon to access your Orders, Daily Deals, Shopping Cart, and Search.\nEnjoy our latest update where we have fixed some bugs and improved our app to provide you a seamless shopping experience",
@@ -821,6 +939,14 @@
         "releaseDate": "2026-09-19T17:07:44.000Z",
         "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.ebay.mobile": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-17T22:04:02.000Z",
+        "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
     "apple:719972451": [
@@ -887,12 +1013,154 @@
         "detectedAt": "2026-09-24T19:25:13.022Z"
       }
     ],
+    "apple:570060128": [
+      {
+        "version": "7.141.1",
+        "releaseDate": "2026-09-23T13:42:13.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      },
+      {
+        "version": "7.137.0",
+        "releaseDate": "2026-08-24T16:07:00.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-25T16:35:36.748Z"
+      },
+      {
+        "version": "7.136.0",
+        "releaseDate": "2026-08-18T14:00:10.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-19T16:29:38.500Z"
+      },
+      {
+        "version": "7.135.2",
+        "releaseDate": "2026-08-14T13:02:48.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-15T16:22:00.331Z"
+      },
+      {
+        "version": "7.135.1",
+        "releaseDate": "2026-08-12T14:32:07.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-13T16:55:02.910Z"
+      },
+      {
+        "version": "7.135.0",
+        "releaseDate": "2026-08-10T16:23:52.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-11T16:56:52.214Z"
+      },
+      {
+        "version": "7.134.0",
+        "releaseDate": "2026-08-03T18:03:04.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
+        "version": "7.133.0",
+        "releaseDate": "2026-07-27T16:19:19.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-08-01T16:58:14.033Z"
+      },
+      {
+        "version": "7.132.0",
+        "releaseDate": "2026-07-21T15:41:47.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
+      {
+        "version": "7.131.0",
+        "releaseDate": "2026-07-13T16:31:13.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T13:49:02.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:324715238": [
+      {
+        "version": "2026.09.15",
+        "releaseDate": "2026-09-16T22:24:05.000Z",
+        "releaseNotes": "Minor updates and enhancements",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      },
+      {
+        "version": "2026.08.11",
+        "releaseDate": "2026-08-12T14:06:20.000Z",
+        "releaseNotes": "Minor updates and enhancements",
+        "detectedAt": "2026-08-12T16:55:40.058Z"
+      },
+      {
+        "version": "2026.07.31",
+        "releaseDate": "2026-08-03T13:26:43.000Z",
+        "releaseNotes": "New: the Random Article widget, a small square of serendipity on your home screen.\nOther improvements:\n• Widgets refreshing daily as intended\n• Find-in-page results no longer hidden by the keyboard",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
+        "version": "8.2.2",
+        "releaseDate": "2026-07-22T00:56:48.000Z",
+        "releaseNotes": "Minor updates and enhancements",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
+      {
+        "version": "8.2.1",
+        "releaseDate": "2026-07-08T22:15:48.000Z",
+        "releaseNotes": "An archive of past games is now available in \"Which came first?\", so you can go back and play any round you missed. Find it after completing your daily game. A bug was also addressed, where BC dates were displaying incorrectly within the game.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
+    "google:org.wikipedia": [
+      {
+        "version": "50608-r-2026-09-15",
+        "releaseDate": "2026-09-15T19:30:54.000Z",
+        "releaseNotes": "- General bug fixes and enhancements.",
+        "detectedAt": "2026-09-24T19:25:13.022Z"
+      },
+      {
+        "version": "50600-r-2026-07-28",
+        "releaseDate": "2026-08-05T17:26:52.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-08-07T16:53:01.895Z"
+      },
+      {
+        "version": "50599-r-2026-07-20",
+        "releaseDate": "2026-07-22T17:49:32.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-07-25T16:55:53.188Z"
+      },
+      {
+        "version": "50598-r-2026-07-13",
+        "releaseDate": "2026-07-16T19:25:42.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-07-17T03:44:21.494Z"
+      },
+      {
+        "version": "50597-r-2026-07-06",
+        "releaseDate": "2026-07-07T17:39:05.000Z",
+        "releaseNotes": "- Explore is now Home, with a new look.\n- General bug fixes and enhancements.",
+        "detectedAt": "2026-07-14T19:51:49.638Z"
+      }
+    ],
     "apple:426826309": [
       {
         "version": "482.0.0",
         "releaseDate": "2026-09-23T19:38:57.000Z",
         "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "google:com.strava": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-21T18:46:18.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ]
   }
