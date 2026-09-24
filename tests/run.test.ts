@@ -1,7 +1,7 @@
 import { mkdtempSync, readFileSync, rmSync, existsSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { CheckerConfig } from '../scripts/lib/config.ts';
 import { runCheck } from '../scripts/lib/run.ts';
 import type { AppSnapshot, ProviderFetch } from '../scripts/lib/providers/types.ts';
@@ -93,14 +93,70 @@ describe('runCheck', () => {
     expect(status.updatesDetected).toBe(0);
   });
 
-  it('does not rewrite files when nothing meaningful changed', async () => {
+  it('does not rewrite app data when nothing meaningful changed', async () => {
     const providers = { apple: providerReturning('1.0'), google: providerReturning('5.0') };
     await runCheck({ config, providers, dataDir, delayMs: 0 });
     const before = statSync(join(dataDir, 'apps.json')).mtimeMs;
+    const historyBefore = statSync(join(dataDir, 'history.json')).mtimeMs;
 
     const second = await runCheck({ config, providers, dataDir, delayMs: 0 });
     expect(second.changed).toBe(false);
     expect(statSync(join(dataDir, 'apps.json')).mtimeMs).toBe(before);
+    expect(statSync(join(dataDir, 'history.json')).mtimeMs).toBe(historyBefore);
+  });
+
+  it('always refreshes status.json so "last checked" stays accurate', async () => {
+    const providers = { apple: providerReturning('1.0'), google: providerReturning('5.0') };
+    await runCheck({
+      config,
+      providers,
+      dataDir,
+      delayMs: 0,
+      now: () => new Date('2026-09-24T08:00:00.000Z'),
+    });
+    const second = await runCheck({
+      config,
+      providers,
+      dataDir,
+      delayMs: 0,
+      now: () => new Date('2026-09-24T10:00:00.000Z'),
+    });
+    expect(second.changed).toBe(false);
+    const { status } = readData();
+    expect(status.lastRunAt).toBe('2026-09-24T10:00:00.000Z');
+    expect(status.lastSuccessAt).toBe('2026-09-24T10:00:00.000Z');
+    expect(validateStatusFile(status)).toEqual([]);
+  });
+
+  it('lets providers warm up in bulk before per-app checks', async () => {
+    const prime = vi.fn(async () => {});
+    const apple = Object.assign(providerReturning('1.0'), { prime });
+    await runCheck({
+      config,
+      providers: { apple, google: providerReturning('5.0') },
+      dataDir,
+      delayMs: 0,
+    });
+    expect(prime).toHaveBeenCalledOnce();
+    expect(prime).toHaveBeenCalledWith([config.targets[0]]);
+  });
+
+  it('treats a failed bulk warm-up as non-fatal', async () => {
+    const apple = Object.assign(providerReturning('1.0'), {
+      prime: async () => {
+        throw new Error('batch down');
+      },
+    });
+    const log = vi.fn();
+    const result = await runCheck({
+      config,
+      providers: { apple, google: providerReturning('5.0') },
+      dataDir,
+      delayMs: 0,
+      log,
+    });
+    expect(result.okCount).toBe(2);
+    expect(log).toHaveBeenCalledWith(expect.stringContaining('bulk lookup failed'));
   });
 
   it('detects updates on later runs and appends history', async () => {

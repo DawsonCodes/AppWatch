@@ -1,5 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
-import { DataLoadError, isDataStale, loadDashboardData, loadHistory } from '../src/lib/data.ts';
+import {
+  DataLoadError,
+  isDataStale,
+  loadDashboardData,
+  loadHistory,
+  STALE_AFTER_HOURS,
+} from '../src/lib/data.ts';
 import type { StatusFile } from '../src/shared/types.ts';
 
 const validApps = { schemaVersion: 1, generatedAt: null, apps: [] };
@@ -24,6 +30,19 @@ function fetchFor(routes: Record<string, { status?: number; body?: unknown; fail
 }
 
 describe('loadDashboardData', () => {
+  it('revalidates with the server instead of trusting the HTTP cache', async () => {
+    const fetchFn = fetchFor({
+      'apps.json': { body: validApps },
+      'status.json': { body: validStatus },
+    });
+    await loadDashboardData(fetchFn);
+    const calls = (fetchFn as unknown as ReturnType<typeof vi.fn>).mock.calls;
+    expect(calls).toHaveLength(2);
+    for (const call of calls) {
+      expect((call[1] as RequestInit).cache).toBe('no-cache');
+    }
+  });
+
   it('returns apps and status when both load', async () => {
     const data = await loadDashboardData(
       fetchFor({ 'apps.json': { body: validApps }, 'status.json': { body: validStatus } }),
@@ -91,6 +110,12 @@ describe('isDataStale', () => {
   it('flags data older than the staleness window', () => {
     expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-10T00:00:00.000Z' }, now)).toBe(true);
     expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-14T06:00:00.000Z' }, now)).toBe(false);
+  });
+
+  it('uses a window that fits the 2-hourly schedule plus scheduler delays', () => {
+    expect(STALE_AFTER_HOURS).toBe(12);
+    expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-14T01:00:00.000Z' }, now)).toBe(false);
+    expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-13T23:00:00.000Z' }, now)).toBe(true);
   });
 
   it('never flags missing status', () => {

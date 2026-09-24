@@ -12,7 +12,7 @@
  */
 
 import { htmlToPlainText } from '../../../src/shared/text.ts';
-import { withRetry, withTimeout } from '../net.ts';
+import { createThrottle, withRetry, withTimeout } from '../net.ts';
 import type { TrackTarget } from '../config.ts';
 import type { AppSnapshot, ProviderFetch } from './types.ts';
 import { asFiniteNumber, asIsoDate, asNonEmptyString, ProviderError } from './types.ts';
@@ -53,6 +53,8 @@ interface GooglePlayProviderOptions {
   timeoutMs?: number;
   retries?: number;
   retryDelayMs?: number;
+  /** Minimum spacing between requests to Google Play, in milliseconds. */
+  minIntervalMs?: number;
   log?: (message: string) => void;
 }
 
@@ -62,20 +64,25 @@ export function createGooglePlayProvider(options: GooglePlayProviderOptions = {}
     timeoutMs = 20_000,
     retries = 2,
     retryDelayMs = 2000,
+    minIntervalMs = 1500,
     log,
   } = options;
   let appFnPromise: Promise<PlayAppFn> | undefined;
+  // Play has no batch API, so every app is one page fetch: keep them spaced.
+  const throttle = createThrottle(minIntervalMs);
 
   return async function fetchGooglePlayApp(target: TrackTarget): Promise<AppSnapshot> {
     appFnPromise ??= loadAppFn();
     const appFn = await appFnPromise;
     const details = await withRetry(
-      () =>
-        withTimeout(
+      async () => {
+        await throttle();
+        return withTimeout(
           appFn({ appId: target.storeId, lang: target.language, country: target.country }),
           timeoutMs,
           `google:${target.storeId}`,
-        ),
+        );
+      },
       { retries, baseDelayMs: retryDelayMs, label: `google:${target.storeId}`, log },
     );
     return normalizePlayResult(details, target);

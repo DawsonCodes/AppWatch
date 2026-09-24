@@ -45,8 +45,8 @@
 
 ## What it does
 
-AppWatch checks the App Store and Google Play **twice a day** and records what
-changed. For every tracked app it shows:
+AppWatch tracks 50 App Store and 50 Google Play apps out of the box, checks
+every one of them **every two hours**, and records what changed. For every tracked app it shows:
 
 - Name, icon, developer and category
 - Platform (App Store / Google Play) with a direct store link
@@ -84,8 +84,8 @@ only ever active because you chose it.
 The dashboard is not limited to the repository-configured apps — but honesty
 matters about how far that goes:
 
-- **Repository-tracked apps** (from `apps.config.json`) are checked twice a
-  day by GitHub Actions for everyone, with stored version history.
+- **Repository-tracked apps** (from `apps.config.json`) are checked every two
+  hours by GitHub Actions for everyone, with stored version history.
 - **App Store discovery** works live in your browser: paste an App Store URL
   or numeric ID, or press Enter on a name search, and AppWatch queries Apple's
   public keyless lookup/search API — one request per action, no key, no proxy.
@@ -109,11 +109,14 @@ to third parties, and a GitHub Pages site has no server to poll continuously,
 so "instant" universal detection is not honestly possible with this
 architecture. What AppWatch does instead:
 
-- The checker runs twice a day (see the schedule below) and deploys fresh JSON
-  whenever something meaningful changed.
+- The checker runs every two hours (see the schedule below) and redeploys the
+  site after every run, so the published "last checked" time is always real.
 - While the page is open, it revalidates the site's **own** tiny
-  `status.json` every 5 minutes (visible tabs only). When a newer run has been
-  deployed, a quiet toast offers a one-click data refresh — no page reload.
+  `status.json` every 5 minutes and whenever the tab regains focus (visible
+  tabs only). When a newer run has been deployed, the new data is applied in
+  place automatically — no page reload, filters and open panels are kept.
+- Every data request revalidates with the server (`cache: no-cache`), so
+  GitHub Pages' 10-minute HTTP cache can never hide a fresh deploy.
 - Your browser never queries the App Store or Google Play for tracked data;
   only the explicit discovery search above contacts Apple's public API.
 
@@ -123,8 +126,8 @@ architecture. What AppWatch does instead:
 apps.config.json          (human-edited: which apps to track)
         │
         ▼
-GitHub Actions (twice a day) ─►  scripts/check-updates.ts
-        │                        ├─ Apple provider  → iTunes Lookup API
+GitHub Actions (every 2 h)   ─►  scripts/check-updates.ts
+        │                        ├─ Apple provider  → iTunes Lookup API (batched)
         │                        └─ Google provider → google-play-scraper
         ▼
 public/data/*.json        (generated, version-controlled)
@@ -236,6 +239,8 @@ The checker writes these files into `public/data/` (do not edit by hand):
 - **`history.json`** — version history per app id, newest first; one entry per
   version with release date, notes and the detection timestamp.
 - **`status.json`** — last run time, success/failure counts, updates detected.
+  Rewritten on every run and deployed straight to the site; it is only
+  committed alongside real app changes, so the git history stays meaningful.
 
 ## Deployment (GitHub Pages)
 
@@ -251,29 +256,33 @@ Workflows:
 - **`deploy.yml`** — builds, validates and deploys on every push to `main`
   (also manually via _Run workflow_). The Vite `base` is `/AppWatch/`, so the
   site works correctly at `https://dawsoncodes.github.io/AppWatch/`.
-- **`check-updates.yml`** — runs twice a day and on demand; commits
-  `chore(data): update tracked app metadata` only when data actually changed,
-  then triggers a deployment. Commits made with `GITHUB_TOKEN` cannot re-trigger
-  workflows, so the checker → deploy chain is loop-safe by construction.
+- **`check-updates.yml`** — runs every two hours and on demand; commits
+  `chore(data): update tracked app metadata` only when app data actually
+  changed, then deploys the site after every successful run (handing the
+  freshly generated data, including `status.json`, to the deploy job as an
+  artifact). Commits made with `GITHUB_TOKEN` cannot re-trigger workflows, so
+  the checker → deploy chain is loop-safe by construction.
 
-### Check schedule and timezone
+### Check schedule
 
-The checker targets **12:00 AM and 12:00 PM in America/Detroit** (the
-product's home timezone). GitHub Actions cron only understands UTC and knows
-nothing about daylight saving, so the workflow handles the conversion
-explicitly:
+The checker runs **every two hours** (`17 */2 * * *`, UTC) and on demand via
+**Actions → Check app updates → Run workflow**.
 
-| Detroit season          | UTC offset | Midnight Detroit | Noon Detroit |
-| ----------------------- | ---------- | ---------------- | ------------ |
-| EDT (mid-Mar–early Nov) | UTC−4      | 04:00 UTC        | 16:00 UTC    |
-| EST (early Nov–mid-Mar) | UTC−5      | 05:00 UTC        | 17:00 UTC    |
+GitHub runs scheduled workflows on a best-effort basis: runs routinely start
+minutes to hours after their cron time, and the top of the hour is the most
+congested (hence `:17`). The workflow therefore never depends on starting at
+an exact clock time — whenever a run starts, it checks every tracked app.
 
-The cron fires at **all four** candidate hours (`0 4,5,16,17 * * *`) and a
-tiny gate job lets a run proceed only when the current hour in
-`America/Detroit` is actually `00` or `12`. Exactly two of the four candidates
-pass every day, year-round, across DST changes. Manual `workflow_dispatch`
-runs always pass the gate. (GitHub delivers scheduled runs best-effort — a
-run can start some minutes after the hour.)
+A single run checks all ~100 apps in a few minutes and stays polite to the
+stores: App Store apps are resolved with one batched lookup per 50 apps, and
+Google Play pages are fetched one at a time at least 1.5 seconds apart
+(tunable with `APPWATCH_DELAY_MS`).
+
+> **Why not exactly 12:00 AM / 12:00 PM?** An earlier version gated runs to
+> those Detroit hours. Because GitHub started the scheduled runs several hours
+> late, every run failed the gate and was skipped, so the data silently stopped
+> updating. The frequent, delay-tolerant schedule removes that failure mode —
+> and checks midnight and noon along with every other two-hour slot.
 
 ## Known limitations
 
@@ -286,9 +295,13 @@ run can start some minutes after the hour.)
   ("Varies with device") — AppWatch stores `null` rather than a fake version.
 - **Release notes reflect detection time.** Stores overwrite notes in place;
   history entries keep the notes as they were when each version was first seen.
-- **Check freshness is bounded by commits.** The dashboard's "last check" time
-  updates only when a run produced changes worth committing (by design, to keep
-  the git history meaningful).
+- **Freshness is bounded by the schedule.** A store update appears on the site
+  within about two hours (plus any GitHub scheduling delay), not instantly —
+  neither store offers a push feed a static site could subscribe to.
+- **Push-triggered deploys use the last committed status.** A code change
+  merged to `main` redeploys with the most recently _committed_ `status.json`,
+  so "last checked" can read slightly older until the next scheduled run
+  (at most two hours later).
 - **Apple storefront matters.** Version metadata can differ per country; the
   configured storefront (default `us`) is what gets tracked.
 - **In-browser App Store discovery depends on CORS.** Apple's public
@@ -301,13 +314,15 @@ run can start some minutes after the hour.)
 
 ## Troubleshooting
 
-| Symptom                                        | Likely cause / fix                                                                                                   |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Site loads but shows "No app data yet"         | The checker hasn't run since setup — run **Actions → Check app updates** manually.                                   |
-| Checker fails with "Every check failed"        | Runner couldn't reach the stores (outage or rate limiting) — rerun later; nothing was overwritten.                   |
-| One app shows "Check failed"                   | Usually a temporary store error, a removed listing, or a Play page-format change. The card keeps the last good data. |
-| Deploy succeeds but assets 404                 | The site must be served from `/AppWatch/` — don't change `base` in `vite.config.ts` unless the repo name changes.    |
-| `npm run check:updates` locally returns errors | Some networks/proxies block store endpoints; the GitHub Actions runner is the reference environment.                 |
+| Symptom                                        | Likely cause / fix                                                                                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Newly added apps don't appear yet              | They show up after the next check — run **Actions → Check app updates** to populate them now.                                              |
+| An app is listed under "Couldn't resolve"      | The configured ID or package doesn't resolve (typo, or the listing was removed from the US store). Fix or remove it in `apps.config.json`. |
+| Site loads but shows "No app data yet"         | The checker hasn't run since setup — run **Actions → Check app updates** manually.                                                         |
+| Checker fails with "Every check failed"        | Runner couldn't reach the stores (outage or rate limiting) — rerun later; nothing was overwritten.                                         |
+| One app shows "Check failed"                   | Usually a temporary store error, a removed listing, or a Play page-format change. The card keeps the last good data.                       |
+| Deploy succeeds but assets 404                 | The site must be served from `/AppWatch/` — don't change `base` in `vite.config.ts` unless the repo name changes.                          |
+| `npm run check:updates` locally returns errors | Some networks/proxies block store endpoints; the GitHub Actions runner is the reference environment.                                       |
 
 ## Privacy
 

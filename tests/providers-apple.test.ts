@@ -5,6 +5,7 @@ import {
   lookupUrl,
   normalizeAppleResult,
 } from '../scripts/lib/providers/apple.ts';
+import type { TrackTarget as Target } from '../scripts/lib/config.ts';
 import { ProviderError } from '../scripts/lib/providers/types.ts';
 
 const target: TrackTarget = {
@@ -51,6 +52,12 @@ describe('lookupUrl', () => {
   it('builds the documented iTunes lookup URL', () => {
     expect(lookupUrl('324715238', 'us')).toBe(
       'https://itunes.apple.com/lookup?id=324715238&country=us&entity=software',
+    );
+  });
+
+  it('joins multiple IDs with literal commas for batched lookups', () => {
+    expect(lookupUrl(['1', '22', '333'], 'gb')).toBe(
+      'https://itunes.apple.com/lookup?id=1,22,333&country=gb&entity=software',
     );
   });
 });
@@ -131,7 +138,7 @@ describe('normalizeAppleResult', () => {
 describe('createAppleProvider', () => {
   it('fetches and normalizes via the injected fetch', async () => {
     const fetchFn = fetchStub(sampleResult);
-    const provider = createAppleProvider({ fetchFn, retries: 0 });
+    const provider = createAppleProvider({ fetchFn, retries: 0, minIntervalMs: 0 });
     const snapshot = await provider(target);
     expect(snapshot.name).toBe('Wikipedia');
     expect(fetchFn).toHaveBeenCalledOnce();
@@ -139,7 +146,12 @@ describe('createAppleProvider', () => {
 
   it('surfaces HTTP errors after exhausting retries', async () => {
     const fetchFn = fetchStub({}, 503);
-    const provider = createAppleProvider({ fetchFn, retries: 1, retryDelayMs: 1 });
+    const provider = createAppleProvider({
+      fetchFn,
+      retries: 1,
+      retryDelayMs: 1,
+      minIntervalMs: 0,
+    });
     await expect(provider(target)).rejects.toThrow(/HTTP 503/);
     expect(fetchFn).toHaveBeenCalledTimes(2);
   });
@@ -151,9 +163,88 @@ describe('createAppleProvider', () => {
       if (calls.length === 1) throw new Error('socket hang up');
       return new Response(JSON.stringify(sampleResult), { status: 200 });
     }) as unknown as typeof fetch;
-    const provider = createAppleProvider({ fetchFn, retries: 2, retryDelayMs: 1 });
+    const provider = createAppleProvider({
+      fetchFn,
+      retries: 2,
+      retryDelayMs: 1,
+      minIntervalMs: 0,
+    });
     const snapshot = await provider(target);
     expect(snapshot.version).toBe('7.4.1');
     expect(fetchFn).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe('batched lookups (prime)', () => {
+  const t = (storeId: string, country = 'us'): Target => ({
+    platform: 'apple',
+    storeId,
+    country,
+    language: 'en',
+  });
+  const record = (id: number, name: string) => ({
+    trackId: id,
+    trackName: name,
+    version: '1.0',
+    trackViewUrl: `https://apps.apple.com/us/app/id${id}`,
+  });
+
+  function recordingFetch(respond: (url: string) => unknown | Error): {
+    fetchFn: typeof fetch;
+    urls: string[];
+  } {
+    const urls: string[] = [];
+    const fetchFn = vi.fn(async (input: RequestInfo | URL) => {
+      const url = String(input);
+      urls.push(url);
+      const body = respond(url);
+      if (body instanceof Error) throw body;
+      return new Response(JSON.stringify(body), { status: 200 });
+    }) as unknown as typeof fetch;
+    return { fetchFn, urls };
+  }
+
+  it('resolves many apps with one request, then serves them from the batch', async () => {
+    const { fetchFn, urls } = recordingFetch(() => ({
+      resultCount: 3,
+      results: [record(1001, 'One'), record(1002, 'Two'), record(1003, 'Three')],
+    }));
+    const provider = createAppleProvider({ fetchFn, retries: 0, minIntervalMs: 0 });
+    await provider.prime?.([t('1001'), t('1002'), t('1003')]);
+    expect(urls).toHaveLength(1);
+    expect(urls[0]).toContain('id=1001,1002,1003');
+
+    expect((await provider(t('1002'))).name).toBe('Two');
+    expect((await provider(t('1003'))).name).toBe('Three');
+    expect(urls).toHaveLength(1); // no per-app requests
+  });
+
+  it('splits large sets into batches and groups by storefront', async () => {
+    const { fetchFn, urls } = recordingFetch(() => ({ results: [] }));
+    const provider = createAppleProvider({ fetchFn, retries: 0, minIntervalMs: 0, batchSize: 2 });
+    await provider.prime?.([t('1'), t('2'), t('3'), t('4', 'gb')]);
+    expect(urls).toHaveLength(3);
+    expect(urls.filter((u) => u.includes('country=us'))).toHaveLength(2);
+    expect(urls.some((u) => u.includes('country=gb') && u.includes('id=4&'))).toBe(true);
+  });
+
+  it('reports IDs a successful batch omitted as not found, without refetching', async () => {
+    const { fetchFn, urls } = recordingFetch(() => ({ results: [record(1001, 'One')] }));
+    const provider = createAppleProvider({ fetchFn, retries: 0, minIntervalMs: 0 });
+    await provider.prime?.([t('1001'), t('9999')]);
+    await expect(provider(t('9999'))).rejects.toThrow(/not found/);
+    expect(urls).toHaveLength(1);
+  });
+
+  it('falls back to single lookups when a batch request fails', async () => {
+    const { fetchFn, urls } = recordingFetch((url) =>
+      url.includes(',') ? new Error('socket hang up') : { results: [record(1002, 'Two')] },
+    );
+    const log = vi.fn();
+    const provider = createAppleProvider({ fetchFn, retries: 0, minIntervalMs: 0, log });
+    await provider.prime?.([t('1001'), t('1002')]);
+    expect(log).toHaveBeenCalledWith(expect.stringContaining('batch lookup failed'));
+    expect((await provider(t('1002'))).name).toBe('Two');
+    expect(urls.at(-1)).toContain('id=1002&');
   });
 });

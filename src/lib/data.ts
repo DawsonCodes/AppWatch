@@ -9,7 +9,10 @@ export class DataLoadError extends Error {}
 async function fetchJson(url: string, fetchFn: typeof fetch): Promise<unknown> {
   let response: Response;
   try {
-    response = await fetchFn(url, { headers: { accept: 'application/json' } });
+    // GitHub Pages serves JSON with a 10-minute max-age. `no-cache` makes the
+    // browser revalidate every time (a cheap 304 when nothing changed), so a
+    // freshly deployed check is never hidden behind a stale HTTP cache.
+    response = await fetchFn(url, { cache: 'no-cache', headers: { accept: 'application/json' } });
   } catch {
     throw new DataLoadError('Network request failed. Check your connection and try again.');
   }
@@ -62,8 +65,12 @@ export async function loadHistory(fetchFn: typeof fetch = fetch): Promise<Histor
   return raw as HistoryFile;
 }
 
-/** Hours after which the dashboard flags the data as possibly stale. */
-export const STALE_AFTER_HOURS = 26;
+/**
+ * Hours after which the dashboard flags the data as possibly stale. Checks
+ * run every 2 hours and GitHub can start scheduled runs a few hours late, so
+ * 12 hours without a completed check means something is genuinely wrong.
+ */
+export const STALE_AFTER_HOURS = 12;
 
 export function isDataStale(status: StatusFile | null, now: Date = new Date()): boolean {
   if (!status?.lastRunAt) return false;

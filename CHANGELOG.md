@@ -22,8 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   label, never claim repository tracking, and offer a copyable
   `apps.config.json` line plus a tracking-request link.
 - Deploy-freshness polling: the open page revalidates the site's own
-  `status.json` every 5 minutes (visible tabs only) and offers a one-click,
-  non-disruptive data refresh when a newer checker run has been deployed.
+  `status.json` every 5 minutes and on tab focus (visible tabs only), and
+  applies newer deployed data in place.
 - Extended provider metadata where reliably available: price, content rating,
   minimum OS requirement, download size (Apple), user rating and rating count,
   and developer website — shown in the detail view, optional in the schema so
@@ -41,9 +41,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   check-health chip, new wordmark ("App" neutral / "Watch" blue, no gradients
   or glow), focused intro, and a responsive side-panel/full-sheet detail
   experience with focus restoration and deep links.
-- Scheduled checks now run exactly twice a day at 12:00 AM and 12:00 PM
-  America/Detroit (UTC cron candidates at 4/5/16/17 with a timezone gate;
-  manual runs unaffected).
+- Tracked catalog expanded from 8 to 100 entries: 50 popular apps, each
+  tracked on both the App Store and Google Play.
+- Scheduled checks now run every two hours (`17 */2 * * *`) instead of at
+  fixed times, and the site is redeployed after every successful run so the
+  published "last checked" time is always accurate.
+- App Store apps are resolved with batched lookups (up to 50 IDs per request)
+  and Google Play requests are spaced by the provider itself, so a full
+  100-app check stays quick and polite.
+- New deployed data is applied in place automatically while the page is open
+  (with a brief confirmation), instead of waiting for a manual refresh.
 - Brand assets (favicon, PWA icons, social image) recolored to the restrained
   blue identity.
 
@@ -54,6 +61,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Recently updated apps (e.g. Signal after an update) no longer look
   permanently hovered/selected: recency is now a quiet left accent stripe and
   label, distinct from hover, keyboard focus, watched, open and failed states.
+- **Data stopped updating after late August.** The previous schedule gate only
+  let a run proceed at exactly 12 AM/12 PM Detroit time, but GitHub started the
+  scheduled runs 3–5 hours late, so every run was skipped. The gate is gone;
+  the delay-tolerant two-hour schedule always checks.
+- The site could show data up to 10 minutes older than the latest deploy
+  (GitHub Pages HTTP caching), and "Refresh data" could re-serve the same
+  cached copy. Data requests now always revalidate with the server.
+- "Last check" only moved when an app changed, so healthy runs with no
+  changes made the site look stale. `status.json` is now refreshed and
+  deployed on every run.
+- "Try again" after a failed data load silently ran a background refresh
+  that swallowed errors; it now performs a full, visible reload.
+- Configured apps that have never resolved (e.g. a mistyped ID) no longer
+  render as empty cards; they are listed under Insights instead.
+- Google Play apps that publish no single version now say "Not listed
+  (varies by device)" instead of "unknown".
 
 ## [1.0.0] - 2026-07-14
 

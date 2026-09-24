@@ -25,7 +25,15 @@ export interface AppSnapshot {
 }
 
 /** A store integration: fetches and normalizes metadata for one target. */
-export type ProviderFetch = (target: TrackTarget) => Promise<AppSnapshot>;
+export interface ProviderFetch {
+  (target: TrackTarget): Promise<AppSnapshot>;
+  /**
+   * Optional bulk warm-up called once per run with every target for this
+   * store, before the per-app calls (e.g. one batched lookup for many apps).
+   * Failures here are non-fatal: per-app calls fall back to single requests.
+   */
+  prime?: (targets: readonly TrackTarget[]) => Promise<void>;
+}
 
 export class ProviderError extends Error {}
 

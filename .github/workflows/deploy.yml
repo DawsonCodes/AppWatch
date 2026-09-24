@@ -4,9 +4,15 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  # Called by check-updates.yml after it commits fresh app data, because
-  # pushes made with GITHUB_TOKEN do not trigger `push` workflows.
+  # Called by check-updates.yml after every successful check, because pushes
+  # made with GITHUB_TOKEN do not trigger `push` workflows.
   workflow_call:
+    inputs:
+      data-artifact:
+        description: Name of an artifact holding freshly checked public/data files.
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -27,6 +33,15 @@ jobs:
           # Always build the tip of main — required when called from the
           # checker workflow, whose triggering commit predates the data commit.
           ref: main
+
+      # When called by the checker, overlay the data it just generated. This
+      # carries a fresh status.json even on runs where nothing was committed.
+      - name: Use freshly checked data
+        if: inputs.data-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.data-artifact }}
+          path: public/data
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
