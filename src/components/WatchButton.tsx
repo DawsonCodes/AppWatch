@@ -1,69 +1,47 @@
-import { useEffect, useRef, useState } from 'preact/hooks';
+import { useRef } from 'preact/hooks';
+import { sparkBurst, starPop } from '../lib/motion.ts';
 import { StarIcon } from './Icons.tsx';
 
 interface WatchButtonProps {
   appName: string;
   watched: boolean;
   onToggle: () => void;
+  /** Show a text label next to the star (used in the detail panel). */
+  labelled?: boolean;
 }
 
-const PARTICLES = [0, 48, 96, 144, 192, 240, 288] as const;
-const BURST_LIFETIME_MS = 700;
-
 /**
- * The watch/favorite star. Watching fires a small gold spark burst tied to
- * the control; unwatching gets a quieter shrink. The burst only ever starts
- * from a real click (never from state initialization), rapid re-clicks
- * replace the previous burst (no DOM/timer leaks), and reduced-motion users
- * see the state change without fireworks.
+ * The watch/favorite star. Watching makes the star spring up and throws a
+ * small gold firework from it (square pixels in the MS Paint theme);
+ * unwatching gets a quieter dip. Effects only ever start from a real click,
+ * never from state loaded from storage, and clean themselves up.
  */
-export function WatchButton({ appName, watched, onToggle }: WatchButtonProps) {
-  // 0 = no animation yet; odd = watch burst; even = unwatch dip.
-  const [animation, setAnimation] = useState<{ kind: 'add' | 'remove'; key: number } | null>(null);
-  const timer = useRef<ReturnType<typeof setTimeout>>();
+export function WatchButton({ appName, watched, onToggle, labelled = false }: WatchButtonProps) {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const starRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => () => clearTimeout(timer.current), []);
-
-  function handleClick() {
+  function handleClick(event: MouseEvent) {
+    event.stopPropagation();
     const adding = !watched;
-    setAnimation((previous) => ({
-      kind: adding ? 'add' : 'remove',
-      key: (previous?.key ?? 0) + 1,
-    }));
-    clearTimeout(timer.current);
-    timer.current = setTimeout(() => setAnimation(null), BURST_LIFETIME_MS);
     onToggle();
+    if (starRef.current) starPop(starRef.current, adding);
+    if (adding && buttonRef.current) sparkBurst(buttonRef.current);
   }
 
   return (
     <button
       type="button"
-      class={`watch-button${watched ? ' is-watched' : ''}`}
+      ref={buttonRef}
+      class={`watch${watched ? ' is-watched' : ''}${labelled ? ' watch--labelled' : ''}`}
       aria-pressed={watched}
-      aria-label={watched ? `Stop watching ${appName}` : `Watch ${appName}`}
+      aria-label={labelled ? undefined : watched ? `Stop watching ${appName}` : `Watch ${appName}`}
       title={watched ? 'Remove from your watchlist' : 'Add to your watchlist'}
       onClick={handleClick}
     >
-      <span
-        key={animation?.key ?? 'idle'}
-        class={`watch-button__star${
-          animation ? (animation.kind === 'add' ? ' watch-pop' : ' watch-dip') : ''
-        }`}
-      >
-        <StarIcon size={17} filled={watched} />
+      <span class="watch__star" ref={starRef}>
+        <StarIcon size={labelled ? 16 : 18} filled={watched} />
       </span>
-      {animation?.kind === 'add' ? (
-        <span class="watch-burst" key={`burst-${animation.key}`} aria-hidden="true">
-          {PARTICLES.map((angle, i) => (
-            <span
-              class="watch-burst__spark"
-              key={angle}
-              style={{ '--angle': `${angle + (i % 2) * 14}deg`, '--dist': `${16 + (i % 3) * 5}px` }}
-            />
-          ))}
-          <span class="watch-burst__ring" />
-        </span>
-      ) : null}
+      {labelled ? <span>{watched ? 'Watching' : 'Watch'}</span> : null}
     </button>
   );
 }

@@ -2,9 +2,10 @@
 
 interface IconProps {
   size?: number;
+  class?: string;
 }
 
-function base(size: number | undefined) {
+function base(size: number | undefined, className?: string) {
   return {
     width: size ?? 16,
     height: size ?? 16,
@@ -15,29 +16,38 @@ function base(size: number | undefined) {
     'stroke-linecap': 'round' as const,
     'stroke-linejoin': 'round' as const,
     'aria-hidden': true,
+    class: className,
   };
 }
 
-export function SearchIcon({ size }: IconProps) {
+export function SearchIcon({ size, class: c }: IconProps) {
   return (
-    <svg {...base(size)}>
+    <svg {...base(size, c)}>
       <circle cx="11" cy="11" r="7" />
       <path d="m20 20-3.8-3.8" />
     </svg>
   );
 }
 
-export function ChevronDownIcon({ size }: IconProps) {
+export function ChevronDownIcon({ size, class: c }: IconProps) {
   return (
-    <svg {...base(size)} class="chevron">
+    <svg {...base(size, c ?? 'chevron')}>
       <path d="m6 9 6 6 6-6" />
     </svg>
   );
 }
 
-export function PaletteIcon({ size }: IconProps) {
+export function ArrowRightIcon({ size, class: c }: IconProps) {
   return (
-    <svg {...base(size)}>
+    <svg {...base(size, c)}>
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+export function PaletteIcon({ size, class: c }: IconProps) {
+  return (
+    <svg {...base(size, c)}>
       <path d="M12 3a9 9 0 1 0 0 18h1.6a2.4 2.4 0 0 0 1.8-4 2.4 2.4 0 0 1 1.8-4H20a2 2 0 0 0 2-2c0-4.6-4.5-8-10-8Z" />
       <circle cx="7.5" cy="11.5" r="0.6" fill="currentColor" />
       <circle cx="10.5" cy="7.8" r="0.6" fill="currentColor" />
@@ -62,12 +72,10 @@ export function StarIcon({ size, filled = false }: IconProps & { filled?: boolea
   );
 }
 
-export function ExternalIcon({ size }: IconProps) {
+export function ExternalIcon({ size, class: c }: IconProps) {
   return (
-    <svg {...base(size)}>
-      <path d="M14 4h6v6" />
-      <path d="M20 4 10 14" />
-      <path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5" />
+    <svg {...base(size, c)}>
+      <path d="M7 17 17 7M8 7h9v9" />
     </svg>
   );
 }
@@ -97,9 +105,9 @@ export function CheckIcon({ size }: IconProps) {
   );
 }
 
-export function AlertIcon({ size }: IconProps) {
+export function AlertIcon({ size, class: c }: IconProps) {
   return (
-    <svg {...base(size)}>
+    <svg {...base(size, c)}>
       <path d="M12 3 2.5 20h19L12 3Z" />
       <path d="M12 10v4m0 3.5v.5" />
     </svg>
@@ -123,18 +131,37 @@ export function RefreshIcon({ size }: IconProps) {
   );
 }
 
+export function GridIcon({ size }: IconProps) {
+  return (
+    <svg {...base(size)}>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="2" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="2" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="2" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="2" />
+    </svg>
+  );
+}
+
+export function PulseIcon({ size }: IconProps) {
+  return (
+    <svg {...base(size)}>
+      <path d="M3 12h4l2.5-6 5 12L17 12h4" />
+    </svg>
+  );
+}
+
 /** The AppWatch mark: a watch/radar ring with a sweep, in the brand blue. */
 export function LogoIcon({ size = 26 }: IconProps) {
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden>
+    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden class="logo">
       <rect
         x="1.5"
         y="1.5"
         width="29"
         height="29"
-        rx="7.5"
+        rx="8"
         fill="none"
-        stroke="var(--logo-ring, #3b82d4)"
+        stroke="var(--logo-ring)"
         stroke-width="2"
       />
       <circle
@@ -142,17 +169,19 @@ export function LogoIcon({ size = 26 }: IconProps) {
         cy="16"
         r="8.5"
         fill="none"
-        stroke="var(--logo-ring, #3b82d4)"
+        stroke="var(--logo-ring)"
         stroke-width="2"
-        opacity="0.45"
+        opacity="0.4"
       />
       <path
+        class="logo__sweep"
         d="M16 7.5a8.5 8.5 0 0 1 8.5 8.5"
         fill="none"
-        stroke="var(--logo-ring, #3b82d4)"
+        stroke="var(--logo-ring)"
         stroke-width="2.5"
+        stroke-linecap="round"
       />
-      <circle cx="16" cy="16" r="2.6" fill="var(--logo-ring, #3b82d4)" />
+      <circle cx="16" cy="16" r="2.6" fill="var(--logo-ring)" />
     </svg>
   );
 }

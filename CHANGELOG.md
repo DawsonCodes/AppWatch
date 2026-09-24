@@ -9,6 +9,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Collections** as tabs — AI, Social, Messaging, Entertainment,
+  Productivity, Browsers & Privacy, Travel & Maps, Shopping & Money and
+  Learning & Fitness — defined in a new `apps.config.json` format where each
+  app is a name plus its App Store and/or Google Play link. The previous flat
+  `apps` array still parses (into an "Other" tab).
+- An **AI collection**: ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity,
+  DeepSeek and Character.AI, each on both stores (56 apps / 112 listings in
+  total; every previously tracked listing is kept with its history).
+- An **Updates** view: every recorded release, newest first, grouped by day,
+  with version changes and release notes, filtered like the grid.
+- One card per app across both stores, with the **App Store in blue** and
+  **Google Play in green** throughout, and a store switcher in the detail
+  panel.
+- Update detection for Google Play listings that publish no single version:
+  a newer store release date is recorded as an update (history entries may
+  now have `version: null`, unique by release date).
+- A rebuilt motion system on View Transitions, springs (CSS `linear()`) and
+  scroll-driven animations: cards glide between layouts, the app icon flies
+  into the detail panel, views slide in the direction of travel, themes reveal
+  in a circle from the theme button, tab indicators glide, and entrances
+  cascade — all removed under reduced motion.
+- Self-hosted Onest and Geist Mono typefaces.
+- Keyboard shortcut: `/` jumps to search; Back/Forward open and close the
+  detail panel.
+
 - Three complete, user-selectable themes — **Gray Dark**, **Light** and
   **MS Paint** — driven by a token-based CSS architecture, chosen through an
   accessible dropdown, persisted locally, with the OS preference deciding the
@@ -36,6 +61,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   statistic cards.
 
 ### Changed
+
+- Complete visual redesign of every surface: header, hero, controls, cards,
+  detail panel (side panel on wide screens, bottom sheet on phones), insights,
+  empty states, toasts and footer, across all three themes.
+- Removing a browser-local watch can be undone from the confirmation toast.
+- The copyable config snippet for local watches now matches the collections
+  format.
+- GitHub Actions updated to checkout v7, setup-node v7, configure-pages v6,
+  upload-pages-artifact v5, deploy-pages v5, upload-artifact v7 and
+  download-artifact v8; npm dependencies updated to their latest compatible
+  releases (folds in the open Dependabot updates).
 
 - Complete interface redesign: quieter handcrafted look, compact header with a
   check-health chip, new wordmark ("App" neutral / "Watch" blue, no gradients

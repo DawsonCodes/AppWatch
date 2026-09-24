@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   appendHistory,
   hasMeaningfulChange,
+  isDateOnlyUpdate,
   mergeFailure,
   mergeSnapshot,
 } from '../scripts/lib/merge.ts';
@@ -53,9 +54,26 @@ describe('mergeSnapshot — first check', () => {
     ]);
   });
 
-  it('starts with empty history when the store reports no version', () => {
+  it('records a version-less listing by its release date', () => {
     const { record, history } = mergeSnapshot(undefined, [], { ...snapshot, version: null }, NOW);
     expect(record.currentVersion).toBeNull();
+    expect(history).toEqual([
+      {
+        version: null,
+        releaseDate: snapshot.releaseDate,
+        releaseNotes: 'Initial release',
+        detectedAt: NOW,
+      },
+    ]);
+  });
+
+  it('starts with empty history when neither a version nor a release date exists', () => {
+    const { history } = mergeSnapshot(
+      undefined,
+      [],
+      { ...snapshot, version: null, releaseDate: null },
+      NOW,
+    );
     expect(history).toEqual([]);
   });
 });
@@ -135,6 +153,71 @@ describe('mergeSnapshot — updates', () => {
   });
 });
 
+describe('version-less listings (Google Play "Varies with device")', () => {
+  const noVersion: AppSnapshot = {
+    ...snapshot,
+    platform: 'google',
+    storeId: 'com.example',
+    version: null,
+    releaseDate: '2026-09-20T10:00:00.000Z',
+    releaseNotes: 'Old notes',
+  };
+  const base = mergeSnapshot(undefined, [], noVersion, NOW);
+
+  it('detects an update when the store release date moves forward', () => {
+    const next = { ...noVersion, releaseDate: '2026-09-23T08:00:00.000Z', releaseNotes: 'New' };
+    const { record, history, outcome } = mergeSnapshot(base.record, base.history, next, LATER);
+    expect(outcome).toBe('updated');
+    expect(record.updateDetected).toBe(true);
+    expect(record.lastUpdatedAt).toBe(LATER);
+    expect(record.currentVersion).toBeNull();
+    expect(record.previousVersion).toBeNull(); // never invented
+    expect(record.releaseNotes).toBe('New');
+    expect(history.map((h) => h.releaseDate)).toEqual([
+      '2026-09-23T08:00:00.000Z',
+      '2026-09-20T10:00:00.000Z',
+    ]);
+    expect(history[0]?.version).toBeNull();
+  });
+
+  it('ignores an unchanged or backwards release date', () => {
+    const same = mergeSnapshot(base.record, base.history, noVersion, LATER);
+    expect(same.outcome).toBe('unchanged');
+    expect(same.history).toHaveLength(1);
+    const older = mergeSnapshot(
+      base.record,
+      base.history,
+      { ...noVersion, releaseDate: '2026-09-01T00:00:00.000Z' },
+      LATER,
+    );
+    expect(older.outcome).toBe('unchanged');
+    expect(older.record.updateDetected).toBe(false);
+  });
+
+  it('backfills the current release for listings tracked before this detection existed', () => {
+    // Existing data: record with no version and an empty history.
+    const { history, outcome } = mergeSnapshot(base.record, [], noVersion, LATER);
+    expect(outcome).toBe('unchanged');
+    expect(history).toEqual([
+      {
+        version: null,
+        releaseDate: '2026-09-20T10:00:00.000Z',
+        releaseNotes: 'Old notes',
+        detectedAt: LATER,
+      },
+    ]);
+  });
+
+  it('never treats a version change as date-only', () => {
+    expect(
+      isDateOnlyUpdate(
+        { currentVersion: '1.0', releaseDate: '2026-09-01T00:00:00.000Z' },
+        { version: null, releaseDate: '2026-09-02T00:00:00.000Z' },
+      ),
+    ).toBe(false);
+  });
+});
+
 describe('appendHistory', () => {
   it('prepends new versions and rejects duplicates', () => {
     const entry = { version: '1.0', releaseDate: null, releaseNotes: null, detectedAt: NOW };
@@ -143,6 +226,18 @@ describe('appendHistory', () => {
     expect(appendHistory(one, { ...entry, detectedAt: LATER })).toBe(one);
     const two = appendHistory(one, { ...entry, version: '1.1' });
     expect(two.map((h) => h.version)).toEqual(['1.1', '1.0']);
+  });
+
+  it('dedupes version-less entries by release date and skips unidentifiable ones', () => {
+    const dated = {
+      version: null,
+      releaseDate: '2026-09-20T00:00:00.000Z',
+      releaseNotes: null,
+      detectedAt: NOW,
+    };
+    const one = appendHistory([], dated);
+    expect(appendHistory(one, { ...dated, detectedAt: LATER })).toBe(one);
+    expect(appendHistory([], { ...dated, releaseDate: null })).toEqual([]);
   });
 });
 

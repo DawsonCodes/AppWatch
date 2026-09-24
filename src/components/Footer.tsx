@@ -21,24 +21,33 @@ export function Footer() {
           <span class="paint-palette__chip" key={color} style={{ background: color }} />
         ))}
       </div>
-      <p>© 2026 DawsonCodes. Released under the MIT License.</p>
-      <p class="site-footer__privacy">
-        No analytics, no cookies, no accounts. Your watchlist, local watches and theme choice stay
-        in this browser.
-      </p>
-      <p>
-        <a href="https://github.com/DawsonCodes/AppWatch" target="_blank" rel="noopener noreferrer">
-          Source on GitHub
-        </a>
-        {' · '}
-        <a
-          href="https://github.com/DawsonCodes/AppWatch/issues"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Report an issue
-        </a>
-      </p>
+      <div class="site-footer__inner">
+        <p class="site-footer__brand">
+          <span class="brand__app">App</span>
+          <span class="brand__watch">Watch</span>
+          <span class="site-footer__copy">© 2026 DawsonCodes · MIT License</span>
+        </p>
+        <p class="site-footer__privacy">
+          No analytics, no cookies, no accounts. Your watchlist, local watches and theme stay in
+          this browser. Store data is checked every two hours — not in real time.
+        </p>
+        <p class="site-footer__links">
+          <a
+            href="https://github.com/DawsonCodes/AppWatch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source on GitHub
+          </a>
+          <a
+            href="https://github.com/DawsonCodes/AppWatch/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Report an issue
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }

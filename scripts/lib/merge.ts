@@ -11,7 +11,7 @@ import type {
   Platform,
   VersionHistoryEntry,
 } from '../../src/shared/types.ts';
-import { appId } from '../../src/shared/types.ts';
+import { appId, historyEntryKey } from '../../src/shared/types.ts';
 import { isVersionChange } from '../../src/shared/version.ts';
 import type { AppSnapshot } from './providers/types.ts';
 
@@ -24,15 +24,37 @@ export interface MergeResult {
   outcome: MergeOutcome;
 }
 
-/** Prepend a history entry unless that version is already recorded. */
+/**
+ * Prepend a history entry unless that release is already recorded (matched
+ * by version, or by release date for version-less listings). Entries with
+ * neither a version nor a release date cannot be identified and are skipped.
+ */
 export function appendHistory(
   history: VersionHistoryEntry[],
   entry: VersionHistoryEntry,
 ): VersionHistoryEntry[] {
-  if (history.some((existing) => existing.version === entry.version)) {
+  const key = historyEntryKey(entry);
+  if (key === null || history.some((existing) => historyEntryKey(existing) === key)) {
     return history;
   }
   return [entry, ...history];
+}
+
+/**
+ * Some listings publish no single version (Google Play reports "Varies with
+ * device" for many large apps). For those, a newer store release date is the
+ * only reliable signal of an update. Only forward moves count, so a store
+ * briefly reporting an older date can never fabricate an update.
+ */
+export function isDateOnlyUpdate(
+  previous: Pick<AppRecord, 'currentVersion' | 'releaseDate'>,
+  snapshot: Pick<AppSnapshot, 'version' | 'releaseDate'>,
+): boolean {
+  if (previous.currentVersion || snapshot.version) return false;
+  if (!previous.releaseDate || !snapshot.releaseDate) return false;
+  const before = Date.parse(previous.releaseDate);
+  const after = Date.parse(snapshot.releaseDate);
+  return !Number.isNaN(before) && !Number.isNaN(after) && after > before;
 }
 
 /** Merge a successful store fetch with the previous record (if any). */
@@ -46,16 +68,12 @@ export function mergeSnapshot(
 
   if (!previous) {
     // First successful check: history begins from this snapshot.
-    const history: VersionHistoryEntry[] = snapshot.version
-      ? [
-          {
-            version: snapshot.version,
-            releaseDate: snapshot.releaseDate,
-            releaseNotes: snapshot.releaseNotes,
-            detectedAt: now,
-          },
-        ]
-      : [];
+    const history = appendHistory([], {
+      version: snapshot.version,
+      releaseDate: snapshot.releaseDate,
+      releaseNotes: snapshot.releaseNotes,
+      detectedAt: now,
+    });
     return {
       record: {
         id,
@@ -91,15 +109,13 @@ export function mergeSnapshot(
   }
 
   const versionChanged = isVersionChange(previous.currentVersion, snapshot.version);
-  let history = previousHistory;
-  if (snapshot.version) {
-    history = appendHistory(previousHistory, {
-      version: snapshot.version,
-      releaseDate: snapshot.releaseDate,
-      releaseNotes: snapshot.releaseNotes,
-      detectedAt: now,
-    });
-  }
+  const updated = versionChanged || isDateOnlyUpdate(previous, snapshot);
+  const history = appendHistory(previousHistory, {
+    version: snapshot.version,
+    releaseDate: snapshot.releaseDate,
+    releaseNotes: snapshot.releaseNotes,
+    detectedAt: now,
+  });
 
   return {
     record: {
@@ -111,7 +127,7 @@ export function mergeSnapshot(
       currentVersion: snapshot.version ?? previous.currentVersion,
       previousVersion: versionChanged ? previous.currentVersion : previous.previousVersion,
       releaseDate: snapshot.releaseDate ?? (versionChanged ? null : previous.releaseDate),
-      releaseNotes: snapshot.releaseNotes ?? (versionChanged ? null : previous.releaseNotes),
+      releaseNotes: snapshot.releaseNotes ?? (updated ? null : previous.releaseNotes),
       category: snapshot.category ?? previous.category,
       bundleId: snapshot.bundleId ?? previous.bundleId,
       price: snapshot.price ?? previous.price ?? null,
@@ -122,13 +138,13 @@ export function mergeSnapshot(
       ratingCount: snapshot.ratingCount ?? previous.ratingCount ?? null,
       developerWebsite: snapshot.developerWebsite ?? previous.developerWebsite ?? null,
       lastCheckedAt: now,
-      lastUpdatedAt: versionChanged ? now : previous.lastUpdatedAt,
+      lastUpdatedAt: updated ? now : previous.lastUpdatedAt,
       checkStatus: 'ok',
       checkError: null,
-      updateDetected: versionChanged,
+      updateDetected: updated,
     },
     history,
-    outcome: versionChanged ? 'updated' : 'unchanged',
+    outcome: updated ? 'updated' : 'unchanged',
   };
 }
 

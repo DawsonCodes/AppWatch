@@ -13,14 +13,30 @@ export type CheckStatus = 'ok' | 'error' | 'pending';
 
 /** One recorded release of an app, captured at the moment AppWatch detected it. */
 export interface VersionHistoryEntry {
-  /** Version string as reported by the store. */
-  version: string;
+  /**
+   * Version string as reported by the store, or null for listings that
+   * publish no single version (Google Play's "Varies with device"). Such
+   * releases are identified by their release date instead.
+   */
+  version: string | null;
   /** Release date reported by the store at detection time (ISO 8601), if available. */
   releaseDate: string | null;
   /** Release notes available at detection time, plain text. */
   releaseNotes: string | null;
-  /** When AppWatch first saw this version (ISO 8601). */
+  /** When AppWatch first saw this release (ISO 8601). */
   detectedAt: string;
+}
+
+/**
+ * Identity of a history entry: its version, or for version-less listings its
+ * release date. Null when neither is known (such a release cannot be told
+ * apart from others and is never recorded).
+ */
+export function historyEntryKey(
+  entry: Pick<VersionHistoryEntry, 'version' | 'releaseDate'>,
+): string | null {
+  if (entry.version) return entry.version;
+  return entry.releaseDate ? `released:${entry.releaseDate}` : null;
 }
 
 /** A normalized, store-agnostic app record. */

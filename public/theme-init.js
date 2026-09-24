@@ -28,7 +28,7 @@
     theme = prefersLight ? 'light' : 'gray-dark';
   }
   document.documentElement.setAttribute('data-theme', theme);
-  var colors = { 'gray-dark': '#17191d', light: '#f4f5f7', 'ms-paint': '#c0c0c0' };
+  var colors = { 'gray-dark': '#131518', light: '#f4f5f7', 'ms-paint': '#c0c0c0' };
   var meta = document.querySelector('meta[name="theme-color"]');
   if (meta && colors[theme]) meta.setAttribute('content', colors[theme]);
 })();

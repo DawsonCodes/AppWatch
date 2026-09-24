@@ -5,6 +5,7 @@
  */
 
 import type { AppsFile, HistoryFile, StatusFile } from './types.ts';
+import { historyEntryKey } from './types.ts';
 
 type Path = string;
 
@@ -65,7 +66,14 @@ function checkHistoryEntry(errors: string[], value: unknown, path: Path): void {
     errors.push(`${path}: expected object`);
     return;
   }
-  checkString(errors, value.version, `${path}.version`);
+  if (value.version === null) {
+    // Version-less releases are identified by their release date.
+    if (!isIsoDate(value.releaseDate)) {
+      errors.push(`${path}.releaseDate: required when version is null`);
+    }
+  } else {
+    checkString(errors, value.version, `${path}.version`);
+  }
   checkNullableIso(errors, value.releaseDate, `${path}.releaseDate`);
   checkNullableString(errors, value.releaseNotes, `${path}.releaseNotes`);
   if (!isIsoDate(value.detectedAt)) {
@@ -159,15 +167,21 @@ export function validateHistoryFile(value: unknown): string[] {
       errors.push(`entries["${id}"]: expected array`);
       continue;
     }
-    const versions = new Set<string>();
+    const keys = new Set<string>();
     list.forEach((entry, i) => {
       checkHistoryEntry(errors, entry, `entries["${id}"][${i}]`);
-      if (isRecord(entry) && typeof entry.version === 'string') {
-        if (versions.has(entry.version)) {
-          errors.push(`entries["${id}"][${i}]: duplicate version "${entry.version}"`);
-        }
-        versions.add(entry.version);
+      if (!isRecord(entry)) return;
+      const key = historyEntryKey({
+        version: typeof entry.version === 'string' ? entry.version : null,
+        releaseDate: typeof entry.releaseDate === 'string' ? entry.releaseDate : null,
+      });
+      if (key === null) return;
+      if (keys.has(key)) {
+        errors.push(
+          `entries["${id}"][${i}]: duplicate ${entry.version ? `version "${key}"` : `release ${key}`}`,
+        );
       }
+      keys.add(key);
     });
   }
   return errors;
