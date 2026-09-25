@@ -476,6 +476,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-09-25T03:47:32.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-09-25T11:50:53.730Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-18T18:23:09.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-09-24T23:12:54.522Z"
