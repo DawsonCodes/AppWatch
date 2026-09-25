@@ -386,6 +386,12 @@
     "google:org.telegram.messenger": [
       {
         "version": null,
+        "releaseDate": "2026-09-25T14:37:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-25T21:35:14.477Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-22T21:15:42.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-09-24T23:12:54.522Z"
@@ -466,6 +472,12 @@
     "google:com.spotify.music": [
       {
         "version": null,
+        "releaseDate": "2026-09-25T08:00:14.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-09-25T21:35:14.477Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-18T07:51:07.000Z",
         "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
         "detectedAt": "2026-09-24T23:12:54.522Z"
@@ -502,6 +514,12 @@
       }
     ],
     "google:com.shazam.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-25T17:17:57.000Z",
+        "releaseNotes": "You can now choose how Shazam listens when wired or wireless headphones are connected for even more accurate results. Select the Headphones icon to identify music playing in your favorite apps, including TikTok, Instagram, and YouTube.",
+        "detectedAt": "2026-09-25T21:35:14.477Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-20T17:39:46.000Z",
@@ -976,6 +994,12 @@
       }
     ],
     "google:com.dd.doordash": [
+      {
+        "version": "15.294.2",
+        "releaseDate": "2026-09-22T08:01:04.000Z",
+        "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
+        "detectedAt": "2026-09-25T21:35:14.477Z"
+      },
       {
         "version": "15.293.0",
         "releaseDate": "2026-09-22T08:01:04.000Z",
