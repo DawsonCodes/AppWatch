@@ -705,6 +705,12 @@
     ],
     "apple:327630330": [
       {
+        "version": "492.2.2",
+        "releaseDate": "2026-09-26T06:47:46.000Z",
+        "releaseNotes": "We release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
+        "detectedAt": "2026-09-26T13:05:45.452Z"
+      },
+      {
         "version": "490.2",
         "releaseDate": "2026-09-14T17:35:06.000Z",
         "releaseNotes": "We release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
