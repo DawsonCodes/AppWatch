@@ -190,6 +190,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-09-26T00:36:21.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-09-26T17:45:35.823Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-25T03:50:18.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-09-25T17:11:22.335Z"
@@ -938,6 +944,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-09-25T13:30:35.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-09-26T17:45:35.823Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-23T18:27:04.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-09-24T23:12:54.522Z"
@@ -1038,6 +1050,12 @@
       }
     ],
     "google:com.ebay.mobile": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-26T00:14:26.000Z",
+        "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
+        "detectedAt": "2026-09-26T17:45:35.823Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-17T22:04:02.000Z",
