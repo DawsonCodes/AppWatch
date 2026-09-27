@@ -11,6 +11,12 @@
     ],
     "google:com.openai.chatgpt": [
       {
+        "version": "1.2026.265",
+        "releaseDate": "2026-09-25T19:59:56.000Z",
+        "releaseNotes": "Minor fixes and improvements",
+        "detectedAt": "2026-09-27T18:24:09.757Z"
+      },
+      {
         "version": "1.2026.258",
         "releaseDate": "2026-09-20T17:18:36.000Z",
         "releaseNotes": null,
