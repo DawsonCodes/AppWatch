@@ -151,6 +151,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.29.1-prod.01",
+        "releaseDate": "2026-09-25T20:08:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-27T13:58:23.385Z"
+      },
+      {
         "version": "12.28.0-prod.01",
         "releaseDate": "2026-09-22T00:09:13.000Z",
         "releaseNotes": null,
@@ -188,6 +194,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-27T07:43:14.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-09-27T13:58:23.385Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-26T00:36:21.000Z",
@@ -963,6 +975,12 @@
     ],
     "apple:323229106": [
       {
+        "version": "5.24.5.1",
+        "releaseDate": "2026-09-27T09:34:16.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.",
+        "detectedAt": "2026-09-27T13:58:23.385Z"
+      },
+      {
         "version": "5.24.0.1",
         "releaseDate": "2026-09-16T11:50:21.000Z",
         "releaseNotes": "This version includes several bug fixes and performance improvements.",
@@ -970,6 +988,12 @@
       }
     ],
     "google:com.waze": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-23T07:15:14.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.",
+        "detectedAt": "2026-09-27T13:58:23.385Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-15T20:10:19.000Z",
