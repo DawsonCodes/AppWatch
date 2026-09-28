@@ -191,6 +191,12 @@
     ],
     "google:com.instagram.barcelona": [
       {
+        "version": "448.0.0.54.85",
+        "releaseDate": "2026-09-21T20:35:50.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-09-28T13:54:40.191Z"
+      },
+      {
         "version": "447.0.0.54.81",
         "releaseDate": "2026-09-21T20:35:50.000Z",
         "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
