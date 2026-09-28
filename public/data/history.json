@@ -132,6 +132,12 @@
     "google:com.instagram.android": [
       {
         "version": null,
+        "releaseDate": "2026-09-28T13:56:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-21T13:00:15.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-09-24T23:12:54.522Z"
@@ -183,6 +189,12 @@
     ],
     "apple:6446901002": [
       {
+        "version": "449.0",
+        "releaseDate": "2026-09-28T12:23:02.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "448.0",
         "releaseDate": "2026-09-21T15:10:31.000Z",
         "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
@@ -204,6 +216,12 @@
       }
     ],
     "apple:544007664": [
+      {
+        "version": "21.39.4",
+        "releaseDate": "2026-09-28T09:20:05.000Z",
+        "releaseNotes": "Fixed bugs, improved performance, explored the edges of the known universe.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "21.38.3",
         "releaseDate": "2026-09-25T22:57:58.000Z",
@@ -299,6 +317,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.576",
+        "releaseDate": "2026-09-28T19:03:15.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "9.1.575",
         "releaseDate": "2026-09-24T17:01:15.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -320,6 +344,12 @@
       }
     ],
     "apple:310633997": [
+      {
+        "version": "26.38.74",
+        "releaseDate": "2026-09-28T15:54:35.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "26.37.76",
         "releaseDate": "2026-09-23T13:45:17.000Z",
@@ -392,6 +422,12 @@
       }
     ],
     "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.28.4",
+        "releaseDate": "2026-09-23T21:40:39.000Z",
+        "releaseNotes": "★ The media editor has been completely redesigned to better support tablets and foldable devices, and now it looks great on screens of all sizes.\n★ The new media editor also supports removing the audio track from a video before you send it. If the pastoral slow-panorama footage from your vacation to Scotland was partially ruined by the sound of wandering sheep, with just one tap your movie can become the silence of the lambs.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "8.27.1",
         "releaseDate": "2026-09-23T21:40:39.000Z",
@@ -473,6 +509,12 @@
     ],
     "google:com.facebook.orca": [
       {
+        "version": "580.0.0.49.91",
+        "releaseDate": "2026-09-22T14:55:23.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "579.0.0.61.91",
         "releaseDate": "2026-09-22T14:55:23.000Z",
         "releaseNotes": null,
@@ -480,6 +522,12 @@
       }
     ],
     "apple:985746746": [
+      {
+        "version": "347.0",
+        "releaseDate": "2026-09-28T19:52:03.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "346.0",
         "releaseDate": "2026-09-21T16:07:45.000Z",
@@ -496,6 +544,12 @@
       }
     ],
     "apple:363590051": [
+      {
+        "version": "18.51.0",
+        "releaseDate": "2026-09-28T14:09:43.000Z",
+        "releaseNotes": "Keep your app updated to get the latest Netflix experience on your iPhone and iPad.\n\nWe know you have choices. In this release, we made gallery improvements so it’s easier to find the perfect thing to watch.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "18.50.0",
         "releaseDate": "2026-09-21T16:11:28.000Z",
@@ -550,6 +604,12 @@
       }
     ],
     "apple:460177396": [
+      {
+        "version": "31.4",
+        "releaseDate": "2026-09-28T18:40:18.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "31.3.4",
         "releaseDate": "2026-09-25T17:37:28.000Z",
@@ -639,6 +699,12 @@
     ],
     "apple:422689480": [
       {
+        "version": "6.0.260921",
+        "releaseDate": "2026-09-28T17:42:54.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "6.0.260914",
         "releaseDate": "2026-09-21T17:18:45.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -654,6 +720,12 @@
       }
     ],
     "apple:951937596": [
+      {
+        "version": "5.2637.2",
+        "releaseDate": "2026-09-28T12:00:14.000Z",
+        "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "5.2637.1",
         "releaseDate": "2026-09-25T14:23:32.000Z",
@@ -720,6 +792,12 @@
       }
     ],
     "apple:546505307": [
+      {
+        "version": "7.2.1",
+        "releaseDate": "2026-09-28T16:44:55.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "7.2.0",
         "releaseDate": "2026-09-19T08:19:12.000Z",
@@ -941,6 +1019,12 @@
     ],
     "apple:663592361": [
       {
+        "version": "7.239.0",
+        "releaseDate": "2026-09-28T13:05:28.000Z",
+        "releaseNotes": "• Bug fixes and other improvements.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "7.238.0",
         "releaseDate": "2026-09-21T10:15:16.000Z",
         "releaseNotes": "• Bug fixes and other improvements.",
@@ -962,6 +1046,12 @@
       }
     ],
     "apple:979659905": [
+      {
+        "version": "7.11.6",
+        "releaseDate": "2026-09-28T14:50:29.000Z",
+        "releaseNotes": "Scrolling through emails now takes just one finger instead of two.\nFixed text appearing too small in some emails.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "7.11.5",
         "releaseDate": "2026-08-28T08:39:01.000Z",
@@ -1079,6 +1169,12 @@
     ],
     "apple:529379082": [
       {
+        "version": "2026.37.3",
+        "releaseDate": "2026-09-28T18:32:39.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "2026.36.3",
         "releaseDate": "2026-09-21T19:21:19.000Z",
         "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
@@ -1167,6 +1263,12 @@
     ],
     "apple:719972451": [
       {
+        "version": "8.38.0",
+        "releaseDate": "2026-09-28T05:01:01.000Z",
+        "releaseNotes": "Minor updates and performance improvements",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "8.37.0",
         "releaseDate": "2026-09-21T05:00:14.000Z",
         "releaseNotes": "Minor updates and performance improvements",
@@ -1188,6 +1290,12 @@
       }
     ],
     "apple:283646709": [
+      {
+        "version": "10.5.1",
+        "releaseDate": "2026-09-28T15:03:37.000Z",
+        "releaseNotes": "Get the latest update. The new PayPal app that you know and love, now made simpler, faster and easier to use. Continue to shop, pay, earn rewards, and manage your money. All in one place.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "10.4.0",
         "releaseDate": "2026-09-21T15:22:10.000Z",
@@ -1227,6 +1335,12 @@
     ],
     "apple:711923939": [
       {
+        "version": "5.71.0",
+        "releaseDate": "2026-09-28T19:19:36.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
+      {
         "version": "5.70.0",
         "releaseDate": "2026-09-21T16:07:58.000Z",
         "releaseNotes": "Bug Fixes and Improvements",
@@ -1242,6 +1356,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.142.0",
+        "releaseDate": "2026-09-28T17:42:01.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-09-28T20:33:49.136Z"
+      },
       {
         "version": "7.141.1",
         "releaseDate": "2026-09-23T13:42:13.000Z",
