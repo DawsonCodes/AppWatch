@@ -85,6 +85,12 @@
     ],
     "apple:6737597349": [
       {
+        "version": "2.6.0",
+        "releaseDate": "2026-09-27T15:12:45.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
+      {
         "version": "2.5.2",
         "releaseDate": "2026-09-20T05:21:53.000Z",
         "releaseNotes": "- Fixed some known issues",
@@ -148,6 +154,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.30",
+        "releaseDate": "2026-09-27T15:48:38.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
       {
         "version": "12.29",
         "releaseDate": "2026-09-24T15:01:26.000Z",
@@ -719,6 +731,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.342",
+        "releaseDate": "2026-09-27T15:56:16.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
+      {
         "version": "1.7.341",
         "releaseDate": "2026-09-24T17:52:51.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -765,6 +783,12 @@
     ],
     "google:com.canva.editor": [
       {
+        "version": "2.379.0",
+        "releaseDate": "2026-09-23T07:37:31.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
+      {
         "version": "2.378.0",
         "releaseDate": "2026-09-23T07:37:31.000Z",
         "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes.\n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
@@ -772,6 +796,12 @@
       }
     ],
     "apple:989804926": [
+      {
+        "version": "157.0",
+        "releaseDate": "2026-09-28T02:01:47.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
       {
         "version": "156.1",
         "releaseDate": "2026-09-21T02:11:17.000Z",
@@ -891,6 +921,12 @@
     ],
     "google:com.brave.browser": [
       {
+        "version": "1.96.59",
+        "releaseDate": "2026-09-24T23:28:52.000Z",
+        "releaseNotes": "In this release we:\n- Introduced a setting to disable tab groups, making it easier to customize your browser. This can be found at settings → tabs and tab groups. Initially this will not be available to all users. It will be rolled out in phases.\n- Made further improvements to picture-in-picture video playback.\n- Made several look and feel design improvements.\n- Upgraded to Chromium 154.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
+      {
         "version": "1.95.104",
         "releaseDate": "2026-09-18T17:50:11.000Z",
         "releaseNotes": "In this release we:\n- Introduced support for dynamic colors. When enabled the color scheme in Brave will match the Android system color palette. This can be found at settings → appearance.\n- Improved our rating prompts. You can now opt-out of future prompts.\n- Made several improvements to large screen layouts.\n- Made several general stability improvements.\n- Upgraded to Chromium 153.",
@@ -1009,6 +1045,12 @@
     ],
     "apple:368677368": [
       {
+        "version": "3.741.10001",
+        "releaseDate": "2026-09-28T01:43:25.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
+      {
         "version": "3.740.10001",
         "releaseDate": "2026-09-21T00:05:20.000Z",
         "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
@@ -1016,6 +1058,12 @@
       }
     ],
     "google:com.ubercab": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-25T20:07:21.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to help make it faster and more reliable for you. This version includes several bug fixes and performance improvements.\n\nLove the app? Rate us! Your feedback helps us to improve the Uber app.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-18T16:50:55.000Z",
@@ -1056,6 +1104,12 @@
       }
     ],
     "apple:297606951": [
+      {
+        "version": "27.17.4",
+        "releaseDate": "2026-09-27T17:47:50.000Z",
+        "releaseNotes": "Our new design provides easier access to the features you use most while on the go. This includes the homepage, account and order information, your cart and the ability to browse and discover Amazon departments, products, programs, and features.",
+        "detectedAt": "2026-09-28T05:23:55.546Z"
+      },
       {
         "version": "27.16.0",
         "releaseDate": "2026-09-14T22:04:22.000Z",
