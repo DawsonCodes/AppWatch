@@ -211,6 +211,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.30.0-prod.01",
+        "releaseDate": "2026-09-28T22:42:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-29T22:15:09.573Z"
+      },
+      {
         "version": "12.29.1-prod.01",
         "releaseDate": "2026-09-25T20:08:34.000Z",
         "releaseNotes": null,
@@ -591,6 +597,12 @@
     ],
     "google:com.discord": [
       {
+        "version": "347.12 - Stable",
+        "releaseDate": "2026-09-25T22:08:29.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-09-29T22:15:09.573Z"
+      },
+      {
         "version": "346.13 - Stable",
         "releaseDate": "2026-09-18T22:33:00.000Z",
         "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
@@ -612,6 +624,12 @@
       }
     ],
     "google:com.netflix.mediaclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-29T17:36:15.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-09-29T22:15:09.573Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-22T19:31:48.000Z",
@@ -792,6 +810,12 @@
       }
     ],
     "apple:951937596": [
+      {
+        "version": "5.2638.0",
+        "releaseDate": "2026-09-29T15:23:08.000Z",
+        "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
+        "detectedAt": "2026-09-29T22:15:09.573Z"
+      },
       {
         "version": "5.2637.2",
         "releaseDate": "2026-09-28T12:00:14.000Z",
@@ -1074,6 +1098,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-09-29T17:34:41.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-09-29T22:15:09.573Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-23T17:57:24.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-09-24T23:12:54.522Z"
@@ -1258,6 +1288,12 @@
       }
     ],
     "apple:529379082": [
+      {
+        "version": "2026.37.31",
+        "releaseDate": "2026-09-29T16:11:34.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-09-29T22:15:09.573Z"
+      },
       {
         "version": "2026.37.3",
         "releaseDate": "2026-09-28T18:32:39.000Z",
