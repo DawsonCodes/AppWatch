@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.265",
+        "releaseDate": "2026-09-29T01:41:15.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
+      {
         "version": "1.2026.258",
         "releaseDate": "2026-09-23T09:36:36.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -54,6 +60,12 @@
       }
     ],
     "google:ai.x.grok": [
+      {
+        "version": "1.2.40-release.01",
+        "releaseDate": "2026-09-28T17:31:49.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
       {
         "version": "1.2.39-release.02",
         "releaseDate": "2026-09-25T00:46:04.000Z",
@@ -279,6 +291,12 @@
     ],
     "apple:1064216828": [
       {
+        "version": "2026.39.0",
+        "releaseDate": "2026-09-28T20:42:58.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
+      {
         "version": "2026.38.0",
         "releaseDate": "2026-09-22T15:47:58.000Z",
         "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
@@ -286,6 +304,12 @@
       }
     ],
     "google:com.reddit.frontpage": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-28T19:30:19.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our Android app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-21T17:39:09.000Z",
@@ -308,6 +332,12 @@
       }
     ],
     "google:com.pinterest": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-28T19:10:08.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-21T23:38:37.000Z",
@@ -683,6 +713,12 @@
     ],
     "apple:431946152": [
       {
+        "version": "2.740.927",
+        "releaseDate": "2026-09-28T23:26:10.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
+      {
         "version": "2.739.687",
         "releaseDate": "2026-09-16T17:28:39.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
@@ -828,6 +864,12 @@
       }
     ],
     "google:notion.id": [
+      {
+        "version": "0.6.4188",
+        "releaseDate": "2026-09-28T21:05:25.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-29T01:57:22.448Z"
+      },
       {
         "version": "0.6.4176",
         "releaseDate": "2026-09-24T01:47:26.000Z",
