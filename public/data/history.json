@@ -89,6 +89,12 @@
     ],
     "google:ai.perplexity.app.android": [
       {
+        "version": "2.100.0",
+        "releaseDate": "2026-09-28T13:26:05.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-29T08:30:26.444Z"
+      },
+      {
         "version": "2.99.0",
         "releaseDate": "2026-09-17T22:19:29.000Z",
         "releaseNotes": null,
@@ -656,6 +662,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-09-29T05:52:39.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-09-29T08:30:26.444Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-25T23:24:32.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-09-26T07:41:07.337Z"
@@ -748,6 +760,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-28T23:54:51.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-09-29T08:30:26.444Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-24T16:41:18.000Z",
