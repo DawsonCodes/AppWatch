@@ -81,6 +81,12 @@
     ],
     "apple:1668000334": [
       {
+        "version": "26.38.0",
+        "releaseDate": "2026-09-29T02:30:35.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
+      {
         "version": "26.37.0",
         "releaseDate": "2026-09-18T04:34:59.000Z",
         "releaseNotes": "Bug fixes and improvements.",
@@ -103,6 +109,12 @@
     ],
     "apple:6737597349": [
       {
+        "version": "2.6.1",
+        "releaseDate": "2026-09-29T13:48:13.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
+      {
         "version": "2.6.0",
         "releaseDate": "2026-09-27T15:12:45.000Z",
         "releaseNotes": "- Fixed some known issues",
@@ -116,6 +128,12 @@
       }
     ],
     "google:com.deepseek.chat": [
+      {
+        "version": "2.6.0",
+        "releaseDate": "2026-09-29T12:27:05.000Z",
+        "releaseNotes": "- New model update: Instant, Expert, and Vision modes are now unified\n- Thinking process now collapses automatically\n- Fixed some known issues",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
       {
         "version": "2.5.3",
         "releaseDate": "2026-09-17T13:43:09.000Z",
@@ -869,6 +887,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.343",
+        "releaseDate": "2026-09-29T15:16:18.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
+      {
         "version": "1.7.342",
         "releaseDate": "2026-09-27T15:56:16.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -1160,6 +1184,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-09-29T13:01:45.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-25T13:30:35.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-09-26T17:45:35.823Z"
@@ -1379,6 +1409,12 @@
     ],
     "apple:351727428": [
       {
+        "version": "26.21.0",
+        "releaseDate": "2026-09-29T02:12:35.000Z",
+        "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
+      {
         "version": "26.20.0",
         "releaseDate": "2026-09-16T23:32:10.000Z",
         "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
@@ -1484,6 +1520,12 @@
       }
     ],
     "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-28T17:24:39.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-09-29T16:31:17.224Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-23T13:49:02.000Z",
