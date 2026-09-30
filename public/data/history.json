@@ -129,6 +129,12 @@
     ],
     "google:com.deepseek.chat": [
       {
+        "version": "2.6.1",
+        "releaseDate": "2026-09-30T07:32:10.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-09-30T08:34:06.795Z"
+      },
+      {
         "version": "2.6.0",
         "releaseDate": "2026-09-29T12:27:05.000Z",
         "releaseNotes": "- New model update: Instant, Expert, and Vision modes are now unified\n- Thinking process now collapses automatically\n- Fixed some known issues",
@@ -390,6 +396,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1254",
+        "releaseDate": "2026-09-28T17:50:26.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-09-30T08:34:06.795Z"
+      },
       {
         "version": "4.1.1252.1",
         "releaseDate": "2026-09-23T22:54:35.000Z",
@@ -1324,6 +1336,12 @@
       }
     ],
     "google:com.airbnb.android": [
+      {
+        "version": "26.39",
+        "releaseDate": "2026-09-23T00:59:12.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-30T08:34:06.795Z"
+      },
       {
         "version": "26.38",
         "releaseDate": "2026-09-23T00:59:12.000Z",
