@@ -73,6 +73,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.41-release.01",
+        "releaseDate": "2026-09-30T01:34:47.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-30T22:16:04.782Z"
+      },
+      {
         "version": "1.2.40-release.01",
         "releaseDate": "2026-09-28T17:31:49.000Z",
         "releaseNotes": null,
@@ -1043,6 +1049,12 @@
     ],
     "google:com.dropbox.android": [
       {
+        "version": "492.2.2",
+        "releaseDate": "2026-09-29T16:06:11.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-30T22:16:04.782Z"
+      },
+      {
         "version": "490.2.2",
         "releaseDate": "2026-09-14T17:30:07.000Z",
         "releaseNotes": "What’s new?\n• You can now search and select device contacts directly through the contact picker.\n\nWe release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
@@ -1192,6 +1204,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-30T17:34:36.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-09-30T22:16:04.782Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-29T17:34:41.000Z",
@@ -1411,6 +1429,12 @@
     ],
     "google:me.lyft.android": [
       {
+        "version": "2026.37.3.1790148538",
+        "releaseDate": "2026-09-25T19:02:38.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-09-30T22:16:04.782Z"
+      },
+      {
         "version": "2026.36.3.1789543541",
         "releaseDate": "2026-09-18T19:02:34.000Z",
         "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
@@ -1588,6 +1612,12 @@
       }
     ],
     "google:com.squareup.cash": [
+      {
+        "version": "5.71.0",
+        "releaseDate": "2026-09-25T21:34:16.000Z",
+        "releaseNotes": "Various bug fixes and improvements.",
+        "detectedAt": "2026-09-30T22:16:04.782Z"
+      },
       {
         "version": "5.70.1",
         "releaseDate": "2026-09-22T14:06:10.000Z",
