@@ -1558,6 +1558,12 @@
     "google:com.duolingo": [
       {
         "version": null,
+        "releaseDate": "2026-09-29T17:05:20.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-09-30T01:19:19.595Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-28T17:24:39.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
         "detectedAt": "2026-09-29T16:31:17.224Z"
