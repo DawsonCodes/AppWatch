@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.266",
+        "releaseDate": "2026-09-30T05:51:25.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
+      {
         "version": "1.2026.265",
         "releaseDate": "2026-09-29T01:41:15.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -46,6 +52,12 @@
       }
     ],
     "apple:6670324846": [
+      {
+        "version": "1.4.46",
+        "releaseDate": "2026-09-30T08:49:44.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": "1.4.44",
         "releaseDate": "2026-09-25T13:57:45.000Z",
@@ -157,6 +169,12 @@
     ],
     "google:ai.character.app": [
       {
+        "version": "1.17.4",
+        "releaseDate": "2026-09-29T19:34:22.000Z",
+        "releaseNotes": "Bug fixes and other improvements",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
+      {
         "version": "1.17.3",
         "releaseDate": "2026-09-03T21:06:02.000Z",
         "releaseNotes": "Bug fixes and other improvements",
@@ -187,6 +205,12 @@
     ],
     "apple:284882215": [
       {
+        "version": "581.0.0",
+        "releaseDate": "2026-09-30T11:45:51.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
+      {
         "version": "580.0.0",
         "releaseDate": "2026-09-23T07:37:44.000Z",
         "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
@@ -194,6 +218,12 @@
       }
     ],
     "google:com.facebook.katana": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-30T06:27:38.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-23T03:54:10.000Z",
@@ -286,6 +316,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-09-30T04:30:52.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-27T07:43:14.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-09-27T13:58:23.385Z"
@@ -310,6 +346,12 @@
       }
     ],
     "apple:447188370": [
+      {
+        "version": "14.26.0.48",
+        "releaseDate": "2026-09-30T12:52:43.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": "14.25.0.48",
         "releaseDate": "2026-09-23T11:01:36.000Z",
@@ -430,6 +472,12 @@
       }
     ],
     "google:com.whatsapp": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-26T22:31:54.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-19T00:49:04.000Z",
@@ -560,6 +608,12 @@
     "google:org.telegram.messenger": [
       {
         "version": null,
+        "releaseDate": "2026-09-28T09:08:30.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-25T14:37:36.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-09-25T21:35:14.477Z"
@@ -572,6 +626,12 @@
       }
     ],
     "apple:454638411": [
+      {
+        "version": "581.0.0",
+        "releaseDate": "2026-09-30T12:28:32.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": "580.0.0",
         "releaseDate": "2026-09-23T00:13:33.000Z",
@@ -674,6 +734,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-29T14:38:09.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-25T08:00:14.000Z",
@@ -893,6 +959,12 @@
     ],
     "google:com.microsoft.teams": [
       {
+        "version": "1416/1.0.0.2026173602",
+        "releaseDate": "2026-09-23T10:10:47.000Z",
+        "releaseNotes": "Use Copilot to summarize channel meetings",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
+      {
         "version": "1416/1.0.0.2026163804",
         "releaseDate": "2026-09-11T15:51:46.000Z",
         "releaseNotes": "Use Copilot to summarize channel meetings",
@@ -978,6 +1050,12 @@
       }
     ],
     "apple:897446215": [
+      {
+        "version": "4.228.0",
+        "releaseDate": "2026-09-29T23:05:04.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": "4.227.0",
         "releaseDate": "2026-09-17T23:34:58.000Z",
@@ -1100,6 +1178,12 @@
       }
     ],
     "apple:535886823": [
+      {
+        "version": "155.0.8059.24",
+        "releaseDate": "2026-09-30T15:39:55.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• Stability and performance improvements.",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": "154.0.8037.55",
         "releaseDate": "2026-09-22T15:58:10.000Z",
@@ -1224,6 +1308,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-30T12:12:03.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-09-30T16:24:50.569Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-29T13:01:45.000Z",
