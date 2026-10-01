@@ -59,6 +59,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.47",
+        "releaseDate": "2026-10-01T17:50:11.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
+      {
         "version": "1.4.46",
         "releaseDate": "2026-09-30T08:49:44.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -78,6 +84,12 @@
       }
     ],
     "google:ai.x.grok": [
+      {
+        "version": "1.2.42-release.01",
+        "releaseDate": "2026-10-01T17:23:40.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "1.2.42-release.00",
         "releaseDate": "2026-10-01T02:08:42.000Z",
@@ -433,6 +445,12 @@
     ],
     "apple:429047995": [
       {
+        "version": "14.38",
+        "releaseDate": "2026-10-01T17:26:51.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
+      {
         "version": "14.37",
         "releaseDate": "2026-09-24T23:52:39.000Z",
         "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
@@ -460,6 +478,12 @@
       }
     ],
     "apple:288429040": [
+      {
+        "version": "9.1.577",
+        "releaseDate": "2026-10-01T17:01:28.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "9.1.576",
         "releaseDate": "2026-09-28T19:03:15.000Z",
@@ -522,6 +546,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.31",
+        "releaseDate": "2026-10-01T17:35:37.000Z",
+        "releaseNotes": "• This update introduces a new custom mute option so you can easily specify the exact date and time when you would like to end your moment of silence for notifications in a specific chat.",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "8.30",
         "releaseDate": "2026-09-23T19:20:04.000Z",
@@ -747,6 +777,12 @@
     ],
     "apple:1446075923": [
       {
+        "version": "5.18.1",
+        "releaseDate": "2026-10-01T21:36:23.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
+      {
         "version": "5.18.0",
         "releaseDate": "2026-09-23T21:46:35.000Z",
         "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
@@ -754,6 +790,12 @@
       }
     ],
     "google:com.disney.disneyplus": [
+      {
+        "version": "26.17.0+rc4-2026.09.24",
+        "releaseDate": "2026-09-28T18:32:05.000Z",
+        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "26.16.0+rc2-2026.09.08",
         "releaseDate": "2026-09-18T16:05:10.000Z",
@@ -796,6 +838,12 @@
       }
     ],
     "apple:460177396": [
+      {
+        "version": "31.4.4",
+        "releaseDate": "2026-10-01T16:47:48.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "31.4.2",
         "releaseDate": "2026-09-30T16:45:29.000Z",
@@ -886,6 +934,12 @@
       }
     ],
     "apple:431946152": [
+      {
+        "version": "2.741.1062",
+        "releaseDate": "2026-10-01T19:01:38.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "2.741.1051",
         "releaseDate": "2026-09-30T16:44:36.000Z",
@@ -1218,6 +1272,12 @@
       }
     ],
     "google:org.mozilla.firefox": [
+      {
+        "version": "157.0",
+        "releaseDate": "2026-09-24T13:21:09.000Z",
+        "releaseNotes": "NEW\n- Recent searches: Tap the search field on the homepage to quickly return to your recent searches.\n- VPN availability: Free VPN is now available in more than 200 regions.\nFIXED\n- VPN stability: Fixed a crash that could occur when tapping the VPN location row as the VPN became unavailable.\n- History items are now grouped by exact date for easier browsing\n- You can now swipe to dismiss items on the Downloads page\n- Security and stability fixes.",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "156.0.1",
         "releaseDate": "2026-09-24T13:21:09.000Z",
@@ -1676,6 +1736,12 @@
       }
     ],
     "apple:711923939": [
+      {
+        "version": "5.71.1",
+        "releaseDate": "2026-10-01T18:50:46.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-10-01T22:41:32.185Z"
+      },
       {
         "version": "5.71.0",
         "releaseDate": "2026-09-28T19:19:36.000Z",
