@@ -37,6 +37,12 @@
     ],
     "apple:6477489729": [
       {
+        "version": "1.2026.3870401",
+        "releaseDate": "2026-09-30T16:19:28.000Z",
+        "releaseNotes": "- UI improvements and bug fixes",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
+      {
         "version": "1.2026.3770306",
         "releaseDate": "2026-09-23T14:55:51.000Z",
         "releaseNotes": "- UI improvements and bug fixes",
@@ -72,6 +78,12 @@
       }
     ],
     "google:ai.x.grok": [
+      {
+        "version": "1.2.42-release.00",
+        "releaseDate": "2026-10-01T02:08:42.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
       {
         "version": "1.2.41-release.01",
         "releaseDate": "2026-09-30T01:34:47.000Z",
@@ -239,6 +251,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.31",
+        "releaseDate": "2026-09-30T17:03:21.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
+      {
         "version": "12.30",
         "releaseDate": "2026-09-27T15:48:38.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -394,6 +412,12 @@
       }
     ],
     "google:com.reddit.frontpage": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-01T04:27:35.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our Android app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-28T19:30:19.000Z",
@@ -739,6 +763,12 @@
     ],
     "apple:324684580": [
       {
+        "version": "9.1.88",
+        "releaseDate": "2026-10-01T15:03:03.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
+      {
         "version": "9.1.86",
         "releaseDate": "2026-09-23T17:49:27.000Z",
         "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
@@ -766,6 +796,12 @@
       }
     ],
     "apple:460177396": [
+      {
+        "version": "31.4.2",
+        "releaseDate": "2026-09-30T16:45:29.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
       {
         "version": "31.4",
         "releaseDate": "2026-09-28T18:40:18.000Z",
@@ -850,6 +886,12 @@
       }
     ],
     "apple:431946152": [
+      {
+        "version": "2.741.1051",
+        "releaseDate": "2026-09-30T16:44:36.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
       {
         "version": "2.740.927",
         "releaseDate": "2026-09-28T23:26:10.000Z",
@@ -947,6 +989,12 @@
     ],
     "apple:618783545": [
       {
+        "version": "26.09.50",
+        "releaseDate": "2026-09-30T19:01:53.000Z",
+        "releaseNotes": "Bug Fixes\n• Feeling workflow déjà vu? We’ve got you. The app now catches duplicate bookmarked workflows and quietly tidies them into one.",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
+      {
         "version": "26.09.40",
         "releaseDate": "2026-09-23T19:01:12.000Z",
         "releaseNotes": "Bug Fixes\n• Don’t mind us — just making a few small adjustments to keep the app in tip-top shape. More to come soon. Cheerio!",
@@ -968,6 +1016,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.17.1",
+        "releaseDate": "2026-09-30T17:10:00.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
       {
         "version": "8.17.0",
         "releaseDate": "2026-09-23T16:06:56.000Z",
@@ -1461,6 +1515,12 @@
     ],
     "apple:401626263": [
       {
+        "version": "26.40",
+        "releaseDate": "2026-10-01T15:11:16.000Z",
+        "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
+      {
         "version": "26.39",
         "releaseDate": "2026-09-24T15:38:03.000Z",
         "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
@@ -1733,6 +1793,12 @@
     ],
     "apple:324715238": [
       {
+        "version": "2026.09.29",
+        "releaseDate": "2026-09-30T17:57:05.000Z",
+        "releaseNotes": "Minor updates and enhancements",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
+      {
         "version": "2026.09.15",
         "releaseDate": "2026-09-16T22:24:05.000Z",
         "releaseNotes": "Minor updates and enhancements",
@@ -1796,6 +1862,12 @@
       }
     ],
     "apple:426826309": [
+      {
+        "version": "483.0.0",
+        "releaseDate": "2026-09-30T19:21:33.000Z",
+        "releaseNotes": "Fresh Strava stickers just dropped. Head to your latest activity, tap the share button, and pick your favorite from the new grid view to post straight to your socials. How will you share your story?",
+        "detectedAt": "2026-10-01T17:02:17.892Z"
+      },
       {
         "version": "482.0.0",
         "releaseDate": "2026-09-23T19:38:57.000Z",
