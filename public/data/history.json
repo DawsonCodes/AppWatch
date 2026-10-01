@@ -866,6 +866,12 @@
     "google:com.roblox.client": [
       {
         "version": null,
+        "releaseDate": "2026-09-30T16:44:42.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-01T08:56:23.423Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-23T17:46:18.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
         "detectedAt": "2026-09-24T23:12:54.522Z"
@@ -1082,6 +1088,12 @@
       }
     ],
     "google:com.canva.editor": [
+      {
+        "version": "2.380.0",
+        "releaseDate": "2026-09-30T06:34:44.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-01T08:56:23.423Z"
+      },
       {
         "version": "2.379.0",
         "releaseDate": "2026-09-23T07:37:31.000Z",
@@ -1792,6 +1804,12 @@
       }
     ],
     "google:com.strava": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-30T10:28:52.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-10-01T08:56:23.423Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-21T18:46:18.000Z",
