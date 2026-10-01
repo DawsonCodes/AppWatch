@@ -367,6 +367,12 @@
     ],
     "google:com.snapchat.android": [
       {
+        "version": "14.26.0.39",
+        "releaseDate": "2026-09-29T21:21:27.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-10-01T01:19:21.460Z"
+      },
+      {
         "version": "14.25.0.43",
         "releaseDate": "2026-09-22T18:40:02.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
