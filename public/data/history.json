@@ -499,6 +499,12 @@
     ],
     "google:com.linkedin.android": [
       {
+        "version": "4.1.1255",
+        "releaseDate": "2026-09-30T17:38:35.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-10-02T05:36:53.406Z"
+      },
+      {
         "version": "4.1.1254",
         "releaseDate": "2026-09-28T17:50:26.000Z",
         "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
@@ -872,6 +878,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-10-01T21:38:17.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-02T05:36:53.406Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-29T05:52:39.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-09-29T08:30:26.444Z"
@@ -988,6 +1000,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-01T23:36:28.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-02T05:36:53.406Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-28T23:54:51.000Z",
@@ -1141,6 +1159,12 @@
     ],
     "google:notion.id": [
       {
+        "version": "0.6.4196",
+        "releaseDate": "2026-10-02T03:25:57.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-02T05:36:53.406Z"
+      },
+      {
         "version": "0.6.4188",
         "releaseDate": "2026-09-28T21:05:25.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -1182,6 +1206,12 @@
       }
     ],
     "apple:897446215": [
+      {
+        "version": "4.229.0",
+        "releaseDate": "2026-10-01T22:56:46.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-10-02T05:36:53.406Z"
+      },
       {
         "version": "4.228.0",
         "releaseDate": "2026-09-29T23:05:04.000Z",
@@ -1458,6 +1488,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-02T00:24:50.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-02T05:36:53.406Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-30T12:12:03.000Z",
