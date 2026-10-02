@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.267",
+        "releaseDate": "2026-10-02T14:26:33.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
+      {
         "version": "1.2026.266",
         "releaseDate": "2026-09-30T05:51:25.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -36,6 +42,12 @@
       }
     ],
     "apple:6477489729": [
+      {
+        "version": "1.2026.3870402",
+        "releaseDate": "2026-10-02T10:01:23.000Z",
+        "releaseNotes": "- UI improvements and bug fixes",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
       {
         "version": "1.2026.3870401",
         "releaseDate": "2026-09-30T16:19:28.000Z",
@@ -262,6 +274,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.31.1",
+        "releaseDate": "2026-10-02T16:16:04.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
       {
         "version": "12.31",
         "releaseDate": "2026-09-30T17:03:21.000Z",
@@ -924,6 +942,12 @@
     "google:com.shazam.android": [
       {
         "version": null,
+        "releaseDate": "2026-10-02T17:08:34.000Z",
+        "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-25T17:17:57.000Z",
         "releaseNotes": "You can now choose how Shazam listens when wired or wireless headphones are connected for even more accurate results. Select the Headphones icon to identify music playing in your favorite apps, including TikTok, Instagram, and YouTube.",
         "detectedAt": "2026-09-25T21:35:14.477Z"
@@ -1080,6 +1104,12 @@
       }
     ],
     "google:com.Slack": [
+      {
+        "version": "26.09.50.0",
+        "releaseDate": "2026-09-28T22:01:20.000Z",
+        "releaseNotes": "Bug Fixes\n• The app is objectively better today than it was yesterday. This is a scientifically verifiable fact that cannot be challenged or undermined. We appreciate you staying up to date!",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
       {
         "version": "26.09.41.0",
         "releaseDate": "2026-09-25T19:09:33.000Z",
@@ -1374,6 +1404,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-10-02T02:19:12.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-30T17:34:36.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-09-30T22:16:04.782Z"
@@ -1400,6 +1436,12 @@
       }
     ],
     "google:com.brave.browser": [
+      {
+        "version": "1.96.60",
+        "releaseDate": "2026-09-30T19:53:50.000Z",
+        "releaseNotes": "In this release we:\n- Introduced a setting to disable tab groups, making it easier to customize your browser. This can be found at settings → tabs and tab groups. Initially this will not be available to all users. It will be rolled out in phases.\n- Made further improvements to picture-in-picture video playback.\n- Made several look and feel design improvements.\n- Upgraded to Chromium 154.",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
       {
         "version": "1.96.59",
         "releaseDate": "2026-09-24T23:28:52.000Z",
@@ -1465,6 +1507,12 @@
     ],
     "apple:1137397744": [
       {
+        "version": "2026.9.1",
+        "releaseDate": "2026-10-02T16:25:32.000Z",
+        "releaseNotes": "- Clearer password generator actions\n- Various under-the-hood bug fixes and improvements",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
+      {
         "version": "2026.9.0",
         "releaseDate": "2026-09-17T20:33:06.000Z",
         "releaseNotes": "• Clearer Shortcuts actions and messages,  Various under-the-hood bug fixes and improvements,",
@@ -1480,6 +1528,12 @@
       }
     ],
     "apple:585027354": [
+      {
+        "version": "26.40.3",
+        "releaseDate": "2026-10-02T16:27:46.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
       {
         "version": "26.39.0",
         "releaseDate": "2026-09-25T13:53:51.000Z",
@@ -1728,6 +1782,12 @@
       }
     ],
     "apple:283646709": [
+      {
+        "version": "10.5.2",
+        "releaseDate": "2026-10-02T15:25:47.000Z",
+        "releaseNotes": "Get the latest update. The new PayPal app that you know and love, now made simpler, faster and easier to use. Continue to shop, pay, earn rewards, and manage your money. All in one place.",
+        "detectedAt": "2026-10-02T19:18:19.406Z"
+      },
       {
         "version": "10.5.1",
         "releaseDate": "2026-09-28T15:03:37.000Z",
