@@ -594,6 +594,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-10-03T02:15:46.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-03T11:39:24.793Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-26T22:31:54.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-09-30T16:24:50.569Z"
