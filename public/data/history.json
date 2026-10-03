@@ -439,6 +439,12 @@
     ],
     "google:com.snapchat.android": [
       {
+        "version": "14.26.1.0",
+        "releaseDate": "2026-10-02T07:58:14.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-10-03T05:18:54.492Z"
+      },
+      {
         "version": "14.26.0.39",
         "releaseDate": "2026-09-29T21:21:27.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
@@ -1112,6 +1118,12 @@
       }
     ],
     "google:com.microsoft.office.outlook": [
+      {
+        "version": "5.2638.1",
+        "releaseDate": "2026-10-01T18:54:39.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-10-03T05:18:54.492Z"
+      },
       {
         "version": "5.2637.3",
         "releaseDate": "2026-09-26T07:01:53.000Z",
