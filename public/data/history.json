@@ -97,6 +97,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.43-release.02",
+        "releaseDate": "2026-10-03T00:34:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-03T21:14:14.806Z"
+      },
+      {
         "version": "1.2.42-release.01",
         "releaseDate": "2026-10-01T17:23:40.000Z",
         "releaseNotes": null,
@@ -1537,6 +1543,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.296.0",
+        "releaseDate": "2026-09-28T17:14:00.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-10-03T21:14:14.806Z"
+      },
+      {
         "version": "5.295.3",
         "releaseDate": "2026-09-21T13:58:11.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -1834,6 +1846,12 @@
       }
     ],
     "google:com.dd.doordash": [
+      {
+        "version": "15.295.4",
+        "releaseDate": "2026-09-29T17:03:13.000Z",
+        "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
+        "detectedAt": "2026-10-03T21:14:14.806Z"
+      },
       {
         "version": "15.294.2",
         "releaseDate": "2026-09-22T08:01:04.000Z",
