@@ -41,6 +41,22 @@
         "detectedAt": "2026-09-24T19:25:13.022Z"
       }
     ],
+    "apple:6473753684": [
+      {
+        "version": "1.261002.20",
+        "releaseDate": "2026-10-03T23:23:45.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.anthropic.claude": [
+      {
+        "version": "1.261002.20",
+        "releaseDate": "2026-10-03T03:41:29.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
     "apple:6477489729": [
       {
         "version": "1.2026.3870402",
@@ -137,6 +153,22 @@
         "releaseDate": "2026-09-24T21:54:03.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:541164041": [
+      {
+        "version": "2.114.2",
+        "releaseDate": "2026-09-30T07:03:58.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.microsoft.office.officehubrow": [
+      {
+        "version": "16.0.20520.20020",
+        "releaseDate": "2026-09-25T11:53:49.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
       }
     ],
     "apple:1668000334": [
@@ -593,6 +625,22 @@
         "releaseDate": "2026-09-23T22:54:35.000Z",
         "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:835599320": [
+      {
+        "version": "47.0.0",
+        "releaseDate": "2026-09-22T02:34:27.000Z",
+        "releaseNotes": "Easily post videos and photos on TikTok with bug fixes and performance improvements.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-28T15:14:12.000Z",
+        "releaseNotes": "Easily post videos and photos on TikTok with bug fixes and performance improvements.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
       }
     ],
     "apple:310633997": [
@@ -1081,6 +1129,38 @@
         "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
+    "apple:545519333": [
+      {
+        "version": "10.150.3",
+        "releaseDate": "2026-09-29T08:14:17.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-03T19:00:31.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "apple:376510438": [
+      {
+        "version": "9.38.1",
+        "releaseDate": "2026-09-17T20:47:12.000Z",
+        "releaseNotes": "Beat the heat with our latest release. Take advantage of bug fixes and other behind-the-scenes enhancements by downloading the Hulu app today.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.hulu.plus": [
+      {
+        "version": "6.33.0+18150744-google",
+        "releaseDate": "2026-10-01T16:13:52.000Z",
+        "releaseNotes": "Welcome Summer with a slew of updates and fixes. To take advantage of this release, update the Hulu app today!",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
     "apple:422689480": [
       {
         "version": "6.0.260921",
@@ -1359,6 +1439,38 @@
         "detectedAt": "2026-09-24T19:25:13.022Z"
       }
     ],
+    "apple:507874739": [
+      {
+        "version": "4.2639.40801",
+        "releaseDate": "2026-09-28T15:46:16.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.google.android.apps.docs": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-30T00:39:54.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "apple:962194608": [
+      {
+        "version": "7.95.0",
+        "releaseDate": "2026-10-01T21:49:59.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe are always working to make the app faster and more stable. If you are enjoying the app, please consider leaving a review or rating!",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.google.android.apps.photos": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-29T21:01:09.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
     "apple:989804926": [
       {
         "version": "157.0",
@@ -1609,6 +1721,22 @@
         "releaseDate": "2026-09-17T15:27:10.000Z",
         "releaseNotes": "Bug fixes.",
         "detectedAt": "2026-09-24T19:25:13.022Z"
+      }
+    ],
+    "apple:1288723196": [
+      {
+        "version": "153.4234.46",
+        "releaseDate": "2026-09-20T00:55:48.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Check out what’s new in this release.\n• New Shortcuts widget: Quickly access your favorite sites, features, and tools right from your Home screen.\n• Bug fixes, stability, and performance improvements.\nUpgrade to the latest version and enjoy a smarter and more efficient Microsoft Edge!",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.microsoft.emmx": [
+      {
+        "version": "153.0.4234.49",
+        "releaseDate": "2026-09-28T12:26:41.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here's what's new in this release:\n• Sign in to Edge with a Google account: You can now sign in to Microsoft Edge using a Google account in addition to the Microsoft account.\n• New Shortcuts widget: Quickly access your favorite sites, features, and tools right from your Home screen.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
       }
     ],
     "apple:585027354": [
@@ -1961,6 +2089,38 @@
         "detectedAt": "2026-09-24T19:25:13.022Z"
       }
     ],
+    "apple:1058959277": [
+      {
+        "version": "6.342.10000",
+        "releaseDate": "2026-09-28T16:51:43.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Performance improvements\n- Localization updates\n\nLove the app? Rate us! Your feedback keeps the Uber Eats engine running.\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.ubercab.eats": [
+      {
+        "version": null,
+        "releaseDate": "2026-09-28T16:55:49.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "apple:886427730": [
+      {
+        "version": "14.37.53",
+        "releaseDate": "2026-09-28T16:09:03.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency. This update includes bug fixes and performance improvements.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.coinbase.android": [
+      {
+        "version": "14.37.53",
+        "releaseDate": "2026-10-02T02:35:35.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
     "apple:570060128": [
       {
         "version": "7.142.0",
@@ -2151,6 +2311,22 @@
         "releaseDate": "2026-09-21T18:46:18.000Z",
         "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
         "detectedAt": "2026-09-24T23:12:54.522Z"
+      }
+    ],
+    "apple:414706506": [
+      {
+        "version": "10.40.384",
+        "releaseDate": "2026-09-28T20:04:32.000Z",
+        "releaseNotes": "• Several bug fixes and usability improvements",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
+      }
+    ],
+    "google:com.google.android.apps.translate": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-01T14:01:00.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-10-04T03:38:30.784Z"
       }
     ]
   }
