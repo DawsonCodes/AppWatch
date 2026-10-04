@@ -12,6 +12,11 @@
           "googlePlay": "https://play.google.com/store/apps/details?id=com.openai.chatgpt"
         },
         {
+          "name": "Claude",
+          "appStore": "https://apps.apple.com/us/app/claude/id6473753684",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.anthropic.claude"
+        },
+        {
           "name": "Gemini",
           "appStore": "https://apps.apple.com/us/app/google-gemini/id6477489729",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard"
@@ -23,8 +28,8 @@
         },
         {
           "name": "Microsoft Copilot",
-          "appStore": "https://apps.apple.com/us/app/microsoft-copilot/id6472538445",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.copilot"
+          "appStore": "https://apps.apple.com/us/app/microsoft-copilot/id541164041",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow"
         },
         {
           "name": "Perplexity",
@@ -91,6 +96,11 @@
           "name": "LinkedIn",
           "appStore": "https://apps.apple.com/us/app/linkedin/id288429040",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.linkedin.android"
+        },
+        {
+          "name": "TikTok",
+          "appStore": "https://apps.apple.com/us/app/tiktok/id835599320",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically"
         }
       ]
     },
@@ -163,6 +173,16 @@
           "name": "Roblox",
           "appStore": "https://apps.apple.com/us/app/roblox/id431946152",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.roblox.client"
+        },
+        {
+          "name": "Prime Video",
+          "appStore": "https://apps.apple.com/us/app/amazon-prime-video/id545519333",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient"
+        },
+        {
+          "name": "Hulu",
+          "appStore": "https://apps.apple.com/us/app/hulu-stream-tv-shows-movies/id376510438",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.hulu.plus"
         }
       ]
     },
@@ -209,6 +229,16 @@
           "name": "Canva",
           "appStore": "https://apps.apple.com/us/app/canva/id897446215",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.canva.editor"
+        },
+        {
+          "name": "Google Drive",
+          "appStore": "https://apps.apple.com/us/app/google-drive/id507874739",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs"
+        },
+        {
+          "name": "Google Photos",
+          "appStore": "https://apps.apple.com/us/app/google-photos/id962194608",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.photos"
         }
       ]
     },
@@ -245,6 +275,11 @@
           "name": "Bitwarden",
           "appStore": "https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.x8bit.bitwarden"
+        },
+        {
+          "name": "Microsoft Edge",
+          "appStore": "https://apps.apple.com/us/app/microsoft-edge-ai-browser/id1288723196",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.emmx"
         }
       ]
     },
@@ -312,6 +347,16 @@
           "name": "Cash App",
           "appStore": "https://apps.apple.com/us/app/cash-app/id711923939",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.squareup.cash"
+        },
+        {
+          "name": "Uber Eats",
+          "appStore": "https://apps.apple.com/us/app/uber-eats-food-groceries/id1058959277",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.ubercab.eats"
+        },
+        {
+          "name": "Coinbase",
+          "appStore": "https://apps.apple.com/us/app/coinbase-buy-btc-eth-sol/id886427730",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.coinbase.android"
         }
       ]
     },
@@ -333,6 +378,11 @@
           "name": "Strava",
           "appStore": "https://apps.apple.com/us/app/strava/id426826309",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.strava"
+        },
+        {
+          "name": "Google Translate",
+          "appStore": "https://apps.apple.com/us/app/google-translate/id414706506",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
         }
       ]
     }
