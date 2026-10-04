@@ -44,31 +44,49 @@ export function SlidingTabs<T extends string>({
   const indicatorRef = useRef<HTMLSpanElement>(null);
   const [ready, setReady] = useState(false);
 
-  const position = useCallback(() => {
-    const list = listRef.current;
-    const indicator = indicatorRef.current;
-    const active = list?.querySelector<HTMLElement>('[data-active="true"]');
-    if (!list || !indicator || !active) return;
-    indicator.style.transform = `translateX(${active.offsetLeft}px)`;
-    indicator.style.width = `${active.offsetWidth}px`;
-    if (variant === 'pill') {
-      indicator.style.height = `${active.offsetHeight}px`;
-      indicator.style.top = `${active.offsetTop}px`;
-    }
-  }, [variant]);
+  /**
+   * Move the indicator onto the active item. Only a change of selection
+   * glides; re-measuring after a resize, a font swap or a count update snaps,
+   * so the indicator never drifts around on its own.
+   */
+  const position = useCallback(
+    (glide: boolean) => {
+      const list = listRef.current;
+      const indicator = indicatorRef.current;
+      const active = list?.querySelector<HTMLElement>('[data-active="true"]');
+      if (!list || !indicator || !active) return;
+      if (!glide) indicator.style.transition = 'none';
+      indicator.style.transform = `translateX(${active.offsetLeft}px)`;
+      indicator.style.width = `${active.offsetWidth}px`;
+      if (variant === 'pill') {
+        indicator.style.height = `${active.offsetHeight}px`;
+        indicator.style.top = `${active.offsetTop}px`;
+      }
+      if (!glide) {
+        void indicator.offsetWidth; // commit the jump before restoring transitions
+        indicator.style.transition = '';
+      }
+    },
+    [variant],
+  );
 
+  const lastValue = useRef(value);
   useLayoutEffect(() => {
-    position();
+    const changed = lastValue.current !== value;
+    lastValue.current = value;
+    position(changed);
   }, [position, value, items]);
 
-  // Re-measure when fonts load or the row resizes; enable gliding after the
-  // first measurement so the indicator doesn't fly in from the left on load.
+  // Re-measure when fonts load or the row resizes; gliding is enabled after
+  // the first measurement so the indicator doesn't fly in on load.
   useEffect(() => {
     const list = listRef.current;
     if (!list) return;
-    const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(position) : null;
+    const snap = () => position(false);
+    const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(snap) : null;
     observer?.observe(list);
-    document.fonts?.ready.then(position).catch(() => {});
+    for (const child of Array.from(list.children)) observer?.observe(child);
+    document.fonts?.ready.then(snap).catch(() => {});
     const frame = requestAnimationFrame(() => setReady(true));
     return () => {
       observer?.disconnect();

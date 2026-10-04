@@ -1,5 +1,5 @@
 import type { ComponentChildren } from 'preact';
-import { useEffect, useRef, useState } from 'preact/hooks';
+import { useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks';
 import type { AppGroup, Listing } from '../lib/groups.ts';
 import { groupDeveloper, groupIconUrl } from '../lib/groups.ts';
 import {
@@ -10,6 +10,8 @@ import {
   relativeTime,
 } from '../lib/format.ts';
 import { configSnippetFor } from '../lib/localApps.ts';
+import type { Flight } from '../lib/motion.ts';
+import { flyBetween, isOnScreen, slideIn, slideOut } from '../lib/motion.ts';
 import type { VersionHistoryEntry } from '../shared/types.ts';
 import { historyEntryKey } from '../shared/types.ts';
 import { AppIcon } from './AppIcon.tsx';
@@ -22,6 +24,7 @@ import {
   ExternalIcon,
   RefreshIcon,
 } from './Icons.tsx';
+import { Notes } from './Notes.tsx';
 import { SlidingTabs } from './SlidingTabs.tsx';
 import { storeLabel } from './StoreBadge.tsx';
 import { WatchButton } from './WatchButton.tsx';
@@ -35,12 +38,16 @@ interface AppDetailProps {
   collectionLabel: string | null;
   history: HistoryState;
   watched: boolean;
+  /** Set by the shell to play the exit animation; `onClosed` follows. */
   closing: boolean;
-  /** Opened inside a View Transition, so CSS entrance animations are skipped. */
-  morphing: boolean;
+  /** The icon that was tapped to open this panel; it flies into the hero. */
+  origin: HTMLElement | null;
   onSelectListing: (listingId: string) => void;
   onToggleWatch: () => void;
-  onClose: () => void;
+  /** Escape, the close button or the backdrop asked to close. */
+  onRequestClose: () => void;
+  /** The exit animation has finished; the shell unmounts the panel. */
+  onClosed: () => void;
   onRefreshLocal?: (id: string) => void;
   localRefreshing?: boolean;
   localAddedAt?: string | null;
@@ -83,26 +90,6 @@ function Fact({ label, children }: { label: string; children: ComponentChildren 
     <div class="fact">
       <dt>{label}</dt>
       <dd>{children}</dd>
-    </div>
-  );
-}
-
-function Notes({ text, clampAt = 260 }: { text: string; clampAt?: number }) {
-  const long = text.length > clampAt;
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <div class={`notes${long && !expanded ? ' notes--clamped' : ''}`}>
-      <p class="notes__text">{text}</p>
-      {long ? (
-        <button
-          type="button"
-          class="notes__toggle"
-          aria-expanded={expanded}
-          onClick={() => setExpanded((v) => !v)}
-        >
-          {expanded ? 'Show less' : 'Show more'}
-        </button>
-      ) : null}
     </div>
   );
 }
@@ -187,10 +174,11 @@ export function AppDetail({
   history,
   watched,
   closing,
-  morphing,
+  origin,
   onSelectListing,
   onToggleWatch,
-  onClose,
+  onRequestClose,
+  onClosed,
   onRefreshLocal,
   localRefreshing = false,
   localAddedAt,
@@ -198,19 +186,59 @@ export function AppDetail({
   const closeRef = useRef<HTMLButtonElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLHeadingElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+  const backdropRef = useRef<HTMLDivElement>(null);
+  const flight = useRef<Flight | null>(null);
   const [scrolled, setScrolled] = useState(false);
+
+  // Entrance: the panel slides in while the tapped icon flies into the hero.
+  // Measured before the first paint, so nothing flashes in its final spot.
+  useLayoutEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) return;
+    const hero = panel.querySelector<HTMLElement>('.detail__icon');
+    if (origin && hero && isOnScreen(origin)) flight.current = flyBetween(origin, hero, 640);
+    slideIn(panel, backdropRef.current);
+    return () => flight.current?.cancel();
+    // Runs once per opening; the shell remounts the panel for each open.
+  }, []);
+
+  // Exit: reverse from wherever the entrance got to, fly the icon home to its
+  // card if that card is on screen, then let the shell unmount.
+  useLayoutEffect(() => {
+    if (!closing) return;
+    const panel = panelRef.current;
+    if (!panel) {
+      onClosed();
+      return;
+    }
+    flight.current?.cancel();
+    flight.current = null;
+    const hero = panel.querySelector<HTMLElement>('.detail__icon');
+    const card = document.querySelector<HTMLElement>(
+      `.card[data-key="${CSS.escape(group.key)}"] .card__icon`,
+    );
+    if (hero && card) flyBetween(hero, card, 520);
+    let cancelled = false;
+    slideOut(panel, backdropRef.current).then(() => {
+      if (!cancelled) onClosed();
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [closing]);
 
   useEffect(() => {
     closeRef.current?.focus({ preventScroll: true });
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
-        onClose();
+        onRequestClose();
       }
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [onClose]);
+  }, [onRequestClose]);
 
   // Show the compact title in the top bar once the big title scrolls away.
   useEffect(() => {
@@ -237,15 +265,21 @@ export function AppDetail({
   })();
 
   return (
-    <div class={`detail-root${closing ? ' is-closing' : ''}${morphing ? ' detail-root--vt' : ''}`}>
-      <div class="detail-backdrop" onClick={onClose} aria-hidden="true" />
-      <section class="detail" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class={`detail-root${closing ? ' is-closing' : ''}`}>
+      <div class="detail-backdrop" ref={backdropRef} onClick={onRequestClose} aria-hidden="true" />
+      <section
+        class="detail"
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="detail-title"
+      >
         <div class={`detail__bar${scrolled ? ' is-scrolled' : ''}`}>
           <button
             type="button"
             class="icon-button"
             ref={closeRef}
-            onClick={onClose}
+            onClick={onRequestClose}
             aria-label="Close details"
           >
             <CloseIcon size={18} />

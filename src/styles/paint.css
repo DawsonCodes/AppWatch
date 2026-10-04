@@ -197,11 +197,11 @@
   [data-theme='ms-paint'] .card:not(.card--skeleton):hover,
   [data-theme='ms-paint'] .release:hover {
     border-color: #000000;
-    transform: translate(-2px, -2px);
+    translate: -2px -2px;
     box-shadow: 6px 6px 0 #000000;
   }
   [data-theme='ms-paint'] .card:not(.card--skeleton):hover .card__icon {
-    transform: none;
+    scale: none;
   }
 }
 

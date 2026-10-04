@@ -5,23 +5,20 @@ interface AppIconProps {
   iconUrl: string | null;
   size: number;
   class?: string;
-  /** Optional View Transition name (used for the card → detail morph). */
-  vtName?: string;
 }
 
 /**
  * App icon with a local fallback: when the store CDN icon is missing or fails
  * to load, a monogram tile is shown instead so broken images never appear.
  */
-export function AppIcon({ name, iconUrl, size, class: className = '', vtName }: AppIconProps) {
+export function AppIcon({ name, iconUrl, size, class: className = '' }: AppIconProps) {
   const [failed, setFailed] = useState(false);
-  const style = vtName ? { viewTransitionName: vtName } : undefined;
 
   if (!iconUrl || failed) {
     return (
       <span
         class={`app-icon app-icon--fallback ${className}`}
-        style={{ width: size, height: size, fontSize: size * 0.42, ...style }}
+        style={{ width: size, height: size, fontSize: size * 0.42 }}
         aria-hidden="true"
       >
         {name.trim().charAt(0).toUpperCase() || '?'}
@@ -39,7 +36,6 @@ export function AppIcon({ name, iconUrl, size, class: className = '', vtName }: 
       loading="lazy"
       decoding="async"
       referrerpolicy="no-referrer"
-      style={style}
       onError={() => setFailed(true)}
     />
   );

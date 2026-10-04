@@ -185,3 +185,12 @@ export function LogoIcon({ size = 26 }: IconProps) {
     </svg>
   );
 }
+
+export function TranslateIcon({ size, class: c }: IconProps) {
+  return (
+    <svg {...base(size, c)}>
+      <path d="M4 5h9M8.5 3v2M6 5c.6 3.4 2.9 6 6 7.5M11 5c-.8 3.6-3.4 6.5-7 8" />
+      <path d="m12.5 21 4-10 4 10M14 17.5h5" />
+    </svg>
+  );
+}

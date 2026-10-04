@@ -13,7 +13,6 @@ interface AppCardProps {
   group: AppGroup;
   watched: boolean;
   open: boolean;
-  index: number;
   onToggleWatch: (group: AppGroup) => void;
   onOpen: (listingId: string, trigger: HTMLElement) => void;
 }
@@ -24,7 +23,7 @@ interface AppCardProps {
  * updated this week, a filled star means watched, and the open card keeps an
  * accent outline while its detail panel is showing.
  */
-function AppCardImpl({ group, watched, open, index, onToggleWatch, onOpen }: AppCardProps) {
+function AppCardImpl({ group, watched, open, onToggleWatch, onOpen }: AppCardProps) {
   const primary = primaryListing(group);
   const developer = groupDeveloper(group);
   const notes = primary.releaseNotes ? truncate(primary.releaseNotes, 140) : null;
@@ -36,11 +35,7 @@ function AppCardImpl({ group, watched, open, index, onToggleWatch, onOpen }: App
   if (open) classes.push('card--open');
 
   return (
-    <article
-      class={classes.join(' ')}
-      data-group={group.key}
-      style={{ '--vt-name': `card-${group.key}`, '--i': Math.min(index, 16) }}
-    >
+    <article class={classes.join(' ')} data-key={group.key}>
       <button
         type="button"
         class="card__open"

@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'preact/hooks';
+import { useLayoutEffect, useMemo, useState } from 'preact/hooks';
 import type { TimelineEvent } from '../lib/timeline.ts';
 import { groupByDay } from '../lib/timeline.ts';
 import { groupIconUrl } from '../lib/groups.ts';
+import type { ListMotion } from '../lib/motion.ts';
 import { truncate } from '../shared/text.ts';
 import { AppIcon } from './AppIcon.tsx';
 import { ArrowRightIcon } from './Icons.tsx';
@@ -19,6 +20,7 @@ function timeOfDay(iso: string | null): string | null {
 }
 
 interface UpdatesTimelineProps {
+  motion: ListMotion;
   events: readonly TimelineEvent[];
   onOpen: (listingId: string, trigger: HTMLElement) => void;
   onClearFilters: () => void;
@@ -31,6 +33,7 @@ interface UpdatesTimelineProps {
  * version each listing had when tracking began, plus every change since.
  */
 export function UpdatesTimeline({
+  motion,
   events,
   onOpen,
   onClearFilters,
@@ -38,6 +41,7 @@ export function UpdatesTimeline({
 }: UpdatesTimelineProps) {
   const [limit, setLimit] = useState(PAGE);
   const days = useMemo(() => groupByDay(events.slice(0, limit)), [events, limit]);
+  useLayoutEffect(() => motion.afterRender());
 
   if (events.length === 0) {
     return (
@@ -58,7 +62,7 @@ export function UpdatesTimeline({
   }
 
   return (
-    <div class="timeline">
+    <div class="timeline" ref={motion.attach}>
       {days.map((day) => (
         <section class="timeline__day" key={day.key} aria-labelledby={`day-${day.key}`}>
           <h2 class="timeline__date" id={`day-${day.key}`}>
@@ -71,7 +75,7 @@ export function UpdatesTimeline({
             {day.events.map((event) => {
               const at = timeOfDay(event.releaseDate);
               return (
-                <li class="timeline__item" key={event.id}>
+                <li class="timeline__item" key={event.id} data-key={event.id}>
                   <span
                     class={`timeline__node timeline__node--${event.listing.platform}`}
                     aria-hidden="true"
