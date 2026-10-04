@@ -141,6 +141,12 @@
     ],
     "apple:1668000334": [
       {
+        "version": "26.39.0",
+        "releaseDate": "2026-10-03T18:37:47.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-10-04T00:37:44.533Z"
+      },
+      {
         "version": "26.38.0",
         "releaseDate": "2026-09-29T02:30:35.000Z",
         "releaseNotes": "Bug fixes and improvements.",
