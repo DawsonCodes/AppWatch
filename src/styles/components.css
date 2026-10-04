@@ -781,6 +781,10 @@
 }
 
 .filters-area {
+  /* Its own layer above the grid, so the sort menu always opens over the
+     cards instead of underneath them. */
+  position: relative;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -843,7 +847,6 @@
 
 .search:focus-within .search__icon {
   color: var(--accent);
-  transform: scale(1.08) rotate(-8deg);
 }
 
 .search__input {
@@ -1065,25 +1068,28 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
+  /* Hover and press use the individual translate/scale properties, so they
+     never fight the layout animations (FLIP), which use transform. */
   transition:
-    transform var(--dur-3) var(--spring),
+    translate var(--dur-3) var(--ease-out),
+    scale var(--dur-2) var(--ease-out),
     box-shadow var(--dur-3) var(--ease-out),
     border-color var(--dur-2) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .card:not(.card--skeleton):hover {
-    transform: translateY(-3px);
+    translate: 0 -3px;
     border-color: var(--border-strong);
     box-shadow: var(--shadow-2);
   }
   .card:not(.card--skeleton):hover .card__icon {
-    transform: scale(1.06) rotate(-3deg);
+    scale: 1.05;
   }
 }
 
 .card:has(.card__open:active) {
-  transform: scale(0.985);
+  scale: 0.985;
   transition-duration: 90ms;
 }
 
@@ -1127,7 +1133,7 @@
 }
 
 .card__icon {
-  transition: transform var(--dur-4) var(--spring);
+  transition: scale var(--dur-3) var(--ease-out);
 }
 
 .card__title {
@@ -1381,7 +1387,6 @@ img.app-icon {
   position: absolute;
   inset: 0;
   background: var(--backdrop);
-  view-transition-name: detail-backdrop;
 }
 
 .detail {
@@ -1395,7 +1400,7 @@ img.app-icon {
   border-left: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow-3);
-  view-transition-name: detail-panel;
+  will-change: transform;
 }
 
 @media (max-width: 699px) {
@@ -1850,21 +1855,22 @@ img.app-icon {
   background: var(--surface);
   text-align: left;
   transition:
-    transform var(--dur-3) var(--spring),
+    translate var(--dur-3) var(--ease-out),
+    scale var(--dur-2) var(--ease-out),
     box-shadow var(--dur-3) var(--ease-out),
     border-color var(--dur-2) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .release:hover {
-    transform: translateX(3px);
+    translate: 3px 0;
     border-color: var(--border-strong);
     box-shadow: var(--shadow-2);
   }
 }
 
 .release:active {
-  transform: scale(0.99);
+  scale: 0.99;
 }
 
 .release:focus-visible {
@@ -2294,4 +2300,65 @@ img.app-icon {
 
 .paint-palette {
   display: none;
+}
+
+/* While the panel animates away, clicks fall through nothing and can't
+   restart it; the page behind stays inert until it is gone. */
+.detail-root.is-closing {
+  pointer-events: none;
+}
+
+.notes__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  margin-top: 6px;
+}
+
+.notes__actions:empty {
+  display: none;
+}
+
+.notes__actions .notes__toggle {
+  margin-top: 0;
+}
+
+.translate {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    border-color var(--dur-1) ease,
+    background-color var(--dur-1) ease,
+    scale var(--dur-2) var(--ease-out);
+}
+
+a.translate:hover,
+button.translate:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+button.translate:active:not(:disabled) {
+  scale: 0.96;
+}
+
+.translate--done {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text-faint);
+  font-weight: 500;
 }

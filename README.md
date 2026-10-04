@@ -47,13 +47,13 @@
 
 ## What it does
 
-AppWatch tracks 56 popular apps out of the box — each on both the App Store
-and Google Play, 112 listings in all — checks every one of them **every two
+AppWatch tracks 66 popular apps out of the box — each on both the App Store
+and Google Play, 132 listings in all — checks every one of them **every two
 hours**, and records what changed. Apps are organized into collections that
-appear as tabs: **AI** (ChatGPT, Gemini, Grok, Copilot, Perplexity, DeepSeek,
-Character.AI), **Social** (Instagram, Facebook, X, Threads, YouTube, Snapchat,
-Reddit, Pinterest, LinkedIn), **Messaging**, **Entertainment**,
-**Productivity**, **Browsers & Privacy**, **Travel & Maps**, **Shopping &
+appear as tabs: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity,
+DeepSeek, Character.AI and more), **Social** (Instagram, Facebook, X,
+Threads, YouTube, Snapchat, TikTok, Reddit, Pinterest, LinkedIn),
+**Messaging**, **Entertainment**, **Productivity**, **Browsers & Privacy**, **Travel & Maps**, **Shopping &
 Money** and **Learning & Fitness**.
 
 Each app is one card covering both stores, with the **App Store in blue** and
@@ -114,21 +114,38 @@ only ever active because you chose it.
 
 ### Motion
 
-Animation is part of the design, built on the platform rather than a library:
+Animation is part of the design, built on the Web Animations API rather than a
+library — every animation can be interrupted mid-flight and none of them ever
+blocks a click:
 
-- **View Transitions** morph discrete changes: switching collections or
-  filters glides every card to its new slot (leavers shrink away, newcomers pop
-  in), opening an app flies its icon into the detail panel as the panel slides
-  in (a bottom sheet on phones), Apps ↔ Updates slides in the direction of
-  travel, and changing theme reveals the new one in a circle from the theme
-  button — in chunky pixel steps for MS Paint.
-- **Springs** (CSS `linear()` easing) drive the sliding tab indicators, menus,
-  presses and card hovers; watching an app pops the star and throws a small
-  spark burst (square palette pixels in MS Paint).
-- **Scroll-driven** reveals raise timeline entries as they enter the viewport,
-  and the first load cascades the cards in once.
-- Everything degrades to instant state changes in browsers without these APIs
-  and is switched off entirely under `prefers-reduced-motion`.
+- **Layout changes glide.** Switching collections, stores, filters or sort
+  order moves each card from where it was to its new slot; newcomers pop in
+  and leavers fade out where they stood. Change your mind halfway and the
+  cards simply turn around from wherever they are. The release timeline
+  behaves the same way.
+- **The detail panel** slides in from the side (a bottom sheet on phones)
+  while the tapped app icon flies into place; closing reverses from wherever
+  the panel got to and sends the icon home to its card.
+- **Scrolling** reveals cards and releases once, as they come into view —
+  nothing is ever left half-faded.
+- **Small things:** tab indicators glide (and only glide when the selection
+  changes), menus unfold, presses give, watching an app pops the star with a
+  spark burst, toasts count down and pause while hovered, and the theme
+  switch reveals the new theme in a circle — in chunky pixel steps for
+  MS Paint.
+- Hover and press effects use the separate `translate`/`scale` properties
+  so they never fight the layout animations, and nothing leaves a stacking
+  layer behind that could trap a menu under the cards.
+- Everything turns into an instant state change under
+  `prefers-reduced-motion`.
+
+### Translating release notes
+
+Release notes that aren't in English get a **Translate** button in the detail
+panel. Browsers with built-in on-device translation (recent Chrome) translate
+right there — nothing is sent anywhere — with a "Show original" toggle.
+Everywhere else the button opens Google Translate in a new tab with the notes
+filled in. AppWatch itself never calls a translation service.
 
 ## Store-wide discovery & your local watchlist
 

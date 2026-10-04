@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { AppCard } from './components/AppCard.tsx';
 import { AppDetail } from './components/AppDetail.tsx';
 import type { HistoryState } from './components/AppDetail.tsx';
@@ -8,10 +8,12 @@ import { Dropdown } from './components/Dropdown.tsx';
 import { LoadFailed, LoadingGrid, NoAppsYet, NoResults } from './components/EmptyStates.tsx';
 import { Footer } from './components/Footer.tsx';
 import { Header } from './components/Header.tsx';
-import { CheckIcon, CloseIcon, GridIcon, PulseIcon } from './components/Icons.tsx';
+import { CheckIcon, GridIcon, PulseIcon } from './components/Icons.tsx';
 import { InsightsPanel } from './components/InsightsPanel.tsx';
 import { SearchBar } from './components/SearchBar.tsx';
 import { SlidingTabs } from './components/SlidingTabs.tsx';
+import { Toast } from './components/Toast.tsx';
+import type { ToastMessage } from './components/Toast.tsx';
 import { UpdatesTimeline } from './components/UpdatesTimeline.tsx';
 import { CATALOG } from './lib/catalogData.ts';
 import {
@@ -38,11 +40,10 @@ import {
 } from './lib/groups.ts';
 import { createLocalAppsStore, makeLocalApp } from './lib/localApps.ts';
 import type { LocalApp } from './lib/localApps.ts';
-import { prefersReducedMotion, supportsViewTransitions, transition } from './lib/motion.ts';
+import { createListMotion, prefersReducedMotion, slideContent, themeReveal } from './lib/motion.ts';
 import { readPref, writePref } from './lib/prefs.ts';
 import { applyTheme, currentTheme, persistTheme } from './lib/theme.ts';
 import type { ThemeId } from './lib/theme.ts';
-import { themeReveal } from './lib/motion.ts';
 import { buildTimeline } from './lib/timeline.ts';
 import { createWatchlist } from './lib/watchlist.ts';
 import { parseStoreInput, storeUrlFor } from './shared/storeRefs.ts';
@@ -62,22 +63,17 @@ type HistoryLoad =
 
 type View = 'apps' | 'updates';
 
-interface Toast {
-  id: number;
-  text: string;
-  action?: { label: string; run: () => void };
-}
-
 interface Selection {
   listingId: string;
+  /** Bumped for every opening so each one gets a fresh panel and entrance. */
+  openId: number;
+  /** The icon that was tapped; it flies into the panel. */
+  origin: HTMLElement | null;
   closing: boolean;
-  morphing: boolean;
 }
 
 const INSIGHTS_PREF_KEY = 'appwatch:insights-open:v1';
 const VIEW_PREF_KEY = 'appwatch:view:v1';
-const HERO = 'hero-icon';
-const CLOSE_MS = 240;
 
 const SORT_OPTIONS: { value: SortKey; label: string; description: string }[] = [
   { value: 'updated', label: 'Latest update', description: 'Most recent release first' },
@@ -146,21 +142,18 @@ function discoveredToLocal(app: DiscoveredApp): LocalApp {
   });
 }
 
-/** An element is worth morphing to/from only when it is on screen. */
-function onScreen(el: Element | null | undefined): el is HTMLElement {
-  if (!(el instanceof HTMLElement)) return false;
-  const rect = el.getBoundingClientRect();
-  return rect.bottom > 0 && rect.top < innerHeight && rect.width > 0;
+/** Height of the sticky chrome (header + collection tabs) at the top. */
+function stickyOffset(): number {
+  return document.querySelector('.collections')?.getBoundingClientRect().bottom ?? 60;
 }
 
-function cardIconFor(groupKey: string): HTMLElement | null {
-  return document.querySelector<HTMLElement>(
-    `.card[data-group="${CSS.escape(groupKey)}"] .card__icon`,
+/** The icon inside whatever was tapped: a card or a timeline release. */
+function iconFor(trigger: HTMLElement | null): HTMLElement | null {
+  if (!trigger) return null;
+  return (
+    trigger.closest('.card')?.querySelector<HTMLElement>('.card__icon') ??
+    trigger.querySelector<HTMLElement>('.app-icon')
   );
-}
-
-function setVtName(el: HTMLElement | null | undefined, name: string): void {
-  if (el) el.style.viewTransitionName = name;
 }
 
 export function App() {
@@ -172,21 +165,32 @@ export function App() {
   const [theme, setTheme] = useState<ThemeId>(currentTheme);
   const [selection, setSelection] = useState<Selection | null>(() => {
     const id = readHashListingId();
-    return id ? { listingId: id, closing: false, morphing: false } : null;
+    return id ? { listingId: id, openId: 0, origin: null, closing: false } : null;
   });
   const [historyLoad, setHistoryLoad] = useState<HistoryLoad>({ phase: 'idle' });
   const [insightsOpen, setInsightsOpen] = useState(() => readPref(INSIGHTS_PREF_KEY) === '1');
   const [discovery, setDiscovery] = useState<DiscoveryState>({ phase: 'idle' });
   const [localRefreshing, setLocalRefreshing] = useState(false);
-  const [toast, setToast] = useState<Toast | null>(null);
-  const [intro, setIntro] = useState(true);
+  const [toast, setToast] = useState<ToastMessage | null>(null);
 
   const searchRef = useRef<HTMLInputElement>(null);
+  const viewRef = useRef<HTMLDivElement>(null);
   const detailTrigger = useRef<HTMLElement | null>(null);
   const pushedDetail = useRef(false);
-  const toastTimer = useRef<ReturnType<typeof setTimeout>>();
-  const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+  const openCounter = useRef(0);
   const refreshing = useRef(false);
+
+  // Motion for the card grid and the release timeline: items glide to new
+  // positions when filters change, and reveal as they scroll into view.
+  const gridMotion = useMemo(
+    () => createListMotion({ item: '.card[data-key]', flip: true, stickyOffset }),
+    [],
+  );
+  const timelineMotion = useMemo(
+    () => createListMotion({ item: '.timeline__item[data-key]', flip: true, stickyOffset }),
+    [],
+  );
+  useLayoutEffect(() => gridMotion.afterRender());
 
   const watchlist = useMemo(() => createWatchlist(), []);
   const [watchedIds, setWatchedIds] = useState<ReadonlySet<string>>(() => watchlist.ids());
@@ -194,11 +198,10 @@ export function App() {
   const localStore = useMemo(() => createLocalAppsStore(), []);
   const [localApps, setLocalApps] = useState<LocalApp[]>(() => localStore.list());
 
-  const showToast = useCallback((text: string, action?: Toast['action']) => {
-    clearTimeout(toastTimer.current);
+  const showToast = useCallback((text: string, action?: ToastMessage['action']) => {
     setToast({ id: Date.now(), text, action });
-    toastTimer.current = setTimeout(() => setToast(null), action ? 7000 : 5000);
   }, []);
+  const dropToast = useCallback(() => setToast(null), []);
 
   /**
    * Load the dashboard data. A soft refresh (used when the freshness poll
@@ -218,7 +221,9 @@ export function App() {
             if (soft) setHistoryLoad({ phase: 'idle' });
           };
           if (soft) {
-            void transition('grid', apply);
+            gridMotion.capture();
+            timelineMotion.capture();
+            apply();
             const updates = status?.updatesDetected ?? 0;
             showToast(
               `Updated with the latest check${
@@ -241,23 +246,12 @@ export function App() {
           refreshing.current = false;
         });
     },
-    [showToast],
+    [showToast, gridMotion, timelineMotion],
   );
 
   useEffect(() => {
     fetchData();
-    return () => {
-      clearTimeout(toastTimer.current);
-      clearTimeout(closeTimer.current);
-    };
   }, [fetchData]);
-
-  // The staggered entrance runs once, when the first data arrives.
-  useEffect(() => {
-    if (load.phase !== 'ready' || !intro) return;
-    const timer = setTimeout(() => setIntro(false), 1400);
-    return () => clearTimeout(timer);
-  }, [load.phase, intro]);
 
   const needsHistory = selection !== null || view === 'updates';
   useEffect(() => {
@@ -343,28 +337,51 @@ export function App() {
 
   /* ------------------------------- Actions -------------------------------- */
 
-  const updateFilters = useCallback((next: Partial<GroupFilters>, animate = true) => {
-    const apply = () => setFilters((prev) => ({ ...prev, ...next }));
-    if (animate) void transition('grid', apply);
-    else apply();
-  }, []);
+  /** Snapshot both lists before a change so the next render can animate it. */
+  const captureLists = useCallback(
+    (keepInView: boolean) => {
+      gridMotion.capture({ keepInView });
+      timelineMotion.capture({ keepInView });
+    },
+    [gridMotion, timelineMotion],
+  );
+
+  const updateFilters = useCallback(
+    (next: Partial<GroupFilters>) => {
+      // Typing keeps the page where it is; every other filter brings the
+      // results into view.
+      captureLists(next.query === undefined);
+      setFilters((prev) => ({ ...prev, ...next }));
+    },
+    [captureLists],
+  );
 
   const clearFilters = useCallback(() => {
-    void transition('grid', () => {
-      setFilters(DEFAULT_GROUP_FILTERS);
-      setDiscovery({ phase: 'idle' });
-    });
-  }, []);
+    captureLists(true);
+    setFilters(DEFAULT_GROUP_FILTERS);
+    setDiscovery({ phase: 'idle' });
+  }, [captureLists]);
 
+  const viewDirection = useRef<1 | -1>(1);
   const changeView = useCallback(
     (next: View) => {
       if (next === view) return;
       writePref(VIEW_PREF_KEY, next);
-      document.documentElement.dataset.vtDir = next === 'updates' ? 'forward' : 'back';
-      void transition('view', () => setView(next));
+      viewDirection.current = next === 'updates' ? 1 : -1;
+      setView(next);
     },
     [view],
   );
+
+  // Apps <-> Updates: the new view slides in from the direction of travel.
+  const firstView = useRef(true);
+  useLayoutEffect(() => {
+    if (firstView.current) {
+      firstView.current = false;
+      return;
+    }
+    slideContent(viewRef.current, viewDirection.current);
+  }, [view]);
 
   const changeTheme = useCallback((next: ThemeId, origin: HTMLElement | null) => {
     themeReveal(
@@ -390,17 +407,19 @@ export function App() {
       const removed = localApps.filter((local) => group.listings.some((l) => l.id === local.id));
       let list = localApps;
       for (const local of removed) list = localStore.remove(local.id);
-      void transition('grid', () => setLocalApps(list));
+      gridMotion.capture();
+      setLocalApps(list);
       showToast(`Stopped watching ${group.name}.`, {
         label: 'Undo',
         run: () => {
           let restored = localStore.list();
           for (const local of removed) restored = localStore.save(local);
-          void transition('grid', () => setLocalApps(restored));
+          gridMotion.capture();
+          setLocalApps(restored);
         },
       });
     },
-    [localApps, localStore, showToast],
+    [localApps, localStore, showToast, gridMotion],
   );
 
   const toggleWatch = useCallback(
@@ -421,92 +440,57 @@ export function App() {
 
   /* ------------------------ Detail panel + deep links ---------------------- */
 
-  const openDetail = useCallback(
-    (listingId: string, trigger: HTMLElement | null, push = true) => {
-      clearTimeout(closeTimer.current);
-      if (trigger) detailTrigger.current = trigger;
-      if (push) {
-        try {
-          history.pushState({ appwatch: 'detail' }, '', `#app=${encodeURIComponent(listingId)}`);
-          pushedDetail.current = true;
-        } catch {
-          location.hash = `app=${encodeURIComponent(listingId)}`;
-        }
+  const openDetail = useCallback((listingId: string, trigger: HTMLElement | null, push = true) => {
+    if (trigger) detailTrigger.current = trigger;
+    if (push) {
+      try {
+        history.pushState({ appwatch: 'detail' }, '', `#app=${encodeURIComponent(listingId)}`);
+        pushedDetail.current = true;
+      } catch {
+        location.hash = `app=${encodeURIComponent(listingId)}`;
       }
-      const target = findByListingId(groups, listingId);
-      const source = target ? cardIconFor(target.group.key) : null;
-      const morph = supportsViewTransitions();
-      const heroFrom = onScreen(source) ? source : null;
-      setVtName(heroFrom, HERO);
-      void transition(
-        'detail',
-        () => {
-          setVtName(heroFrom, '');
-          setSelection({ listingId, closing: false, morphing: morph });
-        },
-        undefined,
-        {
-          afterRender: () => {
-            if (heroFrom) setVtName(document.querySelector<HTMLElement>('.detail__icon'), HERO);
-          },
-          finished: () => setVtName(document.querySelector<HTMLElement>('.detail__icon'), ''),
-        },
-      );
-    },
-    [groups],
-  );
+    }
+    openCounter.current += 1;
+    setSelection({
+      listingId,
+      openId: openCounter.current,
+      origin: iconFor(trigger),
+      closing: false,
+    });
+  }, []);
 
   const restoreFocus = useCallback((groupKey: string | null) => {
     const trigger = detailTrigger.current;
     detailTrigger.current = null;
     const fallback = groupKey
-      ? document.querySelector<HTMLElement>(
-          `.card[data-group="${CSS.escape(groupKey)}"] .card__open`,
-        )
+      ? document.querySelector<HTMLElement>(`.card[data-key="${CSS.escape(groupKey)}"] .card__open`)
       : null;
     const target = trigger && document.contains(trigger) ? trigger : fallback;
     target?.focus({ preventScroll: true });
   }, []);
 
-  /** Animate the panel away. Called for UI closes and for Back navigation. */
-  const dismissDetail = useCallback(() => {
-    const groupKey = found?.group.key ?? null;
-    if (supportsViewTransitions()) {
-      const detailIcon = document.querySelector<HTMLElement>('.detail__icon');
-      const cardIcon = groupKey ? cardIconFor(groupKey) : null;
-      const morph = onScreen(detailIcon) && onScreen(cardIcon);
-      if (morph) setVtName(detailIcon, HERO);
-      void transition('detail', () => setSelection(null), undefined, {
-        afterRender: () => {
-          if (morph && groupKey) setVtName(cardIconFor(groupKey), HERO);
-          restoreFocus(groupKey);
-        },
-        finished: () => {
-          if (groupKey) setVtName(cardIconFor(groupKey), '');
-        },
-      });
-      return;
-    }
-    if (prefersReducedMotion()) {
-      setSelection(null);
-      requestAnimationFrame(() => restoreFocus(groupKey));
-      return;
-    }
-    setSelection((current) => (current ? { ...current, closing: true } : current));
-    clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => {
-      setSelection(null);
-      requestAnimationFrame(() => restoreFocus(groupKey));
-    }, CLOSE_MS);
-  }, [found, restoreFocus]);
+  /** Start the exit animation; the panel calls finishClose when it's done. */
+  const beginClose = useCallback(() => {
+    setSelection((current) =>
+      current && !current.closing ? { ...current, closing: true } : current,
+    );
+  }, []);
 
-  const closeDetail = useCallback(() => {
+  const finishClose = useCallback(
+    (groupKey: string | null) => {
+      setSelection(null);
+      requestAnimationFrame(() => restoreFocus(groupKey));
+    },
+    [restoreFocus],
+  );
+
+  const requestClose = useCallback(() => {
     if (
       pushedDetail.current &&
       (history.state as { appwatch?: string } | null)?.appwatch === 'detail'
     ) {
       // Popping our own history entry keeps Back/Forward honest; the
-      // popstate handler below runs the close animation.
+      // popstate handler below starts the exit animation.
       history.back();
       return;
     }
@@ -515,8 +499,8 @@ export function App() {
     } catch {
       location.hash = '';
     }
-    dismissDetail();
-  }, [dismissDetail]);
+    beginClose();
+  }, [beginClose]);
 
   // Back/Forward and hand-edited #app= links.
   useEffect(() => {
@@ -526,12 +510,12 @@ export function App() {
         if (id !== selection?.listingId) openDetail(id, null, false);
       } else if (selection) {
         pushedDetail.current = false;
-        dismissDetail();
+        beginClose();
       }
     };
     addEventListener('popstate', onPop);
     return () => removeEventListener('popstate', onPop);
-  }, [selection, openDetail, dismissDetail]);
+  }, [selection, openDetail, beginClose]);
 
   const selectListing = useCallback((listingId: string) => {
     try {
@@ -587,10 +571,11 @@ export function App() {
   const addDiscovered = useCallback(
     (app: DiscoveredApp) => {
       const list = localStore.save(discoveredToLocal(app));
-      void transition('grid', () => setLocalApps(list));
+      gridMotion.capture();
+      setLocalApps(list);
       showToast(`Watching ${app.name} in this browser.`);
     },
-    [localStore, showToast],
+    [localStore, showToast, gridMotion],
   );
 
   const addUnresolved = useCallback(
@@ -612,10 +597,11 @@ export function App() {
           resolved: false,
         }),
       );
-      void transition('grid', () => setLocalApps(list));
+      gridMotion.capture();
+      setLocalApps(list);
       showToast(`Watching ${ref.storeId} in this browser.`);
     },
-    [localStore, showToast],
+    [localStore, showToast, gridMotion],
   );
 
   const refreshLocal = useCallback(
@@ -747,7 +733,7 @@ export function App() {
                 inputRef={searchRef}
                 onSubmit={submitSearch}
                 onInput={(query) => {
-                  updateFilters({ query }, false);
+                  updateFilters({ query });
                   setDiscovery({ phase: 'idle' });
                 }}
               />
@@ -850,6 +836,7 @@ export function App() {
 
           <div
             class="view"
+            ref={viewRef}
             id="view-panel"
             role="tabpanel"
             aria-label={view === 'apps' ? 'Apps' : 'Updates'}
@@ -875,12 +862,11 @@ export function App() {
                 ) : filteredGroups.length === 0 ? (
                   <NoResults onClear={clearFilters} searching={filters.query.trim().length > 1} />
                 ) : (
-                  <div class={`grid${intro ? ' grid--intro' : ''}`}>
-                    {filteredGroups.map((group, index) => (
+                  <div class="grid" ref={gridMotion.attach}>
+                    {filteredGroups.map((group) => (
                       <AppCard
                         key={group.key}
                         group={group}
-                        index={index}
                         watched={isGroupWatched(group, watchedIds)}
                         open={found?.group.key === group.key}
                         onToggleWatch={toggleWatch}
@@ -895,6 +881,7 @@ export function App() {
             {ready && view === 'updates' ? (
               historyLoad.phase === 'ready' ? (
                 <UpdatesTimeline
+                  motion={timelineMotion}
                   events={timeline}
                   onOpen={openDetail}
                   onClearFilters={clearFilters}
@@ -933,53 +920,25 @@ export function App() {
 
       {selection && found ? (
         <AppDetail
+          key={selection.openId}
+          origin={selection.origin}
+          onRequestClose={requestClose}
+          onClosed={() => finishClose(found.group.key)}
           group={found.group}
           listing={found.listing}
           collectionLabel={collectionLabels.get(found.group.collection) ?? null}
           history={historyFor(historyLoad, found.listing.id)}
           watched={isGroupWatched(found.group, watchedIds)}
           closing={selection.closing}
-          morphing={selection.morphing}
           onSelectListing={selectListing}
           onToggleWatch={() => toggleWatch(found.group)}
-          onClose={closeDetail}
           onRefreshLocal={selectedLocal ? refreshLocal : undefined}
           localRefreshing={localRefreshing}
           localAddedAt={selectedLocal?.addedAt ?? null}
         />
       ) : null}
 
-      {toast ? (
-        <div
-          class="toast"
-          role="status"
-          key={toast.id}
-          style={{ '--toast-ms': `${toast.action ? 7000 : 5000}ms` }}
-        >
-          <span class="toast__text">{toast.text}</span>
-          {toast.action ? (
-            <button
-              type="button"
-              class="toast__action"
-              onClick={() => {
-                toast.action?.run();
-                setToast(null);
-              }}
-            >
-              {toast.action.label}
-            </button>
-          ) : null}
-          <button
-            type="button"
-            class="icon-button icon-button--small"
-            aria-label="Dismiss"
-            onClick={() => setToast(null)}
-          >
-            <CloseIcon size={14} />
-          </button>
-          <span class="toast__timer" aria-hidden="true" />
-        </div>
-      ) : null}
+      {toast ? <Toast key={toast.id} toast={toast} onDone={dropToast} /> : null}
     </>
   );
 }

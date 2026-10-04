@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- 10 more tracked apps (66 apps, 132 listings): one more AI assistant in the
+  AI tab, plus TikTok, Prime Video, Hulu, Google Drive, Google Photos,
+  Microsoft Edge, Uber Eats, Coinbase and Google Translate.
+- A Translate button for release notes that aren't in English: on-device
+  translation where the browser supports it, otherwise Google Translate in a
+  new tab.
+
 - **Collections** as tabs — AI, Social, Messaging, Entertainment,
   Productivity, Browsers & Privacy, Travel & Maps, Shopping & Money and
   Learning & Fitness — defined in a new `apps.config.json` format where each
@@ -25,11 +32,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update detection for Google Play listings that publish no single version:
   a newer store release date is recorded as an update (history entries may
   now have `version: null`, unique by release date).
-- A rebuilt motion system on View Transitions, springs (CSS `linear()`) and
-  scroll-driven animations: cards glide between layouts, the app icon flies
-  into the detail panel, views slide in the direction of travel, themes reveal
-  in a circle from the theme button, tab indicators glide, and entrances
-  cascade — all removed under reduced motion.
+- A motion system with spring easing: cards glide between layouts, the app
+  icon flies into the detail panel, views slide in the direction of travel,
+  themes reveal in a circle from the theme button, tab indicators glide, and
+  entrances cascade — all removed under reduced motion.
 - Self-hosted Onest and Geist Mono typefaces.
 - Keyboard shortcut: `/` jumps to search; Back/Forward open and close the
   detail panel.
@@ -62,6 +68,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The motion system was rebuilt on the Web Animations API: interruptible
+  layout animations (cards and releases glide, enter and leave), an icon
+  flight and panel slide for the detail view that reverse smoothly when
+  closed early, one-time reveal-on-scroll, a hover-pausing toast countdown,
+  and tab indicators that only glide on real selection changes. View
+  Transitions are now only used for the theme reveal, so animations no longer
+  block clicks or snap when interrupted.
+- npm dependencies updated (folds in the open Dependabot update).
+
 - Complete visual redesign of every surface: header, hero, controls, cards,
   detail panel (side panel on wide screens, bottom sheet on phones), insights,
   empty states, toasts and footer, across all three themes.
@@ -91,6 +106,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   blue identity.
 
 ### Fixed
+
+- Microsoft Copilot failed to resolve on both stores ("2 failing"): Microsoft
+  merged its standalone Copilot app into the former Microsoft 365 app, so the
+  catalog now tracks App Store ID 541164041 and
+  `com.microsoft.office.officehubrow`.
+- The sort menu opened underneath the cards; the filter bar now sits on its
+  own layer above the grid.
+- Cards could sit half-faded at the bottom of the screen (scroll-scrubbed
+  reveals) and hover/press effects could jump after a layout animation.
 
 - The search field no longer shows two stacked focus rings — exactly one
   visible focus indicator remains, without removing keyboard focus visibility.
