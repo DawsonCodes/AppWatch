@@ -157,6 +157,12 @@
     ],
     "apple:541164041": [
       {
+        "version": "2.114.3",
+        "releaseDate": "2026-10-05T04:10:19.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
+      {
         "version": "2.114.2",
         "releaseDate": "2026-09-30T07:03:58.000Z",
         "releaseNotes": "• General quality and performance enhancements.",
@@ -275,6 +281,12 @@
     ],
     "apple:389801252": [
       {
+        "version": "450.0.0",
+        "releaseDate": "2026-10-05T12:34:21.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
+      {
         "version": "449.0.0",
         "releaseDate": "2026-10-02T22:32:18.000Z",
         "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
@@ -383,6 +395,12 @@
     ],
     "apple:6446901002": [
       {
+        "version": "450.0",
+        "releaseDate": "2026-10-05T14:02:47.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
+      {
         "version": "449.0",
         "releaseDate": "2026-09-28T12:23:02.000Z",
         "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
@@ -396,6 +414,12 @@
       }
     ],
     "google:com.instagram.barcelona": [
+      {
+        "version": "449.0.0.54.82",
+        "releaseDate": "2026-09-29T02:12:06.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": "448.0.0.54.85",
         "releaseDate": "2026-09-21T20:35:50.000Z",
@@ -650,6 +674,12 @@
       }
     ],
     "apple:310633997": [
+      {
+        "version": "26.39.73",
+        "releaseDate": "2026-10-05T12:23:11.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": "26.38.74",
         "releaseDate": "2026-09-28T15:54:35.000Z",
@@ -964,6 +994,12 @@
     "google:com.spotify.music": [
       {
         "version": null,
+        "releaseDate": "2026-10-05T08:34:41.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-29T14:38:09.000Z",
         "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
         "detectedAt": "2026-09-30T16:24:50.569Z"
@@ -1136,6 +1172,12 @@
       }
     ],
     "apple:545519333": [
+      {
+        "version": "10.151.1",
+        "releaseDate": "2026-10-05T09:18:43.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": "10.150.3",
         "releaseDate": "2026-09-29T08:14:17.000Z",
@@ -1447,6 +1489,12 @@
     ],
     "apple:507874739": [
       {
+        "version": "4.2640.41000",
+        "releaseDate": "2026-10-05T13:51:21.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
+      {
         "version": "4.2639.40801",
         "releaseDate": "2026-09-28T15:46:16.000Z",
         "releaseNotes": "* Bug fixes and performance improvements",
@@ -1478,6 +1526,12 @@
       }
     ],
     "apple:989804926": [
+      {
+        "version": "157.1",
+        "releaseDate": "2026-10-05T04:09:49.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": "157.0",
         "releaseDate": "2026-09-28T02:01:47.000Z",
@@ -1693,6 +1747,12 @@
     ],
     "apple:979659905": [
       {
+        "version": "7.11.7",
+        "releaseDate": "2026-10-05T12:01:25.000Z",
+        "releaseNotes": "Bug fixes and small improvements",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
+      {
         "version": "7.11.6",
         "releaseDate": "2026-09-28T14:50:29.000Z",
         "releaseNotes": "Scrolling through emails now takes just one finger instead of two.\nFixed text appearing too small in some emails.",
@@ -1706,6 +1766,12 @@
       }
     ],
     "google:ch.protonmail.android": [
+      {
+        "version": "7.11.9",
+        "releaseDate": "2026-10-01T09:39:45.000Z",
+        "releaseNotes": "Multiple fixes and performance improvements.",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": "7.11.8",
         "releaseDate": "2026-09-21T11:39:18.000Z",
@@ -1984,6 +2050,12 @@
       }
     ],
     "apple:719972451": [
+      {
+        "version": "8.39.0",
+        "releaseDate": "2026-10-05T05:00:23.000Z",
+        "releaseNotes": "Minor updates and performance improvements",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": "8.38.0",
         "releaseDate": "2026-09-28T05:01:01.000Z",
@@ -2340,6 +2412,12 @@
       }
     ],
     "google:com.google.android.apps.translate": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-05T07:09:23.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-10-05T14:38:01.783Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-01T14:01:00.000Z",
