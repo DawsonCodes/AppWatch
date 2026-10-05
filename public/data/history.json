@@ -1633,6 +1633,12 @@
     ],
     "google:com.brave.browser": [
       {
+        "version": "1.96.61",
+        "releaseDate": "2026-10-02T19:16:06.000Z",
+        "releaseNotes": "In this release we:\n- Introduced a setting to disable tab groups, making it easier to customize your browser. This can be found at settings → tabs and tab groups. Initially this will not be available to all users. It will be rolled out in phases.\n- Made further improvements to picture-in-picture video playback.\n- Made several look and feel design improvements.\n- Upgraded to Chromium 154.",
+        "detectedAt": "2026-10-05T05:39:36.743Z"
+      },
+      {
         "version": "1.96.60",
         "releaseDate": "2026-09-30T19:53:50.000Z",
         "releaseNotes": "In this release we:\n- Introduced a setting to disable tab groups, making it easier to customize your browser. This can be found at settings → tabs and tab groups. Initially this will not be available to all users. It will be rolled out in phases.\n- Made further improvements to picture-in-picture video playback.\n- Made several look and feel design improvements.\n- Upgraded to Chromium 154.",
