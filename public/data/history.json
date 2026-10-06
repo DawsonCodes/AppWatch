@@ -624,6 +624,12 @@
     "google:com.pinterest": [
       {
         "version": null,
+        "releaseDate": "2026-10-05T23:06:47.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-10-06T06:20:19.685Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-28T19:10:08.000Z",
         "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
         "detectedAt": "2026-09-29T01:57:22.448Z"
@@ -992,6 +998,12 @@
     "google:com.netflix.mediaclient": [
       {
         "version": null,
+        "releaseDate": "2026-10-05T22:30:43.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-10-06T06:20:19.685Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-29T17:36:15.000Z",
         "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
         "detectedAt": "2026-09-29T22:15:09.573Z"
@@ -1112,6 +1124,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-10-06T02:10:03.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-06T06:20:19.685Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-02T19:35:24.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-10-02T23:46:47.181Z"
@@ -1220,6 +1238,12 @@
     "google:com.roblox.client": [
       {
         "version": null,
+        "releaseDate": "2026-10-05T17:56:51.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-06T06:20:19.685Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-30T16:44:42.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
         "detectedAt": "2026-10-01T08:56:23.423Z"
@@ -1308,6 +1332,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-06T00:22:13.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-06T06:20:19.685Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-01T23:36:28.000Z",
