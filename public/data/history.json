@@ -119,6 +119,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.44-release.00",
+        "releaseDate": "2026-10-05T22:39:31.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-06T15:12:14.012Z"
+      },
+      {
         "version": "1.2.43-release.02",
         "releaseDate": "2026-10-03T00:34:33.000Z",
         "releaseNotes": null,
@@ -286,6 +292,12 @@
       }
     ],
     "apple:389801252": [
+      {
+        "version": "450.1.0",
+        "releaseDate": "2026-10-06T12:29:07.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
+        "detectedAt": "2026-10-06T15:12:14.012Z"
+      },
       {
         "version": "450.0.0",
         "releaseDate": "2026-10-05T12:34:21.000Z",
@@ -478,6 +490,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-06T08:56:50.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-06T15:12:14.012Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-03T00:54:22.000Z",
@@ -717,6 +735,12 @@
     ],
     "apple:310633997": [
       {
+        "version": "26.39.74",
+        "releaseDate": "2026-10-06T09:33:53.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-06T15:12:14.012Z"
+      },
+      {
         "version": "26.39.73",
         "releaseDate": "2026-10-05T12:23:11.000Z",
         "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
@@ -908,6 +932,12 @@
       }
     ],
     "apple:454638411": [
+      {
+        "version": "582.0.0",
+        "releaseDate": "2026-10-06T08:36:20.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-10-06T15:12:14.012Z"
+      },
       {
         "version": "581.0.0",
         "releaseDate": "2026-09-30T12:28:32.000Z",
@@ -1798,6 +1828,12 @@
       }
     ],
     "apple:1052879175": [
+      {
+        "version": "1.96",
+        "releaseDate": "2026-10-06T14:25:38.000Z",
+        "releaseNotes": "In this release:\n- UI enhancements\n- Other enhancements, stability improvements, and security updates\n\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know. And, as ever, thanks for using Brave!",
+        "detectedAt": "2026-10-06T15:12:14.012Z"
+      },
       {
         "version": "1.95",
         "releaseDate": "2026-09-24T14:28:51.000Z",
