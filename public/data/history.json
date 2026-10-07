@@ -453,6 +453,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.32.0-prod.01",
+        "releaseDate": "2026-10-07T00:28:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-07T23:05:16.964Z"
+      },
+      {
         "version": "12.31.0-prod.01",
         "releaseDate": "2026-10-02T03:22:41.000Z",
         "releaseNotes": null,
@@ -614,6 +620,12 @@
       }
     ],
     "google:com.snapchat.android": [
+      {
+        "version": "14.27.0.53",
+        "releaseDate": "2026-10-06T19:54:08.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-10-07T23:05:16.964Z"
+      },
       {
         "version": "14.26.1.0",
         "releaseDate": "2026-10-02T07:58:14.000Z",
@@ -2158,6 +2170,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-10-07T18:12:07.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-07T23:05:16.964Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-02T00:24:50.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-10-02T05:36:53.406Z"
@@ -2288,6 +2306,12 @@
       }
     ],
     "google:me.lyft.android": [
+      {
+        "version": "2026.38.31.1791332104",
+        "releaseDate": "2026-10-07T00:36:34.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-10-07T23:05:16.964Z"
+      },
       {
         "version": "2026.37.3.1790148538",
         "releaseDate": "2026-09-25T19:02:38.000Z",
