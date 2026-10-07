@@ -83,6 +83,12 @@
     ],
     "apple:6477489729": [
       {
+        "version": "1.2026.3970207",
+        "releaseDate": "2026-10-07T09:11:13.000Z",
+        "releaseNotes": "- UI improvements and bug fixes",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "1.2026.3870402",
         "releaseDate": "2026-10-02T10:01:23.000Z",
         "releaseNotes": "- UI improvements and bug fixes",
@@ -110,6 +116,12 @@
       }
     ],
     "apple:6670324846": [
+      {
+        "version": "1.4.49",
+        "releaseDate": "2026-10-07T16:27:09.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": "1.4.48",
         "releaseDate": "2026-10-06T18:50:55.000Z",
@@ -363,6 +375,12 @@
     ],
     "apple:284882215": [
       {
+        "version": "582.0.0",
+        "releaseDate": "2026-10-07T14:52:01.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "581.0.0",
         "releaseDate": "2026-09-30T11:45:51.000Z",
         "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
@@ -390,6 +408,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.32.1",
+        "releaseDate": "2026-10-07T09:39:39.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": "12.32",
         "releaseDate": "2026-10-06T16:33:33.000Z",
@@ -571,6 +595,12 @@
     ],
     "apple:447188370": [
       {
+        "version": "14.27.0.54",
+        "releaseDate": "2026-10-07T11:10:27.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "14.26.0.48",
         "releaseDate": "2026-09-30T12:52:43.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
@@ -650,6 +680,12 @@
       }
     ],
     "apple:429047995": [
+      {
+        "version": "14.39",
+        "releaseDate": "2026-10-07T16:19:14.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": "14.38",
         "releaseDate": "2026-10-01T17:26:51.000Z",
@@ -1245,6 +1281,12 @@
     ],
     "apple:284993459": [
       {
+        "version": "27.1",
+        "releaseDate": "2026-10-07T09:11:25.000Z",
+        "releaseNotes": "Thanks for using Shazam! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. \n\nDon’t forget to keep your Shazam History safe and in sync between your devices. Simply turn on iCloud sync in Shazam Settings. \n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.shazam.com.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "27.0",
         "releaseDate": "2026-09-22T13:37:11.000Z",
         "releaseNotes": "Thanks for using Shazam! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. \n\nDon’t forget to keep your Shazam History safe and in sync between your devices. Simply turn on iCloud sync in Shazam Settings. \n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.shazam.com.",
@@ -1252,6 +1294,12 @@
       }
     ],
     "google:com.shazam.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-07T09:06:25.000Z",
+        "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-02T17:08:34.000Z",
@@ -1579,6 +1627,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.345",
+        "releaseDate": "2026-10-07T16:42:39.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "1.7.344",
         "releaseDate": "2026-10-02T19:17:03.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -1659,6 +1713,12 @@
     ],
     "apple:897446215": [
       {
+        "version": "4.230.0",
+        "releaseDate": "2026-10-07T02:40:26.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "4.229.0",
         "releaseDate": "2026-10-01T22:56:46.000Z",
         "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
@@ -1712,6 +1772,12 @@
       }
     ],
     "google:com.google.android.apps.docs": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-07T16:20:53.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-30T00:39:54.000Z",
@@ -1804,6 +1870,12 @@
       }
     ],
     "google:org.mozilla.firefox": [
+      {
+        "version": "157.0.1",
+        "releaseDate": "2026-10-05T20:03:24.000Z",
+        "releaseNotes": "NEW\n- Recent searches: Tap the search field on the homepage to quickly return to your recent searches.\n- VPN availability: Free VPN is now available in more than 200 regions.\nFIXED\n- VPN stability: Fixed a crash that could occur when tapping the VPN location row as the VPN became unavailable.\n- History items are now grouped by exact date for easier browsing\n- You can now swipe to dismiss items on the Downloads page\n- Security and stability fixes.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": "157.0",
         "releaseDate": "2026-09-24T13:21:09.000Z",
@@ -2265,6 +2337,12 @@
     ],
     "apple:297606951": [
       {
+        "version": "27.17.10",
+        "releaseDate": "2026-10-07T12:38:38.000Z",
+        "releaseNotes": "Our new design provides easier access to the features you use most while on the go. This includes the homepage, account and order information, your cart and the ability to browse and discover Amazon departments, products, programs, and features.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "27.17.6",
         "releaseDate": "2026-10-05T21:32:39.000Z",
         "releaseNotes": "Our new design provides easier access to the features you use most while on the go. This includes the homepage, account and order information, your cart and the ability to browse and discover Amazon departments, products, programs, and features.",
@@ -2441,6 +2519,12 @@
     ],
     "apple:711923939": [
       {
+        "version": "5.72.1",
+        "releaseDate": "2026-10-07T16:36:41.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
+      {
         "version": "5.72.0",
         "releaseDate": "2026-10-05T16:45:35.000Z",
         "releaseNotes": "Bug Fixes and Improvements",
@@ -2466,6 +2550,12 @@
       }
     ],
     "google:com.squareup.cash": [
+      {
+        "version": "5.72.0",
+        "releaseDate": "2026-10-02T23:08:03.000Z",
+        "releaseNotes": "Various bug fixes and improvements.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": "5.71.0",
         "releaseDate": "2026-09-25T21:34:16.000Z",
@@ -2522,6 +2612,12 @@
       }
     ],
     "google:com.coinbase.android": [
+      {
+        "version": "14.38.54",
+        "releaseDate": "2026-10-02T02:35:35.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
+        "detectedAt": "2026-10-07T17:26:25.798Z"
+      },
       {
         "version": "14.37.53",
         "releaseDate": "2026-10-02T02:35:35.000Z",
