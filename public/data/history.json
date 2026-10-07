@@ -55,6 +55,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261005.20",
+        "releaseDate": "2026-10-06T21:47:25.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
+      {
         "version": "1.261002.20",
         "releaseDate": "2026-10-03T23:23:45.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -62,6 +68,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261005.20",
+        "releaseDate": "2026-10-06T03:41:43.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
       {
         "version": "1.261002.20",
         "releaseDate": "2026-10-03T03:41:29.000Z",
@@ -1184,6 +1196,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-10-06T23:06:19.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-06T02:10:03.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-10-06T06:20:19.685Z"
@@ -1587,6 +1605,12 @@
     ],
     "google:notion.id": [
       {
+        "version": "0.6.4206",
+        "releaseDate": "2026-10-06T22:55:49.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
+      {
         "version": "0.6.4196",
         "releaseDate": "2026-10-02T03:25:57.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -1704,6 +1728,12 @@
       }
     ],
     "google:com.google.android.apps.photos": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-06T21:16:40.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-29T21:01:09.000Z",
@@ -1844,6 +1874,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-06T18:36:21.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-02T02:19:12.000Z",
@@ -2203,6 +2239,12 @@
     ],
     "google:com.airbnb.android": [
       {
+        "version": "26.40",
+        "releaseDate": "2026-10-06T22:05:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
+      {
         "version": "26.39",
         "releaseDate": "2026-09-23T00:59:12.000Z",
         "releaseNotes": null,
@@ -2358,6 +2400,12 @@
       }
     ],
     "apple:351727428": [
+      {
+        "version": "26.22.0",
+        "releaseDate": "2026-10-06T22:37:20.000Z",
+        "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
       {
         "version": "26.21.0",
         "releaseDate": "2026-09-29T02:12:35.000Z",
@@ -2544,6 +2592,12 @@
       }
     ],
     "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-06T18:53:36.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-07T01:32:17.493Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-05T21:22:41.000Z",
