@@ -396,6 +396,12 @@
     "google:com.facebook.katana": [
       {
         "version": null,
+        "releaseDate": "2026-10-07T21:12:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-30T06:27:38.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-09-30T16:24:50.569Z"
@@ -739,6 +745,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.579",
+        "releaseDate": "2026-10-07T17:05:24.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
+      {
         "version": "9.1.578",
         "releaseDate": "2026-10-05T19:02:51.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -796,6 +808,12 @@
       }
     ],
     "apple:835599320": [
+      {
+        "version": "47.1.0",
+        "releaseDate": "2026-10-07T18:18:07.000Z",
+        "releaseNotes": "Squashed bugs for better experience.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": "47.0.0",
         "releaseDate": "2026-09-22T02:34:27.000Z",
@@ -1118,6 +1136,12 @@
     "google:com.netflix.mediaclient": [
       {
         "version": null,
+        "releaseDate": "2026-10-08T01:04:19.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-05T22:30:43.000Z",
         "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
         "detectedAt": "2026-10-06T06:20:19.685Z"
@@ -1136,6 +1160,12 @@
       }
     ],
     "apple:1446075923": [
+      {
+        "version": "5.19.0",
+        "releaseDate": "2026-10-07T17:27:19.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": "5.18.1",
         "releaseDate": "2026-10-01T21:36:23.000Z",
@@ -1178,6 +1208,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-07T06:27:03.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-05T08:34:41.000Z",
@@ -1348,6 +1384,12 @@
       }
     ],
     "apple:431946152": [
+      {
+        "version": "2.742.1053",
+        "releaseDate": "2026-10-07T17:33:12.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": "2.741.1062",
         "releaseDate": "2026-10-01T19:01:38.000Z",
@@ -1751,6 +1793,12 @@
     ],
     "google:com.canva.editor": [
       {
+        "version": "2.381.0",
+        "releaseDate": "2026-10-07T02:35:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
+      {
         "version": "2.380.0",
         "releaseDate": "2026-09-30T06:34:44.000Z",
         "releaseNotes": null,
@@ -1958,6 +2006,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-07T21:38:06.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-06T18:36:21.000Z",
@@ -2281,6 +2335,12 @@
     ],
     "apple:529379082": [
       {
+        "version": "2026.38.32",
+        "releaseDate": "2026-10-08T02:05:31.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
+      {
         "version": "2026.38.3",
         "releaseDate": "2026-10-05T21:02:42.000Z",
         "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
@@ -2326,6 +2386,12 @@
       }
     ],
     "apple:401626263": [
+      {
+        "version": "26.41",
+        "releaseDate": "2026-10-07T20:12:48.000Z",
+        "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": "26.40",
         "releaseDate": "2026-10-01T15:11:16.000Z",
@@ -2832,6 +2898,12 @@
       }
     ],
     "apple:426826309": [
+      {
+        "version": "484.0.0",
+        "releaseDate": "2026-10-07T20:15:48.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-10-08T06:03:42.125Z"
+      },
       {
         "version": "483.0.0",
         "releaseDate": "2026-09-30T19:21:33.000Z",
