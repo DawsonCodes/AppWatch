@@ -225,6 +225,12 @@
     ],
     "google:com.microsoft.office.officehubrow": [
       {
+        "version": "16.0.20527.20022",
+        "releaseDate": "2026-10-05T05:27:51.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-10-08T19:56:58.049Z"
+      },
+      {
         "version": "16.0.20520.20020",
         "releaseDate": "2026-09-25T11:53:49.000Z",
         "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
@@ -1034,6 +1040,12 @@
     "google:org.telegram.messenger": [
       {
         "version": null,
+        "releaseDate": "2026-10-07T10:45:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-08T19:56:58.049Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-28T09:08:30.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-09-30T16:24:50.569Z"
@@ -1440,6 +1452,12 @@
       }
     ],
     "google:com.roblox.client": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-07T17:33:23.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-08T19:56:58.049Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-05T17:56:51.000Z",
@@ -2408,6 +2426,12 @@
       }
     ],
     "google:me.lyft.android": [
+      {
+        "version": "2026.38.32.1791465968",
+        "releaseDate": "2026-10-08T13:39:58.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-10-08T19:56:58.049Z"
+      },
       {
         "version": "2026.38.31.1791332104",
         "releaseDate": "2026-10-07T00:36:34.000Z",
