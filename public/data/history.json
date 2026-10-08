@@ -117,6 +117,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.50",
+        "releaseDate": "2026-10-08T08:42:27.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
+      {
         "version": "1.4.49",
         "releaseDate": "2026-10-07T16:27:09.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -260,6 +266,12 @@
       }
     ],
     "apple:6737597349": [
+      {
+        "version": "2.6.2",
+        "releaseDate": "2026-10-08T08:56:38.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
       {
         "version": "2.6.1",
         "releaseDate": "2026-09-29T13:48:13.000Z",
@@ -831,6 +843,12 @@
     ],
     "apple:310633997": [
       {
+        "version": "26.39.75",
+        "releaseDate": "2026-10-08T05:50:34.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
+      {
         "version": "26.39.74",
         "releaseDate": "2026-10-06T09:33:53.000Z",
         "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
@@ -1194,6 +1212,12 @@
       }
     ],
     "apple:324684580": [
+      {
+        "version": "9.1.90",
+        "releaseDate": "2026-10-08T07:37:17.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
       {
         "version": "9.1.88",
         "releaseDate": "2026-10-01T15:03:03.000Z",
@@ -2111,6 +2135,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.297.0",
+        "releaseDate": "2026-10-05T09:51:15.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
+      {
         "version": "5.296.0",
         "releaseDate": "2026-09-28T17:14:00.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -2150,6 +2180,12 @@
       }
     ],
     "google:ch.protonmail.android": [
+      {
+        "version": "7.11.10",
+        "releaseDate": "2026-10-07T12:34:22.000Z",
+        "releaseNotes": "Multiple fixes and performance improvements.",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
       {
         "version": "7.11.9",
         "releaseDate": "2026-10-01T09:39:45.000Z",
@@ -2260,6 +2296,12 @@
       }
     ],
     "apple:323229106": [
+      {
+        "version": "5.25.0.0",
+        "releaseDate": "2026-10-08T12:32:53.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.",
+        "detectedAt": "2026-10-08T13:29:10.743Z"
+      },
       {
         "version": "5.24.5.1",
         "releaseDate": "2026-09-27T09:34:16.000Z",
