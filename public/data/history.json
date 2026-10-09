@@ -55,6 +55,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261007.20",
+        "releaseDate": "2026-10-08T19:21:12.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
+      {
         "version": "1.261005.20",
         "releaseDate": "2026-10-06T21:47:25.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -68,6 +74,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261007.20",
+        "releaseDate": "2026-10-09T04:11:42.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
       {
         "version": "1.261005.20",
         "releaseDate": "2026-10-06T03:41:43.000Z",
@@ -238,6 +250,12 @@
       }
     ],
     "apple:1668000334": [
+      {
+        "version": "26.40.0",
+        "releaseDate": "2026-10-08T20:09:53.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
       {
         "version": "26.39.0",
         "releaseDate": "2026-10-03T18:37:47.000Z",
@@ -432,6 +450,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.33",
+        "releaseDate": "2026-10-08T15:22:52.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
       {
         "version": "12.32.1",
         "releaseDate": "2026-10-07T09:39:39.000Z",
@@ -1037,6 +1061,12 @@
     ],
     "apple:686449807": [
       {
+        "version": "13.0",
+        "releaseDate": "2026-10-08T16:22:32.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
+      {
         "version": "12.9.4",
         "releaseDate": "2026-09-12T06:27:05.000Z",
         "releaseNotes": "Bug fixes, minor improvements, and more.",
@@ -1044,6 +1074,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-08T17:07:04.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-07T10:45:34.000Z",
@@ -1657,6 +1693,12 @@
     ],
     "apple:618783545": [
       {
+        "version": "26.10.10",
+        "releaseDate": "2026-10-08T15:22:17.000Z",
+        "releaseNotes": "Bug Fixes\n• Slack for EMM got caught in a sign-in loop if you also had the main Slack app installed. Slack for EMM got caught in a sign-in loop if you also had the main Slack app installed. Slack for EMM got caught in— whoops, sorry about that. This is fixed now.",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
+      {
         "version": "26.09.50",
         "releaseDate": "2026-09-30T19:01:53.000Z",
         "releaseNotes": "Bug Fixes\n• Feeling workflow déjà vu? We’ve got you. The app now catches duplicate bookmarked workflows and quietly tidies them into one.",
@@ -1690,6 +1732,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.18.0",
+        "releaseDate": "2026-10-09T06:12:35.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
       {
         "version": "8.17.1",
         "releaseDate": "2026-09-30T17:10:00.000Z",
@@ -1907,6 +1955,12 @@
     ],
     "apple:962194608": [
       {
+        "version": "7.96.0",
+        "releaseDate": "2026-10-08T18:35:40.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to provide a more powerful search experience.",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
+      {
         "version": "7.95.0",
         "releaseDate": "2026-10-01T21:49:59.000Z",
         "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe are always working to make the app faster and more stable. If you are enjoying the app, please consider leaving a review or rating!",
@@ -1914,6 +1968,12 @@
       }
     ],
     "google:com.google.android.apps.photos": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-09T00:59:47.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-10-09T09:04:09.044Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-06T21:16:40.000Z",
