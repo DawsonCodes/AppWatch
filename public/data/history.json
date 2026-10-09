@@ -173,6 +173,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.45-release.02",
+        "releaseDate": "2026-10-08T18:51:41.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-09T16:59:48.099Z"
+      },
+      {
         "version": "1.2.44-release.00",
         "releaseDate": "2026-10-05T22:39:31.000Z",
         "releaseNotes": null,
@@ -598,6 +604,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-09T02:11:57.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-09T16:59:48.099Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-06T08:56:50.000Z",
@@ -1502,6 +1514,12 @@
     "google:com.roblox.client": [
       {
         "version": null,
+        "releaseDate": "2026-10-08T19:31:39.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-09T16:59:48.099Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-07T17:33:23.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
         "detectedAt": "2026-10-08T19:56:58.049Z"
@@ -1526,6 +1544,12 @@
       }
     ],
     "apple:545519333": [
+      {
+        "version": "10.152",
+        "releaseDate": "2026-10-09T14:11:07.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-09T16:59:48.099Z"
+      },
       {
         "version": "10.151.1",
         "releaseDate": "2026-10-05T09:18:43.000Z",
@@ -3108,6 +3132,12 @@
       }
     ],
     "google:com.google.android.apps.translate": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-09T09:06:07.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-10-09T16:59:48.099Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-05T07:09:23.000Z",
