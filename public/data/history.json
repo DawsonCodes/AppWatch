@@ -129,6 +129,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.51",
+        "releaseDate": "2026-10-09T16:50:31.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
+      {
         "version": "1.4.50",
         "releaseDate": "2026-10-08T08:42:27.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -506,6 +512,12 @@
       }
     ],
     "google:com.twitter.android": [
+      {
+        "version": "12.33.0-prod.01",
+        "releaseDate": "2026-10-09T00:10:25.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
       {
         "version": "12.32.0-prod.01",
         "releaseDate": "2026-10-07T00:28:14.000Z",
@@ -924,6 +936,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-10-08T15:31:11.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-03T02:15:46.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-10-03T11:39:24.793Z"
@@ -942,6 +960,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.32",
+        "releaseDate": "2026-10-09T16:56:34.000Z",
+        "releaseNotes": "• This update introduces a new custom mute option so you can easily specify the exact date and time when you would like to end your moment of silence for notifications in a specific chat.",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
       {
         "version": "8.31",
         "releaseDate": "2026-10-01T17:35:37.000Z",
@@ -1004,6 +1028,12 @@
       }
     ],
     "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.30.3",
+        "releaseDate": "2026-10-07T22:54:58.000Z",
+        "releaseNotes": "★ A new and improved keyboard for emojis, stickers, and animated GIFs is our GIFt to you.",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
       {
         "version": "8.29.4",
         "releaseDate": "2026-10-05T18:48:00.000Z",
@@ -1376,6 +1406,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-10-09T15:57:25.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-06T23:06:19.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-10-07T01:32:17.493Z"
@@ -1438,6 +1474,12 @@
       }
     ],
     "google:com.shazam.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-09T19:13:50.000Z",
+        "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-07T09:06:25.000Z",
@@ -1736,6 +1778,12 @@
       }
     ],
     "google:com.Slack": [
+      {
+        "version": "26.10.10.0",
+        "releaseDate": "2026-10-05T21:14:32.000Z",
+        "releaseNotes": "Bug Fixes\n• There's no place like home, and \"no place\" is exactly where you'd be when deep links to the Home screen failed. Click your heels, reload Slack, and try the link again to find you’re right back where you belong.",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
       {
         "version": "26.09.50.0",
         "releaseDate": "2026-09-28T22:01:20.000Z",
@@ -2359,6 +2407,12 @@
     ],
     "apple:585027354": [
       {
+        "version": "26.41.1",
+        "releaseDate": "2026-10-09T17:57:18.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
+      {
         "version": "26.40.3",
         "releaseDate": "2026-10-02T16:27:46.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
@@ -2729,6 +2783,12 @@
     ],
     "google:com.paypal.android.p2pmobile": [
       {
+        "version": "10.16.0",
+        "releaseDate": "2026-10-02T21:28:21.000Z",
+        "releaseNotes": "Get the latest update, so you can pay, send and save smarter. Unlock cash back offers and more. With PayPal, it really adds up.",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
+      {
         "version": "10.14.0",
         "releaseDate": "2026-09-19T00:14:17.000Z",
         "releaseNotes": "Get the latest update, so you can pay, send and save smarter. Unlock cash back offers and more. With PayPal, it really adds up.",
@@ -2890,6 +2950,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.143.1",
+        "releaseDate": "2026-10-09T12:12:58.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-09T22:38:22.243Z"
+      },
       {
         "version": "7.143.0",
         "releaseDate": "2026-10-08T21:04:43.000Z",
