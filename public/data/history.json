@@ -795,6 +795,12 @@
     ],
     "google:com.linkedin.android": [
       {
+        "version": "4.1.1259",
+        "releaseDate": "2026-10-07T17:02:09.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-10-09T00:22:46.509Z"
+      },
+      {
         "version": "4.1.1255.1",
         "releaseDate": "2026-10-02T15:27:05.000Z",
         "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
@@ -1211,6 +1217,12 @@
     ],
     "google:com.disney.disneyplus": [
       {
+        "version": "26.18.0+rc5-2026.10.05",
+        "releaseDate": "2026-10-06T13:17:53.000Z",
+        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
+        "detectedAt": "2026-10-09T00:22:46.509Z"
+      },
+      {
         "version": "26.17.0+rc4-2026.09.24",
         "releaseDate": "2026-09-28T18:32:05.000Z",
         "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
@@ -1554,6 +1566,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-08T18:11:02.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-09T00:22:46.509Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-06T16:46:59.000Z",
@@ -2661,6 +2679,12 @@
     ],
     "google:com.venmo": [
       {
+        "version": "26.22.0",
+        "releaseDate": "2026-10-05T18:34:19.000Z",
+        "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
+        "detectedAt": "2026-10-09T00:22:46.509Z"
+      },
+      {
         "version": "26.21.0",
         "releaseDate": "2026-09-28T17:07:41.000Z",
         "releaseNotes": null,
@@ -2782,6 +2806,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.143.0",
+        "releaseDate": "2026-10-08T21:04:43.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-09T00:22:46.509Z"
+      },
       {
         "version": "7.142.0",
         "releaseDate": "2026-09-28T17:42:01.000Z",
