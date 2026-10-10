@@ -55,6 +55,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261009.20",
+        "releaseDate": "2026-10-10T20:25:43.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-10T23:33:40.449Z"
+      },
+      {
         "version": "1.261007.20",
         "releaseDate": "2026-10-08T19:21:12.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -74,6 +80,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261009.20",
+        "releaseDate": "2026-10-10T03:39:51.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-10T23:33:40.449Z"
+      },
       {
         "version": "1.261008.20",
         "releaseDate": "2026-10-10T03:39:51.000Z",
