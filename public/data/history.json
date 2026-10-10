@@ -948,6 +948,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-10-10T01:39:10.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-10T12:31:49.292Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-08T15:31:11.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-10-09T22:38:22.243Z"
@@ -1128,6 +1134,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-09T18:32:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-10T12:31:49.292Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-08T17:07:04.000Z",
@@ -1770,6 +1782,12 @@
       }
     ],
     "apple:618783545": [
+      {
+        "version": "26.10.11",
+        "releaseDate": "2026-10-09T22:21:28.000Z",
+        "releaseNotes": "Bug Fixes\n• The app is objectively better today than it was yesterday. This is a scientifically verifiable fact that cannot be challenged or undermined. We appreciate you staying up to date!",
+        "detectedAt": "2026-10-10T12:31:49.292Z"
+      },
       {
         "version": "26.10.10",
         "releaseDate": "2026-10-08T15:22:17.000Z",
