@@ -75,6 +75,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261008.20",
+        "releaseDate": "2026-10-10T03:39:51.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-10T05:52:26.464Z"
+      },
+      {
         "version": "1.261007.20",
         "releaseDate": "2026-10-09T04:11:42.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -616,6 +622,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-10T00:23:13.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-10T05:52:26.464Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-09T02:11:57.000Z",
@@ -2743,6 +2755,12 @@
     ],
     "google:com.dd.doordash": [
       {
+        "version": "15.296.3",
+        "releaseDate": "2026-10-07T22:56:59.000Z",
+        "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
+        "detectedAt": "2026-10-10T05:52:26.464Z"
+      },
+      {
         "version": "15.295.4",
         "releaseDate": "2026-09-29T17:03:13.000Z",
         "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
@@ -2822,6 +2840,12 @@
       }
     ],
     "google:com.venmo": [
+      {
+        "version": "26.22.1",
+        "releaseDate": "2026-10-10T00:24:44.000Z",
+        "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
+        "detectedAt": "2026-10-10T05:52:26.464Z"
+      },
       {
         "version": "26.22.0",
         "releaseDate": "2026-10-05T18:34:19.000Z",
