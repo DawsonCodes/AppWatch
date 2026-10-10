@@ -624,6 +624,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-10-10T06:27:43.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-10T18:35:47.284Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-10T00:23:13.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-10-10T05:52:26.464Z"
@@ -2281,6 +2287,12 @@
     ],
     "google:com.brave.browser": [
       {
+        "version": "1.97.56",
+        "releaseDate": "2026-10-07T22:17:44.000Z",
+        "releaseNotes": "In this release we:\n- Made further improvements to video playback.\n- Made several general stability improvements.\n- Upgraded to Chromium 155.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
+        "detectedAt": "2026-10-10T18:35:47.284Z"
+      },
+      {
         "version": "1.96.61",
         "releaseDate": "2026-10-02T19:16:06.000Z",
         "releaseNotes": "In this release we:\n- Introduced a setting to disable tab groups, making it easier to customize your browser. This can be found at settings → tabs and tab groups. Initially this will not be available to all users. It will be rolled out in phases.\n- Made further improvements to picture-in-picture video playback.\n- Made several look and feel design improvements.\n- Upgraded to Chromium 154.",
@@ -2719,6 +2731,12 @@
     ],
     "apple:282614216": [
       {
+        "version": "6.277.0",
+        "releaseDate": "2026-10-10T17:07:22.000Z",
+        "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
+        "detectedAt": "2026-10-10T18:35:47.284Z"
+      },
+      {
         "version": "6.276.0",
         "releaseDate": "2026-10-04T09:40:54.000Z",
         "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
@@ -2738,6 +2756,12 @@
       }
     ],
     "google:com.ebay.mobile": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-08T21:29:44.000Z",
+        "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
+        "detectedAt": "2026-10-10T18:35:47.284Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-09-26T00:14:26.000Z",
