@@ -1799,6 +1799,12 @@
     ],
     "google:com.microsoft.office.outlook": [
       {
+        "version": "5.2639.2",
+        "releaseDate": "2026-10-08T14:49:29.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-10-11T23:39:51.155Z"
+      },
+      {
         "version": "5.2638.1",
         "releaseDate": "2026-10-01T18:54:39.000Z",
         "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
