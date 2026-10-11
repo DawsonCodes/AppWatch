@@ -35,6 +35,12 @@
     ],
     "google:com.openai.chatgpt": [
       {
+        "version": "1.2026.279",
+        "releaseDate": "2026-10-11T18:05:28.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-11T18:54:39.182Z"
+      },
+      {
         "version": "1.2026.272",
         "releaseDate": "2026-10-03T03:22:18.000Z",
         "releaseNotes": null,
@@ -614,6 +620,12 @@
       }
     ],
     "apple:544007664": [
+      {
+        "version": "21.41.5",
+        "releaseDate": "2026-10-11T16:03:55.000Z",
+        "releaseNotes": "We fixed the tubes that bring you videos – and some bugs too.",
+        "detectedAt": "2026-10-11T18:54:39.182Z"
+      },
       {
         "version": "21.40.5",
         "releaseDate": "2026-10-04T16:02:39.000Z",
@@ -2362,6 +2374,12 @@
       }
     ],
     "google:com.duckduckgo.mobile.android": [
+      {
+        "version": "5.297.1",
+        "releaseDate": "2026-10-08T12:39:05.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-10-11T18:54:39.182Z"
+      },
       {
         "version": "5.297.0",
         "releaseDate": "2026-10-05T09:51:15.000Z",
