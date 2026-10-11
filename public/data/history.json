@@ -531,6 +531,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.33.1-prod.01",
+        "releaseDate": "2026-10-11T00:10:12.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-11T05:46:10.537Z"
+      },
+      {
         "version": "12.33.0-prod.01",
         "releaseDate": "2026-10-09T00:10:25.000Z",
         "releaseNotes": null,
