@@ -209,6 +209,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.46-release.00",
+        "releaseDate": "2026-10-12T03:19:40.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-12T22:59:16.508Z"
+      },
+      {
         "version": "1.2.45-release.02",
         "releaseDate": "2026-10-08T18:51:41.000Z",
         "releaseNotes": null,
@@ -800,6 +806,12 @@
     "google:com.reddit.frontpage": [
       {
         "version": null,
+        "releaseDate": "2026-10-12T18:25:51.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-12T22:59:16.508Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-05T19:55:19.000Z",
         "releaseNotes": "Thanks for updating the Reddit app! We've updated our Android app with bug fixes and changes to improve your overall experience.",
         "detectedAt": "2026-10-05T22:37:28.921Z"
@@ -1252,6 +1264,12 @@
       }
     ],
     "google:com.facebook.orca": [
+      {
+        "version": "582.0.0.61.92",
+        "releaseDate": "2026-10-06T17:55:28.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-12T22:59:16.508Z"
+      },
       {
         "version": "581.0.0.49.91",
         "releaseDate": "2026-09-30T05:28:37.000Z",
@@ -1758,6 +1776,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-12T15:52:06.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-12T22:59:16.508Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-08T18:11:02.000Z",
@@ -3096,6 +3120,12 @@
     "google:com.ubercab.eats": [
       {
         "version": null,
+        "releaseDate": "2026-10-12T16:27:43.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-10-12T22:59:16.508Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-05T17:50:39.000Z",
         "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
         "detectedAt": "2026-10-05T22:37:28.921Z"
@@ -3216,6 +3246,12 @@
       }
     ],
     "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-12T16:38:11.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-12T22:59:16.508Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-06T18:53:36.000Z",
