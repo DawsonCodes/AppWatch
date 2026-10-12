@@ -2133,6 +2133,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "158.0",
+        "releaseDate": "2026-10-12T03:04:30.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-10-12T05:57:37.034Z"
+      },
+      {
         "version": "157.1",
         "releaseDate": "2026-10-05T04:09:49.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
@@ -2518,6 +2524,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-10-12T01:52:42.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-12T05:57:37.034Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-07T18:12:07.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-10-07T23:05:16.964Z"
@@ -2818,6 +2830,12 @@
       }
     ],
     "apple:719972451": [
+      {
+        "version": "8.40.0",
+        "releaseDate": "2026-10-12T05:00:57.000Z",
+        "releaseNotes": "Minor updates and performance improvements",
+        "detectedAt": "2026-10-12T05:57:37.034Z"
+      },
       {
         "version": "8.39.0",
         "releaseDate": "2026-10-05T05:00:23.000Z",
