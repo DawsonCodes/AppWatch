@@ -87,6 +87,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261012.20",
+        "releaseDate": "2026-10-13T03:52:14.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
         "version": "1.261009.20",
         "releaseDate": "2026-10-10T03:39:51.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -708,6 +714,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-10-13T16:09:28.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-10T06:27:43.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-10-10T18:35:47.284Z"
@@ -906,6 +918,12 @@
     "google:com.pinterest": [
       {
         "version": null,
+        "releaseDate": "2026-10-13T19:05:28.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-05T23:06:47.000Z",
         "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
         "detectedAt": "2026-10-06T06:20:19.685Z"
@@ -1010,6 +1028,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-10-13T14:29:18.000Z",
+        "releaseNotes": "Squashed bugs for better experience.",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-28T15:14:12.000Z",
         "releaseNotes": "Easily post videos and photos on TikTok with bug fixes and performance improvements.",
         "detectedAt": "2026-10-04T03:38:30.784Z"
@@ -1054,6 +1078,12 @@
       }
     ],
     "google:com.whatsapp": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-13T15:53:15.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-10T01:39:10.000Z",
@@ -1764,6 +1794,12 @@
     "google:com.amazon.avod.thirdpartyclient": [
       {
         "version": null,
+        "releaseDate": "2026-10-12T21:42:04.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-05T19:45:57.000Z",
         "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
         "detectedAt": "2026-10-05T22:37:28.921Z"
@@ -2224,6 +2260,12 @@
     "google:com.google.android.apps.docs": [
       {
         "version": null,
+        "releaseDate": "2026-10-13T19:11:11.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-07T16:20:53.000Z",
         "releaseNotes": "* Bug fixes and performance improvements.",
         "detectedAt": "2026-10-07T17:26:25.798Z"
@@ -2414,6 +2456,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-13T18:37:09.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-07T21:38:06.000Z",
@@ -2680,6 +2728,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-10-13T13:53:49.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-12T01:52:42.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-10-12T05:57:37.034Z"
@@ -2898,6 +2952,12 @@
       }
     ],
     "google:com.airbnb.android": [
+      {
+        "version": "26.41",
+        "releaseDate": "2026-10-06T22:05:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
       {
         "version": "26.40",
         "releaseDate": "2026-10-06T22:05:56.000Z",
@@ -3148,6 +3208,12 @@
       }
     ],
     "apple:711923939": [
+      {
+        "version": "5.73.0",
+        "releaseDate": "2026-10-13T16:16:39.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-10-13T21:14:42.200Z"
+      },
       {
         "version": "5.72.1",
         "releaseDate": "2026-10-07T16:36:41.000Z",
