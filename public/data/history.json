@@ -299,6 +299,12 @@
     ],
     "apple:1668000334": [
       {
+        "version": "26.40.1",
+        "releaseDate": "2026-10-12T22:59:16.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "26.40.0",
         "releaseDate": "2026-10-08T20:09:53.000Z",
         "releaseNotes": "Bug fixes and improvements.",
@@ -413,6 +419,12 @@
     ],
     "apple:389801252": [
       {
+        "version": "451.0.0",
+        "releaseDate": "2026-10-12T18:25:41.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "450.1.0",
         "releaseDate": "2026-10-06T12:29:07.000Z",
         "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
@@ -438,6 +450,12 @@
       }
     ],
     "google:com.instagram.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-13T01:06:53.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-05T12:58:25.000Z",
@@ -592,6 +610,12 @@
       }
     ],
     "apple:6446901002": [
+      {
+        "version": "451.0",
+        "releaseDate": "2026-10-12T16:05:57.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "450.0",
         "releaseDate": "2026-10-05T14:02:47.000Z",
@@ -784,6 +808,12 @@
       }
     ],
     "apple:1064216828": [
+      {
+        "version": "2026.41.0",
+        "releaseDate": "2026-10-12T19:44:29.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "2026.40.0",
         "releaseDate": "2026-10-05T19:14:52.000Z",
@@ -1331,6 +1361,12 @@
     ],
     "apple:363590051": [
       {
+        "version": "26.1.0",
+        "releaseDate": "2026-10-12T16:04:15.000Z",
+        "releaseNotes": "Keep your app updated to get the latest Netflix experience on your iPhone and iPad.\n\nWe want to help you find your next favorite show. This update’s playback improvements will help make it look even better too.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "26.0.0",
         "releaseDate": "2026-10-05T16:29:25.000Z",
         "releaseNotes": "Keep your app updated to get the latest Netflix experience on your iPhone and iPad.\n\nNo matter your mood—we’ve got options. In this version we made player improvements to make watching them even better.",
@@ -1757,6 +1793,12 @@
     ],
     "apple:422689480": [
       {
+        "version": "6.0.261005",
+        "releaseDate": "2026-10-12T17:51:34.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "6.0.260928",
         "releaseDate": "2026-10-05T17:09:11.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -1820,6 +1862,12 @@
       }
     ],
     "apple:951937596": [
+      {
+        "version": "5.2640.0",
+        "releaseDate": "2026-10-12T19:49:42.000Z",
+        "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "5.2639.0",
         "releaseDate": "2026-10-05T16:41:14.000Z",
@@ -1986,6 +2034,12 @@
       }
     ],
     "apple:1232780281": [
+      {
+        "version": "1.7.346",
+        "releaseDate": "2026-10-13T04:16:20.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "1.7.345",
         "releaseDate": "2026-10-07T16:42:39.000Z",
@@ -2559,6 +2613,12 @@
     ],
     "apple:1288723196": [
       {
+        "version": "155.4283.48",
+        "releaseDate": "2026-10-13T02:12:01.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here's what's new in this release:\n• Introducing the News Widget: a faster way to stay up to date with the latest news, right from your home screen.\n• Meet the refreshed Copilot in Edge! Find answers, organize your thoughts, and spark new ideas, all in your browser.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "153.4234.46",
         "releaseDate": "2026-09-20T00:55:48.000Z",
         "releaseNotes": "Welcome to Microsoft Edge! Check out what’s new in this release.\n• New Shortcuts widget: Quickly access your favorite sites, features, and tools right from your Home screen.\n• Bug fixes, stability, and performance improvements.\nUpgrade to the latest version and enjoy a smarter and more efficient Microsoft Edge!",
@@ -2685,6 +2745,12 @@
     ],
     "apple:368677368": [
       {
+        "version": "3.743.10001",
+        "releaseDate": "2026-10-12T15:13:28.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "3.742.10001",
         "releaseDate": "2026-10-05T16:21:18.000Z",
         "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
@@ -2730,6 +2796,12 @@
       }
     ],
     "apple:529379082": [
+      {
+        "version": "2026.39.31",
+        "releaseDate": "2026-10-12T19:22:35.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "2026.38.32",
         "releaseDate": "2026-10-08T02:05:31.000Z",
@@ -3007,6 +3079,12 @@
     ],
     "apple:351727428": [
       {
+        "version": "26.23.0",
+        "releaseDate": "2026-10-13T01:16:50.000Z",
+        "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "26.22.0",
         "releaseDate": "2026-10-06T22:37:20.000Z",
         "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
@@ -3105,6 +3183,12 @@
     ],
     "apple:1058959277": [
       {
+        "version": "6.344.10000",
+        "releaseDate": "2026-10-12T16:24:36.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Performance improvements\n- Localization updates\n\nLove the app? Rate us! Your feedback keeps the Uber Eats engine running.\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "6.343.10000",
         "releaseDate": "2026-10-05T17:45:56.000Z",
         "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Performance improvements\n- Localization updates\n\nLove the app? Rate us! Your feedback keeps the Uber Eats engine running.\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
@@ -3139,6 +3223,12 @@
     ],
     "apple:886427730": [
       {
+        "version": "14.39.44",
+        "releaseDate": "2026-10-12T16:06:49.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency. This update includes bug fixes and performance improvements.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
+      {
         "version": "14.38.54",
         "releaseDate": "2026-10-05T16:04:37.000Z",
         "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency. This update includes bug fixes and performance improvements.",
@@ -3166,6 +3256,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.144.0",
+        "releaseDate": "2026-10-12T16:03:34.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "7.143.1",
         "releaseDate": "2026-10-09T12:12:58.000Z",
@@ -3406,6 +3502,12 @@
       }
     ],
     "apple:414706506": [
+      {
+        "version": "10.42.291",
+        "releaseDate": "2026-10-12T17:17:15.000Z",
+        "releaseNotes": "• Several bug fixes and usability improvements",
+        "detectedAt": "2026-10-13T06:47:08.121Z"
+      },
       {
         "version": "10.41.261",
         "releaseDate": "2026-10-05T15:15:07.000Z",
