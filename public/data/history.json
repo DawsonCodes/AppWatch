@@ -331,6 +331,12 @@
     ],
     "google:ai.perplexity.app.android": [
       {
+        "version": "2.101.0",
+        "releaseDate": "2026-10-12T09:38:26.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-13T15:58:59.674Z"
+      },
+      {
         "version": "2.100.0",
         "releaseDate": "2026-09-28T13:26:05.000Z",
         "releaseNotes": null,
@@ -370,6 +376,12 @@
       }
     ],
     "google:com.deepseek.chat": [
+      {
+        "version": "2.6.2",
+        "releaseDate": "2026-10-13T06:30:41.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-10-13T15:58:59.674Z"
+      },
       {
         "version": "2.6.1",
         "releaseDate": "2026-09-30T07:32:10.000Z",
@@ -1998,6 +2010,12 @@
       }
     ],
     "google:com.microsoft.teams": [
+      {
+        "version": "1416/1.0.0.2026183002",
+        "releaseDate": "2026-10-08T06:41:55.000Z",
+        "releaseNotes": "Use Copilot to summarize channel meetings",
+        "detectedAt": "2026-10-13T15:58:59.674Z"
+      },
       {
         "version": "1416/1.0.0.2026173602",
         "releaseDate": "2026-09-23T10:10:47.000Z",
