@@ -131,6 +131,12 @@
     ],
     "apple:6477489729": [
       {
+        "version": "1.2026.4070303",
+        "releaseDate": "2026-10-14T12:34:35.000Z",
+        "releaseNotes": "Meet Gemini 4 Argon — our new frontier model.\nHandle Tougher Problems: Solve complex tasks from start to finish with less back and forth.\nTurn Ideas into Projects: Go from a rough concept to a ready-to-use project.\nLook what you can do with Gemini. Try today.",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
+      {
         "version": "1.2026.3970207",
         "releaseDate": "2026-10-07T09:11:13.000Z",
         "releaseNotes": "- UI improvements and bug fixes",
@@ -513,6 +519,12 @@
     ],
     "apple:284882215": [
       {
+        "version": "583.0.0",
+        "releaseDate": "2026-10-14T09:58:25.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
+      {
         "version": "582.0.0",
         "releaseDate": "2026-10-07T14:52:01.000Z",
         "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
@@ -602,6 +614,12 @@
       }
     ],
     "google:com.twitter.android": [
+      {
+        "version": "12.34.0-prod.01",
+        "releaseDate": "2026-10-13T05:09:24.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "12.33.1-prod.01",
         "releaseDate": "2026-10-11T00:10:12.000Z",
@@ -908,6 +926,12 @@
       }
     ],
     "apple:429047995": [
+      {
+        "version": "14.40",
+        "releaseDate": "2026-10-14T15:04:16.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "14.39",
         "releaseDate": "2026-10-07T16:19:14.000Z",
@@ -1347,6 +1371,12 @@
     ],
     "apple:454638411": [
       {
+        "version": "583.0.0",
+        "releaseDate": "2026-10-14T12:36:29.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
+      {
         "version": "582.0.0",
         "releaseDate": "2026-10-06T08:36:20.000Z",
         "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
@@ -1418,6 +1448,12 @@
       }
     ],
     "google:com.discord": [
+      {
+        "version": "349.9 - Stable",
+        "releaseDate": "2026-10-09T23:00:49.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "348.10 - Stable",
         "releaseDate": "2026-10-03T02:45:41.000Z",
@@ -2213,6 +2249,12 @@
     ],
     "apple:327630330": [
       {
+        "version": "494.3.2",
+        "releaseDate": "2026-10-14T14:21:44.000Z",
+        "releaseNotes": "We release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
+      {
         "version": "494.2.2",
         "releaseDate": "2026-10-12T13:00:15.000Z",
         "releaseNotes": "We release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
@@ -2232,6 +2274,12 @@
       }
     ],
     "google:com.dropbox.android": [
+      {
+        "version": "494.2.2",
+        "releaseDate": "2026-10-13T16:05:38.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "492.2.2",
         "releaseDate": "2026-09-29T16:06:11.000Z",
@@ -2304,6 +2352,12 @@
       }
     ],
     "apple:507874739": [
+      {
+        "version": "4.2641.41201",
+        "releaseDate": "2026-10-14T12:21:24.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "4.2641.41200",
         "releaseDate": "2026-10-12T08:57:24.000Z",
@@ -2861,6 +2915,12 @@
     ],
     "apple:323229106": [
       {
+        "version": "5.25.5.0",
+        "releaseDate": "2026-10-14T09:09:34.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
+      {
         "version": "5.25.0.0",
         "releaseDate": "2026-10-08T12:32:53.000Z",
         "releaseNotes": "This version includes several bug fixes and performance improvements.",
@@ -2958,6 +3018,12 @@
       }
     ],
     "apple:529379082": [
+      {
+        "version": "2026.39.32",
+        "releaseDate": "2026-10-14T10:42:04.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "2026.39.31",
         "releaseDate": "2026-10-12T19:22:35.000Z",
@@ -3416,6 +3482,12 @@
       }
     ],
     "google:com.coinbase.android": [
+      {
+        "version": "14.39.44",
+        "releaseDate": "2026-10-08T23:56:08.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
+        "detectedAt": "2026-10-14T18:38:06.494Z"
+      },
       {
         "version": "14.38.54",
         "releaseDate": "2026-10-02T02:35:35.000Z",
