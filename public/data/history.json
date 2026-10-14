@@ -93,6 +93,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261013.20",
+        "releaseDate": "2026-10-14T03:52:05.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
+      {
         "version": "1.261012.20",
         "releaseDate": "2026-10-13T03:52:14.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1082,6 +1088,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-10-14T13:20:46.000Z",
+        "releaseNotes": "Squashed bugs for better experience.",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-13T14:29:18.000Z",
         "releaseNotes": "Squashed bugs for better experience.",
         "detectedAt": "2026-10-13T21:14:42.200Z"
@@ -1586,6 +1598,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-14T05:44:28.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-07T06:27:03.000Z",
@@ -2590,6 +2608,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-10-14T17:25:50.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-13T18:37:09.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-10-13T21:14:42.200Z"
@@ -3063,6 +3087,12 @@
     ],
     "google:me.lyft.android": [
       {
+        "version": "2026.39.31.1791466624",
+        "releaseDate": "2026-10-09T19:02:11.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
+      {
         "version": "2026.38.32.1791465968",
         "releaseDate": "2026-10-08T13:39:58.000Z",
         "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
@@ -3088,6 +3118,12 @@
       }
     ],
     "apple:401626263": [
+      {
+        "version": "26.42",
+        "releaseDate": "2026-10-14T17:43:59.000Z",
+        "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
       {
         "version": "26.41",
         "releaseDate": "2026-10-07T20:12:48.000Z",
@@ -3134,6 +3170,12 @@
       }
     ],
     "apple:297606951": [
+      {
+        "version": "27.18.0",
+        "releaseDate": "2026-10-14T22:09:55.000Z",
+        "releaseNotes": "Our new design provides easier access to the features you use most while on the go. This includes the homepage, account and order information, your cart and the ability to browse and discover Amazon departments, products, programs, and features.",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
       {
         "version": "27.17.10",
         "releaseDate": "2026-10-07T12:38:38.000Z",
@@ -3708,6 +3750,12 @@
       }
     ],
     "apple:426826309": [
+      {
+        "version": "485.0.0",
+        "releaseDate": "2026-10-14T17:17:26.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-10-14T23:14:21.593Z"
+      },
       {
         "version": "484.0.0",
         "releaseDate": "2026-10-07T20:15:48.000Z",
