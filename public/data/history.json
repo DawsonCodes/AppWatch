@@ -841,6 +841,12 @@
     ],
     "apple:447188370": [
       {
+        "version": "14.28.0.55",
+        "releaseDate": "2026-10-15T11:01:44.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-10-15T17:00:30.001Z"
+      },
+      {
         "version": "14.27.0.54",
         "releaseDate": "2026-10-07T11:10:27.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
@@ -1104,6 +1110,12 @@
       }
     ],
     "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-15T10:55:10.000Z",
+        "releaseNotes": "Squashed bugs for better experience.",
+        "detectedAt": "2026-10-15T17:00:30.001Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-14T13:20:46.000Z",
@@ -1654,6 +1666,12 @@
       }
     ],
     "apple:460177396": [
+      {
+        "version": "31.6.2",
+        "releaseDate": "2026-10-15T15:58:13.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-15T17:00:30.001Z"
+      },
       {
         "version": "31.6.1",
         "releaseDate": "2026-10-14T18:11:22.000Z",
@@ -3429,6 +3447,12 @@
     ],
     "google:com.venmo": [
       {
+        "version": "26.23.0",
+        "releaseDate": "2026-10-10T06:02:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-15T17:00:30.001Z"
+      },
+      {
         "version": "26.22.1",
         "releaseDate": "2026-10-10T00:24:44.000Z",
         "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
@@ -3492,6 +3516,12 @@
       }
     ],
     "google:com.squareup.cash": [
+      {
+        "version": "5.73.0",
+        "releaseDate": "2026-10-09T20:53:08.000Z",
+        "releaseNotes": "Various bug fixes and improvements.",
+        "detectedAt": "2026-10-15T17:00:30.001Z"
+      },
       {
         "version": "5.72.0",
         "releaseDate": "2026-10-02T23:08:03.000Z",
