@@ -558,6 +558,12 @@
     "google:com.facebook.katana": [
       {
         "version": null,
+        "releaseDate": "2026-10-14T18:22:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-15T11:28:41.754Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-07T21:12:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-08T06:03:42.125Z"
