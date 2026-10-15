@@ -61,6 +61,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261013.20",
+        "releaseDate": "2026-10-14T22:42:07.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
+      {
         "version": "1.261012.20",
         "releaseDate": "2026-10-13T18:12:05.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -991,6 +997,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.581",
+        "releaseDate": "2026-10-15T01:06:22.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
+      {
         "version": "9.1.580",
         "releaseDate": "2026-10-13T18:08:21.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -1637,6 +1649,12 @@
     ],
     "apple:460177396": [
       {
+        "version": "31.6.1",
+        "releaseDate": "2026-10-14T18:11:22.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
+      {
         "version": "31.6",
         "releaseDate": "2026-10-13T18:12:54.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
@@ -2083,6 +2101,12 @@
     ],
     "apple:618783545": [
       {
+        "version": "26.10.20",
+        "releaseDate": "2026-10-14T19:06:51.000Z",
+        "releaseNotes": "Bug Fixes\n• Like a runner steadily improving their split times, this update is the sort that’s less showy but no less important. You’ll find the app a little faster, a little leaner, a little closer to the goal.",
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
+      {
         "version": "26.10.11",
         "releaseDate": "2026-10-09T22:21:28.000Z",
         "releaseNotes": "Bug Fixes\n• The app is objectively better today than it was yesterday. This is a scientifically verifiable fact that cannot be challenged or undermined. We appreciate you staying up to date!",
@@ -2134,6 +2158,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.18.1",
+        "releaseDate": "2026-10-15T02:30:12.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
       {
         "version": "8.18.0",
         "releaseDate": "2026-10-09T06:12:35.000Z",
@@ -2344,6 +2374,12 @@
       }
     ],
     "google:com.canva.editor": [
+      {
+        "version": "2.382.0",
+        "releaseDate": "2026-10-14T00:49:55.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
       {
         "version": "2.381.0",
         "releaseDate": "2026-10-07T02:35:36.000Z",
@@ -2888,6 +2924,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-15T04:04:24.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-15T04:38:31.412Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-13T13:53:49.000Z",
