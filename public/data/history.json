@@ -339,6 +339,12 @@
     ],
     "google:com.microsoft.office.officehubrow": [
       {
+        "version": "16.0.20604.20012",
+        "releaseDate": "2026-10-12T07:46:40.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-10-16T07:09:13.605Z"
+      },
+      {
         "version": "16.0.20527.20022",
         "releaseDate": "2026-10-05T05:27:51.000Z",
         "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
@@ -594,6 +600,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.35",
+        "releaseDate": "2026-10-16T04:20:14.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-10-16T07:09:13.605Z"
+      },
       {
         "version": "12.33",
         "releaseDate": "2026-10-08T15:22:52.000Z",
@@ -2633,6 +2645,12 @@
     ],
     "google:org.mozilla.firefox": [
       {
+        "version": "158.0",
+        "releaseDate": "2026-10-08T03:13:02.000Z",
+        "releaseNotes": "- The tab bar can now be shown at either the top or bottom of the screen. Go to Settings > Customize to choose.\nFirefox's Translations feature now supports the following languages:\n-Albanian\n-Belarusian\n-Filipino",
+        "detectedAt": "2026-10-16T07:09:13.605Z"
+      },
+      {
         "version": "157.0.1",
         "releaseDate": "2026-10-05T20:03:24.000Z",
         "releaseNotes": "NEW\n- Recent searches: Tap the search field on the homepage to quickly return to your recent searches.\n- VPN availability: Free VPN is now available in more than 200 regions.\nFIXED\n- VPN stability: Fixed a crash that could occur when tapping the VPN location row as the VPN became unavailable.\n- History items are now grouped by exact date for easier browsing\n- You can now swipe to dismiss items on the Downloads page\n- Security and stability fixes.",
@@ -2714,6 +2732,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-15T22:52:12.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-16T07:09:13.605Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-14T17:25:50.000Z",
@@ -2842,6 +2866,12 @@
       }
     ],
     "google:com.duckduckgo.mobile.android": [
+      {
+        "version": "5.298.1",
+        "releaseDate": "2026-10-13T17:09:00.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-10-16T07:09:13.605Z"
+      },
       {
         "version": "5.297.1",
         "releaseDate": "2026-10-08T12:39:05.000Z",
