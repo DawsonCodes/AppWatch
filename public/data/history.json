@@ -61,6 +61,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261014.20",
+        "releaseDate": "2026-10-15T21:12:08.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
+      {
         "version": "1.261013.20",
         "releaseDate": "2026-10-14T22:42:07.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -98,6 +104,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261014.20",
+        "releaseDate": "2026-10-15T03:42:21.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
       {
         "version": "1.261013.20",
         "releaseDate": "2026-10-14T03:52:05.000Z",
@@ -766,6 +778,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-15T21:20:54.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-13T16:09:28.000Z",
@@ -1847,6 +1865,12 @@
     ],
     "apple:431946152": [
       {
+        "version": "2.743.1134",
+        "releaseDate": "2026-10-15T17:41:53.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
+      {
         "version": "2.742.1053",
         "releaseDate": "2026-10-07T17:33:12.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
@@ -1878,6 +1902,12 @@
       }
     ],
     "google:com.roblox.client": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-15T17:42:53.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-08T19:31:39.000Z",
@@ -2016,6 +2046,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-15T19:59:50.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-14T05:40:38.000Z",
@@ -2482,6 +2518,12 @@
       }
     ],
     "apple:962194608": [
+      {
+        "version": "7.97.0",
+        "releaseDate": "2026-10-15T17:10:55.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features so you can find the right photos faster.",
+        "detectedAt": "2026-10-16T00:24:34.382Z"
+      },
       {
         "version": "7.96.0",
         "releaseDate": "2026-10-08T18:35:40.000Z",
