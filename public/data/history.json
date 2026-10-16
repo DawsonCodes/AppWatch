@@ -2803,6 +2803,12 @@
     ],
     "google:com.brave.browser": [
       {
+        "version": "1.97.57",
+        "releaseDate": "2026-10-14T18:50:56.000Z",
+        "releaseNotes": "In this release we:\n- Made further improvements to video playback.\n- Made several general stability improvements.\n- Upgraded to Chromium 155.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
+        "detectedAt": "2026-10-16T13:15:42.695Z"
+      },
+      {
         "version": "1.97.56",
         "releaseDate": "2026-10-07T22:17:44.000Z",
         "releaseNotes": "In this release we:\n- Made further improvements to video playback.\n- Made several general stability improvements.\n- Upgraded to Chromium 155.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
