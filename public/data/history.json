@@ -669,6 +669,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.35.0-prod.01",
+        "releaseDate": "2026-10-16T04:47:25.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-16T21:07:44.928Z"
+      },
+      {
         "version": "12.34.0-prod.01",
         "releaseDate": "2026-10-13T05:09:24.000Z",
         "releaseNotes": null,
@@ -1854,6 +1860,12 @@
     "google:com.shazam.android": [
       {
         "version": null,
+        "releaseDate": "2026-10-16T17:06:24.000Z",
+        "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
+        "detectedAt": "2026-10-16T21:07:44.928Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-09T19:13:50.000Z",
         "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
         "detectedAt": "2026-10-09T22:38:22.243Z"
@@ -2234,6 +2246,12 @@
       }
     ],
     "google:com.Slack": [
+      {
+        "version": "26.10.20.0",
+        "releaseDate": "2026-10-12T21:13:55.000Z",
+        "releaseNotes": "What’s New\n• Is Slack no longer easy on the eyes? Try these new color modes! True Dark swaps our default dark gray background for pure black, while High Contrast increases visibility across the entire app. Check out both under \"Color mode\" in the Preferences menu.",
+        "detectedAt": "2026-10-16T21:07:44.928Z"
+      },
       {
         "version": "26.10.10.0",
         "releaseDate": "2026-10-05T21:14:32.000Z",
