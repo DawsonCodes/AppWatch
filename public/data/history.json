@@ -111,6 +111,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261015.20",
+        "releaseDate": "2026-10-16T03:48:41.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-17T00:29:02.855Z"
+      },
+      {
         "version": "1.261014.20",
         "releaseDate": "2026-10-15T03:42:21.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1341,6 +1347,12 @@
     ],
     "google:org.thoughtcrime.securesms": [
       {
+        "version": "8.31.2",
+        "releaseDate": "2026-10-13T20:46:00.000Z",
+        "releaseNotes": "Now you can optionally register for Signal without a phone number. Phone-numberless registration requires a small one-time fee to help prevent spam, but this in-app purchase is never directly associated with the new Signal account. We sincerely appreciate your help beta testing this new feature!",
+        "detectedAt": "2026-10-17T00:29:02.855Z"
+      },
+      {
         "version": "8.30.3",
         "releaseDate": "2026-10-07T22:54:58.000Z",
         "releaseNotes": "★ A new and improved keyboard for emojis, stickers, and animated GIFs is our GIFt to you.",
@@ -1790,6 +1802,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-10-16T22:12:22.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-10-17T00:29:02.855Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-09T15:57:25.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-10-09T22:38:22.243Z"
@@ -2189,6 +2207,12 @@
     ],
     "google:com.microsoft.office.outlook": [
       {
+        "version": "5.2640.0",
+        "releaseDate": "2026-10-11T20:59:44.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-10-17T00:29:02.855Z"
+      },
+      {
         "version": "5.2639.2",
         "releaseDate": "2026-10-08T14:49:29.000Z",
         "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
@@ -2278,6 +2302,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.18.2",
+        "releaseDate": "2026-10-16T18:46:28.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-17T00:29:02.855Z"
+      },
       {
         "version": "8.18.1",
         "releaseDate": "2026-10-15T02:30:12.000Z",
@@ -3060,6 +3090,12 @@
       }
     ],
     "apple:585027354": [
+      {
+        "version": "26.42.0",
+        "releaseDate": "2026-10-16T19:19:55.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-10-17T00:29:02.855Z"
+      },
       {
         "version": "26.41.1",
         "releaseDate": "2026-10-09T17:57:18.000Z",
