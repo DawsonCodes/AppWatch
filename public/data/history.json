@@ -117,6 +117,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261016.51",
+        "releaseDate": "2026-10-17T19:27:16.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-18T22:25:59.367Z"
+      },
+      {
         "version": "1.261015.20",
         "releaseDate": "2026-10-16T03:48:41.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
