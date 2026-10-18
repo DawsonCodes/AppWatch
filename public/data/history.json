@@ -1260,6 +1260,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-10-17T23:10:40.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-18T04:33:19.826Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-17T05:27:20.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-10-17T18:30:42.940Z"
@@ -1514,6 +1520,12 @@
       }
     ],
     "apple:454638411": [
+      {
+        "version": "584.0.0",
+        "releaseDate": "2026-10-17T16:36:30.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-10-18T04:33:19.826Z"
+      },
       {
         "version": "583.0.0",
         "releaseDate": "2026-10-14T12:36:29.000Z",
@@ -2030,6 +2042,12 @@
       }
     ],
     "apple:545519333": [
+      {
+        "version": "10.153.1",
+        "releaseDate": "2026-10-17T15:53:47.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-18T04:33:19.826Z"
+      },
       {
         "version": "10.152.1",
         "releaseDate": "2026-10-12T06:56:34.000Z",
@@ -3492,6 +3510,12 @@
       }
     ],
     "apple:282614216": [
+      {
+        "version": "6.278.0",
+        "releaseDate": "2026-10-17T17:08:37.000Z",
+        "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
+        "detectedAt": "2026-10-18T04:33:19.826Z"
+      },
       {
         "version": "6.277.0",
         "releaseDate": "2026-10-10T17:07:22.000Z",
