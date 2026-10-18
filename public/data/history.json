@@ -67,6 +67,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261016.20",
+        "releaseDate": "2026-10-17T23:27:06.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-18T11:04:27.348Z"
+      },
+      {
         "version": "1.261014.20",
         "releaseDate": "2026-10-15T21:12:08.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -2074,6 +2080,12 @@
       }
     ],
     "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-17T08:01:32.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-10-18T11:04:27.348Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-16T21:29:08.000Z",
