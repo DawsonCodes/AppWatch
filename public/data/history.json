@@ -579,6 +579,12 @@
     ],
     "apple:284882215": [
       {
+        "version": "584.0.0",
+        "releaseDate": "2026-10-18T14:40:34.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-10-18T18:38:34.488Z"
+      },
+      {
         "version": "583.0.0",
         "releaseDate": "2026-10-14T09:58:25.000Z",
         "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
