@@ -349,6 +349,12 @@
     ],
     "apple:541164041": [
       {
+        "version": "2.115.1",
+        "releaseDate": "2026-10-19T04:03:43.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
+      {
         "version": "2.115",
         "releaseDate": "2026-10-13T15:48:47.000Z",
         "releaseNotes": "• General quality and performance enhancements.",
@@ -446,6 +452,12 @@
       }
     ],
     "apple:6737597349": [
+      {
+        "version": "2.6.3",
+        "releaseDate": "2026-10-19T02:41:27.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
       {
         "version": "2.6.2",
         "releaseDate": "2026-10-08T08:56:38.000Z",
@@ -1198,6 +1210,12 @@
       }
     ],
     "apple:835599320": [
+      {
+        "version": "47.4.0",
+        "releaseDate": "2026-10-19T02:49:57.000Z",
+        "releaseNotes": "Squashed bugs for better experience.",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
       {
         "version": "47.1.0",
         "releaseDate": "2026-10-07T18:18:07.000Z",
@@ -2565,6 +2583,12 @@
     ],
     "apple:897446215": [
       {
+        "version": "4.231.1",
+        "releaseDate": "2026-10-18T22:37:29.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
+      {
         "version": "4.231.0",
         "releaseDate": "2026-10-14T00:59:35.000Z",
         "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
@@ -2726,6 +2750,12 @@
       }
     ],
     "apple:989804926": [
+      {
+        "version": "158.1",
+        "releaseDate": "2026-10-19T03:06:20.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
       {
         "version": "158.0",
         "releaseDate": "2026-10-12T03:04:30.000Z",
@@ -3141,6 +3171,12 @@
     ],
     "apple:1288723196": [
       {
+        "version": "155.4283.61",
+        "releaseDate": "2026-10-19T01:50:31.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here's what's new in this release:\n• Introducing the News Widget: a faster way to stay up to date with the latest news, right from your home screen.\n• Meet the refreshed Copilot in Edge! Find answers, organize your thoughts, and spark new ideas, all in your browser.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
+      {
         "version": "155.4283.48",
         "releaseDate": "2026-10-13T02:12:01.000Z",
         "releaseNotes": "Welcome to Microsoft Edge! Here's what's new in this release:\n• Introducing the News Widget: a faster way to stay up to date with the latest news, right from your home screen.\n• Meet the refreshed Copilot in Edge! Find answers, organize your thoughts, and spark new ideas, all in your browser.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
@@ -3168,6 +3204,12 @@
       }
     ],
     "apple:585027354": [
+      {
+        "version": "26.42.1",
+        "releaseDate": "2026-10-18T19:41:14.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-10-19T04:40:21.081Z"
+      },
       {
         "version": "26.42.0",
         "releaseDate": "2026-10-16T19:19:55.000Z",
