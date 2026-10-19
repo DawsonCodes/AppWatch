@@ -211,6 +211,12 @@
     ],
     "google:com.google.android.apps.bard": [
       {
+        "version": "1.0.995038376",
+        "releaseDate": "2026-10-13T17:05:50.000Z",
+        "releaseNotes": "• Unlock a new world of productivity and creativity with Gemini 3.5 Flash and Gemini Omni.\n• Gemini Spark 24/7 personal AI agent proactively manages tasks and helps you navigate your digital life.\n• Daily Brief agent gives you a personalized morning brief and organizes exactly what you need to know to start your day.\n• Show Gemini what you’re seeing and try saying “reimagine this” to dream up creative new surroundings with Nano Banana in Gemini Live.",
+        "detectedAt": "2026-10-19T13:14:29.803Z"
+      },
+      {
         "version": "1.0.971139365",
         "releaseDate": "2026-08-31T15:22:27.000Z",
         "releaseNotes": "• Unlock a new world of productivity and creativity with Gemini 3.5 Flash and Gemini Omni.\n• Gemini Spark 24/7 personal AI agent proactively manages tasks and helps you navigate your digital life.\n• Daily Brief agent gives you a personalized morning brief and organizes exactly what you need to know to start your day.\n• Show Gemini what you’re seeing and try saying “reimagine this” to dream up creative new surroundings with Nano Banana in Gemini Live.",
@@ -485,6 +491,12 @@
     ],
     "google:com.deepseek.chat": [
       {
+        "version": "2.6.3",
+        "releaseDate": "2026-10-16T09:30:28.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-10-19T13:14:29.803Z"
+      },
+      {
         "version": "2.6.2",
         "releaseDate": "2026-10-13T06:30:41.000Z",
         "releaseNotes": "- Some known issues fixed",
@@ -538,6 +550,12 @@
       }
     ],
     "apple:389801252": [
+      {
+        "version": "452.0.0",
+        "releaseDate": "2026-10-19T12:27:02.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
+        "detectedAt": "2026-10-19T13:14:29.803Z"
+      },
       {
         "version": "451.0.0",
         "releaseDate": "2026-10-12T18:25:41.000Z",
@@ -792,6 +810,12 @@
       }
     ],
     "google:com.instagram.barcelona": [
+      {
+        "version": "451.0.0.51.80",
+        "releaseDate": "2026-10-12T15:18:34.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-10-19T13:14:29.803Z"
+      },
       {
         "version": "450.0.0.51.78",
         "releaseDate": "2026-10-05T17:47:00.000Z",
@@ -1935,6 +1959,12 @@
     ],
     "apple:284993459": [
       {
+        "version": "27.2",
+        "releaseDate": "2026-10-19T09:34:25.000Z",
+        "releaseNotes": "Shazam now adapts across orientations and screen sizes on iPhone, iPad, and iPhone Duo, so you can identify music and revisit your recent discoveries however you’re holding your device.",
+        "detectedAt": "2026-10-19T13:14:29.803Z"
+      },
+      {
         "version": "27.1",
         "releaseDate": "2026-10-07T09:11:25.000Z",
         "releaseNotes": "Thanks for using Shazam! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. \n\nDon’t forget to keep your Shazam History safe and in sync between your devices. Simply turn on iCloud sync in Shazam Settings. \n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.shazam.com.",
@@ -1994,6 +2024,12 @@
       }
     ],
     "google:org.videolan.vlc": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-14T12:14:05.000Z",
+        "releaseNotes": "* Equalizer fixes\n * Remote access: allow playing audio media in the browser\n * Add back the deletion for multiple file sin the browser\n * Update the remote access OTP code length\n * Improve the feedback UI\n * Add more size options for the subtitle size\n * Crash fixes",
+        "detectedAt": "2026-10-19T13:14:29.803Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-05-11T06:43:41.000Z",
