@@ -231,6 +231,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.56",
+        "releaseDate": "2026-10-20T13:15:42.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
+      {
         "version": "1.4.55",
         "releaseDate": "2026-10-17T10:56:43.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -900,6 +906,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-10-20T08:13:32.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-17T03:32:26.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-10-17T18:30:42.940Z"
@@ -1055,6 +1067,12 @@
     ],
     "apple:1064216828": [
       {
+        "version": "2026.42.0",
+        "releaseDate": "2026-10-20T13:16:12.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
+      {
         "version": "2026.41.0",
         "releaseDate": "2026-10-12T19:44:29.000Z",
         "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
@@ -1080,6 +1098,12 @@
       }
     ],
     "google:com.reddit.frontpage": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-19T21:59:57.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our Android app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-12T18:25:51.000Z",
@@ -1580,6 +1604,12 @@
     "google:org.telegram.messenger": [
       {
         "version": null,
+        "releaseDate": "2026-10-19T19:53:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-16T04:13:23.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-16T18:03:26.470Z"
@@ -1782,6 +1812,12 @@
       }
     ],
     "google:com.netflix.mediaclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-13T21:30:55.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-08T01:04:19.000Z",
@@ -2969,6 +3005,12 @@
     ],
     "google:org.mozilla.firefox": [
       {
+        "version": "158.0.1",
+        "releaseDate": "2026-10-20T03:12:45.000Z",
+        "releaseNotes": "Fixed a frequent crash affecting some Android devices.",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
+      {
         "version": "158.0",
         "releaseDate": "2026-10-08T03:13:02.000Z",
         "releaseNotes": "- The tab bar can now be shown at either the top or bottom of the screen. Go to Settings > Customize to choose.\nFirefox's Translations feature now supports the following languages:\n-Albanian\n-Belarusian\n-Filipino",
@@ -3030,6 +3072,12 @@
       }
     ],
     "apple:535886823": [
+      {
+        "version": "156.0.8078.46",
+        "releaseDate": "2026-10-20T16:00:53.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• Stability and performance improvements.",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
       {
         "version": "156.0.8078.33",
         "releaseDate": "2026-10-13T15:58:42.000Z",
@@ -3355,6 +3403,12 @@
     ],
     "apple:585027354": [
       {
+        "version": "26.42.2",
+        "releaseDate": "2026-10-20T11:51:15.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
+      {
         "version": "26.42.1",
         "releaseDate": "2026-10-18T19:41:14.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
@@ -3392,6 +3446,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-20T14:00:48.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-20T04:56:46.000Z",
@@ -3684,6 +3744,12 @@
       }
     ],
     "google:com.airbnb.android": [
+      {
+        "version": "26.42",
+        "releaseDate": "2026-10-13T20:32:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
       {
         "version": "26.41",
         "releaseDate": "2026-10-06T22:05:56.000Z",
@@ -4482,6 +4548,12 @@
       }
     ],
     "google:com.google.android.apps.translate": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-20T00:28:45.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-10-20T17:03:21.912Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-09T09:06:07.000Z",
