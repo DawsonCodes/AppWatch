@@ -1755,6 +1755,12 @@
     ],
     "google:com.discord": [
       {
+        "version": "350.8 - Stable",
+        "releaseDate": "2026-10-16T22:38:36.000Z",
+        "releaseNotes": "The “Show spoiler content” setting on the desktop app is now also available on mobile, providing the option to always see what’s behind the ||spoiler tag||, without having to tap to reveal it each time. We also resolved an issue where the bottoms of letters like g, y, and p were clipped in various places (yay). As always, there are hundreds more fixes listed at dis.gd/PatchNotes.",
+        "detectedAt": "2026-10-20T21:37:12.588Z"
+      },
+      {
         "version": "349.9 - Stable",
         "releaseDate": "2026-10-09T23:00:49.000Z",
         "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
@@ -3106,6 +3112,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-10-20T18:03:58.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-20T21:37:12.588Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-15T22:52:12.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-10-16T07:09:13.605Z"
@@ -3862,6 +3874,12 @@
     "google:com.ebay.mobile": [
       {
         "version": null,
+        "releaseDate": "2026-10-15T23:12:04.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-20T21:37:12.588Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-08T21:29:44.000Z",
         "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
         "detectedAt": "2026-10-10T18:35:47.284Z"
@@ -4320,6 +4338,12 @@
       }
     ],
     "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-20T17:46:10.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-20T21:37:12.588Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-19T18:40:35.000Z",
