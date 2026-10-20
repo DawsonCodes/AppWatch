@@ -299,6 +299,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.47-release.01",
+        "releaseDate": "2026-10-15T01:45:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-20T11:36:01.258Z"
+      },
+      {
         "version": "1.2.46-release.00",
         "releaseDate": "2026-10-12T03:19:40.000Z",
         "releaseNotes": null,
@@ -3386,6 +3392,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-20T04:56:46.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-10-20T11:36:01.258Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-15T23:30:15.000Z",
