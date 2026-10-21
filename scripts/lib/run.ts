@@ -13,7 +13,8 @@ import type {
   StatusFile,
   VersionHistoryEntry,
 } from '../../src/shared/types.ts';
-import { appId, SCHEMA_VERSION } from '../../src/shared/types.ts';
+import { feedFor } from '../../src/shared/feeds.ts';
+import { appId, PLATFORMS, SCHEMA_VERSION } from '../../src/shared/types.ts';
 import {
   validateAppsFile,
   validateHistoryFile,
@@ -28,7 +29,8 @@ import type { ProviderFetch } from './providers/types.ts';
 
 export interface RunOptions {
   config: CheckerConfig;
-  providers: Record<Platform, ProviderFetch>;
+  /** One provider per platform in use; a missing one fails its listings. */
+  providers: Partial<Record<Platform, ProviderFetch>>;
   /** Directory holding apps.json / history.json / status.json. */
   dataDir: string;
   /**
@@ -63,9 +65,14 @@ export interface RunResult {
 }
 
 function fallbackStoreUrl(target: TrackTarget): string {
-  return target.platform === 'apple'
-    ? `https://apps.apple.com/${target.country}/app/id${target.storeId}`
-    : `https://play.google.com/store/apps/details?id=${encodeURIComponent(target.storeId)}`;
+  switch (target.platform) {
+    case 'apple':
+      return `https://apps.apple.com/${target.country}/app/id${target.storeId}`;
+    case 'google':
+      return `https://play.google.com/store/apps/details?id=${encodeURIComponent(target.storeId)}`;
+    default:
+      return feedFor(target.storeId)?.productUrl ?? 'https://github.com/DawsonCodes/AppWatch';
+  }
 }
 
 export async function runCheck(options: RunOptions): Promise<RunResult> {
@@ -107,10 +114,10 @@ export async function runCheck(options: RunOptions): Promise<RunResult> {
 
   // Let providers warm up in bulk first (e.g. one batched App Store lookup
   // for many apps). A failure here only means per-app requests are used.
-  for (const platform of ['apple', 'google'] as const) {
+  for (const platform of PLATFORMS) {
     const provider = providers[platform];
     const targets = config.targets.filter((target) => target.platform === platform);
-    if (provider.prime && targets.length > 0) {
+    if (provider?.prime && targets.length > 0) {
       try {
         await provider.prime(targets);
       } catch (error) {
@@ -129,6 +136,7 @@ export async function runCheck(options: RunOptions): Promise<RunResult> {
     let result;
     try {
       log(`checking ${id} …`);
+      if (!provider) throw new Error(`No checker is configured for ${target.platform} listings`);
       const snapshot = await provider(target);
       result = mergeSnapshot(previous, prevHistory, snapshot, nowIso);
     } catch (error) {

@@ -5,7 +5,7 @@
  */
 
 import type { AppsFile, HistoryFile, StatusFile } from './types.ts';
-import { historyEntryKey } from './types.ts';
+import { historyEntryKey, isPlatform, PLATFORMS } from './types.ts';
 
 type Path = string;
 
@@ -61,6 +61,26 @@ function checkOptionalNullableNumber(
   }
 }
 
+function isHttpsUrl(value: unknown): boolean {
+  if (typeof value !== 'string') return false;
+  try {
+    return new URL(value).protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+/** Optional link field: absent, null, or an https URL. */
+function checkOptionalUrl(
+  errors: string[],
+  record: Record<string, unknown>,
+  key: string,
+  path: Path,
+): void {
+  if (!(key in record) || record[key] === null) return;
+  if (!isHttpsUrl(record[key])) errors.push(`${path}.${key}: expected https URL or null`);
+}
+
 function checkHistoryEntry(errors: string[], value: unknown, path: Path): void {
   if (!isRecord(value)) {
     errors.push(`${path}: expected object`);
@@ -79,6 +99,7 @@ function checkHistoryEntry(errors: string[], value: unknown, path: Path): void {
   if (!isIsoDate(value.detectedAt)) {
     errors.push(`${path}.detectedAt: expected ISO 8601 date string`);
   }
+  checkOptionalUrl(errors, value, 'url', path);
 }
 
 function checkAppRecord(errors: string[], value: unknown, path: Path): void {
@@ -87,8 +108,8 @@ function checkAppRecord(errors: string[], value: unknown, path: Path): void {
     return;
   }
   checkString(errors, value.id, `${path}.id`);
-  if (value.platform !== 'apple' && value.platform !== 'google') {
-    errors.push(`${path}.platform: expected "apple" or "google"`);
+  if (!isPlatform(value.platform)) {
+    errors.push(`${path}.platform: expected one of ${PLATFORMS.map((p) => `"${p}"`).join(', ')}`);
   }
   checkString(errors, value.storeId, `${path}.storeId`);
   if (
@@ -113,6 +134,7 @@ function checkAppRecord(errors: string[], value: unknown, path: Path): void {
   checkOptionalNullableString(errors, value, 'contentRating', path);
   checkOptionalNullableString(errors, value, 'requiresOs', path);
   checkOptionalNullableString(errors, value, 'developerWebsite', path);
+  checkOptionalUrl(errors, value, 'releaseUrl', path);
   checkOptionalNullableNumber(errors, value, 'sizeBytes', path);
   checkOptionalNullableNumber(errors, value, 'rating', path, 5);
   checkOptionalNullableNumber(errors, value, 'ratingCount', path);

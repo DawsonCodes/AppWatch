@@ -2,8 +2,8 @@
  * AppWatch update checker CLI.
  *
  * Reads apps.config.json, queries the App Store and Google Play for each
- * tracked app, and refreshes public/data/*.json when anything meaningful
- * changed. Designed to run in GitHub Actions on a schedule, but works locally:
+ * tracked app (and vendor release feeds for Windows/Mac software), and
+ * refreshes public/data/*.json when anything meaningful changed. Designed to run in GitHub Actions on a schedule, but works locally:
  *
  *   npm run check:updates
  *
@@ -22,10 +22,19 @@ import { parseConfig, ConfigError } from './lib/config.ts';
 import { readJsonFile } from './lib/io.ts';
 import { createAppleProvider } from './lib/providers/apple.ts';
 import { createGooglePlayProvider } from './lib/providers/googleplay.ts';
+import { createRespondusProvider } from './lib/providers/respondus.ts';
 import { runCheck } from './lib/run.ts';
 import type { AppRunSummary, RunResult } from './lib/run.ts';
+import type { Platform } from '../src/shared/types.ts';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+const PLATFORM_LABELS: Record<Platform, string> = {
+  apple: 'App Store',
+  google: 'Google Play',
+  windows: 'Windows',
+  mac: 'Mac',
+};
 const log = (message: string) => console.log(message);
 
 function outcomeLabel(summary: AppRunSummary): string {
@@ -54,7 +63,7 @@ function reportToGitHub(result: RunResult): void {
     const rows = result.summaries
       .map(
         (s) =>
-          `| ${s.name} | ${s.platform === 'apple' ? 'App Store' : 'Google Play'} | ${
+          `| ${s.name} | ${PLATFORM_LABELS[s.platform]} | ${
             s.version ?? '—'
           } | ${outcomeLabel(s)} |`,
       )
@@ -81,11 +90,15 @@ async function main(): Promise<void> {
 
   const configuredDelay = Number(process.env.APPWATCH_DELAY_MS ?? 1500);
   const playIntervalMs = Number.isFinite(configuredDelay) ? configuredDelay : 1500;
+  const desktop = createRespondusProvider({ log });
   const result = await runCheck({
     config,
     providers: {
       apple: createAppleProvider({ log }),
       google: createGooglePlayProvider({ log, minIntervalMs: playIntervalMs }),
+      // Desktop releases come from vendor release feeds (src/shared/feeds.ts).
+      windows: desktop,
+      mac: desktop,
     },
     dataDir: join(root, 'public', 'data'),
     log,

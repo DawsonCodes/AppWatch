@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   appendHistory,
+  backfillReleases,
   hasMeaningfulChange,
   isDateOnlyUpdate,
   mergeFailure,
@@ -353,5 +354,107 @@ describe('hasMeaningfulChange', () => {
     );
     const [appsB, historyB] = filesFor(repriced.record, { 'apple:100': repriced.history });
     expect(hasMeaningfulChange(appsA, appsB, historyA, historyB)).toBe(true);
+  });
+});
+
+describe('release feeds (desktop listings)', () => {
+  const releases = [
+    {
+      version: '2.1.6.02',
+      releaseDate: '2026-09-28T15:00:00.000Z',
+      releaseNotes: 'Minor fix.',
+      url: 'https://support.respondus.com/hc/en-us/articles/3',
+    },
+    {
+      version: '2.1.6.01',
+      releaseDate: '2026-09-26T15:00:00.000Z',
+      releaseNotes: 'Passkey support.',
+      url: 'https://support.respondus.com/hc/en-us/articles/2',
+    },
+    {
+      version: '2.1.6.00',
+      releaseDate: '2026-09-16T15:00:00.000Z',
+      releaseNotes: 'Newer Chromium.',
+      url: 'https://support.respondus.com/hc/en-us/articles/1',
+    },
+  ];
+  const feedSnapshot: AppSnapshot = {
+    ...snapshot,
+    platform: 'windows',
+    storeId: 'respondus-lockdown-browser',
+    name: 'LockDown Browser',
+    iconUrl: null,
+    storeUrl: 'https://web.respondus.com/he/lockdownbrowser/',
+    version: '2.1.6.02',
+    releaseDate: '2026-09-28T15:00:00.000Z',
+    releaseNotes: 'Minor fix.',
+    releaseUrl: 'https://support.respondus.com/hc/en-us/articles/3',
+    releases,
+  };
+
+  it('starts history from the vendor record on the first check', () => {
+    const result = mergeSnapshot(undefined, [], feedSnapshot, NOW);
+    expect(result.outcome).toBe('new');
+    expect(result.record.releaseUrl).toBe('https://support.respondus.com/hc/en-us/articles/3');
+    expect(result.history.map((e) => [e.version, e.url])).toEqual([
+      ['2.1.6.02', 'https://support.respondus.com/hc/en-us/articles/3'],
+      ['2.1.6.01', 'https://support.respondus.com/hc/en-us/articles/2'],
+      ['2.1.6.00', 'https://support.respondus.com/hc/en-us/articles/1'],
+    ]);
+    expect(result.history.every((e) => e.detectedAt === NOW)).toBe(true);
+  });
+
+  it('detects a new release and keeps recorded entries untouched', () => {
+    const first = mergeSnapshot(undefined, [], feedSnapshot, NOW);
+    const next = mergeSnapshot(
+      first.record,
+      first.history,
+      {
+        ...feedSnapshot,
+        version: '2.1.6.03',
+        releaseDate: '2026-10-15T15:00:00.000Z',
+        releaseNotes: 'Security.',
+        releaseUrl: 'https://support.respondus.com/hc/en-us/articles/4',
+        releases: [
+          {
+            version: '2.1.6.03',
+            releaseDate: '2026-10-15T15:00:00.000Z',
+            releaseNotes: 'Security.',
+            url: 'https://support.respondus.com/hc/en-us/articles/4',
+          },
+          ...releases,
+        ],
+      },
+      LATER,
+    );
+    expect(next.outcome).toBe('updated');
+    expect(next.record.previousVersion).toBe('2.1.6.02');
+    expect(next.history).toHaveLength(4);
+    expect(next.history[0]).toMatchObject({ version: '2.1.6.03', detectedAt: LATER });
+    expect(next.history.slice(1)).toEqual(first.history);
+  });
+
+  it('backfills releases recorded later by the vendor, in date order', () => {
+    const history = backfillReleases(
+      [
+        {
+          version: '2.1.6.02',
+          releaseDate: '2026-09-28T15:00:00.000Z',
+          releaseNotes: null,
+          detectedAt: NOW,
+        },
+      ],
+      releases,
+      LATER,
+    );
+    expect(history.map((e) => e.version)).toEqual(['2.1.6.02', '2.1.6.01', '2.1.6.00']);
+    expect(history[0]?.releaseNotes).toBeNull(); // existing entries are never rewritten
+    expect(backfillReleases(history, undefined, LATER)).toBe(history);
+  });
+
+  it('leaves store listings without feed fields', () => {
+    const result = mergeSnapshot(undefined, [], snapshot, NOW);
+    expect('releaseUrl' in result.record).toBe(false);
+    expect('url' in (result.history[0] ?? {})).toBe(false);
   });
 });

@@ -4,10 +4,10 @@
  * store: an Apple numeric ID or an Android package name.
  */
 
-import type { Platform } from './types.ts';
+import type { StorePlatform } from './types.ts';
 
 export interface StoreRef {
-  platform: Platform;
+  platform: StorePlatform;
   storeId: string;
   /** Two-letter storefront hint taken from an App Store URL, when present. */
   country?: string;

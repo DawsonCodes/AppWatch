@@ -5,8 +5,9 @@
      gray-dark  neutral charcoal, blue brand accent (default)
      light      soft white, the same accent family
      ms-paint   a playful tribute to classic desktop paint software
-   Store identity is constant across themes: App Store is blue, Google Play is
-   green, and "new this week" is violet. Components reference tokens only.
+   Platform identity is constant across themes: App Store is blue, Google
+   Play is green, Windows is cyan, Mac is orange, and "new this week" is
+   violet. Components reference tokens only.
    ========================================================================== */
 
 :root,
@@ -37,6 +38,14 @@
   --google-text: #52d487;
   --google-solid: #167a3e;
   --google-soft: rgba(47, 196, 106, 0.13);
+  --windows: #2bc4e8;
+  --windows-text: #5fd3f0;
+  --windows-solid: #0e7490;
+  --windows-soft: rgba(43, 196, 232, 0.13);
+  --mac: #ff9f45;
+  --mac-text: #ffb46e;
+  --mac-solid: #b45309;
+  --mac-soft: rgba(255, 159, 69, 0.13);
   --fresh: #b690ff;
   --fresh-soft: rgba(182, 144, 255, 0.15);
 
@@ -158,6 +167,14 @@
   --google-text: #137333;
   --google-solid: #137333;
   --google-soft: rgba(30, 158, 79, 0.1);
+  --windows: #0891b2;
+  --windows-text: #0e7490;
+  --windows-solid: #0e7490;
+  --windows-soft: rgba(8, 145, 178, 0.1);
+  --mac: #ea7a12;
+  --mac-text: #b45309;
+  --mac-solid: #b45309;
+  --mac-soft: rgba(234, 122, 18, 0.1);
   --fresh: #7a3ff0;
   --fresh-soft: rgba(122, 63, 240, 0.1);
 
@@ -210,6 +227,14 @@
   --google-text: #006000;
   --google-solid: #006000;
   --google-soft: #d8efd8;
+  --windows: #008080;
+  --windows-text: #006060;
+  --windows-solid: #006060;
+  --windows-soft: #d0f0f0;
+  --mac: #c06000;
+  --mac-text: #904800;
+  --mac-solid: #904800;
+  --mac-soft: #f8e0c8;
   --fresh: #800080;
   --fresh-soft: #f0d8f0;
 

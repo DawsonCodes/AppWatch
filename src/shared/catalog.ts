@@ -30,7 +30,9 @@
  */
 
 import { PLAY_PACKAGE_RE, parseStoreUrl } from './storeRefs.ts';
+import { feedFor, FEEDS } from './feeds.ts';
 import type { Platform } from './types.ts';
+import { PLATFORMS } from './types.ts';
 import { appId } from './types.ts';
 
 export class CatalogError extends Error {}
@@ -138,6 +140,27 @@ function listingFromField(
   return { platform, storeId: text, country: defaults.country, language: defaults.language };
 }
 
+/** A desktop field: the id of a supported release feed (see feeds.ts). */
+function listingFromFeed(
+  value: unknown,
+  platform: 'windows' | 'mac',
+  where: string,
+  defaults: Defaults,
+): CatalogListing {
+  const known = Object.keys(FEEDS)
+    .map((id) => `"${id}"`)
+    .join(', ');
+  if (typeof value !== 'string' || value.trim() === '') {
+    throw new CatalogError(`${where}: expected a release feed id (${known}).`);
+  }
+  const feed = feedFor(value.trim());
+  if (!feed) throw new CatalogError(`${where}: unknown release feed "${value}". Known: ${known}.`);
+  if (!feed.platforms.includes(platform)) {
+    throw new CatalogError(`${where}: feed "${feed.id}" has no ${platform} releases.`);
+  }
+  return { platform, storeId: feed.id, country: defaults.country, language: defaults.language };
+}
+
 /** Legacy entry: a store URL string or { "platform", "id" } object. */
 function legacyListing(entry: unknown, defaults: Defaults): CatalogListing {
   if (typeof entry === 'string') return listingFromUrl(entry.trim(), defaults);
@@ -187,7 +210,7 @@ class CatalogBuilder {
       return true;
     });
     if (unique.length === 0) return;
-    unique.sort((a, b) => (a.platform === b.platform ? 0 : a.platform === 'apple' ? -1 : 1));
+    unique.sort((a, b) => PLATFORMS.indexOf(a.platform) - PLATFORMS.indexOf(b.platform));
     const first = unique[0]!;
     const base = (name ? slugify(name) : '') || slugify(`${first.platform}-${first.storeId}`);
     let key = base;
@@ -255,8 +278,16 @@ export function parseCatalog(raw: unknown): Catalog {
         if (entry.googlePlay !== undefined) {
           listings.push(listingFromField(entry.googlePlay, 'google', `${at}.googlePlay`, local));
         }
+        if (entry.windows !== undefined) {
+          listings.push(listingFromFeed(entry.windows, 'windows', `${at}.windows`, local));
+        }
+        if (entry.mac !== undefined) {
+          listings.push(listingFromFeed(entry.mac, 'mac', `${at}.mac`, local));
+        }
         if (listings.length === 0) {
-          throw new CatalogError(`${at}: add an "appStore" and/or "googlePlay" link for ${name}.`);
+          throw new CatalogError(
+            `${at}: add an "appStore", "googlePlay", "windows" or "mac" listing for ${name}.`,
+          );
         }
         builder.addApp(name, id, listings);
       });

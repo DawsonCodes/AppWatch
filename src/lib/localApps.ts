@@ -6,13 +6,13 @@
  * the UI says so explicitly wherever they appear.
  */
 
-import type { Platform } from '../shared/types.ts';
+import type { StorePlatform } from '../shared/types.ts';
 import { appId } from '../shared/types.ts';
 import { readJsonPref, writeJsonPref } from './prefs.ts';
 
 export interface LocalApp {
   id: string;
-  platform: Platform;
+  platform: StorePlatform;
   storeId: string;
   name: string;
   developer: string | null;

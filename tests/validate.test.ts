@@ -52,7 +52,7 @@ describe('validateAppsFile', () => {
       validateAppsFile({
         schemaVersion: 1,
         generatedAt: null,
-        apps: [{ ...validApp, platform: 'windows' }],
+        apps: [{ ...validApp, platform: 'linux' }],
       }),
     ).toContainEqual(expect.stringContaining('platform'));
     expect(
@@ -183,5 +183,74 @@ describe('validateStatusFile', () => {
         updatesDetected: 0,
       }),
     ).toContainEqual(expect.stringContaining('totalApps'));
+  });
+});
+
+describe('desktop listings and announcement links', () => {
+  const desktop: AppRecord = {
+    ...validApp,
+    id: 'windows:respondus-lockdown-browser',
+    platform: 'windows',
+    storeId: 'respondus-lockdown-browser',
+    storeUrl: 'https://web.respondus.com/he/lockdownbrowser/',
+    releaseUrl: 'https://support.respondus.com/hc/en-us/articles/1',
+  };
+
+  it('accepts Windows and Mac records with a release link', () => {
+    expect(validateAppsFile({ schemaVersion: 1, generatedAt: null, apps: [desktop] })).toEqual([]);
+    expect(
+      validateAppsFile({
+        schemaVersion: 1,
+        generatedAt: null,
+        apps: [{ ...desktop, id: 'mac:respondus-lockdown-browser', platform: 'mac' }],
+      }),
+    ).toEqual([]);
+  });
+
+  it('rejects unknown platforms and non-https links', () => {
+    expect(
+      validateAppsFile({
+        schemaVersion: 1,
+        generatedAt: null,
+        apps: [{ ...desktop, id: 'linux:x', platform: 'linux', storeId: 'x' }],
+      }),
+    ).toEqual([expect.stringContaining('platform: expected one of')]);
+    expect(
+      validateAppsFile({
+        schemaVersion: 1,
+        generatedAt: null,
+        apps: [{ ...desktop, releaseUrl: 'javascript:alert(1)' }],
+      }),
+    ).toEqual(['apps[0].releaseUrl: expected https URL or null']);
+  });
+
+  it('checks history entry links', () => {
+    const entry = {
+      version: '2.1.6.02',
+      releaseDate: '2026-09-28T15:00:00.000Z',
+      releaseNotes: null,
+      detectedAt: '2026-10-21T00:00:00.000Z',
+    };
+    expect(
+      validateHistoryFile({
+        schemaVersion: 1,
+        entries: {
+          'windows:respondus-lockdown-browser': [
+            { ...entry, url: null },
+            {
+              ...entry,
+              version: '2.1.6.01',
+              url: 'https://support.respondus.com/hc/en-us/articles/2',
+            },
+          ],
+        },
+      }),
+    ).toEqual([]);
+    expect(
+      validateHistoryFile({
+        schemaVersion: 1,
+        entries: { x: [{ ...entry, url: 'http://insecure.example' }] },
+      }),
+    ).toEqual(['entries["x"][0].url: expected https URL or null']);
   });
 });

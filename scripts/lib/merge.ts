@@ -13,7 +13,7 @@ import type {
 } from '../../src/shared/types.ts';
 import { appId, historyEntryKey } from '../../src/shared/types.ts';
 import { isVersionChange } from '../../src/shared/version.ts';
-import type { AppSnapshot } from './providers/types.ts';
+import type { AppSnapshot, OfficialRelease } from './providers/types.ts';
 
 export type MergeOutcome = 'new' | 'updated' | 'unchanged' | 'failed';
 
@@ -38,6 +38,56 @@ export function appendHistory(
     return history;
   }
   return [entry, ...history];
+}
+
+function releaseTime(entry: VersionHistoryEntry): number {
+  const time = Date.parse(entry.releaseDate ?? entry.detectedAt);
+  return Number.isNaN(time) ? 0 : time;
+}
+
+/**
+ * Fill in releases from the vendor's own release record that history doesn't
+ * have yet (release feeds publish every past version with its date, notes
+ * and announcement). These are real, published releases — AppWatch just
+ * learned about them from the official archive instead of watching them ship.
+ * Entries already recorded are never modified.
+ */
+export function backfillReleases(
+  history: VersionHistoryEntry[],
+  releases: readonly OfficialRelease[] | undefined,
+  now: string,
+): VersionHistoryEntry[] {
+  if (!releases || releases.length === 0) return history;
+  let next = history;
+  for (const release of releases) {
+    next = appendHistory(next, {
+      version: release.version,
+      releaseDate: release.releaseDate,
+      releaseNotes: release.releaseNotes,
+      detectedAt: now,
+      url: release.url,
+    });
+  }
+  if (next === history) return history;
+  // Stable sort keeps same-day entries in their recorded order.
+  return [...next].sort((a, b) => releaseTime(b) - releaseTime(a));
+}
+
+/** The history entry for a snapshot's current release. */
+function currentEntry(snapshot: AppSnapshot, now: string): VersionHistoryEntry {
+  const entry: VersionHistoryEntry = {
+    version: snapshot.version,
+    releaseDate: snapshot.releaseDate,
+    releaseNotes: snapshot.releaseNotes,
+    detectedAt: now,
+  };
+  if (snapshot.releaseUrl !== undefined) entry.url = snapshot.releaseUrl;
+  return entry;
+}
+
+/** Feed-only fields are added only when the provider supplies them. */
+function feedFields(snapshot: AppSnapshot): Pick<AppRecord, 'releaseUrl'> {
+  return snapshot.releaseUrl !== undefined ? { releaseUrl: snapshot.releaseUrl } : {};
 }
 
 /**
@@ -67,13 +117,13 @@ export function mergeSnapshot(
   const id = appId(snapshot.platform, snapshot.storeId);
 
   if (!previous) {
-    // First successful check: history begins from this snapshot.
-    const history = appendHistory([], {
-      version: snapshot.version,
-      releaseDate: snapshot.releaseDate,
-      releaseNotes: snapshot.releaseNotes,
-      detectedAt: now,
-    });
+    // First successful check: history begins from this snapshot (plus the
+    // vendor's earlier releases, for release feeds).
+    const history = backfillReleases(
+      appendHistory([], currentEntry(snapshot, now)),
+      snapshot.releases,
+      now,
+    );
     return {
       record: {
         id,
@@ -96,6 +146,7 @@ export function mergeSnapshot(
         rating: snapshot.rating,
         ratingCount: snapshot.ratingCount,
         developerWebsite: snapshot.developerWebsite,
+        ...feedFields(snapshot),
         firstTrackedAt: now,
         lastCheckedAt: now,
         lastUpdatedAt: null,
@@ -110,12 +161,11 @@ export function mergeSnapshot(
 
   const versionChanged = isVersionChange(previous.currentVersion, snapshot.version);
   const updated = versionChanged || isDateOnlyUpdate(previous, snapshot);
-  const history = appendHistory(previousHistory, {
-    version: snapshot.version,
-    releaseDate: snapshot.releaseDate,
-    releaseNotes: snapshot.releaseNotes,
-    detectedAt: now,
-  });
+  const history = backfillReleases(
+    appendHistory(previousHistory, currentEntry(snapshot, now)),
+    snapshot.releases,
+    now,
+  );
 
   return {
     record: {
@@ -137,6 +187,7 @@ export function mergeSnapshot(
       rating: snapshot.rating ?? previous.rating ?? null,
       ratingCount: snapshot.ratingCount ?? previous.ratingCount ?? null,
       developerWebsite: snapshot.developerWebsite ?? previous.developerWebsite ?? null,
+      ...feedFields(snapshot),
       lastCheckedAt: now,
       lastUpdatedAt: updated ? now : previous.lastUpdatedAt,
       checkStatus: 'ok',

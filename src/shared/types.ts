@@ -7,7 +7,26 @@
  *   - status.json  -> StatusFile
  */
 
-export type Platform = 'apple' | 'google';
+/**
+ * Where a listing lives. `apple` and `google` are the app stores; `windows`
+ * and `mac` are desktop releases read from a vendor's official release feed
+ * (see src/shared/feeds.ts).
+ */
+export type Platform = 'apple' | 'google' | 'windows' | 'mac';
+
+/** The two app stores (discovery and browser-local watches only cover these). */
+export type StorePlatform = 'apple' | 'google';
+
+/** Display and sort order for platforms. */
+export const PLATFORMS: readonly Platform[] = ['apple', 'google', 'windows', 'mac'];
+
+export function isPlatform(value: unknown): value is Platform {
+  return typeof value === 'string' && (PLATFORMS as readonly string[]).includes(value);
+}
+
+export function isDesktopPlatform(platform: Platform): platform is 'windows' | 'mac' {
+  return platform === 'windows' || platform === 'mac';
+}
 
 export type CheckStatus = 'ok' | 'error' | 'pending';
 
@@ -25,6 +44,8 @@ export interface VersionHistoryEntry {
   releaseNotes: string | null;
   /** When AppWatch first saw this release (ISO 8601). */
   detectedAt: string;
+  /** The vendor's official announcement for this release, when there is one. */
+  url?: string | null;
 }
 
 /**
@@ -44,7 +65,10 @@ export interface AppRecord {
   /** Stable identifier: `${platform}:${storeId}`. */
   id: string;
   platform: Platform;
-  /** Numeric App Store ID (Apple) or package name (Google Play). */
+  /**
+   * Numeric App Store ID (Apple), package name (Google Play), or the release
+   * feed id for desktop listings (e.g. "respondus-lockdown-browser").
+   */
   storeId: string;
   name: string;
   developer: string | null;
@@ -78,6 +102,8 @@ export interface AppRecord {
   ratingCount?: number | null;
   /** Developer/publisher website URL when the store lists one. */
   developerWebsite?: string | null;
+  /** Official announcement for the current version (desktop release feeds). */
+  releaseUrl?: string | null;
   /** When AppWatch first tracked this app (ISO 8601). */
   firstTrackedAt: string;
   /** Last time the store was successfully queried for this app (ISO 8601). */

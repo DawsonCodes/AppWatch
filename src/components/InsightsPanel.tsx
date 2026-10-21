@@ -1,7 +1,9 @@
 import type { AppRecord, StatusFile } from '../shared/types.ts';
 import { isRecentlyUpdated, RECENT_DAYS } from '../lib/filtering.ts';
 import { formatDateTime, relativeTime } from '../lib/format.ts';
+import { PLATFORMS } from '../shared/types.ts';
 import { ChevronDownIcon } from './Icons.tsx';
+import { storeLabel } from './StoreBadge.tsx';
 
 interface InsightsPanelProps {
   /** Every tracked listing the checker has resolved. */
@@ -39,8 +41,10 @@ export function InsightsPanel({
 }: InsightsPanelProps) {
   const now = new Date();
   const recent = listings.filter((listing) => isRecentlyUpdated(listing, now)).length;
-  const apple = listings.filter((listing) => listing.platform === 'apple').length;
-  const google = listings.length - apple;
+  const perPlatform = PLATFORMS.map((platform) => ({
+    platform,
+    count: listings.filter((listing) => listing.platform === platform).length,
+  })).filter(({ count }) => count > 0);
   const failing = listings.filter((listing) => listing.checkStatus === 'error').length;
   const lastRun = status?.lastRunAt ? relativeTime(status.lastRunAt, now) : null;
 
@@ -75,8 +79,14 @@ export function InsightsPanel({
               value={String(appCount)}
               detail={`${listings.length} listings`}
             />
-            <Stat label="App Store" value={String(apple)} detail="listings" />
-            <Stat label="Google Play" value={String(google)} detail="listings" />
+            {perPlatform.map(({ platform, count }) => (
+              <Stat
+                key={platform}
+                label={storeLabel(platform)}
+                value={String(count)}
+                detail={count === 1 ? 'listing' : 'listings'}
+              />
+            ))}
             <Stat label={`Updated in ${RECENT_DAYS} days`} value={String(recent)} />
             <Stat
               label="Failing checks"

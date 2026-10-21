@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { CheckerConfig } from '../scripts/lib/config.ts';
 import { runCheck } from '../scripts/lib/run.ts';
 import type { AppSnapshot, ProviderFetch } from '../scripts/lib/providers/types.ts';
-import type { AppsFile, HistoryFile, StatusFile } from '../src/shared/types.ts';
+import type { AppsFile, HistoryFile, Platform, StatusFile } from '../src/shared/types.ts';
 import {
   validateAppsFile,
   validateHistoryFile,
@@ -29,7 +29,7 @@ const config: CheckerConfig = {
   ],
 };
 
-function snapshotFor(platform: 'apple' | 'google', version: string): AppSnapshot {
+function snapshotFor(platform: Platform, version: string): AppSnapshot {
   const storeId = platform === 'apple' ? '100' : 'com.example';
   return {
     platform,

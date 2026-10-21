@@ -9,6 +9,8 @@ import {
   formatDateTime,
   relativeTime,
 } from '../lib/format.ts';
+import { feedFor } from '../shared/feeds.ts';
+import { isDesktopPlatform } from '../shared/types.ts';
 import { configSnippetFor } from '../lib/localApps.ts';
 import type { Flight } from '../lib/motion.ts';
 import { flyBetween, isOnScreen, slideIn, slideOut } from '../lib/motion.ts';
@@ -141,7 +143,9 @@ function History({ history, listing }: { history: HistoryState; listing: Listing
               )}
               {current ? <span class="tag tag--current">Current</span> : null}
               {index === history.entries.length - 1 ? (
-                <span class="tag">First recorded</span>
+                <span class="tag">
+                  {isDesktopPlatform(listing.platform) ? 'Earliest on record' : 'First recorded'}
+                </span>
               ) : null}
             </div>
             <p class="history__dates">
@@ -152,6 +156,14 @@ function History({ history, listing }: { history: HistoryState; listing: Listing
               {index === history.entries.length - 1 && !older
                 ? `recorded ${formatDate(entry.detectedAt)}`
                 : `detected ${formatDate(entry.detectedAt)}`}
+              {entry.url ? (
+                <>
+                  {' · '}
+                  <a href={entry.url} target="_blank" rel="noopener noreferrer">
+                    Announcement <ExternalIcon size={11} />
+                  </a>
+                </>
+              ) : null}
             </p>
             {entry.releaseNotes ? <Notes text={entry.releaseNotes} clampAt={180} /> : null}
           </li>
@@ -254,6 +266,7 @@ export function AppDetail({
   }, []);
 
   const local = listing.source === 'local';
+  const feed = isDesktopPlatform(listing.platform) ? feedFor(listing.storeId) : null;
   const developer = groupDeveloper(group);
   const releasedAgo = relativeTime(listing.releaseDate);
   const size = formatBytes(listing.sizeBytes);
@@ -349,6 +362,13 @@ export function AppDetail({
                 </span>
               </p>
             ) : null}
+            {feed ? (
+              <p class="notice">
+                {storeLabel(listing.platform)} versions come from {feed.sourceLabel}. AppWatch keeps
+                the version history but doesn’t host installers — download {feed.product} from your
+                school’s link or the official page.
+              </p>
+            ) : null}
             {local ? (
               <p class="notice">
                 Watched only in this browser — the scheduled checker doesn’t track it, so it has no
@@ -363,8 +383,19 @@ export function AppDetail({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open in {storeLabel(listing.platform)} <ExternalIcon size={14} />
+                {feed ? 'Official page' : `Open in ${storeLabel(listing.platform)}`}{' '}
+                <ExternalIcon size={14} />
               </a>
+              {listing.releaseUrl ? (
+                <a
+                  class="button button--ghost"
+                  href={listing.releaseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Release announcement <ExternalIcon size={13} />
+                </a>
+              ) : null}
               <WatchButton
                 appName={group.name}
                 watched={watched}
@@ -453,9 +484,17 @@ export function AppDetail({
                   <span class="mono">{listing.bundleId}</span>
                 </Fact>
               ) : null}
-              <Fact label={listing.platform === 'apple' ? 'App Store ID' : 'Package'}>
-                <span class="mono">{listing.storeId}</span>
-              </Fact>
+              {feed ? (
+                <Fact label="Source">
+                  <a href={feed.sourceUrl} target="_blank" rel="noopener noreferrer">
+                    {feed.sourceLabel} <ExternalIcon size={11} />
+                  </a>
+                </Fact>
+              ) : (
+                <Fact label={listing.platform === 'apple' ? 'App Store ID' : 'Package'}>
+                  <span class="mono">{listing.storeId}</span>
+                </Fact>
+              )}
               {listing.developerWebsite ? (
                 <Fact label="Developer site">
                   <a href={listing.developerWebsite} target="_blank" rel="noopener noreferrer">
@@ -484,7 +523,11 @@ export function AppDetail({
                 </p>
                 <div class="detail__actions">
                   <CopyButton
-                    value={configSnippetFor({ ...listing, name: group.name })}
+                    value={configSnippetFor({
+                      name: group.name,
+                      storeUrl: listing.storeUrl,
+                      platform: listing.platform === 'apple' ? 'apple' : 'google',
+                    })}
                     label="Copy config entry"
                     done="Copied"
                   />
