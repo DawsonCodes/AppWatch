@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Release rhythm for every listing, estimated from its recorded history: a
+  one-line rhythm on each card, a detail panel with the typical gap, likely
+  next-update window, recent activity and confidence, optional charts (release
+  timeline and days between releases) with a table view, a "Next expected
+  update" sort, an Up next row in the Updates view, and an "Expected within
+  3 days" insight.
+
 - Desktop tracking: Windows and Mac listings, read from vendors' official
   release announcements, with their own colors (Windows cyan, Mac orange) and
   a platform filter that lists every platform in use.
@@ -114,6 +121,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   blue identity.
 
 ### Fixed
+
+- Older LockDown Browser releases showed the date Respondus moved its help
+  center (December 2021) instead of their real release date; the date now
+  comes from each announcement's byline, and announcement-derived history
+  follows such corrections.
 
 - Microsoft Copilot failed to resolve on both stores ("2 failing"): Microsoft
   merged its standalone Copilot app into the former Microsoft 365 app, so the

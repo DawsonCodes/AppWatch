@@ -2436,3 +2436,389 @@ button.translate:active:not(:disabled) {
   color: var(--text-faint);
   font-weight: 500;
 }
+
+/* ============================== Release rhythm ============================ */
+
+.rhythm {
+  --series: var(--chart-apple);
+}
+
+.rhythm--google {
+  --series: var(--chart-google);
+}
+
+.rhythm--windows {
+  --series: var(--chart-windows);
+}
+
+.rhythm--mac {
+  --series: var(--chart-mac);
+}
+
+.rhythm__summary {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+  text-wrap: pretty;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+@media (max-width: 519px) {
+  .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.tile__label {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.tile__value {
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.tile__detail {
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rhythm__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  border-radius: 4px;
+}
+
+.rhythm__toggle .chevron {
+  transform: rotate(-90deg);
+}
+
+.rhythm__toggle.is-open .chevron {
+  transform: none;
+}
+
+.rhythm__charts {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 14px;
+  animation: rise-in 420ms var(--ease-out) backwards;
+}
+
+.rhythm__foot {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.rhythm__table summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.rhythm__table table {
+  width: 100%;
+  margin-top: 8px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.rhythm__table th,
+.rhythm__table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--chart-grid);
+  text-align: left;
+}
+
+.rhythm__table th {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.rhythm__table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Charts: thin marks, hairline solid grid, text in text tokens only. */
+
+.chart {
+  margin: 0;
+}
+
+.chart__title {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.chart__plot {
+  position: relative;
+  border-radius: var(--radius-xs);
+  touch-action: pan-y;
+}
+
+.chart__plot:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.chart__plot svg {
+  display: block;
+  overflow: visible;
+}
+
+.chart__axis,
+.chart__grid {
+  stroke: var(--chart-grid);
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.chart__tick,
+.chart__note {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  fill: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.chart__note {
+  fill: var(--text-muted);
+  font-weight: 550;
+}
+
+.chart__today {
+  stroke: var(--text-faint);
+  stroke-width: 1;
+}
+
+.chart__window {
+  fill: var(--series);
+  opacity: 0.12;
+}
+
+.chart__likely {
+  stroke: var(--series);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.chart__ref {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.chart__dot {
+  fill: var(--series);
+  stroke: var(--surface-2);
+  stroke-width: 2;
+  transition: r var(--dur-1) ease;
+}
+
+.chart__bar {
+  fill: var(--series);
+  transition: opacity var(--dur-1) ease;
+}
+
+.chart__plot:has(.chart__bar.is-active) .chart__bar:not(.is-active) {
+  opacity: 0.45;
+}
+
+.chart__foot {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.chart-tip {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  max-width: 260px;
+  padding: 7px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+  pointer-events: none;
+}
+
+.chart-tip__value {
+  font-size: 13.5px;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.chart-tip__label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+[data-theme='ms-paint'] .tile {
+  border: 1px solid #808080;
+}
+
+[data-theme='ms-paint'] .chart__dot {
+  stroke: #ffffff;
+}
+
+[data-theme='ms-paint'] .chart-tip {
+  border: 0;
+  background: #ffffe1;
+  box-shadow:
+    var(--bevel-raised),
+    3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Rhythm line at the foot of each card. */
+.card__rhythm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 12.5px;
+  font-weight: 550;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.card__rhythm svg {
+  color: var(--accent);
+}
+
+.card__rhythm--learning {
+  font-weight: 450;
+  color: var(--text-faint);
+}
+
+.card__rhythm--learning svg {
+  color: var(--text-faint);
+}
+
+.card__rhythm-skeleton {
+  margin-top: auto;
+  width: 55%;
+}
+
+/* Up next: soonest expected updates, above the timeline. */
+.upnext {
+  max-width: 920px;
+  margin-bottom: 24px;
+}
+
+.upnext__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.upnext__hint {
+  font-size: 12.5px;
+  font-weight: 450;
+  color: var(--text-faint);
+}
+
+.upnext__list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 2px 6px;
+  scrollbar-width: thin;
+}
+
+.upnext__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 190px;
+  padding: 10px 14px 10px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: left;
+  transition:
+    translate var(--dur-3) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out),
+    box-shadow var(--dur-3) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .upnext__item:hover {
+    translate: 0 -2px;
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-2);
+  }
+}
+
+.upnext__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.upnext__name {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upnext__when {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+[data-theme='ms-paint'] .upnext__item {
+  border: 2px solid #000000;
+  background: #ffffff;
+  box-shadow: 3px 3px 0 #000000;
+}
+
+[data-theme='ms-paint'] .card__rhythm {
+  border-top: 1px dashed #808080;
+}

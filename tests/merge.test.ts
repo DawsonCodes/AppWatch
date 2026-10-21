@@ -452,6 +452,23 @@ describe('release feeds (desktop listings)', () => {
     expect(backfillReleases(history, undefined, LATER)).toBe(history);
   });
 
+  it('follows the vendor record for entries that came from it', () => {
+    const first = mergeSnapshot(undefined, [], feedSnapshot, NOW);
+    const corrected = releases.map((r) =>
+      r.version === '2.1.6.00' ? { ...r, releaseDate: '2026-09-10T12:00:00.000Z' } : r,
+    );
+    const next = backfillReleases(first.history, corrected, LATER);
+    expect(next.find((e) => e.version === '2.1.6.00')).toMatchObject({
+      releaseDate: '2026-09-10T12:00:00.000Z',
+      detectedAt: NOW,
+    });
+    // An entry AppWatch observed itself (no matching announcement link) is untouched.
+    const observed = [{ ...first.history[0]!, url: undefined }];
+    expect(backfillReleases(observed, [{ ...releases[0]!, releaseNotes: 'Edited.' }], LATER)).toBe(
+      observed,
+    );
+  });
+
   it('leaves store listings without feed fields', () => {
     const result = mergeSnapshot(undefined, [], snapshot, NOW);
     expect('releaseUrl' in result.record).toBe(false);

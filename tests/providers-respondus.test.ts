@@ -1,6 +1,8 @@
 import { describe, expect, it, vi } from 'vitest';
 import {
   announcementNotes,
+  bylineDate,
+  parseLooseDate,
   createRespondusProvider,
   parseAnnouncements,
 } from '../scripts/lib/providers/respondus.ts';
@@ -191,5 +193,44 @@ describe('createRespondusProvider', () => {
     await expect(provider({ ...windowsTarget, platform: 'apple' })).rejects.toThrow(
       /no apple releases/,
     );
+  });
+});
+
+describe('announcement dates', () => {
+  it('parses the date formats Respondus uses', () => {
+    expect(parseLooseDate('16 June 2021')).toBe('2021-06-16T12:00:00.000Z');
+    expect(parseLooseDate('6 February, 2026')).toBe('2026-02-06T12:00:00.000Z');
+    expect(parseLooseDate('02 December 2021')).toBe('2021-12-02T12:00:00.000Z');
+    expect(parseLooseDate('June 16, 2021')).toBe('2021-06-16T12:00:00.000Z');
+    expect(parseLooseDate('2026-09-26')).toBe('2026-09-26T12:00:00.000Z');
+    expect(parseLooseDate('31 February 2021')).toBeNull();
+    expect(parseLooseDate('soon')).toBeNull();
+  });
+
+  it('reads the byline', () => {
+    expect(bylineDate('<p>Posted by Respondus Support on 16 June 2021</p><p>x</p>')).toBe(
+      '2021-06-16T12:00:00.000Z',
+    );
+    expect(bylineDate('<p>No byline here.</p>')).toBeNull();
+  });
+
+  it('uses the byline date for posts migrated with a later creation date', () => {
+    const { mac, windows } = parseAnnouncements([
+      article(
+        4413042227483,
+        'LockDown Browser for Mac, Version 2.0.7.04',
+        '2021-12-16T18:00:00Z',
+        '<p>Posted by Respondus Support on 16 June 2021</p><p>Hotfix.</p>',
+      ),
+      article(
+        56483671408667,
+        'LockDown Browser for Windows, Version 2.1.6.02',
+        '2026-09-28T22:40:38Z',
+        '<p>Posted by Respondus Support on 28 September 2026</p><p>Fix.</p>',
+      ),
+    ]);
+    expect(mac[0]?.releaseDate).toBe('2021-06-16T12:00:00.000Z');
+    // Same day as the post: keep the precise creation time.
+    expect(windows[0]?.releaseDate).toBe('2026-09-28T22:40:38.000Z');
   });
 });

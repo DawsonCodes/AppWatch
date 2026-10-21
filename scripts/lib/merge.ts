@@ -50,7 +50,10 @@ function releaseTime(entry: VersionHistoryEntry): number {
  * have yet (release feeds publish every past version with its date, notes
  * and announcement). These are real, published releases — AppWatch just
  * learned about them from the official archive instead of watching them ship.
- * Entries already recorded are never modified.
+ *
+ * Entries that came from that record (same announcement link) follow it if
+ * the vendor's date or notes change — e.g. a post's real date being read
+ * from its byline. Everything AppWatch observed itself is never modified.
  */
 export function backfillReleases(
   history: VersionHistoryEntry[],
@@ -58,8 +61,21 @@ export function backfillReleases(
   now: string,
 ): VersionHistoryEntry[] {
   if (!releases || releases.length === 0) return history;
-  let next = history;
+  const official = new Map<string, OfficialRelease>();
+  for (const release of releases) official.set(release.version, release);
+
+  let changed = false;
+  let next = history.map((entry) => {
+    const release = entry.version ? official.get(entry.version) : undefined;
+    if (!release || !entry.url || entry.url !== release.url) return entry;
+    if (entry.releaseDate === release.releaseDate && entry.releaseNotes === release.releaseNotes) {
+      return entry;
+    }
+    changed = true;
+    return { ...entry, releaseDate: release.releaseDate, releaseNotes: release.releaseNotes };
+  });
   for (const release of releases) {
+    const before = next;
     next = appendHistory(next, {
       version: release.version,
       releaseDate: release.releaseDate,
@@ -67,8 +83,9 @@ export function backfillReleases(
       detectedAt: now,
       url: release.url,
     });
+    if (next !== before) changed = true;
   }
-  if (next === history) return history;
+  if (!changed) return history;
   // Stable sort keeps same-day entries in their recorded order.
   return [...next].sort((a, b) => releaseTime(b) - releaseTime(a));
 }

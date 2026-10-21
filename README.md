@@ -88,6 +88,29 @@ watchlist and search filters as the grid, and it only contains releases the
 checker actually saw — the version each listing had when tracking began
 (marked "first recorded") plus every change since.
 
+### Release rhythm and "next update" estimates
+
+Every app's history doubles as a record of how often it ships. AppWatch looks
+at the gaps between each listing's recent releases (up to the last 12) and
+shows:
+
+- **On every card** — "Every ~6 days · next in ~3 days", "due now", or "later
+  than usual"; apps with fewer than four recorded releases say they're still
+  learning their rhythm.
+- **In the detail panel** — a Release rhythm panel with the typical gap, the
+  usual range (the middle half of the gaps), the most likely date and window
+  for the next update, releases in the last 30 days, a weekday pattern when
+  there is a clear one, and a confidence level. **Show charts & data** opens
+  a release timeline (with today and the likely window ahead), a column chart
+  of the days between releases (with the typical gap marked) and the same data
+  as a table. Charts are keyboard-navigable (arrow keys) and work in all three
+  themes.
+- **Sort → Next expected update**, an **Up next** row at the top of the
+  Updates view, and an "Expected within 3 days" count under Insights.
+
+These are estimates from past behavior — app makers don't publish schedules —
+and the confidence level says how steady that behavior has been.
+
 ### Desktop releases (Windows and Mac)
 
 Desktop software isn't sold through a store AppWatch can query, so desktop
@@ -96,6 +119,10 @@ LockDown Browser is the first: Respondus posts every Windows and Mac release
 ("LockDown Browser for Windows, version 2.1.6.02") with notes on its help
 center, and the checker reads those posts through the help center's public
 API on every run.
+
+Posts that were moved into Respondus's current help center all carry the
+move date (December 2021) as their creation date, so the checker takes each
+post's real date from its "Posted by Respondus Support on …" line instead.
 
 Because that is the vendor's complete public record, a desktop listing's
 version history goes back as far as the announcements do — every Windows and

@@ -59,6 +59,69 @@ function toArticle(value: unknown): Article | null {
   };
 }
 
+const MONTHS = [
+  'january',
+  'february',
+  'march',
+  'april',
+  'may',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december',
+];
+
+/** "16 June 2021", "6 February, 2026", "June 16, 2021", "2026-09-26" -> ISO (noon UTC). */
+export function parseLooseDate(text: string): string | null {
+  const iso = /(\d{4})-(\d{2})-(\d{2})/.exec(text);
+  let year: number;
+  let month: number;
+  let day: number;
+  if (iso) {
+    year = Number(iso[1]);
+    month = Number(iso[2]) - 1;
+    day = Number(iso[3]);
+  } else {
+    const dayFirst = /(\d{1,2})(?:st|nd|rd|th)?\s+([a-z]+),?\s+(\d{4})/i.exec(text);
+    const monthFirst = /([a-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})/i.exec(text);
+    const parts = dayFirst
+      ? { d: dayFirst[1]!, m: dayFirst[2]!, y: dayFirst[3]! }
+      : monthFirst
+        ? { d: monthFirst[2]!, m: monthFirst[1]!, y: monthFirst[3]! }
+        : null;
+    if (!parts) return null;
+    month = MONTHS.findIndex((name) => name.startsWith(parts.m.toLowerCase().slice(0, 3)));
+    if (month < 0 || parts.m.length < 3) return null;
+    year = Number(parts.y);
+    day = Number(parts.d);
+  }
+  const date = new Date(Date.UTC(year, month, day, 12));
+  if (date.getUTCMonth() !== month || date.getUTCDate() !== day || year < 2000) return null;
+  return date.toISOString();
+}
+
+/**
+ * The date in an announcement's "Posted by Respondus Support on 16 June 2021"
+ * byline. Posts migrated into the current help center all carry the
+ * migration date as their creation date, so the byline is the real one.
+ */
+export function bylineDate(html: string): string | null {
+  const match = /^\s*Posted by [^\n]*?\bon\s+([^\n]+)/im.exec(htmlToPlainText(html));
+  return match ? parseLooseDate(match[1]!) : null;
+}
+
+/** Prefer the byline date when it disagrees with the post's creation date by over a day. */
+function releaseDateOf(article: Article): string | null {
+  const byline = bylineDate(article.body);
+  if (!byline) return article.createdAt;
+  if (!article.createdAt) return byline;
+  const apart = Math.abs(Date.parse(byline) - Date.parse(article.createdAt));
+  return apart > 36 * 60 * 60 * 1000 ? byline : article.createdAt;
+}
+
 /** Announcement body -> plain-text notes, without the "Posted by …" byline. */
 export function announcementNotes(html: string): string | null {
   const text = htmlToPlainText(html)
@@ -86,12 +149,13 @@ export function parseAnnouncements(
     if (!match) continue;
     const platform = match[1]!.toLowerCase() as DesktopPlatform;
     const version = match[2]!;
-    const time = article.createdAt ? Date.parse(article.createdAt) : Number.NaN;
+    const releaseDate = releaseDateOf(article);
+    const time = releaseDate ? Date.parse(releaseDate) : Number.NaN;
     const existing = byPlatform[platform].get(version);
     if (existing && !(Number.isFinite(time) && time < existing.t)) continue;
     byPlatform[platform].set(version, {
       version,
-      releaseDate: article.createdAt,
+      releaseDate,
       releaseNotes: announcementNotes(article.body),
       url: article.url,
       t: Number.isFinite(time) ? time : 0,
