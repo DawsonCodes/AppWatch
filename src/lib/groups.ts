@@ -9,7 +9,7 @@ import type { Catalog, CatalogCollection } from '../shared/catalog.ts';
 import { LEGACY_COLLECTION, slugify } from '../shared/catalog.ts';
 import { parseStoreInput } from '../shared/storeRefs.ts';
 import type { AppRecord, Platform } from '../shared/types.ts';
-import { appId } from '../shared/types.ts';
+import { appId, PLATFORMS } from '../shared/types.ts';
 import { isRecentlyUpdated, isUnresolved } from './filtering.ts';
 
 export type ListingSource = 'tracked' | 'local';
@@ -48,7 +48,7 @@ export const DEFAULT_GROUP_FILTERS: GroupFilters = {
 };
 
 function byPlatform(a: Listing, b: Listing): number {
-  return a.platform === b.platform ? 0 : a.platform === 'apple' ? -1 : 1;
+  return PLATFORMS.indexOf(a.platform) - PLATFORMS.indexOf(b.platform);
 }
 
 /**

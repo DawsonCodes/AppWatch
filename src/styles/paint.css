@@ -91,7 +91,9 @@
 
 [data-theme='ms-paint'] .button--primary,
 [data-theme='ms-paint'] .button--store-apple,
-[data-theme='ms-paint'] .button--store-google {
+[data-theme='ms-paint'] .button--store-google,
+[data-theme='ms-paint'] .button--store-windows,
+[data-theme='ms-paint'] .button--store-mac {
   color: #ffffff;
 }
 
@@ -107,9 +109,19 @@
   background: #006000;
 }
 
+[data-theme='ms-paint'] .button--store-windows {
+  background: #006060;
+}
+
+[data-theme='ms-paint'] .button--store-mac {
+  background: #904800;
+}
+
 [data-theme='ms-paint'] .button--primary:hover,
 [data-theme='ms-paint'] .button--store-apple:hover,
-[data-theme='ms-paint'] .button--store-google:hover {
+[data-theme='ms-paint'] .button--store-google:hover,
+[data-theme='ms-paint'] .button--store-windows:hover,
+[data-theme='ms-paint'] .button--store-mac:hover {
   filter: none;
   color: #ffff00;
 }

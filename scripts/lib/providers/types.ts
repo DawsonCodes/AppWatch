@@ -22,6 +22,22 @@ export interface AppSnapshot {
   rating: number | null;
   ratingCount: number | null;
   developerWebsite: string | null;
+  /** Official announcement for this version (release feeds only). */
+  releaseUrl?: string | null;
+  /**
+   * Every release the vendor has published, newest first (release feeds
+   * only). Lets history start from the vendor's own record instead of from
+   * the day tracking began.
+   */
+  releases?: readonly OfficialRelease[];
+}
+
+/** One release from a vendor's official release record. */
+export interface OfficialRelease {
+  version: string;
+  releaseDate: string | null;
+  releaseNotes: string | null;
+  url: string | null;
 }
 
 /** A store integration: fetches and normalizes metadata for one target. */

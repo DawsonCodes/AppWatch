@@ -91,6 +91,37 @@ describe('parseCatalog — collections format', () => {
   });
 });
 
+describe('parseCatalog — desktop release feeds', () => {
+  const wrap = (app: Record<string, unknown>) => ({
+    collections: [{ id: 'exams', label: 'Exams', apps: [app] }],
+  });
+
+  it('accepts windows and mac feed ids next to store links, in platform order', () => {
+    const catalog = parseCatalog(
+      wrap({
+        name: 'LockDown Browser',
+        mac: 'respondus-lockdown-browser',
+        windows: 'respondus-lockdown-browser',
+        appStore: '659101775',
+      }),
+    );
+    expect(catalog.apps[0]?.listings.map((l) => l.platform)).toEqual(['apple', 'windows', 'mac']);
+    expect(catalog.apps[0]?.listings[1]?.storeId).toBe('respondus-lockdown-browser');
+  });
+
+  it('allows a desktop-only app', () => {
+    const catalog = parseCatalog(wrap({ name: 'LDB', windows: 'respondus-lockdown-browser' }));
+    expect(catalog.apps[0]?.listings).toHaveLength(1);
+  });
+
+  it('rejects unknown feeds with the list of known ones', () => {
+    expect(() => parseCatalog(wrap({ name: 'X', windows: 'nope' }))).toThrow(
+      /unknown release feed "nope".*respondus-lockdown-browser/,
+    );
+    expect(() => parseCatalog(wrap({ name: 'X', mac: 42 }))).toThrow(CatalogError);
+  });
+});
+
 describe('parseCatalog — legacy flat format', () => {
   it('puts legacy entries in an "Other" collection with store-provided names', () => {
     const catalog = parseCatalog({
@@ -124,12 +155,25 @@ describe('the repository configuration', () => {
   const raw = JSON.parse(readFileSync(new URL('../apps.config.json', import.meta.url), 'utf8'));
   const catalog = parseCatalog(raw);
 
-  it('parses and every app has a name and both store links', () => {
-    expect(catalog.apps.length).toBeGreaterThanOrEqual(50);
+  it('parses, and every app has a name and at least one listing', () => {
+    expect(catalog.apps.length).toBeGreaterThanOrEqual(60);
     for (const app of catalog.apps) {
       expect(app.name).toBeTruthy();
-      expect(app.listings.map((l) => l.platform)).toEqual(['apple', 'google']);
+      expect(app.listings.length).toBeGreaterThan(0);
     }
+  });
+
+  it('tracks LockDown Browser everywhere Respondus publishes it, and DJI Fly', () => {
+    const app = (name: string) => catalog.apps.find((a) => a.name === name);
+    expect(app('LockDown Browser')?.collection).toBe('respondus');
+    expect(app('LockDown Browser')?.listings.map((l) => `${l.platform}:${l.storeId}`)).toEqual([
+      'apple:659101775',
+      'windows:respondus-lockdown-browser',
+      'mac:respondus-lockdown-browser',
+    ]);
+    expect(app('DJI Fly')?.listings.map((l) => `${l.platform}:${l.storeId}`)).toEqual([
+      'apple:1479649251',
+    ]);
   });
 
   it('includes the AI and Social collections', () => {

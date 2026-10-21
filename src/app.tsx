@@ -12,6 +12,8 @@ import { CheckIcon, GridIcon, PulseIcon } from './components/Icons.tsx';
 import { InsightsPanel } from './components/InsightsPanel.tsx';
 import { SearchBar } from './components/SearchBar.tsx';
 import { SlidingTabs } from './components/SlidingTabs.tsx';
+import type { TabItem } from './components/SlidingTabs.tsx';
+import { storeLabel } from './components/StoreBadge.tsx';
 import { Toast } from './components/Toast.tsx';
 import type { ToastMessage } from './components/Toast.tsx';
 import { UpdatesTimeline } from './components/UpdatesTimeline.tsx';
@@ -47,8 +49,14 @@ import type { ThemeId } from './lib/theme.ts';
 import { buildTimeline } from './lib/timeline.ts';
 import { createWatchlist } from './lib/watchlist.ts';
 import { parseStoreInput, storeUrlFor } from './shared/storeRefs.ts';
-import type { AppRecord, HistoryFile, Platform, StatusFile } from './shared/types.ts';
-import { appId } from './shared/types.ts';
+import type {
+  AppRecord,
+  HistoryFile,
+  Platform,
+  StatusFile,
+  StorePlatform,
+} from './shared/types.ts';
+import { appId, PLATFORMS } from './shared/types.ts';
 
 type LoadState =
   | { phase: 'loading' }
@@ -321,6 +329,10 @@ export function App() {
     [groups, filters, watchedIds, collectionOrder],
   );
   const recentCount = useMemo(() => groups.filter((g) => isGroupRecent(g)).length, [groups]);
+  const presentPlatforms = useMemo(
+    () => PLATFORMS.filter((p) => groups.some((g) => g.listings.some((l) => l.platform === p))),
+    [groups],
+  );
 
   const timeline = useMemo(() => {
     if (view !== 'updates' || historyLoad.phase !== 'ready') return [];
@@ -579,7 +591,7 @@ export function App() {
   );
 
   const addUnresolved = useCallback(
-    (ref: { platform: Platform; storeId: string; country?: string }) => {
+    (ref: { platform: StorePlatform; storeId: string; country?: string }) => {
       const list = localStore.save(
         makeLocalApp({
           platform: ref.platform,
@@ -649,6 +661,16 @@ export function App() {
   const localGroupCount = groups.filter((g) => g.source === 'local').length;
   const trackedGroupCount = groups.length - localGroupCount;
 
+  // Only offer platforms something is actually tracked on.
+  const platformTabs: TabItem<'all' | Platform>[] = [
+    { value: 'all', label: presentPlatforms.length > 2 ? 'All' : 'Both stores' },
+    ...presentPlatforms.map((platform) => ({
+      value: platform,
+      label: storeLabel(platform),
+      icon: <span class={`dot dot--${platform}`} aria-hidden="true" />,
+    })),
+  ];
+
   const collectionTabs = [
     { value: 'all', label: 'All', count: groups.length },
     ...collections.map((c) => ({ value: c.id, label: c.label, count: c.count })),
@@ -680,9 +702,11 @@ export function App() {
             </h1>
             <p class="hero__sub">
               AppWatch follows {ready ? trackedGroupCount : 'popular'} apps across the{' '}
-              <span class="hero__store hero__store--apple">App Store</span> and{' '}
-              <span class="hero__store hero__store--google">Google Play</span>, checks them every
-              two hours, and keeps every release’s notes.
+              <span class="hero__store hero__store--apple">App Store</span>,{' '}
+              <span class="hero__store hero__store--google">Google Play</span>,{' '}
+              <span class="hero__store hero__store--windows">Windows</span> and{' '}
+              <span class="hero__store hero__store--mac">Mac</span>, checks them every two hours,
+              and keeps every release’s notes.
             </p>
             {ready && recentCount > 0 ? (
               <button
@@ -761,22 +785,10 @@ export function App() {
                   class="store-switch"
                   variant="pill"
                   role="radiogroup"
-                  label="Store"
+                  label="Platform"
                   value={filters.platform}
                   onChange={(platform) => updateFilters({ platform })}
-                  items={[
-                    { value: 'all', label: 'Both stores' },
-                    {
-                      value: 'apple',
-                      label: 'App Store',
-                      icon: <span class="dot dot--apple" aria-hidden="true" />,
-                    },
-                    {
-                      value: 'google',
-                      label: 'Google Play',
-                      icon: <span class="dot dot--google" aria-hidden="true" />,
-                    },
-                  ]}
+                  items={platformTabs}
                 />
                 {view === 'apps' ? (
                   <button

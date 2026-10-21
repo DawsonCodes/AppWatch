@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Desktop tracking: Windows and Mac listings, read from vendors' official
+  release announcements, with their own colors (Windows cyan, Mac orange) and
+  a platform filter that lists every platform in use.
+- A **Respondus** tab: LockDown Browser on iPad (App Store), Windows and Mac.
+  Desktop version history is filled in from Respondus's release announcements,
+  each entry linking to the original announcement.
+- A **Drones** tab with DJI Fly (App Store).
+
 - 10 more tracked apps (66 apps, 132 listings): one more AI assistant in the
   AI tab, plus TikTok, Prime Video, Hulu, Google Drive, Google Photos,
   Microsoft Edge, Uber Eats, Coinbase and Google Translate.

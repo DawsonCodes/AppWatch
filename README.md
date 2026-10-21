@@ -47,21 +47,23 @@
 
 ## What it does
 
-AppWatch tracks 66 popular apps out of the box — each on both the App Store
-and Google Play, 132 listings in all — checks every one of them **every two
-hours**, and records what changed. Apps are organized into collections that
-appear as tabs: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity,
-DeepSeek, Character.AI and more), **Social** (Instagram, Facebook, X,
-Threads, YouTube, Snapchat, TikTok, Reddit, Pinterest, LinkedIn),
-**Messaging**, **Entertainment**, **Productivity**, **Browsers & Privacy**, **Travel & Maps**, **Shopping &
-Money** and **Learning & Fitness**.
+AppWatch tracks 68 apps out of the box — 136 listings across the App Store,
+Google Play, Windows and Mac — checks every one of them **every two hours**,
+and records what changed. Apps are organized into collections that appear as
+tabs: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity, DeepSeek,
+Character.AI and more), **Respondus** (LockDown Browser on iPad, Windows and
+Mac), **Social** (Instagram, Facebook, X, Threads, YouTube, Snapchat, TikTok,
+Reddit, Pinterest, LinkedIn), **Messaging**, **Entertainment**,
+**Productivity**, **Browsers & Privacy**, **Travel & Maps**, **Shopping &
+Money**, **Learning & Fitness** and **Drones** (DJI Fly).
 
-Each app is one card covering both stores, with the **App Store in blue** and
-**Google Play in green** everywhere (store names are always written out too,
-so color is never the only cue). For every tracked app it shows:
+Each app is one card covering every platform it's tracked on, with the **App
+Store in blue**, **Google Play in green**, **Windows in cyan** and **Mac in
+orange** everywhere (platform names are always written out too, so color is
+never the only cue). For every tracked app it shows:
 
 - Name, icon, developer and category
-- Platform (App Store / Google Play) with a direct store link
+- Platform (App Store / Google Play / Windows / Mac) with a direct link
 - Current version and the previous version it replaced
 - Release date and how long ago that was
 - The full "What's New" release notes, rendered safely as plain text
@@ -86,15 +88,38 @@ watchlist and search filters as the grid, and it only contains releases the
 checker actually saw — the version each listing had when tracking began
 (marked "first recorded") plus every change since.
 
+### Desktop releases (Windows and Mac)
+
+Desktop software isn't sold through a store AppWatch can query, so desktop
+listings are read from the vendor's **own official release announcements**.
+LockDown Browser is the first: Respondus posts every Windows and Mac release
+("LockDown Browser for Windows, version 2.1.6.02") with notes on its help
+center, and the checker reads those posts through the help center's public
+API on every run.
+
+Because that is the vendor's complete public record, a desktop listing's
+version history goes back as far as the announcements do — every Windows and
+Mac version with its release date, notes and a link to the original
+announcement — not just from the day tracking started. Entries learned from
+that archive are marked as such ("Earliest on record" on the oldest one).
+
+LockDown Browser for iPad is tracked through the App Store like any other app.
+The Chromebook extension isn't tracked: schools install it through their own
+Respondus links, and there's no public version record to read. DJI Fly is
+tracked on the App Store; on Android DJI distributes it as a download from its
+own site with no public version feed, so there's nothing reliable to check.
+
 ### Can AppWatch keep old versions to download?
 
-No. The App Store doesn't offer old app binaries to download, Google Play only
-serves the current version, and re-hosting app packages would be a licensing
-and security problem. What AppWatch does keep is the **text history**: every
-version it has seen, with its release date, when the change was detected and
-the full release notes, stored in `public/data/history.json` and shown in the
-detail panel and the Updates timeline. History starts from when an app was
-first tracked; it can't be backfilled from before that.
+No, and that includes LockDown Browser for Windows. App stores don't offer old
+builds, and copying installers into this public repository would redistribute
+someone else's licensed software — LockDown Browser installers are licensed to,
+and handed out by, each school. What AppWatch keeps instead is the complete
+**version record**: every version, its release date, its notes and (for
+desktop releases) the official announcement, stored in
+`public/data/history.json` and shown in the detail panel and the Updates
+timeline. Get the installer itself from your school's link or the official
+page.
 
 ## Themes
 
@@ -302,6 +327,11 @@ one or both; the IDs are extracted from the URLs automatically:
 
 - Collections appear in the order written; add, rename or reorder them freely.
 - A listing can belong to only one app; duplicates are reported and ignored.
+- Desktop listings use a release feed id instead of a link:
+  `"windows": "respondus-lockdown-browser"` and/or
+  `"mac": "respondus-lockdown-browser"`. Supported feeds are listed in
+  `src/shared/feeds.ts`; adding a new desktop product means adding a feed
+  there and a provider in `scripts/lib/providers/`.
 - The older flat format — a top-level `"apps"` array of store URLs or
   `{ "platform", "id" }` objects — still works; those apps land in an "Other"
   tab.
@@ -321,13 +351,15 @@ The checker writes these files into `public/data/` (do not edit by hand):
   `firstTrackedAt`, `lastCheckedAt`, `lastUpdatedAt`, `checkStatus`,
   `checkError`, `updateDetected`, plus extended metadata where the store
   exposes it: `price`, `contentRating`, `requiresOs`, `sizeBytes`, `rating`,
-  `ratingCount`, `developerWebsite`). Fields a store doesn't provide are
+  `ratingCount`, `developerWebsite`, and for desktop listings `releaseUrl`, the
+  official announcement). `platform` is `apple`, `google`, `windows` or `mac`;
+  desktop listings use the release feed id as `storeId`. Fields a store doesn't provide are
   `null`, never faked, and files generated before these fields existed remain
   valid — the extended fields are optional in the schema.
 - **`history.json`** — version history per app id, newest first; one entry per
-  version with release date, notes and the detection timestamp. For listings
-  that publish no version, entries have `version: null` and are unique by
-  release date.
+  version with release date, notes and the detection timestamp (plus `url`,
+  the official announcement, for desktop releases). For listings that publish
+  no version, entries have `version: null` and are unique by release date.
 - **`status.json`** — last run time, success/failure counts, updates detected.
   Rewritten on every run and deployed straight to the site; it is only
   committed alongside real app changes, so the git history stays meaningful.
@@ -383,6 +415,13 @@ Google Play pages are fetched one at a time at least 1.5 seconds apart
   (an isolated module: `scripts/lib/providers/googleplay.ts`) or the upstream
   package is updated. Some Play listings also report no concrete version
   ("Varies with device") — AppWatch stores `null` rather than a fake version.
+- **Desktop feeds follow the vendor's announcements.** LockDown Browser
+  versions come from Respondus posts titled "LockDown Browser for Windows/Mac,
+  version …". If Respondus changes how it titles or files those posts, the
+  Windows/Mac listings show a "check failed" badge with their last good data
+  until the provider (`scripts/lib/providers/respondus.ts`) is adjusted. A
+  release Respondus later withdraws still appears, because its announcement
+  stays published.
 - **Release notes reflect detection time.** Stores overwrite notes in place;
   history entries keep the notes as they were when each version was first seen.
 - **Freshness is bounded by the schedule.** A store update appears on the site

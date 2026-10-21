@@ -3,6 +3,8 @@ import type { Platform } from '../shared/types.ts';
 const LABELS: Record<Platform, string> = {
   apple: 'App Store',
   google: 'Google Play',
+  windows: 'Windows',
+  mac: 'Mac',
 };
 
 export function storeLabel(platform: Platform): string {
@@ -10,8 +12,9 @@ export function storeLabel(platform: Platform): string {
 }
 
 /**
- * Store identity: a colored dot plus the store's name, so the store is never
- * conveyed by color alone (App Store blue, Google Play green).
+ * Platform identity: a colored dot plus the platform's name, so it is never
+ * conveyed by color alone (App Store blue, Google Play green, Windows cyan,
+ * Mac orange).
  */
 export function StoreBadge({
   platform,

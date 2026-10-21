@@ -164,8 +164,18 @@
   background: var(--google-solid);
 }
 
+.button--store-windows {
+  background: var(--windows-solid);
+}
+
+.button--store-mac {
+  background: var(--mac-solid);
+}
+
 .button--store-apple:hover,
-.button--store-google:hover {
+.button--store-google:hover,
+.button--store-windows:hover,
+.button--store-mac:hover {
   filter: brightness(1.08);
 }
 
@@ -272,6 +282,14 @@
   background: var(--google);
 }
 
+.dot--windows {
+  background: var(--windows);
+}
+
+.dot--mac {
+  background: var(--mac);
+}
+
 .store-badge {
   display: inline-flex;
   align-items: center;
@@ -301,6 +319,22 @@
 
 .store-badge--google .store-badge__dot {
   background: var(--google);
+}
+
+.store-badge--windows {
+  color: var(--windows-text);
+}
+
+.store-badge--windows .store-badge__dot {
+  background: var(--windows);
+}
+
+.store-badge--mac {
+  color: var(--mac-text);
+}
+
+.store-badge--mac .store-badge__dot {
+  background: var(--mac);
 }
 
 .store-badge--compact {
@@ -733,6 +767,22 @@
   background: var(--google);
 }
 
+.hero__store--windows {
+  color: var(--windows-text);
+}
+
+.hero__store--windows::before {
+  background: var(--windows);
+}
+
+.hero__store--mac {
+  color: var(--mac-text);
+}
+
+.hero__store--mac::before {
+  background: var(--mac);
+}
+
 .hero__pulse {
   display: inline-flex;
   align-items: center;
@@ -977,10 +1027,16 @@
 @media (max-width: 479px) {
   .store-switch {
     width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .store-switch::-webkit-scrollbar {
+    display: none;
   }
   .store-switch .sliding__item {
-    flex: 1;
-    padding: 0 8px;
+    flex: 1 0 auto;
+    padding: 0 10px;
   }
   .filters__spacer {
     display: none;
@@ -1191,6 +1247,16 @@
 .store-row--google {
   --store: var(--google);
   --store-text: var(--google-text);
+}
+
+.store-row--windows {
+  --store: var(--windows);
+  --store-text: var(--windows-text);
+}
+
+.store-row--mac {
+  --store: var(--mac);
+  --store-text: var(--mac-text);
 }
 
 .store-row__store {
@@ -1842,6 +1908,14 @@ img.app-icon {
 
 .timeline__node--google {
   background: var(--google);
+}
+
+.timeline__node--windows {
+  background: var(--windows);
+}
+
+.timeline__node--mac {
+  background: var(--mac);
 }
 
 .release {
