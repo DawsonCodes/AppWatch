@@ -123,6 +123,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261019.20",
+        "releaseDate": "2026-10-20T03:32:14.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-21T00:37:17.327Z"
+      },
+      {
         "version": "1.261016.51",
         "releaseDate": "2026-10-17T19:27:16.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1250,6 +1256,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1263",
+        "releaseDate": "2026-10-19T20:33:05.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-10-21T00:37:17.327Z"
+      },
       {
         "version": "4.1.1261",
         "releaseDate": "2026-10-10T00:22:05.000Z",
@@ -2904,6 +2916,12 @@
       }
     ],
     "google:com.google.android.apps.photos": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-20T22:28:57.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-10-21T00:37:17.327Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-16T15:23:22.000Z",
