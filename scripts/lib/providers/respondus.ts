@@ -9,8 +9,8 @@
  * reads those announcements — read-only, keyless, a few requests per run —
  * and turns them into a version history.
  *
- * Installers are never downloaded or stored: they are licensed to and
- * distributed by each institution.
+ * This provider only handles public release metadata. The separate, optional
+ * private archive step never adds installers to AppWatch or its public data.
  */
 
 import { htmlToPlainText } from '../../../src/shared/text.ts';

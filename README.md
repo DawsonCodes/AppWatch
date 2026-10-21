@@ -138,15 +138,19 @@ own site with no public version feed, so there's nothing reliable to check.
 
 ### Can AppWatch keep old versions to download?
 
-No, and that includes LockDown Browser for Windows. App stores don't offer old
-builds, and copying installers into this public repository would redistribute
-someone else's licensed software — LockDown Browser installers are licensed to,
-and handed out by, each school. What AppWatch keeps instead is the complete
-**version record**: every version, its release date, its notes and (for
-desktop releases) the official announcement, stored in
+The public dashboard keeps the complete **version record**: every version, its
+release date, its notes and (for desktop releases) the official announcement, stored in
 `public/data/history.json` and shown in the detail panel and the Updates
 timeline. Get the installer itself from your school's link or the official
 page.
+
+An optional [private Windows archive](docs/lockdown-archive.md) can preserve
+future Respondus installers in the owner's private Dawson Bot repository.
+It runs as part of the existing checker, saves each detected version once,
+and retains prior installers. No installer, institution download link, or
+private archive configuration is published by AppWatch. The archive requires a
+separate repository-scoped secret and an initial successful save; announcement
+history alone cannot recover installers that are no longer available.
 
 ## Themes
 

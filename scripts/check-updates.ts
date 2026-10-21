@@ -59,6 +59,13 @@ function reportToGitHub(result: RunResult): void {
     appendFileSync(GITHUB_OUTPUT, `changed=${result.changed}\n`);
     appendFileSync(GITHUB_OUTPUT, `updates=${result.updatesDetected}\n`);
   }
+  const lockdown = result.summaries.find(
+    (s) => s.id === 'windows:respondus-lockdown-browser' && s.outcome !== 'failed',
+  );
+  // Unchanged versions seed once and retry incomplete saves; verified assets are not downloaded again.
+  if (GITHUB_OUTPUT && lockdown?.version && /^\d+(?:\.\d+){1,4}$/.test(lockdown.version)) {
+    appendFileSync(GITHUB_OUTPUT, 'lockdown_version=' + lockdown.version + '\n');
+  }
   if (GITHUB_STEP_SUMMARY) {
     const rows = result.summaries
       .map(
