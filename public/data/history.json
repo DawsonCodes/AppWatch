@@ -129,6 +129,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261020.20",
+        "releaseDate": "2026-10-21T03:32:38.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-21T23:18:51.122Z"
+      },
+      {
         "version": "1.261019.20",
         "releaseDate": "2026-10-20T03:32:14.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1998,6 +2004,12 @@
     ],
     "google:com.snapchat.android": [
       {
+        "version": "14.29.0.50",
+        "releaseDate": "2026-10-21T01:24:48.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-10-21T23:18:51.122Z"
+      },
+      {
         "version": "14.28.0.54",
         "releaseDate": "2026-10-14T18:36:19.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
@@ -2508,6 +2520,12 @@
     ],
     "google:org.thoughtcrime.securesms": [
       {
+        "version": "8.32.2",
+        "releaseDate": "2026-10-19T22:37:08.000Z",
+        "releaseNotes": "Now you can optionally register for Signal without a phone number. Phone-numberless registration requires a small one-time fee to help prevent spam, but this in-app purchase is never directly associated with the new Signal account. We sincerely appreciate your help beta testing this new feature!",
+        "detectedAt": "2026-10-21T23:18:51.122Z"
+      },
+      {
         "version": "8.31.2",
         "releaseDate": "2026-10-13T20:46:00.000Z",
         "releaseNotes": "Now you can optionally register for Signal without a phone number. Phone-numberless registration requires a small one-time fee to help prevent spam, but this in-app purchase is never directly associated with the new Signal account. We sincerely appreciate your help beta testing this new feature!",
@@ -2921,6 +2939,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-20T10:41:17.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-21T23:18:51.122Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-14T05:44:28.000Z",
@@ -4764,6 +4788,12 @@
     ],
     "google:me.lyft.android": [
       {
+        "version": "2026.40.3.1791962843",
+        "releaseDate": "2026-10-16T19:02:40.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-10-21T23:18:51.122Z"
+      },
+      {
         "version": "2026.39.31.1791466624",
         "releaseDate": "2026-10-09T19:02:11.000Z",
         "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
@@ -5187,6 +5217,12 @@
       }
     ],
     "google:com.squareup.cash": [
+      {
+        "version": "5.74.0",
+        "releaseDate": "2026-10-16T23:00:30.000Z",
+        "releaseNotes": "Various bug fixes and improvements.",
+        "detectedAt": "2026-10-21T23:18:51.122Z"
+      },
       {
         "version": "5.73.0",
         "releaseDate": "2026-10-09T20:53:08.000Z",
