@@ -986,74 +986,74 @@
         "url": "https://support.respondus.com/hc/en-us/articles/4415185698843-LockDown-Browser-for-Windows-version-2-0-8-00"
       },
       {
-        "version": "2.0.6.11",
-        "releaseDate": "2021-12-16T16:44:39.000Z",
-        "releaseNotes": "A hotfix update to the LockDown Browser client for Windows has been released: version 2.0.6.11. This release provides improvements to the Canvas Classic and Blackboard Original integrations.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.6.11) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413026813723-LockDown-Browser-for-Windows-version-2-0-6-11"
-      },
-      {
-        "version": "2.0.7.00",
-        "releaseDate": "2021-12-16T16:41:28.000Z",
-        "releaseNotes": "A hotfix update to LockDown Browser for Windows has been released: version 2.0.7.00. This release contains an update to the underlying Chromium engine, plus a fix for a recent Blackboard Learn SaaS update.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.00) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413026758939-LockDown-Browser-for-Windows-version-2-0-7-00"
-      },
-      {
-        "version": "2.0.7.02",
-        "releaseDate": "2021-12-16T16:34:22.000Z",
-        "releaseNotes": "An update to the LockDown Browser client for Windows has been released: version 2.0.7.02. This release provides improvements for the integration with Blackboard, Canvas, and D2L as well as general enhancements to security.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.02) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413026595995-LockDown-Browser-for-Windows-Version-2-0-7-02"
-      },
-      {
-        "version": "2.0.7.03",
-        "releaseDate": "2021-12-16T16:30:31.000Z",
-        "releaseNotes": "An update to the LockDown Browser client for Windows has been released: version 2.0.7.03. This release provides improvements for the integration with Blackboard Ultra and Canvas Classic, as well as general enhancements to security.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.03) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034133275-LockDown-Browser-for-Windows-version-2-0-7-03"
-      },
-      {
-        "version": "2.0.7.04",
-        "releaseDate": "2021-12-16T16:29:45.000Z",
-        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.04, has been released.  This hotfix release addresses an issue with Canvas Classic quizzes when a password is set.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.04) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034114715-LockDown-Browser-for-Windows-Version-2-0-7-04"
-      },
-      {
-        "version": "2.0.7.05",
-        "releaseDate": "2021-12-16T16:28:38.000Z",
-        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.05, has been released. This hotfix release addresses an issue with the spreadsheet feature.\n\nExisting installs of LockDown Browser are expected to be auto-updated to this release on July 9, 2021. To obtain the latest version (2.0.7.05) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034097819-LockDown-Browser-for-Windows-Version-2-0-7-05"
-      },
-      {
-        "version": "2.0.7.06",
-        "releaseDate": "2021-12-16T16:26:18.000Z",
-        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.06, has been released. This release includes improvements to the integration with Canvas, Bb Ultra and Moodle, plus improved accessibility support.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.06) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034041499-LockDown-Browser-for-Windows-Version-2-0-7-06"
-      },
-      {
-        "version": "2.0.7.08",
-        "releaseDate": "2021-12-16T16:07:55.000Z",
-        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.08, has been released. This release includes accessibility improvements and improvements to security.\n\nExisting installs of LockDown Browser will be auto-updated in the near future. To obtain the latest version (2.0.7.08) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413026146971-LockDown-Browser-for-Windows-version-2-0-7-08"
-      },
-      {
         "version": "2.0.7.09",
-        "releaseDate": "2021-12-16T16:05:58.000Z",
+        "releaseDate": "2021-11-19T12:00:00.000Z",
         "releaseNotes": "A hotfix update to the LockDown Browser client for Windows has been released: version 2.0.7.09.  This release addresses an issue introduced in 2.0.7.08.\n\nExisting installs of LockDown Browser will be auto-updated shortly. To obtain the latest version (2.0.7.09) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
         "detectedAt": "2026-10-21T17:57:58.474Z",
         "url": "https://support.respondus.com/hc/en-us/articles/4413026115483-LockDown-Browser-for-Windows-version-2-0-7-09"
       },
       {
+        "version": "2.0.7.08",
+        "releaseDate": "2021-11-17T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.08, has been released. This release includes accessibility improvements and improvements to security.\n\nExisting installs of LockDown Browser will be auto-updated in the near future. To obtain the latest version (2.0.7.08) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413026146971-LockDown-Browser-for-Windows-version-2-0-7-08"
+      },
+      {
         "version": "2.0.7.07",
-        "releaseDate": "2021-11-05T21:24:54.000Z",
+        "releaseDate": "2021-10-07T12:00:00.000Z",
         "releaseNotes": "LockDown Browser for Windows, version 2.0.7.07, has been released. This release includes improvements to the Respondus Monitor integration, Instructor Live Proctoring, and improvements to security.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.07) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
         "detectedAt": "2026-10-21T17:57:58.474Z",
         "url": "https://support.respondus.com/hc/en-us/articles/4409707184411-LockDown-Browser-for-Windows-Version-2-0-7-07"
+      },
+      {
+        "version": "2.0.7.06",
+        "releaseDate": "2021-08-11T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.06, has been released. This release includes improvements to the integration with Canvas, Bb Ultra and Moodle, plus improved accessibility support.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.06) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034041499-LockDown-Browser-for-Windows-Version-2-0-7-06"
+      },
+      {
+        "version": "2.0.7.05",
+        "releaseDate": "2021-07-07T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.05, has been released. This hotfix release addresses an issue with the spreadsheet feature.\n\nExisting installs of LockDown Browser are expected to be auto-updated to this release on July 9, 2021. To obtain the latest version (2.0.7.05) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034097819-LockDown-Browser-for-Windows-Version-2-0-7-05"
+      },
+      {
+        "version": "2.0.7.04",
+        "releaseDate": "2021-06-30T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Windows, version 2.0.7.04, has been released.  This hotfix release addresses an issue with Canvas Classic quizzes when a password is set.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.04) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034114715-LockDown-Browser-for-Windows-Version-2-0-7-04"
+      },
+      {
+        "version": "2.0.7.03",
+        "releaseDate": "2021-06-23T12:00:00.000Z",
+        "releaseNotes": "An update to the LockDown Browser client for Windows has been released: version 2.0.7.03. This release provides improvements for the integration with Blackboard Ultra and Canvas Classic, as well as general enhancements to security.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.03) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034133275-LockDown-Browser-for-Windows-version-2-0-7-03"
+      },
+      {
+        "version": "2.0.7.02",
+        "releaseDate": "2021-04-22T12:00:00.000Z",
+        "releaseNotes": "An update to the LockDown Browser client for Windows has been released: version 2.0.7.02. This release provides improvements for the integration with Blackboard, Canvas, and D2L as well as general enhancements to security.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.02) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413026595995-LockDown-Browser-for-Windows-Version-2-0-7-02"
+      },
+      {
+        "version": "2.0.7.00",
+        "releaseDate": "2021-02-05T12:00:00.000Z",
+        "releaseNotes": "A hotfix update to LockDown Browser for Windows has been released: version 2.0.7.00. This release contains an update to the underlying Chromium engine, plus a fix for a recent Blackboard Learn SaaS update.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.00) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413026758939-LockDown-Browser-for-Windows-version-2-0-7-00"
+      },
+      {
+        "version": "2.0.6.11",
+        "releaseDate": "2021-01-25T12:00:00.000Z",
+        "releaseNotes": "A hotfix update to the LockDown Browser client for Windows has been released: version 2.0.6.11. This release provides improvements to the Canvas Classic and Blackboard Original integrations.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.6.11) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413026813723-LockDown-Browser-for-Windows-version-2-0-6-11"
       }
     ],
     "mac:respondus-lockdown-browser": [
@@ -1443,67 +1443,67 @@
         "url": "https://support.respondus.com/hc/en-us/articles/4414916496027-LockDown-Browser-for-Mac-version-2-0-8-01"
       },
       {
-        "version": "2.0.7.00",
-        "releaseDate": "2021-12-16T16:43:54.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.00, has been released. This release contains an update to the underlying Chromium engine, a fix for Instructor Live Proctoring, plus other minor enhancements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.00) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "version": "2.0.8.00",
+        "releaseDate": "2021-12-02T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.8.00, has been released. This release contains an update to the underlying Chromium engine, plus other minor enhancements.\n\nExisting installs of LockDown Browser will be auto-updated to 2.0.7.07 prior to this release. To obtain the latest version (2.0.8.00) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
         "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034389275-LockDown-Browser-for-Mac-Version-2-0-7-00"
-      },
-      {
-        "version": "2.0.7.01",
-        "releaseDate": "2021-12-16T16:42:20.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.01, has been released. This release contains a fix for displaying PDFs, plus other minor enhancements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.01) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034363547-LockDown-Browser-for-Mac-Version-2-0-7-01"
-      },
-      {
-        "version": "2.0.7.02",
-        "releaseDate": "2021-12-16T16:36:55.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.02, has been released. This release contains additional language localizations and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.02) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413042344219-LockDown-Browser-for-Mac-Version-2-0-7-02"
-      },
-      {
-        "version": "2.0.7.03",
-        "releaseDate": "2021-12-16T16:35:19.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.03, has been released. This release contains improvements to the Blackboard and Canvas integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.03) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413034228379-LockDown-Browser-for-Mac-Version-2-0-7-03"
-      },
-      {
-        "version": "2.0.7.04",
-        "releaseDate": "2021-12-16T16:31:14.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.04, has been released. This release contains improvements to the Blackboard, Canvas and Moodle integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.04) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413042227483-LockDown-Browser-for-Mac-Version-2-0-7-04"
-      },
-      {
-        "version": "2.0.7.05",
-        "releaseDate": "2021-12-16T16:27:29.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.05, has been released. This release contains improvements to the Brightspace integration, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.05) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413026479643-LockDown-Browser-for-Mac-Version-2-0-7-05"
-      },
-      {
-        "version": "2.0.7.06",
-        "releaseDate": "2021-12-16T16:24:45.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.06, has been released. This release contains improvements to the Blackboard and Canvas integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.06) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
-        "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413042091291-LockDown-Browser-for-Mac-Version-2-0-7-06"
+        "url": "https://support.respondus.com/hc/en-us/articles/4413033622427-LockDown-Browser-for-Mac-version-2-0-8-00"
       },
       {
         "version": "2.0.7.07",
-        "releaseDate": "2021-12-16T16:11:11.000Z",
+        "releaseDate": "2021-10-27T12:00:00.000Z",
         "releaseNotes": "LockDown Browser for Mac, version 2.0.7.07, has been released. This release contains improvements to the Blackboard, Brightspace, and Canvas integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.07) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
         "detectedAt": "2026-10-21T17:57:58.474Z",
         "url": "https://support.respondus.com/hc/en-us/articles/4413026181275-LockDown-Browser-for-Mac-Version-2-0-7-07"
       },
       {
-        "version": "2.0.8.00",
-        "releaseDate": "2021-12-16T16:01:37.000Z",
-        "releaseNotes": "LockDown Browser for Mac, version 2.0.8.00, has been released. This release contains an update to the underlying Chromium engine, plus other minor enhancements.\n\nExisting installs of LockDown Browser will be auto-updated to 2.0.7.07 prior to this release. To obtain the latest version (2.0.8.00) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "version": "2.0.7.06",
+        "releaseDate": "2021-09-22T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.06, has been released. This release contains improvements to the Blackboard and Canvas integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.06) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
         "detectedAt": "2026-10-21T17:57:58.474Z",
-        "url": "https://support.respondus.com/hc/en-us/articles/4413033622427-LockDown-Browser-for-Mac-version-2-0-8-00"
+        "url": "https://support.respondus.com/hc/en-us/articles/4413042091291-LockDown-Browser-for-Mac-Version-2-0-7-06"
+      },
+      {
+        "version": "2.0.7.05",
+        "releaseDate": "2021-07-20T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.05, has been released. This release contains improvements to the Brightspace integration, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.05) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413026479643-LockDown-Browser-for-Mac-Version-2-0-7-05"
+      },
+      {
+        "version": "2.0.7.04",
+        "releaseDate": "2021-06-16T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.04, has been released. This release contains improvements to the Blackboard, Canvas and Moodle integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.04) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413042227483-LockDown-Browser-for-Mac-Version-2-0-7-04"
+      },
+      {
+        "version": "2.0.7.03",
+        "releaseDate": "2021-04-21T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.03, has been released. This release contains improvements to the Blackboard and Canvas integrations, and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.03) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034228379-LockDown-Browser-for-Mac-Version-2-0-7-03"
+      },
+      {
+        "version": "2.0.7.02",
+        "releaseDate": "2021-03-18T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.02, has been released. This release contains additional language localizations and security improvements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.02) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413042344219-LockDown-Browser-for-Mac-Version-2-0-7-02"
+      },
+      {
+        "version": "2.0.7.01",
+        "releaseDate": "2021-02-04T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.01, has been released. This release contains a fix for displaying PDFs, plus other minor enhancements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.01) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034363547-LockDown-Browser-for-Mac-Version-2-0-7-01"
+      },
+      {
+        "version": "2.0.7.00",
+        "releaseDate": "2021-01-28T12:00:00.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.0.7.00, has been released. This release contains an update to the underlying Chromium engine, a fix for Instructor Live Proctoring, plus other minor enhancements.\n\nExisting installs of LockDown Browser will NOT be auto-updated at this time. To obtain the latest version (2.0.7.00) use the \"Check for Update\" feature or run the full installation program.\n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Customer Login > LockDown Browser > Additional Resources > Version Information.",
+        "detectedAt": "2026-10-21T17:57:58.474Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/4413034389275-LockDown-Browser-for-Mac-Version-2-0-7-00"
       }
     ],
     "apple:389801252": [
@@ -5317,6 +5317,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.145.1",
+        "releaseDate": "2026-10-21T17:05:12.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-10-21T18:39:23.806Z"
+      },
       {
         "version": "7.145.0",
         "releaseDate": "2026-10-19T16:06:54.000Z",
