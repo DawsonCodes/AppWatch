@@ -194,3 +194,11 @@ export function TranslateIcon({ size, class: c }: IconProps) {
     </svg>
   );
 }
+
+export function RhythmIcon({ size, class: c }: IconProps) {
+  return (
+    <svg {...base(size, c)}>
+      <path d="M3 12h3l2-5 4 10 2-5h7" />
+    </svg>
+  );
+}

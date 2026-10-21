@@ -46,6 +46,13 @@
   --mac-text: #ffb46e;
   --mac-solid: #b45309;
   --mac-soft: rgba(255, 159, 69, 0.13);
+  /* Chart marks: platform hues stepped into the dark chart band (validated
+     against the panel surface: lightness, chroma, CVD separation, 3:1). */
+  --chart-apple: #3a87e8;
+  --chart-google: #1fa257;
+  --chart-windows: #1a9fbf;
+  --chart-mac: #d0721f;
+  --chart-grid: #343a42;
   --fresh: #b690ff;
   --fresh-soft: rgba(182, 144, 255, 0.15);
 
@@ -175,6 +182,11 @@
   --mac-text: #b45309;
   --mac-solid: #b45309;
   --mac-soft: rgba(234, 122, 18, 0.1);
+  --chart-apple: #1a7cf0;
+  --chart-google: #1e9e4f;
+  --chart-windows: #0891b2;
+  --chart-mac: #d4660a;
+  --chart-grid: #dde1e7;
   --fresh: #7a3ff0;
   --fresh-soft: rgba(122, 63, 240, 0.1);
 
@@ -235,6 +247,11 @@
   --mac-text: #904800;
   --mac-solid: #904800;
   --mac-soft: #f8e0c8;
+  --chart-apple: #0000ff;
+  --chart-google: #008000;
+  --chart-windows: #0088c0;
+  --chart-mac: #c06000;
+  --chart-grid: #c0c0c0;
   --fresh: #800080;
   --fresh-soft: #f0d8f0;
 

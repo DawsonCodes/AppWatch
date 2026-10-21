@@ -13,6 +13,8 @@ interface InsightsPanelProps {
   appCount: number;
   localCount: number;
   status: StatusFile | null;
+  /** Apps expected to update within three days (null until history loads). */
+  dueSoon?: number | null;
   open: boolean;
   onToggle: () => void;
 }
@@ -36,6 +38,7 @@ export function InsightsPanel({
   appCount,
   localCount,
   status,
+  dueSoon = null,
   open,
   onToggle,
 }: InsightsPanelProps) {
@@ -101,6 +104,13 @@ export function InsightsPanel({
               }
             />
             <Stat label="Schedule" value="Every 2 hours" detail="automatic, every tracked app" />
+            {dueSoon !== null ? (
+              <Stat
+                label="Expected within 3 days"
+                value={String(dueSoon)}
+                detail="from each app’s release rhythm"
+              />
+            ) : null}
             <Stat
               label="Your local watches"
               value={String(localCount)}

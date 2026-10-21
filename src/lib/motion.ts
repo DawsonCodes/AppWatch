@@ -198,7 +198,7 @@ export function createListMotion(options: ListMotionOptions): ListMotion {
           if (!prefersReducedMotion()) reveal(el, Math.min(index, 6) * 55);
         });
       },
-      { rootMargin: '0px 0px -40px 0px' },
+      { rootMargin: '0px', threshold: 0 },
     );
     return observer;
   }

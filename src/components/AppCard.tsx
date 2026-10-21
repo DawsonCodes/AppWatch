@@ -5,7 +5,7 @@ import { isRecentlyUpdated } from '../lib/filtering.ts';
 import { compactAgo, formatDate } from '../lib/format.ts';
 import { truncate } from '../shared/text.ts';
 import { AppIcon } from './AppIcon.tsx';
-import { AlertIcon } from './Icons.tsx';
+import { AlertIcon, RhythmIcon } from './Icons.tsx';
 import { storeLabel } from './StoreBadge.tsx';
 import { WatchButton } from './WatchButton.tsx';
 
@@ -13,6 +13,11 @@ interface AppCardProps {
   group: AppGroup;
   watched: boolean;
   open: boolean;
+  /**
+   * One-line release rhythm ("Every ~6 days · next in ~3 days"); null when
+   * there isn't enough history, undefined while history is still loading.
+   */
+  rhythm?: string | null;
   onToggleWatch: (group: AppGroup) => void;
   onOpen: (listingId: string, trigger: HTMLElement) => void;
 }
@@ -23,7 +28,7 @@ interface AppCardProps {
  * updated this week, a filled star means watched, and the open card keeps an
  * accent outline while its detail panel is showing.
  */
-function AppCardImpl({ group, watched, open, onToggleWatch, onOpen }: AppCardProps) {
+function AppCardImpl({ group, watched, open, rhythm, onToggleWatch, onOpen }: AppCardProps) {
   const primary = primaryListing(group);
   const developer = groupDeveloper(group);
   const notes = primary.releaseNotes ? truncate(primary.releaseNotes, 140) : null;
@@ -99,6 +104,15 @@ function AppCardImpl({ group, watched, open, onToggleWatch, onOpen }: AppCardPro
       </ul>
 
       {notes ? <p class="card__notes">{notes}</p> : null}
+
+      {local ? null : rhythm === undefined ? (
+        <span class="skeleton skeleton--line card__rhythm-skeleton" aria-hidden="true" />
+      ) : (
+        <p class={`card__rhythm${rhythm ? '' : ' card__rhythm--learning'}`}>
+          <RhythmIcon size={13} />
+          {rhythm ?? 'Learning its release rhythm'}
+        </p>
+      )}
     </article>
   );
 }

@@ -27,7 +27,7 @@ export interface AppGroup {
 /** Pseudo-collection for apps a visitor watches only in this browser. */
 export const LOCAL_COLLECTION: CatalogCollection = { id: 'local', label: 'Your watches' };
 
-export type SortKey = 'updated' | 'name' | 'collection';
+export type SortKey = 'updated' | 'name' | 'collection' | 'next';
 
 export interface GroupFilters {
   query: string;
@@ -186,6 +186,8 @@ export function filterGroups(
   watchedIds: ReadonlySet<string>,
   collectionOrder: readonly string[] = [],
   now: Date = new Date(),
+  /** Group key -> when its next update is expected (for the "next" sort). */
+  nextTimes?: ReadonlyMap<string, number>,
 ): AppGroup[] {
   const ref = parseStoreInput(filters.query);
   const refId = ref ? appId(ref.platform, ref.storeId) : null;
@@ -217,6 +219,17 @@ export function filterGroups(
         return index === -1 ? Number.MAX_SAFE_INTEGER : index;
       };
       result.sort((a, b) => rank(a.collection) - rank(b.collection) || byName(a, b));
+      break;
+    }
+    case 'next': {
+      // Soonest expected first; apps without a prediction keep latest-first order.
+      const at = (group: AppGroup) => nextTimes?.get(group.key) ?? Number.POSITIVE_INFINITY;
+      result.sort(
+        (a, b) =>
+          (at(a) === at(b) ? 0 : at(a) < at(b) ? -1 : 1) ||
+          groupLatestTime(b) - groupLatestTime(a) ||
+          byName(a, b),
+      );
       break;
     }
     case 'updated':

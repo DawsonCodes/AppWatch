@@ -190,3 +190,24 @@ describe('filterGroups', () => {
     ]);
   });
 });
+
+describe('filterGroups — next expected update sort', () => {
+  it('orders by the expected time, unknown last', () => {
+    const groups = buildGroups(catalog, tracked);
+    const keys = groups.map((g) => g.key);
+    const nextTimes = new Map([
+      [keys[keys.length - 1]!, 100],
+      [keys[0]!, 200],
+    ]);
+    const sorted = filterGroups(
+      groups,
+      { ...DEFAULT_GROUP_FILTERS, sort: 'next' },
+      new Set(),
+      [],
+      new Date(),
+      nextTimes,
+    );
+    expect(sorted[0]?.key).toBe(keys[keys.length - 1]);
+    expect(sorted[1]?.key).toBe(keys[0]);
+  });
+});

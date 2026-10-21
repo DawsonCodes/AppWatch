@@ -27,6 +27,7 @@ import {
   RefreshIcon,
 } from './Icons.tsx';
 import { Notes } from './Notes.tsx';
+import { RhythmPanel } from './RhythmPanel.tsx';
 import { SlidingTabs } from './SlidingTabs.tsx';
 import { storeLabel } from './StoreBadge.tsx';
 import { WatchButton } from './WatchButton.tsx';
@@ -267,6 +268,8 @@ export function AppDetail({
 
   const local = listing.source === 'local';
   const feed = isDesktopPlatform(listing.platform) ? feedFor(listing.storeId) : null;
+  // One "now" per opening, so the rhythm estimate doesn't drift while reading.
+  const [now] = useState(() => new Date());
   const developer = groupDeveloper(group);
   const releasedAgo = relativeTime(listing.releaseDate);
   const size = formatBytes(listing.sizeBytes);
@@ -436,6 +439,16 @@ export function AppDetail({
                 </p>
               )}
             </section>
+
+            {!local && history.phase === 'ready' ? (
+              <RhythmPanel entries={history.entries} platform={listing.platform} now={now} />
+            ) : !local && history.phase === 'loading' ? (
+              <div class="panel" aria-hidden="true">
+                <span class="skeleton skeleton--line" style={{ width: '40%' }} />
+                <span class="skeleton skeleton--line" style={{ width: '90%' }} />
+                <span class="skeleton skeleton--row" />
+              </div>
+            ) : null}
 
             <dl class="facts">
               <Fact label="Version">

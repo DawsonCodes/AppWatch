@@ -10,6 +10,8 @@ import { Footer } from './components/Footer.tsx';
 import { Header } from './components/Header.tsx';
 import { CheckIcon, GridIcon, PulseIcon } from './components/Icons.tsx';
 import { InsightsPanel } from './components/InsightsPanel.tsx';
+import { UpNext } from './components/UpNext.tsx';
+import type { UpNextItem } from './components/UpNext.tsx';
 import { SearchBar } from './components/SearchBar.tsx';
 import { SlidingTabs } from './components/SlidingTabs.tsx';
 import type { TabItem } from './components/SlidingTabs.tsx';
@@ -47,6 +49,8 @@ import { readPref, writePref } from './lib/prefs.ts';
 import { applyTheme, currentTheme, persistTheme } from './lib/theme.ts';
 import type { ThemeId } from './lib/theme.ts';
 import { buildTimeline } from './lib/timeline.ts';
+import type { Cadence } from './lib/cadence.ts';
+import { computeCadence, nextSortTime, rhythmLine } from './lib/cadence.ts';
 import { createWatchlist } from './lib/watchlist.ts';
 import { parseStoreInput, storeUrlFor } from './shared/storeRefs.ts';
 import type {
@@ -87,6 +91,7 @@ const SORT_OPTIONS: { value: SortKey; label: string; description: string }[] = [
   { value: 'updated', label: 'Latest update', description: 'Most recent release first' },
   { value: 'name', label: 'Name', description: 'A to Z' },
   { value: 'collection', label: 'Collection', description: 'Grouped like the tabs' },
+  { value: 'next', label: 'Next expected update', description: 'Soonest predicted first' },
 ];
 
 function readHashListingId(): string | null {
@@ -261,7 +266,9 @@ export function App() {
     fetchData();
   }, [fetchData]);
 
-  const needsHistory = selection !== null || view === 'updates';
+  // History feeds the timeline, the detail panel and every app's release
+  // rhythm, so it loads as soon as the dashboard data is in.
+  const needsHistory = load.phase === 'ready' || selection !== null || view === 'updates';
   useEffect(() => {
     if (!needsHistory || historyLoad.phase !== 'idle') return;
     setHistoryLoad({ phase: 'loading' });
@@ -324,9 +331,61 @@ export function App() {
     [trackedIds, localListings],
   );
 
+  // Release rhythm per tracked listing, and per app the listing whose next
+  // update is expected soonest.
+  const rhythmNow = useMemo(() => new Date(), [historyLoad]);
+  const cadences = useMemo(() => {
+    if (historyLoad.phase !== 'ready') return null;
+    const map = new Map<string, Cadence>();
+    for (const listing of trackedListings) {
+      map.set(listing.id, computeCadence(historyLoad.file.entries[listing.id] ?? [], rhythmNow));
+    }
+    return map;
+  }, [historyLoad, trackedListings, rhythmNow]);
+  const groupRhythm = useMemo(() => {
+    const map = new Map<string, { listing: Listing; cadence: Cadence; line: string | null }>();
+    if (!cadences) return map;
+    for (const group of groups) {
+      let best: { listing: Listing; cadence: Cadence } | null = null;
+      for (const listing of group.listings) {
+        const cadence = cadences.get(listing.id);
+        if (!cadence) continue;
+        if (!best || nextSortTime(cadence) < nextSortTime(best.cadence))
+          best = { listing, cadence };
+      }
+      if (best) map.set(group.key, { ...best, line: rhythmLine(best.cadence, rhythmNow) });
+    }
+    return map;
+  }, [cadences, groups, rhythmNow]);
+  const nextTimes = useMemo(
+    () => new Map([...groupRhythm].map(([key, value]) => [key, nextSortTime(value.cadence)])),
+    [groupRhythm],
+  );
+  const upNext = useMemo<UpNextItem[]>(() => {
+    const items: UpNextItem[] = [];
+    for (const group of groups) {
+      const rhythm = groupRhythm.get(group.key);
+      if (rhythm && (rhythm.cadence.state === 'upcoming' || rhythm.cadence.state === 'due')) {
+        items.push({ group, listing: rhythm.listing, cadence: rhythm.cadence });
+      }
+    }
+    return items
+      .sort((a, b) => (a.cadence.next?.likely ?? 0) - (b.cadence.next?.likely ?? 0))
+      .slice(0, 8);
+  }, [groups, groupRhythm]);
+  const dueSoon = useMemo(() => {
+    if (!cadences) return null;
+    const horizon = rhythmNow.getTime() + 3 * 86_400_000;
+    return [...groupRhythm.values()].filter(
+      ({ cadence }) =>
+        cadence.state === 'due' ||
+        (cadence.state === 'upcoming' && (cadence.next?.likely ?? Infinity) <= horizon),
+    ).length;
+  }, [cadences, groupRhythm, rhythmNow]);
+
   const filteredGroups = useMemo(
-    () => filterGroups(groups, filters, watchedIds, collectionOrder),
-    [groups, filters, watchedIds, collectionOrder],
+    () => filterGroups(groups, filters, watchedIds, collectionOrder, undefined, nextTimes),
+    [groups, filters, watchedIds, collectionOrder, nextTimes],
   );
   const recentCount = useMemo(() => groups.filter((g) => isGroupRecent(g)).length, [groups]);
   const presentPlatforms = useMemo(
@@ -881,6 +940,11 @@ export function App() {
                         group={group}
                         watched={isGroupWatched(group, watchedIds)}
                         open={found?.group.key === group.key}
+                        rhythm={
+                          historyLoad.phase === 'ready'
+                            ? (groupRhythm.get(group.key)?.line ?? null)
+                            : undefined
+                        }
                         onToggleWatch={toggleWatch}
                         onOpen={openDetail}
                       />
@@ -892,13 +956,16 @@ export function App() {
 
             {ready && view === 'updates' ? (
               historyLoad.phase === 'ready' ? (
-                <UpdatesTimeline
-                  motion={timelineMotion}
-                  events={timeline}
-                  onOpen={openDetail}
-                  onClearFilters={clearFilters}
-                  filtered={active}
-                />
+                <>
+                  <UpNext items={upNext} onOpen={openDetail} now={rhythmNow} />
+                  <UpdatesTimeline
+                    motion={timelineMotion}
+                    events={timeline}
+                    onOpen={openDetail}
+                    onClearFilters={clearFilters}
+                    filtered={active}
+                  />
+                </>
               ) : historyLoad.phase === 'error' ? (
                 <LoadFailed
                   message="Release history could not be loaded."
@@ -921,6 +988,7 @@ export function App() {
               appCount={trackedGroupCount}
               localCount={localGroupCount}
               status={status}
+              dueSoon={dueSoon}
               open={insightsOpen}
               onToggle={toggleInsights}
             />
