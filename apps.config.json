@@ -49,6 +49,18 @@
       ]
     },
     {
+      "id": "respondus",
+      "label": "Respondus",
+      "apps": [
+        {
+          "name": "LockDown Browser",
+          "appStore": "https://apps.apple.com/us/app/lockdown-browser/id659101775",
+          "windows": "respondus-lockdown-browser",
+          "mac": "respondus-lockdown-browser"
+        }
+      ]
+    },
+    {
       "id": "social",
       "label": "Social",
       "apps": [
@@ -383,6 +395,16 @@
           "name": "Google Translate",
           "appStore": "https://apps.apple.com/us/app/google-translate/id414706506",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+        }
+      ]
+    },
+    {
+      "id": "drones",
+      "label": "Drones",
+      "apps": [
+        {
+          "name": "DJI Fly",
+          "appStore": "https://apps.apple.com/us/app/dji-fly/id1479649251"
         }
       ]
     }
