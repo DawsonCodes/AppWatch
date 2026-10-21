@@ -73,6 +73,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261019.20",
+        "releaseDate": "2026-10-20T22:37:07.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
+      {
         "version": "1.261016.20",
         "releaseDate": "2026-10-17T23:27:06.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -190,6 +196,12 @@
       }
     ],
     "apple:6477489729": [
+      {
+        "version": "1.2026.4171302",
+        "releaseDate": "2026-10-21T03:58:08.000Z",
+        "releaseNotes": "- UI improvements and bug fixes",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
       {
         "version": "1.2026.4070303",
         "releaseDate": "2026-10-14T12:34:35.000Z",
@@ -703,6 +715,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.36",
+        "releaseDate": "2026-10-21T03:05:13.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
+      {
         "version": "12.35",
         "releaseDate": "2026-10-16T04:20:14.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -759,6 +777,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.36.1-prod.01",
+        "releaseDate": "2026-10-21T01:50:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
+      {
         "version": "12.35.0-prod.01",
         "releaseDate": "2026-10-16T04:47:25.000Z",
         "releaseNotes": null,
@@ -814,6 +838,12 @@
       }
     ],
     "apple:6446901002": [
+      {
+        "version": "452.1",
+        "releaseDate": "2026-10-20T20:59:21.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
       {
         "version": "452.0",
         "releaseDate": "2026-10-19T14:05:56.000Z",
@@ -1453,6 +1483,12 @@
     ],
     "apple:874139669": [
       {
+        "version": "8.33",
+        "releaseDate": "2026-10-20T16:40:41.000Z",
+        "releaseNotes": "• This update introduces a new custom mute option so you can easily specify the exact date and time when you would like to end your moment of silence for notifications in a specific chat.",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
+      {
         "version": "8.32",
         "releaseDate": "2026-10-09T16:56:34.000Z",
         "releaseNotes": "• This update introduces a new custom mute option so you can easily specify the exact date and time when you would like to end your moment of silence for notifications in a specific chat.",
@@ -1600,6 +1636,12 @@
       }
     ],
     "apple:686449807": [
+      {
+        "version": "13.1",
+        "releaseDate": "2026-10-20T16:37:17.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
       {
         "version": "13.0",
         "releaseDate": "2026-10-08T16:22:32.000Z",
@@ -2384,6 +2426,12 @@
     "google:com.google.android.gm": [
       {
         "version": null,
+        "releaseDate": "2026-10-21T00:01:25.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-15T19:59:50.000Z",
         "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
         "detectedAt": "2026-10-16T00:24:34.382Z"
@@ -2876,6 +2924,12 @@
       }
     ],
     "google:com.google.android.apps.docs": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-21T01:06:05.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements.",
+        "detectedAt": "2026-10-21T07:39:33.126Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-13T19:11:11.000Z",
