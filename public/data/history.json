@@ -73,6 +73,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1016.62342",
+        "releaseDate": "2026-10-22T19:09:01.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
+      {
         "version": "26.1016.61520",
         "releaseDate": "2026-10-22T03:47:28.000Z",
         "releaseNotes": null,
@@ -724,6 +730,12 @@
       }
     ],
     "apple:6473753684": [
+      {
+        "version": "1.261021.20",
+        "releaseDate": "2026-10-22T17:27:35.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
       {
         "version": "1.261019.51",
         "releaseDate": "2026-10-21T20:27:07.000Z",
@@ -5857,6 +5869,12 @@
     ],
     "apple:686449807": [
       {
+        "version": "13.1.1",
+        "releaseDate": "2026-10-22T18:45:59.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
+      {
         "version": "13.1",
         "releaseDate": "2026-10-20T16:37:17.000Z",
         "releaseNotes": "Bug fixes, minor improvements, and more.",
@@ -6576,6 +6594,12 @@
     ],
     "mac:homebrew:discord": [
       {
+        "version": "0.0.419",
+        "releaseDate": "2026-10-22T19:18:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
+      {
         "version": "0.0.418",
         "releaseDate": "2026-10-20T07:03:43.000Z",
         "releaseNotes": null,
@@ -7278,6 +7302,12 @@
     ],
     "apple:363590051": [
       {
+        "version": "26.2.1",
+        "releaseDate": "2026-10-22T17:15:08.000Z",
+        "releaseNotes": "We’re working on the app experience. You work on what, when, and how you watch next. That's equally as important.\n\nWe know you have choices. In this release, we made gallery improvements so it’s easier to find the perfect thing to watch.",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
+      {
         "version": "26.2.0",
         "releaseDate": "2026-10-19T16:12:41.000Z",
         "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your iPhone and iPad.\n\nAnd in this release, we fixed bugs and made performance improvements. Just for you.",
@@ -7348,6 +7378,12 @@
     ],
     "apple:1446075923": [
       {
+        "version": "5.20.0",
+        "releaseDate": "2026-10-22T18:35:13.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
+      {
         "version": "5.19.0",
         "releaseDate": "2026-10-07T17:27:19.000Z",
         "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
@@ -7367,6 +7403,12 @@
       }
     ],
     "google:com.disney.disneyplus": [
+      {
+        "version": "26.19.0+rc3-2026.10.20",
+        "releaseDate": "2026-10-20T17:41:18.000Z",
+        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
       {
         "version": "26.18.0+rc5-2026.10.05",
         "releaseDate": "2026-10-06T13:17:53.000Z",
@@ -8660,6 +8702,12 @@
       }
     ],
     "google:com.roblox.client": [
+      {
+        "version": "2.744.1081",
+        "releaseDate": "2026-10-21T19:40:28.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-21T19:40:28.000Z",
@@ -11495,6 +11543,12 @@
       }
     ],
     "mac:homebrew:microsoft-teams": [
+      {
+        "version": "26276.505.5234.9924",
+        "releaseDate": "2026-10-22T19:53:49.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
       {
         "version": "26261.303.5165.1465",
         "releaseDate": "2026-10-07T10:21:56.000Z",
@@ -18924,6 +18978,12 @@
     ],
     "mac:homebrew:microsoft-edge": [
       {
+        "version": "156.0.4314.42",
+        "releaseDate": "2026-10-22T19:49:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
+      {
         "version": "155.0.4283.62",
         "releaseDate": "2026-10-16T19:34:21.000Z",
         "releaseNotes": null,
@@ -23218,6 +23278,12 @@
       }
     ],
     "google:com.ubercab.eats": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-22T17:18:09.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-10-22T21:35:40.024Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-19T17:14:11.000Z",
