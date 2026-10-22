@@ -13,7 +13,7 @@ import type {
   StatusFile,
   VersionHistoryEntry,
 } from '../../src/shared/types.ts';
-import { feedFor } from '../../src/shared/feeds.ts';
+import { desktopSourceFor } from '../../src/shared/desktop.ts';
 import { appId, PLATFORMS, SCHEMA_VERSION } from '../../src/shared/types.ts';
 import {
   validateAppsFile,
@@ -70,8 +70,11 @@ function fallbackStoreUrl(target: TrackTarget): string {
       return `https://apps.apple.com/${target.country}/app/id${target.storeId}`;
     case 'google':
       return `https://play.google.com/store/apps/details?id=${encodeURIComponent(target.storeId)}`;
-    default:
-      return feedFor(target.storeId)?.productUrl ?? 'https://github.com/DawsonCodes/AppWatch';
+    default: {
+      const source = desktopSourceFor(target.platform, target.storeId);
+      if (source?.kind === 'feed') return source.feed.productUrl;
+      return source?.sourceUrl ?? 'https://github.com/DawsonCodes/AppWatch';
+    }
   }
 }
 

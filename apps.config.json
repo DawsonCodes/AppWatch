@@ -9,17 +9,22 @@
         {
           "name": "ChatGPT",
           "appStore": "https://apps.apple.com/us/app/chatgpt/id6448311069",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.openai.chatgpt"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+          "mac": "homebrew:chatgpt"
         },
         {
           "name": "Claude",
           "appStore": "https://apps.apple.com/us/app/claude/id6473753684",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.anthropic.claude"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.anthropic.claude",
+          "windows": "winget:Anthropic.Claude",
+          "mac": "homebrew:claude"
         },
         {
           "name": "Gemini",
           "appStore": "https://apps.apple.com/us/app/google-gemini/id6477489729",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard",
+          "windows": "winget:Google.GeminiDesktop",
+          "mac": "homebrew:google-gemini"
         },
         {
           "name": "Grok",
@@ -29,12 +34,14 @@
         {
           "name": "Microsoft Copilot",
           "appStore": "https://apps.apple.com/us/app/microsoft-copilot/id541164041",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow",
+          "windows": "winget:Microsoft.Copilot"
         },
         {
           "name": "Perplexity",
           "appStore": "https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334",
-          "googlePlay": "https://play.google.com/store/apps/details?id=ai.perplexity.app.android"
+          "googlePlay": "https://play.google.com/store/apps/details?id=ai.perplexity.app.android",
+          "mac": "homebrew:perplexity"
         },
         {
           "name": "DeepSeek",
@@ -45,18 +52,6 @@
           "name": "Character.AI",
           "appStore": "https://apps.apple.com/us/app/character-ai/id1671705818",
           "googlePlay": "https://play.google.com/store/apps/details?id=ai.character.app"
-        }
-      ]
-    },
-    {
-      "id": "respondus",
-      "label": "Respondus",
-      "apps": [
-        {
-          "name": "LockDown Browser",
-          "appStore": "https://apps.apple.com/us/app/lockdown-browser/id659101775",
-          "windows": "respondus-lockdown-browser",
-          "mac": "respondus-lockdown-browser"
         }
       ]
     },
@@ -85,6 +80,11 @@
           "googlePlay": "https://play.google.com/store/apps/details?id=com.instagram.barcelona"
         },
         {
+          "name": "TikTok",
+          "appStore": "https://apps.apple.com/us/app/tiktok/id835599320",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically"
+        },
+        {
           "name": "YouTube",
           "appStore": "https://apps.apple.com/us/app/youtube/id544007664",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.youtube"
@@ -108,11 +108,6 @@
           "name": "LinkedIn",
           "appStore": "https://apps.apple.com/us/app/linkedin/id288429040",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.linkedin.android"
-        },
-        {
-          "name": "TikTok",
-          "appStore": "https://apps.apple.com/us/app/tiktok/id835599320",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically"
         }
       ]
     },
@@ -123,27 +118,34 @@
         {
           "name": "WhatsApp",
           "appStore": "https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.whatsapp"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.whatsapp",
+          "mac": "homebrew:whatsapp"
         },
         {
           "name": "Signal",
           "appStore": "https://apps.apple.com/us/app/signal-private-messenger/id874139669",
-          "googlePlay": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms",
+          "windows": "winget:OpenWhisperSystems.Signal",
+          "mac": "homebrew:signal"
         },
         {
           "name": "Telegram",
           "appStore": "https://apps.apple.com/us/app/telegram-messenger/id686449807",
-          "googlePlay": "https://play.google.com/store/apps/details?id=org.telegram.messenger"
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.telegram.messenger",
+          "windows": "winget:Telegram.TelegramDesktop",
+          "mac": "homebrew:telegram"
+        },
+        {
+          "name": "Discord",
+          "appStore": "https://apps.apple.com/us/app/discord-chat-talk-hangout/id985746746",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.discord",
+          "windows": "winget:Discord.Discord",
+          "mac": "homebrew:discord"
         },
         {
           "name": "Messenger",
           "appStore": "https://apps.apple.com/us/app/messenger/id454638411",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.facebook.orca"
-        },
-        {
-          "name": "Discord",
-          "appStore": "https://apps.apple.com/us/app/discord-chat-talk-hangout/id985746746",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.discord"
         }
       ]
     },
@@ -162,9 +164,21 @@
           "googlePlay": "https://play.google.com/store/apps/details?id=com.disney.disneyplus"
         },
         {
+          "name": "Prime Video",
+          "appStore": "https://apps.apple.com/us/app/amazon-prime-video/id545519333",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient"
+        },
+        {
+          "name": "Hulu",
+          "appStore": "https://apps.apple.com/us/app/hulu-stream-tv-shows-movies/id376510438",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.hulu.plus"
+        },
+        {
           "name": "Spotify",
           "appStore": "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.spotify.music"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.spotify.music",
+          "windows": "winget:Spotify.Spotify",
+          "mac": "homebrew:spotify"
         },
         {
           "name": "Twitch",
@@ -179,28 +193,22 @@
         {
           "name": "VLC",
           "appStore": "https://apps.apple.com/us/app/vlc-media-player/id650377962",
-          "googlePlay": "https://play.google.com/store/apps/details?id=org.videolan.vlc"
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.videolan.vlc",
+          "windows": "winget:VideoLAN.VLC",
+          "mac": "homebrew:vlc"
         },
         {
           "name": "Roblox",
           "appStore": "https://apps.apple.com/us/app/roblox/id431946152",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.roblox.client"
-        },
-        {
-          "name": "Prime Video",
-          "appStore": "https://apps.apple.com/us/app/amazon-prime-video/id545519333",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient"
-        },
-        {
-          "name": "Hulu",
-          "appStore": "https://apps.apple.com/us/app/hulu-stream-tv-shows-movies/id376510438",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.hulu.plus"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.roblox.client",
+          "windows": "winget:Roblox.Roblox",
+          "mac": "homebrew:roblox"
         }
       ]
     },
     {
-      "id": "productivity",
-      "label": "Productivity",
+      "id": "work",
+      "label": "Work",
       "apps": [
         {
           "name": "Gmail",
@@ -210,42 +218,55 @@
         {
           "name": "Microsoft Outlook",
           "appStore": "https://apps.apple.com/us/app/microsoft-outlook/id951937596",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook",
+          "mac": "homebrew:microsoft-outlook"
         },
         {
           "name": "Slack",
           "appStore": "https://apps.apple.com/us/app/slack/id618783545",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.Slack"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.Slack",
+          "windows": "winget:SlackTechnologies.Slack",
+          "mac": "homebrew:slack"
         },
         {
           "name": "Microsoft Teams",
           "appStore": "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.teams"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.teams",
+          "mac": "homebrew:microsoft-teams"
         },
         {
           "name": "Zoom",
           "appStore": "https://apps.apple.com/us/app/zoom-workplace/id546505307",
-          "googlePlay": "https://play.google.com/store/apps/details?id=us.zoom.videomeetings"
+          "googlePlay": "https://play.google.com/store/apps/details?id=us.zoom.videomeetings",
+          "windows": "winget:Zoom.Zoom",
+          "mac": "homebrew:zoom"
         },
         {
           "name": "Notion",
           "appStore": "https://apps.apple.com/us/app/notion/id1232780281",
-          "googlePlay": "https://play.google.com/store/apps/details?id=notion.id"
+          "googlePlay": "https://play.google.com/store/apps/details?id=notion.id",
+          "windows": "winget:Notion.Notion",
+          "mac": "homebrew:notion"
         },
         {
           "name": "Dropbox",
           "appStore": "https://apps.apple.com/us/app/dropbox/id327630330",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.dropbox.android"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.dropbox.android",
+          "mac": "homebrew:dropbox"
         },
         {
           "name": "Canva",
           "appStore": "https://apps.apple.com/us/app/canva/id897446215",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.canva.editor"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.canva.editor",
+          "windows": "winget:Canva.Canva",
+          "mac": "homebrew:canva"
         },
         {
           "name": "Google Drive",
           "appStore": "https://apps.apple.com/us/app/google-drive/id507874739",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs",
+          "windows": "winget:Google.GoogleDrive",
+          "mac": "homebrew:google-drive"
         },
         {
           "name": "Google Photos",
@@ -255,49 +276,109 @@
       ]
     },
     {
-      "id": "browsers-privacy",
-      "label": "Browsers & Privacy",
+      "id": "browsers",
+      "label": "Browsers & Security",
       "apps": [
-        {
-          "name": "Firefox",
-          "appStore": "https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926",
-          "googlePlay": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
-        },
         {
           "name": "Google Chrome",
           "appStore": "https://apps.apple.com/us/app/google-chrome/id535886823",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.android.chrome"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.android.chrome",
+          "windows": "winget:Google.Chrome",
+          "mac": "homebrew:google-chrome"
         },
         {
-          "name": "Brave",
-          "appStore": "https://apps.apple.com/us/app/brave-browser/id1052879175",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.brave.browser"
-        },
-        {
-          "name": "DuckDuckGo",
-          "appStore": "https://apps.apple.com/us/app/duckduckgo-private-browser/id663592361",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android"
-        },
-        {
-          "name": "Proton Mail",
-          "appStore": "https://apps.apple.com/us/app/proton-mail/id979659905",
-          "googlePlay": "https://play.google.com/store/apps/details?id=ch.protonmail.android"
-        },
-        {
-          "name": "Bitwarden",
-          "appStore": "https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.x8bit.bitwarden"
+          "name": "Firefox",
+          "appStore": "https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.mozilla.firefox",
+          "windows": "winget:Mozilla.Firefox",
+          "mac": "homebrew:firefox"
         },
         {
           "name": "Microsoft Edge",
           "appStore": "https://apps.apple.com/us/app/microsoft-edge-ai-browser/id1288723196",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.emmx"
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.emmx",
+          "windows": "winget:Microsoft.Edge",
+          "mac": "homebrew:microsoft-edge"
+        },
+        {
+          "name": "Brave",
+          "appStore": "https://apps.apple.com/us/app/brave-browser/id1052879175",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.brave.browser",
+          "windows": "winget:Brave.Brave",
+          "mac": "homebrew:brave-browser"
+        },
+        {
+          "name": "DuckDuckGo",
+          "appStore": "https://apps.apple.com/us/app/duckduckgo-private-browser/id663592361",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android",
+          "windows": "winget:DuckDuckGo.DesktopBrowser",
+          "mac": "homebrew:duckduckgo"
+        },
+        {
+          "name": "Bitwarden",
+          "appStore": "https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.x8bit.bitwarden",
+          "windows": "winget:Bitwarden.Bitwarden",
+          "mac": "homebrew:bitwarden"
+        },
+        {
+          "name": "Proton Mail",
+          "appStore": "https://apps.apple.com/us/app/proton-mail/id979659905",
+          "googlePlay": "https://play.google.com/store/apps/details?id=ch.protonmail.android",
+          "windows": "winget:Proton.ProtonMail",
+          "mac": "homebrew:proton-mail"
+        }
+      ]
+    },
+    {
+      "id": "shopping-money",
+      "label": "Shopping & Money",
+      "apps": [
+        {
+          "name": "Amazon Shopping",
+          "appStore": "https://apps.apple.com/us/app/amazon-shopping/id297606951",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping"
+        },
+        {
+          "name": "eBay",
+          "appStore": "https://apps.apple.com/us/app/ebay/id282614216",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.ebay.mobile"
+        },
+        {
+          "name": "DoorDash",
+          "appStore": "https://apps.apple.com/us/app/doordash/id719972451",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.dd.doordash"
+        },
+        {
+          "name": "Uber Eats",
+          "appStore": "https://apps.apple.com/us/app/uber-eats-food-groceries/id1058959277",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.ubercab.eats"
+        },
+        {
+          "name": "PayPal",
+          "appStore": "https://apps.apple.com/us/app/paypal/id283646709",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile"
+        },
+        {
+          "name": "Venmo",
+          "appStore": "https://apps.apple.com/us/app/venmo/id351727428",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.venmo"
+        },
+        {
+          "name": "Cash App",
+          "appStore": "https://apps.apple.com/us/app/cash-app/id711923939",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.squareup.cash"
+        },
+        {
+          "name": "Coinbase",
+          "appStore": "https://apps.apple.com/us/app/coinbase-buy-btc-eth-sol/id886427730",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.coinbase.android"
         }
       ]
     },
     {
       "id": "travel",
-      "label": "Travel & Maps",
+      "label": "Travel & Outdoors",
       "apps": [
         {
           "name": "Google Maps",
@@ -323,59 +404,24 @@
           "name": "Airbnb",
           "appStore": "https://apps.apple.com/us/app/airbnb/id401626263",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.airbnb.android"
+        },
+        {
+          "name": "Strava",
+          "appStore": "https://apps.apple.com/us/app/strava/id426826309",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.strava"
         }
       ]
     },
     {
-      "id": "shopping-money",
-      "label": "Shopping & Money",
+      "id": "school",
+      "label": "School & Learning",
       "apps": [
         {
-          "name": "Amazon Shopping",
-          "appStore": "https://apps.apple.com/us/app/amazon-shopping/id297606951",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping"
+          "name": "LockDown Browser",
+          "appStore": "https://apps.apple.com/us/app/lockdown-browser/id659101775",
+          "windows": "respondus-lockdown-browser",
+          "mac": "respondus-lockdown-browser"
         },
-        {
-          "name": "eBay",
-          "appStore": "https://apps.apple.com/us/app/ebay/id282614216",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.ebay.mobile"
-        },
-        {
-          "name": "DoorDash",
-          "appStore": "https://apps.apple.com/us/app/doordash/id719972451",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.dd.doordash"
-        },
-        {
-          "name": "PayPal",
-          "appStore": "https://apps.apple.com/us/app/paypal/id283646709",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile"
-        },
-        {
-          "name": "Venmo",
-          "appStore": "https://apps.apple.com/us/app/venmo/id351727428",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.venmo"
-        },
-        {
-          "name": "Cash App",
-          "appStore": "https://apps.apple.com/us/app/cash-app/id711923939",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.squareup.cash"
-        },
-        {
-          "name": "Uber Eats",
-          "appStore": "https://apps.apple.com/us/app/uber-eats-food-groceries/id1058959277",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.ubercab.eats"
-        },
-        {
-          "name": "Coinbase",
-          "appStore": "https://apps.apple.com/us/app/coinbase-buy-btc-eth-sol/id886427730",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.coinbase.android"
-        }
-      ]
-    },
-    {
-      "id": "learning-fitness",
-      "label": "Learning & Fitness",
-      "apps": [
         {
           "name": "Duolingo",
           "appStore": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
@@ -385,11 +431,6 @@
           "name": "Wikipedia",
           "appStore": "https://apps.apple.com/us/app/wikipedia/id324715238",
           "googlePlay": "https://play.google.com/store/apps/details?id=org.wikipedia"
-        },
-        {
-          "name": "Strava",
-          "appStore": "https://apps.apple.com/us/app/strava/id426826309",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.strava"
         },
         {
           "name": "Google Translate",
@@ -405,6 +446,41 @@
         {
           "name": "DJI Fly",
           "appStore": "https://apps.apple.com/us/app/dji-fly/id1479649251"
+        },
+        {
+          "name": "DJI GO 4",
+          "appStore": "https://apps.apple.com/us/app/dji-go-4/id1170452592"
+        },
+        {
+          "name": "Litchi",
+          "appStore": "https://apps.apple.com/us/app/litchi-for-dji-drones/id1059218666",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.aryuthere.visionplus"
+        },
+        {
+          "name": "DroneDeploy",
+          "appStore": "https://apps.apple.com/us/app/dronedeploy-flight-app/id971358101"
+        },
+        {
+          "name": "Autel Sky",
+          "appStore": "https://apps.apple.com/us/app/autel-sky/id1571426955",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.autel.autelsky"
+        },
+        {
+          "name": "FreeFlight 7",
+          "appStore": "https://apps.apple.com/us/app/freeflight-7/id1547834000"
+        },
+        {
+          "name": "UAV Forecast",
+          "appStore": "https://apps.apple.com/us/app/uav-forecast/id1050023752",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.uavforecast"
+        },
+        {
+          "name": "Aloft Air Control",
+          "appStore": "https://apps.apple.com/us/app/aloft-air-control/id1472965046"
+        },
+        {
+          "name": "QGroundControl",
+          "mac": "homebrew:qgroundcontrol"
         }
       ]
     }

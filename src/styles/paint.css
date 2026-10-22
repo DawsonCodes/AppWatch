@@ -145,8 +145,16 @@
   font-weight: 700;
 }
 
-[data-theme='ms-paint'] .tabs--line .tabs__item[data-active='true'] {
-  border-bottom: 4px solid #000080;
+[data-theme='ms-paint'] .tabs--chips .tabs__item {
+  border: 0;
+  background: #c0c0c0;
+  box-shadow: var(--bevel-raised);
+}
+
+[data-theme='ms-paint'] .tabs--chips .tabs__item[data-active='true'] {
+  background: #ffffff;
+  color: #000080;
+  box-shadow: var(--bevel-pressed);
 }
 
 [data-theme='ms-paint'] .tabs__count {
@@ -154,15 +162,9 @@
   color: #404040;
 }
 
-[data-theme='ms-paint'] .tabs--line .tabs__item[data-active='true'] .tabs__count {
+[data-theme='ms-paint'] .tabs--chips .tabs__item[data-active='true'] .tabs__count {
   background: #000080;
   color: #ffffff;
-}
-
-[data-theme='ms-paint'] .categories {
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
-  border-bottom: 2px solid #808080;
 }
 
 /* Search is a sunken text field. */

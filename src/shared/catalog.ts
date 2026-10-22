@@ -30,7 +30,7 @@
  */
 
 import { PLAY_PACKAGE_RE, parseStoreUrl } from './storeRefs.ts';
-import { feedFor, FEEDS } from './feeds.ts';
+import { parseDesktopRef } from './desktop.ts';
 import type { Platform } from './types.ts';
 import { PLATFORMS } from './types.ts';
 import { appId } from './types.ts';
@@ -140,25 +140,28 @@ function listingFromField(
   return { platform, storeId: text, country: defaults.country, language: defaults.language };
 }
 
-/** A desktop field: the id of a supported release feed (see feeds.ts). */
-function listingFromFeed(
+/** A desktop field: a winget package, a Homebrew cask or a release feed (see desktop.ts). */
+function listingFromDesktop(
   value: unknown,
   platform: 'windows' | 'mac',
   where: string,
   defaults: Defaults,
 ): CatalogListing {
-  const known = Object.keys(FEEDS)
-    .map((id) => `"${id}"`)
-    .join(', ');
   if (typeof value !== 'string' || value.trim() === '') {
-    throw new CatalogError(`${where}: expected a release feed id (${known}).`);
+    throw new CatalogError(
+      platform === 'windows'
+        ? `${where}: expected "winget:<PackageIdentifier>" or a release feed id.`
+        : `${where}: expected "homebrew:<cask>" or a release feed id.`,
+    );
   }
-  const feed = feedFor(value.trim());
-  if (!feed) throw new CatalogError(`${where}: unknown release feed "${value}". Known: ${known}.`);
-  if (!feed.platforms.includes(platform)) {
-    throw new CatalogError(`${where}: feed "${feed.id}" has no ${platform} releases.`);
-  }
-  return { platform, storeId: feed.id, country: defaults.country, language: defaults.language };
+  const parsed = parseDesktopRef(value, platform);
+  if ('error' in parsed) throw new CatalogError(`${where}: ${parsed.error}`);
+  return {
+    platform,
+    storeId: parsed.storeId,
+    country: defaults.country,
+    language: defaults.language,
+  };
 }
 
 /** Legacy entry: a store URL string or { "platform", "id" } object. */
@@ -279,10 +282,10 @@ export function parseCatalog(raw: unknown): Catalog {
           listings.push(listingFromField(entry.googlePlay, 'google', `${at}.googlePlay`, local));
         }
         if (entry.windows !== undefined) {
-          listings.push(listingFromFeed(entry.windows, 'windows', `${at}.windows`, local));
+          listings.push(listingFromDesktop(entry.windows, 'windows', `${at}.windows`, local));
         }
         if (entry.mac !== undefined) {
-          listings.push(listingFromFeed(entry.mac, 'mac', `${at}.mac`, local));
+          listings.push(listingFromDesktop(entry.mac, 'mac', `${at}.mac`, local));
         }
         if (listings.length === 0) {
           throw new CatalogError(

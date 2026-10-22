@@ -59,17 +59,20 @@ export interface RetryOptions {
   baseDelayMs?: number;
   label?: string;
   log?: (message: string) => void;
+  /** Return false for errors that retrying can't fix (e.g. 404, out of quota). */
+  shouldRetry?: (error: unknown) => boolean;
 }
 
 /** Run `fn`, retrying on failure with exponential backoff. Total attempts = retries + 1. */
 export async function withRetry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
-  const { retries = 2, baseDelayMs = 1000, label = 'request', log } = options;
+  const { retries = 2, baseDelayMs = 1000, label = 'request', log, shouldRetry } = options;
   let lastError: unknown;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       return await fn();
     } catch (error) {
       lastError = error;
+      if (shouldRetry && !shouldRetry(error)) break;
       if (attempt < retries) {
         const delay = baseDelayMs * 2 ** attempt;
         log?.(
@@ -90,23 +93,35 @@ export function errorMessage(error: unknown): string {
 export interface FetchJsonOptions {
   timeoutMs?: number;
   fetchFn?: typeof fetch;
+  /** Extra request headers (e.g. an API token or version header). */
+  headers?: Record<string, string>;
 }
 
-/** GET a URL and parse the response as JSON, with a hard timeout and UA header. */
-export async function fetchJson(url: string, options: FetchJsonOptions = {}): Promise<unknown> {
-  const { timeoutMs = 15_000, fetchFn = fetch } = options;
+/** An HTTP error with its status, so callers can tell "not found" from an outage. */
+export class HttpError extends Error {
+  constructor(
+    readonly status: number,
+    readonly host: string,
+    readonly headers: Headers | null = null,
+  ) {
+    super(`HTTP ${status} from ${host}`);
+  }
+}
+
+async function request(url: string, accept: string, options: FetchJsonOptions): Promise<Response> {
+  const { timeoutMs = 15_000, fetchFn = fetch, headers = {} } = options;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const response = await fetchFn(url, {
-      headers: { 'user-agent': USER_AGENT, accept: 'application/json' },
+      headers: { 'user-agent': USER_AGENT, accept, ...headers },
       signal: controller.signal,
       redirect: 'follow',
     });
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status} from ${new URL(url).host}`);
+      throw new HttpError(response.status, new URL(url).host, response.headers ?? null);
     }
-    return (await response.json()) as unknown;
+    return response;
   } catch (error) {
     if (error instanceof Error && error.name === 'AbortError') {
       throw new TimeoutError(`GET ${new URL(url).host}`, timeoutMs);
@@ -115,4 +130,16 @@ export async function fetchJson(url: string, options: FetchJsonOptions = {}): Pr
   } finally {
     clearTimeout(timer);
   }
+}
+
+/** GET a URL and parse the response as JSON, with a hard timeout and UA header. */
+export async function fetchJson(url: string, options: FetchJsonOptions = {}): Promise<unknown> {
+  const response = await request(url, options.headers?.accept ?? 'application/json', options);
+  return (await response.json()) as unknown;
+}
+
+/** GET a URL as text, with the same timeout and headers as fetchJson. */
+export async function fetchText(url: string, options: FetchJsonOptions = {}): Promise<string> {
+  const response = await request(url, options.headers?.accept ?? 'text/plain, */*', options);
+  return response.text();
 }

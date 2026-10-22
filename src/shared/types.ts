@@ -9,8 +9,8 @@
 
 /**
  * Where a listing lives. `apple` and `google` are the app stores; `windows`
- * and `mac` are desktop releases read from a vendor's official release feed
- * (see src/shared/feeds.ts).
+ * and `mac` are desktop versions read from winget, Homebrew or a vendor's
+ * official release feed (see src/shared/desktop.ts).
  */
 export type Platform = 'apple' | 'google' | 'windows' | 'mac';
 
@@ -66,8 +66,9 @@ export interface AppRecord {
   id: string;
   platform: Platform;
   /**
-   * Numeric App Store ID (Apple), package name (Google Play), or the release
-   * feed id for desktop listings (e.g. "respondus-lockdown-browser").
+   * Numeric App Store ID (Apple), package name (Google Play), or for desktop
+   * listings "winget:<PackageIdentifier>", "homebrew:<cask>" or a release
+   * feed id (e.g. "respondus-lockdown-browser").
    */
   storeId: string;
   name: string;
@@ -102,7 +103,7 @@ export interface AppRecord {
   ratingCount?: number | null;
   /** Developer/publisher website URL when the store lists one. */
   developerWebsite?: string | null;
-  /** Official announcement for the current version (desktop release feeds). */
+  /** Official release notes page or announcement for the current version (desktop listings). */
   releaseUrl?: string | null;
   /** When AppWatch first tracked this app (ISO 8601). */
   firstTrackedAt: string;

@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Better update estimates, tuned by backtesting on recorded history: recent
+  gaps count more, gaps are compared on a log scale, and the likely day leans
+  toward the app's usual release weekdays. Typical miss down from about 2.0 to
+  1.8 days; releases inside the expected window up from 41% to 50%.
+- Categories reorganized: no separate Respondus tab (LockDown Browser is in
+  School & Learning), "Work", "Browsers & Security" and "Travel & Outdoors"
+  replace the old mixed groups, and the tabs are now chips that all fit on
+  screen (one swipeable row on phones).
+- Dependency updates: eslint 10.13, vite 8.3.4, vitest 4.1.12, prettier
+  3.9.10, typescript-eslint 8.71, @types/node 22.20.5, google-play-scraper
+  10.1.4.
+
 - Rebuilt the interface. Each app now has its own page (a normal link, so
   Back, new tabs and shared links work) instead of a side panel, with What's
   new, Update pattern, Version history and a Details column; going back
@@ -23,7 +35,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   a compact page intro, and plainer wording throughout ("Updates every ~6
   days · next in ~3 days", "Update pattern", "Expected soon", "Stats").
 
+- The motion system was rebuilt on the Web Animations API: interruptible
+  layout animations (cards and releases glide, enter and leave), an icon
+  flight and panel slide for the detail view that reverse smoothly when
+  closed early, one-time reveal-on-scroll, a hover-pausing toast countdown,
+  and tab indicators that only glide on real selection changes. View
+  Transitions are now only used for the theme reveal, so animations no longer
+  block clicks or snap when interrupted.
+- npm dependencies updated (folds in the open Dependabot update).
+
+- Complete visual redesign of every surface: header, hero, controls, cards,
+  detail panel (side panel on wide screens, bottom sheet on phones), insights,
+  empty states, toasts and footer, across all three themes.
+- Removing a browser-local watch can be undone from the confirmation toast.
+- The copyable config snippet for local watches now matches the collections
+  format.
+- GitHub Actions updated to checkout v7, setup-node v7, configure-pages v6,
+  upload-pages-artifact v5, deploy-pages v5, upload-artifact v7 and
+  download-artifact v8; npm dependencies updated to their latest compatible
+  releases (folds in the open Dependabot updates).
+
+- Complete interface redesign: quieter handcrafted look, compact header with a
+  check-health chip, new wordmark ("App" neutral / "Watch" blue, no gradients
+  or glow), focused intro, and a responsive side-panel/full-sheet detail
+  experience with focus restoration and deep links.
+- Tracked catalog expanded from 8 to 100 entries: 50 popular apps, each
+  tracked on both the App Store and Google Play.
+- Scheduled checks now run every two hours (`17 */2 * * *`) instead of at
+  fixed times, and the site is redeployed after every successful run so the
+  published "last checked" time is always accurate.
+- App Store apps are resolved with batched lookups (up to 50 IDs per request)
+  and Google Play requests are spaced by the provider itself, so a full
+  100-app check stays quick and polite.
+- New deployed data is applied in place automatically while the page is open
+  (with a brief confirmation), instead of waiting for a manual refresh.
+- Brand assets (favicon, PWA icons, social image) recolored to the restrained
+  blue identity.
+
 ### Added
+
+- Windows and Mac versions for every app that has one AppWatch can track
+  reliably: 22 Windows listings from winget (Microsoft's Windows Package
+  Manager) and 27 Mac listings from Homebrew, each with a dated version history
+  from the catalog's own records. App pages say which catalog a desktop version
+  came from.
+- Seven more drone apps in the Drones category (DJI GO 4, Litchi, DroneDeploy,
+  Autel Sky, FreeFlight 7, UAV Forecast, Aloft Air Control) plus QGroundControl
+  on Mac: 76 apps, 194 listings.
+- Past accuracy for each app's update estimate on its page ("5 of 8 landed in
+  the window, usually off by about 3 days"), plus the expected window.
 
 - Release rhythm for every listing, estimated from its recorded history: a
   one-line rhythm on each card, a detail panel with the typical gap, likely
@@ -96,45 +156,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   — all disabled under reduced-motion.
 - Collapsible, locally-persisted Insights panel replacing the row of large
   statistic cards.
-
-### Changed
-
-- The motion system was rebuilt on the Web Animations API: interruptible
-  layout animations (cards and releases glide, enter and leave), an icon
-  flight and panel slide for the detail view that reverse smoothly when
-  closed early, one-time reveal-on-scroll, a hover-pausing toast countdown,
-  and tab indicators that only glide on real selection changes. View
-  Transitions are now only used for the theme reveal, so animations no longer
-  block clicks or snap when interrupted.
-- npm dependencies updated (folds in the open Dependabot update).
-
-- Complete visual redesign of every surface: header, hero, controls, cards,
-  detail panel (side panel on wide screens, bottom sheet on phones), insights,
-  empty states, toasts and footer, across all three themes.
-- Removing a browser-local watch can be undone from the confirmation toast.
-- The copyable config snippet for local watches now matches the collections
-  format.
-- GitHub Actions updated to checkout v7, setup-node v7, configure-pages v6,
-  upload-pages-artifact v5, deploy-pages v5, upload-artifact v7 and
-  download-artifact v8; npm dependencies updated to their latest compatible
-  releases (folds in the open Dependabot updates).
-
-- Complete interface redesign: quieter handcrafted look, compact header with a
-  check-health chip, new wordmark ("App" neutral / "Watch" blue, no gradients
-  or glow), focused intro, and a responsive side-panel/full-sheet detail
-  experience with focus restoration and deep links.
-- Tracked catalog expanded from 8 to 100 entries: 50 popular apps, each
-  tracked on both the App Store and Google Play.
-- Scheduled checks now run every two hours (`17 */2 * * *`) instead of at
-  fixed times, and the site is redeployed after every successful run so the
-  published "last checked" time is always accurate.
-- App Store apps are resolved with batched lookups (up to 50 IDs per request)
-  and Google Play requests are spaced by the provider itself, so a full
-  100-app check stays quick and polite.
-- New deployed data is applied in place automatically while the page is open
-  (with a brief confirmation), instead of waiting for a manual refresh.
-- Brand assets (favicon, PWA icons, social image) recolored to the restrained
-  blue identity.
 
 ### Fixed
 

@@ -11,7 +11,7 @@ html {
   text-size-adjust: 100%;
   scrollbar-gutter: stable;
   background: var(--bg);
-  scroll-padding-top: calc(var(--header-h) + var(--tabs-h) + 16px);
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 body {
