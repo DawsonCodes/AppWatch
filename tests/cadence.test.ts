@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  backtestCadence,
   computeCadence,
   describeDays,
   describeRange,
@@ -7,6 +8,7 @@ import {
   quantile,
   relativeDay,
   rhythmLine,
+  weightedQuantile,
 } from '../src/lib/cadence.ts';
 import type { VersionHistoryEntry } from '../src/shared/types.ts';
 
@@ -30,6 +32,40 @@ describe('quantile', () => {
     expect(quantile([1, 2, 3, 4], 0.5)).toBe(2.5);
     expect(quantile([7], 0.25)).toBe(7);
     expect(Number.isNaN(quantile([], 0.5))).toBe(true);
+  });
+});
+
+describe('weightedQuantile', () => {
+  it('matches the plain quantile with equal weights', () => {
+    const values = [3, 7, 4, 10, 4, 7];
+    const ones = values.map(() => 1);
+    const sorted = [...values].sort((a, b) => a - b);
+    for (const q of [0.25, 0.5, 0.75]) {
+      expect(weightedQuantile(values, ones, q)).toBeCloseTo(quantile(sorted, q), 9);
+    }
+  });
+
+  it('leans toward heavier values', () => {
+    expect(weightedQuantile([1, 10], [1, 3], 0.5)).toBeGreaterThan(5.5);
+    expect(Number.isNaN(weightedQuantile([], [], 0.5))).toBe(true);
+  });
+});
+
+describe('backtestCadence', () => {
+  it('scores a steady rhythm as accurate', () => {
+    const days = Array.from({ length: 12 }, (_, i) => i * 7);
+    const accuracy = backtestCadence(entries(...days));
+    expect(accuracy).not.toBeNull();
+    expect(accuracy!.tests).toBe(8); // gaps 4..11 each checked against the gaps before
+    expect(accuracy!.hits).toBe(8);
+    expect(accuracy!.medianErrorDays).toBeLessThan(0.5);
+  });
+
+  it('scores an erratic one as inaccurate, and needs some history', () => {
+    const accuracy = backtestCadence(entries(0, 1, 15, 16, 40, 41, 80, 81, 130));
+    expect(accuracy!.hits).toBeLessThan(accuracy!.tests);
+    expect(accuracy!.medianErrorDays).toBeGreaterThan(5);
+    expect(backtestCadence(entries(0, 7, 14, 21))).toBeNull();
   });
 });
 
@@ -58,12 +94,37 @@ describe('computeCadence', () => {
     expect(computeCadence(history, new Date(BASE + 40 * DAY)).state).toBe('overdue');
   });
 
-  it('uses the middle half of recent gaps as the window', () => {
+  it('uses the middle half of recent gaps, weighted to the newest, as the window', () => {
     const c = computeCadence(entries(0, 3, 10, 14, 24, 28, 35), new Date(BASE + 36 * DAY));
-    // gaps: 3, 7, 4, 10, 4, 7 -> sorted 3,4,4,7,7,10
-    expect(c.typicalDays).toBe(5.5);
-    expect(c.rangeDays).toEqual([4, 7]);
+    // gaps: 3, 7, 4, 10, 4, 7 (newest last); a plain median would be 5.5
+    expect(c.typicalDays).toBeCloseTo(5.9, 1);
+    expect(c.rangeDays![0]).toBeCloseTo(4, 5);
+    expect(c.rangeDays![1]).toBeCloseTo(7.33, 2);
+    expect(c.next!.likely).toBeGreaterThanOrEqual(c.next!.from);
+    expect(c.next!.likely).toBeLessThanOrEqual(c.next!.to);
     expect(c.confidence).toBe('medium');
+  });
+
+  it('follows a change of rhythm', () => {
+    // Monthly for most of a year, then weekly lately.
+    const monthly = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270];
+    const weekly = Array.from({ length: 9 }, (_, i) => 277 + i * 7);
+    const days = [...monthly, ...weekly];
+    const c = computeCadence(entries(...days), new Date(BASE + 335 * DAY));
+    expect(c.typicalDays).toBeCloseTo(7, 5);
+    // A plain median of the same gaps would still say about three weeks.
+    const sorted = days
+      .slice(1)
+      .map((d, i) => d - days[i]!)
+      .sort((a, b) => a - b);
+    expect(quantile(sorted, 0.5)).toBeGreaterThan(18);
+  });
+
+  it('leans toward the weekday an app usually ships on', () => {
+    // Every Monday, with an occasional extra day: gaps of 7 and 8 days.
+    const days = [0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 71, 77, 84];
+    const c = computeCadence(entries(...days), new Date(BASE + 85 * DAY));
+    expect(new Date(c.next!.likely).getUTCDay()).toBe(new Date(BASE).getUTCDay());
   });
 
   it('rates a steady, long record as high confidence', () => {
@@ -74,13 +135,13 @@ describe('computeCadence', () => {
     expect(c.last30).toBe(3);
   });
 
-  it('only counts recent gaps and merges same-release re-posts', () => {
+  it('weights recent gaps and merges same-release re-posts', () => {
     const days = [0, 60, 120, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192];
     const c = computeCadence(entries(...days, 192.01), new Date(BASE + 193 * DAY));
     expect(c.releases).toHaveLength(days.length + 1); // every release is listed…
     expect(c.gaps).toHaveLength(days.length - 1); // …but the re-post adds no gap
-    expect(c.sample).toBe(12);
-    expect(c.typicalDays).toBe(1);
+    expect(c.sample).toBe(15);
+    expect(c.typicalDays).toBeCloseTo(1, 5);
   });
 
   it('falls back to detection time when there is no release date', () => {

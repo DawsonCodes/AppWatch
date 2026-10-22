@@ -114,9 +114,26 @@ describe('parseCatalog — desktop release feeds', () => {
     expect(catalog.apps[0]?.listings).toHaveLength(1);
   });
 
-  it('rejects unknown feeds with the list of known ones', () => {
+  it('accepts winget packages and Homebrew casks', () => {
+    const catalog = parseCatalog(
+      wrap({
+        name: 'Spotify',
+        windows: 'winget:Spotify.Spotify',
+        mac: 'https://formulae.brew.sh/cask/spotify',
+      }),
+    );
+    expect(catalog.apps[0]?.listings.map((l) => `${l.platform}:${l.storeId}`)).toEqual([
+      'windows:winget:Spotify.Spotify',
+      'mac:homebrew:spotify',
+    ]);
+  });
+
+  it('rejects unknown desktop values with an example of what works', () => {
     expect(() => parseCatalog(wrap({ name: 'X', windows: 'nope' }))).toThrow(
-      /unknown release feed "nope".*respondus-lockdown-browser/,
+      /windows: expected "winget:<PackageIdentifier>"/,
+    );
+    expect(() => parseCatalog(wrap({ name: 'X', mac: 'winget:A.B' }))).toThrow(
+      /winget packages are Windows software/,
     );
     expect(() => parseCatalog(wrap({ name: 'X', mac: 42 }))).toThrow(CatalogError);
   });
@@ -165,7 +182,7 @@ describe('the repository configuration', () => {
 
   it('tracks LockDown Browser everywhere Respondus publishes it, and DJI Fly', () => {
     const app = (name: string) => catalog.apps.find((a) => a.name === name);
-    expect(app('LockDown Browser')?.collection).toBe('respondus');
+    expect(app('LockDown Browser')?.collection).toBe('school');
     expect(app('LockDown Browser')?.listings.map((l) => `${l.platform}:${l.storeId}`)).toEqual([
       'apple:659101775',
       'windows:respondus-lockdown-browser',
@@ -174,6 +191,23 @@ describe('the repository configuration', () => {
     expect(app('DJI Fly')?.listings.map((l) => `${l.platform}:${l.storeId}`)).toEqual([
       'apple:1479649251',
     ]);
+  });
+
+  it('tracks desktop versions where an app has them', () => {
+    const app = (name: string) => catalog.apps.find((a) => a.name === name);
+    expect(app('Spotify')?.listings.map((l) => l.platform)).toEqual([
+      'apple',
+      'google',
+      'windows',
+      'mac',
+    ]);
+    expect(app('ChatGPT')?.listings.map((l) => `${l.platform}:${l.storeId}`)).toContain(
+      'mac:homebrew:chatgpt',
+    );
+    // Store-only apps stay store-only.
+    expect(app('Instagram')?.listings.map((l) => l.platform)).toEqual(['apple', 'google']);
+    expect(catalog.collections.map((c) => c.id)).not.toContain('respondus');
+    expect(catalog.apps.filter((a) => a.collection === 'drones').length).toBeGreaterThan(5);
   });
 
   it('includes the AI and Social collections', () => {

@@ -293,35 +293,51 @@
   box-shadow: var(--shadow-1);
 }
 
-/* Scrollable tab row with an underline on the selected tab. */
-.tabs--line {
-  overflow-x: auto;
-  scrollbar-width: none;
-  gap: 4px;
+/* Category chips: every category visible at once, wrapping onto a second
+   line when needed; one scrollable row on phones. */
+.tabs--chips {
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.tabs--line::-webkit-scrollbar {
-  display: none;
+.tabs--chips .tabs__item {
+  height: 36px;
+  padding: 0 12px 0 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  font-size: 14px;
 }
 
-.tabs--line .tabs__item {
-  height: 46px;
-  padding: 0 10px;
-  border-bottom: 2px solid transparent;
-  border-radius: 0;
+.tabs--chips .tabs__item:hover {
+  background: var(--surface-2);
 }
 
-.tabs--line .tabs__item[data-active='true'] {
-  border-bottom-color: var(--accent);
-}
-
-.tabs--line .tabs__item[data-active='true'] .tabs__count {
+.tabs--chips .tabs__item[data-active='true'] {
+  border-color: var(--accent);
   background: var(--accent-soft);
   color: var(--accent);
 }
 
-.tabs--line .tabs__item:focus-visible {
-  outline-offset: -4px;
+.tabs--chips .tabs__item[data-active='true'] .tabs__count {
+  background: var(--accent-solid);
+  color: var(--on-accent);
+}
+
+@media (max-width: 639px) {
+  .tabs--chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 2px var(--gutter);
+    scrollbar-width: none;
+  }
+  .tabs--chips::-webkit-scrollbar {
+    display: none;
+  }
+  .tabs--chips .tabs__item {
+    flex-shrink: 0;
+  }
 }
 
 /* ================================ Dropdown =============================== */
@@ -590,17 +606,8 @@
   }
 }
 
-/* Category tabs stay under the header while scrolling the list. */
 .categories {
-  position: sticky;
-  top: var(--header-h);
-  z-index: 30;
-  margin: 14px calc(var(--gutter) * -1) 0;
-  padding: 0 var(--gutter);
-  border-bottom: 1px solid var(--border);
-  background: var(--sticky-bg);
-  -webkit-backdrop-filter: saturate(1.4) blur(14px);
-  backdrop-filter: saturate(1.4) blur(14px);
+  margin-top: 18px;
 }
 
 .filters {
@@ -1352,6 +1359,22 @@
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.stats--six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 559px) {
+  .stats--six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.pattern__accuracy {
+  margin-top: 12px;
+  font-size: 13.5px;
+  color: var(--text-muted);
 }
 
 .stats--wide {

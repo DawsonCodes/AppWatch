@@ -16,8 +16,8 @@ interface TabsProps<T extends string> {
   onChange: (value: T) => void;
   /** Accessible name for the whole group. */
   label: string;
-  /** "pill" for small segmented controls, "line" for a scrollable tab row. */
-  variant: 'pill' | 'line';
+  /** "pill" for small segmented controls, "chips" for a wrapping row of filter chips. */
+  variant: 'pill' | 'chips';
   /** tablist switches views or panels; radiogroup picks a filter value. */
   role?: 'tablist' | 'radiogroup';
   /** id of the region a tablist controls. */

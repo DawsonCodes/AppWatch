@@ -41,21 +41,26 @@
 </details>
 
 > Screenshots use real tracked data but were captured offline, so app icons
-> show their letter fallback; the live site loads the real icons.
+> show their letter fallback (the live site loads the real icons) and the
+> newest store apps, which resolve on their first online check, aren't shown.
 
 ---
 
 ## What it does
 
-AppWatch tracks 68 apps out of the box — 136 listings across the App Store,
+AppWatch tracks 76 apps out of the box — 194 listings across the App Store,
 Google Play, Windows and Mac — checks every one of them **every two hours**,
-and records what changed. Apps are organized into collections that appear as
-tabs: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity, DeepSeek,
-Character.AI and more), **Respondus** (LockDown Browser on iPad, Windows and
-Mac), **Social** (Instagram, Facebook, X, Threads, YouTube, Snapchat, TikTok,
-Reddit, Pinterest, LinkedIn), **Messaging**, **Entertainment**,
-**Productivity**, **Browsers & Privacy**, **Travel & Maps**, **Shopping &
-Money**, **Learning & Fitness** and **Drones** (DJI Fly).
+and records what changed. Apps are grouped into categories, shown as chips
+above the list: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity,
+DeepSeek, Character.AI and more), **Social**, **Messaging**,
+**Entertainment**, **Work**, **Browsers & Security**, **Shopping & Money**,
+**Travel & Outdoors**, **School & Learning** (including LockDown Browser) and
+**Drones** (DJI Fly, DJI GO 4, Litchi, DroneDeploy, Autel Sky, FreeFlight 7,
+UAV Forecast, Aloft Air Control and QGroundControl).
+
+Every app that has a Windows or Mac version AppWatch can track reliably has
+it tracked too — 22 Windows and 27 Mac listings, from Chrome, Firefox, Edge
+and Brave to Spotify, Discord, Slack, Zoom, Notion and the AI desktop apps.
 
 Each app is one card covering every platform it's tracked on, with the **App
 Store in blue**, **Google Play in green**, **Windows in cyan** and **Mac in
@@ -100,16 +105,32 @@ exactly where you left it.
 ### How often apps update
 
 Every app's history doubles as a record of how often it ships. AppWatch looks
-at the gaps between each listing's recent releases (up to the last 12) and
-shows:
+at the gaps between each listing's recent releases (up to the last 24) and
+estimates when the next one will land:
+
+- Recent gaps count more than old ones (a gap counts half as much as the one
+  eight releases newer), so a change of rhythm is picked up.
+- Gaps are compared on a log scale, so one long pause doesn't skew things.
+- The expected window is the middle half of those gaps after the last release,
+  and the likely day inside it leans toward the weekdays the app usually
+  ships on.
+
+This method was chosen by backtesting against the release histories AppWatch
+has recorded (132 listings): for each past release, "what would we have
+predicted right before it?", compared with when it really came. Against the
+previous plain median it cut the typical miss from about 2.0 to 1.8 days and
+raised the share of releases landing inside the expected window from 41% to
+50%. It then shows:
 
 - **On every card** — "Updates every ~6 days · next in ~3 days", "due now" or
   "overdue"; apps with fewer than four recorded releases say there aren't
   enough updates yet to estimate.
 - **On the app page** — an Update pattern section with the usual gap and
-  range (the middle half of the gaps), the most likely date for the next
-  update, updates in the last 30 days, a weekday pattern when there is a clear
-  one, and a confidence level, plus two charts (releases over time, with today
+  range, the most likely date for the next update, the expected window,
+  **past accuracy for that app** (the same backtest, run on its own history:
+  "5 of 8 landed in the window, usually off by about 3 days"), updates in the
+  last 30 days, a weekday pattern when there is a clear one, and a confidence
+  level based on that past accuracy, plus two charts (releases over time, with today
   and the likely window ahead, and the days between releases with the usual
   gap marked) and every release date as a table. Charts are keyboard-navigable
   (arrow keys) and work in all three themes.
@@ -117,13 +138,36 @@ shows:
   view, and an "Expected in the next 3 days" count under Stats.
 
 These are estimates from past behavior — app makers don't publish schedules —
-and the confidence level says how steady that behavior has been.
+and the accuracy line says how well they've worked for each app.
 
 ### Desktop releases (Windows and Mac)
 
-Desktop software isn't sold through a store AppWatch can query, so desktop
-listings are read from the vendor's **own official release announcements**.
-LockDown Browser is the first: Respondus posts every Windows and Mac release
+Desktop software isn't sold through a store AppWatch can query, so each
+desktop listing names where its versions come from:
+
+- **Windows: winget**, Microsoft's Windows Package Manager. Its public
+  manifest repository (`microsoft/winget-pkgs`) has a folder per version of
+  each package, usually with the release date and often the release notes and
+  a link to the official notes. Each version is added by a "New version: …"
+  commit, so the folder's history doubles as a dated version record; the
+  checker uses the manifests' release dates where present and the commit dates
+  otherwise (never letting an older version be dated after a newer one).
+- **Mac: Homebrew**, the standard macOS package manager. Each cask follows the
+  app's official download; Homebrew's JSON API gives the current version, and
+  the cask's history in `Homebrew/homebrew-cask` shows when each version
+  arrived (Homebrew's bot opens a "<cask> <version>" commit within hours of a
+  release). Homebrew carries no release notes.
+- **Vendor release feeds** for software in neither, like LockDown Browser
+  (below).
+
+Both catalogs are read-only and keyless; in GitHub Actions the run's own
+token raises the GitHub API limit. Apps whose desktop version is only in the
+Microsoft Store or Mac App Store (for example WhatsApp, ChatGPT and Netflix on
+Windows) aren't tracked there, because those stores publish no version
+numbers AppWatch can read; nor are packages whose winget entry has gone stale
+(Dropbox, Teams and Outlook on Windows), since stale data would mislead.
+
+LockDown Browser is read from Respondus's own announcements: Respondus posts every Windows and Mac release
 ("LockDown Browser for Windows, version 2.1.6.02") with notes on its help
 center, and the checker reads those posts through the help center's public
 API on every run.
@@ -353,11 +397,13 @@ one or both; the IDs are extracted from the URLs automatically:
 
 - Collections appear in the order written; add, rename or reorder them freely.
 - A listing can belong to only one app; duplicates are reported and ignored.
-- Desktop listings use a release feed id instead of a link:
-  `"windows": "respondus-lockdown-browser"` and/or
-  `"mac": "respondus-lockdown-browser"`. Supported feeds are listed in
-  `src/shared/feeds.ts`; adding a new desktop product means adding a feed
-  there and a provider in `scripts/lib/providers/`.
+- Desktop listings name their source instead of a store link:
+  `"windows": "winget:Spotify.Spotify"` (a winget package identifier, as in
+  the `microsoft/winget-pkgs` repository), `"mac": "homebrew:spotify"` (a
+  Homebrew cask token, or a `https://formulae.brew.sh/cask/…` link), or a
+  release feed id such as `"respondus-lockdown-browser"` (feeds are listed in
+  `src/shared/feeds.ts`). Check that the package is kept current before adding
+  it.
 - The older flat format — a top-level `"apps"` array of store URLs or
   `{ "platform", "id" }` objects — still works; those apps land in an "Other"
   tab.
@@ -378,8 +424,9 @@ The checker writes these files into `public/data/` (do not edit by hand):
   `checkError`, `updateDetected`, plus extended metadata where the store
   exposes it: `price`, `contentRating`, `requiresOs`, `sizeBytes`, `rating`,
   `ratingCount`, `developerWebsite`, and for desktop listings `releaseUrl`, the
-  official announcement). `platform` is `apple`, `google`, `windows` or `mac`;
-  desktop listings use the release feed id as `storeId`. Fields a store doesn't provide are
+  official release notes page or announcement). `platform` is `apple`,
+  `google`, `windows` or `mac`; desktop listings use `winget:<id>`,
+  `homebrew:<cask>` or a release feed id as `storeId`. Fields a store doesn't provide are
   `null`, never faked, and files generated before these fields existed remain
   valid — the extended fields are optional in the schema.
 - **`history.json`** — version history per app id, newest first; one entry per
@@ -441,6 +488,11 @@ Google Play pages are fetched one at a time at least 1.5 seconds apart
   (an isolated module: `scripts/lib/providers/googleplay.ts`) or the upstream
   package is updated. Some Play listings also report no concrete version
   ("Varies with device") — AppWatch stores `null` rather than a fake version.
+- **Desktop versions follow their package catalogs.** winget and Homebrew are
+  community-maintained with automated bots; new versions usually appear within
+  hours (Homebrew) to a day or two (winget). A package whose maintainers stop
+  updating it would go stale, so desktop sources are chosen per app, and the
+  app page always says which catalog a version came from.
 - **Desktop feeds follow the vendor's announcements.** LockDown Browser
   versions come from Respondus posts titled "LockDown Browser for Windows/Mac,
   version …". If Respondus changes how it titles or files those posts, the

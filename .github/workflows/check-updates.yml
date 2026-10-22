@@ -51,6 +51,10 @@ jobs:
 
       - name: Check stores for updates
         id: check
+        env:
+          # Read-only use: raises the GitHub API limit for reading the public
+          # winget and Homebrew catalogs (Windows and Mac versions).
+          GITHUB_TOKEN: ${{ github.token }}
         run: npm run check:updates
 
       - name: Validate generated data

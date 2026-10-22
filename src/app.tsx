@@ -729,7 +729,7 @@ export function App() {
               {ready ? (
                 <div class="categories">
                   <Tabs
-                    variant="line"
+                    variant="chips"
                     role="radiogroup"
                     label="Categories"
                     value={filters.collection}

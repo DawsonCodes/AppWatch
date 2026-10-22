@@ -11,7 +11,8 @@ import {
 } from '../lib/format.ts';
 import { configSnippetFor } from '../lib/localApps.ts';
 import { appHref } from '../lib/route.ts';
-import { feedFor } from '../shared/feeds.ts';
+import type { DesktopSource } from '../shared/desktop.ts';
+import { desktopSourceFor } from '../shared/desktop.ts';
 import type { VersionHistoryEntry } from '../shared/types.ts';
 import { historyEntryKey, isDesktopPlatform } from '../shared/types.ts';
 import { AppIcon } from './AppIcon.tsx';
@@ -159,6 +160,18 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
   );
 }
 
+/** Where desktop versions come from, in a sentence. */
+function desktopNotice(source: DesktopSource): string {
+  switch (source.kind) {
+    case 'winget':
+      return 'Windows versions come from winget, Microsoft’s package catalog for Windows. New versions usually appear there within a day or two of release.';
+    case 'homebrew':
+      return 'Mac versions come from Homebrew, which follows the app’s official download, usually within a few hours. Homebrew doesn’t include release notes.';
+    case 'feed':
+      return `Versions come from ${source.feed.sourceLabel}. AppWatch doesn’t host installers; get ${source.feed.product} from your school or the official page.`;
+  }
+}
+
 function safeHost(url: string): string {
   try {
     return new URL(url).hostname.replace(/^www\./, '');
@@ -187,7 +200,9 @@ export function AppPage({
   localAddedAt,
 }: AppPageProps) {
   const local = listing.source === 'local';
-  const feed = isDesktopPlatform(listing.platform) ? feedFor(listing.storeId) : null;
+  const desktop = isDesktopPlatform(listing.platform)
+    ? desktopSourceFor(listing.platform, listing.storeId)
+    : null;
   const developer = groupDeveloper(group);
   const releasedAgo = relativeTime(listing.releaseDate, now);
   const size = formatBytes(listing.sizeBytes);
@@ -222,7 +237,7 @@ export function AppPage({
           target="_blank"
           rel="noopener noreferrer"
         >
-          {feed ? 'Official page' : `Open in ${storeLabel(listing.platform)}`}
+          {desktop ? 'Official site' : `Open in ${storeLabel(listing.platform)}`}
           <ExternalIcon size={13} />
         </a>
         <WatchButton appName={group.name} watched={watched} onToggle={onToggleWatch} labelled />
@@ -277,12 +292,7 @@ export function AppPage({
               </span>
             </p>
           ) : null}
-          {feed ? (
-            <p class="notice">
-              Versions come from {feed.sourceLabel}. AppWatch doesn’t host installers; get{' '}
-              {feed.product} from your school or the official page.
-            </p>
-          ) : null}
+          {desktop ? <p class="notice">{desktopNotice(desktop)}</p> : null}
           {local ? (
             <p class="notice">
               Saved in this browser only. It isn’t checked automatically, so there’s no version
@@ -415,12 +425,22 @@ export function AppPage({
                   <span class="mono">{listing.bundleId}</span>
                 </Fact>
               ) : null}
-              {feed ? (
-                <Fact label="Source">
-                  <a href={feed.sourceUrl} target="_blank" rel="noopener noreferrer">
-                    {feed.sourceLabel} <ExternalIcon size={11} />
-                  </a>
-                </Fact>
+              {desktop ? (
+                <>
+                  {desktop.kind === 'feed' ? null : (
+                    <Fact label={desktop.kind === 'winget' ? 'winget ID' : 'Homebrew cask'}>
+                      <span class="mono">
+                        {desktop.kind === 'winget' ? desktop.packageId : desktop.token}
+                      </span>
+                    </Fact>
+                  )}
+                  <Fact label="Source">
+                    <a href={desktop.sourceUrl} target="_blank" rel="noopener noreferrer">
+                      {desktop.kind === 'winget' ? 'winget' : desktop.label}{' '}
+                      <ExternalIcon size={11} />
+                    </a>
+                  </Fact>
+                </>
               ) : (
                 <Fact label={listing.platform === 'apple' ? 'App Store ID' : 'Package'}>
                   <span class="mono">{listing.storeId}</span>

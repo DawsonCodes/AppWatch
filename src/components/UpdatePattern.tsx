@@ -1,6 +1,7 @@
 import { useMemo } from 'preact/hooks';
-import type { Cadence } from '../lib/cadence.ts';
+import type { Cadence, CadenceAccuracy } from '../lib/cadence.ts';
 import {
+  backtestCadence,
   computeCadence,
   describeDays,
   describeRange,
@@ -12,6 +13,7 @@ import { GapColumns, ReleaseStrip } from './RhythmCharts.tsx';
 
 const DAY = 86_400_000;
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const CONFIDENCE_LABEL = { high: 'High', medium: 'Medium', low: 'Low' } as const;
 const dayFormat = new Intl.DateTimeFormat(undefined, {
   weekday: 'short',
   month: 'short',
@@ -32,7 +34,8 @@ function summary(cadence: Cadence, now: Date): string {
   const [low, high] = cadence.rangeDays;
   const range =
     Math.round(high) > Math.round(low) ? ` (usually ${describeRange(low, high)} apart)` : '';
-  const base = `Updates about every ${every(cadence)}${range}.`;
+  const day = cadence.weekday ? `, most often on ${WEEKDAYS[cadence.weekday.day]}s` : '';
+  const base = `Updates about every ${every(cadence)}${range}${day}.`;
   switch (cadence.state) {
     case 'upcoming':
       return `${base} Next update expected around ${dayFormat.format(cadence.next.likely)} (${relativeDay(cadence.next.likely, now)}).`;
@@ -48,6 +51,22 @@ function nextValue(cadence: Cadence, now: Date): string {
   if (cadence.state === 'due') return 'Due now';
   if (cadence.state === 'overdue') return 'Overdue';
   return relativeDay(cadence.next.likely, now).replace(/^in /, '~');
+}
+
+/** Accuracy so far, in a sentence. */
+function accuracyLine(accuracy: CadenceAccuracy): string {
+  const off =
+    accuracy.medianErrorDays < 0.5
+      ? 'usually on the right day'
+      : `usually off by about ${describeDays(accuracy.medianErrorDays).replace(/^about /, '')}`;
+  return `Checked against its last ${accuracy.tests} updates: ${accuracy.hits} landed in the expected window, and the likely day was ${off}.`;
+}
+
+/** Confidence from how the estimate has actually done, when there's enough to judge. */
+function confidenceOf(cadence: Cadence, accuracy: CadenceAccuracy | null): Cadence['confidence'] {
+  if (!accuracy || accuracy.tests < 5) return cadence.confidence;
+  const rate = accuracy.hits / accuracy.tests;
+  return rate >= 0.6 ? 'high' : rate >= 0.4 ? 'medium' : 'low';
 }
 
 function Stat({ label, value, detail }: { label: string; value: string; detail?: string }) {
@@ -75,7 +94,9 @@ export function UpdatePattern({
   now: Date;
 }) {
   const cadence = useMemo(() => computeCadence(entries, now), [entries, now]);
+  const accuracy = useMemo(() => backtestCadence(entries), [entries]);
   const estimated = cadence.state !== 'insufficient' && cadence.next !== null;
+  const confidence = estimated ? confidenceOf(cadence, accuracy) : null;
   const newestFirst = useMemo(() => [...cadence.releases].reverse(), [cadence]);
 
   return (
@@ -84,28 +105,46 @@ export function UpdatePattern({
         <h2 class="section__title" id="pattern-title">
           Update pattern
         </h2>
-        {cadence.confidence ? (
-          <span class="section__meta">
-            {cadence.confidence[0]!.toUpperCase() + cadence.confidence.slice(1)} confidence
-          </span>
+        {confidence ? (
+          <span class="section__meta">{CONFIDENCE_LABEL[confidence]} confidence</span>
         ) : null}
       </div>
       <p class="pattern__summary">{summary(cadence, now)}</p>
 
-      <dl class="stats">
+      <dl class="stats stats--six">
         <Stat
           label="Usual gap"
           value={estimated ? `~${every(cadence)}` : '—'}
-          detail={cadence.weekday ? `Often on ${WEEKDAYS[cadence.weekday.day]}s` : undefined}
+          detail={
+            estimated &&
+            cadence.rangeDays &&
+            Math.round(cadence.rangeDays[1]) > Math.round(cadence.rangeDays[0])
+              ? `usually ${describeRange(cadence.rangeDays[0], cadence.rangeDays[1])}`
+              : undefined
+          }
         />
         <Stat
           label="Next update"
           value={nextValue(cadence, now)}
           detail={
-            estimated && cadence.next
-              ? `Around ${shortDate.format(cadence.next.likely)}`
+            estimated && cadence.next && cadence.state === 'upcoming'
+              ? `likely ${dayFormat.format(cadence.next.likely)}`
               : undefined
           }
+        />
+        <Stat
+          label="Expected window"
+          value={
+            estimated && cadence.next
+              ? `${shortDate.format(cadence.next.from)} – ${shortDate.format(cadence.next.to)}`
+              : '—'
+          }
+          detail={estimated ? 'where half of past gaps fall' : undefined}
+        />
+        <Stat
+          label="Past accuracy"
+          value={accuracy ? `${accuracy.hits} of ${accuracy.tests}` : '—'}
+          detail={accuracy ? 'landed in the window' : 'needs more history'}
         />
         <Stat label="Last 30 days" value={String(cadence.last30)} detail="updates" />
         <Stat
@@ -114,6 +153,7 @@ export function UpdatePattern({
           detail={cadence.last?.version ?? undefined}
         />
       </dl>
+      {estimated && accuracy ? <p class="pattern__accuracy">{accuracyLine(accuracy)}</p> : null}
 
       {cadence.releases.length >= 2 ? (
         <div class="pattern__charts">
@@ -156,8 +196,9 @@ export function UpdatePattern({
       ) : null}
 
       <p class="section__foot">
-        Estimated from past release dates. Developers don’t publish their schedules, so treat this
-        as a rough guide.
+        Estimated from past release dates, with recent updates counting more and a lean toward the
+        days this app usually ships on. Developers don’t publish their schedules, so treat this as a
+        guide.
       </p>
     </section>
   );

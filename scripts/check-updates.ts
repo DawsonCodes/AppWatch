@@ -2,14 +2,17 @@
  * AppWatch update checker CLI.
  *
  * Reads apps.config.json, queries the App Store and Google Play for each
- * tracked app (and vendor release feeds for Windows/Mac software), and
- * refreshes public/data/*.json when anything meaningful changed. Designed to run in GitHub Actions on a schedule, but works locally:
+ * tracked app (and winget, Homebrew or a vendor release feed for Windows and
+ * Mac software), and refreshes public/data/*.json when anything meaningful
+ * changed. Designed to run in GitHub Actions on a schedule, but works locally:
  *
  *   npm run check:updates
  *
  * Environment variables:
  *   APPWATCH_DELAY_MS  minimum spacing between Google Play requests (default 1500).
  *                      App Store apps are resolved with a few batched lookups.
+ *   GITHUB_TOKEN       optional; raises the GitHub API limit used to read the
+ *                      winget and Homebrew catalogs (set automatically in Actions).
  *
  * Exit codes: 0 = success (even with some per-app failures),
  *             1 = configuration error or every single check failed.
@@ -22,7 +25,11 @@ import { parseConfig, ConfigError } from './lib/config.ts';
 import { readJsonFile } from './lib/io.ts';
 import { createAppleProvider } from './lib/providers/apple.ts';
 import { createGooglePlayProvider } from './lib/providers/googleplay.ts';
+import { createGitHubClient } from './lib/github.ts';
+import { createDesktopRouter } from './lib/providers/desktop.ts';
+import { createHomebrewProvider } from './lib/providers/homebrew.ts';
 import { createRespondusProvider } from './lib/providers/respondus.ts';
+import { createWingetProvider } from './lib/providers/winget.ts';
 import { runCheck } from './lib/run.ts';
 import type { AppRunSummary, RunResult } from './lib/run.ts';
 import type { Platform } from '../src/shared/types.ts';
@@ -97,15 +104,17 @@ async function main(): Promise<void> {
 
   const configuredDelay = Number(process.env.APPWATCH_DELAY_MS ?? 1500);
   const playIntervalMs = Number.isFinite(configuredDelay) ? configuredDelay : 1500;
-  const desktop = createRespondusProvider({ log });
+  const github = createGitHubClient({ token: process.env.GITHUB_TOKEN || undefined, log });
+  const feed = createRespondusProvider({ log });
   const result = await runCheck({
     config,
     providers: {
       apple: createAppleProvider({ log }),
       google: createGooglePlayProvider({ log, minIntervalMs: playIntervalMs }),
-      // Desktop releases come from vendor release feeds (src/shared/feeds.ts).
-      windows: desktop,
-      mac: desktop,
+      // Desktop versions come from winget, Homebrew or a vendor release feed
+      // (src/shared/desktop.ts).
+      windows: createDesktopRouter({ winget: createWingetProvider({ github, log }), feed }),
+      mac: createDesktopRouter({ homebrew: createHomebrewProvider({ github, log }), feed }),
     },
     dataDir: join(root, 'public', 'data'),
     log,
