@@ -1542,6 +1542,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "3.6556.1",
+        "releaseDate": "2026-10-22T13:00:25.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
+      {
         "version": "3.1623.4",
         "releaseDate": "2026-10-22T09:46:52.000Z",
         "releaseNotes": null,
@@ -2542,6 +2548,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.57",
+        "releaseDate": "2026-10-22T15:39:11.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
+      {
         "version": "1.4.56",
         "releaseDate": "2026-10-20T13:15:42.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -2810,6 +2822,12 @@
       }
     ],
     "google:ai.perplexity.app.android": [
+      {
+        "version": "2.102.0",
+        "releaseDate": "2026-10-22T12:34:42.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
       {
         "version": "2.101.0",
         "releaseDate": "2026-10-12T09:38:26.000Z",
@@ -3383,6 +3401,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-10-22T11:22:14.000Z",
+        "releaseNotes": "Squashed bugs for better experience.",
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-21T03:12:24.000Z",
         "releaseNotes": "Squashed bugs for better experience.",
         "detectedAt": "2026-10-21T17:57:58.474Z"
@@ -3877,6 +3901,12 @@
       }
     ],
     "apple:310633997": [
+      {
+        "version": "26.41.75",
+        "releaseDate": "2026-10-22T15:42:36.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
       {
         "version": "26.41.74",
         "releaseDate": "2026-10-19T12:59:43.000Z",
@@ -6453,6 +6483,13 @@
     ],
     "windows:winget:Discord.Discord": [
       {
+        "version": "1.0.9265",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T17:10:39.301Z",
+        "url": null
+      },
+      {
         "version": "1.0.9264",
         "releaseDate": "2026-10-20T12:00:00.000Z",
         "releaseNotes": null,
@@ -7480,6 +7517,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-21T13:18:12.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-20T10:41:17.000Z",
@@ -19739,6 +19782,12 @@
     ],
     "mac:homebrew:brave-browser": [
       {
+        "version": "1.98.60.0",
+        "releaseDate": "2026-10-22T12:55:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
+      {
         "version": "1.97.59.0",
         "releaseDate": "2026-10-16T18:48:24.000Z",
         "releaseNotes": null,
@@ -23196,6 +23245,12 @@
     ],
     "apple:283646709": [
       {
+        "version": "10.8.1",
+        "releaseDate": "2026-10-22T14:51:58.000Z",
+        "releaseNotes": "Get the latest update. The new PayPal app that you know and love, now made simpler, faster and easier to use. Continue to shop, pay, earn rewards, and manage your money. All in one place.",
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
+      {
         "version": "10.8.0",
         "releaseDate": "2026-10-19T16:46:11.000Z",
         "releaseNotes": "Get the latest update. The new PayPal app that you know and love, now made simpler, faster and easier to use. Continue to shop, pay, earn rewards, and manage your money. All in one place.",
@@ -23317,6 +23372,12 @@
       }
     ],
     "apple:711923939": [
+      {
+        "version": "5.75.0",
+        "releaseDate": "2026-10-22T15:48:26.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-10-22T17:10:39.301Z"
+      },
       {
         "version": "5.74",
         "releaseDate": "2026-10-19T16:02:44.000Z",
