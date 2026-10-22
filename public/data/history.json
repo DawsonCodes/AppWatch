@@ -73,6 +73,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261019.51",
+        "releaseDate": "2026-10-21T20:27:07.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "1.261019.20",
         "releaseDate": "2026-10-20T22:37:07.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1553,6 +1559,12 @@
     "google:com.instagram.android": [
       {
         "version": null,
+        "releaseDate": "2026-10-22T00:51:59.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-19T15:46:33.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-19T19:56:26.925Z"
@@ -1615,6 +1627,12 @@
       }
     ],
     "google:com.facebook.katana": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-21T17:46:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-14T18:22:34.000Z",
@@ -1835,6 +1853,12 @@
       }
     ],
     "apple:544007664": [
+      {
+        "version": "21.42.4",
+        "releaseDate": "2026-10-21T23:07:58.000Z",
+        "releaseNotes": "Bug fixes, stability improvements, repairs to space-time continuum.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": "21.41.5",
         "releaseDate": "2026-10-11T16:03:55.000Z",
@@ -2188,6 +2212,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.583",
+        "releaseDate": "2026-10-21T18:03:32.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "9.1.582",
         "releaseDate": "2026-10-19T17:07:44.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -2445,6 +2475,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.34",
+        "releaseDate": "2026-10-21T19:12:36.000Z",
+        "releaseNotes": "• This update introduces several improvements to the sticker experience, including a convenient shortcut to share a sticker pack link.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": "8.33",
         "releaseDate": "2026-10-20T16:40:41.000Z",
@@ -2843,6 +2879,12 @@
     "google:com.netflix.mediaclient": [
       {
         "version": null,
+        "releaseDate": "2026-10-21T21:27:48.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-13T21:30:55.000Z",
         "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
         "detectedAt": "2026-10-20T17:03:21.912Z"
@@ -3188,6 +3230,12 @@
     ],
     "apple:431946152": [
       {
+        "version": "2.744.1077",
+        "releaseDate": "2026-10-21T19:40:22.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "2.743.1136",
         "releaseDate": "2026-10-19T20:42:30.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
@@ -3231,6 +3279,12 @@
       }
     ],
     "google:com.roblox.client": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-21T19:40:28.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-15T17:42:53.000Z",
@@ -3544,6 +3598,12 @@
     ],
     "apple:618783545": [
       {
+        "version": "26.10.30",
+        "releaseDate": "2026-10-21T19:01:34.000Z",
+        "releaseNotes": "Bug Fixes\n• Nothing to report this time. Well, nothing that you can see, but plenty going on under the surface. We’re working hard to make Slack better; this time it’s not so visible.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "26.10.20",
         "releaseDate": "2026-10-14T19:06:51.000Z",
         "releaseNotes": "Bug Fixes\n• Like a runner steadily improving their split times, this update is the sort that’s less showy but no less important. You’ll find the app a little faster, a little leaner, a little closer to the goal.",
@@ -3682,6 +3742,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.348",
+        "releaseDate": "2026-10-21T23:54:56.000Z",
+        "releaseNotes": "iPhone Duo support, bug fixes, and performance improvements.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "1.7.347",
         "releaseDate": "2026-10-19T18:38:32.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -3804,6 +3870,12 @@
     ],
     "apple:897446215": [
       {
+        "version": "4.232.1",
+        "releaseDate": "2026-10-21T22:39:04.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "4.231.1",
         "releaseDate": "2026-10-18T22:37:29.000Z",
         "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes. \n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
@@ -3841,6 +3913,12 @@
       }
     ],
     "google:com.canva.editor": [
+      {
+        "version": "2.383.0",
+        "releaseDate": "2026-10-21T01:11:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": "2.382.0",
         "releaseDate": "2026-10-14T00:49:55.000Z",
@@ -3931,6 +4009,12 @@
       }
     ],
     "apple:962194608": [
+      {
+        "version": "7.98.0",
+        "releaseDate": "2026-10-21T21:57:22.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to provide an enhanced editing experience.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": "7.97.0",
         "releaseDate": "2026-10-15T17:10:55.000Z",
@@ -4826,6 +4910,12 @@
     ],
     "apple:401626263": [
       {
+        "version": "26.43",
+        "releaseDate": "2026-10-22T02:24:39.000Z",
+        "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
+      {
         "version": "26.42",
         "releaseDate": "2026-10-14T17:43:59.000Z",
         "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
@@ -5141,6 +5231,12 @@
       }
     ],
     "google:com.venmo": [
+      {
+        "version": "26.24.0",
+        "releaseDate": "2026-10-19T02:50:15.000Z",
+        "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": "26.23.0",
         "releaseDate": "2026-10-10T06:02:27.000Z",
@@ -5595,6 +5691,12 @@
       }
     ],
     "apple:426826309": [
+      {
+        "version": "486.0.2",
+        "releaseDate": "2026-10-21T23:32:11.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-10-22T04:44:39.869Z"
+      },
       {
         "version": "486.0.0",
         "releaseDate": "2026-10-20T01:33:28.000Z",
