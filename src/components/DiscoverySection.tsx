@@ -102,8 +102,7 @@ export function DiscoverySection({
         <>
           {state.phase === 'idle' || stale ? (
             <p class="discovery__hint">
-              Looking for something that isn’t listed? Press <kbd>Enter</kbd> to search the App
-              Store, or{' '}
+              Not listed? Press <kbd>Enter</kbd> to search the App Store, or{' '}
               <a href={links.google} target="_blank" rel="noopener noreferrer">
                 search Google Play <ExternalIcon size={11} />
               </a>
@@ -131,8 +130,8 @@ export function DiscoverySection({
                     ))}
                   </ul>
                   <p class="discovery__note">
-                    Apps you add here are watched <strong>only in this browser</strong> — the
-                    repository’s scheduled checker doesn’t track them.{' '}
+                    Apps you add here are saved in this browser only and aren’t checked
+                    automatically.{' '}
                     <a href={links.google} target="_blank" rel="noopener noreferrer">
                       Search Google Play instead <ExternalIcon size={11} />
                     </a>
@@ -181,9 +180,7 @@ export function DiscoverySection({
                     />
                   ))}
                 </ul>
-                <p class="discovery__note">
-                  Added apps are watched <strong>only in this browser</strong>.
-                </p>
+                <p class="discovery__note">Apps you add here are saved in this browser only.</p>
               </>
             ) : state.outcome.kind === 'not-found' ? (
               <p class="discovery__hint">
@@ -200,7 +197,7 @@ export function DiscoverySection({
                   class="button button--ghost"
                   onClick={() => onAddUnresolved(parsedRef)}
                 >
-                  <PlusIcon size={12} /> Watch it anyway
+                  <PlusIcon size={12} /> Save it anyway
                 </button>{' '}
                 <a
                   class="button button--ghost"
@@ -214,8 +211,7 @@ export function DiscoverySection({
             )
           ) : (
             <p class="discovery__hint">
-              That looks like an App Store listing (ID {parsedRef.storeId}). Press <kbd>Enter</kbd>{' '}
-              or{' '}
+              That looks like an App Store link (ID {parsedRef.storeId}). Press <kbd>Enter</kbd> or{' '}
               <button type="button" class="button button--primary" onClick={onLookup}>
                 Look it up
               </button>
@@ -225,9 +221,8 @@ export function DiscoverySection({
       ) : (
         <div class="discovery__results">
           <p class="discovery__hint">
-            That looks like a Google Play package (<code>{parsedRef.storeId}</code>). Google Play
-            has no browser-readable metadata API, so AppWatch can’t fetch its details here — but you
-            can watch it locally with a store link.
+            That looks like a Google Play package (<code>{parsedRef.storeId}</code>). Its details
+            can’t be loaded from here, but you can still save it in this browser.
           </p>
           <p class="discovery__actions-row">
             <button
@@ -235,7 +230,7 @@ export function DiscoverySection({
               class="button button--primary"
               onClick={() => onAddUnresolved(parsedRef)}
             >
-              <PlusIcon size={13} /> Watch locally
+              <PlusIcon size={13} /> Save in this browser
             </button>
             <a
               class="button button--ghost"

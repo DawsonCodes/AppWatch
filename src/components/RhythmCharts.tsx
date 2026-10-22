@@ -1,4 +1,4 @@
-import type { ComponentChildren } from 'preact';
+import type { ComponentChildren, RefObject } from 'preact';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { Cadence } from '../lib/cadence.ts';
 import { describeDays } from '../lib/cadence.ts';
@@ -7,24 +7,23 @@ const DAY = 86_400_000;
 const dateFormat = new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric' });
 const longDate = new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' });
 const monthFormat = new Intl.DateTimeFormat(undefined, { month: 'short' });
-const monthYearFormat = new Intl.DateTimeFormat(undefined, { month: 'short', year: '2-digit' });
+const monthYearFormat = new Intl.DateTimeFormat(undefined, { month: 'short', year: 'numeric' });
 
 /** Track an element's content width (charts are drawn at real pixel size). */
-function useWidth(): [(el: HTMLDivElement | null) => void, number] {
+function useWidth(): [RefObject<HTMLDivElement>, number] {
+  const ref = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
-  const observer = useRef<ResizeObserver | null>(null);
-  const ref = (el: HTMLDivElement | null) => {
-    observer.current?.disconnect();
+  useLayoutEffect(() => {
+    const el = ref.current;
     if (!el) return;
     setWidth(el.clientWidth);
-    if (typeof ResizeObserver === 'function') {
-      observer.current = new ResizeObserver(([entry]) => {
-        if (entry) setWidth(Math.round(entry.contentRect.width));
-      });
-      observer.current.observe(el);
-    }
-  };
-  useEffect(() => () => observer.current?.disconnect(), []);
+    if (typeof ResizeObserver !== 'function') return;
+    const observer = new ResizeObserver(([entry]) => {
+      if (entry) setWidth(Math.round(entry.contentRect.width));
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   return [ref, width];
 }
 
@@ -165,18 +164,18 @@ export function ReleaseStrip({ cadence, now = new Date() }: { cadence: Cadence; 
     ? {
         x: x(current.time),
         y: 0,
-        value: current.version ?? 'Store release',
+        value: current.version ?? 'No version number',
         label: longDate.format(current.time),
       }
     : null;
 
   return (
     <figure class="chart">
-      <figcaption class="chart__title">Release timeline</figcaption>
+      <figcaption class="chart__title">Releases over time</figcaption>
       <div
         class="chart__plot"
         ref={ref}
-        aria-label={`Release timeline: ${shown.length} releases. Use the arrow keys to step through them.`}
+        aria-label={`Releases over time: ${shown.length} releases. Use the arrow keys to step through them.`}
         role="group"
         {...focusProps}
         onPointerMove={(e) => pick(e.clientX, e.currentTarget.getBoundingClientRect())}

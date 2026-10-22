@@ -61,7 +61,7 @@ export function Notes({ text, clampAt = 260 }: { text: string; clampAt?: number 
               <span>
                 {showOriginal
                   ? `Original (${languageName(translate.result.source)})`
-                  : `Translated from ${languageName(translate.result.source)} on this device`}
+                  : `Translated from ${languageName(translate.result.source)}`}
               </span>
               <button
                 type="button"
@@ -92,11 +92,7 @@ export function Notes({ text, clampAt = 260 }: { text: string; clampAt?: number 
               title="Opens Google Translate in a new tab"
             >
               <TranslateIcon size={14} />
-              <span>
-                {translate.phase === 'failed'
-                  ? 'Couldn’t translate here — open Google Translate'
-                  : 'Translate'}
-              </span>
+              <span>{translate.phase === 'failed' ? 'Translate with Google' : 'Translate'}</span>
               <ExternalIcon size={11} />
             </a>
           )

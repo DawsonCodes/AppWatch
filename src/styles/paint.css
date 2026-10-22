@@ -1,6 +1,6 @@
 /* ==========================================================================
-   MS Paint theme: a playful tribute to classic desktop paint software.
-   Beveled chrome, hard edges, pixel-stepped motion and a palette strip.
+   MS Paint theme: a tribute to classic desktop paint software.
+   Beveled gray chrome, hard edges, white canvases and a palette strip.
    ========================================================================== */
 
 [data-theme='ms-paint'] body {
@@ -19,14 +19,13 @@
   color: #ffffff;
 }
 
-/* Chrome */
+/* --------------------------------- Chrome -------------------------------- */
 
 [data-theme='ms-paint'] .site-header {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
-  box-shadow: var(--bevel-raised);
-  animation: none;
   border-bottom: 0;
+  box-shadow: var(--bevel-raised);
 }
 
 [data-theme='ms-paint'] .brand__watch {
@@ -35,20 +34,15 @@
 
 [data-theme='ms-paint'] .health {
   height: 26px;
-  background: #c0c0c0;
   border: 0;
+  background: #c0c0c0;
   box-shadow: var(--bevel-sunken);
   color: #000000;
 }
 
 [data-theme='ms-paint'] .health__dot,
 [data-theme='ms-paint'] .dot,
-[data-theme='ms-paint'] .store-badge__dot,
-[data-theme='ms-paint'] .store-row__dot,
-[data-theme='ms-paint'] .hero__pulse-dot,
-[data-theme='ms-paint'] .hero__store::before,
-[data-theme='ms-paint'] .store-row--fresh .store-row__when::before,
-[data-theme='ms-paint'] .timeline__node {
+[data-theme='ms-paint'] .store-badge__dot {
   border-radius: 0;
 }
 
@@ -56,15 +50,14 @@
 [data-theme='ms-paint'] .icon-button,
 [data-theme='ms-paint'] .dropdown__button,
 [data-theme='ms-paint'] .chip,
-[data-theme='ms-paint'] .watch--labelled,
-[data-theme='ms-paint'] .hero__pulse {
+[data-theme='ms-paint'] .watch--labelled {
   border: 0;
   background: #c0c0c0;
   color: #000000;
   box-shadow: var(--bevel-raised);
 }
 
-[data-theme='ms-paint'] .button:hover,
+[data-theme='ms-paint'] .button:hover:not(:disabled),
 [data-theme='ms-paint'] .icon-button:hover,
 [data-theme='ms-paint'] .dropdown__button:hover,
 [data-theme='ms-paint'] .chip:hover {
@@ -75,99 +68,98 @@
 [data-theme='ms-paint'] .button:active:not(:disabled),
 [data-theme='ms-paint'] .icon-button:active,
 [data-theme='ms-paint'] .dropdown__button:active,
+[data-theme='ms-paint'] .dropdown.is-open .dropdown__button,
 [data-theme='ms-paint'] .chip:active,
-[data-theme='ms-paint'] .chip.is-on,
-[data-theme='ms-paint'] .hero__pulse.is-active,
-[data-theme='ms-paint'] .dropdown.is-open .dropdown__button {
+[data-theme='ms-paint'] .chip.is-on {
   box-shadow: var(--bevel-pressed);
-  transform: translate(1px, 1px);
 }
 
-[data-theme='ms-paint'] .chip.is-on,
-[data-theme='ms-paint'] .hero__pulse.is-active {
+[data-theme='ms-paint'] .chip.is-on {
   background: #ffffff;
   color: #000080;
 }
 
-[data-theme='ms-paint'] .button--primary,
-[data-theme='ms-paint'] .button--store-apple,
-[data-theme='ms-paint'] .button--store-google,
-[data-theme='ms-paint'] .button--store-windows,
-[data-theme='ms-paint'] .button--store-mac {
+[data-theme='ms-paint'] .button--primary {
+  background: #000080;
   color: #ffffff;
 }
 
-[data-theme='ms-paint'] .button--primary {
-  background: #000080;
-}
-
-[data-theme='ms-paint'] .button--store-apple {
-  background: #0000c8;
-}
-
-[data-theme='ms-paint'] .button--store-google {
+[data-theme='ms-paint'] .button--primary.button--google {
   background: #006000;
 }
 
-[data-theme='ms-paint'] .button--store-windows {
+[data-theme='ms-paint'] .button--primary.button--windows {
   background: #006060;
 }
 
-[data-theme='ms-paint'] .button--store-mac {
+[data-theme='ms-paint'] .button--primary.button--mac {
   background: #904800;
 }
 
-[data-theme='ms-paint'] .button--primary:hover,
-[data-theme='ms-paint'] .button--store-apple:hover,
-[data-theme='ms-paint'] .button--store-google:hover,
-[data-theme='ms-paint'] .button--store-windows:hover,
-[data-theme='ms-paint'] .button--store-mac:hover {
+[data-theme='ms-paint'] .button--primary:hover:not(:disabled) {
   filter: none;
+  background: #000080;
   color: #ffff00;
 }
 
-[data-theme='ms-paint'] .dropdown__button--theme {
-  background: #c0c0c0;
+[data-theme='ms-paint'] .button--primary.button--google:hover {
+  background: #006000;
 }
 
-/* Tabs: a sunken well with a raised block that jumps between slots. */
+[data-theme='ms-paint'] .button--primary.button--windows:hover {
+  background: #006060;
+}
 
-[data-theme='ms-paint'] .sliding--pill {
+[data-theme='ms-paint'] .button--primary.button--mac:hover {
+  background: #904800;
+}
+
+[data-theme='ms-paint'] .watch {
+  border-radius: 0;
+}
+
+[data-theme='ms-paint'] .watch.is-watched,
+[data-theme='ms-paint'] .watch--labelled.is-watched .watch__star {
+  color: #c08000;
+}
+
+/* Tabs: a sunken well with a raised block on the selected tab. */
+
+[data-theme='ms-paint'] .tabs--pill {
   border: 0;
   background: #c0c0c0;
   box-shadow: var(--bevel-sunken);
-  padding: 3px;
 }
 
-[data-theme='ms-paint'] .sliding--pill .sliding__indicator {
+[data-theme='ms-paint'] .tabs--pill .tabs__item[data-active='true'] {
   background: #ffffff;
   box-shadow: var(--bevel-raised);
 }
 
-[data-theme='ms-paint'] .sliding--underline .sliding__indicator {
-  height: 4px;
-  background: #000080;
-}
-
-[data-theme='ms-paint'] .sliding__item {
+[data-theme='ms-paint'] .tabs__item,
+[data-theme='ms-paint'] .tabs__item:hover {
   color: #000000;
 }
 
-[data-theme='ms-paint'] .sliding__item[data-active='true'] {
+[data-theme='ms-paint'] .tabs__item[data-active='true'] {
   font-weight: 700;
 }
 
-[data-theme='ms-paint'] .sliding__count {
+[data-theme='ms-paint'] .tabs--line .tabs__item[data-active='true'] {
+  border-bottom: 4px solid #000080;
+}
+
+[data-theme='ms-paint'] .tabs__count {
   background: transparent;
   color: #404040;
 }
 
-[data-theme='ms-paint'] .sliding__item[data-active='true'] .sliding__count {
+[data-theme='ms-paint'] .tabs--line .tabs__item[data-active='true'] .tabs__count {
   background: #000080;
   color: #ffffff;
 }
 
-[data-theme='ms-paint'] .collections {
+[data-theme='ms-paint'] .categories {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   border-bottom: 2px solid #808080;
@@ -194,72 +186,104 @@
   color: #000000;
 }
 
-/* Cards are little canvases with a hard drop shadow. */
+/* ------------------------- Canvases (cards, panels) ---------------------- */
 
 [data-theme='ms-paint'] .card,
-[data-theme='ms-paint'] .release,
-[data-theme='ms-paint'] .discovery__results,
+[data-theme='ms-paint'] .section,
+[data-theme='ms-paint'] .timeline__list,
+[data-theme='ms-paint'] .expected__item,
 [data-theme='ms-paint'] .insights {
   border: 2px solid #000000;
   background: #ffffff;
   box-shadow: 4px 4px 0 #000000;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  [data-theme='ms-paint'] .card:not(.card--skeleton):hover,
-  [data-theme='ms-paint'] .release:hover {
-    border-color: #000000;
-    translate: -2px -2px;
-    box-shadow: 6px 6px 0 #000000;
-  }
-  [data-theme='ms-paint'] .card:not(.card--skeleton):hover .card__icon {
-    scale: none;
-  }
-}
-
-[data-theme='ms-paint'] .card--open {
+[data-theme='ms-paint'] .card:hover,
+[data-theme='ms-paint'] .expected__item:hover {
   border-color: #000080;
   box-shadow: 4px 4px 0 #000080;
 }
 
-[data-theme='ms-paint'] .card--fresh .card__head::before {
-  border-radius: 0;
-  border-color: #ffffff;
-  background: #ff00ff;
+[data-theme='ms-paint'] .release:hover {
+  background: #000080;
+  color: #ffffff;
+}
+
+[data-theme='ms-paint'] .release:hover .release__notes,
+[data-theme='ms-paint'] .release:hover .release__time,
+[data-theme='ms-paint'] .release:hover .release__old,
+[data-theme='ms-paint'] .release:hover .release__first,
+[data-theme='ms-paint'] .release:hover .release__versions,
+[data-theme='ms-paint'] .release:hover .store-badge {
+  color: #ffffff;
+}
+
+[data-theme='ms-paint'] .timeline__list > li + li {
+  border-top: 1px solid #808080;
 }
 
 [data-theme='ms-paint'] .store-row {
-  background: #ffffff;
   border: 1px solid #808080;
+  background: #ffffff;
+}
+
+[data-theme='ms-paint'] .card__rhythm {
+  border-top: 1px solid #808080;
 }
 
 [data-theme='ms-paint'] .app-icon {
   border-radius: 0;
   box-shadow: none;
   outline: 1px solid #000000;
-  image-rendering: pixelated;
 }
 
-[data-theme='ms-paint'] .fresh-tag,
 [data-theme='ms-paint'] .tag,
 [data-theme='ms-paint'] .version-chip {
-  border: 1px solid currentColor;
+  border: 1px solid #808080;
+  background: #ffffff;
+  color: #000000;
+}
+
+[data-theme='ms-paint'] .tag--accent {
+  border-color: #000080;
+  color: #000080;
+}
+
+[data-theme='ms-paint'] .stat {
+  border: 1px solid #808080;
   background: #ffffff;
 }
 
-[data-theme='ms-paint'] .version-chip {
-  border-color: #808080;
+[data-theme='ms-paint'] .fact {
+  border-top-color: #c0c0c0;
 }
 
-[data-theme='ms-paint'] .watch {
-  border-radius: 0;
+[data-theme='ms-paint'] .version {
+  border-top: 1px dashed #808080;
 }
 
-[data-theme='ms-paint'] .watch.is-watched {
-  color: #c08000;
+[data-theme='ms-paint'] .version:first-child {
+  border-top: 0;
 }
 
-/* Menus and dialogs are windows. */
+[data-theme='ms-paint'] .chart__dot {
+  stroke: #ffffff;
+}
+
+[data-theme='ms-paint'] .chart-tip {
+  border: 0;
+  background: #ffffe1;
+  box-shadow:
+    var(--bevel-raised),
+    3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='ms-paint'] .pattern__table th {
+  background: #c0c0c0;
+  color: #000000;
+}
+
+/* Menus and messages are little windows. */
 
 [data-theme='ms-paint'] .dropdown__menu,
 [data-theme='ms-paint'] .toast {
@@ -274,7 +298,6 @@
 [data-theme='ms-paint'] .dropdown__option:focus-visible {
   background: #000080;
   color: #ffffff;
-  box-shadow: none;
 }
 
 [data-theme='ms-paint'] .dropdown__option:hover .dropdown__option-desc,
@@ -284,68 +307,6 @@
   color: #ffffff;
 }
 
-[data-theme='ms-paint'] .detail {
-  border: 0;
-  background: #c0c0c0;
-  box-shadow:
-    var(--bevel-raised),
-    6px 6px 0 rgba(0, 0, 0, 0.5);
-}
-
-[data-theme='ms-paint'] .detail::before {
-  display: none;
-}
-
-[data-theme='ms-paint'] .detail__bar {
-  padding: 6px 6px 6px 10px;
-  background: #000080;
-  color: #ffffff;
-}
-
-[data-theme='ms-paint'] .detail__bar.is-scrolled {
-  border-bottom-color: #000080;
-}
-
-[data-theme='ms-paint'] .detail__bar-title {
-  opacity: 1;
-  transform: none;
-  font-weight: 700;
-}
-
-[data-theme='ms-paint'] .detail__bar .icon-button,
-[data-theme='ms-paint'] .detail__bar .button {
-  height: 28px;
-}
-
-[data-theme='ms-paint'] .detail__bar .icon-button {
-  width: 28px;
-}
-
-[data-theme='ms-paint'] .detail__scroll {
-  margin: 4px;
-  background: #ffffff;
-  box-shadow: var(--bevel-sunken);
-}
-
-[data-theme='ms-paint'] .panel {
-  border: 1px solid #808080;
-  background: #ffffff;
-}
-
-[data-theme='ms-paint'] .panel--plain {
-  border: 0;
-}
-
-[data-theme='ms-paint'] .history__dot {
-  border-radius: 0;
-}
-
-[data-theme='ms-paint'] .history__entry--current .history__dot {
-  background: #000080;
-  border-color: #000080;
-  box-shadow: none;
-}
-
 [data-theme='ms-paint'] .notice {
   border: 0;
   background: #ffffe1;
@@ -353,43 +314,14 @@
   color: #000000;
 }
 
-[data-theme='ms-paint'] .insights__grid {
-  border-color: #808080;
-  background: #808080;
-}
-
-[data-theme='ms-paint'] .empty-state--compact,
-[data-theme='ms-paint'] .discovery__hint {
+[data-theme='ms-paint'] .discovery__hint,
+[data-theme='ms-paint'] .discovery__results {
   border: 2px dashed #000000;
   background: #ffffff;
 }
 
-[data-theme='ms-paint'] .empty-state__icon {
-  border-radius: 0;
-  background: #ffffff;
-  box-shadow: var(--bevel-sunken);
-}
-
-[data-theme='ms-paint'] .timeline__date {
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
-  font-weight: 700;
-}
-
-[data-theme='ms-paint'] .timeline__node {
-  border-color: #c0c0c0;
-}
-
-[data-theme='ms-paint'] .timeline__list::before,
-[data-theme='ms-paint'] .history::before {
-  border-radius: 0;
-  background: repeating-linear-gradient(180deg, #000000 0 4px, transparent 4px 8px);
-}
-
-[data-theme='ms-paint'] .toast__timer {
-  height: 4px;
-  background: #000080;
-  opacity: 1;
+[data-theme='ms-paint'] .discovery__results .discovery__hint {
+  border: 0;
 }
 
 [data-theme='ms-paint'] .skeleton {
@@ -398,10 +330,10 @@
 }
 
 [data-theme='ms-paint'] kbd {
+  border: 0;
   border-radius: 0;
   background: #c0c0c0;
   box-shadow: var(--bevel-raised);
-  border: 0;
 }
 
 /* The palette strip: the footer's signature in this theme only. */
@@ -410,11 +342,10 @@
   border-top: 0;
   background: #c0c0c0;
   box-shadow: var(--bevel-raised);
-  color: #000000;
 }
 
-[data-theme='ms-paint'] .site-footer__copy,
-[data-theme='ms-paint'] .site-footer__privacy {
+[data-theme='ms-paint'] .site-footer__inner,
+[data-theme='ms-paint'] .site-footer__copy {
   color: #000000;
 }
 
@@ -426,8 +357,8 @@
   max-width: 100%;
   margin: 16px auto 0;
   padding: 3px;
-  box-shadow: var(--bevel-sunken);
   background: #c0c0c0;
+  box-shadow: var(--bevel-sunken);
 }
 
 [data-theme='ms-paint'] .paint-palette__chip {

@@ -1,24 +1,31 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { AppCard } from './components/AppCard.tsx';
-import { AppDetail } from './components/AppDetail.tsx';
-import type { HistoryState } from './components/AppDetail.tsx';
+import { AppPage } from './components/AppPage.tsx';
+import type { HistoryState } from './components/AppPage.tsx';
 import { DiscoverySection } from './components/DiscoverySection.tsx';
 import type { DiscoveryState } from './components/DiscoverySection.tsx';
 import { Dropdown } from './components/Dropdown.tsx';
-import { LoadFailed, LoadingGrid, NoAppsYet, NoResults } from './components/EmptyStates.tsx';
+import {
+  AppNotFound,
+  LoadFailed,
+  LoadingGrid,
+  NoAppsYet,
+  NoResults,
+} from './components/EmptyStates.tsx';
+import { ExpectedSoon } from './components/ExpectedSoon.tsx';
+import type { ExpectedItem } from './components/ExpectedSoon.tsx';
 import { Footer } from './components/Footer.tsx';
 import { Header } from './components/Header.tsx';
 import { CheckIcon, GridIcon, PulseIcon } from './components/Icons.tsx';
 import { InsightsPanel } from './components/InsightsPanel.tsx';
-import { UpNext } from './components/UpNext.tsx';
-import type { UpNextItem } from './components/UpNext.tsx';
 import { SearchBar } from './components/SearchBar.tsx';
-import { SlidingTabs } from './components/SlidingTabs.tsx';
-import type { TabItem } from './components/SlidingTabs.tsx';
 import { storeLabel } from './components/StoreBadge.tsx';
+import { Tabs } from './components/Tabs.tsx';
 import { Toast } from './components/Toast.tsx';
 import type { ToastMessage } from './components/Toast.tsx';
 import { UpdatesTimeline } from './components/UpdatesTimeline.tsx';
+import type { Cadence } from './lib/cadence.ts';
+import { computeCadence, nextSortTime, rhythmLine } from './lib/cadence.ts';
 import { CATALOG } from './lib/catalogData.ts';
 import {
   DataLoadError,
@@ -29,7 +36,7 @@ import {
 } from './lib/data.ts';
 import type { DiscoveredApp } from './lib/discovery.ts';
 import { lookupAppleById, searchAppleByName } from './lib/discovery.ts';
-import { isUnresolved, RECENT_DAYS } from './lib/filtering.ts';
+import { isUnresolved } from './lib/filtering.ts';
 import { FRESHNESS_POLL_MS, hasNewerRun, pollStatus } from './lib/freshness.ts';
 import type { AppGroup, GroupFilters, Listing, SortKey } from './lib/groups.ts';
 import {
@@ -38,19 +45,18 @@ import {
   filterGroups,
   findByListingId,
   hasActiveGroupFilters,
-  isGroupRecent,
   isGroupWatched,
   visibleCollections,
 } from './lib/groups.ts';
 import { createLocalAppsStore, makeLocalApp } from './lib/localApps.ts';
 import type { LocalApp } from './lib/localApps.ts';
-import { createListMotion, prefersReducedMotion, slideContent, themeReveal } from './lib/motion.ts';
+import { themeReveal } from './lib/motion.ts';
 import { readPref, writePref } from './lib/prefs.ts';
+import type { Route } from './lib/route.ts';
+import { appHref, parseRoute } from './lib/route.ts';
 import { applyTheme, currentTheme, persistTheme } from './lib/theme.ts';
 import type { ThemeId } from './lib/theme.ts';
 import { buildTimeline } from './lib/timeline.ts';
-import type { Cadence } from './lib/cadence.ts';
-import { computeCadence, nextSortTime, rhythmLine } from './lib/cadence.ts';
 import { createWatchlist } from './lib/watchlist.ts';
 import { parseStoreInput, storeUrlFor } from './shared/storeRefs.ts';
 import type {
@@ -75,33 +81,16 @@ type HistoryLoad =
 
 type View = 'apps' | 'updates';
 
-interface Selection {
-  listingId: string;
-  /** Bumped for every opening so each one gets a fresh panel and entrance. */
-  openId: number;
-  /** The icon that was tapped; it flies into the panel. */
-  origin: HTMLElement | null;
-  closing: boolean;
-}
-
 const INSIGHTS_PREF_KEY = 'appwatch:insights-open:v1';
 const VIEW_PREF_KEY = 'appwatch:view:v1';
+const BASE_TITLE = typeof document === 'undefined' ? 'AppWatch' : document.title;
 
-const SORT_OPTIONS: { value: SortKey; label: string; description: string }[] = [
-  { value: 'updated', label: 'Latest update', description: 'Most recent release first' },
-  { value: 'name', label: 'Name', description: 'A to Z' },
-  { value: 'collection', label: 'Collection', description: 'Grouped like the tabs' },
-  { value: 'next', label: 'Next expected update', description: 'Soonest predicted first' },
+const SORT_OPTIONS: { value: SortKey; label: string }[] = [
+  { value: 'updated', label: 'Recently updated' },
+  { value: 'next', label: 'Next update' },
+  { value: 'name', label: 'Name' },
+  { value: 'collection', label: 'Category' },
 ];
-
-function readHashListingId(): string | null {
-  const match = /^#app=(.+)$/.exec(location.hash);
-  return match ? decodeURIComponent(match[1] ?? '') : null;
-}
-
-function pathWithoutHash(): string {
-  return location.pathname + location.search;
-}
 
 function historyFor(load: HistoryLoad, id: string): HistoryState {
   if (load.phase === 'ready') return { phase: 'ready', entries: load.file.entries[id] ?? [] };
@@ -155,17 +144,12 @@ function discoveredToLocal(app: DiscoveredApp): LocalApp {
   });
 }
 
-/** Height of the sticky chrome (header + collection tabs) at the top. */
-function stickyOffset(): number {
-  return document.querySelector('.collections')?.getBoundingClientRect().bottom ?? 60;
-}
-
-/** The icon inside whatever was tapped: a card or a timeline release. */
-function iconFor(trigger: HTMLElement | null): HTMLElement | null {
-  if (!trigger) return null;
+function Chip({ on, onToggle, children }: { on: boolean; onToggle: () => void; children: string }) {
   return (
-    trigger.closest('.card')?.querySelector<HTMLElement>('.card__icon') ??
-    trigger.querySelector<HTMLElement>('.app-icon')
+    <button type="button" class={`chip${on ? ' is-on' : ''}`} aria-pressed={on} onClick={onToggle}>
+      {on ? <CheckIcon size={13} /> : null}
+      {children}
+    </button>
   );
 }
 
@@ -176,10 +160,7 @@ export function App() {
     readPref(VIEW_PREF_KEY) === 'updates' ? 'updates' : 'apps',
   );
   const [theme, setTheme] = useState<ThemeId>(currentTheme);
-  const [selection, setSelection] = useState<Selection | null>(() => {
-    const id = readHashListingId();
-    return id ? { listingId: id, openId: 0, origin: null, closing: false } : null;
-  });
+  const [route, setRoute] = useState<Route>(() => parseRoute(location.hash));
   const [historyLoad, setHistoryLoad] = useState<HistoryLoad>({ phase: 'idle' });
   const [insightsOpen, setInsightsOpen] = useState(() => readPref(INSIGHTS_PREF_KEY) === '1');
   const [discovery, setDiscovery] = useState<DiscoveryState>({ phase: 'idle' });
@@ -187,23 +168,8 @@ export function App() {
   const [toast, setToast] = useState<ToastMessage | null>(null);
 
   const searchRef = useRef<HTMLInputElement>(null);
-  const viewRef = useRef<HTMLDivElement>(null);
-  const detailTrigger = useRef<HTMLElement | null>(null);
-  const pushedDetail = useRef(false);
-  const openCounter = useRef(0);
+  const mainRef = useRef<HTMLElement>(null);
   const refreshing = useRef(false);
-
-  // Motion for the card grid and the release timeline: items glide to new
-  // positions when filters change, and reveal as they scroll into view.
-  const gridMotion = useMemo(
-    () => createListMotion({ item: '.card[data-key]', flip: true, stickyOffset }),
-    [],
-  );
-  const timelineMotion = useMemo(
-    () => createListMotion({ item: '.timeline__item[data-key]', flip: true, stickyOffset }),
-    [],
-  );
-  useLayoutEffect(() => gridMotion.afterRender());
 
   const watchlist = useMemo(() => createWatchlist(), []);
   const [watchedIds, setWatchedIds] = useState<ReadonlySet<string>>(() => watchlist.ids());
@@ -217,9 +183,9 @@ export function App() {
   const dropToast = useCallback(() => setToast(null), []);
 
   /**
-   * Load the dashboard data. A soft refresh (used when the freshness poll
-   * sees a newer deployed check) swaps the data in place — filters, scroll
-   * position and an open detail panel are kept — and briefly confirms it.
+   * Load the app data. A soft refresh (when a newer check has been deployed)
+   * swaps the data in place, keeping filters, scroll position and the open
+   * page, and says so briefly.
    */
   const fetchData = useCallback(
     (soft = false) => {
@@ -228,23 +194,15 @@ export function App() {
       if (!soft) setLoad({ phase: 'loading' });
       loadDashboardData()
         .then(({ apps, status }) => {
-          const apply = () => {
-            setLoad({ phase: 'ready', apps: apps.apps, status });
-            // Version history is cached lazily; refetch it with the new data.
-            if (soft) setHistoryLoad({ phase: 'idle' });
-          };
+          setLoad({ phase: 'ready', apps: apps.apps, status });
           if (soft) {
-            gridMotion.capture();
-            timelineMotion.capture();
-            apply();
+            setHistoryLoad({ phase: 'idle' });
             const updates = status?.updatesDetected ?? 0;
             showToast(
-              `Updated with the latest check${
-                updates > 0 ? ` · ${updates} new release${updates === 1 ? '' : 's'}` : ''
-              }.`,
+              `Refreshed with the latest check${
+                updates > 0 ? ` · ${updates} new update${updates === 1 ? '' : 's'}` : ''
+              }`,
             );
-          } else {
-            apply();
           }
         })
         .catch((error: unknown) => {
@@ -259,28 +217,26 @@ export function App() {
           refreshing.current = false;
         });
     },
-    [showToast, gridMotion, timelineMotion],
+    [showToast],
   );
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
-  // History feeds the timeline, the detail panel and every app's release
-  // rhythm, so it loads as soon as the dashboard data is in.
-  const needsHistory = load.phase === 'ready' || selection !== null || view === 'updates';
+  // Version history drives the update estimates on every card, so it loads
+  // as soon as the app list is in.
   useEffect(() => {
-    if (!needsHistory || historyLoad.phase !== 'idle') return;
+    if (load.phase !== 'ready' || historyLoad.phase !== 'idle') return;
     setHistoryLoad({ phase: 'loading' });
     loadHistory()
       .then((file) => setHistoryLoad({ phase: 'ready', file }))
       .catch(() => setHistoryLoad({ phase: 'error' }));
-  }, [needsHistory, historyLoad.phase]);
+  }, [load.phase, historyLoad.phase]);
 
-  // Deploy freshness: while the page is visible, revalidate the site's own
-  // status.json every few minutes (and whenever the tab regains focus). When
-  // the scheduled checker has deployed a newer run, the new data is applied
-  // automatically. This never contacts the stores from the visitor's browser.
+  // While the page is visible, re-check the site's own status.json every few
+  // minutes and when the tab regains focus; a newer deployed check is loaded
+  // automatically. The stores are never contacted from the browser.
   const loadedRunAt = load.phase === 'ready' ? (load.status?.lastRunAt ?? null) : null;
   useEffect(() => {
     if (load.phase !== 'ready') return;
@@ -298,6 +254,72 @@ export function App() {
       document.removeEventListener('visibilitychange', check);
     };
   }, [load.phase, loadedRunAt, fetchData]);
+
+  /* -------------------------------- Routing ------------------------------- */
+
+  // Pages are hash links (#app=apple:123). The list's scroll position is
+  // kept while an app page is open and restored on the way back.
+  const routeRef = useRef(route);
+  const listScroll = useRef(0);
+  const cameFromList = useRef(false);
+  const leftGroupKey = useRef<string | null>(null);
+  const pendingScroll = useRef<number | null>(null);
+
+  useEffect(() => {
+    try {
+      history.scrollRestoration = 'manual';
+    } catch {
+      // Not supported: the browser keeps its default behavior.
+    }
+    const onHashChange = () => {
+      const prev = routeRef.current;
+      const next = parseRoute(location.hash);
+      if (prev.page === 'list' && next.page === 'app') {
+        listScroll.current = window.scrollY;
+        cameFromList.current = true;
+        pendingScroll.current = 0;
+      } else if (prev.page === 'app' && next.page === 'list') {
+        pendingScroll.current = cameFromList.current ? listScroll.current : 0;
+        cameFromList.current = false;
+      } else if (next.page === 'app') {
+        pendingScroll.current = 0;
+      }
+      // A bare "#" (the logo or the back link) leaves the URL clean.
+      if (next.page === 'list' && location.hash === '' && location.href.endsWith('#')) {
+        try {
+          history.replaceState(history.state, '', location.pathname + location.search);
+        } catch {
+          // Ignore.
+        }
+      }
+      routeRef.current = next;
+      setRoute(next);
+    };
+    addEventListener('hashchange', onHashChange);
+    return () => removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  // Back to the list: step back in history when the list is the previous
+  // page, so Back and Forward stay in sync; otherwise follow the link.
+  const goBack = useCallback((event: MouseEvent) => {
+    if (cameFromList.current) {
+      event.preventDefault();
+      history.back();
+    }
+  }, []);
+
+  // Switching platform tabs on an app page replaces the URL instead of
+  // adding a history entry for every tab.
+  const selectListing = useCallback((listingId: string) => {
+    try {
+      history.replaceState(history.state, '', appHref(listingId));
+    } catch {
+      // Ignore: the page still switches.
+    }
+    const next: Route = { page: 'app', listingId };
+    routeRef.current = next;
+    setRoute(next);
+  }, []);
 
   /* ------------------------------ Data model ------------------------------ */
 
@@ -331,8 +353,9 @@ export function App() {
     [trackedIds, localListings],
   );
 
-  // Release rhythm per tracked listing, and per app the listing whose next
-  // update is expected soonest.
+  // Update estimate per tracked listing, and per app the listing whose next
+  // update is expected soonest. One "now" per history load keeps the card
+  // line and the app page saying the same thing.
   const rhythmNow = useMemo(() => new Date(), [historyLoad]);
   const cadences = useMemo(() => {
     if (historyLoad.phase !== 'ready') return null;
@@ -361,8 +384,8 @@ export function App() {
     () => new Map([...groupRhythm].map(([key, value]) => [key, nextSortTime(value.cadence)])),
     [groupRhythm],
   );
-  const upNext = useMemo<UpNextItem[]>(() => {
-    const items: UpNextItem[] = [];
+  const expected = useMemo<ExpectedItem[]>(() => {
+    const items: ExpectedItem[] = [];
     for (const group of groups) {
       const rhythm = groupRhythm.get(group.key);
       if (rhythm && (rhythm.cadence.state === 'upcoming' || rhythm.cadence.state === 'due')) {
@@ -387,7 +410,6 @@ export function App() {
     () => filterGroups(groups, filters, watchedIds, collectionOrder, undefined, nextTimes),
     [groups, filters, watchedIds, collectionOrder, nextTimes],
   );
-  const recentCount = useMemo(() => groups.filter((g) => isGroupRecent(g)).length, [groups]);
   const presentPlatforms = useMemo(
     () => PLATFORMS.filter((p) => groups.some((g) => g.listings.some((l) => l.platform === p))),
     [groups],
@@ -404,55 +426,46 @@ export function App() {
     return buildTimeline(scope, historyLoad.file);
   }, [view, historyLoad, groups, filters, watchedIds, collectionOrder]);
 
-  const found = selection ? findByListingId(groups, selection.listingId) : null;
+  const found = route.page === 'app' ? findByListingId(groups, route.listingId) : null;
+
+  // Scroll and focus after the page has switched, before it is painted.
+  useLayoutEffect(() => {
+    const target = pendingScroll.current;
+    if (target === null) return;
+    if (route.page === 'list' && load.phase !== 'ready') return; // wait for the list
+    pendingScroll.current = null;
+    window.scrollTo(0, target);
+    if (route.page === 'app') {
+      document.getElementById('app-title')?.focus({ preventScroll: true });
+    } else if (leftGroupKey.current) {
+      document
+        .querySelector<HTMLElement>(
+          `.card[data-key="${CSS.escape(leftGroupKey.current)}"] .card__link`,
+        )
+        ?.focus({ preventScroll: true });
+    }
+  });
+
+  useEffect(() => {
+    if (found) leftGroupKey.current = found.group.key;
+    document.title = found ? `${found.group.name} updates · AppWatch` : BASE_TITLE;
+  }, [found?.group.key, found?.group.name]);
 
   /* ------------------------------- Actions -------------------------------- */
 
-  /** Snapshot both lists before a change so the next render can animate it. */
-  const captureLists = useCallback(
-    (keepInView: boolean) => {
-      gridMotion.capture({ keepInView });
-      timelineMotion.capture({ keepInView });
-    },
-    [gridMotion, timelineMotion],
-  );
-
-  const updateFilters = useCallback(
-    (next: Partial<GroupFilters>) => {
-      // Typing keeps the page where it is; every other filter brings the
-      // results into view.
-      captureLists(next.query === undefined);
-      setFilters((prev) => ({ ...prev, ...next }));
-    },
-    [captureLists],
-  );
+  const updateFilters = useCallback((next: Partial<GroupFilters>) => {
+    setFilters((prev) => ({ ...prev, ...next }));
+  }, []);
 
   const clearFilters = useCallback(() => {
-    captureLists(true);
     setFilters(DEFAULT_GROUP_FILTERS);
     setDiscovery({ phase: 'idle' });
-  }, [captureLists]);
+  }, []);
 
-  const viewDirection = useRef<1 | -1>(1);
-  const changeView = useCallback(
-    (next: View) => {
-      if (next === view) return;
-      writePref(VIEW_PREF_KEY, next);
-      viewDirection.current = next === 'updates' ? 1 : -1;
-      setView(next);
-    },
-    [view],
-  );
-
-  // Apps <-> Updates: the new view slides in from the direction of travel.
-  const firstView = useRef(true);
-  useLayoutEffect(() => {
-    if (firstView.current) {
-      firstView.current = false;
-      return;
-    }
-    slideContent(viewRef.current, viewDirection.current);
-  }, [view]);
+  const changeView = useCallback((next: View) => {
+    writePref(VIEW_PREF_KEY, next);
+    setView(next);
+  }, []);
 
   const changeTheme = useCallback((next: ThemeId, origin: HTMLElement | null) => {
     themeReveal(
@@ -466,11 +479,9 @@ export function App() {
     );
   }, []);
 
-  const toggleInsights = useCallback(() => {
-    setInsightsOpen((open) => {
-      writePref(INSIGHTS_PREF_KEY, open ? '0' : '1');
-      return !open;
-    });
+  const toggleInsights = useCallback((open: boolean) => {
+    writePref(INSIGHTS_PREF_KEY, open ? '1' : '0');
+    setInsightsOpen(open);
   }, []);
 
   const removeLocalGroup = useCallback(
@@ -478,19 +489,17 @@ export function App() {
       const removed = localApps.filter((local) => group.listings.some((l) => l.id === local.id));
       let list = localApps;
       for (const local of removed) list = localStore.remove(local.id);
-      gridMotion.capture();
       setLocalApps(list);
-      showToast(`Stopped watching ${group.name}.`, {
+      showToast(`Removed ${group.name}`, {
         label: 'Undo',
         run: () => {
           let restored = localStore.list();
           for (const local of removed) restored = localStore.save(local);
-          gridMotion.capture();
           setLocalApps(restored);
         },
       });
     },
-    [localApps, localStore, showToast, gridMotion],
+    [localApps, localStore, showToast],
   );
 
   const toggleWatch = useCallback(
@@ -509,112 +518,6 @@ export function App() {
     [removeLocalGroup, watchedIds, watchlist],
   );
 
-  /* ------------------------ Detail panel + deep links ---------------------- */
-
-  const openDetail = useCallback((listingId: string, trigger: HTMLElement | null, push = true) => {
-    if (trigger) detailTrigger.current = trigger;
-    if (push) {
-      try {
-        history.pushState({ appwatch: 'detail' }, '', `#app=${encodeURIComponent(listingId)}`);
-        pushedDetail.current = true;
-      } catch {
-        location.hash = `app=${encodeURIComponent(listingId)}`;
-      }
-    }
-    openCounter.current += 1;
-    setSelection({
-      listingId,
-      openId: openCounter.current,
-      origin: iconFor(trigger),
-      closing: false,
-    });
-  }, []);
-
-  const restoreFocus = useCallback((groupKey: string | null) => {
-    const trigger = detailTrigger.current;
-    detailTrigger.current = null;
-    const fallback = groupKey
-      ? document.querySelector<HTMLElement>(`.card[data-key="${CSS.escape(groupKey)}"] .card__open`)
-      : null;
-    const target = trigger && document.contains(trigger) ? trigger : fallback;
-    target?.focus({ preventScroll: true });
-  }, []);
-
-  /** Start the exit animation; the panel calls finishClose when it's done. */
-  const beginClose = useCallback(() => {
-    setSelection((current) =>
-      current && !current.closing ? { ...current, closing: true } : current,
-    );
-  }, []);
-
-  const finishClose = useCallback(
-    (groupKey: string | null) => {
-      setSelection(null);
-      requestAnimationFrame(() => restoreFocus(groupKey));
-    },
-    [restoreFocus],
-  );
-
-  const requestClose = useCallback(() => {
-    if (
-      pushedDetail.current &&
-      (history.state as { appwatch?: string } | null)?.appwatch === 'detail'
-    ) {
-      // Popping our own history entry keeps Back/Forward honest; the
-      // popstate handler below starts the exit animation.
-      history.back();
-      return;
-    }
-    try {
-      history.replaceState(null, '', pathWithoutHash());
-    } catch {
-      location.hash = '';
-    }
-    beginClose();
-  }, [beginClose]);
-
-  // Back/Forward and hand-edited #app= links.
-  useEffect(() => {
-    const onPop = () => {
-      const id = readHashListingId();
-      if (id) {
-        if (id !== selection?.listingId) openDetail(id, null, false);
-      } else if (selection) {
-        pushedDetail.current = false;
-        beginClose();
-      }
-    };
-    addEventListener('popstate', onPop);
-    return () => removeEventListener('popstate', onPop);
-  }, [selection, openDetail, beginClose]);
-
-  const selectListing = useCallback((listingId: string) => {
-    try {
-      history.replaceState(history.state, '', `#app=${encodeURIComponent(listingId)}`);
-    } catch {
-      // Ignore: the panel still switches.
-    }
-    setSelection((current) => (current ? { ...current, listingId } : current));
-  }, []);
-
-  // The page behind the dialog is inert and doesn't scroll.
-  const dialogOpen = selection !== null && found !== null;
-  useEffect(() => {
-    document.documentElement.classList.toggle('has-dialog', dialogOpen);
-  }, [dialogOpen]);
-
-  // A deep link to an unknown app just clears itself once data is in.
-  useEffect(() => {
-    if (load.phase === 'ready' && selection && !found) {
-      setSelection(null);
-      try {
-        history.replaceState(null, '', pathWithoutHash());
-      } catch {
-        // Ignore.
-      }
-    }
-  }, [load.phase, selection, found]);
-
   /* ------------------------------- Discovery ------------------------------ */
 
   const parsedRef = useMemo(() => parseStoreInput(filters.query), [filters.query]);
@@ -624,7 +527,7 @@ export function App() {
     if (input.length < 2) return;
     if (view !== 'apps') changeView('apps');
     if (parsedRef && knownIds.has(appId(parsedRef.platform, parsedRef.storeId))) return;
-    if (parsedRef?.platform === 'google') return; // the panel offers a local watch; nothing to fetch
+    if (parsedRef?.platform === 'google') return; // offered as a local save; nothing to fetch
     setDiscovery({ phase: 'loading', input });
     const request =
       parsedRef?.platform === 'apple'
@@ -641,12 +544,10 @@ export function App() {
 
   const addDiscovered = useCallback(
     (app: DiscoveredApp) => {
-      const list = localStore.save(discoveredToLocal(app));
-      gridMotion.capture();
-      setLocalApps(list);
-      showToast(`Watching ${app.name} in this browser.`);
+      setLocalApps(localStore.save(discoveredToLocal(app)));
+      showToast(`Saved ${app.name} in this browser`);
     },
-    [localStore, showToast, gridMotion],
+    [localStore, showToast],
   );
 
   const addUnresolved = useCallback(
@@ -668,11 +569,10 @@ export function App() {
           resolved: false,
         }),
       );
-      gridMotion.capture();
       setLocalApps(list);
-      showToast(`Watching ${ref.storeId} in this browser.`);
+      showToast(`Saved ${ref.storeId} in this browser`);
     },
-    [localStore, showToast, gridMotion],
+    [localStore, showToast],
   );
 
   const refreshLocal = useCallback(
@@ -692,26 +592,19 @@ export function App() {
     [localApps, localStore, localRefreshing],
   );
 
-  const focusSearch = useCallback(() => {
-    const input = searchRef.current;
-    if (!input) return;
-    input.focus({ preventScroll: true });
-    input.scrollIntoView({ block: 'center', behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
-  }, []);
-
-  // "/" jumps to search from anywhere that isn't a text field.
+  // "/" jumps to search on the list page from anywhere that isn't a text field.
   useEffect(() => {
+    if (route.page !== 'list') return;
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return;
-      if (document.documentElement.classList.contains('has-dialog')) return;
       const target = event.target as HTMLElement | null;
       if (target?.closest('input, textarea, select, [contenteditable="true"]')) return;
       event.preventDefault();
-      focusSearch();
+      searchRef.current?.focus();
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [focusSearch]);
+  }, [route.page]);
 
   /* -------------------------------- Render -------------------------------- */
 
@@ -720,14 +613,9 @@ export function App() {
   const localGroupCount = groups.filter((g) => g.source === 'local').length;
   const trackedGroupCount = groups.length - localGroupCount;
 
-  // Only offer platforms something is actually tracked on.
-  const platformTabs: TabItem<'all' | Platform>[] = [
-    { value: 'all', label: presentPlatforms.length > 2 ? 'All' : 'Both stores' },
-    ...presentPlatforms.map((platform) => ({
-      value: platform,
-      label: storeLabel(platform),
-      icon: <span class={`dot dot--${platform}`} aria-hidden="true" />,
-    })),
+  const platformOptions: { value: 'all' | Platform; label: string }[] = [
+    { value: 'all', label: 'All platforms' },
+    ...presentPlatforms.map((platform) => ({ value: platform, label: storeLabel(platform) })),
   ];
 
   const collectionTabs = [
@@ -740,283 +628,269 @@ export function App() {
       ? (localApps.find((local) => local.id === found.listing.id) ?? null)
       : null;
 
-  return (
-    <>
-      <div class="layout" id="top" inert={dialogOpen}>
-        <a class="skip-link" href="#main">
-          Skip to content
-        </a>
-        <Header
-          status={status}
-          theme={theme}
-          onThemeChange={changeTheme}
-          onSearchJump={focusSearch}
-        />
-
-        <main id="main" class="main">
-          <section class="hero" aria-labelledby="hero-title">
-            <h1 class="hero__title" id="hero-title">
-              <span class="hero__line">Every app update,</span>{' '}
-              <span class="hero__line hero__line--accent">in one place.</span>
-            </h1>
-            <p class="hero__sub">
-              AppWatch follows {ready ? trackedGroupCount : 'popular'} apps across the{' '}
-              <span class="hero__store hero__store--apple">App Store</span>,{' '}
-              <span class="hero__store hero__store--google">Google Play</span>,{' '}
-              <span class="hero__store hero__store--windows">Windows</span> and{' '}
-              <span class="hero__store hero__store--mac">Mac</span>, checks them every two hours,
-              and keeps every release’s notes.
-            </p>
-            {ready && recentCount > 0 ? (
-              <button
-                type="button"
-                class={`hero__pulse${filters.recentOnly ? ' is-active' : ''}`}
-                aria-pressed={filters.recentOnly}
-                onClick={() => {
-                  if (view !== 'apps') changeView('apps');
-                  updateFilters({ recentOnly: !filters.recentOnly });
-                }}
-              >
-                <span class="hero__pulse-dot" aria-hidden="true" />
-                {recentCount} app{recentCount === 1 ? '' : 's'} updated in the last {RECENT_DAYS}{' '}
-                days
-              </button>
-            ) : null}
-          </section>
-
-          {ready && isDataStale(status) ? (
-            <p class="notice notice--warn" role="status">
-              The last completed check was more than {STALE_AFTER_HOURS} hours ago — this data may
-              be out of date.
-            </p>
-          ) : null}
-          {ready && !watchlist.persistent && (watchedIds.size > 0 || localApps.length > 0) ? (
-            <p class="notice" role="status">
-              Browser storage is unavailable, so watches added here will reset when you leave.
-            </p>
-          ) : null}
-
-          <div class="controls">
-            <div class="controls__top">
-              <SlidingTabs
-                class="view-switch"
-                variant="pill"
-                role="tablist"
-                label="View"
-                controls="view-panel"
-                value={view}
-                onChange={changeView}
-                items={[
-                  { value: 'apps', label: 'Apps', icon: <GridIcon size={15} /> },
-                  { value: 'updates', label: 'Updates', icon: <PulseIcon size={15} /> },
-                ]}
-              />
-              <SearchBar
-                value={filters.query}
-                inputRef={searchRef}
-                onSubmit={submitSearch}
-                onInput={(query) => {
-                  updateFilters({ query });
-                  setDiscovery({ phase: 'idle' });
-                }}
-              />
-            </div>
-          </div>
-
-          {ready ? (
-            <div class="collections">
-              <SlidingTabs
-                class="collections__tabs"
-                variant="underline"
-                role="radiogroup"
-                label="Collections"
-                value={filters.collection}
-                onChange={(collection) => updateFilters({ collection })}
-                items={collectionTabs}
-              />
-            </div>
-          ) : null}
-
-          {ready ? (
-            <div class="filters-area">
-              <div class="filters">
-                <SlidingTabs
-                  class="store-switch"
-                  variant="pill"
-                  role="radiogroup"
-                  label="Platform"
-                  value={filters.platform}
-                  onChange={(platform) => updateFilters({ platform })}
-                  items={platformTabs}
-                />
-                {view === 'apps' ? (
-                  <button
-                    type="button"
-                    class={`chip${filters.recentOnly ? ' is-on' : ''}`}
-                    aria-pressed={filters.recentOnly}
-                    onClick={() => updateFilters({ recentOnly: !filters.recentOnly })}
-                  >
-                    <span class="chip__check" aria-hidden="true">
-                      <CheckIcon size={12} />
-                    </span>
-                    This week
-                  </button>
-                ) : null}
-                <button
-                  type="button"
-                  class={`chip${filters.watchedOnly ? ' is-on' : ''}`}
-                  aria-pressed={filters.watchedOnly}
-                  onClick={() => updateFilters({ watchedOnly: !filters.watchedOnly })}
-                >
-                  <span class="chip__check" aria-hidden="true">
-                    <CheckIcon size={12} />
-                  </span>
-                  Watching
-                </button>
-                <span class="filters__spacer" />
-                {view === 'apps' ? (
-                  <Dropdown
-                    label="Sort apps"
-                    options={SORT_OPTIONS}
-                    value={filters.sort}
-                    onChange={(sort) => updateFilters({ sort })}
-                    align="end"
-                    buttonContent={
-                      <>
-                        <span class="dropdown__prefix">Sort</span>
-                        {SORT_OPTIONS.find((o) => o.value === filters.sort)?.label}
-                      </>
-                    }
-                  />
-                ) : null}
-              </div>
-              <p class="results" aria-live="polite">
-                {view === 'apps'
-                  ? `${filteredGroups.length} of ${groups.length} apps`
-                  : historyLoad.phase === 'ready'
-                    ? `${timeline.length} recorded release${timeline.length === 1 ? '' : 's'}`
-                    : 'Loading release history…'}
-                {active ? (
-                  <button type="button" class="results__clear" onClick={clearFilters}>
-                    Clear filters
-                  </button>
-                ) : null}
-              </p>
-            </div>
-          ) : null}
-
-          <div
-            class="view"
-            ref={viewRef}
-            id="view-panel"
-            role="tabpanel"
-            aria-label={view === 'apps' ? 'Apps' : 'Updates'}
-          >
-            {load.phase === 'loading' ? <LoadingGrid /> : null}
-            {load.phase === 'error' ? (
-              <LoadFailed message={load.message} onRetry={() => fetchData()} />
-            ) : null}
-
-            {ready && view === 'apps' ? (
-              <>
-                <DiscoverySection
-                  query={filters.query}
-                  parsedRef={parsedRef}
-                  knownIds={knownIds}
-                  state={discovery}
-                  onLookup={submitSearch}
-                  onAddDiscovered={addDiscovered}
-                  onAddUnresolved={addUnresolved}
-                />
-                {groups.length === 0 ? (
-                  <NoAppsYet />
-                ) : filteredGroups.length === 0 ? (
-                  <NoResults onClear={clearFilters} searching={filters.query.trim().length > 1} />
-                ) : (
-                  <div class="grid" ref={gridMotion.attach}>
-                    {filteredGroups.map((group) => (
-                      <AppCard
-                        key={group.key}
-                        group={group}
-                        watched={isGroupWatched(group, watchedIds)}
-                        open={found?.group.key === group.key}
-                        rhythm={
-                          historyLoad.phase === 'ready'
-                            ? (groupRhythm.get(group.key)?.line ?? null)
-                            : undefined
-                        }
-                        onToggleWatch={toggleWatch}
-                        onOpen={openDetail}
-                      />
-                    ))}
-                  </div>
-                )}
-              </>
-            ) : null}
-
-            {ready && view === 'updates' ? (
-              historyLoad.phase === 'ready' ? (
-                <>
-                  <UpNext items={upNext} onOpen={openDetail} now={rhythmNow} />
-                  <UpdatesTimeline
-                    motion={timelineMotion}
-                    events={timeline}
-                    onOpen={openDetail}
-                    onClearFilters={clearFilters}
-                    filtered={active}
-                  />
-                </>
-              ) : historyLoad.phase === 'error' ? (
-                <LoadFailed
-                  message="Release history could not be loaded."
-                  onRetry={() => setHistoryLoad({ phase: 'idle' })}
-                />
-              ) : (
-                <div class="timeline timeline--loading" aria-hidden="true">
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <span class="skeleton skeleton--release" key={i} />
-                  ))}
-                </div>
-              )
-            ) : null}
-          </div>
-
-          {ready ? (
-            <InsightsPanel
-              listings={trackedListings}
-              unresolved={unresolved}
-              appCount={trackedGroupCount}
-              localCount={localGroupCount}
-              status={status}
-              dueSoon={dueSoon}
-              open={insightsOpen}
-              onToggle={toggleInsights}
-            />
-          ) : null}
-        </main>
-
-        <Footer />
-      </div>
-
-      {selection && found ? (
-        <AppDetail
-          key={selection.openId}
-          origin={selection.origin}
-          onRequestClose={requestClose}
-          onClosed={() => finishClose(found.group.key)}
+  const appPage =
+    route.page === 'app' ? (
+      found ? (
+        <AppPage
+          key={found.group.key}
           group={found.group}
           listing={found.listing}
           collectionLabel={collectionLabels.get(found.group.collection) ?? null}
           history={historyFor(historyLoad, found.listing.id)}
           watched={isGroupWatched(found.group, watchedIds)}
-          closing={selection.closing}
+          now={rhythmNow}
           onSelectListing={selectListing}
           onToggleWatch={() => toggleWatch(found.group)}
+          onBack={goBack}
           onRefreshLocal={selectedLocal ? refreshLocal : undefined}
           localRefreshing={localRefreshing}
           localAddedAt={selectedLocal?.addedAt ?? null}
         />
-      ) : null}
+      ) : load.phase === 'error' ? (
+        <LoadFailed message={load.message} onRetry={() => fetchData()} />
+      ) : ready ? (
+        <AppNotFound />
+      ) : (
+        <div class="app-page" aria-hidden="true">
+          <div class="loading-lines">
+            <span class="skeleton skeleton--icon skeleton--icon-lg" />
+            <span class="skeleton skeleton--line" style={{ width: '40%' }} />
+            <span class="skeleton skeleton--line" style={{ width: '25%' }} />
+          </div>
+        </div>
+      )
+    ) : null;
+
+  return (
+    <>
+      <div class="layout">
+        <a
+          class="skip-link"
+          href="#main"
+          onClick={(event) => {
+            event.preventDefault();
+            mainRef.current?.focus();
+          }}
+        >
+          Skip to content
+        </a>
+        <Header status={status} theme={theme} onThemeChange={changeTheme} />
+
+        <main id="main" class="main" ref={mainRef} tabIndex={-1}>
+          {appPage ?? (
+            <div class="list-page">
+              <section class="intro" aria-labelledby="intro-title">
+                <h1 class="intro__title" id="intro-title">
+                  App updates
+                </h1>
+                <p class="intro__sub">
+                  Version history and release notes for {ready ? trackedGroupCount : 'popular'} apps
+                  on the App Store, Google Play, Windows and Mac. Checked every two hours.
+                </p>
+              </section>
+
+              {ready && isDataStale(status) ? (
+                <p class="notice notice--warn" role="status">
+                  The last check was more than {STALE_AFTER_HOURS} hours ago, so this may be out of
+                  date.
+                </p>
+              ) : null}
+              {ready && !watchlist.persistent && (watchedIds.size > 0 || localApps.length > 0) ? (
+                <p class="notice" role="status">
+                  Your browser is blocking storage, so your watchlist won’t be saved.
+                </p>
+              ) : null}
+
+              <div class="toolbar">
+                <Tabs
+                  class="view-tabs"
+                  variant="pill"
+                  role="tablist"
+                  label="View"
+                  controls="view-panel"
+                  value={view}
+                  onChange={changeView}
+                  items={[
+                    { value: 'apps', label: 'Apps', icon: <GridIcon size={15} /> },
+                    { value: 'updates', label: 'Updates', icon: <PulseIcon size={15} /> },
+                  ]}
+                />
+                <SearchBar
+                  value={filters.query}
+                  inputRef={searchRef}
+                  onSubmit={submitSearch}
+                  onInput={(query) => {
+                    updateFilters({ query });
+                    setDiscovery({ phase: 'idle' });
+                  }}
+                />
+              </div>
+
+              {ready ? (
+                <div class="categories">
+                  <Tabs
+                    variant="line"
+                    role="radiogroup"
+                    label="Categories"
+                    value={filters.collection}
+                    onChange={(collection) => updateFilters({ collection })}
+                    items={collectionTabs}
+                  />
+                </div>
+              ) : null}
+
+              {ready ? (
+                <div class="filters">
+                  <Dropdown
+                    label="Platform"
+                    options={platformOptions}
+                    value={filters.platform}
+                    onChange={(platform) => updateFilters({ platform })}
+                  />
+                  {view === 'apps' ? (
+                    <Chip
+                      on={filters.recentOnly}
+                      onToggle={() => updateFilters({ recentOnly: !filters.recentOnly })}
+                    >
+                      Updated this week
+                    </Chip>
+                  ) : null}
+                  <Chip
+                    on={filters.watchedOnly}
+                    onToggle={() => updateFilters({ watchedOnly: !filters.watchedOnly })}
+                  >
+                    Watching
+                  </Chip>
+                  <span class="filters__spacer" />
+                  {view === 'apps' ? (
+                    <Dropdown
+                      label="Sort by"
+                      options={SORT_OPTIONS}
+                      value={filters.sort}
+                      onChange={(sort) => updateFilters({ sort })}
+                      align="end"
+                      buttonContent={
+                        <>
+                          <span class="dropdown__prefix">Sort:</span>
+                          {SORT_OPTIONS.find((o) => o.value === filters.sort)?.label}
+                        </>
+                      }
+                    />
+                  ) : null}
+                </div>
+              ) : null}
+
+              {ready ? (
+                <p class="results" aria-live="polite">
+                  {view === 'apps'
+                    ? filteredGroups.length === groups.length
+                      ? `${groups.length} apps`
+                      : `${filteredGroups.length} of ${groups.length} apps`
+                    : historyLoad.phase === 'ready'
+                      ? `${timeline.length} update${timeline.length === 1 ? '' : 's'} recorded`
+                      : 'Loading updates…'}
+                  {active ? (
+                    <button type="button" class="link-button" onClick={clearFilters}>
+                      Clear filters
+                    </button>
+                  ) : null}
+                </p>
+              ) : null}
+
+              <div
+                class="view"
+                id="view-panel"
+                role="tabpanel"
+                aria-label={view === 'apps' ? 'Apps' : 'Updates'}
+              >
+                {load.phase === 'loading' ? <LoadingGrid /> : null}
+                {load.phase === 'error' ? (
+                  <LoadFailed message={load.message} onRetry={() => fetchData()} />
+                ) : null}
+
+                {ready && view === 'apps' ? (
+                  <>
+                    <DiscoverySection
+                      query={filters.query}
+                      parsedRef={parsedRef}
+                      knownIds={knownIds}
+                      state={discovery}
+                      onLookup={submitSearch}
+                      onAddDiscovered={addDiscovered}
+                      onAddUnresolved={addUnresolved}
+                    />
+                    {groups.length === 0 ? (
+                      <NoAppsYet />
+                    ) : filteredGroups.length === 0 ? (
+                      <NoResults
+                        onClear={clearFilters}
+                        searching={filters.query.trim().length > 1}
+                      />
+                    ) : (
+                      <div class="grid">
+                        {filteredGroups.map((group) => (
+                          <AppCard
+                            key={group.key}
+                            group={group}
+                            watched={isGroupWatched(group, watchedIds)}
+                            rhythm={
+                              historyLoad.phase === 'ready'
+                                ? (groupRhythm.get(group.key)?.line ?? null)
+                                : historyLoad.phase === 'error'
+                                  ? null
+                                  : undefined
+                            }
+                            onToggleWatch={toggleWatch}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : null}
+
+                {ready && view === 'updates' ? (
+                  historyLoad.phase === 'ready' ? (
+                    <>
+                      <ExpectedSoon items={expected} now={rhythmNow} />
+                      <UpdatesTimeline
+                        events={timeline}
+                        onClearFilters={clearFilters}
+                        filtered={active}
+                      />
+                    </>
+                  ) : historyLoad.phase === 'error' ? (
+                    <LoadFailed
+                      message="The update history couldn’t be loaded."
+                      onRetry={() => setHistoryLoad({ phase: 'idle' })}
+                    />
+                  ) : (
+                    <div class="loading-lines" aria-hidden="true">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <span class="skeleton skeleton--row" key={i} />
+                      ))}
+                    </div>
+                  )
+                ) : null}
+              </div>
+
+              {ready ? (
+                <InsightsPanel
+                  listings={trackedListings}
+                  unresolved={unresolved}
+                  appCount={trackedGroupCount}
+                  localCount={localGroupCount}
+                  status={status}
+                  dueSoon={dueSoon}
+                  open={insightsOpen}
+                  onToggle={toggleInsights}
+                />
+              ) : null}
+            </div>
+          )}
+        </main>
+
+        <Footer />
+      </div>
 
       {toast ? <Toast key={toast.id} toast={toast} onDone={dropToast} /> : null}
     </>

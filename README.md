@@ -25,9 +25,9 @@
 
 ## Preview
 
-|                       Gray Dark (default)                       |                     App detail                     |
-| :-------------------------------------------------------------: | :------------------------------------------------: |
-| ![Dashboard, Gray Dark theme](assets/screenshots/dashboard.png) | ![App detail panel](assets/screenshots/detail.png) |
+|                       Gray Dark (default)                       |                     App page                      |
+| :-------------------------------------------------------------: | :-----------------------------------------------: |
+| ![Dashboard, Gray Dark theme](assets/screenshots/dashboard.png) | ![An app's page](assets/screenshots/app-page.png) |
 
 <details>
 <summary>Updates timeline, Light and MS Paint themes</summary>
@@ -83,30 +83,38 @@ their own browser.
 The **Updates** view lists every release AppWatch has recorded, newest first
 and grouped by day (Today, Yesterday, weekday, date). Each entry shows the app,
 the store, the version change (`1.4 → 1.5`) and the start of its release
-notes; tap one to open the full detail. It honors the same collection, store,
+notes; tap one to open that app's page. It honors the same collection, store,
 watchlist and search filters as the grid, and it only contains releases the
 checker actually saw — the version each listing had when tracking began
 (marked "first recorded") plus every change since.
 
-### Release rhythm and "next update" estimates
+### App pages
+
+Tapping an app opens its own page (a normal link, `#app=<platform>:<id>`, so
+Back, new tabs and shared links all work). It shows the current version's
+release notes, how often the app updates, every recorded version, and a
+details column (version, dates, price, rating, size, store ID and more). Apps
+on several platforms get a tab per platform. Going back returns to the list
+exactly where you left it.
+
+### How often apps update
 
 Every app's history doubles as a record of how often it ships. AppWatch looks
 at the gaps between each listing's recent releases (up to the last 12) and
 shows:
 
-- **On every card** — "Every ~6 days · next in ~3 days", "due now", or "later
-  than usual"; apps with fewer than four recorded releases say they're still
-  learning their rhythm.
-- **In the detail panel** — a Release rhythm panel with the typical gap, the
-  usual range (the middle half of the gaps), the most likely date and window
-  for the next update, releases in the last 30 days, a weekday pattern when
-  there is a clear one, and a confidence level. **Show charts & data** opens
-  a release timeline (with today and the likely window ahead), a column chart
-  of the days between releases (with the typical gap marked) and the same data
-  as a table. Charts are keyboard-navigable (arrow keys) and work in all three
-  themes.
-- **Sort → Next expected update**, an **Up next** row at the top of the
-  Updates view, and an "Expected within 3 days" count under Insights.
+- **On every card** — "Updates every ~6 days · next in ~3 days", "due now" or
+  "overdue"; apps with fewer than four recorded releases say there aren't
+  enough updates yet to estimate.
+- **On the app page** — an Update pattern section with the usual gap and
+  range (the middle half of the gaps), the most likely date for the next
+  update, updates in the last 30 days, a weekday pattern when there is a clear
+  one, and a confidence level, plus two charts (releases over time, with today
+  and the likely window ahead, and the days between releases with the usual
+  gap marked) and every release date as a table. Charts are keyboard-navigable
+  (arrow keys) and work in all three themes.
+- **Sort → Next update**, an **Expected soon** row at the top of the Updates
+  view, and an "Expected in the next 3 days" count under Stats.
 
 These are estimates from past behavior — app makers don't publish schedules —
 and the confidence level says how steady that behavior has been.
@@ -140,7 +148,7 @@ own site with no public version feed, so there's nothing reliable to check.
 
 The public dashboard keeps the complete **version record**: every version, its
 release date, its notes and (for desktop releases) the official announcement, stored in
-`public/data/history.json` and shown in the detail panel and the Updates
+`public/data/history.json` and shown on each app's page and in the Updates
 timeline. Get the installer itself from your school's link or the official
 page.
 
@@ -160,8 +168,8 @@ Three complete themes, selectable from the header:
   accent, no glow.
 - **Light** — clean off-white surfaces with the same blue accent family.
 - **MS Paint** — a playful tribute to classic desktop paint software: raised
-  and inset bevels, silver window chrome, a navy title bar in the detail view
-  and a color-palette strip in the footer. It uses no Microsoft trademarks,
+  and inset bevels, silver window chrome, white canvases with hard shadows and
+  a color-palette strip in the footer. It uses no Microsoft trademarks,
   logos or proprietary assets, and it stays fully readable and accessible.
 
 Your choice is saved in the browser (`localStorage`). On a first visit the
@@ -170,35 +178,21 @@ only ever active because you chose it.
 
 ### Motion
 
-Animation is part of the design, built on the Web Animations API rather than a
-library — every animation can be interrupted mid-flight and none of them ever
-blocks a click:
+Motion is kept small on purpose, so nothing can get stuck, overlap or hide
+content:
 
-- **Layout changes glide.** Switching collections, stores, filters or sort
-  order moves each card from where it was to its new slot; newcomers pop in
-  and leavers fade out where they stood. Change your mind halfway and the
-  cards simply turn around from wherever they are. The release timeline
-  behaves the same way.
-- **The detail panel** slides in from the side (a bottom sheet on phones)
-  while the tapped app icon flies into place; closing reverses from wherever
-  the panel got to and sends the icon home to its card.
-- **Scrolling** reveals cards and releases once, as they come into view —
-  nothing is ever left half-faded.
-- **Small things:** tab indicators glide (and only glide when the selection
-  changes), menus unfold, presses give, watching an app pops the star with a
-  spark burst, toasts count down and pause while hovered, and the theme
-  switch reveals the new theme in a circle — in chunky pixel steps for
-  MS Paint.
-- Hover and press effects use the separate `translate`/`scale` properties
-  so they never fight the layout animations, and nothing leaves a stacking
-  layer behind that could trap a menu under the cards.
-- Everything turns into an instant state change under
-  `prefers-reduced-motion`.
+- Pages and menus fade in quickly; hovering changes colors and borders only.
+- App icons show the app's first letter straight away and fade in once
+  loaded. Every icon is requested at one size and remembered for the visit, so
+  an icon that has loaded once shows instantly everywhere else, and one that
+  can't load keeps its letter instead of popping in later.
+- The theme switch reveals the new theme in a circle from the theme button (in
+  pixel steps for MS Paint), and watching an app gives the star a small pop.
+- Everything becomes an instant change under `prefers-reduced-motion`.
 
 ### Translating release notes
 
-Release notes that aren't in English get a **Translate** button in the detail
-panel. Browsers with built-in on-device translation (recent Chrome) translate
+Release notes that aren't in English get a **Translate** button. Browsers with built-in on-device translation (recent Chrome) translate
 right there — nothing is sent anywhere — with a "Show original" toggle.
 Everywhere else the button opens Google Translate in a new tab with the notes
 filled in. AppWatch itself never calls a translation service.
@@ -221,8 +215,8 @@ matters about how far that goes:
   through some third-party proxy.
 - Apps you add this way become **local watches**: they live only in your
   browser's localStorage, appear under a **Your watches** tab and are labeled
-  "Only in this browser", are _not_ checked by the scheduled pipeline, and
-  never sync anywhere. The detail view offers a copyable `apps.config.json`
+  "Saved in this browser", are _not_ checked by the scheduled pipeline, and
+  never sync anywhere. The app's page offers a copyable `apps.config.json`
   entry and a link to the tracking-request issue form if you want an app
   promoted to real repository tracking (nothing is ever submitted
   automatically).
@@ -239,7 +233,8 @@ architecture. What AppWatch does instead:
 - While the page is open, it revalidates the site's **own** tiny
   `status.json` every 5 minutes and whenever the tab regains focus (visible
   tabs only). When a newer run has been deployed, the new data is applied in
-  place automatically — no page reload, filters and open panels are kept.
+  place automatically — no page reload; filters, scroll position and the open
+  page are kept.
 - Every data request revalidates with the server (`cache: no-cache`), so
   GitHub Pages' 10-minute HTTP cache can never hide a fresh deploy.
 - Your browser never queries the App Store or Google Play for tracked data;
@@ -487,7 +482,7 @@ Google Play pages are fetched one at a time at least 1.5 seconds apart
 ## Privacy
 
 AppWatch collects nothing. No analytics, no cookies, no fingerprinting, no ads.
-Your watchlist, local watches, theme choice and panel preferences are kept in
+Your watchlist, local watches, theme choice and view preferences are kept in
 your browser's localStorage and never leave your device. The site talks to its
 own origin (data JSON), loads app icons from the stores' CDNs, and contacts
 Apple's public search API only when you explicitly use the discovery search.

@@ -15,7 +15,7 @@ interface DropdownProps<T extends string> {
   label: string;
   options: readonly DropdownOption<T>[];
   value: T;
-  /** Receives the option's button so callers can animate from it. */
+  /** Also receives the dropdown's button (the theme reveal grows from it). */
   onChange: (value: T, origin: HTMLElement | null) => void;
   /** What the closed button shows. Defaults to the selected option's label. */
   buttonContent?: ComponentChildren;
@@ -24,11 +24,10 @@ interface DropdownProps<T extends string> {
 }
 
 /**
- * Select-style dropdown (button + listbox popup). The menu unfolds from the
- * button with a spring and its options cascade in; the chevron flips. Keyboard
- * follows the WAI-ARIA listbox pattern: Enter/Space/ArrowDown open, arrows
- * move, Home/End jump, Escape closes and restores focus, Tab or an outside
- * click closes.
+ * Select-style dropdown (button + listbox popup). Keyboard follows the
+ * WAI-ARIA listbox pattern: Enter/Space/ArrowDown open, arrows move,
+ * Home/End jump, Escape closes and restores focus, Tab or an outside click
+ * closes.
  */
 export function Dropdown<T extends string>({
   label,
@@ -133,16 +132,16 @@ export function Dropdown<T extends string>({
         role="listbox"
         aria-label={label}
         ref={listRef}
+        hidden={!open}
         onKeyDown={onMenuKeyDown}
       >
-        {options.map((option, index) => (
+        {options.map((option) => (
           <button
             type="button"
             key={option.value}
             role="option"
             aria-selected={option.value === value}
             class="dropdown__option"
-            style={{ '--i': index }}
             tabIndex={open ? 0 : -1}
             onClick={(event) => {
               const origin = buttonRef.current ?? event.currentTarget;
