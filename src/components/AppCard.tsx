@@ -3,114 +3,89 @@ import type { AppGroup } from '../lib/groups.ts';
 import { groupDeveloper, groupIconUrl, primaryListing } from '../lib/groups.ts';
 import { isRecentlyUpdated } from '../lib/filtering.ts';
 import { compactAgo, formatDate } from '../lib/format.ts';
-import { truncate } from '../shared/text.ts';
+import { appHref } from '../lib/route.ts';
 import { AppIcon } from './AppIcon.tsx';
-import { AlertIcon, RhythmIcon } from './Icons.tsx';
+import { AlertIcon } from './Icons.tsx';
 import { storeLabel } from './StoreBadge.tsx';
 import { WatchButton } from './WatchButton.tsx';
 
 interface AppCardProps {
   group: AppGroup;
   watched: boolean;
-  open: boolean;
   /**
-   * One-line release rhythm ("Every ~6 days · next in ~3 days"); null when
-   * there isn't enough history, undefined while history is still loading.
+   * How often it updates ("Updates every ~6 days · next in ~3 days"); null
+   * when there isn't enough history, undefined while history is loading.
    */
   rhythm?: string | null;
   onToggleWatch: (group: AppGroup) => void;
-  onOpen: (listingId: string, trigger: HTMLElement) => void;
 }
 
 /**
- * One app, across both stores. States are deliberately distinct: hover lifts
- * the card, keyboard focus rings the whole card, "New" marks a store row that
- * updated this week, a filled star means watched, and the open card keeps an
- * accent outline while its detail panel is showing.
+ * One app across all its platforms. The whole card is a link to the app's
+ * page; the star toggles the watchlist without opening it.
  */
-function AppCardImpl({ group, watched, open, rhythm, onToggleWatch, onOpen }: AppCardProps) {
+function AppCardImpl({ group, watched, rhythm, onToggleWatch }: AppCardProps) {
   const primary = primaryListing(group);
   const developer = groupDeveloper(group);
-  const notes = primary.releaseNotes ? truncate(primary.releaseNotes, 140) : null;
-  const recent = group.listings.some((listing) => isRecentlyUpdated(listing));
   const local = group.source === 'local';
 
-  const classes = ['card'];
-  if (recent) classes.push('card--fresh');
-  if (open) classes.push('card--open');
-
   return (
-    <article class={classes.join(' ')} data-key={group.key}>
-      <button
-        type="button"
-        class="card__open"
-        aria-label={`${group.name}: show details`}
-        onClick={(event) => onOpen(primary.id, event.currentTarget)}
-      />
-      <header class="card__head">
-        <AppIcon name={group.name} iconUrl={groupIconUrl(group)} size={52} class="card__icon" />
+    <article class="card" data-key={group.key}>
+      <div class="card__head">
+        <AppIcon name={group.name} iconUrl={groupIconUrl(group)} size={48} />
         <div class="card__title">
-          <h3 class="card__name">{group.name}</h3>
-          <p class="card__dev">{local ? 'Watched in this browser' : (developer ?? ' ')}</p>
+          <h3 class="card__name">
+            <a class="card__link" href={appHref(primary.id)}>
+              {group.name}
+            </a>
+          </h3>
+          <p class="card__dev">{local ? 'Saved in this browser' : (developer ?? ' ')}</p>
         </div>
         <WatchButton appName={group.name} watched={watched} onToggle={() => onToggleWatch(group)} />
-      </header>
+      </div>
 
       <ul class="card__stores">
         {group.listings.map((listing) => {
           const fresh = isRecentlyUpdated(listing);
-          const when = compactAgo(listing.releaseDate);
           return (
-            <li
-              class={`store-row store-row--${listing.platform}${fresh ? ' store-row--fresh' : ''}`}
-              key={listing.id}
-            >
+            <li class="store-row" key={listing.id}>
               <span class="store-row__store">
-                <span class="store-row__dot" aria-hidden="true" />
+                <span class={`dot dot--${listing.platform}`} aria-hidden="true" />
                 {storeLabel(listing.platform)}
               </span>
-              <span class="store-row__version">
-                {listing.currentVersion ? (
-                  <span class="mono store-row__number" title={listing.currentVersion}>
-                    {listing.currentVersion}
-                  </span>
-                ) : (
-                  <span class="store-row__varies" title="The store lists no single version">
-                    {listing.source === 'local' ? '—' : 'Varies'}
+              <span class="store-row__version mono" title={listing.currentVersion ?? undefined}>
+                {listing.currentVersion ?? (
+                  <span class="store-row__varies" title="This store doesn't list one version">
+                    {local ? '—' : 'Varies'}
                   </span>
                 )}
-                {listing.checkStatus === 'error' ? (
-                  <span
-                    class="store-row__alert"
-                    title={`Last check failed: ${listing.checkError ?? 'unknown error'}`}
-                  >
-                    <AlertIcon size={13} />
-                    <span class="visually-hidden">Last check failed</span>
-                  </span>
-                ) : null}
               </span>
+              {listing.checkStatus === 'error' ? (
+                <span
+                  class="store-row__alert"
+                  title={`Last check failed: ${listing.checkError ?? 'unknown error'}`}
+                >
+                  <AlertIcon size={13} />
+                  <span class="visually-hidden">Last check failed</span>
+                </span>
+              ) : null}
               <span
-                class="store-row__when"
+                class={`store-row__when${fresh ? ' is-fresh' : ''}`}
                 title={
                   listing.releaseDate ? `Released ${formatDate(listing.releaseDate)}` : undefined
                 }
               >
                 {fresh ? <span class="visually-hidden">New this week, </span> : null}
-                {when ?? ''}
+                {compactAgo(listing.releaseDate) ?? ''}
               </span>
             </li>
           );
         })}
       </ul>
 
-      {notes ? <p class="card__notes">{notes}</p> : null}
-
-      {local ? null : rhythm === undefined ? (
-        <span class="skeleton skeleton--line card__rhythm-skeleton" aria-hidden="true" />
-      ) : (
-        <p class={`card__rhythm${rhythm ? '' : ' card__rhythm--learning'}`}>
-          <RhythmIcon size={13} />
-          {rhythm ?? 'Learning its release rhythm'}
+      {local ? null : (
+        <p class={`card__rhythm${rhythm ? '' : ' card__rhythm--none'}`}>
+          {rhythm === undefined ? ' ' : (rhythm ?? 'Not enough updates yet to estimate')}
         </p>
       )}
     </article>

@@ -27,9 +27,9 @@ export function Footer() {
           <span class="brand__watch">Watch</span>
           <span class="site-footer__copy">© 2026 DawsonCodes · MIT License</span>
         </p>
-        <p class="site-footer__privacy">
-          No analytics, no cookies, no accounts. Your watchlist, local watches and theme stay in
-          this browser. Store data is checked every two hours — not in real time.
+        <p class="site-footer__note">
+          No analytics, cookies or accounts. Your watchlist and theme are saved in this browser
+          only. Apps are checked every two hours.
         </p>
         <p class="site-footer__links">
           <a
@@ -37,14 +37,14 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Source on GitHub
+            GitHub
           </a>
           <a
             href="https://github.com/DawsonCodes/AppWatch/issues"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Report an issue
+            Report a problem
           </a>
         </p>
       </div>

@@ -111,9 +111,9 @@ describe('wording helpers', () => {
     const history = entries(0, 7, 14, 21, 28);
     expect(
       rhythmLine(computeCadence(history, new Date(BASE + 30 * DAY)), new Date(BASE + 30 * DAY)),
-    ).toBe('Every ~7 days · next in ~5 days');
+    ).toBe('Updates every ~7 days · next in ~5 days');
     expect(rhythmLine(computeCadence(history, new Date(BASE + 35 * DAY)))).toBe(
-      'Every ~7 days · due now',
+      'Updates every ~7 days · due now',
     );
     expect(rhythmLine(computeCadence(entries(0, 1)))).toBeNull();
   });

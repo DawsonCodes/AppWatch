@@ -16,22 +16,20 @@ interface InsightsPanelProps {
   /** Apps expected to update within three days (null until history loads). */
   dueSoon?: number | null;
   open: boolean;
-  onToggle: () => void;
+  onToggle: (open: boolean) => void;
 }
 
 function Stat({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
-    <div class="insights__stat">
-      <dt>{label}</dt>
-      <dd>
-        <span class="insights__value">{value}</span>
-        {detail ? <span class="insights__detail">{detail}</span> : null}
-      </dd>
+    <div class="stat">
+      <dt class="stat__label">{label}</dt>
+      <dd class="stat__value">{value}</dd>
+      {detail ? <dd class="stat__detail">{detail}</dd> : null}
     </div>
   );
 }
 
-/** Quiet, collapsible tracking stats. The open/closed choice persists locally. */
+/** Tracking stats, collapsed by default. The open/closed choice is remembered. */
 export function InsightsPanel({
   listings,
   unresolved,
@@ -55,80 +53,61 @@ export function InsightsPanel({
     `${appCount} apps`,
     recent > 0 ? `${recent} updated this week` : null,
     failing > 0 ? `${failing} failing` : null,
-    unresolved.length > 0 ? `${unresolved.length} unresolved` : null,
-    lastRun ? `checked ${lastRun}` : 'no checks yet',
+    lastRun ? `checked ${lastRun}` : 'not checked yet',
   ]
     .filter(Boolean)
     .join(' · ');
 
   return (
-    <section class={`insights${open ? ' is-open' : ''}`} aria-label="Tracking insights">
-      <button
-        type="button"
-        class="insights__toggle"
-        aria-expanded={open}
-        aria-controls="insights-body"
-        onClick={onToggle}
-      >
+    <details
+      class="insights"
+      open={open}
+      onToggle={(event) => {
+        const next = (event.currentTarget as HTMLDetailsElement).open;
+        if (next !== open) onToggle(next);
+      }}
+    >
+      <summary class="insights__summary">
         <ChevronDownIcon size={15} />
-        <span class="insights__title">Insights</span>
-        <span class="insights__summary">{summary}</span>
-      </button>
-      <div class="insights__reveal" inert={!open}>
-        <div class="insights__clip">
-          <dl class="insights__grid" id="insights-body">
-            <Stat
-              label="Tracked apps"
-              value={String(appCount)}
-              detail={`${listings.length} listings`}
-            />
-            {perPlatform.map(({ platform, count }) => (
-              <Stat
-                key={platform}
-                label={storeLabel(platform)}
-                value={String(count)}
-                detail={count === 1 ? 'listing' : 'listings'}
-              />
-            ))}
-            <Stat label={`Updated in ${RECENT_DAYS} days`} value={String(recent)} />
-            <Stat
-              label="Failing checks"
-              value={String(failing)}
-              detail={failing > 0 ? 'showing last good data' : 'all healthy'}
-            />
-            <Stat
-              label="Last check"
-              value={lastRun ?? 'not yet'}
-              detail={
-                status?.lastRunAt ? (formatDateTime(status.lastRunAt) ?? undefined) : undefined
-              }
-            />
-            <Stat label="Schedule" value="Every 2 hours" detail="automatic, every tracked app" />
-            {dueSoon !== null ? (
-              <Stat
-                label="Expected within 3 days"
-                value={String(dueSoon)}
-                detail="from each app’s release rhythm"
-              />
-            ) : null}
-            <Stat
-              label="Your local watches"
-              value={String(localCount)}
-              detail="this browser only"
-            />
-            {unresolved.length > 0 ? (
-              <Stat
-                label="Couldn’t resolve"
-                value={String(unresolved.length)}
-                detail={`${unresolved
-                  .slice(0, 4)
-                  .map((app) => app.storeId)
-                  .join(', ')}${unresolved.length > 4 ? ', …' : ''}`}
-              />
-            ) : null}
-          </dl>
-        </div>
-      </div>
-    </section>
+        <span class="insights__title">Stats</span>
+        <span class="insights__line">{summary}</span>
+      </summary>
+      <dl class="stats stats--wide">
+        <Stat
+          label="Tracked apps"
+          value={String(appCount)}
+          detail={`${listings.length} listings`}
+        />
+        {perPlatform.map(({ platform, count }) => (
+          <Stat key={platform} label={storeLabel(platform)} value={String(count)} />
+        ))}
+        <Stat label={`Updated in the last ${RECENT_DAYS} days`} value={String(recent)} />
+        <Stat
+          label="Failing checks"
+          value={String(failing)}
+          detail={failing > 0 ? 'Showing the last good data' : 'All working'}
+        />
+        <Stat
+          label="Last check"
+          value={lastRun ?? 'Not yet'}
+          detail={status?.lastRunAt ? (formatDateTime(status.lastRunAt) ?? undefined) : undefined}
+        />
+        <Stat label="Checks" value="Every 2 hours" />
+        {dueSoon !== null ? (
+          <Stat label="Expected in the next 3 days" value={String(dueSoon)} />
+        ) : null}
+        <Stat label="Saved in this browser" value={String(localCount)} />
+        {unresolved.length > 0 ? (
+          <Stat
+            label="Couldn’t find"
+            value={String(unresolved.length)}
+            detail={`${unresolved
+              .slice(0, 4)
+              .map((app) => app.storeId)
+              .join(', ')}${unresolved.length > 4 ? ', …' : ''}`}
+          />
+        ) : null}
+      </dl>
+    </details>
   );
 }

@@ -3,13 +3,12 @@ import { formatDateTime, relativeTime } from '../lib/format.ts';
 import type { ThemeId } from '../lib/theme.ts';
 import { THEMES } from '../lib/theme.ts';
 import { Dropdown } from './Dropdown.tsx';
-import { GitHubIcon, LogoIcon, PaletteIcon, SearchIcon } from './Icons.tsx';
+import { GitHubIcon, LogoIcon, PaletteIcon } from './Icons.tsx';
 
 interface HeaderProps {
   status: StatusFile | null;
   theme: ThemeId;
   onThemeChange: (theme: ThemeId, origin: HTMLElement | null) => void;
-  onSearchJump: () => void;
 }
 
 /** Compact check-health chip: a dot plus short text, never color alone. */
@@ -18,7 +17,7 @@ function HealthChip({ status }: { status: StatusFile | null }) {
     return (
       <span class="health health--unknown" title="The scheduled checker has not run yet">
         <span class="health__dot" aria-hidden="true" />
-        <span class="health__text">No checks yet</span>
+        <span class="health__text">Not checked yet</span>
       </span>
     );
   }
@@ -32,7 +31,7 @@ function HealthChip({ status }: { status: StatusFile | null }) {
       >
         <span class="health__dot" aria-hidden="true" />
         <span class="health__text">
-          {status.errorCount} failing<span class="health__when"> · {when}</span>
+          {status.errorCount} failing<span class="health__long"> · {when}</span>
         </span>
       </span>
     );
@@ -41,18 +40,19 @@ function HealthChip({ status }: { status: StatusFile | null }) {
     <span class="health health--ok" title={`All ${status.totalApps} checks passing · ${exact}`}>
       <span class="health__dot" aria-hidden="true" />
       <span class="health__text">
-        Checked<span class="health__when"> {when}</span>
+        <span class="health__long">Checked </span>
+        {when}
       </span>
     </span>
   );
 }
 
-export function Header({ status, theme, onThemeChange, onSearchJump }: HeaderProps) {
+export function Header({ status, theme, onThemeChange }: HeaderProps) {
   const current = THEMES.find((option) => option.id === theme);
   return (
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="brand" href="#top" aria-label="AppWatch — back to top">
+        <a class="brand" href="#" aria-label="AppWatch home">
           <LogoIcon size={28} />
           <span class="brand__name">
             <span class="brand__app">App</span>
@@ -63,15 +63,6 @@ export function Header({ status, theme, onThemeChange, onSearchJump }: HeaderPro
         <HealthChip status={status} />
 
         <div class="site-header__actions">
-          <button
-            type="button"
-            class="icon-button search-jump"
-            aria-label="Search apps"
-            title="Search apps ( / )"
-            onClick={onSearchJump}
-          >
-            <SearchIcon size={17} />
-          </button>
           <Dropdown
             label="Theme"
             options={THEMES.map(({ id, label, description }) => ({

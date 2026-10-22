@@ -192,17 +192,17 @@ export function relativeDay(time: number, now: Date = new Date()): string {
   return diff > 0 ? `in ${diff} days` : `${-diff} days ago`;
 }
 
-/** One-line summary for cards: "Every ~6 days · next in ~3 days". */
+/** One-line summary for cards: "Updates every ~6 days · next in ~3 days". */
 export function rhythmLine(cadence: Cadence, now: Date = new Date()): string | null {
   if (cadence.state === 'insufficient' || !cadence.typicalDays || !cadence.next) return null;
-  const every = `Every ~${describeDays(cadence.typicalDays).replace(/^about /, '')}`;
+  const every = `Updates every ~${describeDays(cadence.typicalDays).replace(/^about /, '')}`;
   switch (cadence.state) {
     case 'upcoming':
       return `${every} · next ${relativeDay(cadence.next.likely, now).replace(/^in /, 'in ~')}`;
     case 'due':
       return `${every} · due now`;
     case 'overdue':
-      return `${every} · later than usual`;
+      return `${every} · overdue`;
     default:
       return null;
   }

@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Rebuilt the interface. Each app now has its own page (a normal link, so
+  Back, new tabs and shared links work) instead of a side panel, with What's
+  new, Update pattern, Version history and a Details column; going back
+  returns to the list where you left it.
+- App icons are reliable: the app's first letter shows until the icon loads,
+  every icon is requested at one size and remembered for the visit, so an icon
+  never disappears or pops back in when you open or leave an app.
+- Motion is now minimal: quick fades and color changes only. The circular
+  theme reveal and the star pop stay. Card glides, icon flights, slide-in
+  panels, scroll reveals and spark effects are gone.
+- Simpler cards (no notes excerpt), a platform dropdown instead of a tab row,
+  a compact page intro, and plainer wording throughout ("Updates every ~6
+  days · next in ~3 days", "Update pattern", "Expected soon", "Stats").
+
 ### Added
 
 - Release rhythm for every listing, estimated from its recorded history: a
