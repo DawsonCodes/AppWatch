@@ -799,6 +799,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261021.51",
+        "releaseDate": "2026-10-22T19:13:00.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
+      {
         "version": "1.261020.20",
         "releaseDate": "2026-10-21T03:32:38.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -2760,6 +2766,13 @@
     ],
     "windows:winget:Microsoft.Copilot": [
       {
+        "version": "156.0.4314.42",
+        "releaseDate": "2026-10-22T23:06:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T00:39:54.209Z",
+        "url": null
+      },
+      {
         "version": "155.0.4283.62",
         "releaseDate": "2026-10-16T22:53:47.000Z",
         "releaseNotes": null,
@@ -3863,6 +3876,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1264",
+        "releaseDate": "2026-10-21T17:14:34.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
       {
         "version": "4.1.1263",
         "releaseDate": "2026-10-19T20:33:05.000Z",
@@ -9692,6 +9711,12 @@
     "google:com.google.android.gm": [
       {
         "version": null,
+        "releaseDate": "2026-10-22T19:41:42.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-21T00:01:25.000Z",
         "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
         "detectedAt": "2026-10-21T07:39:33.126Z"
@@ -13641,6 +13666,12 @@
     ],
     "mac:homebrew:notion": [
       {
+        "version": "7.40.1",
+        "releaseDate": "2026-10-22T22:20:32.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
+      {
         "version": "7.40.0",
         "releaseDate": "2026-10-20T22:27:23.000Z",
         "releaseNotes": null,
@@ -16970,6 +17001,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-10-22T22:01:41.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-20T18:03:58.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-10-20T21:37:12.588Z"
@@ -18674,6 +18711,13 @@
       }
     ],
     "windows:winget:Microsoft.Edge": [
+      {
+        "version": "156.0.4314.42",
+        "releaseDate": "2026-10-22T23:09:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T00:39:54.209Z",
+        "url": null
+      },
       {
         "version": "155.0.4283.62",
         "releaseDate": "2026-10-16T22:24:19.000Z",
@@ -23117,6 +23161,12 @@
     ],
     "google:com.amazon.mShop.android.shopping": [
       {
+        "version": "32.19.0.100",
+        "releaseDate": "2026-10-13T20:39:10.000Z",
+        "releaseNotes": "Access popular pages quickly with our new shortcuts. Tap and hold the Amazon app icon to access your Orders, Daily Deals, Shopping Cart, and Search.\nEnjoy our latest update where we have fixed some bugs and improved our app to provide you a seamless shopping experience",
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
+      {
         "version": "32.18.0.100",
         "releaseDate": "2026-09-16T18:21:25.000Z",
         "releaseNotes": "Access popular pages quickly with our new shortcuts. Tap and hold the Amazon app icon to access your Orders, Daily Deals, Shopping Cart, and Search.\nEnjoy our latest update where we have fixed some bugs and improved our app to provide you a seamless shopping experience",
@@ -25153,6 +25203,12 @@
       }
     ],
     "google:org.wikipedia": [
+      {
+        "version": "50614-r-2026-10-20",
+        "releaseDate": "2026-10-22T21:38:27.000Z",
+        "releaseNotes": "Beta testing Semantic Search in Arabic, French and Japanese",
+        "detectedAt": "2026-10-23T00:39:54.209Z"
+      },
       {
         "version": "50612-r-2026-10-19",
         "releaseDate": "2026-10-19T18:48:49.000Z",
