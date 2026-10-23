@@ -48,14 +48,14 @@
 
 ## What it does
 
-AppWatch tracks 76 apps out of the box — 194 listings across the App Store,
+AppWatch tracks 75 apps out of the box — 192 listings across the App Store,
 Google Play, Windows and Mac — checks every one of them **every two hours**,
 and records what changed. Apps are grouped into categories, shown as chips
 above the list: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity,
 DeepSeek, Character.AI and more), **Social**, **Messaging**,
 **Entertainment**, **Work**, **Browsers & Security**, **Shopping & Money**,
 **Travel & Outdoors**, **School & Learning** (including LockDown Browser) and
-**Drones** (DJI Fly, DJI GO 4, Litchi, DroneDeploy, Autel Sky, FreeFlight 7,
+**Drones** (DJI Fly, DJI GO 4, Litchi, DroneDeploy, FreeFlight 7,
 UAV Forecast, Aloft Air Control and QGroundControl).
 
 Every app that has a Windows or Mac version AppWatch can track reliably has

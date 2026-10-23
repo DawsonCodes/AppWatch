@@ -79,9 +79,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Manager) and 27 Mac listings from Homebrew, each with a dated version history
   from the catalog's own records. App pages say which catalog a desktop version
   came from.
-- Seven more drone apps in the Drones category (DJI GO 4, Litchi, DroneDeploy,
-  Autel Sky, FreeFlight 7, UAV Forecast, Aloft Air Control) plus QGroundControl
-  on Mac: 76 apps, 194 listings.
+- Six more drone apps in the Drones category (DJI GO 4, Litchi, DroneDeploy,
+  FreeFlight 7, UAV Forecast, Aloft Air Control) plus QGroundControl
+  on Mac: 75 apps, 192 listings.
 - Past accuracy for each app's update estimate on its page ("5 of 8 landed in
   the window, usually off by about 3 days"), plus the expected window.
 
