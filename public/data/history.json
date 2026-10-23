@@ -3030,6 +3030,12 @@
     ],
     "google:com.deepseek.chat": [
       {
+        "version": "2.7.0",
+        "releaseDate": "2026-10-21T03:45:51.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-10-23T13:26:38.785Z"
+      },
+      {
         "version": "2.6.3",
         "releaseDate": "2026-10-16T09:30:28.000Z",
         "releaseNotes": "- Some known issues fixed",
