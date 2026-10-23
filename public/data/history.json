@@ -737,6 +737,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261021.51",
+        "releaseDate": "2026-10-23T15:32:35.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
+      {
         "version": "1.261021.20",
         "releaseDate": "2026-10-22T17:27:35.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -2585,6 +2591,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.58",
+        "releaseDate": "2026-10-23T15:19:38.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
+      {
         "version": "1.4.57",
         "releaseDate": "2026-10-22T15:39:11.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -2664,6 +2676,12 @@
       }
     ],
     "google:ai.x.grok": [
+      {
+        "version": "1.2.49-release.00",
+        "releaseDate": "2026-10-22T20:29:13.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
       {
         "version": "1.2.48-release.00",
         "releaseDate": "2026-10-20T20:21:34.000Z",
@@ -2765,6 +2783,12 @@
     ],
     "google:com.microsoft.office.officehubrow": [
       {
+        "version": "16.0.20611.20024",
+        "releaseDate": "2026-10-20T15:33:48.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
+      {
         "version": "16.0.20604.20012",
         "releaseDate": "2026-10-12T07:46:40.000Z",
         "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
@@ -2828,6 +2852,12 @@
       }
     ],
     "apple:1668000334": [
+      {
+        "version": "26.42.0",
+        "releaseDate": "2026-10-23T11:59:45.000Z",
+        "releaseNotes": "Perplexity now supports Duo. This update also includes bug fixes and improvements.",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
       {
         "version": "26.41.0",
         "releaseDate": "2026-10-16T16:49:52.000Z",
@@ -2991,6 +3021,12 @@
       }
     ],
     "apple:6737597349": [
+      {
+        "version": "2.7.1",
+        "releaseDate": "2026-10-23T04:08:33.000Z",
+        "releaseNotes": "- Adapted for iPhone Duo\n- Fixed some known issues",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
       {
         "version": "2.7.0",
         "releaseDate": "2026-10-22T05:01:02.000Z",
@@ -3171,6 +3207,12 @@
       }
     ],
     "apple:284882215": [
+      {
+        "version": "584.1",
+        "releaseDate": "2026-10-23T09:58:23.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
       {
         "version": "584.0.0",
         "releaseDate": "2026-10-18T14:40:34.000Z",
@@ -7617,6 +7659,12 @@
     "google:com.spotify.music": [
       {
         "version": null,
+        "releaseDate": "2026-10-23T12:37:22.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-21T13:18:12.000Z",
         "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
         "detectedAt": "2026-10-22T17:10:39.301Z"
@@ -11560,6 +11608,12 @@
     ],
     "apple:1113153706": [
       {
+        "version": "8.19.1",
+        "releaseDate": "2026-10-23T14:52:48.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
+      {
         "version": "8.19.0",
         "releaseDate": "2026-10-22T20:33:09.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -12184,6 +12238,12 @@
       }
     ],
     "apple:546505307": [
+      {
+        "version": "7.2.3",
+        "releaseDate": "2026-10-23T14:59:55.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
       {
         "version": "7.2.1",
         "releaseDate": "2026-09-28T16:44:55.000Z",
@@ -13000,6 +13060,12 @@
       }
     ],
     "apple:1232780281": [
+      {
+        "version": "1.7.349",
+        "releaseDate": "2026-10-23T13:31:29.000Z",
+        "releaseNotes": "iPhone Duo support, bug fixes, and performance improvements.",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
       {
         "version": "1.7.348",
         "releaseDate": "2026-10-21T23:54:56.000Z",
@@ -20672,6 +20738,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.299.0",
+        "releaseDate": "2026-10-19T16:59:59.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-10-23T18:21:13.119Z"
+      },
+      {
         "version": "5.298.1",
         "releaseDate": "2026-10-13T17:09:00.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -20709,6 +20781,13 @@
       }
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
+      {
+        "version": "0.176.5.0",
+        "releaseDate": "2026-10-23T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T18:21:13.119Z",
+        "url": null
+      },
       {
         "version": "0.176.4.0",
         "releaseDate": "2026-10-22T12:00:00.000Z",
@@ -21704,6 +21783,13 @@
       }
     ],
     "windows:winget:Bitwarden.Bitwarden": [
+      {
+        "version": "2026.10.1",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": "What's Changed\n\n⚙️ Maintenance\n- [PM-45367] fix: point commercial Chocolatey package at the commercial installer by @addisonbeck in #23995\n- bump version to 10.0.1 for chocolatey release by @addisonbeck in #24068",
+        "detectedAt": "2026-10-23T18:21:13.119Z",
+        "url": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.1"
+      },
       {
         "version": "2026.10.0",
         "releaseDate": "2026-10-15T12:00:00.000Z",
