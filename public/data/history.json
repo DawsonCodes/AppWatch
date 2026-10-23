@@ -1566,6 +1566,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "3.6556.2",
+        "releaseDate": "2026-10-23T01:13:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T07:32:02.669Z"
+      },
+      {
         "version": "3.6556.1",
         "releaseDate": "2026-10-22T13:00:25.000Z",
         "releaseNotes": null,
@@ -2330,6 +2336,13 @@
       }
     ],
     "windows:winget:Google.GeminiDesktop": [
+      {
+        "version": "1.16.0",
+        "releaseDate": "2026-10-14T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T07:32:02.669Z",
+        "url": "https://gemini.google/release-notes/"
+      },
       {
         "version": "1.15.0",
         "releaseDate": "2026-10-07T12:00:00.000Z",
@@ -5925,6 +5938,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-10-22T18:20:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T07:32:02.669Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-19T19:53:34.000Z",
@@ -9834,6 +9853,12 @@
     ],
     "google:com.microsoft.office.outlook": [
       {
+        "version": "5.2641.1",
+        "releaseDate": "2026-10-20T12:58:18.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-10-23T07:32:02.669Z"
+      },
+      {
         "version": "5.2640.0",
         "releaseDate": "2026-10-11T20:59:44.000Z",
         "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
@@ -13051,6 +13076,13 @@
       }
     ],
     "windows:winget:Notion.Notion": [
+      {
+        "version": "7.40.1",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T07:32:02.669Z",
+        "url": null
+      },
       {
         "version": "7.39.0",
         "releaseDate": "2026-10-15T12:00:00.000Z",
@@ -20672,6 +20704,13 @@
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
       {
+        "version": "0.176.4.0",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T07:32:02.669Z",
+        "url": null
+      },
+      {
         "version": "0.176.3.0",
         "releaseDate": "2026-10-21T12:00:00.000Z",
         "releaseNotes": null,
@@ -22215,6 +22254,12 @@
     ],
     "mac:homebrew:bitwarden": [
       {
+        "version": "2026.10.1",
+        "releaseDate": "2026-10-23T01:10:16.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-23T07:32:02.669Z"
+      },
+      {
         "version": "2026.10.0",
         "releaseDate": "2026-10-15T21:39:23.000Z",
         "releaseNotes": null,
@@ -23416,6 +23461,12 @@
       }
     ],
     "google:com.paypal.android.p2pmobile": [
+      {
+        "version": "10.18.0",
+        "releaseDate": "2026-10-16T22:38:06.000Z",
+        "releaseNotes": "Get the latest update, so you can pay, send and save smarter. Unlock cash back offers and more. With PayPal, it really adds up.",
+        "detectedAt": "2026-10-23T07:32:02.669Z"
+      },
       {
         "version": "10.17.0",
         "releaseDate": "2026-10-09T19:08:45.000Z",
