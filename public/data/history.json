@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.286",
+        "releaseDate": "2026-10-22T21:45:35.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-10-23T00:43:39.029Z"
+      },
+      {
         "version": "1.2026.279",
         "releaseDate": "2026-10-16T15:51:32.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -11517,6 +11523,12 @@
     ],
     "apple:1113153706": [
       {
+        "version": "8.19.0",
+        "releaseDate": "2026-10-22T20:33:09.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-10-23T00:43:39.029Z"
+      },
+      {
         "version": "8.18.2",
         "releaseDate": "2026-10-16T18:46:28.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -16967,6 +16979,12 @@
       }
     ],
     "apple:535886823": [
+      {
+        "version": "156.0.8078.54",
+        "releaseDate": "2026-10-22T23:15:22.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• Stability and performance improvements.",
+        "detectedAt": "2026-10-23T00:43:39.029Z"
+      },
       {
         "version": "156.0.8078.46",
         "releaseDate": "2026-10-20T16:00:53.000Z",
@@ -25165,6 +25183,12 @@
       }
     ],
     "apple:324715238": [
+      {
+        "version": "2026.10.13",
+        "releaseDate": "2026-10-22T21:52:21.000Z",
+        "releaseNotes": "Beta testing Semantic Search in Arabic, French and Japanese",
+        "detectedAt": "2026-10-23T00:43:39.029Z"
+      },
       {
         "version": "2026.09.29",
         "releaseDate": "2026-09-30T17:57:05.000Z",
