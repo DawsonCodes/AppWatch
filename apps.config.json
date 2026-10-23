@@ -461,11 +461,6 @@
           "appStore": "https://apps.apple.com/us/app/dronedeploy-flight-app/id971358101"
         },
         {
-          "name": "Autel Sky",
-          "appStore": "https://apps.apple.com/us/app/autel-sky/id1571426955",
-          "googlePlay": "https://play.google.com/store/apps/details?id=com.autel.autelsky"
-        },
-        {
           "name": "FreeFlight 7",
           "appStore": "https://apps.apple.com/us/app/freeflight-7/id1547834000"
         },
