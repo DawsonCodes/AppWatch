@@ -4804,6 +4804,12 @@
     ],
     "google:org.thoughtcrime.securesms": [
       {
+        "version": "8.32.3",
+        "releaseDate": "2026-10-22T23:15:01.000Z",
+        "releaseNotes": "Now you can optionally register for Signal without a phone number. Phone-numberless registration requires a small one-time fee to help prevent spam, but this in-app purchase is never directly associated with the new Signal account. We sincerely appreciate your help beta testing this new feature!",
+        "detectedAt": "2026-10-23T00:47:39.065Z"
+      },
+      {
         "version": "8.32.2",
         "releaseDate": "2026-10-19T22:37:08.000Z",
         "releaseNotes": "Now you can optionally register for Signal without a phone number. Phone-numberless registration requires a small one-time fee to help prevent spam, but this in-app purchase is never directly associated with the new Signal account. We sincerely appreciate your help beta testing this new feature!",
@@ -23892,6 +23898,12 @@
       }
     ],
     "apple:529379082": [
+      {
+        "version": "2026.41.3",
+        "releaseDate": "2026-10-23T00:01:12.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-10-23T00:47:39.065Z"
+      },
       {
         "version": "2026.40.3",
         "releaseDate": "2026-10-19T17:00:58.000Z",
