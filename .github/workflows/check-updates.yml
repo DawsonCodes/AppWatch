@@ -60,14 +60,6 @@ jobs:
       - name: Validate generated data
         run: npm run validate:data
 
-      - name: Preserve Respondus installer in private Dawson Bot archive
-        if: steps.check.outputs.lockdown_version != ''
-        continue-on-error: true
-        env:
-          LOCKDOWN_ARCHIVE_TOKEN: ${{ secrets.LOCKDOWN_ARCHIVE_TOKEN }}
-          LOCKDOWN_VERSION: ${{ steps.check.outputs.lockdown_version }}
-        run: npm run archive:lockdown
-
       - name: Commit updated data
         if: steps.check.outputs.changed == 'true'
         run: |

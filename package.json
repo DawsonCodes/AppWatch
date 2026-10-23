@@ -37,7 +37,6 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check:updates": "tsx scripts/check-updates.ts",
-    "archive:lockdown": "tsx scripts/archive-lockdown.ts",
     "validate:data": "tsx scripts/validate-data.ts",
     "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run validate:data && npm run build"
   },

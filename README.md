@@ -196,14 +196,6 @@ release date, its notes and (for desktop releases) the official announcement, st
 timeline. Get the installer itself from your school's link or the official
 page.
 
-An optional [private Windows archive](docs/lockdown-archive.md) can preserve
-future Respondus installers in the owner's private Dawson Bot repository.
-It runs as part of the existing checker, saves each detected version once,
-and retains prior installers. No installer, institution download link, or
-private archive configuration is published by AppWatch. The archive requires a
-separate repository-scoped secret and an initial successful save; announcement
-history alone cannot recover installers that are no longer available.
-
 ## Themes
 
 Three complete themes, selectable from the header:
