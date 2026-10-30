@@ -164,6 +164,42 @@ describe('winget manifests', () => {
   });
 });
 
+describe('winget version numbering changes', () => {
+  it('keeps current versions on their own dates when old numbers were higher', () => {
+    // Roblox once used 1.6.x in winget and now uses 0.7xx.
+    const releases = buildWingetReleases(
+      ['0.744', '0.743', '0.726'],
+      new Map([['0.744', '2026-10-20T12:00:00.000Z']]),
+      new Map([
+        ['1.6.2.6660608', '2025-04-01T12:57:33.000Z'],
+        ['1.5.0.1', '2023-08-26T01:52:48.000Z'],
+        ['0.743', '2026-10-15T18:28:04.000Z'],
+        ['0.726', '2026-06-16T09:00:00.000Z'],
+      ]),
+    );
+    const dates = Object.fromEntries(releases.map((r) => [r.version, r.releaseDate]));
+    expect(dates['0.744']).toBe('2026-10-20T12:00:00.000Z');
+    expect(dates['0.743']).toBe('2026-10-15T18:28:04.000Z');
+    expect(dates['0.726']).toBe('2026-06-16T09:00:00.000Z');
+    expect(dates['1.6.2.6660608']).toBe('2025-04-01T12:57:33.000Z');
+  });
+
+  it('never moves a manifest release date', () => {
+    const releases = buildWingetReleases(
+      ['3.0', '2.9'],
+      new Map([
+        ['3.0', '2026-10-01T12:00:00.000Z'],
+        ['2.9', '2026-10-05T12:00:00.000Z'],
+      ]),
+      new Map(),
+    );
+    expect(releases.map((r) => r.releaseDate)).toEqual([
+      '2026-10-01T12:00:00.000Z',
+      '2026-10-05T12:00:00.000Z',
+    ]);
+  });
+});
+
 function fakeGitHub(files: Record<string, string>, api: Record<string, unknown>): GitHubClient {
   return {
     api: vi.fn(async (path: string) => {

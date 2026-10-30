@@ -142,13 +142,27 @@ export function buildWingetReleases(
 ): { version: string; releaseDate: string | null }[] {
   const all = new Set([...versions, ...commitDates.keys()]);
   const ordered = [...all].sort((a, b) => compareVersions(b, a));
+  // The newest version folder is the current numbering. Versions the
+  // history shows above it come from an older numbering (Roblox went from
+  // 1.6.x to 0.7xx), so they keep their own dates and don't hold back the
+  // current ones.
+  const newest = versions.reduce<string | null>(
+    (best, version) => (best === null || compareVersions(version, best) > 0 ? version : best),
+    null,
+  );
   let cap = Number.POSITIVE_INFINITY;
   return ordered.map((version) => {
-    const iso = manifestDates.get(version) ?? commitDates.get(version) ?? null;
+    const manifest = manifestDates.get(version);
+    const iso = manifest ?? commitDates.get(version) ?? null;
     if (!iso) return { version, releaseDate: null };
     let time = Date.parse(iso);
-    if (time > cap) time = cap;
-    cap = time;
+    if (newest !== null && compareVersions(version, newest) > 0) {
+      return { version, releaseDate: new Date(time).toISOString() };
+    }
+    // A manifest's release date is authoritative; merge dates are only
+    // pulled back so an older version isn't dated after a newer one.
+    if (!manifest && time > cap) time = cap;
+    cap = Math.min(cap, time);
     return { version, releaseDate: new Date(time).toISOString() };
   });
 }

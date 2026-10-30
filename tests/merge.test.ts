@@ -469,6 +469,81 @@ describe('release feeds (desktop listings)', () => {
     );
   });
 
+  it('corrects dates of entries learned on the first check when the record is fixed', () => {
+    // A catalog listing whose first check dated two versions wrongly (Aug 2023).
+    const wrong = '2023-08-26T01:52:48.000Z';
+    const catalog: AppSnapshot = {
+      ...snapshot,
+      platform: 'windows',
+      storeId: 'winget:Roblox.Roblox',
+      version: '0.744',
+      releaseDate: wrong,
+      releaseNotes: null,
+      releases: [
+        { version: '0.744', releaseDate: wrong, releaseNotes: null, url: null },
+        { version: '0.743', releaseDate: wrong, releaseNotes: null, url: null },
+      ],
+    };
+    const first = mergeSnapshot(undefined, [], catalog, NOW);
+    const fixed: AppSnapshot = {
+      ...catalog,
+      releaseDate: '2026-10-20T12:00:00.000Z',
+      releases: [
+        {
+          version: '0.744',
+          releaseDate: '2026-10-20T12:00:00.000Z',
+          releaseNotes: null,
+          url: null,
+        },
+        {
+          version: '0.743',
+          releaseDate: '2026-10-15T18:28:04.000Z',
+          releaseNotes: null,
+          url: null,
+        },
+      ],
+    };
+    const next = mergeSnapshot(first.record, first.history, fixed, LATER);
+    expect(next.outcome).toBe('unchanged');
+    expect(next.record.releaseDate).toBe('2026-10-20T12:00:00.000Z');
+    expect(next.history.map((e) => [e.version, e.releaseDate, e.detectedAt])).toEqual([
+      ['0.744', '2026-10-20T12:00:00.000Z', NOW],
+      ['0.743', '2026-10-15T18:28:04.000Z', NOW],
+    ]);
+    // Small moves (under a day and a half) are ignored, so dates don't churn.
+    const nudged = backfillReleases(
+      next.history,
+      [
+        {
+          version: '0.744',
+          releaseDate: '2026-10-21T06:00:00.000Z',
+          releaseNotes: null,
+          url: null,
+        },
+      ],
+      LATER,
+      NOW,
+    );
+    expect(nudged).toBe(next.history);
+    // Entries AppWatch observed after the first check are never changed.
+    const observed = [{ ...next.history[0]!, detectedAt: LATER }];
+    expect(
+      backfillReleases(
+        observed,
+        [
+          {
+            version: '0.744',
+            releaseDate: '2027-01-01T00:00:00.000Z',
+            releaseNotes: null,
+            url: null,
+          },
+        ],
+        LATER,
+        NOW,
+      ),
+    ).toBe(observed);
+  });
+
   it('leaves store listings without feed fields', () => {
     const result = mergeSnapshot(undefined, [], snapshot, NOW);
     expect('releaseUrl' in result.record).toBe(false);
