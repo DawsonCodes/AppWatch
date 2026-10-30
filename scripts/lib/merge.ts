@@ -40,6 +40,9 @@ export function appendHistory(
   return [entry, ...history];
 }
 
+/** Smaller moves in a record's dates (e.g. time zones, same-day merges) are ignored. */
+const RECORD_DATE_TOLERANCE_MS = 36 * 60 * 60 * 1000;
+
 function releaseTime(entry: VersionHistoryEntry): number {
   const time = Date.parse(entry.releaseDate ?? entry.detectedAt);
   return Number.isNaN(time) ? 0 : time;
@@ -51,14 +54,18 @@ function releaseTime(entry: VersionHistoryEntry): number {
  * and announcement). These are real, published releases — AppWatch just
  * learned about them from the official archive instead of watching them ship.
  *
- * Entries that came from that record (same announcement link) follow it if
- * the vendor's date or notes change — e.g. a post's real date being read
- * from its byline. Everything AppWatch observed itself is never modified.
+ * Entries that came from that record follow it if the record is corrected:
+ * those with the same announcement link take its date and notes (e.g. a
+ * post's real date read from its byline), and those recorded on the
+ * listing's first check (`learnedAt`) take its date when it moves by more
+ * than a day and a half (e.g. a catalog date-ordering fix). Everything
+ * AppWatch observed itself later is never modified.
  */
 export function backfillReleases(
   history: VersionHistoryEntry[],
   releases: readonly OfficialRelease[] | undefined,
   now: string,
+  learnedAt: string | null = null,
 ): VersionHistoryEntry[] {
   if (!releases || releases.length === 0) return history;
   const official = new Map<string, OfficialRelease>();
@@ -67,12 +74,26 @@ export function backfillReleases(
   let changed = false;
   let next = history.map((entry) => {
     const release = entry.version ? official.get(entry.version) : undefined;
-    if (!release || !entry.url || entry.url !== release.url) return entry;
-    if (entry.releaseDate === release.releaseDate && entry.releaseNotes === release.releaseNotes) {
-      return entry;
+    if (!release) return entry;
+    if (entry.url && entry.url === release.url) {
+      if (
+        entry.releaseDate === release.releaseDate &&
+        entry.releaseNotes === release.releaseNotes
+      ) {
+        return entry;
+      }
+      changed = true;
+      return { ...entry, releaseDate: release.releaseDate, releaseNotes: release.releaseNotes };
     }
-    changed = true;
-    return { ...entry, releaseDate: release.releaseDate, releaseNotes: release.releaseNotes };
+    if (learnedAt !== null && entry.detectedAt === learnedAt && release.releaseDate) {
+      const before = entry.releaseDate ? Date.parse(entry.releaseDate) : Number.NaN;
+      const after = Date.parse(release.releaseDate);
+      if (Number.isNaN(before) || Math.abs(after - before) > RECORD_DATE_TOLERANCE_MS) {
+        changed = true;
+        return { ...entry, releaseDate: release.releaseDate };
+      }
+    }
+    return entry;
   });
   for (const release of releases) {
     const before = next;
@@ -182,6 +203,7 @@ export function mergeSnapshot(
     appendHistory(previousHistory, currentEntry(snapshot, now)),
     snapshot.releases,
     now,
+    previous.firstTrackedAt,
   );
 
   return {
