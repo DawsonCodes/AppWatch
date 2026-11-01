@@ -875,6 +875,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261030.19",
+        "releaseDate": "2026-10-31T03:32:42.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-01T22:01:48.218Z"
+      },
+      {
         "version": "1.261029.20",
         "releaseDate": "2026-10-31T03:32:42.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -3558,6 +3564,12 @@
       }
     ],
     "google:com.twitter.android": [
+      {
+        "version": "12.39.0-prod.01",
+        "releaseDate": "2026-10-30T20:09:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T22:01:48.218Z"
+      },
       {
         "version": "12.38.1-prod.01",
         "releaseDate": "2026-10-28T19:10:54.000Z",
@@ -12863,12 +12875,25 @@
     "google:us.zoom.videomeetings": [
       {
         "version": null,
+        "releaseDate": "2026-10-31T16:23:51.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-01T22:01:48.218Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-09-21T14:17:47.000Z",
         "releaseNotes": "Bug fixes and improvements",
         "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
     "windows:winget:Zoom.Zoom": [
+      {
+        "version": "7.2.51704",
+        "releaseDate": "2026-10-31T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T22:01:48.218Z",
+        "url": null
+      },
       {
         "version": "7.2.48556",
         "releaseDate": "2026-09-21T12:00:00.000Z",
@@ -17930,6 +17955,13 @@
     ],
     "windows:winget:Google.Chrome": [
       {
+        "version": "156.0.8078.74",
+        "releaseDate": "2026-10-27T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T22:01:48.218Z",
+        "url": null
+      },
+      {
         "version": "156.0.8078.48",
         "releaseDate": "2026-10-20T12:00:00.000Z",
         "releaseNotes": null,
@@ -18819,6 +18851,20 @@
       }
     ],
     "windows:winget:Mozilla.Firefox": [
+      {
+        "version": "159.0",
+        "releaseDate": "2026-10-27T12:00:00.000Z",
+        "releaseNotes": "Version 159.0, first offered to Release channel users on October 27, 2026\n\nNew\n- Sharing on macOS now uses the native macOS share picker, which shows a preview of the page and recent contacts alongside AirDrop, Messages, and other apps. Several selected tabs can also be shared at once.\n\n- Saved passwords are now available from the sidebar by default, without having to add the Passwords tool first.\n\n- Smart Window can now watch pages for changes such as price drops or restocks. Type /watch in the chat to set one up, and Firefox sends a desktop notification when it finds a match. Watches can be managed from the Tasks button in the toolbar or the about:smartwindowtasks page.\n  This feature is part of a progressive roll out.\n  What is a progressive roll out?\n  Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.\n\nFixed\n- Fixed the file upload dialog opening in the last folder a file was saved to, such as Downloads, instead of the folder last used for uploads.\n- Fixed memory usage growing rapidly when sites such as the Zoom web app were left open in a minimized window.\n- Fixed some videos displaying incorrectly on Windows when NVIDIA RTX Video HDR is enabled.\n- Fixed bookmarks not being imported from Google Chrome profiles that are signed in to a Google account.\n- Fixed the Replace button in Apple Writing Tools on macOS inserting the clipboard contents instead of the rewritten text on some sites, such as Gmail.\n- Fixed long drop-down lists on web pages sometimes showing blank space in place of the last options until the list was scrolled.\n- Fixed some sites, such as Slack, failing to load instead of falling back to HTTP/2 when the site rejected an HTTP/3 request.\n- Fixed Firefox using excessive memory on Linux with AMD graphics when viewing map or place results on sites such as ChatGPT.\n- Fixed quick gamepad button presses sometimes being missed in web games on macOS.\n- Fixed tabs sometimes detaching into a new window when clicked on Linux with Wayland.\n- Fixed menus and panels fading in on Windows and Linux when animation effects are turned off in the operating system.\n- Various security fixes.\n\nChanged\n- On macOS, apps that sign in through the default browser, such as ChatGPT, now open their sign-in page in Firefox instead of Safari when Firefox is the default browser.\n- The AI chatbot's Summarize page option now sends the page's address to the chatbot provider instead of the page's text, so long pages are no longer cut short to a partial summary.\n- Open tabs can now be searched with a keyboard shortcut: Ctrl+Shift+A on Windows and Linux, Cmd+Shift+A on macOS. The Extensions and Themes shortcut is now Ctrl+Shift+F on Windows and Linux, and Cmd+Shift+E on macOS. These shortcuts can be changed in about:keyboard.\n- Web addresses written in the Javanese, Balinese, Canadian Aboriginal Syllabics, and N'Ko scripts are now displayed in their own script instead of as encoded \"xn--\" text.\n\nEnterprise\n- For Firefox Enterprise updates and fixes, see the Firefox Enterprise release notes. For policy changes, see the Firefox admin docs changelog.\n\nDeveloper\n- The Web Console now allows let, const, and class variables to be declared again, so a snippet can be edited and re-run without a redeclaration error.\n\nWeb Platform\n- Firefox now supports scroll-driven animations, so CSS animations and Web Animations API animations can progress with the scroll position of a container or with an element's visibility as it scrolls into view. This adds the animation-timeline, scroll-timeline, view-timeline, and animation-range properties and the ScrollTimeline and ViewTimeline interfaces.\n- Firefox now supports scoped custom element registries. A registry created with the CustomElementRegistry() constructor is separate from the global window.customElem…",
+        "detectedAt": "2026-11-01T22:01:48.218Z",
+        "url": "https://www.firefox.com/en-US/firefox/159.0/releasenotes/"
+      },
+      {
+        "version": "158.0.1",
+        "releaseDate": "2026-10-20T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T22:01:48.218Z",
+        "url": null
+      },
       {
         "version": "158.0",
         "releaseDate": "2026-10-13T12:00:00.000Z",
