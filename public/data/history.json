@@ -16655,6 +16655,13 @@
     ],
     "windows:winget:Google.GoogleDrive": [
       {
+        "version": "133.0.2.0",
+        "releaseDate": "2026-10-19T12:00:00.000Z",
+        "releaseNotes": "- Bug fixes and performance improvements",
+        "detectedAt": "2026-11-01T16:50:00.103Z",
+        "url": "https://support.google.com/a/answer/7577057?hl=en"
+      },
+      {
         "version": "132.0.0.0",
         "releaseDate": "2026-09-28T12:00:00.000Z",
         "releaseNotes": "- Introduced temporary HideSharedFoldersIconsWindows advanced configuration option. You might use this option to work around increased latency when loading shared folders in Windows Explorer with KB5094126 installed. This option might be removed in a future release.\n- Bug fixes and performance improvements",
@@ -16732,15 +16739,15 @@
         "url": null
       },
       {
-        "version": "120.0.1.0",
-        "releaseDate": "2026-02-09T12:00:00.000Z",
+        "version": "121.0.1.0",
+        "releaseDate": "2026-02-20T21:03:37.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
-        "version": "121.0.1.0",
-        "releaseDate": "2026-02-09T12:00:00.000Z",
+        "version": "120.0.1.0",
+        "releaseDate": "2026-02-12T14:41:39.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -20664,6 +20671,12 @@
       }
     ],
     "google:com.brave.browser": [
+      {
+        "version": "1.98.63",
+        "releaseDate": "2026-10-30T19:34:21.000Z",
+        "releaseNotes": "In this release we:\n\nImproved top sites. You can now long-press the top sites widget on the new tab page to switch between displaying your favorites or frequently visited websites.\nMade several general stability improvements.\nUpgraded to Chromium 156.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
+        "detectedAt": "2026-11-01T16:50:00.103Z"
+      },
       {
         "version": "1.98.60",
         "releaseDate": "2026-10-27T08:46:15.000Z",
