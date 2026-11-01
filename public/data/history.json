@@ -91,6 +91,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1027.51404",
+        "releaseDate": "2026-11-01T00:57:16.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T09:16:19.103Z"
+      },
+      {
         "version": "26.1027.30824",
         "releaseDate": "2026-10-29T18:52:25.000Z",
         "releaseNotes": null,
@@ -782,6 +788,12 @@
       }
     ],
     "apple:6473753684": [
+      {
+        "version": "1.261030.19",
+        "releaseDate": "2026-11-01T04:27:08.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-01T09:16:19.103Z"
+      },
       {
         "version": "1.261028.19",
         "releaseDate": "2026-10-30T10:07:14.000Z",
@@ -10423,6 +10435,12 @@
     ],
     "google:com.microsoft.office.outlook": [
       {
+        "version": "5.2642.1",
+        "releaseDate": "2026-10-30T20:53:09.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-11-01T09:16:19.103Z"
+      },
+      {
         "version": "5.2642.0",
         "releaseDate": "2026-10-24T18:03:21.000Z",
         "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
@@ -12817,6 +12835,12 @@
       }
     ],
     "apple:546505307": [
+      {
+        "version": "7.2.5",
+        "releaseDate": "2026-11-01T02:03:50.000Z",
+        "releaseNotes": "• iPhone Duo support\n• Bug fixes and improvements",
+        "detectedAt": "2026-11-01T09:16:19.103Z"
+      },
       {
         "version": "7.2.3",
         "releaseDate": "2026-10-23T14:59:55.000Z",
@@ -18789,6 +18813,13 @@
     ],
     "windows:winget:Mozilla.Firefox": [
       {
+        "version": "158.0",
+        "releaseDate": "2026-10-13T12:00:00.000Z",
+        "releaseNotes": "Version 158.0, first offered to Release channel users on October 13, 2026\n\nNew\n- You can now fill in forms faster in Smart Window. When clicking into a form field or selecting Fill from sources, Smart Window will now suggest data to use based on your relevant open tabs and saved autofill data.\n  This feature is part of a progressive roll out.\n  What is a progressive roll out?\n  Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.\n- Firefox now creates more accessible PDFs when saving a page as PDF, and when printing on Linux and macOS. This also fixes a variety of PDF rendering issues, such as missing math symbols.\n- Firefox now supports the JPEG XL image format, which generally has better compression than WebP, JPEG, PNG, and GIF.\n- New Tab now keeps a library of custom wallpapers under Your images, rather than only the most recent one.\n- Firefox's translations feature now supports the following languages:\n  - Albanian\n  - Belarusian\n  - Filipino\n\nFixed\n- Fixed website icons (favicons) in address bar results blending into the highlight color when selecting a result with the keyboard on Ubuntu's default theme.\n- Fixed a crash that could occur while Firefox loaded website icons (favicons).\n- Fixed the first letter of each search engine's name being underlined in the Unified Search Button menu in the address bar on Windows and Linux, which could cause conflicting keyboard shortcuts.\n- Fixed menus such as List all tabs, Settings, and Unified Search being hard to read with a Windows High Contrast theme. Menu background and text colors now follow the Background and Text colors chosen for a custom contrast theme in Windows Settings.\n- Various security fixes.\n\nChanged\n- Firefox no longer rounds scroll positions to whole screen pixels. Scrolling is now smoother and more precise, especially on high-resolution displays or when a page is zoomed.\n\nEnterprise\n- For Firefox Enterprise updates and fixes, see the Firefox Enterprise release notes. For policy changes, see the Firefox admin docs changelog.\n\nDeveloper\n- Fixed an issue where the Network Monitor could miss WebSocket messages if they arrived immediately after a connection was established.\n\nWeb Platform\n- Firefox now supports typed arithmetic in CSS calc(), allowing units to be multiplied and divided within math functions.\n- Added support for the navigate option for the Notification constructor and ServiceWorkerRegistration.showNotification(), which specifies a URL to navigate to when the notification is clicked.\n- The WebAuthn conditional UI is now shown on input elements with an autocomplete=\"webauthn\" attribute. Previously, it was only shown when the attribute included another autofill field value, such as autocomplete=\"username webauthn\". (Learn more)\n- Firefox now supports the cache value for PerformanceResourceTiming.deliveryType, allowing websites to identify resources served from the HTTP cache.\n- The WebGL extension EXT_polygon_offset_clamp is now available on compatible devices.\n\nCommunity Contributions\n- With the release of Firefox 158, we are pleased to welcome the developers who contributed their first code change to Firefox in this release, 20 of whom were brand new volunteers! Please join us in thanking each of these diligent and enthusiastic individuals, and take a look at their contributions:\n  - :cat: 2071142\n  - Adham: 1985986\n  - Anand Balaji: 2072754\n  - Calvin Lei-Cramer: 1975584\n  - Collins Kubu: 2069323\n  - Daniel mungai chege: 2072565\n  - f3tch [:f3tchcodes]: 1492357, 1917288, 1957843, 2068045, 2070577\n  - foued: 2070398\n  - harry75369: 2000420, 2006226, 2071759\n  - HojunCho: 2066829\n  - ianlewisuk1: 2072737\n  - Jakub Stasiak [:jstasiak]: 1719394\n  - Lavindeep: 2069768\n  - Ole Baumann [:darkintaqt]: 2070873\n  - Rehan: 1688932\n  - Ruslan Semchenko: 105…",
+        "detectedAt": "2026-11-01T09:16:19.103Z",
+        "url": "https://www.firefox.com/en-US/firefox/158.0/releasenotes/"
+      },
+      {
         "version": "157.0.1",
         "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": "Version 157.0.1, first offered to Release channel users on October 6, 2026\n\nFixed\n- Fixed downloads failing on macOS when Firefox is set to ask where to save files but doesn't have permission to access the Downloads folder. (Bug 2077390)\n- Fixed the sidebar getting stuck on the Bookmarks or AI Chatbot panel for some users. (Bug 2076296)\n- Fixed the Restore from Backup option not appearing during onboarding on Windows. (Bug 2073401)\n- Security fix.\n- Reference link to 157.0 release notes.",
@@ -20684,6 +20715,27 @@
     ],
     "windows:winget:Brave.Brave": [
       {
+        "version": "156.1.98.63",
+        "releaseDate": "2026-10-30T12:00:00.000Z",
+        "releaseNotes": "- Upgraded Chromium to 156.0.8078.80. (#60306) (Changelog for 156.0.8078.80)",
+        "detectedAt": "2026-11-01T09:16:19.103Z",
+        "url": "https://brave.com/latest"
+      },
+      {
+        "version": "155.1.97.59",
+        "releaseDate": "2026-10-16T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T09:16:19.103Z",
+        "url": null
+      },
+      {
+        "version": "155.1.97.57",
+        "releaseDate": "2026-10-14T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-01T09:16:19.103Z",
+        "url": null
+      },
+      {
         "version": "155.1.97.56",
         "releaseDate": "2026-10-07T12:00:00.000Z",
         "releaseNotes": "Web3\n- Enabled Zcash Ironwood support by default. (#56872)\n- Updated wallet to reject incorrect Zcash account birthday height. (#58757)\n- Updated wallet to reject negative Zcash \"Send\" amounts before review. (#58755)\nGeneral\n- Added support for self-service Brave Account deletion. (#58719)\n- Updated Brave VPN to allow local traffic on Windows when connected. (#56320)\n- Updated screenshots taken in Private or Tor Windows to be marked as sensitive on Windows. (#58875)\n- Fixed crash which occurred on macOS in certain cases when an update was pending. (#58699)\n- Fixed \"Pin to taskbar\" not displaying a system notification on Windows. (#58830)\n- Fixed app icon theme choice being broken when downloading a file on macOS 26 and 27. (#58790)\n- Fixed \"Always allow\" checkbox setting for \"mailto\" not being respected on the external protocol dialog on macOS. (#16927)\n- Fixed incorrect tab tinting for achromatic colors. (#58747)\n- Fixed shields icon jitter on PWAs in tabbed mode on Linux. (#55708)\n- Upgraded Chromium to 155.0.8059.40. (#59729) (Changelog for 155.0.8059.40)",
@@ -20748,14 +20800,14 @@
       },
       {
         "version": "151.1.93.138",
-        "releaseDate": "2026-08-21T12:00:00.000Z",
+        "releaseDate": "2026-08-26T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
         "version": "151.1.93.137",
-        "releaseDate": "2026-08-19T12:00:00.000Z",
+        "releaseDate": "2026-08-26T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
