@@ -11,10 +11,13 @@ import { fileURLToPath } from 'node:url';
 import type { AppsFile, HistoryFile } from '../src/shared/types.ts';
 import {
   validateAppsFile,
+  validateForecastLogFile,
+  validateForecastModelFile,
   validateHistoryFile,
   validateStatusFile,
 } from '../src/shared/validate.ts';
 import { readJsonFile } from './lib/io.ts';
+import { FORECAST_LOG_FILE, FORECAST_MODEL_FILE } from './lib/run.ts';
 
 const dataDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'data');
 
@@ -37,6 +40,17 @@ const statusRaw = readJsonFile(join(dataDir, 'status.json'));
 report('apps.json', appsRaw === null ? ['file missing'] : validateAppsFile(appsRaw));
 report('history.json', historyRaw === null ? ['file missing'] : validateHistoryFile(historyRaw));
 report('status.json', statusRaw === null ? ['file missing'] : validateStatusFile(statusRaw));
+
+// The learned forecast files are optional (the site falls back to built-in
+// settings) but must be valid when present.
+for (const [file, validate] of [
+  [FORECAST_MODEL_FILE, validateForecastModelFile],
+  [FORECAST_LOG_FILE, validateForecastLogFile],
+] as const) {
+  const raw = readJsonFile(join(dataDir, file));
+  if (raw === null) console.log(`- ${file} not generated yet`);
+  else report(file, validate(raw));
+}
 
 // Cross-file consistency: every history key must belong to a tracked app.
 if (!failed && appsRaw && historyRaw) {

@@ -1,7 +1,12 @@
 /** Loads and validates the generated JSON data for the dashboard. */
 
-import type { AppsFile, HistoryFile, StatusFile } from '../shared/types.ts';
-import { validateAppsFile, validateHistoryFile, validateStatusFile } from '../shared/validate.ts';
+import type { AppsFile, ForecastModelFile, HistoryFile, StatusFile } from '../shared/types.ts';
+import {
+  validateAppsFile,
+  validateForecastModelFile,
+  validateHistoryFile,
+  validateStatusFile,
+} from '../shared/validate.ts';
 import { dataUrl } from './urls.ts';
 
 export class DataLoadError extends Error {}
@@ -63,6 +68,21 @@ export async function loadHistory(fetchFn: typeof fetch = fetch): Promise<Histor
     throw new DataLoadError('Version history data failed validation.');
   }
   return raw as HistoryFile;
+}
+
+/**
+ * The learned forecast settings. Optional: when missing or invalid, the
+ * built-in defaults are used, so this never fails.
+ */
+export async function loadForecastModel(
+  fetchFn: typeof fetch = fetch,
+): Promise<ForecastModelFile | null> {
+  try {
+    const raw = await fetchJson(dataUrl('forecast-model.json'), fetchFn);
+    return validateForecastModelFile(raw).length === 0 ? (raw as ForecastModelFile) : null;
+  } catch {
+    return null;
+  }
 }
 
 /**

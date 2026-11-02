@@ -1,4 +1,4 @@
-import type { AppRecord, StatusFile } from '../shared/types.ts';
+import type { AppRecord, ForecastModelFile, StatusFile } from '../shared/types.ts';
 import { isRecentlyUpdated, RECENT_DAYS } from '../lib/filtering.ts';
 import { formatDateTime, relativeTime } from '../lib/format.ts';
 import { PLATFORMS } from '../shared/types.ts';
@@ -15,6 +15,8 @@ interface InsightsPanelProps {
   status: StatusFile | null;
   /** Apps expected to update within three days (null until history loads). */
   dueSoon?: number | null;
+  /** The learned forecast model, for its accuracy (null until loaded or when missing). */
+  forecastModel?: ForecastModelFile | null;
   open: boolean;
   onToggle: (open: boolean) => void;
 }
@@ -37,6 +39,7 @@ export function InsightsPanel({
   localCount,
   status,
   dueSoon = null,
+  forecastModel = null,
   open,
   onToggle,
 }: InsightsPanelProps) {
@@ -95,6 +98,17 @@ export function InsightsPanel({
         <Stat label="Checks" value="Every 2 hours" />
         {dueSoon !== null ? (
           <Stat label="Expected in the next 3 days" value={String(dueSoon)} />
+        ) : null}
+        {forecastModel && forecastModel.replay.tests > 0 ? (
+          <Stat
+            label="Forecasts on time"
+            value={`${Math.round((forecastModel.replay.hits / forecastModel.replay.tests) * 100)}%`}
+            detail={
+              forecastModel.live && forecastModel.live.forecasts > 0
+                ? `Live: ${forecastModel.live.hits} of ${forecastModel.live.forecasts} · re-learned ${relativeTime(forecastModel.trainedAt, now)}`
+                : `${forecastModel.replay.hits} of ${forecastModel.replay.tests} replayed · re-learned ${relativeTime(forecastModel.trainedAt, now)}`
+            }
+          />
         ) : null}
         <Stat label="Saved in this browser" value={String(localCount)} />
         {unresolved.length > 0 ? (

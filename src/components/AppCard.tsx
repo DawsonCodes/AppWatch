@@ -12,11 +12,6 @@ import { WatchButton } from './WatchButton.tsx';
 interface AppCardProps {
   group: AppGroup;
   watched: boolean;
-  /**
-   * How often it updates ("Updates every ~6 days · next in ~3 days"); null
-   * when there isn't enough history, undefined while history is loading.
-   */
-  rhythm?: string | null;
   onToggleWatch: (group: AppGroup) => void;
 }
 
@@ -24,7 +19,7 @@ interface AppCardProps {
  * One app across all its platforms. The whole card is a link to the app's
  * page; the star toggles the watchlist without opening it.
  */
-function AppCardImpl({ group, watched, rhythm, onToggleWatch }: AppCardProps) {
+function AppCardImpl({ group, watched, onToggleWatch }: AppCardProps) {
   const primary = primaryListing(group);
   const developer = groupDeveloper(group);
   const local = group.source === 'local';
@@ -82,12 +77,6 @@ function AppCardImpl({ group, watched, rhythm, onToggleWatch }: AppCardProps) {
           );
         })}
       </ul>
-
-      {local ? null : (
-        <p class={`card__rhythm${rhythm ? '' : ' card__rhythm--none'}`}>
-          {rhythm === undefined ? ' ' : (rhythm ?? 'Not enough updates yet to estimate')}
-        </p>
-      )}
     </article>
   );
 }

@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "trainedAt": "2026-11-02T03:22:03.888Z",
+  "target": 0.6667,
+  "params": {
+    "halfLife": 8,
+    "bandwidth": 0.45,
+    "weekday": 1
+  },
+  "masses": [
+    0.66,
+    0.581,
+    0.604,
+    0.625
+  ],
+  "listings": {
+    "apple:1064216828": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:1113153706": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "apple:282614216": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:288429040": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:310633997": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:324715238": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "apple:333903271": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "apple:351727428": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:368677368": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:401626263": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:422689480": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:429047995": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:447188370": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "apple:545519333": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:570060128": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "apple:618783545": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:6446901002": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "apple:6448311069": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:6473753684": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:6477489729": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:663592361": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:6670324846": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:6737597349": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "apple:719972451": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:874139669": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:985746746": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "apple:989804926": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "google:ai.x.grok": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "google:com.amazon.avod.thirdpartyclient": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:com.android.chrome": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.brave.browser": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "google:com.canva.editor": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.deepseek.chat": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:com.discord": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.duckduckgo.mobile.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.duolingo": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.facebook.katana": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.google.android.apps.maps": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "google:com.google.android.gm": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:com.google.android.youtube": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:com.linkedin.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "google:com.netflix.mediaclient": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.pinterest": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.reddit.frontpage": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.snapchat.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.squareup.cash": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.ubercab": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.venmo": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "google:com.waze": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:com.whatsapp": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:me.lyft.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "google:notion.id": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:org.mozilla.firefox": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:org.wikipedia": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "google:tv.twitch.android.app": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:bitwarden": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:brave-browser": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.2,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:claude": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:discord": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:dropbox": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:duckduckgo": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:firefox": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:google-chrome": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:google-drive": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.2,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:google-gemini": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:microsoft-edge": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:microsoft-outlook": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.2,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:microsoft-teams": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:notion": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:perplexity": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:qgroundcontrol": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:roblox": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.2,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:signal": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:slack": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:spotify": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "mac:homebrew:whatsapp": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.2,
+        "weekday": 1
+      }
+    },
+    "mac:respondus-lockdown-browser": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:respondus-lockdown-browser": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Anthropic.Claude": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Bitwarden.Bitwarden": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Brave.Brave": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Google.GoogleDrive": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.2,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Microsoft.Copilot": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Microsoft.Edge": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Mozilla.Firefox": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:winget:OpenWhisperSystems.Signal": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Roblox.Roblox": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.6,
+        "weekday": 1
+      }
+    },
+    "windows:winget:Telegram.TelegramDesktop": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "windows:winget:VideoLAN.VLC": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    }
+  },
+  "replay": {
+    "tests": 1659,
+    "hits": 1108,
+    "medianErrorDays": 2.25
+  },
+  "live": null
+}

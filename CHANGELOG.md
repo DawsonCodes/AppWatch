@@ -7,7 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Self-learning update forecasts. Each checker run that records something new
+  replays every listing's history, picks the forecast settings that would have
+  worked best (shared, or per listing when one clearly suits it better), sizes
+  the expected windows so their stated 2 in 3 chance holds, and logs a real
+  forecast per listing to score when the release lands. Real results feed back
+  into the window sizes. Stored in `forecast-model.json` and
+  `forecast-log.json`.
+- Forecasts now count the time already waited and the app's usual release
+  weekdays. Once an app is past its usual gap, its window now catches 66–78%
+  of releases (previously 9–43%, because the old window had already passed).
+
 ### Changed
+
+- Cleaner app page: one Next update card (expected day, window and chance, a
+  small chart of how likely each day ahead is, usual gap, usual weekday and
+  past accuracy) replaces the six-stat Update pattern section and its two
+  charts; details on how the forecast works fold away. Version history shows
+  the days since the previous version; the release-dates table is gone. The
+  Windows/Mac source note moved into Details, and Copy link is an icon.
+- Cleaner list: cards no longer carry an "Updates every ~X days · due now"
+  line, category chips are lighter and fit on one row, and the app count sits
+  next to Sort.
 
 - Better update estimates, tuned by backtesting on recorded history: recent
   gaps count more, gaps are compared on a log scale, and the likely day leans

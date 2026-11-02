@@ -25,12 +25,13 @@ import { Toast } from './components/Toast.tsx';
 import type { ToastMessage } from './components/Toast.tsx';
 import { UpdatesTimeline } from './components/UpdatesTimeline.tsx';
 import type { Cadence } from './lib/cadence.ts';
-import { computeCadence, nextSortTime, rhythmLine } from './lib/cadence.ts';
+import { computeCadence, modelForListing, nextSortTime } from './lib/cadence.ts';
 import { CATALOG } from './lib/catalogData.ts';
 import {
   DataLoadError,
   isDataStale,
   loadDashboardData,
+  loadForecastModel,
   loadHistory,
   STALE_AFTER_HOURS,
 } from './lib/data.ts';
@@ -61,6 +62,7 @@ import { createWatchlist } from './lib/watchlist.ts';
 import { parseStoreInput, storeUrlFor } from './shared/storeRefs.ts';
 import type {
   AppRecord,
+  ForecastModelFile,
   HistoryFile,
   Platform,
   StatusFile,
@@ -77,7 +79,7 @@ type HistoryLoad =
   | { phase: 'idle' }
   | { phase: 'loading' }
   | { phase: 'error' }
-  | { phase: 'ready'; file: HistoryFile };
+  | { phase: 'ready'; file: HistoryFile; model: ForecastModelFile | null };
 
 type View = 'apps' | 'updates';
 
@@ -93,7 +95,9 @@ const SORT_OPTIONS: { value: SortKey; label: string }[] = [
 ];
 
 function historyFor(load: HistoryLoad, id: string): HistoryState {
-  if (load.phase === 'ready') return { phase: 'ready', entries: load.file.entries[id] ?? [] };
+  if (load.phase === 'ready') {
+    return { phase: 'ready', entries: load.file.entries[id] ?? [], model: load.model };
+  }
   if (load.phase === 'error') return { phase: 'error' };
   return { phase: 'loading' };
 }
@@ -229,8 +233,8 @@ export function App() {
   useEffect(() => {
     if (load.phase !== 'ready' || historyLoad.phase !== 'idle') return;
     setHistoryLoad({ phase: 'loading' });
-    loadHistory()
-      .then((file) => setHistoryLoad({ phase: 'ready', file }))
+    Promise.all([loadHistory(), loadForecastModel()])
+      .then(([file, model]) => setHistoryLoad({ phase: 'ready', file, model }))
       .catch(() => setHistoryLoad({ phase: 'error' }));
   }, [load.phase, historyLoad.phase]);
 
@@ -361,12 +365,19 @@ export function App() {
     if (historyLoad.phase !== 'ready') return null;
     const map = new Map<string, Cadence>();
     for (const listing of trackedListings) {
-      map.set(listing.id, computeCadence(historyLoad.file.entries[listing.id] ?? [], rhythmNow));
+      map.set(
+        listing.id,
+        computeCadence(
+          historyLoad.file.entries[listing.id] ?? [],
+          rhythmNow,
+          modelForListing(historyLoad.model, listing.id),
+        ),
+      );
     }
     return map;
   }, [historyLoad, trackedListings, rhythmNow]);
   const groupRhythm = useMemo(() => {
-    const map = new Map<string, { listing: Listing; cadence: Cadence; line: string | null }>();
+    const map = new Map<string, { listing: Listing; cadence: Cadence }>();
     if (!cadences) return map;
     for (const group of groups) {
       let best: { listing: Listing; cadence: Cadence } | null = null;
@@ -376,7 +387,7 @@ export function App() {
         if (!best || nextSortTime(cadence) < nextSortTime(best.cadence))
           best = { listing, cadence };
       }
-      if (best) map.set(group.key, { ...best, line: rhythmLine(best.cadence, rhythmNow) });
+      if (best) map.set(group.key, best);
     }
     return map;
   }, [cadences, groups, rhythmNow]);
@@ -388,7 +399,7 @@ export function App() {
     const items: ExpectedItem[] = [];
     for (const group of groups) {
       const rhythm = groupRhythm.get(group.key);
-      if (rhythm && (rhythm.cadence.state === 'upcoming' || rhythm.cadence.state === 'due')) {
+      if (rhythm?.cadence.next && rhythm.cadence.state !== 'late') {
         items.push({ group, listing: rhythm.listing, cadence: rhythm.cadence });
       }
     }
@@ -400,9 +411,7 @@ export function App() {
     if (!cadences) return null;
     const horizon = rhythmNow.getTime() + 3 * 86_400_000;
     return [...groupRhythm.values()].filter(
-      ({ cadence }) =>
-        cadence.state === 'due' ||
-        (cadence.state === 'upcoming' && (cadence.next?.likely ?? Infinity) <= horizon),
+      ({ cadence }) => cadence.state !== 'late' && (cadence.next?.likely ?? Infinity) <= horizon,
     ).length;
   }, [cadences, groupRhythm, rhythmNow]);
 
@@ -619,8 +628,8 @@ export function App() {
   ];
 
   const collectionTabs = [
-    { value: 'all', label: 'All', count: groups.length },
-    ...collections.map((c) => ({ value: c.id, label: c.label, count: c.count })),
+    { value: 'all', label: 'All' },
+    ...collections.map((c) => ({ value: c.id, label: c.label })),
   ];
 
   const selectedLocal =
@@ -762,6 +771,22 @@ export function App() {
                     Watching
                   </Chip>
                   <span class="filters__spacer" />
+                  <p class="results" aria-live="polite">
+                    {active ? (
+                      <button type="button" class="link-button" onClick={clearFilters}>
+                        Clear filters
+                      </button>
+                    ) : null}
+                    <span>
+                      {view === 'apps'
+                        ? filteredGroups.length === groups.length
+                          ? `${groups.length} apps`
+                          : `${filteredGroups.length} of ${groups.length} apps`
+                        : historyLoad.phase === 'ready'
+                          ? `${timeline.length} update${timeline.length === 1 ? '' : 's'}`
+                          : 'Loading updates…'}
+                    </span>
+                  </p>
                   {view === 'apps' ? (
                     <Dropdown
                       label="Sort by"
@@ -778,23 +803,6 @@ export function App() {
                     />
                   ) : null}
                 </div>
-              ) : null}
-
-              {ready ? (
-                <p class="results" aria-live="polite">
-                  {view === 'apps'
-                    ? filteredGroups.length === groups.length
-                      ? `${groups.length} apps`
-                      : `${filteredGroups.length} of ${groups.length} apps`
-                    : historyLoad.phase === 'ready'
-                      ? `${timeline.length} update${timeline.length === 1 ? '' : 's'} recorded`
-                      : 'Loading updates…'}
-                  {active ? (
-                    <button type="button" class="link-button" onClick={clearFilters}>
-                      Clear filters
-                    </button>
-                  ) : null}
-                </p>
               ) : null}
 
               <div
@@ -833,13 +841,6 @@ export function App() {
                             key={group.key}
                             group={group}
                             watched={isGroupWatched(group, watchedIds)}
-                            rhythm={
-                              historyLoad.phase === 'ready'
-                                ? (groupRhythm.get(group.key)?.line ?? null)
-                                : historyLoad.phase === 'error'
-                                  ? null
-                                  : undefined
-                            }
                             onToggleWatch={toggleWatch}
                           />
                         ))}
@@ -881,6 +882,7 @@ export function App() {
                   localCount={localGroupCount}
                   status={status}
                   dueSoon={dueSoon}
+                  forecastModel={historyLoad.phase === 'ready' ? historyLoad.model : null}
                   open={insightsOpen}
                   onToggle={toggleInsights}
                 />
