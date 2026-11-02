@@ -247,10 +247,6 @@
           "windows": "steam:570"
         },
         {
-          "name": "Grand Theft Auto V",
-          "windows": "steam:3240220"
-        },
-        {
           "name": "ARK: Survival Ascended",
           "windows": "steam:2399830"
         },
@@ -401,6 +397,43 @@
           "googlePlay": "https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android",
           "windows": "winget:DuckDuckGo.DesktopBrowser",
           "mac": "homebrew:duckduckgo"
+        },
+        {
+          "name": "Opera",
+          "appStore": "https://apps.apple.com/us/app/opera-ai-browser-with-vpn/id1411869974",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.opera.browser",
+          "windows": "winget:Opera.Opera",
+          "mac": "homebrew:opera"
+        },
+        {
+          "name": "Opera GX",
+          "appStore": "https://apps.apple.com/us/app/opera-gx/id1559740799",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.opera.gx",
+          "windows": "winget:Opera.OperaGX",
+          "mac": "homebrew:opera-gx"
+        },
+        {
+          "name": "Vivaldi",
+          "appStore": "https://apps.apple.com/us/app/vivaldi-browser/id1633234600",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.vivaldi.browser",
+          "windows": "winget:Vivaldi.Vivaldi",
+          "mac": "homebrew:vivaldi"
+        },
+        {
+          "name": "Tor Browser",
+          "googlePlay": "https://play.google.com/store/apps/details?id=org.torproject.torbrowser",
+          "windows": "winget:TorProject.TorBrowser",
+          "mac": "homebrew:tor-browser"
+        },
+        {
+          "name": "Arc",
+          "windows": "winget:TheBrowserCompany.Arc",
+          "mac": "homebrew:arc"
+        },
+        {
+          "name": "Zen Browser",
+          "windows": "winget:Zen-Team.Zen-Browser",
+          "mac": "homebrew:zen"
         },
         {
           "name": "Bitwarden",

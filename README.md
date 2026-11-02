@@ -48,24 +48,26 @@
 
 ## What it does
 
-AppWatch tracks 97 apps and games out of the box — 228 listings across the
+AppWatch tracks 102 apps and games out of the box — 246 listings across the
 App Store, Google Play, Windows and Mac — checks every one of them **every two
 hours**, and records what changed. Apps are grouped into categories, shown as
 chips above the list: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot,
 Perplexity, DeepSeek, Character.AI and more), **Social**, **Messaging**,
 **Entertainment**, **Games** (Roblox, Minecraft, Steam, the Epic, GOG and EA
-launchers, and Counter-Strike 2, Dota 2, GTA V, ARK: Survival Ascended, Rust,
+launchers, and Counter-Strike 2, Dota 2, ARK: Survival Ascended, Rust,
 Apex Legends, PUBG, Marvel Rivals, Helldivers 2, Baldur's Gate 3,
-Cyberpunk 2077, Palworld and Warframe), **Work**, **Browsers & Security**,
+Cyberpunk 2077, Palworld and Warframe), **Work**, **Browsers & Security**
+(Chrome, Firefox, Edge, Brave, DuckDuckGo, Opera, Opera GX, Vivaldi, Tor
+Browser, Arc and Zen, plus Bitwarden and Proton Mail),
 **Shopping & Money**, **Travel & Outdoors**, **School & Learning** (including
 LockDown Browser), **Game Dev** (Roblox Studio, Unity, Godot and Blender) and
 **Drones** (DJI Fly, DJI GO 4, Litchi, DroneDeploy, FreeFlight 7,
 UAV Forecast, Aloft Air Control and QGroundControl).
 
 Every app that has a Windows or Mac version AppWatch can track reliably has
-it tracked too — 46 Windows and 36 Mac listings, from Chrome, Firefox, Edge
-and Brave to Spotify, Discord, Slack, Zoom, Teams, Dropbox, Notion and the AI
-desktop apps.
+it tracked too — 51 Windows and 42 Mac listings, from Chrome, Firefox, Edge,
+Brave, Opera, Vivaldi, Arc and Zen to Spotify, Discord, Slack, Zoom, Teams,
+Dropbox, Notion and the AI desktop apps.
 
 Each app is one card covering every platform it's tracked on, with the **App
 Store in blue**, **Google Play in green**, **Windows in cyan** and **Mac in
@@ -204,11 +206,14 @@ installer that never changes (Steam, Battle.net, Ubisoft Connect, the
 Rockstar launcher, Roblox Studio and Outlook on Windows), since stale data
 would mislead.
 
-Two things that were looked at and left out on purpose:
+Things that were looked at and left out on purpose:
 
 - **Unreal Engine.** Epic only distributes it through the Epic Games Launcher
   and a private GitHub repository that needs a linked Epic account; there's
   no public version record to read without signing in.
+- **GTA V.** Rockstar posts its title update notes only on its own support
+  site, not as Steam announcements, and that site has no public feed to
+  read.
 - **Linux.** Most of these apps reach Linux through Flathub, but Flathub's
   update records mostly don't name the version ("Update discord module") and
   several apps lag their Windows and Mac releases by weeks or months, so
@@ -531,7 +536,16 @@ minutes to hours after their cron time, and the top of the hour is the most
 congested (hence `:17`). The workflow therefore never depends on starting at
 an exact clock time — whenever a run starts, it checks every tracked app.
 
-A single run checks all ~100 apps in a few minutes and stays polite to the
+In practice GitHub has been starting the two-hourly runs every 3–8 hours.
+That's fine: a run takes about five minutes (including the redeploy), Actions
+minutes are free for public repositories, and checking more often wouldn't
+make forecasts better anyway — they learn from release dates, which every
+source reports, not from when AppWatch happened to notice. Splitting stores
+into separate runs would only repeat the setup work. Lint, type checks and
+tests run in CI on every pull request, so the scheduled check skips them and
+only validates the data it produces.
+
+A single run checks every app in a few minutes and stays polite to the
 stores: App Store apps are resolved with one batched lookup per 50 apps, and
 Google Play pages are fetched one at a time at least 1.5 seconds apart
 (tunable with `APPWATCH_DELAY_MS`).

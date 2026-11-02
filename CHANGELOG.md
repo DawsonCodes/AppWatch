@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- More browsers: Opera, Opera GX and Vivaldi (App Store, Google Play, Windows
+  and Mac), Tor Browser (Google Play, Windows and Mac), Arc and Zen (Windows
+  and Mac).
+
 - Games: a Games category with Roblox, Minecraft (Java Edition from Mojang's
   version list on Windows and Mac), Steam, the Epic Games Launcher, GOG
-  Galaxy and the EA app, plus Counter-Strike 2, Dota 2, GTA V, ARK: Survival
+  Galaxy and the EA app, plus Counter-Strike 2, Dota 2, ARK: Survival
   Ascended, Rust, Apex Legends, PUBG, Marvel Rivals, Helldivers 2, Baldur's
   Gate 3, Cyberpunk 2077, Palworld and Warframe, tracked from the patch notes
   their developers post on Steam.
@@ -41,6 +45,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   of releases (previously 9–43%, because the old window had already passed).
 
 ### Changed
+
+- The scheduled update check no longer repeats lint, type checks and tests
+  (CI runs them on every pull request); it still validates the data it
+  writes. Each run finishes about a minute sooner.
 
 - Cleaner app page: one Next update card (expected day, window and chance, a
   small chart of how likely each day ahead is, usual gap, usual weekday and
