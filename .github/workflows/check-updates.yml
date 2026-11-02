@@ -40,15 +40,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
-
-      - name: Type check
-        run: npm run typecheck
-
-      - name: Test
-        run: npm test
-
+      # Lint, type checks and tests run in CI on every pull request before code
+      # reaches main, so the scheduled check doesn't repeat them; the data it
+      # produces is still validated below before anything is committed.
       - name: Check stores for updates
         id: check
         env:
