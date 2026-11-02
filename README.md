@@ -48,19 +48,24 @@
 
 ## What it does
 
-AppWatch tracks 75 apps out of the box — 192 listings across the App Store,
-Google Play, Windows and Mac — checks every one of them **every two hours**,
-and records what changed. Apps are grouped into categories, shown as chips
-above the list: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot, Perplexity,
-DeepSeek, Character.AI and more), **Social**, **Messaging**,
-**Entertainment**, **Work**, **Browsers & Security**, **Shopping & Money**,
-**Travel & Outdoors**, **School & Learning** (including LockDown Browser) and
+AppWatch tracks 97 apps and games out of the box — 228 listings across the
+App Store, Google Play, Windows and Mac — checks every one of them **every two
+hours**, and records what changed. Apps are grouped into categories, shown as
+chips above the list: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot,
+Perplexity, DeepSeek, Character.AI and more), **Social**, **Messaging**,
+**Entertainment**, **Games** (Roblox, Minecraft, Steam, the Epic, GOG and EA
+launchers, and Counter-Strike 2, Dota 2, GTA V, ARK: Survival Ascended, Rust,
+Apex Legends, PUBG, Marvel Rivals, Helldivers 2, Baldur's Gate 3,
+Cyberpunk 2077, Palworld and Warframe), **Work**, **Browsers & Security**,
+**Shopping & Money**, **Travel & Outdoors**, **School & Learning** (including
+LockDown Browser), **Game Dev** (Roblox Studio, Unity, Godot and Blender) and
 **Drones** (DJI Fly, DJI GO 4, Litchi, DroneDeploy, FreeFlight 7,
 UAV Forecast, Aloft Air Control and QGroundControl).
 
 Every app that has a Windows or Mac version AppWatch can track reliably has
-it tracked too — 22 Windows and 27 Mac listings, from Chrome, Firefox, Edge
-and Brave to Spotify, Discord, Slack, Zoom, Notion and the AI desktop apps.
+it tracked too — 46 Windows and 36 Mac listings, from Chrome, Firefox, Edge
+and Brave to Spotify, Discord, Slack, Zoom, Teams, Dropbox, Notion and the AI
+desktop apps.
 
 Each app is one card covering every platform it's tracked on, with the **App
 Store in blue**, **Google Play in green**, **Windows in cyan** and **Mac in
@@ -95,8 +100,9 @@ checker actually saw — the version each listing had when tracking began
 
 ### App pages
 
-Tapping an app opens its own page (a normal link, `#app=<platform>:<id>`, so
-Back, new tabs and shared links all work). It shows the current version's
+Tapping an app opens its own page at a readable link — `#/chatgpt`, or
+`#/chatgpt/google-play` for one platform — so Back, new tabs and shared links
+all work (older `#app=…` links still open and are tidied to the new form). It shows the current version's
 release notes, how often the app updates, every recorded version, and a
 details column (version, dates, price, rating, size, store ID and more). Apps
 on several platforms get a tab per platform. Going back returns to the list
@@ -169,15 +175,45 @@ desktop listing names where its versions come from:
   the cask's history in `Homebrew/homebrew-cask` shows when each version
   arrived (Homebrew's bot opens a "<cask> <version>" commit within hours of a
   release). Homebrew carries no release notes.
-- **Vendor release feeds** for software in neither, like LockDown Browser
-  (below).
+- **Games: Steam patch notes.** Games rarely publish version numbers; what
+  they publish is patch notes, which developers post as announcements on the
+  game's Steam page. Steam's public news API returns those; the checker keeps
+  the ones that are patch notes (posts the developer tagged as patch notes,
+  or, for developers who don't tag them, posts titled like an update — "Patch
+  1.2", "Hotfix", "Update 2.3 is live" — but not "coming soon", sales,
+  tournaments or dev diaries) and records each as an update on its date, with
+  its notes. Steam's store API adds the developer, price, genre and age
+  rating.
+- **Release feeds** for software in none of these:
+  - **LockDown Browser** — Respondus's own announcements (below).
+  - **Minecraft: Java Edition** — Mojang's version list, the public file the
+    official launcher reads (full releases only, each with its release time,
+    back to the first release).
+  - **Roblox Studio for Windows** — the Roblox Client Tracker on GitHub, a
+    long-running public repository whose bot commits each new Windows Studio
+    build within hours of deployment; each links to Roblox's release notes for
+    that version. Roblox Studio for Mac comes from Homebrew, which follows
+    Roblox's own Mac deployment endpoint.
 
-Both catalogs are read-only and keyless; in GitHub Actions the run's own
+All of these are read-only and keyless; in GitHub Actions the run's own
 token raises the GitHub API limit. Apps whose desktop version is only in the
-Microsoft Store or Mac App Store (for example WhatsApp, ChatGPT and Netflix on
-Windows) aren't tracked there, because those stores publish no version
-numbers AppWatch can read; nor are packages whose winget entry has gone stale
-(Dropbox, Teams and Outlook on Windows), since stale data would mislead.
+Microsoft Store or Mac App Store (for example WhatsApp and Netflix on Windows)
+aren't tracked there, because those stores publish no version numbers
+AppWatch can read; nor are packages whose winget entry only carries an
+installer that never changes (Steam, Battle.net, Ubisoft Connect, the
+Rockstar launcher, Roblox Studio and Outlook on Windows), since stale data
+would mislead.
+
+Two things that were looked at and left out on purpose:
+
+- **Unreal Engine.** Epic only distributes it through the Epic Games Launcher
+  and a private GitHub repository that needs a linked Epic account; there's
+  no public version record to read without signing in.
+- **Linux.** Most of these apps reach Linux through Flathub, but Flathub's
+  update records mostly don't name the version ("Update discord module") and
+  several apps lag their Windows and Mac releases by weeks or months, so
+  Linux listings would often be wrong. They can be added if a reliable source
+  appears.
 
 LockDown Browser is read from Respondus's own announcements: Respondus posts every Windows and Mac release
 ("LockDown Browser for Windows, version 2.1.6.02") with notes on its help
@@ -224,12 +260,26 @@ Your choice is saved in the browser (`localStorage`). On a first visit the
 operating-system light/dark preference picks Gray Dark or Light; MS Paint is
 only ever active because you chose it.
 
+The theme menu also has **Short version numbers** (on by default): lists show
+an easier-to-read form of each version, trimmed from the real number — tags,
+long build numbers and trailing zeros are dropped (`26.19.0+rc3-2026…` →
+`26.19`, `156.0.8078.74` → `156`, `0.745.0.7451137` → `0.745`). Nothing is
+invented, an update never reads "156 → 156", the full number shows on hover,
+and app pages always show the full version. Switch it off to see raw versions
+everywhere.
+
 ### Motion
 
 Motion is kept small on purpose, so nothing can get stuck, overlap or hide
 content:
 
-- Pages and menus fade in quickly; hovering changes colors and borders only.
+- Pages rise in quickly, switching an app's platform fades its content, and
+  menus drop in. Cards lift a little under the pointer (not on touch
+  screens), and buttons and chips give a little when pressed.
+- On an app page, the forecast's chance-by-day chart grows up from its
+  baseline before its markers appear, and the days-between-releases bars grow
+  in, left to right, when "How this forecast works" opens.
+- Only opacity and transforms animate, so nothing else on the page shifts.
 - App icons show the app's first letter straight away and fade in once
   loaded. Every icon is requested at one size and remembered for the visit, so
   an icon that has loaded once shows instantly everywhere else, and one that

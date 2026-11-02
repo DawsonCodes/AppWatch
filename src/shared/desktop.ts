@@ -6,12 +6,16 @@
  *   "windows": "winget:Spotify.Spotify"   Windows Package Manager (winget)
  *   "mac": "homebrew:spotify"             Homebrew
  *   "windows": "respondus-lockdown-browser"   a vendor release feed (feeds.ts)
+ *   "windows": "steam:730"                a game's patch notes on Steam
  *
  * winget is Microsoft's package manager for Windows; its public manifest
  * repository lists every version of each package with its installer and,
  * usually, its release date and notes. Homebrew is the standard package
  * manager for macOS; its cask catalog follows each app's official download.
  * Both are read-only, keyless and kept current by their maintainers' bots.
+ * Games are read from the patch notes their developers post on Steam
+ * (Steam's public news API); most games don't publish version numbers, so
+ * their updates are listed by date.
  *
  * The stored listing id keeps the prefix: "windows:winget:Spotify.Spotify".
  */
@@ -24,15 +28,19 @@ export type DesktopPlatform = Extract<Platform, 'windows' | 'mac'>;
 
 export const WINGET_PREFIX = 'winget:';
 export const HOMEBREW_PREFIX = 'homebrew:';
+export const STEAM_PREFIX = 'steam:';
 
 /** winget PackageIdentifier: 2–8 dot-separated segments without spaces or path characters. */
 const WINGET_ID_RE = /^[^.\s\\/:*?"<>|]{1,32}(?:\.[^.\s\\/:*?"<>|]{1,32}){1,7}$/;
 /** Homebrew cask token, e.g. "google-chrome" or "firefox@esr". */
 const CASK_TOKEN_RE = /^[a-z0-9][a-z0-9@._+-]*$/;
+/** Steam app id, e.g. "730". */
+const STEAM_APP_RE = /^[1-9]\d{0,9}$/;
 
 export type DesktopSource =
   | { kind: 'winget'; packageId: string; label: string; sourceUrl: string }
   | { kind: 'homebrew'; token: string; label: string; sourceUrl: string }
+  | { kind: 'steam'; appId: string; label: string; sourceUrl: string; storeUrl: string }
   | { kind: 'feed'; feed: FeedInfo; label: string; sourceUrl: string };
 
 /** manifests/s/Spotify/Spotify for "Spotify.Spotify". */
@@ -60,6 +68,17 @@ export function desktopSourceFor(platform: Platform, storeId: string): DesktopSo
       sourceUrl: `https://github.com/microsoft/winget-pkgs/tree/master/${wingetManifestPath(packageId)}`,
     };
   }
+  if (platform === 'windows' && storeId.startsWith(STEAM_PREFIX)) {
+    const appId = storeId.slice(STEAM_PREFIX.length);
+    if (!STEAM_APP_RE.test(appId)) return null;
+    return {
+      kind: 'steam',
+      appId,
+      label: 'Steam patch notes',
+      sourceUrl: `https://store.steampowered.com/news/app/${appId}`,
+      storeUrl: `https://store.steampowered.com/app/${appId}/`,
+    };
+  }
   if (platform === 'mac' && storeId.startsWith(HOMEBREW_PREFIX)) {
     const token = storeId.slice(HOMEBREW_PREFIX.length);
     if (!isCaskToken(token)) return null;
@@ -82,7 +101,8 @@ export function desktopSourceFor(platform: Platform, storeId: string): DesktopSo
 /**
  * Parse a catalog "windows" / "mac" value into a stored id. Accepts
  * "winget:<PackageIdentifier>", "homebrew:<token>", a formulae.brew.sh cask
- * link, or a release feed id. Returns an error message for anything else.
+ * link, "steam:<app id>", a Steam store link, or a release feed id. Returns
+ * an error message for anything else.
  */
 export function parseDesktopRef(
   value: string,
@@ -90,13 +110,23 @@ export function parseDesktopRef(
 ): { storeId: string } | { error: string } {
   const text = value.trim();
   const brewLink = /^https?:\/\/formulae\.brew\.sh\/cask\/([^/?#]+)\/?$/i.exec(text);
-  const storeId = brewLink ? `${HOMEBREW_PREFIX}${brewLink[1]!.toLowerCase()}` : text;
+  const steamLink = /^https?:\/\/store\.steampowered\.com\/app\/(\d+)(?:[/?#].*)?$/i.exec(text);
+  const storeId = brewLink
+    ? `${HOMEBREW_PREFIX}${brewLink[1]!.toLowerCase()}`
+    : steamLink
+      ? `${STEAM_PREFIX}${steamLink[1]}`
+      : text;
   if (desktopSourceFor(platform, storeId)) return { storeId };
 
   if (storeId.startsWith(WINGET_PREFIX)) {
     return platform === 'windows'
       ? { error: `"${text}" is not a valid winget package id (e.g. "winget:Spotify.Spotify").` }
       : { error: `winget packages are Windows software; use "homebrew:<cask>" for Mac.` };
+  }
+  if (storeId.startsWith(STEAM_PREFIX)) {
+    return platform === 'windows'
+      ? { error: `"${text}" is not a valid Steam app id (e.g. "steam:730").` }
+      : { error: `Steam games are listed under "windows" (e.g. "steam:730").` };
   }
   if (storeId.startsWith(HOMEBREW_PREFIX)) {
     return platform === 'mac'

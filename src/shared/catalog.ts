@@ -82,6 +82,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 
 export function slugify(text: string): string {
   return text
+    .replace(/['’]/g, '')
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()

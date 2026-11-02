@@ -9,6 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Games: a Games category with Roblox, Minecraft (Java Edition from Mojang's
+  version list on Windows and Mac), Steam, the Epic Games Launcher, GOG
+  Galaxy and the EA app, plus Counter-Strike 2, Dota 2, GTA V, ARK: Survival
+  Ascended, Rust, Apex Legends, PUBG, Marvel Rivals, Helldivers 2, Baldur's
+  Gate 3, Cyberpunk 2077, Palworld and Warframe, tracked from the patch notes
+  their developers post on Steam.
+- Game Dev: Roblox Studio (Windows from the Roblox Client Tracker, Mac from
+  Homebrew, with links to Roblox's release notes), Unity 6, Godot and
+  Blender on Windows and Mac.
+- Windows versions of ChatGPT, Dropbox and Microsoft Teams.
+- Short version numbers (theme menu, on by default): lists show versions
+  trimmed of tags and build numbers ("26.19" for "26.19.0+rc3-2026…"); the
+  full version is on hover and on app pages.
+- Readable links: `#/chatgpt` and `#/chatgpt/google-play` instead of
+  `#app=apple%3A…` (old links still work and are tidied).
+- Subtle motion: pages rise in, cards lift on hover, buttons give when
+  pressed, the forecast chart grows from its baseline and the gap bars grow in
+  when opened. All of it is off under reduced motion.
+- Apps without an icon get a letter tile tinted from their name.
+
 - Self-learning update forecasts. Each checker run that records something new
   replays every listing's history, picks the forecast settings that would have
   worked best (shared, or per listing when one clearly suits it better), sizes

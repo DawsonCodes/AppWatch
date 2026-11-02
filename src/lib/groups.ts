@@ -249,7 +249,25 @@ export function hasActiveGroupFilters(filters: GroupFilters): boolean {
   );
 }
 
-/** Find the group (and listing) a deep link like `#app=apple:123` refers to. */
+/**
+ * Find the group (and listing) for a catalog app's link (`#/chatgpt`,
+ * `#/chatgpt/google-play`). Without a platform, or when the app isn't on
+ * it, the most recently updated listing opens.
+ */
+export function findByAppKey(
+  groups: readonly AppGroup[],
+  key: string,
+  platform: Listing['platform'] | null,
+): { group: AppGroup; listing: Listing } | null {
+  const group = groups.find((g) => g.key === key && g.source === 'tracked');
+  if (!group) return null;
+  const listing =
+    (platform ? group.listings.find((l) => l.platform === platform) : undefined) ??
+    primaryListing(group);
+  return { group, listing };
+}
+
+/** Find the group (and listing) a deep link like `#/app-store/123` refers to. */
 export function findByListingId(
   groups: readonly AppGroup[],
   listingId: string,

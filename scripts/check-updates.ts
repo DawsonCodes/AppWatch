@@ -2,7 +2,7 @@
  * AppWatch update checker CLI.
  *
  * Reads apps.config.json, queries the App Store and Google Play for each
- * tracked app (and winget, Homebrew or a vendor release feed for Windows and
+ * tracked app (and winget, Homebrew, Steam or a release feed for Windows and
  * Mac software), and refreshes public/data/*.json when anything meaningful
  * changed. Designed to run in GitHub Actions on a schedule, but works locally:
  *
@@ -28,7 +28,10 @@ import { createGooglePlayProvider } from './lib/providers/googleplay.ts';
 import { createGitHubClient } from './lib/github.ts';
 import { createDesktopRouter } from './lib/providers/desktop.ts';
 import { createHomebrewProvider } from './lib/providers/homebrew.ts';
+import { createMinecraftProvider } from './lib/providers/minecraft.ts';
 import { createRespondusProvider } from './lib/providers/respondus.ts';
+import { createRobloxStudioProvider } from './lib/providers/robloxStudio.ts';
+import { createSteamProvider } from './lib/providers/steam.ts';
 import { createWingetProvider } from './lib/providers/winget.ts';
 import { runCheck } from './lib/run.ts';
 import type { AppRunSummary, RunResult } from './lib/run.ts';
@@ -98,16 +101,25 @@ async function main(): Promise<void> {
   const configuredDelay = Number(process.env.APPWATCH_DELAY_MS ?? 1500);
   const playIntervalMs = Number.isFinite(configuredDelay) ? configuredDelay : 1500;
   const github = createGitHubClient({ token: process.env.GITHUB_TOKEN || undefined, log });
-  const feed = createRespondusProvider({ log });
+  // Release feeds by id (src/shared/feeds.ts).
+  const feeds = {
+    'respondus-lockdown-browser': createRespondusProvider({ log }),
+    'roblox-studio': createRobloxStudioProvider({ github }),
+    'minecraft-java': createMinecraftProvider({ log }),
+  };
   const result = await runCheck({
     config,
     providers: {
       apple: createAppleProvider({ log }),
       google: createGooglePlayProvider({ log, minIntervalMs: playIntervalMs }),
-      // Desktop versions come from winget, Homebrew or a vendor release feed
+      // Desktop versions come from winget, Homebrew, Steam or a release feed
       // (src/shared/desktop.ts).
-      windows: createDesktopRouter({ winget: createWingetProvider({ github, log }), feed }),
-      mac: createDesktopRouter({ homebrew: createHomebrewProvider({ github, log }), feed }),
+      windows: createDesktopRouter({
+        winget: createWingetProvider({ github, log }),
+        steam: createSteamProvider({ log }),
+        feeds,
+      }),
+      mac: createDesktopRouter({ homebrew: createHomebrewProvider({ github, log }), feeds }),
     },
     dataDir: join(root, 'public', 'data'),
     log,

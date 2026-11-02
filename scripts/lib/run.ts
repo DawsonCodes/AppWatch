@@ -82,6 +82,7 @@ function fallbackStoreUrl(target: TrackTarget): string {
     default: {
       const source = desktopSourceFor(target.platform, target.storeId);
       if (source?.kind === 'feed') return source.feed.productUrl;
+      if (source?.kind === 'steam') return source.storeUrl;
       return source?.sourceUrl ?? 'https://github.com/DawsonCodes/AppWatch';
     }
   }

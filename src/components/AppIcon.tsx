@@ -19,6 +19,13 @@ interface AppIconProps {
 const loaded = new Set<string>();
 const failed = new Set<string>();
 
+/** A stable hue per name, so an app's letter tile always has the same tint. */
+export function nameHue(name: string): number {
+  let hash = 0;
+  for (const char of name.toLowerCase()) hash = (hash * 31 + char.codePointAt(0)!) >>> 0;
+  return hash % 360;
+}
+
 /**
  * App icon on a solid tile. The app's first letter shows straight away and
  * the real icon fades in over it once it has loaded. If the icon can't load,
@@ -46,7 +53,12 @@ export function AppIcon({
   return (
     <span
       class={`app-icon${status === 'loaded' ? ' is-loaded' : ''}${className ? ` ${className}` : ''}`}
-      style={{ width: `${size}px`, height: `${size}px`, fontSize: `${Math.round(size * 0.42)}px` }}
+      style={{
+        width: `${size}px`,
+        height: `${size}px`,
+        fontSize: `${Math.round(size * 0.42)}px`,
+        '--icon-hue': String(nameHue(name)),
+      }}
       aria-hidden="true"
     >
       <span class="app-icon__letter">{letter}</span>

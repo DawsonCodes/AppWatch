@@ -394,8 +394,9 @@ describe('desktop router', () => {
     const winget = vi.fn(async () => ({ version: 'w' }) as never);
     const homebrew = vi.fn(async () => ({ version: 'h' }) as never);
     const feed = vi.fn(async () => ({ version: 'f' }) as never);
-    const windows = createDesktopRouter({ winget, feed });
-    const mac = createDesktopRouter({ homebrew, feed });
+    const feeds = { 'respondus-lockdown-browser': feed };
+    const windows = createDesktopRouter({ winget, feeds });
+    const mac = createDesktopRouter({ homebrew, feeds });
     await windows(target('windows', 'winget:A.B'));
     await windows(target('windows', 'respondus-lockdown-browser'));
     await mac(target('mac', 'homebrew:abc'));

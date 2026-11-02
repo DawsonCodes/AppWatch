@@ -10,6 +10,7 @@
           "name": "ChatGPT",
           "appStore": "https://apps.apple.com/us/app/chatgpt/id6448311069",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+          "windows": "winget:OpenAI.ChatGPT",
           "mac": "homebrew:chatgpt"
         },
         {
@@ -196,13 +197,98 @@
           "googlePlay": "https://play.google.com/store/apps/details?id=org.videolan.vlc",
           "windows": "winget:VideoLAN.VLC",
           "mac": "homebrew:vlc"
-        },
+        }
+      ]
+    },
+    {
+      "id": "games",
+      "label": "Games",
+      "apps": [
         {
           "name": "Roblox",
           "appStore": "https://apps.apple.com/us/app/roblox/id431946152",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.roblox.client",
           "windows": "winget:Roblox.Roblox",
           "mac": "homebrew:roblox"
+        },
+        {
+          "name": "Minecraft",
+          "appStore": "https://apps.apple.com/us/app/minecraft-dream-it-build-it/id479516143",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
+          "windows": "minecraft-java",
+          "mac": "minecraft-java"
+        },
+        {
+          "name": "Steam",
+          "appStore": "https://apps.apple.com/us/app/steam-mobile/id495369748",
+          "googlePlay": "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community"
+        },
+        {
+          "name": "Epic Games Launcher",
+          "windows": "winget:EpicGames.EpicGamesLauncher",
+          "mac": "homebrew:epic-games"
+        },
+        {
+          "name": "GOG Galaxy",
+          "windows": "winget:GOG.Galaxy",
+          "mac": "homebrew:gog-galaxy"
+        },
+        {
+          "name": "EA app",
+          "windows": "winget:ElectronicArts.EADesktop",
+          "mac": "homebrew:ea"
+        },
+        {
+          "name": "Counter-Strike 2",
+          "windows": "steam:730"
+        },
+        {
+          "name": "Dota 2",
+          "windows": "steam:570"
+        },
+        {
+          "name": "Grand Theft Auto V",
+          "windows": "steam:3240220"
+        },
+        {
+          "name": "ARK: Survival Ascended",
+          "windows": "steam:2399830"
+        },
+        {
+          "name": "Rust",
+          "windows": "steam:252490"
+        },
+        {
+          "name": "Apex Legends",
+          "windows": "steam:1172470"
+        },
+        {
+          "name": "PUBG: Battlegrounds",
+          "windows": "steam:578080"
+        },
+        {
+          "name": "Marvel Rivals",
+          "windows": "steam:2767030"
+        },
+        {
+          "name": "Helldivers 2",
+          "windows": "steam:553850"
+        },
+        {
+          "name": "Baldur's Gate 3",
+          "windows": "steam:1086940"
+        },
+        {
+          "name": "Cyberpunk 2077",
+          "windows": "steam:1091500"
+        },
+        {
+          "name": "Palworld",
+          "windows": "steam:1623730"
+        },
+        {
+          "name": "Warframe",
+          "windows": "steam:230410"
         }
       ]
     },
@@ -232,6 +318,7 @@
           "name": "Microsoft Teams",
           "appStore": "https://apps.apple.com/us/app/microsoft-teams/id1113153706",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.microsoft.teams",
+          "windows": "winget:Microsoft.Teams",
           "mac": "homebrew:microsoft-teams"
         },
         {
@@ -252,6 +339,7 @@
           "name": "Dropbox",
           "appStore": "https://apps.apple.com/us/app/dropbox/id327630330",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.dropbox.android",
+          "windows": "winget:Dropbox.Dropbox",
           "mac": "homebrew:dropbox"
         },
         {
@@ -436,6 +524,32 @@
           "name": "Google Translate",
           "appStore": "https://apps.apple.com/us/app/google-translate/id414706506",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate"
+        }
+      ]
+    },
+    {
+      "id": "game-dev",
+      "label": "Game Dev",
+      "apps": [
+        {
+          "name": "Roblox Studio",
+          "windows": "roblox-studio",
+          "mac": "homebrew:robloxstudio"
+        },
+        {
+          "name": "Unity",
+          "windows": "winget:Unity.Unity.6000",
+          "mac": "homebrew:unity"
+        },
+        {
+          "name": "Godot",
+          "windows": "winget:GodotEngine.GodotEngine",
+          "mac": "homebrew:godot"
+        },
+        {
+          "name": "Blender",
+          "windows": "winget:BlenderFoundation.Blender",
+          "mac": "homebrew:blender"
         }
       ]
     },

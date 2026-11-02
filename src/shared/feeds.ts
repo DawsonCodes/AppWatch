@@ -1,8 +1,9 @@
 /**
  * Desktop release feeds. Windows and Mac software isn't sold through an app
- * store AppWatch can query, so each supported desktop product is read from
- * its vendor's own official release announcements. A catalog entry refers to
- * a feed by id:
+ * store AppWatch can query, so some desktop products are read from their own
+ * public release records (a vendor's announcements, a published version
+ * list, or a long-running public tracker). A catalog entry refers to a feed
+ * by id:
  *
  *   { "name": "LockDown Browser", "windows": "respondus-lockdown-browser" }
  *
@@ -36,6 +37,24 @@ export const FEEDS: Readonly<Record<string, FeedInfo>> = {
     sourceLabel: 'Respondus release announcements',
     sourceUrl:
       'https://support.respondus.com/hc/en-us/sections/4409696144411-Respondus-Announcements',
+  },
+  'roblox-studio': {
+    id: 'roblox-studio',
+    product: 'Roblox Studio',
+    developer: 'Roblox Corporation',
+    platforms: ['windows'],
+    productUrl: 'https://create.roblox.com/',
+    sourceLabel: 'Roblox Client Tracker',
+    sourceUrl: 'https://github.com/MaximumADHD/Roblox-Client-Tracker',
+  },
+  'minecraft-java': {
+    id: 'minecraft-java',
+    product: 'Minecraft: Java Edition',
+    developer: 'Mojang Studios',
+    platforms: ['windows', 'mac'],
+    productUrl: 'https://www.minecraft.net/',
+    sourceLabel: 'Mojang’s version list',
+    sourceUrl: 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json',
   },
 };
 

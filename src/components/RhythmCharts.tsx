@@ -395,6 +395,7 @@ export function GapColumns({ cadence }: { cadence: Cadence }) {
               return (
                 <path
                   key={gap.to.time}
+                  style={{ '--i': String(i) }}
                   class={`chart__bar${i === active ? ' is-active' : ''}`}
                   d={columnPath(bx, GAP_AXIS - h, barW, h)}
                 />
