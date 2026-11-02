@@ -2711,6 +2711,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.61",
+        "releaseDate": "2026-11-01T13:58:50.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-02T01:30:42.436Z"
+      },
+      {
         "version": "1.4.60",
         "releaseDate": "2026-10-30T11:09:39.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -7912,6 +7918,12 @@
       }
     ],
     "apple:1446075923": [
+      {
+        "version": "5.20.5",
+        "releaseDate": "2026-11-01T09:04:06.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-11-02T01:30:42.436Z"
+      },
       {
         "version": "5.20.1",
         "releaseDate": "2026-10-27T17:25:47.000Z",
@@ -18691,6 +18703,12 @@
       }
     ],
     "apple:989804926": [
+      {
+        "version": "159.1",
+        "releaseDate": "2026-11-01T20:55:58.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-11-02T01:30:42.436Z"
+      },
       {
         "version": "159.0",
         "releaseDate": "2026-10-26T02:03:30.000Z",
