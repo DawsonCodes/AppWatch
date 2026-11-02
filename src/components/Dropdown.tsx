@@ -21,6 +21,8 @@ interface DropdownProps<T extends string> {
   buttonContent?: ComponentChildren;
   align?: 'start' | 'end';
   buttonClass?: string;
+  /** Extra controls under the options (e.g. a display switch); not part of the listbox. */
+  footer?: ComponentChildren;
 }
 
 /**
@@ -37,6 +39,7 @@ export function Dropdown<T extends string>({
   buttonContent,
   align = 'start',
   buttonClass = '',
+  footer,
 }: DropdownProps<T>) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -105,7 +108,14 @@ export function Dropdown<T extends string>({
         items[items.length - 1]?.focus();
         break;
       case 'Tab':
-        close(false);
+        // Tabbing past the last control (or out of a menu without extras) closes it.
+        if (
+          !footer ||
+          event.shiftKey ||
+          !(event.target as HTMLElement).closest('[role="listbox"]')
+        ) {
+          close(false);
+        }
         break;
     }
   }
@@ -128,39 +138,38 @@ export function Dropdown<T extends string>({
       </button>
       <div
         class={`dropdown__menu dropdown__menu--${align}`}
-        id={menuId}
-        role="listbox"
-        aria-label={label}
-        ref={listRef}
         hidden={!open}
         onKeyDown={onMenuKeyDown}
       >
-        {options.map((option) => (
-          <button
-            type="button"
-            key={option.value}
-            role="option"
-            aria-selected={option.value === value}
-            class="dropdown__option"
-            tabIndex={open ? 0 : -1}
-            onClick={(event) => {
-              const origin = buttonRef.current ?? event.currentTarget;
-              close(true);
-              if (option.value !== value) onChange(option.value, origin);
-            }}
-          >
-            {option.icon ? <span class="dropdown__option-icon">{option.icon}</span> : null}
-            <span class="dropdown__option-text">
-              <span class="dropdown__option-label">{option.label}</span>
-              {option.description ? (
-                <span class="dropdown__option-desc">{option.description}</span>
-              ) : null}
-            </span>
-            <span class="dropdown__check" aria-hidden="true">
-              <CheckIcon size={14} />
-            </span>
-          </button>
-        ))}
+        <div class="dropdown__list" id={menuId} role="listbox" aria-label={label} ref={listRef}>
+          {options.map((option) => (
+            <button
+              type="button"
+              key={option.value}
+              role="option"
+              aria-selected={option.value === value}
+              class="dropdown__option"
+              tabIndex={open ? 0 : -1}
+              onClick={(event) => {
+                const origin = buttonRef.current ?? event.currentTarget;
+                close(true);
+                if (option.value !== value) onChange(option.value, origin);
+              }}
+            >
+              {option.icon ? <span class="dropdown__option-icon">{option.icon}</span> : null}
+              <span class="dropdown__option-text">
+                <span class="dropdown__option-label">{option.label}</span>
+                {option.description ? (
+                  <span class="dropdown__option-desc">{option.description}</span>
+                ) : null}
+              </span>
+              <span class="dropdown__check" aria-hidden="true">
+                <CheckIcon size={14} />
+              </span>
+            </button>
+          ))}
+        </div>
+        {footer ? <div class="dropdown__footer">{footer}</div> : null}
       </div>
     </div>
   );

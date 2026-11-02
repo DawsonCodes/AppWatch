@@ -1,11 +1,14 @@
 /* ==========================================================================
    AppWatch motion
    --------------------------------------------------------------------------
-   Kept deliberately small. Pages and menus fade in quickly, hover states
-   change color, and icons fade in once loaded. Nothing moves content around,
-   waits for scrolling, or blocks clicks. The one big effect is the circular
-   theme reveal (src/lib/motion.ts). Entrance animations use fill-mode
-   `backwards`, so they never leave anything behind once finished.
+   Kept small and quick. Pages rise in, cards lift a little on hover, the
+   forecast chart grows from its baseline and the gap bars grow when opened,
+   buttons give under a click, and icons fade in once loaded. Nothing moves
+   other content around, waits for scrolling, or blocks clicks; only opacity
+   and transform animate. The one big effect is the circular theme reveal
+   (src/lib/motion.ts). Entrance animations use fill-mode `backwards`, so they
+   never leave anything behind once finished, and everything here switches
+   off for people who ask their system for reduced motion.
    ========================================================================== */
 
 @keyframes fade-in {
@@ -34,10 +37,91 @@
   }
 }
 
-/* Switching between the list and an app page. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes grow-up {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+/* Switching between the list and an app page, and between an app's platforms. */
 .list-page,
 .app-page {
-  animation: fade-in 180ms ease-out backwards;
+  animation: rise-in 240ms var(--ease-out) backwards;
+}
+
+.app-page__body {
+  animation: fade-in 200ms ease-out backwards;
+}
+
+/* The grid appears with the page or a view switch, not on every filter change. */
+.grid,
+.timeline {
+  animation: fade-in 220ms ease-out backwards;
+}
+
+/* Cards lift a little under the pointer (never on touch screens). */
+@media (hover: hover) {
+  .card {
+    transition:
+      border-color var(--dur-1) ease,
+      background-color var(--dur-1) ease,
+      transform var(--dur-2) var(--ease-out),
+      box-shadow var(--dur-2) var(--ease-out);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+  }
+}
+
+/* Buttons and chips give a little under a click. */
+.button,
+.chip,
+.icon-button,
+.tabs__item,
+.dropdown__button {
+  transition-property: background-color, border-color, color, transform, box-shadow;
+  transition-duration: var(--dur-1);
+}
+
+.button:active:not(:disabled),
+.chip:active,
+.icon-button:active,
+.tabs__item:active,
+.dropdown__button:active {
+  transform: scale(0.97);
+}
+
+/* Forecast: the chance-by-day hill grows from the baseline, then the marks appear. */
+.forecast-bar__hill {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: grow-up 560ms var(--ease-out) 60ms backwards;
+}
+
+.forecast-bar__likely,
+.forecast-bar__likely-dot,
+.forecast-bar__label {
+  animation: fade-in 260ms ease-out 380ms backwards;
+}
+
+/* Gap bars grow when "How this forecast works" opens, left to right. */
+.chart__bar {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: grow-up 420ms var(--ease-out) backwards;
+  animation-delay: calc(var(--i, 0) * 14ms);
+}
+
+.forecast__more[open] .forecast__more-body {
+  animation: rise-in 220ms var(--ease-out) backwards;
 }
 
 .dropdown__menu {

@@ -230,6 +230,8 @@
 
 [data-theme='ms-paint'] .app-icon {
   border-radius: 0;
+  background: hsl(var(--icon-hue) 70% 85%);
+  color: #000000;
   box-shadow: none;
   outline: 1px solid #000000;
 }

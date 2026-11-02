@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'preact/hooks';
+import { useContext, useMemo, useState } from 'preact/hooks';
 import type { TimelineEvent } from '../lib/timeline.ts';
 import { groupByDay } from '../lib/timeline.ts';
 import { groupIconUrl } from '../lib/groups.ts';
 import { appHref } from '../lib/route.ts';
+import { displayPair, shortVersion, ShortVersionsContext } from '../lib/versionDisplay.ts';
 import { truncate } from '../shared/text.ts';
 import { AppIcon } from './AppIcon.tsx';
 import { ArrowRightIcon } from './Icons.tsx';
@@ -30,6 +31,7 @@ interface UpdatesTimelineProps {
  * version history, so it only lists releases AppWatch actually saw.
  */
 export function UpdatesTimeline({ events, onClearFilters, filtered }: UpdatesTimelineProps) {
+  const short = useContext(ShortVersionsContext);
   const [limit, setLimit] = useState(PAGE);
   const days = useMemo(() => groupByDay(events.slice(0, limit)), [events, limit]);
 
@@ -81,12 +83,20 @@ export function UpdatesTimeline({ events, onClearFilters, filtered }: UpdatesTim
                       <span class="release__versions">
                         {event.previousVersion && event.version ? (
                           <>
-                            <span class="mono release__old">{event.previousVersion}</span>
+                            <span class="mono release__old" title={event.previousVersion}>
+                              {displayPair(event.previousVersion, event.version, short).from}
+                            </span>
                             <ArrowRightIcon size={12} />
                           </>
                         ) : null}
                         {event.version ? (
-                          <span class="version-chip">{event.version}</span>
+                          <span class="version-chip" title={event.version}>
+                            {event.previousVersion
+                              ? displayPair(event.previousVersion, event.version, short).to
+                              : short
+                                ? shortVersion(event.version)
+                                : event.version}
+                          </span>
                         ) : (
                           <span class="version-chip version-chip--none">Update</span>
                         )}

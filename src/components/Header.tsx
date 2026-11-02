@@ -9,6 +9,33 @@ interface HeaderProps {
   status: StatusFile | null;
   theme: ThemeId;
   onThemeChange: (theme: ThemeId, origin: HTMLElement | null) => void;
+  shortVersions: boolean;
+  onShortVersionsChange: (on: boolean) => void;
+}
+
+/** An on/off row for the theme menu. */
+function SwitchRow({
+  label,
+  description,
+  on,
+  onToggle,
+}: {
+  label: string;
+  description: string;
+  on: boolean;
+  onToggle: () => void;
+}) {
+  return (
+    <button type="button" role="switch" aria-checked={on} class="switch-row" onClick={onToggle}>
+      <span class="switch-row__text">
+        <span class="switch-row__label">{label}</span>
+        <span class="switch-row__desc">{description}</span>
+      </span>
+      <span class={`switch${on ? ' is-on' : ''}`} aria-hidden="true">
+        <span class="switch__thumb" />
+      </span>
+    </button>
+  );
 }
 
 /** Compact check-health chip: a dot plus short text, never color alone. */
@@ -47,7 +74,13 @@ function HealthChip({ status }: { status: StatusFile | null }) {
   );
 }
 
-export function Header({ status, theme, onThemeChange }: HeaderProps) {
+export function Header({
+  status,
+  theme,
+  onThemeChange,
+  shortVersions,
+  onShortVersionsChange,
+}: HeaderProps) {
   const current = THEMES.find((option) => option.id === theme);
   return (
     <header class="site-header">
@@ -75,6 +108,14 @@ export function Header({ status, theme, onThemeChange }: HeaderProps) {
             onChange={onThemeChange}
             align="end"
             buttonClass="dropdown__button--theme"
+            footer={
+              <SwitchRow
+                label="Short version numbers"
+                description="26.19 instead of 26.19.0+rc3-2026…"
+                on={shortVersions}
+                onToggle={() => onShortVersionsChange(!shortVersions)}
+              />
+            }
             buttonContent={
               <>
                 <PaletteIcon size={16} />

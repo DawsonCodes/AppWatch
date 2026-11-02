@@ -23,6 +23,7 @@ import { Notes } from './Notes.tsx';
 import { storeLabel } from './StoreBadge.tsx';
 import { Tabs } from './Tabs.tsx';
 import { WatchButton } from './WatchButton.tsx';
+import { useDisplayVersion } from '../lib/versionDisplay.ts';
 
 export type HistoryState =
   | { phase: 'loading' }
@@ -191,6 +192,8 @@ function desktopNotice(source: DesktopSource): string {
       return 'From winget, Microsoft’s package catalog. New versions usually appear there within a day or two of release.';
     case 'homebrew':
       return 'From Homebrew, which follows the official download within hours. Homebrew has no release notes.';
+    case 'steam':
+      return 'From the patch notes the developer posts on Steam. Most games don’t publish version numbers, so updates are listed by date.';
     case 'feed':
       return `From ${source.feed.sourceLabel}. AppWatch doesn’t host installers; get ${source.feed.product} from your school or the official page.`;
   }
@@ -232,6 +235,7 @@ export function AppPage({
   const size = formatBytes(listing.sizeBytes);
   const ratingCount = formatCount(listing.ratingCount);
   const link = new URL(appHref(listing.id), location.href).toString();
+  const displayVersion = useDisplayVersion();
 
   return (
     <article class="app-page" aria-labelledby="app-title">
@@ -258,7 +262,11 @@ export function AppPage({
             target="_blank"
             rel="noopener noreferrer"
           >
-            {desktop ? 'Official site' : `Open in ${storeLabel(listing.platform)}`}
+            {desktop?.kind === 'steam'
+              ? 'Open in Steam'
+              : desktop
+                ? 'Official site'
+                : `Open in ${storeLabel(listing.platform)}`}
             <ExternalIcon size={13} />
           </a>
           <WatchButton appName={group.name} watched={watched} onToggle={onToggleWatch} labelled />
@@ -291,7 +299,13 @@ export function AppPage({
             label: (
               <>
                 {storeLabel(l.platform)}
-                <span class="platform-tabs__version mono">{l.currentVersion ?? 'Varies'}</span>
+                <span class="platform-tabs__version mono">
+                  {l.currentVersion
+                    ? displayVersion(l.currentVersion)
+                    : l.platform === 'google'
+                      ? 'Varies'
+                      : '—'}
+                </span>
               </>
             ),
           }))}
@@ -299,6 +313,7 @@ export function AppPage({
       ) : null}
 
       <div
+        key={listing.id}
         class="app-page__body"
         id="listing-panel"
         role={group.listings.length > 1 ? 'tabpanel' : undefined}
@@ -421,7 +436,11 @@ export function AppPage({
               <Fact label="Version">
                 <span class="mono">
                   {listing.currentVersion ??
-                    (listing.platform === 'google' ? 'Varies by device' : 'Unknown')}
+                    (listing.platform === 'google'
+                      ? 'Varies by device'
+                      : desktop?.kind === 'steam'
+                        ? 'Not published'
+                        : 'Unknown')}
                 </span>
               </Fact>
               {listing.previousVersion ? (
@@ -459,9 +478,21 @@ export function AppPage({
               ) : null}
               {desktop ? (
                 desktop.kind === 'feed' ? null : (
-                  <Fact label={desktop.kind === 'winget' ? 'winget ID' : 'Homebrew cask'}>
+                  <Fact
+                    label={
+                      desktop.kind === 'winget'
+                        ? 'winget ID'
+                        : desktop.kind === 'steam'
+                          ? 'Steam app ID'
+                          : 'Homebrew cask'
+                    }
+                  >
                     <span class="mono">
-                      {desktop.kind === 'winget' ? desktop.packageId : desktop.token}
+                      {desktop.kind === 'winget'
+                        ? desktop.packageId
+                        : desktop.kind === 'steam'
+                          ? desktop.appId
+                          : desktop.token}
                     </span>
                   </Fact>
                 )

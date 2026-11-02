@@ -3,7 +3,8 @@ import type { AppGroup } from '../lib/groups.ts';
 import { groupDeveloper, groupIconUrl, primaryListing } from '../lib/groups.ts';
 import { isRecentlyUpdated } from '../lib/filtering.ts';
 import { compactAgo, formatDate } from '../lib/format.ts';
-import { appHref } from '../lib/route.ts';
+import { groupHref } from '../lib/route.ts';
+import { useDisplayVersion } from '../lib/versionDisplay.ts';
 import { AppIcon } from './AppIcon.tsx';
 import { AlertIcon } from './Icons.tsx';
 import { storeLabel } from './StoreBadge.tsx';
@@ -23,6 +24,7 @@ function AppCardImpl({ group, watched, onToggleWatch }: AppCardProps) {
   const primary = primaryListing(group);
   const developer = groupDeveloper(group);
   const local = group.source === 'local';
+  const displayVersion = useDisplayVersion();
 
   return (
     <article class="card" data-key={group.key}>
@@ -30,7 +32,7 @@ function AppCardImpl({ group, watched, onToggleWatch }: AppCardProps) {
         <AppIcon name={group.name} iconUrl={groupIconUrl(group)} size={48} />
         <div class="card__title">
           <h3 class="card__name">
-            <a class="card__link" href={appHref(primary.id)}>
+            <a class="card__link" href={groupHref(group, primary.id)}>
               {group.name}
             </a>
           </h3>
@@ -49,9 +51,9 @@ function AppCardImpl({ group, watched, onToggleWatch }: AppCardProps) {
                 {storeLabel(listing.platform)}
               </span>
               <span class="store-row__version mono" title={listing.currentVersion ?? undefined}>
-                {listing.currentVersion ?? (
+                {(listing.currentVersion && displayVersion(listing.currentVersion)) ?? (
                   <span class="store-row__varies" title="This store doesn't list one version">
-                    {local ? '—' : 'Varies'}
+                    {listing.platform === 'google' && !local ? 'Varies' : '—'}
                   </span>
                 )}
               </span>

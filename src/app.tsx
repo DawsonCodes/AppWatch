@@ -44,6 +44,7 @@ import {
   buildGroups,
   DEFAULT_GROUP_FILTERS,
   filterGroups,
+  findByAppKey,
   findByListingId,
   hasActiveGroupFilters,
   isGroupWatched,
@@ -53,6 +54,7 @@ import { createLocalAppsStore, makeLocalApp } from './lib/localApps.ts';
 import type { LocalApp } from './lib/localApps.ts';
 import { themeReveal } from './lib/motion.ts';
 import { readPref, writePref } from './lib/prefs.ts';
+import { SHORT_VERSIONS_PREF_KEY, ShortVersionsContext } from './lib/versionDisplay.ts';
 import type { Route } from './lib/route.ts';
 import { appHref, parseRoute } from './lib/route.ts';
 import { applyTheme, currentTheme, persistTheme } from './lib/theme.ts';
@@ -170,6 +172,13 @@ export function App() {
   const [discovery, setDiscovery] = useState<DiscoveryState>({ phase: 'idle' });
   const [localRefreshing, setLocalRefreshing] = useState(false);
   const [toast, setToast] = useState<ToastMessage | null>(null);
+  const [shortVersions, setShortVersions] = useState(
+    () => readPref(SHORT_VERSIONS_PREF_KEY) !== '0',
+  );
+  const changeShortVersions = useCallback((on: boolean) => {
+    writePref(SHORT_VERSIONS_PREF_KEY, on ? '1' : '0');
+    setShortVersions(on);
+  }, []);
 
   const searchRef = useRef<HTMLInputElement>(null);
   const mainRef = useRef<HTMLElement>(null);
@@ -435,7 +444,22 @@ export function App() {
     return buildTimeline(scope, historyLoad.file);
   }, [view, historyLoad, groups, filters, watchedIds, collectionOrder]);
 
-  const found = route.page === 'app' ? findByListingId(groups, route.listingId) : null;
+  const found =
+    route.page !== 'app'
+      ? null
+      : 'listingId' in route
+        ? findByListingId(groups, route.listingId)
+        : findByAppKey(groups, route.appKey, route.platform);
+
+  // Older links (#app=apple%3A123) are rewritten to the readable form.
+  useEffect(() => {
+    if (!found || !location.hash.startsWith('#app=')) return;
+    try {
+      history.replaceState(history.state, '', appHref(found.listing.id));
+    } catch {
+      // Ignore: the page still shows.
+    }
+  }, [found?.listing.id]);
 
   // Scroll and focus after the page has switched, before it is painted.
   useLayoutEffect(() => {
@@ -671,7 +695,7 @@ export function App() {
     ) : null;
 
   return (
-    <>
+    <ShortVersionsContext.Provider value={shortVersions}>
       <div class="layout">
         <a
           class="skip-link"
@@ -683,7 +707,13 @@ export function App() {
         >
           Skip to content
         </a>
-        <Header status={status} theme={theme} onThemeChange={changeTheme} />
+        <Header
+          status={status}
+          theme={theme}
+          onThemeChange={changeTheme}
+          shortVersions={shortVersions}
+          onShortVersionsChange={changeShortVersions}
+        />
 
         <main id="main" class="main" ref={mainRef} tabIndex={-1}>
           {appPage ?? (
@@ -895,6 +925,6 @@ export function App() {
       </div>
 
       {toast ? <Toast key={toast.id} toast={toast} onDone={dropToast} /> : null}
-    </>
+    </ShortVersionsContext.Provider>
   );
 }

@@ -69,11 +69,15 @@ export function backfillReleases(
 ): VersionHistoryEntry[] {
   if (!releases || releases.length === 0) return history;
   const official = new Map<string, OfficialRelease>();
-  for (const release of releases) official.set(release.version, release);
+  for (const release of releases) {
+    const key = historyEntryKey(release);
+    if (key !== null) official.set(key, release);
+  }
 
   let changed = false;
   let next = history.map((entry) => {
-    const release = entry.version ? official.get(entry.version) : undefined;
+    const key = historyEntryKey(entry);
+    const release = key !== null ? official.get(key) : undefined;
     if (!release) return entry;
     if (entry.url && entry.url === release.url) {
       if (

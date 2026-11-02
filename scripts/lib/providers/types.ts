@@ -32,9 +32,12 @@ export interface AppSnapshot {
   releases?: readonly OfficialRelease[];
 }
 
-/** One release from a vendor's official release record. */
+/**
+ * One release from a vendor's official release record. Records without
+ * version numbers (e.g. a game's patch notes) identify releases by date.
+ */
 export interface OfficialRelease {
-  version: string;
+  version: string | null;
   releaseDate: string | null;
   releaseNotes: string | null;
   url: string | null;
