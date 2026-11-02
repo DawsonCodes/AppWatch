@@ -131,6 +131,14 @@ describe('group helpers', () => {
     expect(groupIconUrl(chatgpt)).toBe('https://icons.example/6448311069.png');
   });
 
+  it('falls back to the catalog icon when no listing has one', () => {
+    const plain = { ...chatgpt, listings: chatgpt.listings.map((l) => ({ ...l, iconUrl: null })) };
+    expect(groupIconUrl(plain)).toBeNull();
+    expect(groupIconUrl({ ...plain, icon: 'https://avatars.githubusercontent.com/x?s=192' })).toBe(
+      'https://avatars.githubusercontent.com/x?s=192',
+    );
+  });
+
   it('treats a group as watched when any of its listings is watched', () => {
     expect(isGroupWatched(chatgpt, new Set(['google:com.openai.chatgpt']))).toBe(true);
     expect(isGroupWatched(chatgpt, new Set())).toBe(false);

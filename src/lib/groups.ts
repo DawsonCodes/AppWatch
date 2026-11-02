@@ -22,6 +22,8 @@ export interface AppGroup {
   /** App Store first, then Google Play. */
   listings: Listing[];
   source: ListingSource;
+  /** Catalog icon for apps whose listings carry none (see CatalogApp.icon). */
+  icon?: string;
 }
 
 /** Pseudo-collection for apps a visitor watches only in this browser. */
@@ -81,6 +83,7 @@ export function buildGroups(
       collection: app.collection,
       listings,
       source: 'tracked',
+      ...(app.icon ? { icon: app.icon } : {}),
     });
   }
 
@@ -146,6 +149,7 @@ export function groupIconUrl(group: AppGroup): string | null {
   return (
     group.listings.find((l) => l.platform === 'apple' && l.iconUrl)?.iconUrl ??
     group.listings.find((l) => l.iconUrl)?.iconUrl ??
+    group.icon ??
     null
   );
 }
