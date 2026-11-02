@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import type {
   AppRecord,
   AppsFile,
+  ForecastLogFile,
   HistoryFile,
   Platform,
   StatusFile,
@@ -17,15 +18,23 @@ import { desktopSourceFor } from '../../src/shared/desktop.ts';
 import { appId, PLATFORMS, SCHEMA_VERSION } from '../../src/shared/types.ts';
 import {
   validateAppsFile,
+  validateForecastLogFile,
+  validateForecastModelFile,
   validateHistoryFile,
   validateStatusFile,
 } from '../../src/shared/validate.ts';
 import type { CheckerConfig, TrackTarget } from './config.ts';
+import { recordForecasts, scoreForecasts, trainForecastModel } from './forecastTraining.ts';
 import { readJsonFile, writeJsonFile } from './io.ts';
 import { hasMeaningfulChange, mergeFailure, mergeSnapshot } from './merge.ts';
 import type { MergeOutcome } from './merge.ts';
 import { errorMessage, sleep } from './net.ts';
 import type { ProviderFetch } from './providers/types.ts';
+
+/** Learned forecast settings, re-trained whenever the history changes. */
+export const FORECAST_MODEL_FILE = 'forecast-model.json';
+/** Forecasts recorded before their release, and how they turned out. */
+export const FORECAST_LOG_FILE = 'forecast-log.json';
 
 export interface RunOptions {
   config: CheckerConfig;
@@ -221,5 +230,47 @@ export async function runCheck(options: RunOptions): Promise<RunResult> {
     log('no meaningful app changes — apps.json and history.json left untouched');
   }
 
-  return { changed, apps, history, status, summaries, okCount, errorCount, updatesDetected };
+  // The release forecast learns from the history: whenever it changes (or
+  // the learned files are missing), score the forecasts whose release has
+  // landed, re-train, and record fresh forecasts to score later.
+  const modelPath = join(dataDir, FORECAST_MODEL_FILE);
+  const forecastLogPath = join(dataDir, FORECAST_LOG_FILE);
+  const modelRaw = readJsonFile(modelPath);
+  const logRaw = readJsonFile(forecastLogPath);
+  const modelMissing = !modelRaw || validateForecastModelFile(modelRaw).length > 0;
+  if (changed || modelMissing) {
+    const previousLog =
+      logRaw && validateForecastLogFile(logRaw).length === 0 ? (logRaw as ForecastLogFile) : null;
+    const scoredLog = scoreForecasts(previousLog, history.entries);
+    const model = trainForecastModel(history.entries, scoredLog, { trainedAt: nowIso });
+    const forecastLog = recordForecasts(scoredLog, history.entries, model, now());
+    for (const [label, value, validate] of [
+      [FORECAST_MODEL_FILE, model, validateForecastModelFile],
+      [FORECAST_LOG_FILE, forecastLog, validateForecastLogFile],
+    ] as const) {
+      const errors = validate(value);
+      if (errors.length > 0) {
+        throw new Error(`Generated ${label} failed validation:\n  ${errors.join('\n  ')}`);
+      }
+    }
+    writeJsonFile(modelPath, model);
+    writeJsonFile(forecastLogPath, forecastLog);
+    const { replay, live } = model;
+    log(
+      `forecast re-trained: ${replay.hits}/${replay.tests} replayed releases in the window, ` +
+        `median error ${replay.medianErrorDays} days` +
+        (live ? `; live ${live.hits}/${live.forecasts}` : ''),
+    );
+  }
+
+  return {
+    changed: changed || modelMissing,
+    apps,
+    history,
+    status,
+    summaries,
+    okCount,
+    errorCount,
+    updatesDetected,
+  };
 }

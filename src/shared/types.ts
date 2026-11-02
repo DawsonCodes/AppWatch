@@ -144,6 +144,64 @@ export interface StatusFile {
   updatesDetected: number;
 }
 
+/** Forecast settings for one listing or for all (see src/shared/forecast.ts). */
+export interface ForecastParamsRecord {
+  halfLife: number;
+  bandwidth: number;
+  weekday: number;
+}
+
+/** How real forecasts (recorded before the release happened) turned out. */
+export interface LiveRecord {
+  forecasts: number;
+  hits: number;
+  medianErrorDays: number;
+}
+
+/**
+ * The learned forecast model, re-trained by the checker whenever the history
+ * changes. Optional for the site: without it, built-in defaults are used.
+ */
+export interface ForecastModelFile {
+  schemaVersion: 1;
+  trainedAt: string;
+  /** The chance the expected window is meant to hold (e.g. 2/3). */
+  target: number;
+  /** Settings for listings without their own. */
+  params: ForecastParamsRecord;
+  /** Window size per elapsed band (see ELAPSED_BAND_EDGES). */
+  masses: number[];
+  /** Per listing: settings that suit it better than the shared ones, and its live record. */
+  listings: Record<string, { params?: ForecastParamsRecord; live?: LiveRecord }>;
+  /** Replay of recorded history: forecasts made right after each past release. */
+  replay: { tests: number; hits: number; medianErrorDays: number };
+  /** Real forecasts scored so far, across all listings; null before the first. */
+  live: LiveRecord | null;
+}
+
+/** A forecast as it was made, before the release it predicts. */
+export interface RecordedForecast {
+  madeAt: string;
+  /** The release it counts from. */
+  after: string;
+  from: string;
+  to: string;
+  point: string;
+}
+
+export interface ScoredForecast extends RecordedForecast {
+  /** When the next release really came. */
+  actual: string;
+  hit: boolean;
+  errorDays: number;
+}
+
+/** The forecast log: one open forecast per listing and the latest scored ones. */
+export interface ForecastLogFile {
+  schemaVersion: 1;
+  listings: Record<string, { open: RecordedForecast | null; scored: ScoredForecast[] }>;
+}
+
 export const SCHEMA_VERSION = 1 as const;
 
 export function appId(platform: Platform, storeId: string): string {

@@ -2,12 +2,12 @@ import type { ComponentChildren, RefObject } from 'preact';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { Cadence } from '../lib/cadence.ts';
 import { describeDays } from '../lib/cadence.ts';
+import { densityProfile } from '../shared/forecast.ts';
 
 const DAY = 86_400_000;
 const dateFormat = new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric' });
+const shortDate = dateFormat;
 const longDate = new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' });
-const monthFormat = new Intl.DateTimeFormat(undefined, { month: 'short' });
-const monthYearFormat = new Intl.DateTimeFormat(undefined, { month: 'short', year: 'numeric' });
 
 /** Track an element's content width (charts are drawn at real pixel size). */
 function useWidth(): [RefObject<HTMLDivElement>, number] {
@@ -87,172 +87,210 @@ function useActive(count: number) {
   };
 }
 
-/* ------------------------------ Release strip ----------------------------- */
+/* ------------------------------ Forecast bar ------------------------------ */
 
-const STRIP_H = 108;
-const STRIP_DOT_Y = 54;
-const STRIP_AXIS_Y = 82;
+const BAR_H = 104;
+const HILL_TOP = 12;
+const TRACK_Y = 64;
+const LABEL_Y = 86;
+
+interface BarLabel {
+  x: number;
+  text: string;
+  priority: number;
+  anchor?: 'start' | 'middle' | 'end';
+  strong?: boolean;
+}
+
+/** Drop labels that would overlap a more important one (approximate text widths). */
+function placeLabels(labels: BarLabel[], width: number): BarLabel[] {
+  const placed: { left: number; right: number; label: BarLabel }[] = [];
+  for (const label of [...labels].sort((a, b) => b.priority - a.priority)) {
+    const w = label.text.length * 6.4 + 10;
+    let anchor = label.anchor ?? 'middle';
+    let left = anchor === 'start' ? label.x : anchor === 'end' ? label.x - w : label.x - w / 2;
+    if (left < 0) {
+      anchor = 'start';
+      left = Math.max(0, label.x - 2);
+    }
+    if (left + w > width) {
+      anchor = 'end';
+      left = Math.min(width, label.x + 2) - w;
+    }
+    const right = left + w;
+    if (placed.some((p) => left < p.right && right > p.left)) continue;
+    placed.push({
+      left,
+      right,
+      label: { ...label, anchor, x: Math.min(Math.max(label.x, 0), width) },
+    });
+  }
+  return placed.map((p) => p.label);
+}
+
+/** Gaussian smoothing over neighbouring samples (sigma in samples; < 0.5 leaves it as is). */
+function smooth(values: readonly number[], sigma: number): number[] {
+  if (sigma < 0.5) return [...values];
+  const reach = Math.ceil(sigma * 2.5);
+  const kernel = Array.from({ length: reach * 2 + 1 }, (_, i) =>
+    Math.exp(-0.5 * ((i - reach) / sigma) ** 2),
+  );
+  return values.map((_, i) => {
+    let sum = 0;
+    let weight = 0;
+    for (let k = -reach; k <= reach; k++) {
+      const v = values[i + k];
+      if (v === undefined) continue;
+      sum += v * kernel[k + reach]!;
+      weight += kernel[k + reach]!;
+    }
+    return weight > 0 ? sum / weight : 0;
+  });
+}
 
 /**
- * Every release as a dot on a time axis, with today and the likely window for
- * the next release ahead of it. One series, so the title names it (no legend).
+ * The forecast at a glance: the last update, today, and how likely the next
+ * update is on each day ahead (the hill), with the expected window shaded
+ * and the expected day marked.
  */
-export function ReleaseStrip({ cadence, now = new Date() }: { cadence: Cadence; now?: Date }) {
+export function ForecastBar({ cadence, now }: { cadence: Cadence; now: Date }) {
   const [ref, width] = useWidth();
   const nowMs = now.getTime();
-  const { domain, shown } = useMemo(() => {
-    const first = cadence.releases[0]?.time ?? nowMs - 30 * DAY;
-    const start = Math.max(first, nowMs - 365 * DAY);
-    const end = Math.max(nowMs, cadence.next?.to ?? nowMs);
-    const pad = Math.max((end - start) * 0.04, DAY);
-    return {
-      domain: [start - pad, end + pad] as const,
-      shown: cadence.releases.filter((r) => r.time >= start),
-    };
-  }, [cadence, nowMs]);
-  const { active, setActive, focusProps } = useActive(shown.length);
+  const last = cadence.last?.time ?? nowMs;
+  const next = cadence.next;
+  const end = useMemo(() => {
+    const target = next
+      ? Math.max(next.to, next.likely)
+      : last + Math.max((cadence.typicalDays ?? 7) * DAY, nowMs - last);
+    const span = Math.max(target, nowMs) - last;
+    return last + span * 1.1 + DAY / 2;
+  }, [next, last, nowMs, cadence.typicalDays]);
 
-  const plotLeft = 8;
-  const plotRight = Math.max(plotLeft + 1, width - 8);
-  const x = (t: number) =>
-    plotLeft + ((t - domain[0]) / (domain[1] - domain[0])) * (plotRight - plotLeft);
+  const left = 6;
+  const right = Math.max(left + 1, width - 6);
+  const x = (t: number) => left + ((t - last) / Math.max(1, end - last)) * (right - left);
 
-  const ticks = useMemo(() => {
-    const out: { t: number; label: string }[] = [];
-    const d = new Date(domain[0]);
-    d.setDate(1);
-    d.setHours(0, 0, 0, 0);
-    d.setMonth(d.getMonth() + 1);
-    let lastX = -Infinity;
-    while (d.getTime() < domain[1]) {
-      const t = d.getTime();
-      const px = x(t);
-      if (px - lastX >= 46) {
-        const label =
-          d.getMonth() === 0 || out.length === 0
-            ? monthYearFormat.format(d)
-            : monthFormat.format(d);
-        out.push({ t, label });
-        lastX = px;
-      }
-      d.setMonth(d.getMonth() + 1);
-    }
-    return out;
-    // x depends on width/domain only
-  }, [domain, width]);
-
-  const nowX = x(nowMs);
-  const likelyX = cadence.next ? x(cadence.next.likely) : null;
-  const labelsCollide = likelyX !== null && Math.abs(likelyX - nowX) < 70;
-
-  function pick(clientX: number, rect: DOMRect) {
-    const px = clientX - rect.left;
-    let best: number | null = null;
-    let bestDist = 24;
-    shown.forEach((r, i) => {
-      const dist = Math.abs(x(r.time) - px);
-      if (dist <= bestDist) {
-        best = i;
-        bestDist = dist;
-      }
+  const hill = useMemo(() => {
+    if (!cadence.distribution || !next || width <= 0) return null;
+    const fromDays = (nowMs - last) / DAY;
+    const toDays = (end - last) / DAY;
+    if (toDays <= fromDays) return null;
+    const count = Math.max(24, Math.min(240, Math.round((right - x(nowMs)) / 3)));
+    // Over long spans, smooth out day-to-day weekday spikes so the shape reads at a glance.
+    const smoothDays = Math.min(3.5, (toDays - fromDays) / 25);
+    const profile = smooth(
+      densityProfile(cadence.distribution, fromDays, toDays, count),
+      (smoothDays / (toDays - fromDays)) * count,
+    );
+    const peak = Math.max(...profile, 1e-12);
+    const x0 = x(nowMs);
+    const x1 = right;
+    const stepX = (x1 - x0) / count;
+    let d = `M${x0},${TRACK_Y}`;
+    profile.forEach((v, i) => {
+      const y = TRACK_Y - (v / peak) * (TRACK_Y - HILL_TOP);
+      d += `L${x0 + stepX * (i + 0.5)},${y}`;
     });
-    setActive(best);
+    d += `L${x1},${TRACK_Y}Z`;
+    const likelyIndex = Math.min(count - 1, Math.max(0, Math.floor((x(next.likely) - x0) / stepX)));
+    const likelyY = TRACK_Y - ((profile[likelyIndex] ?? 0) / peak) * (TRACK_Y - HILL_TOP);
+    return { d, likelyY };
+    // x depends on width, last and end only
+  }, [cadence.distribution, next, width, nowMs, last, end]);
+
+  const clipId = useMemo(() => `win-${Math.random().toString(36).slice(2, 9)}`, []);
+
+  const labels: BarLabel[] = [
+    { x: x(last), text: shortDate.format(last), priority: 1, anchor: 'start' },
+    { x: x(nowMs), text: 'Today', priority: 3, strong: true },
+  ];
+  if (next) {
+    if (next.from - nowMs > DAY / 2) {
+      labels.push({ x: x(next.from), text: shortDate.format(next.from), priority: 2 });
+    }
+    labels.push({ x: x(next.to), text: shortDate.format(next.to), priority: 2 });
+  } else if (cadence.typicalDays) {
+    const usual = last + cadence.typicalDays * DAY;
+    if (usual < end) labels.push({ x: x(usual), text: 'Usual gap', priority: 2 });
   }
 
-  const current = active !== null ? shown[active] : undefined;
-  const tip: Tip | null = current
-    ? {
-        x: x(current.time),
-        y: 0,
-        value: current.version ?? 'No version number',
-        label: longDate.format(current.time),
-      }
-    : null;
+  const describe = next
+    ? `Last update ${longDate.format(last)}. Next update expected around ${longDate.format(next.likely)}, likely between ${longDate.format(next.from)} and ${longDate.format(next.to)}.`
+    : `Last update ${longDate.format(last)}.`;
 
   return (
-    <figure class="chart">
-      <figcaption class="chart__title">Releases over time</figcaption>
-      <div
-        class="chart__plot"
-        ref={ref}
-        aria-label={`Releases over time: ${shown.length} releases. Use the arrow keys to step through them.`}
-        role="group"
-        {...focusProps}
-        onPointerMove={(e) => pick(e.clientX, e.currentTarget.getBoundingClientRect())}
-        onPointerLeave={() => setActive(null)}
-      >
-        {width > 0 ? (
-          <svg width={width} height={STRIP_H} aria-hidden="true">
-            <line
-              class="chart__axis"
-              x1={plotLeft}
-              x2={plotRight}
-              y1={STRIP_AXIS_Y}
-              y2={STRIP_AXIS_Y}
-            />
-            {ticks.map((tick) => (
-              <g key={tick.t}>
-                <line
-                  class="chart__axis"
-                  x1={x(tick.t)}
-                  x2={x(tick.t)}
-                  y1={STRIP_AXIS_Y}
-                  y2={STRIP_AXIS_Y + 4}
-                />
-                <text class="chart__tick" x={x(tick.t)} y={STRIP_AXIS_Y + 18} text-anchor="middle">
-                  {tick.label}
-                </text>
-              </g>
-            ))}
-            {cadence.next ? (
-              <g>
+    <div class="forecast-bar" ref={ref} role="img" aria-label={describe}>
+      {width > 0 ? (
+        <svg width={width} height={BAR_H} aria-hidden="true">
+          {next ? (
+            <defs>
+              <clipPath id={clipId}>
                 <rect
-                  class="chart__window"
-                  x={x(cadence.next.from)}
-                  y={28}
-                  width={Math.max(2, x(cadence.next.to) - x(cadence.next.from))}
-                  height={STRIP_AXIS_Y - 28}
-                  rx={4}
+                  x={x(next.from)}
+                  y={0}
+                  width={Math.max(2, x(next.to) - x(next.from))}
+                  height={TRACK_Y + 1}
                 />
-                <line class="chart__likely" x1={likelyX!} x2={likelyX!} y1={28} y2={STRIP_AXIS_Y} />
-                <text
-                  class="chart__note"
-                  x={likelyX!}
-                  y={20}
-                  text-anchor={labelsCollide ? (likelyX! >= nowX ? 'start' : 'end') : 'middle'}
-                >
-                  Likely next
-                </text>
-              </g>
-            ) : null}
-            <line class="chart__today" x1={nowX} x2={nowX} y1={28} y2={STRIP_AXIS_Y} />
-            <text
-              class="chart__note"
-              x={nowX}
-              y={20}
-              text-anchor={labelsCollide ? (likelyX! >= nowX ? 'end' : 'start') : 'middle'}
-            >
-              Today
-            </text>
-            {shown.map((r, i) => (
-              <circle
-                key={`${r.time}-${i}`}
-                class={`chart__dot${i === active ? ' is-active' : ''}`}
-                cx={x(r.time)}
-                cy={STRIP_DOT_Y}
-                r={i === active ? 6 : 4}
+              </clipPath>
+            </defs>
+          ) : null}
+          <line class="forecast-bar__track" x1={left} x2={right} y1={TRACK_Y} y2={TRACK_Y} />
+          <line class="forecast-bar__waited" x1={x(last)} x2={x(nowMs)} y1={TRACK_Y} y2={TRACK_Y} />
+          {hill ? (
+            <>
+              <path class="forecast-bar__hill" d={hill.d} />
+              <path
+                class="forecast-bar__hill forecast-bar__hill--window"
+                d={hill.d}
+                clip-path={`url(#${clipId})`}
               />
-            ))}
-          </svg>
-        ) : (
-          <div style={{ height: `${STRIP_H}px` }} />
-        )}
-        <Tooltip tip={tip} width={width} />
-      </div>
-      {cadence.releases.length > shown.length ? (
-        <p class="chart__foot">Showing the last 12 months.</p>
-      ) : null}
-    </figure>
+            </>
+          ) : null}
+          {next ? (
+            <>
+              <line
+                class="forecast-bar__likely"
+                x1={x(next.likely)}
+                x2={x(next.likely)}
+                y1={(hill?.likelyY ?? HILL_TOP) - 2}
+                y2={TRACK_Y}
+              />
+              <circle class="forecast-bar__likely-dot" cx={x(next.likely)} cy={TRACK_Y} r={5} />
+            </>
+          ) : null}
+          {!next && cadence.typicalDays ? (
+            <line
+              class="forecast-bar__usual"
+              x1={x(last + cadence.typicalDays * DAY)}
+              x2={x(last + cadence.typicalDays * DAY)}
+              y1={TRACK_Y - 10}
+              y2={TRACK_Y + 6}
+            />
+          ) : null}
+          <line
+            class="forecast-bar__today"
+            x1={x(nowMs)}
+            x2={x(nowMs)}
+            y1={TRACK_Y - 12}
+            y2={TRACK_Y + 6}
+          />
+          <circle class="forecast-bar__last" cx={x(last)} cy={TRACK_Y} r={4} />
+          {placeLabels(labels, width).map((label) => (
+            <text
+              key={label.text + label.priority}
+              class={`forecast-bar__label${label.strong ? ' is-strong' : ''}`}
+              x={label.x}
+              y={LABEL_Y}
+              text-anchor={label.anchor ?? 'middle'}
+            >
+              {label.text}
+            </text>
+          ))}
+        </svg>
+      ) : (
+        <div style={{ height: `${BAR_H}px` }} />
+      )}
+    </div>
   );
 }
 
@@ -323,7 +361,15 @@ export function GapColumns({ cadence }: { cadence: Cadence }) {
 
   return (
     <figure class="chart">
-      <figcaption class="chart__title">Days between releases</figcaption>
+      <figcaption class="chart__title">
+        Days between releases
+        {cadence.typicalDays !== null ? (
+          <span class="chart__legend">
+            <span class="chart__legend-line" aria-hidden="true" />
+            typical {describeDays(cadence.typicalDays).replace(/^about /, '~')}
+          </span>
+        ) : null}
+      </figcaption>
       <div
         class="chart__plot"
         ref={ref}
@@ -355,12 +401,7 @@ export function GapColumns({ cadence }: { cadence: Cadence }) {
               );
             })}
             {typicalY !== null ? (
-              <g>
-                <line class="chart__ref" x1={GAP_LEFT} x2={plotRight} y1={typicalY} y2={typicalY} />
-                <text class="chart__note" x={plotRight} y={typicalY - 6} text-anchor="end">
-                  typical {describeDays(cadence.typicalDays!).replace(/^about /, '~')}
-                </text>
-              </g>
+              <line class="chart__ref" x1={GAP_LEFT} x2={plotRight} y1={typicalY} y2={typicalY} />
             ) : null}
             <line class="chart__axis" x1={GAP_LEFT} x2={plotRight} y1={GAP_AXIS} y2={GAP_AXIS} />
             {first && last ? (

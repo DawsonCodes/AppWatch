@@ -225,11 +225,6 @@
 }
 
 [data-theme='ms-paint'] .store-row {
-  border: 1px solid #808080;
-  background: #ffffff;
-}
-
-[data-theme='ms-paint'] .card__rhythm {
   border-top: 1px solid #808080;
 }
 
@@ -268,10 +263,6 @@
   border-top: 0;
 }
 
-[data-theme='ms-paint'] .chart__dot {
-  stroke: #ffffff;
-}
-
 [data-theme='ms-paint'] .chart-tip {
   border: 0;
   background: #ffffe1;
@@ -280,9 +271,25 @@
     3px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
-[data-theme='ms-paint'] .pattern__table th {
-  background: #c0c0c0;
+[data-theme='ms-paint'] .forecast {
+  border: 2px solid #000000;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+[data-theme='ms-paint'] .forecast__badge {
+  border-radius: 0;
+  background: #ffff00;
   color: #000000;
+}
+
+[data-theme='ms-paint'] .forecast__facts {
+  border-top: 1px dashed #808080;
+}
+
+[data-theme='ms-paint'] .forecast-bar__likely-dot {
+  stroke: #ffffff;
 }
 
 /* Menus and messages are little windows. */
@@ -374,4 +381,9 @@
   [data-theme='ms-paint'] .paint-palette {
     grid-template-columns: repeat(6, 18px);
   }
+}
+
+/* The page title takes focus on navigation for screen readers; no ring. */
+[data-theme='ms-paint'] .app-hero__name:focus-visible {
+  outline: none;
 }

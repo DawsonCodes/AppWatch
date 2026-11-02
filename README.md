@@ -102,43 +102,55 @@ details column (version, dates, price, rating, size, store ID and more). Apps
 on several platforms get a tab per platform. Going back returns to the list
 exactly where you left it.
 
-### How often apps update
+### When the next update is likely
 
-Every app's history doubles as a record of how often it ships. AppWatch looks
-at the gaps between each listing's recent releases (up to the last 24) and
-estimates when the next one will land:
+Every app's history doubles as a record of how often it ships. For each
+listing AppWatch forecasts when the next update will land:
 
-- Recent gaps count more than old ones (a gap counts half as much as the one
-  eight releases newer), so a change of rhythm is picked up.
-- Gaps are compared on a log scale, so one long pause doesn't skew things.
-- The expected window is the middle half of those gaps after the last release,
-  and the likely day inside it leans toward the weekdays the app usually
-  ships on.
+- The gaps between its recent releases (up to the last 24) form a smooth
+  distribution of "days until the next one". Gaps are compared on a log
+  scale, so one long pause doesn't skew things, and recent gaps count more,
+  so a change of rhythm is picked up.
+- The forecast leans toward the weekdays the app usually ships on (many apps
+  never release at weekends; some always ship on a Tuesday).
+- It counts the time already waited. If an app usually updates every 5 days
+  and it has been 7, the next update is still ahead; the forecast moves
+  forward instead of showing a window that has already passed.
+- The expected window is the shortest stretch of days holding a 2 in 3 chance
+  of the next release; the expected day is its midpoint by probability.
 
-This method was chosen by backtesting against the release histories AppWatch
-has recorded (132 listings): for each past release, "what would we have
-predicted right before it?", compared with when it really came. Against the
-previous plain median it cut the typical miss from about 2.0 to 1.8 days and
-raised the share of releases landing inside the expected window from 41% to
-50%. It then shows:
+**It learns from its own record.** Nothing above is hand-tuned. On every
+checker run that records something new, AppWatch replays each listing's past
+("what would we have forecast right after each release?"), picks the
+settings that forecast best (how fast old gaps fade, how smooth the
+distribution is, how much weekdays matter), lets a listing with enough history
+use its own settings when they clearly suit it better, and sizes the windows
+so the stated 2 in 3 chance really holds. It also logs a real forecast for
+every listing before its next release and scores it when the release lands;
+if real results drift from the stated chance, the windows are adjusted. More
+history means better-chosen settings, so the forecasts sharpen over time. The
+learned settings are in `public/data/forecast-model.json` and the forecast log
+in `public/data/forecast-log.json`.
 
-- **On every card** — "Updates every ~6 days · next in ~3 days", "due now" or
-  "overdue"; apps with fewer than four recorded releases say there aren't
-  enough updates yet to estimate.
-- **On the app page** — an Update pattern section with the usual gap and
-  range, the most likely date for the next update, the expected window,
-  **past accuracy for that app** (the same backtest, run on its own history:
-  "5 of 8 landed in the window, usually off by about 3 days"), updates in the
-  last 30 days, a weekday pattern when there is a clear one, and a confidence
-  level based on that past accuracy, plus two charts (releases over time, with today
-  and the likely window ahead, and the days between releases with the usual
-  gap marked) and every release date as a table. Charts are keyboard-navigable
-  (arrow keys) and work in all three themes.
+On the current history (1,659 replayed releases across 192 listings), 67% of
+releases land in the window. The bigger gain is while waiting: once an app is
+past its usual gap, the previous method's window had already passed and caught
+only 9–43% of releases; the new forecast catches 66–78%.
+
+Where it shows:
+
+- **On the app page** — a Next update card: the expected day ("Around Wed,
+  Nov 4 · in 2 days"), the window and its chance, a small chart of how likely
+  each day ahead is (with the last update, today and the expected day
+  marked), the usual gap, the usual release weekday and how past forecasts
+  did for that app. "How this forecast works" opens the days-between-releases
+  chart and the app's replayed and live record.
 - **Sort → Next update**, an **Expected soon** row at the top of the Updates
-  view, and an "Expected in the next 3 days" count under Stats.
+  view, and forecast accuracy plus an "Expected in the next 3 days" count
+  under Stats.
 
-These are estimates from past behavior — app makers don't publish schedules —
-and the accuracy line says how well they've worked for each app.
+Apps with fewer than four recorded releases say there isn't enough history
+yet. Developers don't publish schedules, so treat forecasts as a guide.
 
 ### Desktop releases (Windows and Mac)
 
@@ -287,9 +299,11 @@ GitHub Actions (every 2 h)   ─►  scripts/check-updates.ts
         │                        └─ Google provider → google-play-scraper
         ▼
 public/data/*.json        (generated, version-controlled)
-  apps.json    normalized app records
-  history.json version history per app
-  status.json  checker run summary
+  apps.json            normalized app records
+  history.json         version history per app
+  status.json          checker run summary
+  forecast-model.json  learned forecast settings (re-trained on each change)
+  forecast-log.json    forecasts recorded before each release, then scored
         │
         ▼
 GitHub Pages              (static Vite + Preact frontend reads the JSON)
@@ -428,6 +442,13 @@ The checker writes these files into `public/data/` (do not edit by hand):
 - **`status.json`** — last run time, success/failure counts, updates detected.
   Rewritten on every run and deployed straight to the site; it is only
   committed alongside real app changes, so the git history stays meaningful.
+- **`forecast-model.json`** — the learned forecast settings: shared settings,
+  per-listing settings where they clearly forecast better, window sizes by
+  time already waited, the replayed accuracy and the live record. Re-trained
+  whenever the history changes. Optional for the site (built-in defaults are
+  used without it).
+- **`forecast-log.json`** — one open forecast per listing (made before its
+  next release) and its latest scored forecasts (hit or miss, days off).
 
 ## Deployment (GitHub Pages)
 

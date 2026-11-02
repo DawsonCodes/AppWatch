@@ -1,5 +1,5 @@
 import type { Cadence } from '../lib/cadence.ts';
-import { relativeDay } from '../lib/cadence.ts';
+import { whenLabel } from '../lib/cadence.ts';
 import type { AppGroup, Listing } from '../lib/groups.ts';
 import { groupIconUrl } from '../lib/groups.ts';
 import { appHref } from '../lib/route.ts';
@@ -10,15 +10,6 @@ export interface ExpectedItem {
   group: AppGroup;
   listing: Listing;
   cadence: Cadence;
-}
-
-function when(cadence: Cadence, now: Date): string {
-  if (cadence.state === 'due') return 'Due now';
-  if (!cadence.next) return '';
-  const day = relativeDay(cadence.next.likely, now);
-  if (day === 'today') return 'Likely today';
-  if (day === 'tomorrow') return 'Likely tomorrow';
-  return day.replace(/^in /, 'In ~');
 }
 
 /** Apps most likely to update next, based on how often each one updates. */
@@ -37,7 +28,7 @@ export function ExpectedSoon({ items, now }: { items: readonly ExpectedItem[]; n
               <span class="expected__text">
                 <span class="expected__name">{group.name}</span>
                 <span class="expected__when">
-                  {when(cadence, now)} · {storeLabel(listing.platform)}
+                  {whenLabel(cadence, now)} · {storeLabel(listing.platform)}
                 </span>
               </span>
             </a>

@@ -2,18 +2,12 @@ import type { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { AppGroup, Listing } from '../lib/groups.ts';
 import { groupDeveloper, groupIconUrl } from '../lib/groups.ts';
-import {
-  formatBytes,
-  formatCount,
-  formatDate,
-  formatDateTime,
-  relativeTime,
-} from '../lib/format.ts';
+import { formatBytes, formatCount, formatDate, relativeTime } from '../lib/format.ts';
 import { configSnippetFor } from '../lib/localApps.ts';
 import { appHref } from '../lib/route.ts';
 import type { DesktopSource } from '../shared/desktop.ts';
 import { desktopSourceFor } from '../shared/desktop.ts';
-import type { VersionHistoryEntry } from '../shared/types.ts';
+import type { ForecastModelFile, VersionHistoryEntry } from '../shared/types.ts';
 import { historyEntryKey, isDesktopPlatform } from '../shared/types.ts';
 import { AppIcon } from './AppIcon.tsx';
 import {
@@ -24,14 +18,16 @@ import {
   ExternalIcon,
   RefreshIcon,
 } from './Icons.tsx';
+import { ForecastCard } from './ForecastCard.tsx';
 import { Notes } from './Notes.tsx';
 import { storeLabel } from './StoreBadge.tsx';
 import { Tabs } from './Tabs.tsx';
-import { UpdatePattern } from './UpdatePattern.tsx';
 import { WatchButton } from './WatchButton.tsx';
 
 export type HistoryState =
-  { phase: 'loading' } | { phase: 'error' } | { phase: 'ready'; entries: VersionHistoryEntry[] };
+  | { phase: 'loading' }
+  | { phase: 'error' }
+  | { phase: 'ready'; entries: VersionHistoryEntry[]; model: ForecastModelFile | null };
 
 interface AppPageProps {
   group: AppGroup;
@@ -52,7 +48,15 @@ interface AppPageProps {
 
 const HISTORY_PAGE = 15;
 
-function CopyButton({ value, label }: { value: string; label: string }) {
+function CopyButton({
+  value,
+  label,
+  iconOnly = false,
+}: {
+  value: string;
+  label: string;
+  iconOnly?: boolean;
+}) {
   const [state, setState] = useState<'idle' | 'copied' | 'failed'>('idle');
   const timer = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => () => clearTimeout(timer.current), []);
@@ -68,12 +72,21 @@ function CopyButton({ value, label }: { value: string; label: string }) {
     timer.current = setTimeout(() => setState('idle'), 2000);
   }
 
+  const text = state === 'copied' ? 'Copied' : state === 'failed' ? 'Couldn’t copy' : label;
+  if (iconOnly) {
+    return (
+      <button type="button" class="icon-button icon-button--framed" onClick={copy} title={text}>
+        {state === 'copied' ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
+        <span class="visually-hidden" aria-live="polite">
+          {text}
+        </span>
+      </button>
+    );
+  }
   return (
     <button type="button" class="button" onClick={copy}>
       {state === 'copied' ? <CheckIcon size={14} /> : <CopyIcon size={14} />}
-      <span aria-live="polite">
-        {state === 'copied' ? 'Copied' : state === 'failed' ? 'Couldn’t copy' : label}
-      </span>
+      <span aria-live="polite">{text}</span>
     </button>
   );
 }
@@ -112,10 +125,13 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
     return <p class="muted">No versions recorded yet. They’re saved from the first check on.</p>;
   }
   const shown = entries.slice(0, limit);
+  const timeOf = (entry: VersionHistoryEntry) => Date.parse(entry.releaseDate ?? entry.detectedAt);
   return (
     <>
       <ol class="versions">
         {shown.map((entry, index) => {
+          const older = entries[index + 1];
+          const gapDays = older ? (timeOf(entry) - timeOf(older)) / 86_400_000 : null;
           const current =
             index === 0 &&
             (entry.version === listing.currentVersion ||
@@ -135,6 +151,14 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
                   {entry.releaseDate
                     ? formatDate(entry.releaseDate)
                     : `Found ${formatDate(entry.detectedAt)}`}
+                  {gapDays !== null && gapDays >= 1 ? (
+                    <span
+                      class="version__gap"
+                      title={`${Math.round(gapDays)} days after the previous version`}
+                    >
+                      +{Math.round(gapDays)}d
+                    </span>
+                  ) : null}
                 </span>
               </div>
               {entry.releaseNotes ? <Notes text={entry.releaseNotes} clampAt={220} /> : null}
@@ -164,11 +188,11 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
 function desktopNotice(source: DesktopSource): string {
   switch (source.kind) {
     case 'winget':
-      return 'Windows versions come from winget, Microsoft’s package catalog for Windows. New versions usually appear there within a day or two of release.';
+      return 'From winget, Microsoft’s package catalog. New versions usually appear there within a day or two of release.';
     case 'homebrew':
-      return 'Mac versions come from Homebrew, which follows the app’s official download, usually within a few hours. Homebrew doesn’t include release notes.';
+      return 'From Homebrew, which follows the official download within hours. Homebrew has no release notes.';
     case 'feed':
-      return `Versions come from ${source.feed.sourceLabel}. AppWatch doesn’t host installers; get ${source.feed.product} from your school or the official page.`;
+      return `From ${source.feed.sourceLabel}. AppWatch doesn’t host installers; get ${source.feed.product} from your school or the official page.`;
   }
 }
 
@@ -216,43 +240,41 @@ export function AppPage({
       </a>
 
       <header class="app-hero">
-        <AppIcon name={group.name} iconUrl={groupIconUrl(group)} size={96} eager />
+        <AppIcon name={group.name} iconUrl={groupIconUrl(group)} size={72} eager />
         <div class="app-hero__text">
           <h1 class="app-hero__name" id="app-title" tabIndex={-1}>
             {group.name}
           </h1>
-          {developer ? <p class="app-hero__dev">{developer}</p> : null}
-          <div class="app-hero__tags">
-            {collectionLabel ? <span class="tag">{collectionLabel}</span> : null}
-            {listing.category ? <span class="tag">{listing.category}</span> : null}
-            {local ? <span class="tag">Saved in this browser</span> : null}
-          </div>
+          <p class="app-hero__dev">
+            {[developer, collectionLabel, local ? 'Saved in this browser' : null]
+              .filter(Boolean)
+              .join(' · ')}
+          </p>
+        </div>
+        <div class="app-hero__actions">
+          <a
+            class={`button button--primary button--${listing.platform}`}
+            href={listing.storeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {desktop ? 'Official site' : `Open in ${storeLabel(listing.platform)}`}
+            <ExternalIcon size={13} />
+          </a>
+          <WatchButton appName={group.name} watched={watched} onToggle={onToggleWatch} labelled />
+          <CopyButton value={link} label="Copy link to this page" iconOnly />
+          {local && listing.platform === 'apple' && onRefreshLocal ? (
+            <button
+              type="button"
+              class="button"
+              disabled={localRefreshing}
+              onClick={() => onRefreshLocal(listing.id)}
+            >
+              <RefreshIcon size={14} /> {localRefreshing ? 'Refreshing…' : 'Refresh'}
+            </button>
+          ) : null}
         </div>
       </header>
-
-      <div class="app-actions">
-        <a
-          class={`button button--primary button--${listing.platform}`}
-          href={listing.storeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {desktop ? 'Official site' : `Open in ${storeLabel(listing.platform)}`}
-          <ExternalIcon size={13} />
-        </a>
-        <WatchButton appName={group.name} watched={watched} onToggle={onToggleWatch} labelled />
-        <CopyButton value={link} label="Copy link" />
-        {local && listing.platform === 'apple' && onRefreshLocal ? (
-          <button
-            type="button"
-            class="button"
-            disabled={localRefreshing}
-            onClick={() => onRefreshLocal(listing.id)}
-          >
-            <RefreshIcon size={14} /> {localRefreshing ? 'Refreshing…' : 'Refresh'}
-          </button>
-        ) : null}
-      </div>
 
       {group.listings.length > 1 ? (
         <Tabs
@@ -292,18 +314,34 @@ export function AppPage({
               </span>
             </p>
           ) : null}
-          {desktop ? <p class="notice">{desktopNotice(desktop)}</p> : null}
           {local ? (
             <p class="notice">
               Saved in this browser only. It isn’t checked automatically, so there’s no version
-              history.
+              history or forecast.
             </p>
+          ) : null}
+
+          {local ? null : history.phase === 'ready' ? (
+            <ForecastCard
+              id={listing.id}
+              entries={history.entries}
+              model={history.model}
+              platform={listing.platform}
+              now={now}
+            />
+          ) : history.phase === 'loading' ? (
+            <section class="forecast" aria-label="Next update">
+              <Loading />
+            </section>
           ) : null}
 
           <section class="section" aria-labelledby="whats-new">
             <div class="section__head">
               <h2 class="section__title" id="whats-new">
-                What’s new{listing.currentVersion ? ` in ${listing.currentVersion}` : ''}
+                What’s new
+                {listing.currentVersion ? (
+                  <span class="section__version mono">{listing.currentVersion}</span>
+                ) : null}
               </h2>
               {listing.releaseDate ? (
                 <span class="section__meta">
@@ -328,14 +366,6 @@ export function AppPage({
               </a>
             ) : null}
           </section>
-
-          {local ? null : history.phase === 'ready' ? (
-            <UpdatePattern entries={history.entries} platform={listing.platform} now={now} />
-          ) : (
-            <section class="section" aria-label="Update pattern">
-              <Loading />
-            </section>
-          )}
 
           {local ? (
             <section class="section" aria-labelledby="track-title">
@@ -389,17 +419,18 @@ export function AppPage({
             </h2>
             <dl class="facts">
               <Fact label="Version">
-                {listing.currentVersion ??
-                  (listing.platform === 'google' ? 'Varies by device' : 'Unknown')}
+                <span class="mono">
+                  {listing.currentVersion ??
+                    (listing.platform === 'google' ? 'Varies by device' : 'Unknown')}
+                </span>
               </Fact>
               {listing.previousVersion ? (
-                <Fact label="Previous version">{listing.previousVersion}</Fact>
+                <Fact label="Before that">
+                  <span class="mono">{listing.previousVersion}</span>
+                </Fact>
               ) : null}
               {listing.releaseDate ? (
                 <Fact label="Released">{formatDate(listing.releaseDate)}</Fact>
-              ) : null}
-              {listing.lastUpdatedAt ? (
-                <Fact label="Update found">{formatDateTime(listing.lastUpdatedAt)}</Fact>
               ) : null}
               {!local && listing.lastCheckedAt ? (
                 <Fact label="Last checked">{relativeTime(listing.lastCheckedAt, now)}</Fact>
@@ -409,6 +440,7 @@ export function AppPage({
                   local ? (localAddedAt ?? listing.firstTrackedAt) : listing.firstTrackedAt,
                 )}
               </Fact>
+              {listing.category ? <Fact label="Category">{listing.category}</Fact> : null}
               {listing.price ? <Fact label="Price">{listing.price}</Fact> : null}
               {typeof listing.rating === 'number' ? (
                 <Fact label="Rating">
@@ -426,21 +458,13 @@ export function AppPage({
                 </Fact>
               ) : null}
               {desktop ? (
-                <>
-                  {desktop.kind === 'feed' ? null : (
-                    <Fact label={desktop.kind === 'winget' ? 'winget ID' : 'Homebrew cask'}>
-                      <span class="mono">
-                        {desktop.kind === 'winget' ? desktop.packageId : desktop.token}
-                      </span>
-                    </Fact>
-                  )}
-                  <Fact label="Source">
-                    <a href={desktop.sourceUrl} target="_blank" rel="noopener noreferrer">
-                      {desktop.kind === 'winget' ? 'winget' : desktop.label}{' '}
-                      <ExternalIcon size={11} />
-                    </a>
+                desktop.kind === 'feed' ? null : (
+                  <Fact label={desktop.kind === 'winget' ? 'winget ID' : 'Homebrew cask'}>
+                    <span class="mono">
+                      {desktop.kind === 'winget' ? desktop.packageId : desktop.token}
+                    </span>
                   </Fact>
-                </>
+                )
               ) : (
                 <Fact label={listing.platform === 'apple' ? 'App Store ID' : 'Package'}>
                   <span class="mono">{listing.storeId}</span>
@@ -454,6 +478,14 @@ export function AppPage({
                 </Fact>
               ) : null}
             </dl>
+            {desktop ? (
+              <p class="facts__source">
+                {desktopNotice(desktop)}{' '}
+                <a href={desktop.sourceUrl} target="_blank" rel="noopener noreferrer">
+                  View source <ExternalIcon size={11} />
+                </a>
+              </p>
+            ) : null}
           </section>
         </aside>
       </div>

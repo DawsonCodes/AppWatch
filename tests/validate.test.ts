@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import type { AppRecord } from '../src/shared/types.ts';
 import {
   validateAppsFile,
+  validateForecastLogFile,
+  validateForecastModelFile,
   validateHistoryFile,
   validateStatusFile,
 } from '../src/shared/validate.ts';
@@ -252,5 +254,56 @@ describe('desktop listings and announcement links', () => {
         entries: { x: [{ ...entry, url: 'http://insecure.example' }] },
       }),
     ).toEqual(['entries["x"][0].url: expected https URL or null']);
+  });
+});
+
+describe('forecast files', () => {
+  const model = {
+    schemaVersion: 1,
+    trainedAt: '2026-11-02T00:00:00.000Z',
+    target: 0.6667,
+    params: { halfLife: 8, bandwidth: 0.45, weekday: 1 },
+    masses: [0.66, 0.58, 0.6, 0.63],
+    listings: { 'apple:1': { params: { halfLife: 4, bandwidth: 0.2, weekday: 0 } } },
+    replay: { tests: 10, hits: 7, medianErrorDays: 1.5 },
+    live: null,
+  };
+
+  it('accepts a valid model and rejects broken ones', () => {
+    expect(validateForecastModelFile(model)).toEqual([]);
+    expect(validateForecastModelFile({ ...model, masses: [] })).not.toEqual([]);
+    expect(validateForecastModelFile({ ...model, target: 2 })).not.toEqual([]);
+    expect(
+      validateForecastModelFile({ ...model, params: { halfLife: -1, bandwidth: 0.3, weekday: 1 } }),
+    ).not.toEqual([]);
+    expect(
+      validateForecastModelFile({ ...model, live: { forecasts: 2, hits: 3, medianErrorDays: 1 } }),
+    ).not.toEqual([]);
+    expect(validateForecastModelFile(null)).not.toEqual([]);
+  });
+
+  it('accepts a valid forecast log and rejects broken ones', () => {
+    const open = {
+      madeAt: '2026-11-02T00:00:00.000Z',
+      after: '2026-11-01T00:00:00.000Z',
+      from: '2026-11-03T00:00:00.000Z',
+      to: '2026-11-06T00:00:00.000Z',
+      point: '2026-11-04T00:00:00.000Z',
+    };
+    const scored = { ...open, actual: '2026-11-05T00:00:00.000Z', hit: true, errorDays: 1 };
+    const log = { schemaVersion: 1, listings: { 'apple:1': { open, scored: [scored] } } };
+    expect(validateForecastLogFile(log)).toEqual([]);
+    expect(
+      validateForecastLogFile({
+        schemaVersion: 1,
+        listings: { 'apple:1': { open: { ...open, from: 'soon' }, scored: [] } },
+      }),
+    ).not.toEqual([]);
+    expect(
+      validateForecastLogFile({
+        schemaVersion: 1,
+        listings: { 'apple:1': { open: null, scored: [{ ...scored, hit: 'yes' }] } },
+      }),
+    ).not.toEqual([]);
   });
 });

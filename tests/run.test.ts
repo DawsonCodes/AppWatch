@@ -8,6 +8,8 @@ import type { AppSnapshot, ProviderFetch } from '../scripts/lib/providers/types.
 import type { AppsFile, HistoryFile, Platform, StatusFile } from '../src/shared/types.ts';
 import {
   validateAppsFile,
+  validateForecastLogFile,
+  validateForecastModelFile,
   validateHistoryFile,
   validateStatusFile,
 } from '../src/shared/validate.ts';
@@ -91,6 +93,12 @@ describe('runCheck', () => {
     expect(history.entries['apple:100']).toHaveLength(1);
     expect(status.totalApps).toBe(2);
     expect(status.updatesDetected).toBe(0);
+    // The forecast learns from the history from the very first run.
+    const model = JSON.parse(readFileSync(join(dataDir, 'forecast-model.json'), 'utf8'));
+    const log = JSON.parse(readFileSync(join(dataDir, 'forecast-log.json'), 'utf8'));
+    expect(validateForecastModelFile(model)).toEqual([]);
+    expect(validateForecastLogFile(log)).toEqual([]);
+    expect(model.trainedAt).toBe('2026-07-14T00:00:00.000Z');
   });
 
   it('does not rewrite app data when nothing meaningful changed', async () => {
@@ -99,10 +107,22 @@ describe('runCheck', () => {
     const before = statSync(join(dataDir, 'apps.json')).mtimeMs;
     const historyBefore = statSync(join(dataDir, 'history.json')).mtimeMs;
 
+    const modelBefore = statSync(join(dataDir, 'forecast-model.json')).mtimeMs;
+
     const second = await runCheck({ config, providers, dataDir, delayMs: 0 });
     expect(second.changed).toBe(false);
     expect(statSync(join(dataDir, 'apps.json')).mtimeMs).toBe(before);
     expect(statSync(join(dataDir, 'history.json')).mtimeMs).toBe(historyBefore);
+    expect(statSync(join(dataDir, 'forecast-model.json')).mtimeMs).toBe(modelBefore);
+  });
+
+  it('re-creates missing forecast files even when nothing else changed', async () => {
+    const providers = { apple: providerReturning('1.0'), google: providerReturning('5.0') };
+    await runCheck({ config, providers, dataDir, delayMs: 0 });
+    rmSync(join(dataDir, 'forecast-model.json'));
+    const second = await runCheck({ config, providers, dataDir, delayMs: 0 });
+    expect(second.changed).toBe(true);
+    expect(existsSync(join(dataDir, 'forecast-model.json'))).toBe(true);
   });
 
   it('always refreshes status.json so "last checked" stays accurate', async () => {

@@ -224,6 +224,123 @@ export function validateStatusFile(value: unknown): string[] {
   return errors;
 }
 
+function isFiniteNumber(value: unknown, min = 0, max = Number.POSITIVE_INFINITY): boolean {
+  return typeof value === 'number' && Number.isFinite(value) && value >= min && value <= max;
+}
+
+function checkParams(errors: string[], value: unknown, path: Path): void {
+  if (!isRecord(value)) {
+    errors.push(`${path}: expected object`);
+    return;
+  }
+  if (!isFiniteNumber(value.halfLife, 0.5, 1000)) errors.push(`${path}.halfLife: out of range`);
+  if (!isFiniteNumber(value.bandwidth, 0.01, 5)) errors.push(`${path}.bandwidth: out of range`);
+  if (!isFiniteNumber(value.weekday, 0, 5)) errors.push(`${path}.weekday: out of range`);
+}
+
+function checkLive(errors: string[], value: unknown, path: Path): void {
+  if (!isRecord(value)) {
+    errors.push(`${path}: expected object`);
+    return;
+  }
+  const { forecasts, hits } = value;
+  if (!Number.isInteger(forecasts) || (forecasts as number) < 0) {
+    errors.push(`${path}.forecasts: expected non-negative integer`);
+  }
+  if (!Number.isInteger(hits) || (hits as number) < 0 || (hits as number) > (forecasts as number)) {
+    errors.push(`${path}.hits: expected integer between 0 and forecasts`);
+  }
+  if (!isFiniteNumber(value.medianErrorDays)) errors.push(`${path}.medianErrorDays: out of range`);
+}
+
+export function validateForecastModelFile(value: unknown): string[] {
+  const errors: string[] = [];
+  if (!isRecord(value)) return ['forecast model: expected object'];
+  if (value.schemaVersion !== 1) errors.push('schemaVersion: expected 1');
+  if (!isIsoDate(value.trainedAt)) errors.push('trainedAt: expected ISO 8601 date string');
+  if (!isFiniteNumber(value.target, 0.05, 0.99)) errors.push('target: out of range');
+  checkParams(errors, value.params, 'params');
+  if (
+    !Array.isArray(value.masses) ||
+    value.masses.length === 0 ||
+    !value.masses.every((m) => isFiniteNumber(m, 0.05, 0.999))
+  ) {
+    errors.push('masses: expected non-empty array of shares');
+  }
+  if (!isRecord(value.listings)) {
+    errors.push('listings: expected object');
+  } else {
+    for (const [id, entry] of Object.entries(value.listings)) {
+      if (!isRecord(entry)) {
+        errors.push(`listings["${id}"]: expected object`);
+        continue;
+      }
+      if (entry.params !== undefined) checkParams(errors, entry.params, `listings["${id}"].params`);
+      if (entry.live !== undefined) checkLive(errors, entry.live, `listings["${id}"].live`);
+    }
+  }
+  if (!isRecord(value.replay)) {
+    errors.push('replay: expected object');
+  } else {
+    checkLive(
+      errors,
+      {
+        forecasts: value.replay.tests,
+        hits: value.replay.hits,
+        medianErrorDays: value.replay.medianErrorDays,
+      },
+      'replay',
+    );
+  }
+  if (value.live !== null) checkLive(errors, value.live, 'live');
+  return errors;
+}
+
+function checkRecordedForecast(
+  errors: string[],
+  value: unknown,
+  path: Path,
+  scored: boolean,
+): void {
+  if (!isRecord(value)) {
+    errors.push(`${path}: expected object`);
+    return;
+  }
+  for (const key of ['madeAt', 'after', 'from', 'to', 'point'] as const) {
+    if (!isIsoDate(value[key])) errors.push(`${path}.${key}: expected ISO 8601 date string`);
+  }
+  if (!scored) return;
+  if (!isIsoDate(value.actual)) errors.push(`${path}.actual: expected ISO 8601 date string`);
+  if (typeof value.hit !== 'boolean') errors.push(`${path}.hit: expected boolean`);
+  if (!isFiniteNumber(value.errorDays)) errors.push(`${path}.errorDays: out of range`);
+}
+
+export function validateForecastLogFile(value: unknown): string[] {
+  const errors: string[] = [];
+  if (!isRecord(value)) return ['forecast log: expected object'];
+  if (value.schemaVersion !== 1) errors.push('schemaVersion: expected 1');
+  if (!isRecord(value.listings)) {
+    errors.push('listings: expected object');
+    return errors;
+  }
+  for (const [id, entry] of Object.entries(value.listings)) {
+    const path = `listings["${id}"]`;
+    if (!isRecord(entry)) {
+      errors.push(`${path}: expected object`);
+      continue;
+    }
+    if (entry.open !== null) checkRecordedForecast(errors, entry.open, `${path}.open`, false);
+    if (!Array.isArray(entry.scored)) {
+      errors.push(`${path}.scored: expected array`);
+      continue;
+    }
+    entry.scored.forEach((item, i) =>
+      checkRecordedForecast(errors, item, `${path}.scored[${i}]`, true),
+    );
+  }
+  return errors;
+}
+
 export function isValidAppsFile(value: unknown): value is AppsFile {
   return validateAppsFile(value).length === 0;
 }
