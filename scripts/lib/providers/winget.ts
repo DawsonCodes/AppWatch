@@ -219,12 +219,23 @@ export function createWingetProvider(options: {
     } catch (error) {
       throw new ProviderError(`winget lookup failed for ${packageId}: ${errorMessage(error)}`);
     }
-    const versions = (Array.isArray(entries) ? (entries as ContentsEntry[]) : [])
-      .filter((entry) => entry.type === 'dir' && /^v?\d/.test(entry.name))
+    const folders = (Array.isArray(entries) ? (entries as ContentsEntry[]) : []).filter(
+      (entry) => entry.type === 'dir',
+    );
+    const versions = folders
+      .filter((entry) => /^v?\d/.test(entry.name))
       .map((entry) => entry.name)
       .sort((a, b) => compareVersions(b, a));
     const latest = versions[0];
-    if (!latest) throw new ProviderError(`winget has no versions of ${packageId}`);
+    if (!latest) {
+      // winget sometimes retires a package in favor of a sibling (e.g.
+      // Google.Chrome -> Google.Chrome.EXE); name them so the fix is obvious.
+      const siblings = folders.map((entry) => `${packageId}.${entry.name}`);
+      throw new ProviderError(
+        `winget has no versions of ${packageId}` +
+          (siblings.length > 0 ? ` (it has sub-packages: ${siblings.join(', ')})` : ''),
+      );
+    }
 
     // 2. When each version was added (recent history; optional).
     const commitDates = new Map<string, string>();

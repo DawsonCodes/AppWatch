@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Chrome on Windows failed to check: winget retired its `Google.Chrome`
+  versions in favor of `Google.Chrome.EXE`, which it now reads. A package
+  that loses its versions now names its sub-packages in the error.
+- Game icons were blurry (Steam's 32px app icon). Games now use their store
+  cover art, cropped to a square, and the small icon only as a last resort.
+- Unity, Roblox Studio and QGroundControl now show their developer's logo;
+  GitHub logos are fetched by account id, which always resolves.
+
 - Games showed old updates: when a developer had ever tagged a Steam post as
   patch notes, untagged patch notes were ignored. Tagged or update-titled
   posts now both count, previews, roadmaps and weekly news never do, and

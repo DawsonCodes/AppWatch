@@ -186,7 +186,7 @@ desktop listing names where its versions come from:
   never previews, roadmaps, weekly news, dev diaries, sales or tournaments,
   even when tagged. Each is recorded as an update on its date, with its
   notes. Steam's store API adds the developer, price, genre, age rating and
-  the game's official square icon. If a later, stricter reading drops a post
+  the game's cover art, used as its icon. If a later, stricter reading drops a post
   that was recorded on a game's first check, it's removed from the history.
 - **Release feeds** for software in none of these:
   - **LockDown Browser** — Respondus's own announcements (below).
@@ -290,9 +290,10 @@ content:
 - App icons show the app's first letter (on a tile tinted from the app's
   name) straight away and fade in once loaded. Store apps use their store
   icon, games their official Steam icon, and desktop-only software its
-  developer's official GitHub logo where there is one (Godot, Blender, the
-  Epic, GOG and EA launchers, Zen and Tor Browser); Arc borrows the icon of
-  its iPhone app, Arc Search, which is tracked too. Every icon is requested at one size and remembered for the visit, so
+  developer's official GitHub logo where there is one (Unity, Roblox Studio,
+  Godot, Blender, the Epic, GOG and EA launchers, Zen, Tor Browser and
+  QGroundControl); Arc borrows the icon of its iPhone app, Arc Search, which
+  is tracked too. Game icons are cropped from the game's Steam cover art. Every icon is requested at one size and remembered for the visit, so
   an icon that has loaded once shows instantly everywhere else, and one that
   can't load keeps its letter instead of popping in later.
 - The theme switch reveals the new theme in a circle from the theme button (in

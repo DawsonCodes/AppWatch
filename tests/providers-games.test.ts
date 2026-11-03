@@ -254,25 +254,68 @@ describe('Steam patch notes', () => {
     await expect(steam(target('windows', 'steam:730'))).rejects.toThrow(/No patch notes/);
   });
 
-  it('finds square game icons, best first', () => {
+  it('finds game icons, sharpest first', () => {
     const hash = 'a'.repeat(40);
     const icon = 'b'.repeat(40);
     const payload = {
       response: {
-        store_items: [{ appid: 730, assets: { clan_avatar: hash, community_icon: icon } }],
+        store_items: [
+          {
+            appid: 730,
+            assets: {
+              asset_url_format: 'steam/apps/730/${FILENAME}?t=1749053861',
+              hero_capsule: 'hero_capsule.jpg',
+              hero_capsule_2x: 'hero_capsule_2x.jpg',
+              library_capsule: 'library_600x900.jpg',
+              library_capsule_2x: 'library_600x900_2x.jpg',
+              header: 'header.jpg',
+              clan_avatar: hash,
+              community_icon: icon,
+            },
+          },
+        ],
       },
     };
+    const art = (file: string) =>
+      `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/${file}?t=1749053861`;
     expect(steamIconCandidates(payload, '730')).toEqual([
       `https://avatars.fastly.steamstatic.com/${hash}_full.jpg`,
+      art('hero_capsule_2x.jpg'),
+      art('hero_capsule.jpg'),
+      art('library_600x900_2x.jpg'),
+      art('library_600x900.jpg'),
       `https://shared.fastly.steamstatic.com/community_assets/images/apps/730/${icon}.jpg`,
     ]);
+  });
+
+  it('ignores missing or odd assets', () => {
     expect(steamIconCandidates({ response: { store_items: [] } }, '730')).toEqual([]);
-    expect(
-      steamIconCandidates(
-        { response: { store_items: [{ appid: 730, assets: { clan_avatar: 'x' } }] } },
-        '730',
-      ),
-    ).toEqual([]);
+    const odd = {
+      response: {
+        store_items: [
+          {
+            appid: 730,
+            assets: {
+              clan_avatar: 'x',
+              asset_url_format: 'steam/apps/999/${FILENAME}',
+              hero_capsule: 'hero.jpg',
+            },
+          },
+        ],
+      },
+    };
+    expect(steamIconCandidates(odd, '730')).toEqual([]);
+    const traversal = {
+      response: {
+        store_items: [
+          {
+            appid: 730,
+            assets: { asset_url_format: 'steam/apps/730/${FILENAME}', hero_capsule: '../x.jpg' },
+          },
+        ],
+      },
+    };
+    expect(steamIconCandidates(traversal, '730')).toEqual([]);
   });
 
   it('drops first-check posts the record no longer counts as patch notes', () => {

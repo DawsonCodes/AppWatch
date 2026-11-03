@@ -227,19 +227,19 @@
           "name": "Epic Games Launcher",
           "windows": "winget:EpicGames.EpicGamesLauncher",
           "mac": "homebrew:epic-games",
-          "icon": "github:EpicGames"
+          "icon": "github:EpicGames/6615685"
         },
         {
           "name": "GOG Galaxy",
           "windows": "winget:GOG.Galaxy",
           "mac": "homebrew:gog-galaxy",
-          "icon": "github:gogcom"
+          "icon": "github:gogcom/6595318"
         },
         {
           "name": "EA app",
           "windows": "winget:ElectronicArts.EADesktop",
           "mac": "homebrew:ea",
-          "icon": "github:electronicarts"
+          "icon": "github:electronicarts/1637638"
         },
         {
           "name": "Counter-Strike 2",
@@ -370,7 +370,7 @@
           "name": "Google Chrome",
           "appStore": "https://apps.apple.com/us/app/google-chrome/id535886823",
           "googlePlay": "https://play.google.com/store/apps/details?id=com.android.chrome",
-          "windows": "winget:Google.Chrome",
+          "windows": "winget:Google.Chrome.EXE",
           "mac": "homebrew:google-chrome"
         },
         {
@@ -427,7 +427,7 @@
           "googlePlay": "https://play.google.com/store/apps/details?id=org.torproject.torbrowser",
           "windows": "winget:TorProject.TorBrowser",
           "mac": "homebrew:tor-browser",
-          "icon": "github:torproject"
+          "icon": "github:torproject/4099049"
         },
         {
           "name": "Arc",
@@ -439,7 +439,7 @@
           "name": "Zen Browser",
           "windows": "winget:Zen-Team.Zen-Browser",
           "mac": "homebrew:zen",
-          "icon": "github:zen-browser"
+          "icon": "github:zen-browser/165225155"
         },
         {
           "name": "Bitwarden",
@@ -573,24 +573,26 @@
         {
           "name": "Roblox Studio",
           "windows": "roblox-studio",
-          "mac": "homebrew:robloxstudio"
+          "mac": "homebrew:robloxstudio",
+          "icon": "github:Roblox/4195619"
         },
         {
           "name": "Unity",
           "windows": "winget:Unity.Unity.6000",
-          "mac": "homebrew:unity"
+          "mac": "homebrew:unity",
+          "icon": "github:Unity-Technologies/426196"
         },
         {
           "name": "Godot",
           "windows": "winget:GodotEngine.GodotEngine",
           "mac": "homebrew:godot",
-          "icon": "github:godotengine"
+          "icon": "github:godotengine/6318500"
         },
         {
           "name": "Blender",
           "windows": "winget:BlenderFoundation.Blender",
           "mac": "homebrew:blender",
-          "icon": "github:blender"
+          "icon": "github:blender/52924476"
         }
       ]
     },
@@ -630,7 +632,8 @@
         },
         {
           "name": "QGroundControl",
-          "mac": "homebrew:qgroundcontrol"
+          "mac": "homebrew:qgroundcontrol",
+          "icon": "github:mavlink/961247"
         }
       ]
     }

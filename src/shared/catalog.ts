@@ -61,12 +61,16 @@ export interface CatalogApp {
   icon?: string;
 }
 
-/** "github:godotengine" -> the godotengine organization's avatar. */
-const GITHUB_ICON_RE = /^github:([A-Za-z0-9](?:[A-Za-z0-9-]{0,38}))$/;
+/**
+ * "github:godotengine/6318500" -> that GitHub organization's avatar. The
+ * name is for people reading the config; the avatar is fetched by the
+ * account's numeric id, which (unlike the name) always resolves.
+ */
+const GITHUB_ICON_RE = /^github:([A-Za-z0-9](?:[A-Za-z0-9-]{0,38}))\/(\d{1,12})$/;
 
 export function catalogIconUrl(value: string): string | null {
   const match = GITHUB_ICON_RE.exec(value);
-  return match ? `https://avatars.githubusercontent.com/${match[1]}?s=192` : null;
+  return match ? `https://avatars.githubusercontent.com/u/${match[2]}?s=192&v=4` : null;
 }
 
 export interface CatalogCollection {
@@ -312,7 +316,7 @@ export function parseCatalog(raw: unknown): Catalog {
             typeof entry.icon === 'string' ? (catalogIconUrl(entry.icon) ?? undefined) : undefined;
           if (!icon) {
             throw new CatalogError(
-              `${at}.icon: use "github:<organization>" (the developer's official GitHub avatar).`,
+              `${at}.icon: use "github:<organization>/<numeric id>" (the developer's official GitHub avatar).`,
             );
           }
         }

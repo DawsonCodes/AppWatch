@@ -147,9 +147,12 @@ export function parseStoreDetails(payload: unknown, appId: string): StoreDetails
 }
 
 /**
- * Square icons Steam has for a game, best first: its official community
- * avatar (184px) and its app icon. From IStoreBrowseService/GetItems, the
- * public store API the Steam store itself uses.
+ * Icons for a game, best first, from IStoreBrowseService/GetItems (the
+ * public store API the Steam store itself uses): its official community
+ * avatar (square, 184px) when Steam lists one; otherwise its store cover
+ * art (hero capsule, 748×896, then the 600×900 library cover), which the
+ * site crops to a square; and only as a last resort the 32px app icon,
+ * which looks blurry at card size.
  */
 export function steamIconCandidates(payload: unknown, appId: string): string[] {
   const response = (payload as { response?: { store_items?: unknown[] } } | null)?.response;
@@ -162,6 +165,27 @@ export function steamIconCandidates(payload: unknown, appId: string): string[] {
   const candidates: string[] = [];
   const clan = hash(assets.clan_avatar);
   if (clan) candidates.push(`https://avatars.fastly.steamstatic.com/${clan}_full.jpg`);
+  // Store art: "steam/apps/730/${FILENAME}?t=…" plus a file name per asset.
+  const format = typeof assets.asset_url_format === 'string' ? assets.asset_url_format : '';
+  if (format.startsWith(`steam/apps/${appId}/`) && format.includes('${FILENAME}')) {
+    for (const key of [
+      'hero_capsule_2x',
+      'hero_capsule',
+      'library_capsule_2x',
+      'library_capsule',
+    ]) {
+      const file = assets[key];
+      if (
+        typeof file === 'string' &&
+        /^[\w./-]+\.(?:jpg|png|webp)$/i.test(file) &&
+        !file.includes('..')
+      ) {
+        candidates.push(
+          `https://shared.fastly.steamstatic.com/store_item_assets/${format.replace('${FILENAME}', file)}`,
+        );
+      }
+    }
+  }
   const icon = hash(assets.community_icon);
   if (icon) {
     candidates.push(
