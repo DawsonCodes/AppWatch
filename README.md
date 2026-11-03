@@ -183,7 +183,8 @@ desktop listing names where its versions come from:
   the ones that are patch notes — posts the developer tagged as patch notes,
   or titled like an update ("Patch 1.2", "Hotfix #36", "Update 2.3 is live",
   "Version 20261030 Patch Notes"), since developers tag inconsistently — but
-  never previews, roadmaps, weekly news, dev diaries, sales or tournaments,
+  never previews or "coming" posts, roadmaps, community and weekly news, dev
+  diaries and streams, anti-cheat notices, polls, bundles, sales or esports,
   even when tagged. Each is recorded as an update on its date, with its
   notes. Steam's store API adds the developer, price, genre, age rating and
   the game's cover art, used as its icon. If a later, stricter reading drops a post

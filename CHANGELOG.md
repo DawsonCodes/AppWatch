@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Some games still counted posts that aren't updates (esports finals,
+  bundles, polls, "Community Update" news, anti-cheat notices, stream
+  previews, dated pre-announcements). They no longer count, and ones
+  recorded on a game's first check are removed.
+
 - Chrome on Windows failed to check: winget retired its `Google.Chrome`
   versions in favor of `Google.Chrome.EXE`, which it now reads. A package
   that loses its versions now names its sub-packages in the error.
