@@ -111,9 +111,10 @@ export function backfillReleases(
     if (next !== before) changed = true;
   }
   // Records without version numbers (a game's patch notes) are complete for
-  // the stretch of time they cover. An entry learned from such a record on
-  // the first check that the record, as now read, no longer lists in that
-  // stretch (a post that turned out not to be patch notes) is dropped.
+  // the stretch of time they cover, and such a listing's history only ever
+  // comes from that record. A versionless entry in that stretch that the
+  // record, as now read, no longer lists (a post that turned out not to be
+  // patch notes) is dropped, whichever check first recorded it.
   if (learnedAt !== null && releases.every((release) => release.version === null)) {
     const covered = Math.min(
       ...releases.map((release) => Date.parse(release.releaseDate ?? '')).filter(Number.isFinite),
@@ -121,7 +122,6 @@ export function backfillReleases(
     const kept = next.filter(
       (entry) =>
         entry.version !== null ||
-        entry.detectedAt !== learnedAt ||
         releaseTime(entry) < covered ||
         official.has(historyEntryKey(entry) ?? ''),
     );

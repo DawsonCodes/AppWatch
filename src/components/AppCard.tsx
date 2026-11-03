@@ -2,7 +2,7 @@ import { memo } from 'preact/compat';
 import type { AppGroup } from '../lib/groups.ts';
 import { groupDeveloper, groupIconUrl, primaryListing } from '../lib/groups.ts';
 import { isRecentlyUpdated } from '../lib/filtering.ts';
-import { compactAgo, formatDate } from '../lib/format.ts';
+import { compactAgo, formatDate, formatDateTime } from '../lib/format.ts';
 import { groupHref } from '../lib/route.ts';
 import { useDisplayVersion } from '../lib/versionDisplay.ts';
 import { AppIcon } from './AppIcon.tsx';
@@ -71,7 +71,9 @@ function AppCardImpl({ group, watched, hint, onToggleWatch }: AppCardProps) {
               <span
                 class={`store-row__when${fresh ? ' is-fresh' : ''}`}
                 title={
-                  listing.releaseDate ? `Released ${formatDate(listing.releaseDate)}` : undefined
+                  listing.releaseDate
+                    ? `Released ${formatDateTime(listing.releaseDate) ?? formatDate(listing.releaseDate)}`
+                    : undefined
                 }
               >
                 {fresh ? <span class="visually-hidden">New this week, </span> : null}
