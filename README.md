@@ -193,8 +193,8 @@ desktop listing names where its versions come from:
   diaries and streams, anti-cheat notices, polls, bundles, sales or esports,
   even when tagged. Each is recorded as an update on its date, with its
   notes. Steam's store API adds the developer, price, genre, age rating and
-  the game's cover art, used as its icon. If a later, stricter reading drops a post
-  that was recorded on a game's first check, it's removed from the history.
+  the game's cover art, used as its icon. If a later, stricter reading drops a post,
+  it's removed from the game's history.
 - **Release feeds** for software in none of these:
   - **LockDown Browser** — Respondus's own announcements (below).
   - **Minecraft: Java Edition** — Mojang's version list, the public file the

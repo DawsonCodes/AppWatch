@@ -205,6 +205,9 @@ describe('Steam patch notes', () => {
     ];
     const notPatches = [
       'PGS 12 Grand Finals Day 3 is LIVE!!',
+      'PGS 11 Survival Stage is LIVE!!',
+      'PGS 11 Final Stage Day 2 is LIVE!!',
+      'PUBG GLOBAL SERIES 9 GRAND FINALS DAY 3 IS LIVE!!',
       'Palworld × Graveyard Keeper 2 Steam Bundle is Out Now!',
       'Global Popularity Poll 2026 Results & New Update',
       'COMMUNITY UPDATE 268',
@@ -353,6 +356,48 @@ describe('Steam patch notes', () => {
       },
     };
     expect(steamIconCandidates(traversal, '730')).toEqual([]);
+  });
+
+  it('drops posts the record no longer counts, whichever check recorded them', () => {
+    const firstCheck = '2026-11-01T00:00:00.000Z';
+    const first = backfillReleases(
+      [],
+      steamReleases([
+        item('Patch A', '2026-10-30T09:00:00Z'),
+        item('Patch B', '2026-10-20T09:00:00Z'),
+      ]),
+      firstCheck,
+    );
+    // A later check (with a looser filter) adds an esports post…
+    const later = backfillReleases(
+      first,
+      steamReleases([
+        item('Patch A', '2026-10-30T09:00:00Z'),
+        item('Grand Finals Day 1 is LIVE!!', '2026-10-25T09:00:00Z'),
+        item('Patch B', '2026-10-20T09:00:00Z'),
+      ]).concat([
+        {
+          version: null,
+          releaseDate: '2026-10-25T09:00:00.000Z',
+          releaseNotes: 'Grand Finals Day 1 is LIVE!!',
+          url: null,
+        },
+      ]),
+      '2026-11-02T00:00:00.000Z',
+      firstCheck,
+    );
+    expect(later.map((e) => e.releaseNotes)).toContain('Grand Finals Day 1 is LIVE!!');
+    // …and the next check, reading the record properly, removes it.
+    const fixed = backfillReleases(
+      later,
+      steamReleases([
+        item('Patch A', '2026-10-30T09:00:00Z'),
+        item('Patch B', '2026-10-20T09:00:00Z'),
+      ]),
+      '2026-11-03T00:00:00.000Z',
+      firstCheck,
+    );
+    expect(fixed.map((e) => e.releaseNotes)).toEqual(['Patch A', 'Patch B']);
   });
 
   it('drops first-check posts the record no longer counts as patch notes', () => {

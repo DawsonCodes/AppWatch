@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Game histories kept non-update posts that a later check had added (PUBG
+  esports stages, Apex anti-cheat notices, Rust and Baldur's Gate 3
+  community news): posts a game's Steam record no longer counts are now
+  removed whichever check recorded them, and esports stage posts never
+  count.
+- Hovering a card's "2h ago" shows the exact release date and time, so ties
+  in "Recently updated" can be told apart.
+
 - Sorting: "Recently updated" and "Updated this week" went by when AppWatch
   noticed an update, so an app whose older release was only found today
   jumped to the top while its card said "2mo ago". Both now go by the
@@ -22,8 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Some games still counted posts that aren't updates (esports finals,
   bundles, polls, "Community Update" news, anti-cheat notices, stream
-  previews, dated pre-announcements). They no longer count, and ones
-  recorded on a game's first check are removed.
+  previews, dated pre-announcements). They no longer count, and any already
+  in a game's history are removed on the next check, whichever check
+  recorded them.
 
 - Chrome on Windows failed to check: winget retired its `Google.Chrome`
   versions in favor of `Google.Chrome.EXE`, which it now reads. A package

@@ -44,6 +44,7 @@ const NOT_A_PATCH = new RegExp(
     'survey|poll|vote|steam awards|contest|challenge|wallpaper|merch',
     // Store and esports posts.
     'sale|discount|bundle|giveaway|free weekend|tournament|esports|grand finals?|finals? day|twitch drops',
+    'global series|pgs \\d+|(?:survival|winners|final|group|knockout|playoff) stage',
   ]
     .map((group) => `(?:${group})`)
     .join('|')
