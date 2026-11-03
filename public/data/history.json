@@ -8067,6 +8067,12 @@
     "google:com.netflix.mediaclient": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T02:37:18.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-11-03T05:21:21.747Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-27T01:48:17.000Z",
         "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
         "detectedAt": "2026-10-30T17:51:04.964Z"
@@ -17462,6 +17468,12 @@
     "google:com.google.android.gm": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T03:13:35.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-11-03T05:21:21.747Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-29T18:09:54.000Z",
         "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
         "detectedAt": "2026-10-30T17:51:04.964Z"
@@ -26049,54 +26061,355 @@
         "detectedAt": "2026-09-24T23:12:54.522Z"
       }
     ],
-    "windows:winget:Google.Chrome": [
+    "windows:winget:Google.Chrome.EXE": [
+      {
+        "version": "156.0.8078.80",
+        "releaseDate": "2026-10-29T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
       {
         "version": "156.0.8078.74",
         "releaseDate": "2026-10-27T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-11-01T22:01:48.218Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "156.0.8078.48",
         "releaseDate": "2026-10-20T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "155.0.8059.85",
-        "releaseDate": "2026-10-16T04:02:57.000Z",
+        "releaseDate": "2026-10-15T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "155.0.8059.80",
+        "releaseDate": "2026-10-13T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "155.0.8059.40",
-        "releaseDate": "2026-10-06T21:18:08.000Z",
+        "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "154.0.8037.98",
-        "releaseDate": "2026-10-02T03:51:57.000Z",
+        "releaseDate": "2026-10-01T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "154.0.8037.93",
-        "releaseDate": "2026-09-29T20:46:58.000Z",
+        "releaseDate": "2026-09-29T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "154.0.8037.58",
-        "releaseDate": "2026-09-22T22:09:28.000Z",
+        "releaseDate": "2026-09-22T12:00:00.000Z",
         "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "153.0.8010.53",
+        "releaseDate": "2026-09-17T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "153.0.8010.48",
+        "releaseDate": "2026-09-15T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "152.0.7977.65",
+        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "152.0.7977.76",
+        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "152.0.7977.83",
+        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "153.0.8010.37",
+        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "151.0.7922.174",
+        "releaseDate": "2026-09-03T23:19:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "151.0.7922.138",
+        "releaseDate": "2026-08-29T08:06:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "151.0.7922.170",
+        "releaseDate": "2026-08-29T08:06:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "151.0.7922.109",
+        "releaseDate": "2026-08-25T18:51:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "151.0.7922.76",
+        "releaseDate": "2026-08-05T15:24:30.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "151.0.7922.72",
+        "releaseDate": "2026-07-29T23:34:25.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.187",
+        "releaseDate": "2026-07-24T02:13:16.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.182",
+        "releaseDate": "2026-07-22T00:31:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.129",
+        "releaseDate": "2026-07-17T00:03:59.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.125",
+        "releaseDate": "2026-07-16T01:37:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.115",
+        "releaseDate": "2026-07-09T00:34:11.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.101",
+        "releaseDate": "2026-07-07T20:35:57.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "150.0.7871.47",
+        "releaseDate": "2026-06-30T22:09:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "149.0.7827.201",
+        "releaseDate": "2026-06-26T01:18:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "149.0.7827.197",
+        "releaseDate": "2026-06-23T21:24:10.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "149.0.7827.156",
+        "releaseDate": "2026-06-17T09:52:18.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "149.0.7827.115",
+        "releaseDate": "2026-06-12T02:45:19.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "149.0.7827.103",
+        "releaseDate": "2026-06-09T04:40:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "149.0.7827.54",
+        "releaseDate": "2026-06-03T05:21:57.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "148.0.7778.217",
+        "releaseDate": "2026-05-27T21:38:44.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "148.0.7778.179",
+        "releaseDate": "2026-05-19T22:22:35.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "148.0.7778.168",
+        "releaseDate": "2026-05-13T06:22:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "148.0.7778.97",
+        "releaseDate": "2026-05-05T23:19:04.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "147.0.7727.138",
+        "releaseDate": "2026-04-29T13:11:11.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "147.0.7727.117",
+        "releaseDate": "2026-04-22T19:49:47.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "147.0.7727.102",
+        "releaseDate": "2026-04-15T20:57:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "147.0.7727.56",
+        "releaseDate": "2026-04-09T07:26:45.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "146.0.7680.178",
+        "releaseDate": "2026-04-01T08:24:58.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "146.0.7680.165",
+        "releaseDate": "2026-03-30T04:03:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "146.0.7680.154",
+        "releaseDate": "2026-03-28T16:55:58.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "146.0.7680.72",
+        "releaseDate": "2026-03-16T09:34:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "146.0.7680.76",
+        "releaseDate": "2026-03-16T09:34:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "146.0.7680.80",
+        "releaseDate": "2026-03-16T09:34:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "145.0.7632.160",
+        "releaseDate": "2026-03-05T01:33:59.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "145.0.7632.117",
+        "releaseDate": "2026-02-24T03:41:01.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       }
     ],
