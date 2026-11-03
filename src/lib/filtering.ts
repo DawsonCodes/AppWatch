@@ -25,13 +25,19 @@ export const DEFAULT_FILTERS: FilterState = {
 /** Days within which a detected update counts as "recent". */
 export const RECENT_DAYS = 7;
 
+/**
+ * Whether the listing's current release came out in the last `days` days
+ * (the date its card shows). When the store gives no release date, the time
+ * AppWatch found the update stands in for it.
+ */
 export function isRecentlyUpdated(
-  app: Pick<AppRecord, 'lastUpdatedAt'>,
+  app: Pick<AppRecord, 'lastUpdatedAt' | 'releaseDate'>,
   now: Date = new Date(),
   days: number = RECENT_DAYS,
 ): boolean {
-  if (!app.lastUpdatedAt) return false;
-  const time = Date.parse(app.lastUpdatedAt);
+  const when = app.releaseDate ?? app.lastUpdatedAt;
+  if (!when) return false;
+  const time = Date.parse(when);
   if (Number.isNaN(time)) return false;
   const age = now.getTime() - time;
   return age >= 0 && age <= days * 24 * 3600 * 1000;

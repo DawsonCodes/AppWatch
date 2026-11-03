@@ -574,7 +574,7 @@
           "name": "Roblox Studio",
           "windows": "roblox-studio",
           "mac": "homebrew:robloxstudio",
-          "icon": "github:Roblox/4195619"
+          "icon": "github-file:MaximumADHD/Roblox-Client-Tracker/roblox/QtResources/Logo/StudioLogoAssets/RobloxStudio_128@2x.png"
         },
         {
           "name": "Unity",

@@ -58,14 +58,24 @@ const all = [wikipedia, duolingo, signal];
 const none = new Set<string>();
 
 describe('isRecentlyUpdated', () => {
-  it('is true within the window and false outside it', () => {
-    expect(isRecentlyUpdated(wikipedia, NOW)).toBe(true);
+  it('goes by the release date the card shows', () => {
+    expect(isRecentlyUpdated(signal, NOW)).toBe(true); // released 4 days ago
     expect(isRecentlyUpdated(duolingo, NOW)).toBe(false);
-    expect(isRecentlyUpdated(signal, NOW)).toBe(false); // never updated
+    // Found this week, but released weeks ago: not "updated this week".
+    expect(
+      isRecentlyUpdated(
+        { releaseDate: '2026-06-20T00:00:00.000Z', lastUpdatedAt: '2026-07-13T00:00:00.000Z' },
+        NOW,
+      ),
+    ).toBe(false);
+  });
+
+  it('falls back to when the update was found when there is no release date', () => {
+    expect(isRecentlyUpdated(wikipedia, NOW)).toBe(true);
   });
 
   it('ignores unparsable timestamps', () => {
-    expect(isRecentlyUpdated({ lastUpdatedAt: 'not a date' }, NOW)).toBe(false);
+    expect(isRecentlyUpdated({ lastUpdatedAt: 'not a date', releaseDate: null }, NOW)).toBe(false);
   });
 });
 
@@ -131,7 +141,7 @@ describe('applyFilters — filters', () => {
   it('filters recently updated apps', () => {
     expect(
       applyFilters(all, { ...DEFAULT_FILTERS, recentOnly: true }, none, NOW).map((a) => a.name),
-    ).toEqual(['Wikipedia']);
+    ).toEqual(['Wikipedia', 'Signal']);
   });
 
   it('filters watched apps using the provided id set', () => {

@@ -13,6 +13,8 @@ import { WatchButton } from './WatchButton.tsx';
 interface AppCardProps {
   group: AppGroup;
   watched: boolean;
+  /** A short extra line (e.g. the next expected update when sorting by it). */
+  hint?: string;
   onToggleWatch: (group: AppGroup) => void;
 }
 
@@ -20,7 +22,7 @@ interface AppCardProps {
  * One app across all its platforms. The whole card is a link to the app's
  * page; the star toggles the watchlist without opening it.
  */
-function AppCardImpl({ group, watched, onToggleWatch }: AppCardProps) {
+function AppCardImpl({ group, watched, hint, onToggleWatch }: AppCardProps) {
   const primary = primaryListing(group);
   const developer = groupDeveloper(group);
   const local = group.source === 'local';
@@ -79,6 +81,8 @@ function AppCardImpl({ group, watched, onToggleWatch }: AppCardProps) {
           );
         })}
       </ul>
+
+      {hint ? <p class="card__hint">{hint}</p> : null}
     </article>
   );
 }

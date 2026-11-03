@@ -67,10 +67,22 @@ export interface CatalogApp {
  * account's numeric id, which (unlike the name) always resolves.
  */
 const GITHUB_ICON_RE = /^github:([A-Za-z0-9](?:[A-Za-z0-9-]{0,38}))\/(\d{1,12})$/;
+/**
+ * "github-file:<owner>/<repo>/<branch>/<path>.png" -> an image file in a
+ * public GitHub repository (e.g. Roblox Studio's own app logo, mirrored
+ * from each Studio build by the Roblox Client Tracker), always the latest.
+ */
+const GITHUB_FILE_RE =
+  /^github-file:([A-Za-z0-9-]{1,39}\/[A-Za-z0-9._-]{1,100}\/[A-Za-z0-9._-]{1,100}(?:\/[A-Za-z0-9._@-]{1,100}){1,12}\.(?:png|jpg|svg))$/;
 
 export function catalogIconUrl(value: string): string | null {
-  const match = GITHUB_ICON_RE.exec(value);
-  return match ? `https://avatars.githubusercontent.com/u/${match[2]}?s=192&v=4` : null;
+  const avatar = GITHUB_ICON_RE.exec(value);
+  if (avatar) return `https://avatars.githubusercontent.com/u/${avatar[2]}?s=192&v=4`;
+  const file = GITHUB_FILE_RE.exec(value);
+  if (file && !file[1]!.split('/').some((part) => part === '.' || part === '..')) {
+    return `https://raw.githubusercontent.com/${file[1]}`;
+  }
+  return null;
 }
 
 export interface CatalogCollection {
@@ -316,7 +328,7 @@ export function parseCatalog(raw: unknown): Catalog {
             typeof entry.icon === 'string' ? (catalogIconUrl(entry.icon) ?? undefined) : undefined;
           if (!icon) {
             throw new CatalogError(
-              `${at}.icon: use "github:<organization>/<numeric id>" (the developer's official GitHub avatar).`,
+              `${at}.icon: use "github:<organization>/<numeric id>" (the developer's GitHub avatar) or "github-file:<owner>/<repo>/<branch>/<path>.png".`,
             );
           }
         }

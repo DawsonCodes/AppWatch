@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Sorting: "Recently updated" and "Updated this week" went by when AppWatch
+  noticed an update, so an app whose older release was only found today
+  jumped to the top while its card said "2mo ago". Both now go by the
+  release date the cards show.
+- "Next update" sorted by a forecast the cards no longer showed, and with a
+  platform filter it used other platforms' forecasts. It now sorts by the
+  shown platforms' forecasts, and each card says when ("Next: likely
+  tomorrow · Windows") while that sort is on.
+- Roblox Studio shows its own app logo, read from the current Studio build
+  (mirrored by the Roblox Client Tracker), instead of Roblox's.
+
 - Some games still counted posts that aren't updates (esports finals,
   bundles, polls, "Community Update" news, anti-cheat notices, stream
   previews, dated pre-announcements). They no longer count, and ones
