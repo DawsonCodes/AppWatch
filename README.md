@@ -48,7 +48,7 @@
 
 ## What it does
 
-AppWatch tracks 102 apps and games out of the box — 246 listings across the
+AppWatch tracks 102 apps and games out of the box — 247 listings across the
 App Store, Google Play, Windows and Mac — checks every one of them **every two
 hours**, and records what changed. Apps are grouped into categories, shown as
 chips above the list: **AI** (ChatGPT, Gemini, Grok, Microsoft Copilot,
@@ -180,12 +180,14 @@ desktop listing names where its versions come from:
 - **Games: Steam patch notes.** Games rarely publish version numbers; what
   they publish is patch notes, which developers post as announcements on the
   game's Steam page. Steam's public news API returns those; the checker keeps
-  the ones that are patch notes (posts the developer tagged as patch notes,
-  or, for developers who don't tag them, posts titled like an update — "Patch
-  1.2", "Hotfix", "Update 2.3 is live" — but not "coming soon", sales,
-  tournaments or dev diaries) and records each as an update on its date, with
-  its notes. Steam's store API adds the developer, price, genre and age
-  rating.
+  the ones that are patch notes — posts the developer tagged as patch notes,
+  or titled like an update ("Patch 1.2", "Hotfix #36", "Update 2.3 is live",
+  "Version 20261030 Patch Notes"), since developers tag inconsistently — but
+  never previews, roadmaps, weekly news, dev diaries, sales or tournaments,
+  even when tagged. Each is recorded as an update on its date, with its
+  notes. Steam's store API adds the developer, price, genre, age rating and
+  the game's official square icon. If a later, stricter reading drops a post
+  that was recorded on a game's first check, it's removed from the history.
 - **Release feeds** for software in none of these:
   - **LockDown Browser** — Respondus's own announcements (below).
   - **Minecraft: Java Edition** — Mojang's version list, the public file the
@@ -285,8 +287,12 @@ content:
   baseline before its markers appear, and the days-between-releases bars grow
   in, left to right, when "How this forecast works" opens.
 - Only opacity and transforms animate, so nothing else on the page shifts.
-- App icons show the app's first letter straight away and fade in once
-  loaded. Every icon is requested at one size and remembered for the visit, so
+- App icons show the app's first letter (on a tile tinted from the app's
+  name) straight away and fade in once loaded. Store apps use their store
+  icon, games their official Steam icon, and desktop-only software its
+  developer's official GitHub logo where there is one (Godot, Blender, the
+  Epic, GOG and EA launchers, Zen and Tor Browser); Arc borrows the icon of
+  its iPhone app, Arc Search, which is tracked too. Every icon is requested at one size and remembered for the visit, so
   an icon that has loaded once shows instantly everywhere else, and one that
   can't load keeps its letter instead of popping in later.
 - The theme switch reveals the new theme in a circle from the theme button (in

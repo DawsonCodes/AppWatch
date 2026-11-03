@@ -226,17 +226,20 @@
         {
           "name": "Epic Games Launcher",
           "windows": "winget:EpicGames.EpicGamesLauncher",
-          "mac": "homebrew:epic-games"
+          "mac": "homebrew:epic-games",
+          "icon": "github:EpicGames"
         },
         {
           "name": "GOG Galaxy",
           "windows": "winget:GOG.Galaxy",
-          "mac": "homebrew:gog-galaxy"
+          "mac": "homebrew:gog-galaxy",
+          "icon": "github:gogcom"
         },
         {
           "name": "EA app",
           "windows": "winget:ElectronicArts.EADesktop",
-          "mac": "homebrew:ea"
+          "mac": "homebrew:ea",
+          "icon": "github:electronicarts"
         },
         {
           "name": "Counter-Strike 2",
@@ -423,17 +426,20 @@
           "name": "Tor Browser",
           "googlePlay": "https://play.google.com/store/apps/details?id=org.torproject.torbrowser",
           "windows": "winget:TorProject.TorBrowser",
-          "mac": "homebrew:tor-browser"
+          "mac": "homebrew:tor-browser",
+          "icon": "github:torproject"
         },
         {
           "name": "Arc",
+          "appStore": "https://apps.apple.com/us/app/arc-search-find-it-faster/id6472513080",
           "windows": "winget:TheBrowserCompany.Arc",
           "mac": "homebrew:arc"
         },
         {
           "name": "Zen Browser",
           "windows": "winget:Zen-Team.Zen-Browser",
-          "mac": "homebrew:zen"
+          "mac": "homebrew:zen",
+          "icon": "github:zen-browser"
         },
         {
           "name": "Bitwarden",
@@ -577,12 +583,14 @@
         {
           "name": "Godot",
           "windows": "winget:GodotEngine.GodotEngine",
-          "mac": "homebrew:godot"
+          "mac": "homebrew:godot",
+          "icon": "github:godotengine"
         },
         {
           "name": "Blender",
           "windows": "winget:BlenderFoundation.Blender",
-          "mac": "homebrew:blender"
+          "mac": "homebrew:blender",
+          "icon": "github:blender"
         }
       ]
     },

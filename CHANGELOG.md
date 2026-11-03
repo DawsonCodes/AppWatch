@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Games showed old updates: when a developer had ever tagged a Steam post as
+  patch notes, untagged patch notes were ignored. Tagged or update-titled
+  posts now both count, previews, roadmaps and weekly news never do, and
+  posts wrongly recorded on a game's first check are removed.
+- Games, launchers and game-dev tools had no icons. Games now use their
+  official Steam icon, and Godot, Blender, the Epic, GOG and EA launchers,
+  Zen and Tor Browser their developer's GitHub logo. Arc's iPhone app (Arc
+  Search) is tracked and lends Arc its icon.
+
 ### Added
 
 - More browsers: Opera, Opera GX and Vivaldi (App Store, Google Play, Windows

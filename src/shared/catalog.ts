@@ -54,6 +54,19 @@ export interface CatalogApp {
   collection: string;
   /** App Store listing first, then Google Play. */
   listings: CatalogListing[];
+  /**
+   * Icon for apps whose listings have none (desktop software isn't sold with
+   * store artwork): the developer's official GitHub avatar.
+   */
+  icon?: string;
+}
+
+/** "github:godotengine" -> the godotengine organization's avatar. */
+const GITHUB_ICON_RE = /^github:([A-Za-z0-9](?:[A-Za-z0-9-]{0,38}))$/;
+
+export function catalogIconUrl(value: string): string | null {
+  const match = GITHUB_ICON_RE.exec(value);
+  return match ? `https://avatars.githubusercontent.com/${match[1]}?s=192` : null;
 }
 
 export interface CatalogCollection {
@@ -205,7 +218,7 @@ class CatalogBuilder {
   private readonly seenListings = new Set<string>();
   private readonly usedKeys = new Set<string>();
 
-  addApp(name: string | null, collection: string, listings: CatalogListing[]): void {
+  addApp(name: string | null, collection: string, listings: CatalogListing[], icon?: string): void {
     // A listing may belong to only one app; later duplicates are ignored.
     const unique = listings.filter((listing) => {
       const id = appId(listing.platform, listing.storeId);
@@ -220,7 +233,7 @@ class CatalogBuilder {
     let key = base;
     for (let n = 2; this.usedKeys.has(key); n++) key = `${base}-${n}`;
     this.usedKeys.add(key);
-    this.apps.push({ key, name, collection, listings: unique });
+    this.apps.push({ key, name, collection, listings: unique, ...(icon ? { icon } : {}) });
   }
 }
 
@@ -293,7 +306,17 @@ export function parseCatalog(raw: unknown): Catalog {
             `${at}: add an "appStore", "googlePlay", "windows" or "mac" listing for ${name}.`,
           );
         }
-        builder.addApp(name, id, listings);
+        let icon: string | undefined;
+        if (entry.icon !== undefined) {
+          icon =
+            typeof entry.icon === 'string' ? (catalogIconUrl(entry.icon) ?? undefined) : undefined;
+          if (!icon) {
+            throw new CatalogError(
+              `${at}.icon: use "github:<organization>" (the developer's official GitHub avatar).`,
+            );
+          }
+        }
+        builder.addApp(name, id, listings, icon);
       });
     });
   }

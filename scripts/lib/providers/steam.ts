@@ -21,18 +21,19 @@ import { asNonEmptyString, ProviderError } from './types.ts';
 
 const NEWS_API = 'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/';
 const STORE_API = 'https://store.steampowered.com/api/appdetails';
+const ITEMS_API = 'https://api.steampowered.com/IStoreBrowseService/GetItems/v1/';
 /** Announcements read per game (patch notes are a share of them). */
-const NEWS_COUNT = 100;
+const NEWS_COUNT = 200;
 /** Patch notes kept as history per run. */
 const MAX_RELEASES = 40;
 const MAX_NOTES = 4000;
 
 /** Titles that announce a game update. */
 const PATCH_TITLE =
-  /\b(patch(?:es)?|hot ?fix(?:es)?|update[ds]?|release notes|change ?log|bug ?fix(?:es)?|fixes)\b|\bv?\d+\.\d+(?:\.\d+)*\b/i;
-/** …and titles that only talk about one (or about something else). */
+  /\b(patch(?:es)?|hot ?fix(?:es)?|update[ds]?|release notes|change ?log|bug ?fix(?:es)?|fixes|balance (?:changes|post|update)|version \d|(?:is |now )live|out now)\b|\bv?\d+\.\d+(?:\.\d+)*\b/i;
+/** …and posts that only talk about one, or about something else. */
 const NOT_A_PATCH =
-  /\b(coming soon|upcoming|roadmap|teaser|trailer|preview|sneak peek|dev(?:eloper)? ?(?:update|diary|blog|q&a)|sale|discount|giveaway|free weekend|tournament|esports|livestream|twitch drops|survey|merch|wallpaper|community spotlight|patch day schedule)\b/i;
+  /\b(coming soon|coming to|what's coming|what’s coming|upcoming|roadmap|teaser|trailer|preview|sneak peek|dev(?:eloper)? ?(?:update|diary|blog|q&a|vision|stream)|devstream|community crunch|newsletter|recap|sale|discount|giveaway|free weekend|tournament|esports|livestream|twitch drops|survey|merch|wallpaper|contest|community spotlight|known issues|patch day schedule)\b/i;
 
 export interface SteamNewsItem {
   title: string;
@@ -76,17 +77,20 @@ export function steamToPlainText(contents: string): string {
 }
 
 /**
- * The announcements that are patch notes. When a developer tags patch notes
- * on Steam ("patchnotes"), only tagged posts count; otherwise the title has
- * to read like an update ("Patch 1.2", "Hotfix", "Update 2.3 is live").
+ * The announcements that are patch notes: posts the developer tagged as
+ * patch notes on Steam ("patchnotes"), or titled like an update ("Patch 1.2",
+ * "Hotfix #36", "Update 2.3 is live", "Version 20261030 Patch Notes").
+ * Developers tag inconsistently, so either is enough; posts that only talk
+ * about an update (previews, roadmaps, weekly news, dev diaries) never count.
  */
 export function patchNotesOf(items: readonly SteamNewsItem[]): SteamNewsItem[] {
-  const tagged = items.filter((item) => item.tags.includes('patchnotes'));
-  const chosen =
-    tagged.length > 0
-      ? tagged
-      : items.filter((item) => PATCH_TITLE.test(item.title) && !NOT_A_PATCH.test(item.title));
-  return [...chosen].sort((a, b) => b.date - a.date);
+  return items
+    .filter(
+      (item) =>
+        (item.tags.includes('patchnotes') || PATCH_TITLE.test(item.title)) &&
+        !NOT_A_PATCH.test(item.title),
+    )
+    .sort((a, b) => b.date - a.date);
 }
 
 /** Patch notes as releases (newest first); several posts on one day are one update. */
@@ -142,6 +146,31 @@ export function parseStoreDetails(payload: unknown, appId: string): StoreDetails
   };
 }
 
+/**
+ * Square icons Steam has for a game, best first: its official community
+ * avatar (184px) and its app icon. From IStoreBrowseService/GetItems, the
+ * public store API the Steam store itself uses.
+ */
+export function steamIconCandidates(payload: unknown, appId: string): string[] {
+  const response = (payload as { response?: { store_items?: unknown[] } } | null)?.response;
+  const item = (response?.store_items ?? []).find(
+    (value) => String((value as Record<string, unknown> | null)?.appid) === appId,
+  ) as { assets?: Record<string, unknown> } | undefined;
+  const assets = item?.assets ?? {};
+  const hash = (value: unknown) =>
+    typeof value === 'string' && /^[0-9a-f]{40}$/.test(value) ? value : null;
+  const candidates: string[] = [];
+  const clan = hash(assets.clan_avatar);
+  if (clan) candidates.push(`https://avatars.fastly.steamstatic.com/${clan}_full.jpg`);
+  const icon = hash(assets.community_icon);
+  if (icon) {
+    candidates.push(
+      `https://shared.fastly.steamstatic.com/community_assets/images/apps/${appId}/${icon}.jpg`,
+    );
+  }
+  return candidates;
+}
+
 export interface SteamProviderOptions {
   fetchFn?: typeof fetch;
   timeoutMs?: number;
@@ -160,6 +189,28 @@ export function createSteamProvider(options: SteamProviderOptions = {}): Provide
       label,
       log,
     });
+  }
+
+  /** The first candidate that really serves an image (so the site never shows a broken one). */
+  async function firstImage(urls: readonly string[]): Promise<string | null> {
+    for (const url of urls) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await (fetchFn ?? fetch)(url, {
+          redirect: 'follow',
+          signal: controller.signal,
+        });
+        const type = response.headers.get('content-type') ?? '';
+        await response.body?.cancel().catch(() => {});
+        if (response.ok && type.startsWith('image/')) return url;
+      } catch {
+        // Try the next one.
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+    return null;
   }
 
   return async (target: TrackTarget): Promise<AppSnapshot> => {
@@ -185,6 +236,23 @@ export function createSteamProvider(options: SteamProviderOptions = {}): Provide
     const latest = releases[0];
     if (!latest) throw new ProviderError(`No patch notes on Steam for app ${appId}`);
 
+    let iconUrl: string | null = null;
+    try {
+      const items = await get(
+        `${ITEMS_API}?${new URLSearchParams({
+          input_json: JSON.stringify({
+            ids: [{ appid: Number(appId) }],
+            context: { language: 'english', country_code: target.country.toUpperCase() },
+            data_request: { include_assets: true },
+          }),
+        })}`,
+        `steam:items:${appId}`,
+      );
+      iconUrl = await firstImage(steamIconCandidates(items, appId));
+    } catch (error) {
+      log?.(`warning: Steam icon for ${appId} unavailable (${errorMessage(error)})`);
+    }
+
     let details: StoreDetails | null = null;
     try {
       details = parseStoreDetails(
@@ -203,7 +271,7 @@ export function createSteamProvider(options: SteamProviderOptions = {}): Provide
       storeId: target.storeId,
       name: details?.name ?? `Steam app ${appId}`,
       developer: details?.developer ?? null,
-      iconUrl: null,
+      iconUrl,
       storeUrl: source.storeUrl,
       version: null,
       releaseDate: latest.releaseDate,

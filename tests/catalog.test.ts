@@ -221,3 +221,28 @@ describe('the repository configuration', () => {
     );
   });
 });
+
+describe('catalog icons', () => {
+  const config = (icon: unknown) => ({
+    collections: [
+      {
+        id: 'dev',
+        label: 'Dev',
+        apps: [{ name: 'Godot', windows: 'winget:GodotEngine.GodotEngine', icon }],
+      },
+    ],
+  });
+
+  it('reads a GitHub organization avatar', () => {
+    expect(parseCatalog(config('github:godotengine')).apps[0]!.icon).toBe(
+      'https://avatars.githubusercontent.com/godotengine?s=192',
+    );
+    expect(parseCatalog(config(undefined)).apps[0]!.icon).toBeUndefined();
+  });
+
+  it('rejects anything else', () => {
+    for (const bad of ['https://example.com/x.png', 'github:', 'github:a/b', 42]) {
+      expect(() => parseCatalog(config(bad))).toThrow(/icon/);
+    }
+  });
+});
