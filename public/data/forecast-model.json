@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-03T05:37:30.267Z",
+  "trainedAt": "2026-11-03T11:55:50.126Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.582,
-    0.499,
+    0.575,
+    0.492,
     0.524,
-    0.569
+    0.567
   ],
   "listings": {
     "apple:1058959277": {
@@ -66,8 +66,8 @@
     },
     "apple:1668000334": {
       "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
+        "halfLife": 8,
+        "bandwidth": 0.45,
         "weekday": 1
       }
     },
@@ -85,11 +85,25 @@
         "medianErrorDays": 3.45
       }
     },
+    "apple:284882215": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
     "apple:288429040": {
       "live": {
         "forecasts": 1,
         "hits": 1,
         "medianErrorDays": 0.32
+      }
+    },
+    "apple:297606951": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
       }
     },
     "apple:310633997": {
@@ -251,8 +265,8 @@
     },
     "apple:544007664": {
       "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
+        "halfLife": 8,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
@@ -362,6 +376,11 @@
       }
     },
     "apple:835599320": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -434,7 +453,7 @@
     },
     "google:com.amazon.avod.thirdpartyclient": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -463,6 +482,11 @@
         "halfLife": 8,
         "bandwidth": 0.6,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 4.58
       }
     },
     "google:com.discord": {
@@ -644,7 +668,7 @@
     },
     "google:com.whatsapp": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -822,7 +846,7 @@
     "mac:homebrew:google-chrome": {
       "params": {
         "halfLife": 8,
-        "bandwidth": 0.3,
+        "bandwidth": 0.2,
         "weekday": 1
       }
     },
@@ -973,8 +997,8 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
+        "forecasts": 2,
+        "hits": 2,
         "medianErrorDays": 0.9
       }
     },
@@ -1015,14 +1039,14 @@
     },
     "windows:steam:1086940": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 4,
         "bandwidth": 0.45,
         "weekday": 1
       }
     },
     "windows:steam:1091500": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.6,
         "weekday": 1
       }
@@ -1040,10 +1064,22 @@
       }
     },
     "windows:steam:1623730": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 0,
         "medianErrorDays": 75.6
+      }
+    },
+    "windows:steam:230410": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.6,
+        "weekday": 1
       }
     },
     "windows:steam:2399830": {
@@ -1058,9 +1094,16 @@
         "medianErrorDays": 142.83
       }
     },
-    "windows:steam:2767030": {
+    "windows:steam:252490": {
       "params": {
         "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "windows:steam:2767030": {
+      "params": {
+        "halfLife": 4,
         "bandwidth": 0.3,
         "weekday": 1
       }
@@ -1075,7 +1118,7 @@
     "windows:steam:578080": {
       "params": {
         "halfLife": 8,
-        "bandwidth": 0.3,
+        "bandwidth": 0.45,
         "weekday": 1
       }
     },
@@ -1126,9 +1169,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 19.18
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 13.66
       }
     },
     "windows:winget:Discord.Discord": {
@@ -1227,9 +1270,21 @@
     },
     "windows:winget:Notion.Notion": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
+    "windows:winget:OpenAI.ChatGPT": {
+      "params": {
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.78
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -1290,7 +1345,7 @@
     },
     "windows:winget:Unity.Unity.6000": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 4,
         "bandwidth": 0.45,
         "weekday": 1
       }
@@ -1311,13 +1366,13 @@
     }
   },
   "replay": {
-    "tests": 2845,
-    "hits": 1718,
-    "medianErrorDays": 2.65
+    "tests": 2831,
+    "hits": 1702,
+    "medianErrorDays": 2.7
   },
   "live": {
-    "forecasts": 54,
-    "hits": 42,
+    "forecasts": 58,
+    "hits": 46,
     "medianErrorDays": 1.67
   }
 }
