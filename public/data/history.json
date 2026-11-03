@@ -1725,6 +1725,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "4.16336.0",
+        "releaseDate": "2026-11-03T18:48:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
+      {
         "version": "4.4212.0",
         "releaseDate": "2026-10-29T18:53:33.000Z",
         "releaseNotes": null,
@@ -3873,6 +3879,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T12:26:21.000Z",
+        "releaseNotes": "Quickly find and tag your friends in comments.",
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-29T12:09:57.000Z",
         "releaseNotes": "Quickly find and tag your friends in comments.",
         "detectedAt": "2026-10-30T17:51:04.964Z"
@@ -3965,6 +3977,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-03T05:46:08.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-31T09:01:14.000Z",
@@ -8255,6 +8273,12 @@
       }
     ],
     "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-03T01:52:20.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-30T19:58:03.000Z",
@@ -27184,6 +27208,12 @@
     ],
     "mac:homebrew:firefox": [
       {
+        "version": "159.0.1",
+        "releaseDate": "2026-11-03T16:04:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
+      {
         "version": "159.0",
         "releaseDate": "2026-10-27T13:18:15.000Z",
         "releaseNotes": null,
@@ -39845,6 +39875,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T14:54:29.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-30T19:31:11.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-10-31T21:13:35.336Z"
@@ -41396,6 +41432,12 @@
     "google:com.duolingo": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T16:48:24.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-02T20:03:23.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
         "detectedAt": "2026-11-03T03:28:44.883Z"
@@ -41608,6 +41650,12 @@
     "google:com.google.android.apps.translate": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T18:26:32.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-28T19:09:04.000Z",
         "releaseNotes": "Bug fixes and improvements",
         "detectedAt": "2026-10-30T17:51:04.964Z"
@@ -41638,6 +41686,13 @@
       }
     ],
     "windows:roblox-studio": [
+      {
+        "version": "0.746.0.7461264",
+        "releaseDate": "2026-11-03T18:18:58.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T19:30:28.447Z",
+        "url": "https://create.roblox.com/docs/release-notes/release-notes-746"
+      },
       {
         "version": "0.745.0.7451137",
         "releaseDate": "2026-10-27T10:16:07.000Z",
@@ -43064,6 +43119,12 @@
       }
     ],
     "mac:homebrew:unity": [
+      {
+        "version": "6000.6.8f1",
+        "releaseDate": "2026-11-03T17:36:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T19:30:28.447Z"
+      },
       {
         "version": "6000.6.7f1",
         "releaseDate": "2026-10-21T14:21:43.000Z",

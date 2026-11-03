@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-03T11:55:50.126Z",
+  "trainedAt": "2026-11-03T19:30:28.447Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.575,
-    0.492,
-    0.524,
-    0.567
+    0.561,
+    0.477,
+    0.506,
+    0.552
   ],
   "listings": {
     "apple:1058959277": {
@@ -352,11 +352,6 @@
       }
     },
     "apple:6737597349": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -458,9 +453,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 6.71
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 5.22
       }
     },
     "google:com.android.chrome": {
@@ -510,9 +505,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.1
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.9
       }
     },
     "google:com.facebook.katana": {
@@ -534,6 +529,11 @@
         "halfLife": 32,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.82
       }
     },
     "google:com.google.android.apps.translate": {
@@ -541,6 +541,11 @@
         "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 2.36
       }
     },
     "google:com.google.android.gm": {
@@ -556,10 +561,10 @@
       }
     },
     "google:com.google.android.youtube": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.6,
-        "weekday": 1
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 1.06
       }
     },
     "google:com.instagram.android": {
@@ -678,6 +683,18 @@
         "medianErrorDays": 4.35
       }
     },
+    "google:com.zhiliaoapp.musically": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 2.11
+      }
+    },
     "google:me.lyft.android": {
       "params": {
         "halfLife": 16,
@@ -777,6 +794,18 @@
         "medianErrorDays": 1.91
       }
     },
+    "mac:homebrew:claude": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.05
+      }
+    },
     "mac:homebrew:discord": {
       "params": {
         "halfLife": 32,
@@ -827,6 +856,11 @@
         "halfLife": 4,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.07
       }
     },
     "mac:homebrew:godot": {
@@ -979,8 +1013,13 @@
     "mac:homebrew:unity": {
       "params": {
         "halfLife": 16,
-        "bandwidth": 0.2,
+        "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 2.88
       }
     },
     "mac:homebrew:vivaldi": {
@@ -1032,9 +1071,14 @@
     },
     "windows:roblox-studio": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.08
       }
     },
     "windows:steam:1086940": {
@@ -1366,13 +1410,13 @@
     }
   },
   "replay": {
-    "tests": 2831,
-    "hits": 1702,
-    "medianErrorDays": 2.7
+    "tests": 2838,
+    "hits": 1657,
+    "medianErrorDays": 2.69
   },
   "live": {
-    "forecasts": 58,
-    "hits": 46,
+    "forecasts": 68,
+    "hits": 56,
     "medianErrorDays": 1.67
   }
 }
