@@ -211,6 +211,25 @@ function fakeGitHub(files: Record<string, string>, api: Record<string, unknown>)
   };
 }
 
+describe('winget provider: retired packages', () => {
+  it('names the sub-packages when a package has no versions left', async () => {
+    const github = fakeGitHub(
+      {},
+      {
+        '/repos/microsoft/winget-pkgs/contents/manifests/g/Google/Chrome': [
+          { name: 'Beta', type: 'dir' },
+          { name: 'EXE', type: 'dir' },
+        ],
+      },
+    );
+    await expect(
+      createWingetProvider({ github })(target('windows', 'winget:Google.Chrome')),
+    ).rejects.toThrow(
+      /no versions of Google.Chrome \(it has sub-packages: Google.Chrome.Beta, Google.Chrome.EXE\)/,
+    );
+  });
+});
+
 describe('winget provider', () => {
   const base = 'manifests/t/Telegram/TelegramDesktop';
   const github = fakeGitHub(
