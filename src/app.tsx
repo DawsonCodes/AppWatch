@@ -25,7 +25,7 @@ import { Toast } from './components/Toast.tsx';
 import type { ToastMessage } from './components/Toast.tsx';
 import { UpdatesTimeline } from './components/UpdatesTimeline.tsx';
 import type { Cadence } from './lib/cadence.ts';
-import { computeCadence, modelForListing, nextSortTime } from './lib/cadence.ts';
+import { computeCadence, modelForListing, nextSortTime, whenLabel } from './lib/cadence.ts';
 import { CATALOG } from './lib/catalogData.ts';
 import {
   DataLoadError,
@@ -400,9 +400,30 @@ export function App() {
     }
     return map;
   }, [cadences, groups, rhythmNow]);
+  // Per listing, so "Next update" with a platform filter sorts by that platform.
   const nextTimes = useMemo(
-    () => new Map([...groupRhythm].map(([key, value]) => [key, nextSortTime(value.cadence)])),
-    [groupRhythm],
+    () =>
+      new Map(
+        cadences ? [...cadences].map(([id, cadence]) => [id, nextSortTime(cadence)] as const) : [],
+      ),
+    [cadences],
+  );
+  /** "Next: likely tomorrow · App Store" for a card, from its soonest shown listing. */
+  const nextHint = useCallback(
+    (group: AppGroup): string | null => {
+      if (!cadences) return null;
+      let best: { listing: Listing; cadence: Cadence } | null = null;
+      for (const listing of group.listings) {
+        const cadence = cadences.get(listing.id);
+        if (cadence && (!best || nextSortTime(cadence) < nextSortTime(best.cadence))) {
+          best = { listing, cadence };
+        }
+      }
+      const when = best ? whenLabel(best.cadence, rhythmNow) : null;
+      if (!best || !when) return 'No forecast yet';
+      return `Next: ${when.charAt(0).toLowerCase()}${when.slice(1)} · ${storeLabel(best.listing.platform)}`;
+    },
+    [cadences, rhythmNow],
   );
   const expected = useMemo<ExpectedItem[]>(() => {
     const items: ExpectedItem[] = [];
@@ -871,6 +892,11 @@ export function App() {
                             key={group.key}
                             group={group}
                             watched={isGroupWatched(group, watchedIds)}
+                            hint={
+                              filters.sort === 'next' && group.source === 'tracked'
+                                ? (nextHint(group) ?? 'Loading forecast…')
+                                : undefined
+                            }
                             onToggleWatch={toggleWatch}
                           />
                         ))}

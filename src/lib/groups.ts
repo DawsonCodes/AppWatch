@@ -128,13 +128,20 @@ export function visibleCollections(
     .map((collection) => ({ ...collection, count: counts.get(collection.id) ?? 0 }));
 }
 
-function listingTime(listing: Listing): number {
-  const candidate = listing.lastUpdatedAt ?? listing.releaseDate ?? listing.firstTrackedAt;
+/**
+ * When a listing's current release came out: the date its card shows. When
+ * the store gives none, when AppWatch found the update (or started
+ * tracking) stands in.
+ */
+export function listingReleaseTime(listing: Listing): number {
+  const candidate = listing.releaseDate ?? listing.lastUpdatedAt ?? listing.firstTrackedAt;
   const time = Date.parse(candidate);
   return Number.isNaN(time) ? 0 : time;
 }
 
-/** Most recent activity across the group's listings (for "newest" sorting). */
+const listingTime = listingReleaseTime;
+
+/** The newest release across the group's listings (for "Recently updated"). */
 export function groupLatestTime(group: AppGroup): number {
   return Math.max(0, ...group.listings.map(listingTime));
 }
@@ -190,7 +197,7 @@ export function filterGroups(
   watchedIds: ReadonlySet<string>,
   collectionOrder: readonly string[] = [],
   now: Date = new Date(),
-  /** Group key -> when its next update is expected (for the "next" sort). */
+  /** Listing id -> when its next update is expected (for the "next" sort). */
   nextTimes?: ReadonlyMap<string, number>,
 ): AppGroup[] {
   const ref = parseStoreInput(filters.query);
@@ -226,8 +233,14 @@ export function filterGroups(
       break;
     }
     case 'next': {
-      // Soonest expected first; apps without a prediction keep latest-first order.
-      const at = (group: AppGroup) => nextTimes?.get(group.key) ?? Number.POSITIVE_INFINITY;
+      // Soonest expected first, counting only the listings shown (so a
+      // platform filter sorts by that platform's forecast); apps without a
+      // forecast keep latest-first order.
+      const at = (group: AppGroup) =>
+        Math.min(
+          Number.POSITIVE_INFINITY,
+          ...group.listings.map((l) => nextTimes?.get(l.id) ?? Number.POSITIVE_INFINITY),
+        );
       result.sort(
         (a, b) =>
           (at(a) === at(b) ? 0 : at(a) < at(b) ? -1 : 1) ||

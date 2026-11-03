@@ -240,6 +240,26 @@ describe('catalog icons', () => {
     expect(parseCatalog(config(undefined)).apps[0]!.icon).toBeUndefined();
   });
 
+  it('reads an image file from a public GitHub repository', () => {
+    expect(
+      parseCatalog(
+        config(
+          'github-file:MaximumADHD/Roblox-Client-Tracker/roblox/QtResources/Logo/StudioLogoAssets/RobloxStudio_128@2x.png',
+        ),
+      ).apps[0]!.icon,
+    ).toBe(
+      'https://raw.githubusercontent.com/MaximumADHD/Roblox-Client-Tracker/roblox/QtResources/Logo/StudioLogoAssets/RobloxStudio_128@2x.png',
+    );
+    for (const bad of [
+      'github-file:a/b/main/../x.png',
+      'github-file:a/b/main/x.exe',
+      'github-file:a/b/x.png',
+      'github-file:a/b/main/has space.png',
+    ]) {
+      expect(() => parseCatalog(config(bad))).toThrow(/icon/);
+    }
+  });
+
   it('rejects anything else', () => {
     for (const bad of [
       'https://example.com/x.png',

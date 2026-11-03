@@ -153,9 +153,15 @@ Where it shows:
   marked), the usual gap, the usual release weekday and how past forecasts
   did for that app. "How this forecast works" opens the days-between-releases
   chart and the app's replayed and live record.
-- **Sort → Next update**, an **Expected soon** row at the top of the Updates
-  view, and forecast accuracy plus an "Expected in the next 3 days" count
-  under Stats.
+- **Sort → Next update** (each card then says when, e.g. "Next: likely
+  tomorrow · Windows", and with a platform filter only that platform's
+  forecast counts), an **Expected soon** row at the top of the Updates view,
+  and forecast accuracy plus an "Expected in the next 3 days" count under
+  Stats.
+
+**Sort → Recently updated** and the **Updated this week** filter go by each
+app's release date (what its card shows), not by when AppWatch noticed the
+update.
 
 Apps with fewer than four recorded releases say there isn't enough history
 yet. Developers don't publish schedules, so treat forecasts as a guide.
@@ -183,7 +189,8 @@ desktop listing names where its versions come from:
   the ones that are patch notes — posts the developer tagged as patch notes,
   or titled like an update ("Patch 1.2", "Hotfix #36", "Update 2.3 is live",
   "Version 20261030 Patch Notes"), since developers tag inconsistently — but
-  never previews, roadmaps, weekly news, dev diaries, sales or tournaments,
+  never previews or "coming" posts, roadmaps, community and weekly news, dev
+  diaries and streams, anti-cheat notices, polls, bundles, sales or esports,
   even when tagged. Each is recorded as an update on its date, with its
   notes. Steam's store API adds the developer, price, genre, age rating and
   the game's cover art, used as its icon. If a later, stricter reading drops a post
@@ -290,9 +297,9 @@ content:
 - App icons show the app's first letter (on a tile tinted from the app's
   name) straight away and fade in once loaded. Store apps use their store
   icon, games their official Steam icon, and desktop-only software its
-  developer's official GitHub logo where there is one (Unity, Roblox Studio,
-  Godot, Blender, the Epic, GOG and EA launchers, Zen, Tor Browser and
-  QGroundControl); Arc borrows the icon of its iPhone app, Arc Search, which
+  developer's official GitHub logo where there is one (Unity, Godot, Blender, the Epic, GOG and EA launchers, Zen, Tor Browser and
+  QGroundControl); Roblox Studio uses the app logo from its
+  current build (mirrored by the Roblox Client Tracker); Arc borrows the icon of its iPhone app, Arc Search, which
   is tracked too. Game icons are cropped from the game's Steam cover art. Every icon is requested at one size and remembered for the visit, so
   an icon that has loaded once shows instantly everywhere else, and one that
   can't load keeps its letter instead of popping in later.

@@ -8,7 +8,8 @@ import { defineConfig } from 'vite';
  *
  * img-src allows Apple's and Google's icon CDNs, which host the app icons
  * returned by the store metadata endpoints, Steam's image CDNs (game icons)
- * and GitHub's avatar CDN (official logos for desktop-only apps). connect-src allows Apple's public
+ * and GitHub's avatar and raw-file hosts (official logos for desktop-only
+ * apps, e.g. Roblox Studio's app logo from its mirrored build files). connect-src allows Apple's public
  * lookup/search API, used by the in-browser discovery feature (one request
  * per explicit user action; no proxies).
  */
@@ -16,7 +17,7 @@ const csp = [
   "default-src 'self'",
   "script-src 'self'",
   "style-src 'self'",
-  "img-src 'self' data: https://*.mzstatic.com https://play-lh.googleusercontent.com https://avatars.githubusercontent.com https://avatars.fastly.steamstatic.com https://shared.fastly.steamstatic.com",
+  "img-src 'self' data: https://*.mzstatic.com https://play-lh.googleusercontent.com https://avatars.githubusercontent.com https://raw.githubusercontent.com https://avatars.fastly.steamstatic.com https://shared.fastly.steamstatic.com",
   "connect-src 'self' https://itunes.apple.com",
   "font-src 'self'",
   "manifest-src 'self'",

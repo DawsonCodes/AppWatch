@@ -156,7 +156,9 @@ describe('filterGroups', () => {
     filterGroups(groups, { ...DEFAULT_GROUP_FILTERS, ...patch }, watched, ['ai', 'social'], NOW);
 
   it('filters by collection tab', () => {
-    expect(run({ collection: 'ai' }).map((g) => g.name)).toEqual(['ChatGPT', 'Grok']);
+    // Newest release first: Grok came out Sep 20; ChatGPT's App Store
+    // version was only found Sep 23 but came out Sep 1.
+    expect(run({ collection: 'ai' }).map((g) => g.name)).toEqual(['Grok', 'ChatGPT']);
   });
 
   it('narrows cards to the selected store', () => {
@@ -176,14 +178,15 @@ describe('filterGroups', () => {
   });
 
   it('filters recently updated and watched apps', () => {
-    expect(run({ recentOnly: true }).map((g) => g.name)).toEqual(['ChatGPT']);
+    // "This week" goes by release date, not by when AppWatch noticed.
+    expect(run({ recentOnly: true }).map((g) => g.name)).toEqual(['Grok']);
     expect(run({ watchedOnly: true }, new Set(['apple:447188370'])).map((g) => g.name)).toEqual([
       'Snapchat',
     ]);
   });
 
-  it('sorts by newest activity, name, or collection order', () => {
-    expect(run({}).map((g) => g.name)[0]).toBe('ChatGPT');
+  it('sorts by newest release, name, or collection order', () => {
+    expect(run({}).map((g) => g.name)[0]).toBe('Grok');
     expect(run({ sort: 'name' }).map((g) => g.name)).toEqual([
       'ChatGPT',
       'Grok',
@@ -204,8 +207,8 @@ describe('filterGroups — next expected update sort', () => {
     const groups = buildGroups(catalog, tracked);
     const keys = groups.map((g) => g.key);
     const nextTimes = new Map([
-      [keys[keys.length - 1]!, 100],
-      [keys[0]!, 200],
+      [groups[groups.length - 1]!.listings[0]!.id, 100],
+      [groups[0]!.listings[0]!.id, 200],
     ]);
     const sorted = filterGroups(
       groups,
@@ -217,5 +220,32 @@ describe('filterGroups — next expected update sort', () => {
     );
     expect(sorted[0]?.key).toBe(keys[keys.length - 1]);
     expect(sorted[1]?.key).toBe(keys[0]);
+  });
+  it("uses only the shown platform's forecast", () => {
+    const groups = buildGroups(catalog, tracked);
+    const chatgpt = groups.find((g) => g.key === 'chatgpt')!;
+    const apple = chatgpt.listings.find((l) => l.platform === 'apple')!;
+    const google = chatgpt.listings.find((l) => l.platform === 'google')!;
+    const others = groups.filter(
+      (g) => g.key !== 'chatgpt' && g.listings.some((l) => l.platform === 'google'),
+    );
+    const nextTimes = new Map([
+      [apple.id, 1],
+      [google.id, 1000],
+      ...others.map((g) => [g.listings.find((l) => l.platform === 'google')!.id, 500] as const),
+    ]);
+    const filters = { ...DEFAULT_GROUP_FILTERS, sort: 'next' as const };
+    expect(filterGroups(groups, filters, new Set(), [], new Date(), nextTimes)[0]?.key).toBe(
+      'chatgpt',
+    );
+    const googleOnly = filterGroups(
+      groups,
+      { ...filters, platform: 'google' },
+      new Set(),
+      [],
+      new Date(),
+      nextTimes,
+    );
+    expect(googleOnly[googleOnly.length - 1]?.key).toBe('chatgpt');
   });
 });

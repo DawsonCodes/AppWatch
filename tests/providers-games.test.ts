@@ -187,6 +187,43 @@ describe('Steam patch notes', () => {
     expect(chosen.map((i) => i.title)).toEqual(['Hotfix 1.2.3', 'Update 2.3 is live', 'v0.6.4']);
   });
 
+  it('tells real patch notes from other posts (titles seen on Steam)', () => {
+    const patches = [
+      'NAVAL UPDATE',
+      'The Icebind is live now!',
+      "Cyberpunk 2077's Edgerunners 2 Update (2.5) is out now!",
+      'Patch 2.31',
+      'Hotfix #36 Now Live!',
+      'Apex Legends: Latest Update - 10/26/2026',
+      'Counter-Strike 2 Update',
+      'Devoid of Liberty: 7.2.2',
+      'Marvel Rivals Version 20261029 Patch Notes',
+      'v1.0.5: Bug fixes',
+      'The Old Peace: Free Update Available Now',
+      '7.41f Gameplay Patch',
+      'Room Temperature Fix #33 Now Live!',
+    ];
+    const notPatches = [
+      'PGS 12 Grand Finals Day 3 is LIVE!!',
+      'Palworld × Graveyard Keeper 2 Steam Bundle is Out Now!',
+      'Global Popularity Poll 2026 Results & New Update',
+      'COMMUNITY UPDATE 268',
+      'Vote for Rust! The Steam Awards are now live!',
+      'REDstreams — Cyberpunk 2077: Edgerunners 2 Update (2.5) is coming!',
+      'Take Your Shot in Photo Mode Challenge 3.0',
+      'The Old Peace Update Launches December 10',
+      'An Update from the Anti Cheat Team - 10/09/2026',
+      'Community Update #36 A Very Moddy Christmas',
+    ];
+    const kept = new Set(
+      patchNotesOf([...patches, ...notPatches].map((t) => item(t, '2026-10-01T00:00:00Z'))).map(
+        (i) => i.title,
+      ),
+    );
+    expect(patches.filter((t) => !kept.has(t))).toEqual([]);
+    expect(notPatches.filter((t) => kept.has(t))).toEqual([]);
+  });
+
   it('records one update per day, newest first, keyed by date', () => {
     const releases = steamReleases([
       item('Hotfix', '2026-10-30T09:00:00Z'),

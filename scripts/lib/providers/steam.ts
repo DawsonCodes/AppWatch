@@ -32,8 +32,25 @@ const MAX_NOTES = 4000;
 const PATCH_TITLE =
   /\b(patch(?:es)?|hot ?fix(?:es)?|update[ds]?|release notes|change ?log|bug ?fix(?:es)?|fixes|balance (?:changes|post|update)|version \d|(?:is |now )live|out now)\b|\bv?\d+\.\d+(?:\.\d+)*\b/i;
 /** …and posts that only talk about one, or about something else. */
-const NOT_A_PATCH =
-  /\b(coming soon|coming to|what's coming|what’s coming|upcoming|roadmap|teaser|trailer|preview|sneak peek|dev(?:eloper)? ?(?:update|diary|blog|q&a|vision|stream)|devstream|community crunch|newsletter|recap|sale|discount|giveaway|free weekend|tournament|esports|livestream|twitch drops|survey|merch|wallpaper|contest|community spotlight|known issues|patch day schedule)\b/i;
+const NOT_A_PATCH = new RegExp(
+  [
+    // Talking about an update that hasn't shipped.
+    "coming soon|coming to|is coming|are coming|what's coming|what’s coming|upcoming",
+    'roadmap|teaser|trailer|preview|sneak peek',
+    '(?:launch|releas)(?:es|ing) (?:on )?(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* \\d+',
+    // News, community and developer posts.
+    'dev(?:eloper)? ?(?:update|diary|blog|q&a|vision)|\\w*streams?|community (?:update|crunch|spotlight)',
+    'an update from|anti[- ]?cheat|newsletter|recap|known issues|patch day schedule',
+    'survey|poll|vote|steam awards|contest|challenge|wallpaper|merch',
+    // Store and esports posts.
+    'sale|discount|bundle|giveaway|free weekend|tournament|esports|grand finals?|finals? day|twitch drops',
+  ]
+    .map((group) => `(?:${group})`)
+    .join('|')
+    .replace(/^/, '\\b(?:')
+    .concat(')\\b'),
+  'i',
+);
 
 export interface SteamNewsItem {
   title: string;
