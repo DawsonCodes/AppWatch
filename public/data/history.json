@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.300",
+        "releaseDate": "2026-11-03T18:55:49.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "1.2026.293",
         "releaseDate": "2026-10-27T16:49:11.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -154,6 +160,12 @@
       }
     ],
     "mac:homebrew:chatgpt": [
+      {
+        "version": "26.1029.61003",
+        "releaseDate": "2026-11-03T21:49:58.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "26.1027.61615",
         "releaseDate": "2026-11-02T03:37:28.000Z",
@@ -945,6 +957,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261102.19",
+        "releaseDate": "2026-11-03T03:37:18.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "1.261030.19",
         "releaseDate": "2026-10-31T03:32:42.000Z",
@@ -4376,6 +4394,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.586",
+        "releaseDate": "2026-11-03T19:02:43.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "9.1.585",
         "releaseDate": "2026-11-02T18:06:23.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -4443,6 +4467,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1269",
+        "releaseDate": "2026-11-02T18:28:48.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "4.1.1267",
         "releaseDate": "2026-10-28T19:44:04.000Z",
@@ -8218,6 +8248,12 @@
     ],
     "apple:545519333": [
       {
+        "version": "10.155.2",
+        "releaseDate": "2026-11-03T14:53:26.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "10.155.1",
         "releaseDate": "2026-11-02T10:25:20.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -9434,6 +9470,12 @@
       }
     ],
     "apple:650377962": [
+      {
+        "version": "3.7.4",
+        "releaseDate": "2026-11-03T12:47:15.000Z",
+        "releaseNotes": "· require iOS 13 or later due to Apple's enforcement, drop support for iOS 9 to 12\n· drop support for 32bit iOS devices\n· update linked SDK to version 26\n· update libvlc to version 3.0.24\n· codecs: use FFmpeg 8.1 (upgraded from 4.4)\n· codecs: add support for APV, Atrac3 and Atrac9 decoding\n· demuxers: add support for CEA-708 closed captions in MP4\n· demuxers: improve subtitle language detection from filenames and SSA/ASS metadata\n· demuxers: fix several MKV crashes, hangs and malformed file handling issues\n· network: improve SMB2 share enumeration\n· network: drop legacy RealRTSP support\n· casting: disable HEVC for original Chromecast devices\n· fix security issues in metadata parsing, decoders, subtitles, demuxers, network inputs and bundled libraries (SB-VLC3024)\n· fix audio track selection issue on iPadOS 27",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "3.7.3",
         "releaseDate": "2026-04-24T04:45:38.000Z",
@@ -15213,7 +15255,7 @@
       {
         "version": null,
         "releaseDate": "2026-11-02T18:58:53.000Z",
-        "releaseNotes": "Apex Legends™: Cipher Patch Notes\n\nICYMI: Designers Notes\n\nCIPHER OVERVIEW\n\nApex Legends: Cipher is here! It’s bringing new features, new weapon combos, and big changes to Ranked alongside the usual slew of bug fixes and balancing passes. Read on for info about the Akimbo Wingman, Strongholds, new Ranked features and more! Season 31 begins on November 3rd, so get the squad together and get ready to jump into Apex Legends: Cipher!\n\nRANKED LEGEND BANNING AND SCORING ADJUSTMENTS\n\nWe recently unveiled upcoming plans for new features, quality of life improvements, and adjustments coming to Ranked over the next two seasons. \n\nStarting in Cipher, we’re launching Legend Banning in Diamond+ matches, allowing you to vote for Legends to be banned from selection for each match. Scoring adjustments for wide-skill matches will also be live at season start and will adjust entry costs if your Rank is too far above or below the median lobby rank.\n\nRead on for all of the details, or circle back to the Ranked Roadmap blog to see what’s still on the horizon.\n\nBack to Top \n\nAKIMBO WINGMAN\n\nThe Wingman’s firepower is being doubled. Akimbo Wingman joins the weapon roster as a formidable foe at close and mid-range, leaving Legends’ bodies in its wake. Find them in ground loot, or at Heavy Arsenals, and gear up to become the fastest gun-slinger in the Apex Games.\n\n•\nAmmo type changed from Sniper Ammo to Heavy Ammo\n\n•\nNow takes Heavy Magazines instead of Sniper Magazines\n[/*]\n•\nNow spawns on Heavy Ammo Arsenals instead of Sniper Ammo Arsenals\n[/*]\n[/*]\n•\nBase damage decreased from 50 to 45\n[/*]\n•\nLoot a second Wingman to automatically enter Akimbo\n[/*]\n•\nAkimbo Mode:\n\n•\nDecreases headshot multiplier to 1.25x\n\n•\nHeadshot damage: 56\n[/*]\n[/*]\n•\nSlightly increases rate of fire\n[/*]\n•\nIncreases reload time\n[/*]\n•\nIncreases recoil\n[/*]\n•\nMagazine size is doubled\n[/*]\n•\nFiring the Akimbo Wingman will cause each gun to fire one after the other, in a quick burst\n\n•\nHolding down the trigger releases subsequent bursts\n[/*]\n[/*]\n[/*]\n\nBack to Top\n\nSTRONGHOLDS\n\nNow Dropping into the Apex Games: the Stronghold. In addition to our existing Care Packages and Replicators, these new Structures will airdrop onto the map near the mid game. \n\nStrongholds are locked, bunker-style structures that deploy dynamic cover and contain valuable loot. Players must occupy and control the zone surrounding the Stronghold to capture them. When captured, Strongholds will unlock, rewarding one level up to the capturing team. The loot contents of Strongholds will be a mix of rare loot, including Care Package weapons.\n\nStronghold Details:\n\n•\nUpdated Airdrop timing to accommodate Strongholds \n\n•\n2x Care Packages drop during Round 1 closing\n[/*]\n•\n1x Care Package drop during Round 2 closing\n[/*]\n•\n1x Stronghold drop during Round 2 closing\n[/*]\n[/*]\n•\nStrongholds crush (and KILL) players and objects underneath them on landing\n[/*]\n•\nStrongholds drop Dynamic cover upon landing\n\n•\nIf there is enough space, Strongholds will deploy up to 4 indestructible barriers, and 2 Hardlight frames\n[/*]\n[/*]\n•\nStrongholds cannot:\n\n•\nBe accessed or entered until captured\n[/*]\n•\nBe stolen from by Loba until captured\n[/*]\n•\nBe breached by Alter until captured\n[/*]\n[/*]\n•\nStrongholds are Captured by controlling the Zone surrounding the structure\n\n•\nCapture Progress is made whenever there is only 1 team alive in the Capture Zone\n[/*]\n•\nCapture is Contested when more than one team is present in the Zone\n[/*]\n•\nCapture Progress is globally shared and cannot decay\n[/*]\n•\nCapture Progress is faster when multiple teammates are present\n[/*]\n•\nThe capturing team is whichever team is in the Zone when Capture Progress reaches 100%\n[/*]\n[/*]\n•\nWhen Captured,\n\n•\nThe Stronghold’s doors and roof hatch will open\n[/*]\n•\nThe Stronghold awards a Level Up to each living member of the capturing team\n[/*]\n[/*]\n•\nStronghold Loot Contents\n\n•\n1x Care Package Weapon\n[/*]\n•\n3x Gold Guns\n[/*]\n•\n3x Amps\n[/*]\n•\n2x Corrupted…",
+        "releaseNotes": "Apex Legends™: Cipher Patch Notes\n\nICYMI: Designers Notes\n\nCIPHER OVERVIEW\n\nApex Legends: Cipher is here! It’s bringing new features, new weapon combos, and big changes to Ranked alongside the usual slew of bug fixes and balancing passes. Read on for info about the Akimbo Wingman, Strongholds, new Ranked features and more! Season 31 begins on November 3rd, so get the squad together and get ready to jump into Apex Legends: Cipher!\n\nRANKED LEGEND BANNING AND SCORING ADJUSTMENTS\n\nWe recently unveiled upcoming plans for new features, quality of life improvements, and adjustments coming to Ranked over the next two seasons.\n\nStarting in Cipher, we’re launching Legend Banning in Diamond+ matches, allowing you to vote for Legends to be banned from selection for each match. Scoring adjustments for wide-skill matches will also be live at season start and will adjust entry costs if your Rank is too far above or below the median lobby rank.\n\nRead on for all of the details, or circle back to the Ranked Roadmap blog to see what’s still on the horizon.\n\nAKIMBO WINGMAN\n\nThe Wingman’s firepower is being doubled. Akimbo Wingman joins the weapon roster as a formidable foe at close and mid-range, leaving Legends’ bodies in its wake. Find them in ground loot, or at Heavy Arsenals, and gear up to become the fastest gun-slinger in the Apex Games.\n\n•\nAmmo type changed from Sniper Ammo to Heavy Ammo\n\n•\nNow takes Heavy Magazines instead of Sniper Magazines\n[/*]\n•\nNow spawns on Heavy Ammo Arsenals instead of Sniper Ammo Arsenals\n[/*]\n[/*]\n•\nBase damage decreased from 50 to 45\n[/*]\n•\nLoot a second Wingman to automatically enter Akimbo\n[/*]\n•\nAkimbo Mode:\n\n•\nDecreases headshot multiplier to 1.25x\n\n•\nHeadshot damage: 56\n[/*]\n[/*]\n•\nSlightly increases rate of fire\n[/*]\n•\nIncreases reload time\n[/*]\n•\nIncreases recoil\n[/*]\n•\nMagazine size is doubled\n[/*]\n•\nFiring the Akimbo Wingman will cause each gun to fire one after the other, in a quick burst\n\n•\nHolding down the trigger releases subsequent bursts\n[/*]\n[/*]\n[/*]\n\nSTRONGHOLDS\n\nNow Dropping into the Apex Games: the Stronghold. In addition to our existing Care Packages and Replicators, these new Structures will airdrop onto the map near the mid game.\n\nStrongholds are locked, bunker-style structures that deploy dynamic cover and contain valuable loot. Players must occupy and control the zone surrounding the Stronghold to capture them. When captured, Strongholds will unlock, rewarding one level up to the capturing team. The loot contents of Strongholds will be a mix of rare loot, including Care Package weapons.\n\nStronghold Details:\n\n•\nUpdated Airdrop timing to accommodate Strongholds\n\n•\n2x Care Packages drop during Round 1 closing\n[/*]\n•\n1x Care Package drop during Round 2 closing\n[/*]\n•\n1x Stronghold drop during Round 2 closing\n[/*]\n[/*]\n•\nStrongholds crush (and KILL) players and objects underneath them on landing\n[/*]\n•\nStrongholds drop Dynamic cover upon landing\n\n•\nIf there is enough space, Strongholds will deploy up to 4 indestructible barriers, and 2 Hardlight frames\n[/*]\n[/*]\n•\nStrongholds cannot:\n\n•\nBe accessed or entered until captured\n[/*]\n•\nBe stolen from by Loba until captured\n[/*]\n•\nBe breached by Alter until captured\n[/*]\n[/*]\n•\nStrongholds are Captured by controlling the Zone surrounding the structure\n\n•\nCapture Progress is made whenever there is only 1 team alive in the Capture Zone\n[/*]\n•\nCapture is Contested when more than one team is present in the Zone\n[/*]\n•\nCapture Progress is globally shared and cannot decay\n[/*]\n•\nCapture Progress is faster when multiple teammates are present\n[/*]\n•\nThe capturing team is whichever team is in the Zone when Capture Progress reaches 100%\n[/*]\n[/*]\n•\nWhen Captured,\n\n•\nThe Stronghold’s doors and roof hatch will open\n[/*]\n•\nThe Stronghold awards a Level Up to each living member of the capturing team\n[/*]\n[/*]\n•\nStronghold Loot Contents\n\n•\n1x Care Package Weapon\n[/*]\n•\n3x Gold Guns\n[/*]\n•\n3x Amps\n[/*]\n•\n2x Corrupted Attachments\n[/*]\n[/*]\n\nFor more information…",
         "detectedAt": "2026-11-03T03:28:44.883Z",
         "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302249345"
       },
@@ -18663,6 +18705,12 @@
     ],
     "mac:homebrew:slack": [
       {
+        "version": "4.53.280",
+        "releaseDate": "2026-11-03T22:56:53.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "4.53.276",
         "releaseDate": "2026-10-29T22:38:42.000Z",
         "releaseNotes": null,
@@ -20960,6 +21008,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.351",
+        "releaseDate": "2026-11-03T18:16:20.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "1.7.350",
         "releaseDate": "2026-10-27T00:13:58.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -21737,6 +21791,12 @@
       }
     ],
     "mac:homebrew:notion": [
+      {
+        "version": "7.42.1",
+        "releaseDate": "2026-11-03T19:44:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "7.41.1",
         "releaseDate": "2026-10-28T02:01:09.000Z",
@@ -24591,6 +24651,12 @@
     "google:com.google.android.apps.docs": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T19:17:28.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-27T21:06:01.000Z",
         "releaseNotes": "* Bug fixes and performance improvements.",
         "detectedAt": "2026-10-30T17:51:04.964Z"
@@ -25736,6 +25802,12 @@
     "google:com.google.android.apps.photos": [
       {
         "version": null,
+        "releaseDate": "2026-11-03T22:04:52.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-28T23:28:45.000Z",
         "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
         "detectedAt": "2026-10-30T17:51:04.964Z"
@@ -25778,6 +25850,12 @@
       }
     ],
     "apple:535886823": [
+      {
+        "version": "157.0.8103.37",
+        "releaseDate": "2026-11-03T18:36:06.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• Stability and performance improvements.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "157.0.8103.24",
         "releaseDate": "2026-10-27T15:25:59.000Z",
@@ -25822,6 +25900,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-03T22:16:24.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-29T18:09:07.000Z",
@@ -25896,6 +25980,13 @@
       }
     ],
     "windows:winget:Google.Chrome.EXE": [
+      {
+        "version": "157.0.8103.39",
+        "releaseDate": "2026-11-03T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z",
+        "url": null
+      },
       {
         "version": "156.0.8078.80",
         "releaseDate": "2026-10-29T12:00:00.000Z",
@@ -25974,29 +26065,29 @@
         "url": null
       },
       {
-        "version": "152.0.7977.65",
-        "releaseDate": "2026-09-07T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-11-03T05:21:21.747Z",
-        "url": null
-      },
-      {
-        "version": "152.0.7977.76",
-        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "version": "153.0.8010.37",
+        "releaseDate": "2026-09-11T19:51:17.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "152.0.7977.83",
-        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "releaseDate": "2026-09-11T02:40:34.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
-        "version": "153.0.8010.37",
-        "releaseDate": "2026-09-07T12:00:00.000Z",
+        "version": "152.0.7977.65",
+        "releaseDate": "2026-09-10T22:21:12.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-03T05:21:21.747Z",
+        "url": null
+      },
+      {
+        "version": "152.0.7977.76",
+        "releaseDate": "2026-09-10T22:21:12.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
@@ -26248,6 +26339,12 @@
       }
     ],
     "mac:homebrew:google-chrome": [
+      {
+        "version": "157.0.8103.39",
+        "releaseDate": "2026-11-03T22:13:18.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "156.0.8078.80",
         "releaseDate": "2026-10-29T21:59:23.000Z",
@@ -30969,6 +31066,12 @@
       }
     ],
     "apple:1411869974": [
+      {
+        "version": "6.8.2",
+        "releaseDate": "2026-11-03T16:02:54.000Z",
+        "releaseNotes": "- Data Saver\n- Data Saver settings\n- Free Data support (offered on select carriers)\n- Menu Update (Facelift, Data Savings switch, Sign in and sync banner)\n- History Sync (Enable in Account settings)\n- Bug fixes and other improvements",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "6.8.1",
         "releaseDate": "2026-10-29T20:15:21.000Z",
@@ -39616,6 +39719,12 @@
     ],
     "google:com.venmo": [
       {
+        "version": "26.26.0",
+        "releaseDate": "2026-10-31T11:02:23.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "26.25.0",
         "releaseDate": "2026-10-26T22:51:01.000Z",
         "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
@@ -39659,6 +39768,12 @@
       }
     ],
     "apple:711923939": [
+      {
+        "version": "5.76.0",
+        "releaseDate": "2026-11-03T06:09:07.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": "5.75.0",
         "releaseDate": "2026-10-22T15:48:26.000Z",
@@ -39824,6 +39939,12 @@
     ],
     "apple:585027354": [
       {
+        "version": "26.44.4",
+        "releaseDate": "2026-11-03T14:36:39.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
+      {
         "version": "26.43.1",
         "releaseDate": "2026-10-23T08:46:41.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
@@ -39873,6 +39994,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-03T19:09:19.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-04T00:37:14.451Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-03T14:54:29.000Z",
@@ -42558,6 +42685,13 @@
     ],
     "windows:winget:Unity.Unity.6000": [
       {
+        "version": "6000.6.8f1",
+        "releaseDate": "2026-11-03T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T00:37:14.451Z",
+        "url": "https://unity.com/releases/editor/whats-new/6000.6.8"
+      },
+      {
         "version": "6000.6.7f1",
         "releaseDate": "2026-10-21T12:00:00.000Z",
         "releaseNotes": null,
@@ -42636,7 +42770,7 @@
       },
       {
         "version": "6000.5.5f1",
-        "releaseDate": "2026-07-23T12:00:00.000Z",
+        "releaseDate": "2026-07-29T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null
