@@ -168,6 +168,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1029.70936",
+        "releaseDate": "2026-11-04T21:42:18.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
         "version": "26.1029.61003",
         "releaseDate": "2026-11-03T21:49:58.000Z",
         "releaseNotes": null,
@@ -964,6 +970,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261103.19",
+        "releaseDate": "2026-11-04T03:42:26.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "1.261102.19",
         "releaseDate": "2026-11-03T03:37:18.000Z",
@@ -3715,6 +3727,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.40.1-prod.01",
+        "releaseDate": "2026-11-03T21:39:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
         "version": "12.39.0-prod.01",
         "releaseDate": "2026-10-30T20:09:17.000Z",
         "releaseNotes": null,
@@ -4198,6 +4216,12 @@
       }
     ],
     "google:com.snapchat.android": [
+      {
+        "version": "14.31.0.56",
+        "releaseDate": "2026-11-04T02:21:40.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "14.30.0.54",
         "releaseDate": "2026-10-28T01:38:19.000Z",
@@ -5498,6 +5522,12 @@
       }
     ],
     "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.34.2",
+        "releaseDate": "2026-11-02T13:36:11.000Z",
+        "releaseNotes": "Now you can optionally register for Signal without a phone number. Phone-numberless registration requires a small one-time fee to help prevent spam, but this in-app purchase is never directly associated with the new Signal account. We sincerely appreciate your help beta testing this new feature!",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "8.33.2",
         "releaseDate": "2026-10-27T17:23:11.000Z",
@@ -7244,6 +7274,12 @@
       }
     ],
     "google:com.discord": [
+      {
+        "version": "352.17 - Stable",
+        "releaseDate": "2026-11-02T22:23:43.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "351.11 - Stable",
         "releaseDate": "2026-10-23T22:09:21.000Z",
@@ -9981,6 +10017,12 @@
       }
     ],
     "mac:homebrew:roblox": [
+      {
+        "version": "0.746.0.7461264",
+        "releaseDate": "2026-11-04T20:05:21.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "0.745.0.7451137",
         "releaseDate": "2026-10-27T16:39:11.000Z",
@@ -17573,6 +17615,12 @@
     ],
     "mac:homebrew:microsoft-outlook": [
       {
+        "version": "16.114.26102720",
+        "releaseDate": "2026-11-04T19:38:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
         "version": "16.114.26101123",
         "releaseDate": "2026-10-14T20:06:24.000Z",
         "releaseNotes": null,
@@ -22522,6 +22570,12 @@
     ],
     "google:com.dropbox.android": [
       {
+        "version": "497.2.2",
+        "releaseDate": "2026-11-03T17:05:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
         "version": "496.2.2",
         "releaseDate": "2026-10-27T16:06:24.000Z",
         "releaseNotes": null,
@@ -25972,6 +26026,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-04T20:54:49.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-03T22:16:24.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-04T00:37:14.451Z"
@@ -27187,6 +27247,12 @@
       }
     ],
     "google:org.mozilla.firefox": [
+      {
+        "version": "159.0.1",
+        "releaseDate": "2026-11-02T20:39:02.000Z",
+        "releaseNotes": "- Fixed passkey sign-in failing on websites that share passkeys across related sites, such as Facebook and Instagram.\n- Updated time zone data to reflect Cuba's decision not to end daylight saving time on November 1, 2026.\n- Various security & stability fixes.",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "159.0",
         "releaseDate": "2026-10-22T21:31:26.000Z",
@@ -40014,6 +40080,12 @@
     ],
     "google:com.coinbase.android": [
       {
+        "version": "14.42.24",
+        "releaseDate": "2026-10-29T23:04:00.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
         "version": "14.41.48",
         "releaseDate": "2026-10-29T23:04:00.000Z",
         "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
@@ -40450,6 +40522,12 @@
     ],
     "google:me.lyft.android": [
       {
+        "version": "2026.42.3.1793172413",
+        "releaseDate": "2026-10-30T19:02:46.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
         "version": "2026.41.3.1792567552",
         "releaseDate": "2026-10-23T19:02:39.000Z",
         "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
@@ -40531,6 +40609,12 @@
       }
     ],
     "google:com.airbnb.android": [
+      {
+        "version": "26.44",
+        "releaseDate": "2026-10-27T18:46:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "26.43",
         "releaseDate": "2026-10-20T16:12:48.000Z",
@@ -41896,6 +41980,12 @@
     "google:com.google.android.apps.translate": [
       {
         "version": null,
+        "releaseDate": "2026-11-04T22:01:59.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-03T18:26:32.000Z",
         "releaseNotes": "Bug fixes and improvements",
         "detectedAt": "2026-11-03T19:30:28.447Z"
@@ -42151,6 +42241,12 @@
       }
     ],
     "mac:homebrew:robloxstudio": [
+      {
+        "version": "0.746.0.7461264",
+        "releaseDate": "2026-11-04T20:06:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T23:40:14.618Z"
+      },
       {
         "version": "0.745.0.7451137",
         "releaseDate": "2026-10-27T16:40:19.000Z",
