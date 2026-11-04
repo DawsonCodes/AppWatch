@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-04T00:37:14.451Z",
+  "trainedAt": "2026-11-04T09:11:29.660Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.561,
-    0.475,
-    0.5,
-    0.549
+    0.552,
+    0.469,
+    0.493,
+    0.543
   ],
   "listings": {
     "apple:1058959277": {
@@ -99,18 +99,18 @@
         "medianErrorDays": 1.16
       }
     },
-    "apple:297606951": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      }
-    },
     "apple:310633997": {
       "live": {
         "forecasts": 1,
         "hits": 1,
         "medianErrorDays": 1.91
+      }
+    },
+    "apple:324715238": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
       }
     },
     "apple:327630330": {
@@ -121,15 +121,10 @@
       }
     },
     "apple:333903271": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 2.64
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 2.05
       }
     },
     "apple:351727428": {
@@ -432,6 +427,11 @@
         "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.61
       }
     },
     "apple:951937596": {
@@ -616,10 +616,15 @@
       }
     },
     "google:com.google.android.youtube": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.06
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.73
       }
     },
     "google:com.instagram.android": {
@@ -651,6 +656,13 @@
         "forecasts": 1,
         "hits": 1,
         "medianErrorDays": 0.43
+      }
+    },
+    "google:com.paypal.android.p2pmobile": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
       }
     },
     "google:com.pinterest": {
@@ -740,7 +752,7 @@
     },
     "google:com.whatsapp": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -1326,6 +1338,11 @@
         "halfLife": 32,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 1.09
       }
     },
     "windows:winget:EpicGames.EpicGamesLauncher": {
@@ -1410,9 +1427,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.78
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.64
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -1448,6 +1465,13 @@
         "halfLife": 8,
         "bandwidth": 0.6,
         "weekday": 1
+      }
+    },
+    "windows:winget:SlackTechnologies.Slack": {
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 6.5
       }
     },
     "windows:winget:Spotify.Spotify": {
@@ -1499,13 +1523,13 @@
     }
   },
   "replay": {
-    "tests": 2852,
-    "hits": 1668,
-    "medianErrorDays": 2.68
+    "tests": 2856,
+    "hits": 1636,
+    "medianErrorDays": 2.67
   },
   "live": {
-    "forecasts": 88,
-    "hits": 73,
+    "forecasts": 94,
+    "hits": 79,
     "medianErrorDays": 1.44
   }
 }

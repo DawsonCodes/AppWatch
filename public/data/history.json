@@ -103,6 +103,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1029.7803.0",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T09:11:29.660Z",
+        "url": null
+      },
+      {
         "version": "26.1027.6604.0",
         "releaseDate": "2026-11-03T12:00:00.000Z",
         "releaseNotes": null,
@@ -3622,6 +3629,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.40.1",
+        "releaseDate": "2026-11-04T03:19:55.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-04T09:11:29.660Z"
+      },
+      {
         "version": "12.40",
         "releaseDate": "2026-11-02T15:41:19.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -3995,6 +4008,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-03T23:33:12.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-04T09:11:29.660Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-03T05:46:08.000Z",
@@ -12898,6 +12917,13 @@
     ],
     "windows:winget:ElectronicArts.EADesktop": [
       {
+        "version": "13.822.0.6335",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-04T09:11:29.660Z",
+        "url": null
+      },
+      {
         "version": "13.813.1.6327",
         "releaseDate": "2026-10-22T12:00:00.000Z",
         "releaseNotes": null,
@@ -18128,6 +18154,13 @@
       }
     ],
     "windows:winget:SlackTechnologies.Slack": [
+      {
+        "version": "4.53.280",
+        "releaseDate": "2026-11-03T12:00:00.000Z",
+        "releaseNotes": "Security Guidance\n- This release includes security improvements. Updating is recommended.",
+        "detectedAt": "2026-11-04T09:11:29.660Z",
+        "url": "https://slack.com/release-notes/windows#13094"
+      },
       {
         "version": "4.53.276",
         "releaseDate": "2026-10-29T12:00:00.000Z",
@@ -23752,6 +23785,12 @@
       }
     ],
     "apple:897446215": [
+      {
+        "version": "4.234.0",
+        "releaseDate": "2026-11-04T01:45:53.000Z",
+        "releaseNotes": "iPhone Duo is now supported. Key benefits\n- Design for the screen your audience sees. Create a Story or Reel unfolded, then fold to preview it at true phone size.\n- Unfold to design. The 7.6\" inner screen gives Canva a full canvas for layouts, brand work and multi-page designs, with the room of a small tablet in your pocket.\n- Snap, then design. Shoot with the 48MP cameras and drop photos straight into Canva. Remove backgrounds and polish them on the big screen.\n- Cut video on a bigger timeline. Trim and sequence clips in Canva’s video editor, with silky 120Hz scrubbing.\n- Build decks inside, present outside. Design slides on the inner screen, then present or share from the cover screen.",
+        "detectedAt": "2026-11-04T09:11:29.660Z"
+      },
       {
         "version": "4.233.0",
         "releaseDate": "2026-10-27T23:26:58.000Z",
