@@ -3059,6 +3059,12 @@
     ],
     "google:com.microsoft.office.officehubrow": [
       {
+        "version": "16.0.20625.20022",
+        "releaseDate": "2026-11-02T04:32:14.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
+      {
         "version": "16.0.20618.20014",
         "releaseDate": "2026-10-26T05:04:18.000Z",
         "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
@@ -3392,6 +3398,12 @@
       }
     ],
     "google:com.deepseek.chat": [
+      {
+        "version": "2.7.5",
+        "releaseDate": "2026-11-05T12:15:45.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": "2.7.4",
         "releaseDate": "2026-11-02T05:33:26.000Z",
@@ -4190,6 +4202,12 @@
       }
     ],
     "apple:447188370": [
+      {
+        "version": "14.31.0.55",
+        "releaseDate": "2026-11-05T12:02:07.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": "14.30.1.0",
         "releaseDate": "2026-11-02T06:08:44.000Z",
@@ -6686,6 +6704,12 @@
     ],
     "apple:686449807": [
       {
+        "version": "13.2",
+        "releaseDate": "2026-11-05T13:22:09.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
+      {
         "version": "13.1.2",
         "releaseDate": "2026-10-29T23:15:53.000Z",
         "releaseNotes": "Bug fixes, minor improvements, and more.",
@@ -6717,6 +6741,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-02T20:58:43.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-22T18:20:14.000Z",
@@ -9468,6 +9498,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-11-04T20:58:13.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-30T19:19:32.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-10-31T21:13:35.336Z"
@@ -9780,6 +9816,12 @@
       }
     ],
     "google:com.roblox.client": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-04T17:57:33.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-28T17:00:11.000Z",
@@ -15878,6 +15920,13 @@
     "windows:steam:2767030": [
       {
         "version": null,
+        "releaseDate": "2026-11-05T09:07:02.000Z",
+        "releaseNotes": "Marvel Rivals Version 20261105 Patch Notes\n\nGreetings, Rivals!\n\nWe're thrilled to announce the upcoming patch drops on November 5th, 2026, at 09 : 00 : 00 (UTC)! No server downtime; just patch and play!\n\nHere's what's coming your way:\n\n \n\nAll-New Content\n\nNew In Store\n\n- Spider-Man - Worthy Spider-Man Bundle\n- The Thing - Cosmic Cook Bundle\n- Spider-Man - Worthy Spider-Man Emoji Bundle\n- Spider-Man - Worthy Spider-Man Ultimate Ability VFX\n\nAvailable From: November 6th, 2026, at 02 : 00 : 00 (UTC)\n\n \n\nFixes and Optimizations\n\nHeroes\n\n- Moon Knight's Moonlit Miss: Fixed a bug where the Talons of Khonshu triggered from his Team-Up with Elsa Bloodstone (Blood Moon) failed to deal damage to Doctor Strange while he was blocking, or to other shields. Khonshu's vengeance now hits true; nowhere to hide!    \n- Captain America's Misplaced Might: Addressed an occasional issue where, during Captain America's Team-Up with Winter Soldier (Stars Aligned), Cap's landing position would heavily desync from the spell field, preventing him from receiving the corresponding buffs. The First Avenger is back on target and properly super-soldiered!   \n\n \n\nThe Marvel Rivals universe is ever-evolving, and we have plenty more surprises and updates in store. Stay tuned to our official announcements for more!",
+        "detectedAt": "2026-11-05T16:28:59.326Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643340420"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-29T10:00:29.000Z",
         "releaseNotes": "Marvel Rivals Version 20261029 Patch Notes\n\nGreetings, Rivals!\n\nWe're thrilled to announce the upcoming patch drops on October 29th, 2026, at 09 : 00 : 00 (UTC)! No server downtime; just patch and play!\n\nHere's what's coming your way:\n\n \n\nAll-New Content\n\nNew In Store\n\nWinter Soldier - Celestial Soldier Bundle\n\nAvailability: October 30th, 2026, 02 : 00 : 00 to November 27th 2026, 02 : 00 : 00 (UTC)\n\nStorm - Marvel Tōkon: Fighting Souls Bundle\nIron Man - Marvel Tōkon: Fighting Souls Bundle\nWinter Soldier - Celestial Soldier Emoji Bundle\nWinter Soldier - Celestial Soldier Chroma Iris Nebula/Pipe Nebula and Ultimate Ability VFX\nStorm - Marvel Tōkon: Fighting Souls Ultimate Ability VFX\n\nAvailable From: October 30th, 2026, at 2 : 00 : 00 (UTC)\n\n \n\nNight of Illusions\n\nA mysterious man, fixated on an unknown witch, mistook the number \"4\" on her person for her actual name. Driven by this obsession, he attempts to sacrifice four \"monsters\" to complete a summoning ritual. A small animal, an ancient beast, and an old friend successively fall victim to the sacrifice. But Elsa Bloodstone, driven by her monster hunter's instinct, has stepped into this bizarre house and is beginning to unravel the horrifying truth behind this Night of Illusions...\nExplore 5 mysterious rooms, solve a multitude of puzzles, and claim limited-time rewards including rare Gallery Cards, Units, Sprays, and more!\n\nEvent Period: October 29th, 2026, 09 : 00 : 00 to December 31st, 2026, 09 : 00 : 00 (UTC)\n\n \n\nFixes and Optimizations\n\nHeroes\n\n- Gorr's Out-of-Bounds Butchering: Fixed a bug where Gorr could occasionally fly entirely out of the map if he cast Shadow Harvest immediately after generating a Black Berserker. The God Butcher will now keep his slaughter strictly within the arena bounds.  \n- Rogue's Wardrobe Malfunction: Fixed a model clipping issue with Rogue's X-Men '97 Season 2 costume where her left arm would clip through her cape while walking backwards. Sugah's outfit is back to flawless.  \n- Black Cat's Missing Glitch: Fixed an issue where the overhead icon for Black Cat's Fatal Weaver costume would disappear when utilizing her Team-Up ability with Spider-Man, Binding Ties.  \n- Black Cat's Ultimate Keybind: Fixed a bug where players could still use the 'Q' key to activate the second phase of Black Cat's Ultimate Ability, even if they had bound the Ultimate Ability to a different key.  \n- Invisible Woman's Transparent Trouble: Fixed an issue where casting other abilities wouldn't always break her stealth if she had entered it using Veiled Step. Even Sue knows you can't stay out of the spotlight forever!\n\n \n\nMaps\n\n- Times Square One-Way Trip: Addressed a bug where players who entered a game from Times Square and clicked \"One More Round\" on the post-match summary screen were unable to return to Times Square after the subsequent match ended.  \n\n \n\nOther\n\n- Mall Title Drift: Fixed a UI glitch in the Store where, after completing all Pop & Wins, the secondary navigation bar would shift left and go out of bounds off the screen if no subtitle was set beneath the Store title.  \n- Moon Knight's Missing Ankh: Addressed an issue in Blood Hunt mode where equipping Moon Knight's Ankh-specific build without setting any Traits would sometimes prevent him from placing an Ankh in-game. Khonshu's avatar can now safely anchor his gifts again.  \n\n \n\nThe Marvel Rivals universe is ever-evolving; we have plenty more surprises and changes in store. Stay tuned to our official announcements for more!",
         "detectedAt": "2026-11-03T03:28:44.883Z",
@@ -19803,6 +19852,12 @@
       }
     ],
     "mac:homebrew:microsoft-teams": [
+      {
+        "version": "26289.204.5281.6363",
+        "releaseDate": "2026-11-05T10:40:18.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": "26276.505.5234.9924",
         "releaseDate": "2026-10-22T19:53:49.000Z",
@@ -32464,6 +32519,13 @@
     ],
     "windows:winget:Opera.OperaGX": [
       {
+        "version": "139.0.6053.42",
+        "releaseDate": "2026-11-05T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T16:28:59.326Z",
+        "url": null
+      },
+      {
         "version": "138.0.6044.65",
         "releaseDate": "2026-10-29T12:00:00.000Z",
         "releaseNotes": null,
@@ -33152,6 +33214,12 @@
     ],
     "mac:homebrew:opera-gx": [
       {
+        "version": "139.0.6053.42",
+        "releaseDate": "2026-11-05T11:02:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
+      {
         "version": "138.0.6044.65",
         "releaseDate": "2026-10-29T14:04:54.000Z",
         "releaseNotes": null,
@@ -33839,6 +33907,12 @@
     ],
     "apple:1633234600": [
       {
+        "version": "8.3.4193.19",
+        "releaseDate": "2026-11-05T07:37:58.000Z",
+        "releaseNotes": "Vivaldi 8.3 brings a massive performance boost and better ad blocking. You're gonna want to download this as soon as possible!\n \n- Faster pages, longer battery life: up to 12 times faster than before, with quicker page loading and snappier scrolling. Your battery life will notice the difference!\n- Redesigned Ad and Tracker Blocker: more efficient than ever, with three new levels of blocking that put you in control of how websites are displayed and how much content gets blocked. Choose between Light, Strong or Aggresive, or create custom levels. You can import your own lists too!\n- Copy sanitized link: remove tracking parameters from your links before you share them \n- New tab position: select where you want to open new tabs, whether that's after your active tabs, as last tab, after related tab or stacked with related tabs\n\nLoving Vivaldi? Give us 5 stars, and help us spread the word! Getting someone to make the switch is one of the best ways to fight for a better web.",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
+      {
         "version": "8.2.4147.136",
         "releaseDate": "2026-10-02T06:59:48.000Z",
         "releaseNotes": "The latest release of your favorite browser is here, with general improvements and a new feature that will make your browsing experience smoother. \n\nWe've added a local calculator in the Address Bar, a convenient and private way to perform your daily math, directly from your browser's UI. No more switching apps or opening new tabs! \n\nLove Vivaldi? Help us spread the word by rating us with 5 starts and recommending it to your friends!",
@@ -33847,6 +33921,12 @@
     ],
     "google:com.vivaldi.browser": [
       {
+        "version": "8.3.4192.48",
+        "releaseDate": "2026-11-04T14:26:22.000Z",
+        "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
+      {
         "version": "8.2.4147.201",
         "releaseDate": "2026-10-29T10:27:32.000Z",
         "releaseNotes": "Vivaldi 8.2 hits Android with exciting news 🎉:\n\n - Extensions support: full access to Chrome Web Store extensions from your phone or tablet, so you can shape your mobile browser exactly the way you want it.\n\n- Local calculator in your Address Bar: a convenient and private way to perform your daily math, directly from your browser. No more switching apps or opening new tabs!\n\nLove this update? Rate us 5⭐ and tell others about Vivaldi!",
@@ -33854,6 +33934,13 @@
       }
     ],
     "windows:winget:Vivaldi.Vivaldi": [
+      {
+        "version": "8.3.4191.26",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": "- [New][Ad Blocker] Updated Adblocker UI with extensive back end refactoring and updates VB-125441\n- [New][Tabs][Vertical Tabs] Auto expand tabs on hover for vertical tabs VB-131036\n- [New][Commands][Keyboard] Allow Paste and Go to open multiple URLs from the clipboard VB-131272\n- [New][UI] Copy sanitized URL VB-127942\n- [New][Reader Mode] Re-implement reader mode for better performance VB-104993\n- [New][Extensions][Tabs] Chromium group API implementation VB-131507\n- [Address Field][AutoHide] Dropdown hides when selecting an element with mouse VB-132078\n- [Address Field] Buggy badge on data URI VB-132116\n- [Address Field][Calculator] Pasting phone number, triggers calculation VB-131548\n- [Address Field] Don’t autocomplete when pasting text VB-132119\n- [Address Field] History item should be separate from the execute URL navigation VB-132558\n- [Address Field] Shortcut is added when entering invalid URL VB-131168\n- [Address Field] URLs can not be opened by keyboard via the drop down VB-131612\n- [AutoHide][Capture] Area is misaligned VB-129583\n- [AutoHide] Panel button first click only shows thin line when hovering window VB-131327\n- [Bookmarks] Change default folder for writing bookmarks to ‘Other Bookmarks’ VB-131708\n- [Bookmarks] Policies and extensions can write outside the root bookmark folder VB-125831\n- [Bookmarks] Rename bookmark bar <-> bookmarks in UI VB-131586\n- [Break Mode] Inconsistent UI hiding VB-132297\n- [Calculator] Do not calculate pi and e constants unless operator follows VB-131794\n- [Calendar] Any successful URL is accepted as a WebCal subscription VB-131197\n- [Calendar] Current time marker interval updates not working VB-132060\n- [Calendar] Event classified as “whole day” whenever it straddled midnight\n- [Calendar] Keyboard shortcut for search focuses results not search field VB-129509\n- [Calendar] Make status button show next event VB-132114\n- [Calendar] No buttons to attend or reject invite VB-115963\n- [Calendar] No error for WebCAL subscriptions that stop working VB-131198\n- [Calendar] Spacing around Add Event button\n- [Chromium] Update to 156.0.8078.91 ESR includes security fixes from 157.0.8103.38/39\n- [Crash] Failure in TH_Model::Add() during observer notification VB-130454\n- [Crash] In Dependency Manager during WebTransport request‑filter initialization VB-131526\n- [Crash] Modal dialog manager had no delegate for unshown tabs VB-129619\n- [Crash][PWA] When info toolbar is triggered from changing a Site Permission while a PWA is open VB-132371\n- [Crash][Reader] When opening reader view on a slow page and closing the tab while loading VB-131951\n- [Crash][Tabs] Tiling two PDF tabs VB-132077\n- [Crash] While processing a virtual desktop change event VB-129877\n- [Extensions] 7tv extension popup fails to open VB-132534\n- [Feeds] Make a separate unread badge setting for the feeds panel VB-89807\n- [Find in Page] Pressing F3 searches the whole page again VB-126693\n- [Gestures] Rocker over link commands do not work VB-132091\n- [Linux][Media] Broken symlinks can be left behind by the update-ffmpeg script VB-131887\n- [Linux][Media] Update Alt FFMpeg to 8.3-156-Z-20261017\n- [macOS][AutoUpdate] Update Sparkle framework to 2.10.x VB-131585\n- [macOS] Clicking link when browser window is closed does not open the link, just reopens the browser window VB-131362\n- [macOS][Keyboard] Cannot use ⌘0 to reset zoom VB-132003\n- [macOS] Maximizing window removes edge padding VB-132380\n- [Mail] Adding an old Seznam.cz inbox messes up sent/received time VB-130936\n- [Mail] Allow the possibility of marking entire domains as a mailing list VB-128849\n- [Mail] Cannot import an mbox file VB-124688\n- [Mail] Deleted messages don’t disappear from the Unread folder VB-131559\n- [Mail] Gap after marking mail as read VB-131470\n- [Mail] Importing from Opera 12 and Thunderbird is broken VB-131753\n- [Mail] Open draft on shutdown comes up as empty after restart VB-131201\n- [Mail] Optimize message list rendering VB-128889\n- [Mail] Panel compact mode s…",
+        "detectedAt": "2026-11-05T16:28:59.326Z",
+        "url": "https://update.vivaldi.com/update/1.0/relnotes/8.3.4191.26.html"
+      },
       {
         "version": "8.2.4133.96",
         "releaseDate": "2026-10-29T12:00:00.000Z",
@@ -34164,6 +34251,12 @@
       }
     ],
     "mac:homebrew:vivaldi": [
+      {
+        "version": "8.3.4191.26",
+        "releaseDate": "2026-11-05T08:00:38.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": "8.2.4133.96",
         "releaseDate": "2026-10-29T17:36:59.000Z",
@@ -40693,6 +40786,12 @@
       }
     ],
     "apple:401626263": [
+      {
+        "version": "26.45",
+        "releaseDate": "2026-11-05T14:51:35.000Z",
+        "releaseNotes": "Now you can book homes, experiences, and services—all in one app. Our redesigned app includes personalized recommendations of unique places to stay, unforgettable things to do, and incredible services at a range of prices. Plus, get a day-by-day view of your trips, new messaging features, and a revamped profile that shows who you are, where you’ve been, and who you’ve met along the way. And if you’re hosting, you’ll find useful new tools that make it easier to list your home, experience or service, as well as manage your reservations, scheduling, and more.",
+        "detectedAt": "2026-11-05T16:28:59.326Z"
+      },
       {
         "version": "26.44",
         "releaseDate": "2026-10-29T15:59:17.000Z",
