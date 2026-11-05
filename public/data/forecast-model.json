@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-04T23:40:14.618Z",
+  "trainedAt": "2026-11-05T06:45:20.201Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.572,
-    0.485,
-    0.51,
-    0.561
+    0.576,
+    0.489,
+    0.511,
+    0.565
   ],
   "listings": {
     "apple:1058959277": {
@@ -43,6 +43,11 @@
         "halfLife": 8,
         "bandwidth": 0.6,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 1.23
       }
     },
     "apple:1232780281": {
@@ -92,11 +97,18 @@
         "medianErrorDays": 3.45
       }
     },
+    "apple:284882215": {
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.15
+      }
+    },
     "apple:288429040": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 1.16
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 1.83
       }
     },
     "apple:297606951": {
@@ -111,6 +123,18 @@
         "forecasts": 1,
         "hits": 1,
         "medianErrorDays": 1.91
+      }
+    },
+    "apple:323229106": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 1.41
       }
     },
     "apple:327630330": {
@@ -132,6 +156,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 0.84
       }
     },
     "apple:363590051": {
@@ -154,15 +183,10 @@
       }
     },
     "apple:389801252": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.78
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 2.78
       }
     },
     "apple:401626263": {
@@ -197,10 +221,10 @@
       }
     },
     "apple:426826309": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.52
       }
     },
     "apple:429047995": {
@@ -208,6 +232,23 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.03
+      }
+    },
+    "apple:431946152": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.05
       }
     },
     "apple:447188370": {
@@ -220,6 +261,13 @@
         "forecasts": 1,
         "hits": 0,
         "medianErrorDays": 3.28
+      }
+    },
+    "apple:454638411": {
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.07
       }
     },
     "apple:460177396": {
@@ -265,6 +313,18 @@
         "medianErrorDays": 0.12
       }
     },
+    "apple:541164041": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.11
+      }
+    },
     "apple:544007664": {
       "params": {
         "halfLife": 8,
@@ -296,9 +356,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.91
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 3.13
       }
     },
     "apple:585027354": {
@@ -313,6 +373,11 @@
         "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.2
       }
     },
     "apple:6446901002": {
@@ -339,6 +404,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.41
       }
     },
     "apple:663592361": {
@@ -447,15 +517,10 @@
       }
     },
     "apple:985746746": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.12
+        "medianErrorDays": 2.53
       }
     },
     "google:ai.x.grok": {
@@ -689,9 +754,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.43
+        "medianErrorDays": 2.82
       }
     },
     "google:com.paypal.android.p2pmobile": {
@@ -756,6 +821,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 1.03
       }
     },
     "google:com.twitter.android": {
@@ -805,14 +875,14 @@
     },
     "google:com.whatsapp": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 4.35
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 3.41
       }
     },
     "google:com.zhiliaoapp.musically": {
@@ -1279,9 +1349,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 0,
-        "medianErrorDays": 88.79
+        "medianErrorDays": 44.69
       }
     },
     "windows:steam:1623730": {
@@ -1348,6 +1418,11 @@
         "halfLife": 4,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 0.33
       }
     },
     "windows:winget:Anthropic.Claude": {
@@ -1633,13 +1708,13 @@
     }
   },
   "replay": {
-    "tests": 2876,
-    "hits": 1713,
-    "medianErrorDays": 2.66
+    "tests": 2894,
+    "hits": 1734,
+    "medianErrorDays": 2.65
   },
   "live": {
-    "forecasts": 119,
-    "hits": 96,
-    "medianErrorDays": 1.43
+    "forecasts": 139,
+    "hits": 111,
+    "medianErrorDays": 1.23
   }
 }

@@ -2500,6 +2500,12 @@
     ],
     "apple:6477489729": [
       {
+        "version": "1.2026.4370401",
+        "releaseDate": "2026-11-04T10:30:30.000Z",
+        "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n- Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n- Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n- Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.\n- Performance Upgrades: Enjoy lightning-fast response times and smoother, more reliable performance across your favorite features.\n- Organize Your Inbox: Let Gemini persistently monitor, summarize, and prioritize your emails so you never miss what matters.\n- Proactive Daily Planning: Get an automated morning briefing and a smart daily planner compiled in moments from your Google apps.\n- Smart Task Automation: Set secure, persistent tasks to run on your behalf. Gemini preps the work—you always approve.\nLook what you can do with the new Gemini. Try today!",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "1.2026.4262206",
         "releaseDate": "2026-10-29T14:52:09.000Z",
         "releaseNotes": "- UI improvements and bug fixes",
@@ -3015,6 +3021,12 @@
     ],
     "apple:541164041": [
       {
+        "version": "2.115.3",
+        "releaseDate": "2026-11-04T10:09:44.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "2.115.2",
         "releaseDate": "2026-10-26T04:02:59.000Z",
         "releaseNotes": "• General quality and performance enhancements.",
@@ -3459,6 +3471,12 @@
     ],
     "apple:389801252": [
       {
+        "version": "454.1",
+        "releaseDate": "2026-11-04T14:29:10.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "454.0.0",
         "releaseDate": "2026-11-02T13:26:16.000Z",
         "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
@@ -3558,6 +3576,12 @@
       }
     ],
     "apple:284882215": [
+      {
+        "version": "586.0.0",
+        "releaseDate": "2026-11-04T18:21:38.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "585.0.0",
         "releaseDate": "2026-10-28T14:06:51.000Z",
@@ -4367,6 +4391,12 @@
     ],
     "apple:429047995": [
       {
+        "version": "14.43",
+        "releaseDate": "2026-11-04T17:22:15.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "14.42",
         "releaseDate": "2026-10-28T16:29:13.000Z",
         "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
@@ -4454,6 +4484,12 @@
       }
     ],
     "apple:288429040": [
+      {
+        "version": "9.1.587",
+        "releaseDate": "2026-11-04T19:07:18.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "9.1.586",
         "releaseDate": "2026-11-03T19:02:43.000Z",
@@ -4658,6 +4694,12 @@
       }
     ],
     "google:com.whatsapp": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-04T21:46:27.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T20:35:50.000Z",
@@ -7231,6 +7273,12 @@
     ],
     "apple:985746746": [
       {
+        "version": "352.1",
+        "releaseDate": "2026-11-04T16:52:28.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "352.0",
         "releaseDate": "2026-11-02T18:10:45.000Z",
         "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
@@ -8082,6 +8130,12 @@
     ],
     "apple:454638411": [
       {
+        "version": "586.0.0",
+        "releaseDate": "2026-11-04T21:04:47.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "585.0.0",
         "releaseDate": "2026-10-27T21:03:24.000Z",
         "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
@@ -8213,6 +8267,12 @@
       }
     ],
     "google:com.netflix.mediaclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-04T23:22:07.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-03T02:37:18.000Z",
@@ -9659,6 +9719,12 @@
     ],
     "apple:431946152": [
       {
+        "version": "2.746.1264",
+        "releaseDate": "2026-11-04T17:57:20.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "2.745.1138",
         "releaseDate": "2026-10-28T17:00:01.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
@@ -10695,6 +10761,12 @@
       }
     ],
     "apple:479516143": [
+      {
+        "version": "26.62",
+        "releaseDate": "2026-11-04T20:19:36.000Z",
+        "releaseNotes": "Various bug fixes!",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "26.60",
         "releaseDate": "2026-10-27T15:44:57.000Z",
@@ -14331,6 +14403,13 @@
     "windows:steam:730": [
       {
         "version": null,
+        "releaseDate": "2026-11-05T00:54:07.000Z",
+        "releaseNotes": "Counter-Strike 2 Update\n\n\\[ GAMEPLAY ]\n\n•\nBomb defusal in Retakes mode will now instantly finish when there is sufficient time remaining in the round and no active utility remains to prevent the defuse.\n[/*]\n•\nReduced freeze time and round restart delay in Retakes mode.\n[/*]\n•\nPinging pet chickens during freeze time will request a trick from them.\n[/*]\n•\nPet chicken names are no longer displayed when customized item text game option is set to hidden.\n[/*]\n\n\\[ MAP SCRIPTING ]\n\n•\nInstance.Precache now accepts entities to precache\n[/*]\n•\nAdded new top level export Entities\n[/*]\n•\nAdded Entities.Spawn\n[/*]\n•\nAdded Instance.OnBotControl\n[/*]\n•\nAdded CSPlayerController.IsControllingBot\n[/*]\n•\nAdded CSPlayerController.GetControlledBotPawn\n[/*]\n•\nAdded CSPlayerPawn.Reset\n[/*]\n•\nMoved Instance.ConnectOutput to Entities and changed it to accept a config object\n[/*]\n•\nMoved Instance.DisconnectOutput to Entities\n[/*]\n•\nRenamed Instance.EntFireAtName to Entities.FireInput\n[/*]\n•\nRenamed Instance.FindEntitiesByName to Entities.FindByName\n[/*]\n•\nRenamed Instance.FindEntitiesByClass to Entities.FindByClass\n[/*]\n•\nRenamed Instance.EntFireAtTarget to Entity.FireInput\n[/*]\n•\nMoved and renamed methods are still available in their original location, deprecated\n[/*]\n•\nDeprecated Instance.FindEntityByName and FindEntityByClass\n[/*]\n•\nCalling a method on an invalid (removed) Entity now reports that the Entity is invalid\n[/*]\n•\nConnectOutput now logs a warning when the target has no output with that name\n[/*]",
+        "detectedAt": "2026-11-05T06:45:20.201Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848557880481353"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-28T21:48:09.000Z",
         "releaseNotes": "Counter-Strike 2 Update\n\n\\[ GAMEPLAY ]\n\n•\nAdded an option to switch Silent Reload Mode between Hold and Toggle. With toggle enabled, once the silent reload starts you can let go of the reload button. To cancel a silent reload and go back to a fast reload, you can tap the reload button again.\n[/*]\n•\nFixed various cases where the first sound of a reload was audible irrespective if a user requested a silent reload or not.\n[/*]\n\n\\[ MISC ]\n\n•\nFixed a bug where liquid could render as black on AMD video cards\n[/*]\n•\nFixed some sound and UI bugs when rewinding during demo playback\n[/*]",
         "detectedAt": "2026-11-02T04:33:07.571Z",
@@ -15345,6 +15424,13 @@
       }
     ],
     "windows:steam:1172470": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-05T02:43:46.000Z",
+        "releaseNotes": "Apex Legends: Latest Update 11/4/26\n\n🛠️ADJUSTED:\n\nCrypto\n\n•\nDrone recall time has been shortened from 6 seconds to 0.7 seconds.\n[/*]\n\nDev note: We are continuing to monitor match data and player feedback surrounding Crypto's state following his rework. We believe some aspects or finer details of this update missed the marked, especially for Crypto mains. This change is one we're able to make quickly, while we have more changes planned that require a full client update and should be released soon.\n\n✅FIXED:\n\n•\nCrypto: fixed a bug where using an ordnance while using Crypto's drone would crash the game\n[/*]\n•\nEvac Towers: Stopped an exploit that allowed players to use excessive Evac Towers.\n[/*]",
+        "detectedAt": "2026-11-05T06:45:20.201Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848557880481641"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T18:58:53.000Z",
@@ -18140,6 +18226,12 @@
     ],
     "apple:618783545": [
       {
+        "version": "26.11.10",
+        "releaseDate": "2026-11-04T14:05:49.000Z",
+        "releaseNotes": "Bug Fixes\n• We cleaned the code to make sure that everything’s running smoothly. Slack — now with a streak-free shine.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "26.10.40",
         "releaseDate": "2026-10-28T19:19:13.000Z",
         "releaseNotes": "Bug Fixes\n• We tweaked some things too small to notice or too difficult to explain. We’ll return you to your regular, more interesting types of release next time (we hope).",
@@ -19341,6 +19433,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.19.3",
+        "releaseDate": "2026-11-05T01:39:22.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "8.19.2",
         "releaseDate": "2026-10-30T16:02:33.000Z",
@@ -28144,6 +28242,12 @@
     ],
     "google:com.microsoft.emmx": [
       {
+        "version": "156.0.4314.56",
+        "releaseDate": "2026-11-02T01:12:21.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here's what's new in this release:\n• Now you can read PDFs protected by your organization right in Edge, making it easier to keep up with work on the go.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "156.0.4314.43",
         "releaseDate": "2026-10-26T01:31:47.000Z",
         "releaseNotes": null,
@@ -29191,6 +29295,12 @@
       }
     ],
     "apple:1052879175": [
+      {
+        "version": "1.98",
+        "releaseDate": "2026-11-04T17:15:48.000Z",
+        "releaseNotes": "In this release:\n- Shields Panel Redesign\n- Other enhancements, stability improvements, and security updates\n\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know. And, as ever, thanks for using Brave!",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "1.97",
         "releaseDate": "2026-10-21T14:38:12.000Z",
@@ -39854,6 +39964,12 @@
     ],
     "apple:351727428": [
       {
+        "version": "26.26.0",
+        "releaseDate": "2026-11-05T03:44:36.000Z",
+        "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "26.25.0",
         "releaseDate": "2026-10-28T01:40:50.000Z",
         "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
@@ -40284,6 +40400,12 @@
     ],
     "apple:323229106": [
       {
+        "version": "5.27.0.0",
+        "releaseDate": "2026-11-04T15:05:31.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "5.26.5.1",
         "releaseDate": "2026-10-29T12:04:35.000Z",
         "releaseNotes": "This version includes several bug fixes and performance improvements.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
@@ -40654,6 +40776,12 @@
     ],
     "apple:426826309": [
       {
+        "version": "488.0.0",
+        "releaseDate": "2026-11-04T19:22:45.000Z",
+        "releaseNotes": "Log your strength workouts faster. Finished your workout? Copy a past session, or add a photo, voice note, or text of it. Your exercises, reps, and weights are logged for you, and your muscle map updates automatically.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
+      {
         "version": "487.0.0",
         "releaseDate": "2026-10-26T20:23:45.000Z",
         "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
@@ -40697,6 +40825,12 @@
       }
     ],
     "google:com.strava": [
+      {
+        "version": "488.11",
+        "releaseDate": "2026-11-02T21:12:50.000Z",
+        "releaseNotes": "Log your strength workouts faster  Finished your workout? Copy a past session, or add a photo, voice note, or text of it. Your exercises, reps, and weights are logged for you, and your muscle map updates automatically.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "487.11",
         "releaseDate": "2026-10-27T17:54:25.000Z",
@@ -41650,6 +41784,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.147.1",
+        "releaseDate": "2026-11-04T16:59:22.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "7.147.0",
         "releaseDate": "2026-11-02T16:40:58.000Z",
@@ -44542,6 +44682,12 @@
       }
     ],
     "apple:1050023752": [
+      {
+        "version": "2.19.0",
+        "releaseDate": "2026-11-04T15:08:52.000Z",
+        "releaseNotes": "Minor bug fixes and improvements.",
+        "detectedAt": "2026-11-05T06:45:20.201Z"
+      },
       {
         "version": "2.18.3",
         "releaseDate": "2026-10-19T18:37:51.000Z",
