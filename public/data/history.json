@@ -168,6 +168,13 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1103.31037",
+        "releaseDate": "2026-11-05T21:42:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": null
+      },
+      {
         "version": "26.1029.70936",
         "releaseDate": "2026-11-04T21:42:18.000Z",
         "releaseNotes": null,
@@ -971,6 +978,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261104.19",
+        "releaseDate": "2026-11-05T03:42:18.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
         "version": "1.261103.19",
         "releaseDate": "2026-11-04T03:42:26.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1761,6 +1774,12 @@
       }
     ],
     "mac:homebrew:claude": [
+      {
+        "version": "4.23118.0",
+        "releaseDate": "2026-11-05T18:53:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "4.16336.0",
         "releaseDate": "2026-11-03T18:48:06.000Z",
@@ -3683,6 +3702,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.41",
+        "releaseDate": "2026-11-05T16:04:07.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
         "version": "12.40.1",
         "releaseDate": "2026-11-04T03:19:55.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -3968,6 +3993,12 @@
       }
     ],
     "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-05T10:40:13.000Z",
+        "releaseNotes": "Quickly find and tag your friends in comments.",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T12:18:23.000Z",
@@ -5687,6 +5718,13 @@
     ],
     "windows:winget:OpenWhisperSystems.Signal": [
       {
+        "version": "8.34.0",
+        "releaseDate": "2026-11-05T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": null
+      },
+      {
         "version": "8.33.0",
         "releaseDate": "2026-10-28T12:00:00.000Z",
         "releaseNotes": null,
@@ -6017,6 +6055,12 @@
       }
     ],
     "mac:homebrew:signal": [
+      {
+        "version": "8.34.0",
+        "releaseDate": "2026-11-05T16:53:22.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "8.33.0",
         "releaseDate": "2026-10-28T22:42:58.000Z",
@@ -6810,6 +6854,13 @@
     ],
     "windows:winget:Telegram.TelegramDesktop": [
       {
+        "version": "7.4.0",
+        "releaseDate": "2026-11-05T12:00:00.000Z",
+        "releaseNotes": "- HTML widgets in bots.",
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.0"
+      },
+      {
         "version": "7.3.5",
         "releaseDate": "2026-11-04T12:00:00.000Z",
         "releaseNotes": "- Ask for camera and microphone access in mini apps on Windows and macOS.\n- Fix custom download folder and other settings getting reset.\n- Fix maximized window jitter on Windows.\n- Fix notifications moving off screen on Windows.\n- Fix missing notifications in bots with topics.\n- Fix exports of migrated groups missing the old group history.\n- Fix code blocks losing the indentation of their first line.\n- Fix many crashes and other bugs.",
@@ -7021,6 +7072,12 @@
       }
     ],
     "mac:homebrew:telegram": [
+      {
+        "version": "13.2.0",
+        "releaseDate": "2026-11-05T17:02:10.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "13.1.0",
         "releaseDate": "2026-10-20T19:48:34.000Z",
@@ -8391,6 +8448,12 @@
       }
     ],
     "google:com.disney.disneyplus": [
+      {
+        "version": "26.20.0+rc3-2026.11.02",
+        "releaseDate": "2026-11-03T18:46:09.000Z",
+        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "26.19.0+rc3-2026.10.20",
         "releaseDate": "2026-10-20T17:41:18.000Z",
@@ -17565,6 +17628,12 @@
     "google:com.google.android.gm": [
       {
         "version": null,
+        "releaseDate": "2026-11-05T19:22:30.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-03T03:13:35.000Z",
         "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
         "detectedAt": "2026-11-03T05:21:21.747Z"
@@ -21341,6 +21410,12 @@
     ],
     "google:notion.id": [
       {
+        "version": "0.6.4288",
+        "releaseDate": "2026-11-05T22:44:51.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
         "version": "0.6.4280",
         "releaseDate": "2026-11-03T00:51:33.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -22056,6 +22131,13 @@
       }
     ],
     "mac:homebrew:notion": [
+      {
+        "version": "7.42.3",
+        "releaseDate": "2026-11-05T22:33:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": null
+      },
       {
         "version": "7.42.1",
         "releaseDate": "2026-11-03T19:44:08.000Z",
@@ -26046,6 +26128,12 @@
     ],
     "apple:962194608": [
       {
+        "version": "8.0.0",
+        "releaseDate": "2026-11-05T18:46:52.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to provide a better sharing experience.",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
         "version": "7.99.0",
         "releaseDate": "2026-10-30T14:41:44.000Z",
         "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues to provide a more reliable storage experience.",
@@ -26177,6 +26265,12 @@
       }
     ],
     "google:com.android.chrome": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-05T19:46:16.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T20:54:49.000Z",
@@ -28660,6 +28754,13 @@
     ],
     "mac:homebrew:microsoft-edge": [
       {
+        "version": "157.0.4341.42",
+        "releaseDate": "2026-11-05T22:19:22.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": null
+      },
+      {
         "version": "156.0.4314.58",
         "releaseDate": "2026-10-30T22:06:40.000Z",
         "releaseNotes": null,
@@ -29581,6 +29682,12 @@
       }
     ],
     "mac:homebrew:brave-browser": [
+      {
+        "version": "1.99.55.0",
+        "releaseDate": "2026-11-05T18:46:26.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "1.98.63.0",
         "releaseDate": "2026-10-31T03:34:36.000Z",
@@ -36582,6 +36689,19 @@
     ],
     "mac:homebrew:arc": [
       {
+        "version": "1.172.1",
+        "releaseDate": "2026-11-05T21:34:24.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": null
+      },
+      {
+        "version": "1.172.0",
+        "releaseDate": "2026-11-05T18:42:07.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
         "version": "1.171.0",
         "releaseDate": "2026-10-29T18:39:31.000Z",
         "releaseNotes": null,
@@ -38108,6 +38228,13 @@
     ],
     "windows:winget:Bitwarden.Bitwarden": [
       {
+        "version": "2026.10.4",
+        "releaseDate": "2026-11-05T12:00:00.000Z",
+        "releaseNotes": "What's Changed\n\n🐛 Bug fixes\n- [PM-46275] Default auto-start to off for Mac App Store builds (#24433) by @addisonbeck in #24441",
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.4"
+      },
+      {
         "version": "2026.10.3",
         "releaseDate": "2026-11-02T12:00:00.000Z",
         "releaseNotes": "What's Changed\n\n⚙️ Maintenance\n- fix: point commercial Chocolatey package at the commercial installer by @addisonbeck in #24328\n- [BRE-2391] Disable notarization for macOS beta desktop builds by @aj-bw in #24356\n- Fix LastPass direct import login failing with a 500",
@@ -38683,6 +38810,12 @@
       }
     ],
     "mac:homebrew:bitwarden": [
+      {
+        "version": "2026.10.4",
+        "releaseDate": "2026-11-05T18:44:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "2026.10.3",
         "releaseDate": "2026-11-02T18:36:45.000Z",
@@ -42124,6 +42257,12 @@
     ],
     "google:org.wikipedia": [
       {
+        "version": "50616-r-2026-11-03",
+        "releaseDate": "2026-11-05T18:31:59.000Z",
+        "releaseNotes": "Beta testing Semantic Search in Arabic, French and Japanese",
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
+      {
         "version": "50614-r-2026-10-20",
         "releaseDate": "2026-10-22T21:38:27.000Z",
         "releaseNotes": "Beta testing Semantic Search in Arabic, French and Japanese",
@@ -42261,6 +42400,13 @@
       }
     ],
     "windows:roblox-studio": [
+      {
+        "version": "0.746.0.7461269",
+        "releaseDate": "2026-11-05T18:19:51.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z",
+        "url": "https://create.roblox.com/docs/release-notes/release-notes-746"
+      },
       {
         "version": "0.746.0.7461264",
         "releaseDate": "2026-11-03T18:18:58.000Z",
@@ -42480,6 +42626,12 @@
       }
     ],
     "mac:homebrew:robloxstudio": [
+      {
+        "version": "0.746.0.7461269",
+        "releaseDate": "2026-11-05T22:48:21.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-05T23:38:40.254Z"
+      },
       {
         "version": "0.746.0.7461264",
         "releaseDate": "2026-11-04T20:06:36.000Z",
