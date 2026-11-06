@@ -2590,6 +2590,13 @@
     ],
     "windows:winget:Google.GeminiDesktop": [
       {
+        "version": "1.18.0",
+        "releaseDate": "2026-10-28T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T15:55:45.220Z",
+        "url": "https://gemini.google/release-notes/"
+      },
+      {
         "version": "1.17.0",
         "releaseDate": "2026-10-21T12:00:00.000Z",
         "releaseNotes": null,
@@ -4843,6 +4850,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.44.21",
+        "releaseDate": "2026-11-06T08:06:39.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T15:55:45.220Z"
+      },
       {
         "version": "26.44.15",
         "releaseDate": "2026-11-03T11:10:05.000Z",
@@ -8759,6 +8772,13 @@
     ],
     "windows:winget:Spotify.Spotify": [
       {
+        "version": "1.3.8.620.g39b276d5d7ac",
+        "releaseDate": "2026-11-06T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T15:55:45.220Z",
+        "url": null
+      },
+      {
         "version": "1.3.6.1921.g7086c071a617",
         "releaseDate": "2026-10-21T12:00:00.000Z",
         "releaseNotes": null,
@@ -9973,6 +9993,13 @@
       }
     ],
     "windows:winget:Roblox.Roblox": [
+      {
+        "version": "0.746",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T15:55:45.220Z",
+        "url": null
+      },
       {
         "version": "0.744",
         "releaseDate": "2026-10-20T12:00:00.000Z",
@@ -30475,6 +30502,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.301.1",
+        "releaseDate": "2026-11-02T21:04:42.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-11-06T15:55:45.220Z"
+      },
+      {
         "version": "5.300.0",
         "releaseDate": "2026-10-27T09:47:04.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -31526,6 +31559,12 @@
       }
     ],
     "google:com.opera.browser": [
+      {
+        "version": "103.3.5234.91185",
+        "releaseDate": "2026-11-05T08:41:07.000Z",
+        "releaseNotes": "Thanks for choosing Opera! This version introduces a visual refresh of the product, rolling out in stages to ensure the design works well before reaching everyone. If you’re seeing the new look, we’d love to hear your thoughts!\n\nMore changes/additions:\n- Chromium 154\n- eSIM for travelers, now in the main menu\n- Live score improvements\n- Latest Chromium security updates (2026-11-05)",
+        "detectedAt": "2026-11-06T15:55:45.220Z"
+      },
       {
         "version": "103.2.5234.90977",
         "releaseDate": "2026-10-28T12:28:30.000Z",
@@ -34066,6 +34105,12 @@
     ],
     "google:com.vivaldi.browser": [
       {
+        "version": "8.3.4192.64",
+        "releaseDate": "2026-11-06T13:34:56.000Z",
+        "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
+        "detectedAt": "2026-11-06T15:55:45.220Z"
+      },
+      {
         "version": "8.3.4192.48",
         "releaseDate": "2026-11-04T14:26:22.000Z",
         "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
@@ -34079,6 +34124,13 @@
       }
     ],
     "windows:winget:Vivaldi.Vivaldi": [
+      {
+        "version": "8.3.4191.30",
+        "releaseDate": "2026-11-06T12:00:00.000Z",
+        "releaseNotes": "- [Ad Blocker] Cannot reset input field in custom list dialog VB-132948\n- [Extensions] Drop down for Proton Pass, Bitwarden and others is misaligned VB-132944\n- [Settings][Feeds] Enabling Feeds in settings does not work VB-132940\n- [Themes] Customizations lost on upgrade to 8.3",
+        "detectedAt": "2026-11-06T15:55:45.220Z",
+        "url": "https://update.vivaldi.com/update/1.0/relnotes/8.3.4191.30.html"
+      },
       {
         "version": "8.3.4191.26",
         "releaseDate": "2026-11-04T12:00:00.000Z",
@@ -34396,6 +34448,12 @@
       }
     ],
     "mac:homebrew:vivaldi": [
+      {
+        "version": "8.3.4191.30",
+        "releaseDate": "2026-11-06T08:04:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T15:55:45.220Z"
+      },
       {
         "version": "8.3.4191.26",
         "releaseDate": "2026-11-05T08:00:38.000Z",

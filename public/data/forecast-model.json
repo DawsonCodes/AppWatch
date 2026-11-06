@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-06T06:43:34.140Z",
+  "trainedAt": "2026-11-06T15:55:45.220Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.566,
-    0.482,
-    0.504,
-    0.56
+    0.573,
+    0.489,
+    0.514,
+    0.576
   ],
   "listings": {
     "apple:1058959277": {
@@ -289,7 +289,7 @@
     },
     "apple:507874739": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -332,8 +332,8 @@
     },
     "apple:544007664": {
       "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
+        "halfLife": 16,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -676,6 +676,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.15
       }
     },
     "google:com.duolingo": {
@@ -1189,7 +1194,7 @@
     "mac:homebrew:google-chrome": {
       "params": {
         "halfLife": 8,
-        "bandwidth": 0.3,
+        "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
@@ -1286,7 +1291,7 @@
     },
     "mac:homebrew:perplexity": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       }
@@ -1398,9 +1403,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.24
+        "medianErrorDays": 2.63
       }
     },
     "mac:homebrew:whatsapp": {
@@ -1410,7 +1415,7 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 2,
         "medianErrorDays": 0.9
       }
@@ -1683,6 +1688,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 8.43
       }
     },
     "windows:winget:Google.GoogleDrive": {
@@ -1727,8 +1737,8 @@
     },
     "windows:winget:Notion.Notion": {
       "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
+        "halfLife": 16,
+        "bandwidth": 0.3,
         "weekday": 1
       }
     },
@@ -1789,9 +1799,14 @@
     },
     "windows:winget:Roblox.Roblox": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 32.98
       }
     },
     "windows:winget:SlackTechnologies.Slack": {
@@ -1802,10 +1817,10 @@
       }
     },
     "windows:winget:Spotify.Spotify": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.34
       }
     },
     "windows:winget:Telegram.TelegramDesktop": {
@@ -1853,9 +1868,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.97
+        "medianErrorDays": 2.74
       }
     },
     "windows:winget:Zoom.Zoom": {
@@ -1867,13 +1882,13 @@
     }
   },
   "replay": {
-    "tests": 2919,
-    "hits": 1727,
+    "tests": 2922,
+    "hits": 1753,
     "medianErrorDays": 2.62
   },
   "live": {
-    "forecasts": 182,
-    "hits": 148,
-    "medianErrorDays": 1.12
+    "forecasts": 189,
+    "hits": 151,
+    "medianErrorDays": 1.18
   }
 }
