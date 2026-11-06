@@ -103,6 +103,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1103.3517.0",
+        "releaseDate": "2026-11-06T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T06:43:34.140Z",
+        "url": null
+      },
+      {
         "version": "26.1029.7803.0",
         "releaseDate": "2026-11-04T12:00:00.000Z",
         "releaseNotes": null,
@@ -3116,6 +3123,13 @@
     ],
     "windows:winget:Microsoft.Copilot": [
       {
+        "version": "157.0.4341.42",
+        "releaseDate": "2026-11-06T00:22:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T06:43:34.140Z",
+        "url": null
+      },
+      {
         "version": "156.0.4314.58",
         "releaseDate": "2026-10-30T22:26:32.000Z",
         "releaseNotes": null,
@@ -4613,6 +4627,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1270",
+        "releaseDate": "2026-11-04T23:07:37.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-11-06T06:43:34.140Z"
+      },
       {
         "version": "4.1.1269",
         "releaseDate": "2026-11-02T18:28:48.000Z",
@@ -8544,6 +8564,12 @@
     "google:com.amazon.avod.thirdpartyclient": [
       {
         "version": null,
+        "releaseDate": "2026-11-05T23:17:53.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-06T06:43:34.140Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-03T01:52:20.000Z",
         "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
         "detectedAt": "2026-11-03T19:30:28.447Z"
@@ -8664,6 +8690,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-05T06:58:16.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-06T06:43:34.140Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T11:59:56.000Z",
@@ -24162,6 +24194,12 @@
     ],
     "google:com.canva.editor": [
       {
+        "version": "2.385.0",
+        "releaseDate": "2026-11-04T01:45:07.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-06T06:43:34.140Z"
+      },
+      {
         "version": "2.384.0",
         "releaseDate": "2026-10-27T23:23:04.000Z",
         "releaseNotes": null,
@@ -36064,6 +36102,13 @@
     ],
     "windows:winget:TheBrowserCompany.Arc": [
       {
+        "version": "1.128.0.436",
+        "releaseDate": "2026-10-15T12:00:00.000Z",
+        "releaseNotes": "Nice to see you again! Version 1.128.0 gets Arc onto Chromium 155.0.8059.80, sealing up a long list of security weak spots, seven of them in the most serious category, so the sites you visit have fewer openings to cause trouble. This one is purely a safety tune-up, so grab it whenever you get a moment. See you on the next one!",
+        "detectedAt": "2026-11-06T06:43:34.140Z",
+        "url": "https://arc.net/windows/release-notes"
+      },
+      {
         "version": "1.127.0.297",
         "releaseDate": "2026-10-08T12:00:00.000Z",
         "releaseNotes": "Thanks for browsing with Arc! Version 1.127.0 moves us up to Chromium 155.0.8059.40, which closes a hefty batch of security gaps (four of them at the highest severity level) to help shield you while you surf. There's nothing else new in this release. Until next week!",
@@ -36142,7 +36187,7 @@
       },
       {
         "version": "1.119.0.362",
-        "releaseDate": "2026-08-14T12:00:00.000Z",
+        "releaseDate": "2026-08-19T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null

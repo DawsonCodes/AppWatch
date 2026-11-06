@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-05T23:38:40.254Z",
+  "trainedAt": "2026-11-06T06:43:34.140Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.563,
-    0.479,
+    0.566,
+    0.482,
     0.504,
-    0.555
+    0.56
   ],
   "listings": {
     "apple:1058959277": {
@@ -587,14 +587,14 @@
     },
     "google:com.amazon.avod.thirdpartyclient": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 5.22
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 3.72
       }
     },
     "google:com.android.chrome": {
@@ -626,6 +626,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.31
       }
     },
     "google:com.deepseek.chat": {
@@ -778,9 +783,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.92
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.29
       }
     },
     "google:com.microsoft.office.officehubrow": {
@@ -864,9 +869,9 @@
     },
     "google:com.spotify.music": {
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.67
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.38
       }
     },
     "google:com.squareup.cash": {
@@ -1687,6 +1692,18 @@
         "weekday": 1
       }
     },
+    "windows:winget:Microsoft.Copilot": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 0.87
+      }
+    },
     "windows:winget:Microsoft.Edge": {
       "params": {
         "halfLife": 32,
@@ -1718,13 +1735,13 @@
     "windows:winget:OpenAI.ChatGPT": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.3,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 2,
-        "medianErrorDays": 0.64
+        "medianErrorDays": 0.78
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -1850,13 +1867,13 @@
     }
   },
   "replay": {
-    "tests": 2913,
-    "hits": 1714,
-    "medianErrorDays": 2.64
+    "tests": 2919,
+    "hits": 1727,
+    "medianErrorDays": 2.62
   },
   "live": {
-    "forecasts": 176,
-    "hits": 144,
-    "medianErrorDays": 1.18
+    "forecasts": 182,
+    "hits": 148,
+    "medianErrorDays": 1.12
   }
 }
