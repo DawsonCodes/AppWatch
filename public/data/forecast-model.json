@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-07T08:47:23.849Z",
+  "trainedAt": "2026-11-07T16:25:56.080Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.582,
-    0.501,
-    0.52,
-    0.573
+    0.576,
+    0.493,
+    0.517,
+    0.57
   ],
   "listings": {
     "apple:1058959277": {
@@ -616,14 +616,14 @@
     },
     "google:com.amazon.avod.thirdpartyclient": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 3.72
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 3.18
       }
     },
     "google:com.android.chrome": {
@@ -798,9 +798,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 2.39
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 1.73
       }
     },
     "google:com.instagram.android": {
@@ -1041,9 +1041,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 2.2
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.77
       }
     },
     "google:org.thoughtcrime.securesms": {
@@ -1134,14 +1134,14 @@
     },
     "mac:homebrew:chatgpt": {
       "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
+        "halfLife": 8,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 4,
-        "medianErrorDays": 0.15
+        "forecasts": 6,
+        "hits": 5,
+        "medianErrorDays": 0.23
       }
     },
     "mac:homebrew:claude": {
@@ -1230,7 +1230,7 @@
     "mac:homebrew:google-chrome": {
       "params": {
         "halfLife": 8,
-        "bandwidth": 0.2,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -1408,8 +1408,8 @@
     },
     "mac:homebrew:telegram": {
       "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
+        "halfLife": 8,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
@@ -1580,13 +1580,6 @@
         "forecasts": 1,
         "hits": 1,
         "medianErrorDays": 0.09
-      }
-    },
-    "windows:steam:553850": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
       }
     },
     "windows:steam:570": {
@@ -1883,9 +1876,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 4.96
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 2.19
       }
     },
     "windows:winget:TheBrowserCompany.Arc": {
@@ -1914,13 +1907,6 @@
         "medianErrorDays": 2.46
       }
     },
-    "windows:winget:VideoLAN.VLC": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      }
-    },
     "windows:winget:Vivaldi.Vivaldi": {
       "params": {
         "halfLife": 32,
@@ -1942,13 +1928,13 @@
     }
   },
   "replay": {
-    "tests": 2935,
-    "hits": 1772,
+    "tests": 2939,
+    "hits": 1764,
     "medianErrorDays": 2.62
   },
   "live": {
-    "forecasts": 207,
-    "hits": 163,
-    "medianErrorDays": 1.18
+    "forecasts": 212,
+    "hits": 168,
+    "medianErrorDays": 1.19
   }
 }

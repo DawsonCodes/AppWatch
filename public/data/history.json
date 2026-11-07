@@ -182,6 +182,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1103.41825",
+        "releaseDate": "2026-11-07T06:47:30.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-07T16:25:56.080Z"
+      },
+      {
         "version": "26.1103.32239",
         "releaseDate": "2026-11-06T18:49:03.000Z",
         "releaseNotes": null,
@@ -4165,6 +4171,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-11-07T05:13:35.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-07T16:25:56.080Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-04T07:02:23.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-11-04T17:59:32.452Z"
@@ -6869,6 +6881,12 @@
     "google:org.telegram.messenger": [
       {
         "version": null,
+        "releaseDate": "2026-11-06T21:26:01.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-07T16:25:56.080Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-02T20:58:43.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-05T16:28:59.326Z"
@@ -6935,6 +6953,13 @@
       }
     ],
     "windows:winget:Telegram.TelegramDesktop": [
+      {
+        "version": "7.4.1",
+        "releaseDate": "2026-11-06T12:00:00.000Z",
+        "releaseNotes": "- Fix crash on launch on some Windows systems.\n- Bug fixes and other minor improvements.",
+        "detectedAt": "2026-11-07T16:25:56.080Z",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.1"
+      },
       {
         "version": "7.4.0",
         "releaseDate": "2026-11-05T12:00:00.000Z",
@@ -8624,6 +8649,12 @@
       }
     ],
     "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-06T18:56:50.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-07T16:25:56.080Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-05T23:17:53.000Z",
@@ -37665,6 +37696,13 @@
         "releaseDate": "2025-01-20T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
+        "url": null
+      },
+      {
+        "version": "1.24.1b",
+        "releaseDate": "2025-01-16T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-07T16:25:56.080Z",
         "url": null
       },
       {
