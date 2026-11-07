@@ -103,6 +103,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1103.4239.0",
+        "releaseDate": "2026-11-07T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-07T08:47:23.849Z",
+        "url": null
+      },
+      {
         "version": "26.1103.3517.0",
         "releaseDate": "2026-11-06T12:00:00.000Z",
         "releaseNotes": null,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-07T01:55:57.679Z",
+  "trainedAt": "2026-11-07T08:47:23.849Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -1408,8 +1408,8 @@
     },
     "mac:homebrew:telegram": {
       "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
+        "halfLife": 16,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -1798,13 +1798,13 @@
     "windows:winget:OpenAI.ChatGPT": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.78
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.64
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -1942,13 +1942,13 @@
     }
   },
   "replay": {
-    "tests": 2934,
-    "hits": 1770,
+    "tests": 2935,
+    "hits": 1772,
     "medianErrorDays": 2.62
   },
   "live": {
-    "forecasts": 206,
-    "hits": 162,
-    "medianErrorDays": 1.19
+    "forecasts": 207,
+    "hits": 163,
+    "medianErrorDays": 1.18
   }
 }
