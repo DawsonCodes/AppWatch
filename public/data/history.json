@@ -3833,6 +3833,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.41.0-prod.01",
+        "releaseDate": "2026-11-06T01:35:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-07T01:55:57.679Z"
+      },
+      {
         "version": "12.40.1-prod.01",
         "releaseDate": "2026-11-03T21:39:15.000Z",
         "releaseNotes": null,
@@ -9653,6 +9659,12 @@
       }
     ],
     "google:tv.twitch.android.app": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-06T23:25:49.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-11-07T01:55:57.679Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T20:58:13.000Z",
@@ -18513,6 +18525,12 @@
       }
     ],
     "google:com.Slack": [
+      {
+        "version": "26.11.10.0",
+        "releaseDate": "2026-11-02T22:49:23.000Z",
+        "releaseNotes": "Bug Fixes\n• We cleaned the code to make sure that everything’s running smoothly. Slack — now with a streak-free shine.",
+        "detectedAt": "2026-11-07T01:55:57.679Z"
+      },
       {
         "version": "26.10.40.0",
         "releaseDate": "2026-10-26T20:38:53.000Z",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-06T21:29:41.724Z",
+  "trainedAt": "2026-11-07T01:55:57.679Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.584,
-    0.503,
-    0.522,
-    0.575
+    0.582,
+    0.501,
+    0.52,
+    0.573
   ],
   "listings": {
     "apple:1058959277": {
@@ -595,6 +595,11 @@
         "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 2.34
       }
     },
     "google:com.airbnb.android": {
@@ -931,9 +936,9 @@
     },
     "google:com.twitter.android": {
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.28
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.51
       }
     },
     "google:com.ubercab": {
@@ -1067,14 +1072,14 @@
     },
     "google:tv.twitch.android.app": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.23
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.68
       }
     },
     "mac:homebrew:arc": {
@@ -1909,6 +1914,13 @@
         "medianErrorDays": 2.46
       }
     },
+    "windows:winget:VideoLAN.VLC": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
     "windows:winget:Vivaldi.Vivaldi": {
       "params": {
         "halfLife": 32,
@@ -1930,13 +1942,13 @@
     }
   },
   "replay": {
-    "tests": 2931,
-    "hits": 1778,
+    "tests": 2934,
+    "hits": 1770,
     "medianErrorDays": 2.62
   },
   "live": {
-    "forecasts": 203,
-    "hits": 159,
-    "medianErrorDays": 1.18
+    "forecasts": 206,
+    "hits": 162,
+    "medianErrorDays": 1.19
   }
 }
