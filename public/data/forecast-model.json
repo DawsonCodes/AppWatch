@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-07T16:25:56.080Z",
+  "trainedAt": "2026-11-07T21:50:13.965Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.576,
-    0.493,
-    0.517,
-    0.57
+    0.573,
+    0.49,
+    0.514,
+    0.567
   ],
   "listings": {
     "apple:1058959277": {
@@ -40,9 +40,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.23
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.6
       }
     },
     "apple:1232780281": {
@@ -88,6 +88,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.16
       }
     },
     "apple:283646709": {
@@ -361,9 +366,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 2.17
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 1.32
       }
     },
     "apple:570060128": {
@@ -519,6 +524,11 @@
         "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.75
       }
     },
     "apple:886427730": {
@@ -662,6 +672,13 @@
         "medianErrorDays": 0.31
       }
     },
+    "google:com.dd.doordash": {
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 2.15
+      }
+    },
     "google:com.deepseek.chat": {
       "params": {
         "halfLife": 4,
@@ -722,6 +739,13 @@
         "forecasts": 2,
         "hits": 2,
         "medianErrorDays": 1.9
+      }
+    },
+    "google:com.ebay.mobile": {
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 2.97
       }
     },
     "google:com.facebook.katana": {
@@ -986,9 +1010,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 3.41
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 2.47
       }
     },
     "google:com.zhiliaoapp.musically": {
@@ -1928,13 +1952,13 @@
     }
   },
   "replay": {
-    "tests": 2939,
-    "hits": 1764,
-    "medianErrorDays": 2.62
+    "tests": 2946,
+    "hits": 1773,
+    "medianErrorDays": 2.59
   },
   "live": {
-    "forecasts": 212,
-    "hits": 168,
-    "medianErrorDays": 1.19
+    "forecasts": 219,
+    "hits": 175,
+    "medianErrorDays": 1.18
   }
 }

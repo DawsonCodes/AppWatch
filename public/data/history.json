@@ -4833,6 +4833,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-11-07T03:09:32.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-04T21:46:27.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-11-05T06:45:20.201Z"
@@ -5615,6 +5621,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.36",
+        "releaseDate": "2026-11-07T15:30:45.000Z",
+        "releaseNotes": "• Stickers are supported in quoted replies, so you have another way to make a point that sticks around.\n• Following last week's update, consider this a duet that includes additional improvements for the iPhone Duo.",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
       {
         "version": "8.35.1",
         "releaseDate": "2026-10-31T13:44:28.000Z",
@@ -8587,6 +8599,12 @@
       }
     ],
     "apple:545519333": [
+      {
+        "version": "10.156",
+        "releaseDate": "2026-11-07T10:18:40.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
       {
         "version": "10.155.2",
         "releaseDate": "2026-11-03T14:53:26.000Z",
@@ -19727,6 +19745,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.20.0",
+        "releaseDate": "2026-11-07T17:53:19.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
       {
         "version": "8.19.3",
         "releaseDate": "2026-11-05T01:39:22.000Z",
@@ -40108,6 +40132,12 @@
     ],
     "apple:282614216": [
       {
+        "version": "6.281.0",
+        "releaseDate": "2026-11-07T18:08:25.000Z",
+        "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
+      {
         "version": "6.280.0",
         "releaseDate": "2026-10-31T17:00:15.000Z",
         "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
@@ -40151,6 +40181,12 @@
       }
     ],
     "google:com.ebay.mobile": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-06T21:25:03.000Z",
+        "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-30T17:03:59.000Z",
@@ -40233,6 +40269,12 @@
       }
     ],
     "google:com.dd.doordash": [
+      {
+        "version": "15.300.7",
+        "releaseDate": "2026-11-03T17:42:16.000Z",
+        "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
+        "detectedAt": "2026-11-07T21:50:13.965Z"
+      },
       {
         "version": "15.299.7",
         "releaseDate": "2026-10-26T17:59:11.000Z",
