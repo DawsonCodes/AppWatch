@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-07T21:50:13.965Z",
+  "trainedAt": "2026-11-08T01:26:50.219Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.573,
-    0.49,
-    0.514,
-    0.567
+    0.572,
+    0.489,
+    0.51,
+    0.566
   ],
   "listings": {
     "apple:1058959277": {
@@ -875,6 +875,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.58
       }
     },
     "google:com.pinterest": {
@@ -1952,13 +1957,13 @@
     }
   },
   "replay": {
-    "tests": 2946,
-    "hits": 1773,
+    "tests": 2947,
+    "hits": 1765,
     "medianErrorDays": 2.59
   },
   "live": {
-    "forecasts": 219,
-    "hits": 175,
+    "forecasts": 220,
+    "hits": 176,
     "medianErrorDays": 1.18
   }
 }

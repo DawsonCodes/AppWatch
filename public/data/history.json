@@ -40440,6 +40440,12 @@
     ],
     "google:com.paypal.android.p2pmobile": [
       {
+        "version": "10.20.1",
+        "releaseDate": "2026-11-05T04:12:58.000Z",
+        "releaseNotes": "Get the latest update, so you can pay, send and save smarter. Unlock cash back offers and more. With PayPal, it really adds up.",
+        "detectedAt": "2026-11-08T01:26:50.219Z"
+      },
+      {
         "version": "10.19.0",
         "releaseDate": "2026-10-24T12:14:58.000Z",
         "releaseNotes": "Get the latest update, so you can pay, send and save smarter. Unlock cash back offers and more. With PayPal, it really adds up.",
