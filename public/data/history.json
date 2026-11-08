@@ -2666,6 +2666,12 @@
     ],
     "mac:homebrew:google-gemini": [
       {
+        "version": "1.141.3.1394",
+        "releaseDate": "2026-11-08T07:02:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-08T08:59:28.350Z"
+      },
+      {
         "version": "1.138.0.1315",
         "releaseDate": "2026-10-31T13:52:00.000Z",
         "releaseNotes": null,
@@ -2992,6 +2998,12 @@
       }
     ],
     "google:ai.x.grok": [
+      {
+        "version": "1.2.54-release.02",
+        "releaseDate": "2026-11-06T18:32:05.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-08T08:59:28.350Z"
+      },
       {
         "version": "1.2.53-release.00",
         "releaseDate": "2026-10-29T19:34:05.000Z",

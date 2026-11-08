@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-08T01:26:50.219Z",
+  "trainedAt": "2026-11-08T08:59:28.350Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.572,
-    0.489,
-    0.51,
-    0.566
+    0.576,
+    0.498,
+    0.517,
+    0.579
   ],
   "listings": {
     "apple:1058959277": {
@@ -591,6 +591,11 @@
         "halfLife": 4,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 2.01
       }
     },
     "google:ch.protonmail.android": {
@@ -1280,6 +1285,11 @@
         "halfLife": 8,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 2.51
       }
     },
     "mac:homebrew:microsoft-edge": {
@@ -1356,7 +1366,7 @@
     },
     "mac:homebrew:perplexity": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
       }
@@ -1957,13 +1967,13 @@
     }
   },
   "replay": {
-    "tests": 2947,
-    "hits": 1765,
+    "tests": 2949,
+    "hits": 1771,
     "medianErrorDays": 2.59
   },
   "live": {
-    "forecasts": 220,
+    "forecasts": 222,
     "hits": 176,
-    "medianErrorDays": 1.18
+    "medianErrorDays": 1.19
   }
 }
