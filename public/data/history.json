@@ -1016,6 +1016,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261106.19",
+        "releaseDate": "2026-11-07T23:02:18.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-08T22:04:13.274Z"
+      },
+      {
         "version": "1.261104.19",
         "releaseDate": "2026-11-05T03:42:18.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -3778,6 +3784,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.42",
+        "releaseDate": "2026-11-08T20:53:15.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-08T22:04:13.274Z"
+      },
+      {
         "version": "12.41",
         "releaseDate": "2026-11-05T16:04:07.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -4137,6 +4149,12 @@
       }
     ],
     "apple:544007664": [
+      {
+        "version": "21.45.4",
+        "releaseDate": "2026-11-08T17:09:00.000Z",
+        "releaseNotes": "Fixed bugs, improved performance, explored the edges of the known universe.",
+        "detectedAt": "2026-11-08T22:04:13.274Z"
+      },
       {
         "version": "21.44.4",
         "releaseDate": "2026-11-02T23:52:24.000Z",
@@ -8617,6 +8635,12 @@
       }
     ],
     "apple:545519333": [
+      {
+        "version": "10.156.1",
+        "releaseDate": "2026-11-08T16:11:05.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-08T22:04:13.274Z"
+      },
       {
         "version": "10.156",
         "releaseDate": "2026-11-07T10:18:40.000Z",
