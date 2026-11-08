@@ -918,6 +918,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261106.19",
+        "releaseDate": "2026-11-08T09:22:07.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-08T16:40:28.878Z"
+      },
+      {
         "version": "1.261104.19",
         "releaseDate": "2026-11-06T07:12:08.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -29701,6 +29707,12 @@
       }
     ],
     "google:com.brave.browser": [
+      {
+        "version": "1.99.55",
+        "releaseDate": "2026-11-05T21:14:01.000Z",
+        "releaseNotes": "In this release we:\n- Made several general stability improvements.\n- Upgraded to Chromium 157.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
+        "detectedAt": "2026-11-08T16:40:28.878Z"
+      },
       {
         "version": "1.98.63",
         "releaseDate": "2026-10-30T19:34:21.000Z",
