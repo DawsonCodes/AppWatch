@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-09T01:44:31.791Z",
+  "trainedAt": "2026-11-09T09:48:24.716Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.582,
-    0.504,
-    0.523,
-    0.585
+    0.581,
+    0.503,
+    0.522,
+    0.584
   ],
   "listings": {
     "apple:1058959277": {
@@ -1004,9 +1004,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 4.16
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 2.16
       }
     },
     "google:com.ubercab.eats": {
@@ -1998,13 +1998,13 @@
     }
   },
   "replay": {
-    "tests": 2955,
-    "hits": 1784,
+    "tests": 2956,
+    "hits": 1787,
     "medianErrorDays": 2.58
   },
   "live": {
-    "forecasts": 229,
-    "hits": 179,
-    "medianErrorDays": 1.18
+    "forecasts": 230,
+    "hits": 180,
+    "medianErrorDays": 1.17
   }
 }

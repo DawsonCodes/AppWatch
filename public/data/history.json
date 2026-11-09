@@ -41113,6 +41113,12 @@
     "google:com.ubercab": [
       {
         "version": null,
+        "releaseDate": "2026-11-06T17:46:48.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to help make it faster and more reliable for you. This version includes several bug fixes and performance improvements.\n\nLove the app? Rate us! Your feedback helps us to improve the Uber app.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-11-09T09:48:24.716Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-30T17:06:38.000Z",
         "releaseNotes": "We update the Uber app as often as possible to help make it faster and more reliable for you. This version includes several bug fixes and performance improvements.\n\nLove the app? Rate us! Your feedback helps us to improve the Uber app.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
         "detectedAt": "2026-11-02T09:30:01.927Z"
