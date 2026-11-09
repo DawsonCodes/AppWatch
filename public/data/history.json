@@ -2913,6 +2913,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.63",
+        "releaseDate": "2026-11-09T19:05:59.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "1.4.62",
         "releaseDate": "2026-11-06T09:22:36.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -3456,6 +3462,12 @@
     ],
     "apple:6737597349": [
       {
+        "version": "2.7.5",
+        "releaseDate": "2026-11-09T12:28:32.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "2.7.2",
         "releaseDate": "2026-11-02T05:21:55.000Z",
         "releaseNotes": "- Fixed some known issues",
@@ -3589,6 +3601,12 @@
       }
     ],
     "apple:389801252": [
+      {
+        "version": "455.0.0",
+        "releaseDate": "2026-11-09T15:57:59.000Z",
+        "releaseNotes": "Performance optimizations and stability improvements for a smoother, more reliable experience.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "454.1",
         "releaseDate": "2026-11-04T14:29:10.000Z",
@@ -3790,6 +3808,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.42.1",
+        "releaseDate": "2026-11-09T16:22:25.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "12.42",
         "releaseDate": "2026-11-08T20:53:15.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -3968,6 +3992,12 @@
     ],
     "apple:6446901002": [
       {
+        "version": "455.0",
+        "releaseDate": "2026-11-09T15:03:01.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "454.0",
         "releaseDate": "2026-11-02T15:05:03.000Z",
         "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
@@ -4017,6 +4047,12 @@
       }
     ],
     "google:com.instagram.barcelona": [
+      {
+        "version": "454.0.0.54.79",
+        "releaseDate": "2026-11-02T18:53:39.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "453.0.0.56.79",
         "releaseDate": "2026-10-26T15:24:37.000Z",
@@ -4658,6 +4694,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.588",
+        "releaseDate": "2026-11-09T17:21:14.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "9.1.587",
         "releaseDate": "2026-11-04T19:07:18.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -4812,6 +4854,12 @@
     ],
     "apple:310633997": [
       {
+        "version": "26.44.72",
+        "releaseDate": "2026-11-09T14:07:04.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "26.43.75",
         "releaseDate": "2026-11-02T16:48:57.000Z",
         "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
@@ -4959,6 +5007,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.45.13",
+        "releaseDate": "2026-11-09T14:07:04.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "26.44.21",
         "releaseDate": "2026-11-06T08:06:39.000Z",
@@ -7521,6 +7575,12 @@
     ],
     "apple:985746746": [
       {
+        "version": "353.0",
+        "releaseDate": "2026-11-09T19:34:18.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "352.1",
         "releaseDate": "2026-11-04T16:52:28.000Z",
         "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
@@ -8422,6 +8482,12 @@
     ],
     "google:com.facebook.orca": [
       {
+        "version": "586.0.0.55.92",
+        "releaseDate": "2026-11-02T21:02:41.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "585.0.0.53.94",
         "releaseDate": "2026-10-27T01:15:05.000Z",
         "releaseNotes": null,
@@ -8465,6 +8531,12 @@
       }
     ],
     "apple:363590051": [
+      {
+        "version": "26.5.0",
+        "releaseDate": "2026-11-09T16:50:28.000Z",
+        "releaseNotes": "Keep your app updated to get the latest Netflix experience on your iPhone and iPad.\n\nWe know you have choices. In this release, we made gallery improvements so it’s easier to find the perfect thing to watch.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "26.4.0",
         "releaseDate": "2026-11-02T15:10:58.000Z",
@@ -8717,6 +8789,12 @@
     "google:com.amazon.avod.thirdpartyclient": [
       {
         "version": null,
+        "releaseDate": "2026-11-09T06:16:34.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-06T18:56:50.000Z",
         "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
         "detectedAt": "2026-11-07T16:25:56.080Z"
@@ -8818,6 +8896,12 @@
     ],
     "apple:324684580": [
       {
+        "version": "9.1.98",
+        "releaseDate": "2026-11-09T18:28:38.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "9.1.94",
         "releaseDate": "2026-10-23T17:59:53.000Z",
         "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
@@ -8849,6 +8933,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T10:13:18.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-05T06:58:16.000Z",
@@ -9689,6 +9779,12 @@
       }
     ],
     "apple:460177396": [
+      {
+        "version": "32.0",
+        "releaseDate": "2026-11-09T17:20:40.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "31.9",
         "releaseDate": "2026-11-02T18:44:44.000Z",
@@ -17819,6 +17915,12 @@
     ],
     "apple:422689480": [
       {
+        "version": "6.0.261102",
+        "releaseDate": "2026-11-09T18:16:46.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "6.0.261026",
         "releaseDate": "2026-11-02T19:58:27.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -18004,6 +18106,12 @@
       }
     ],
     "google:com.microsoft.office.outlook": [
+      {
+        "version": "5.2643.0",
+        "releaseDate": "2026-11-09T15:32:20.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "5.2642.1",
         "releaseDate": "2026-10-30T20:53:09.000Z",
@@ -27669,6 +27777,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "160.0",
+        "releaseDate": "2026-11-09T03:06:32.000Z",
+        "releaseNotes": "- Improved support for iPhone Duo.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "159.1",
         "releaseDate": "2026-11-01T20:55:58.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
@@ -28618,6 +28732,12 @@
       }
     ],
     "apple:1288723196": [
+      {
+        "version": "157.4341.42",
+        "releaseDate": "2026-11-09T02:04:43.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Check out what's new in this release.\n• Bug fixes, stability and performance improvements.\nUpgrade to the latest version and enjoy a smarter and more efficient Microsoft Edge!",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "156.4314.56",
         "releaseDate": "2026-11-02T01:46:15.000Z",
@@ -31061,6 +31181,12 @@
       }
     ],
     "mac:homebrew:duckduckgo": [
+      {
+        "version": "1.215.0",
+        "releaseDate": "2026-11-09T12:56:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "1.214.0",
         "releaseDate": "2026-11-02T09:47:36.000Z",
@@ -39749,6 +39875,13 @@
     ],
     "windows:winget:Proton.ProtonMail": [
       {
+        "version": "1.16.1",
+        "releaseDate": "2026-11-02T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-09T20:43:50.674Z",
+        "url": null
+      },
+      {
         "version": "1.16.0",
         "releaseDate": "2026-10-22T12:00:00.000Z",
         "releaseNotes": null,
@@ -39940,6 +40073,12 @@
     ],
     "mac:homebrew:proton-mail": [
       {
+        "version": "1.16.1",
+        "releaseDate": "2026-11-09T10:44:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "1.16.0",
         "releaseDate": "2026-11-04T13:43:14.000Z",
         "releaseNotes": null,
@@ -40122,6 +40261,12 @@
     ],
     "apple:297606951": [
       {
+        "version": "27.20.0",
+        "releaseDate": "2026-11-09T17:58:10.000Z",
+        "releaseNotes": "Our new design provides easier access to the features you use most while on the go. This includes the homepage, account and order information, your cart and the ability to browse and discover Amazon departments, products, programs, and features.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "27.19.0",
         "releaseDate": "2026-10-26T22:45:04.000Z",
         "releaseNotes": "Our new design provides easier access to the features you use most while on the go. This includes the homepage, account and order information, your cart and the ability to browse and discover Amazon departments, products, programs, and features.",
@@ -40280,6 +40425,12 @@
     ],
     "apple:719972451": [
       {
+        "version": "8.44.0",
+        "releaseDate": "2026-11-09T06:00:23.000Z",
+        "releaseNotes": "Minor updates and performance improvements",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "8.43.0",
         "releaseDate": "2026-11-02T06:00:23.000Z",
         "releaseNotes": "Minor updates and performance improvements",
@@ -40368,6 +40519,12 @@
     ],
     "apple:1058959277": [
       {
+        "version": "6.348.10001",
+        "releaseDate": "2026-11-09T18:02:29.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Performance improvements\n- Localization updates\n\nLove the app? Rate us! Your feedback keeps the Uber Eats engine running.\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "6.347.10000",
         "releaseDate": "2026-11-02T17:43:43.000Z",
         "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Performance improvements\n- Localization updates\n\nLove the app? Rate us! Your feedback keeps the Uber Eats engine running.\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
@@ -40405,6 +40562,12 @@
       }
     ],
     "google:com.ubercab.eats": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T18:28:31.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T18:14:20.000Z",
@@ -40449,6 +40612,12 @@
       }
     ],
     "apple:283646709": [
+      {
+        "version": "10.11.0",
+        "releaseDate": "2026-11-09T17:04:45.000Z",
+        "releaseNotes": "Get the latest update. The new PayPal app that you know and love, now made simpler, faster and easier to use. Continue to shop, pay, earn rewards, and manage your money. All in one place.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "10.10.0",
         "releaseDate": "2026-11-02T17:20:20.000Z",
@@ -40632,6 +40801,12 @@
     ],
     "apple:711923939": [
       {
+        "version": "5.77.0",
+        "releaseDate": "2026-11-09T17:02:55.000Z",
+        "releaseNotes": "Bug Fixes and Improvements",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "5.76.0",
         "releaseDate": "2026-11-03T06:09:07.000Z",
         "releaseNotes": "Bug Fixes and Improvements",
@@ -40731,6 +40906,12 @@
       }
     ],
     "apple:886427730": [
+      {
+        "version": "14.43.39",
+        "releaseDate": "2026-11-09T17:09:08.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency. This update includes bug fixes and performance improvements.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "14.42.24",
         "releaseDate": "2026-11-02T17:01:58.000Z",
@@ -41068,6 +41249,12 @@
     ],
     "apple:368677368": [
       {
+        "version": "3.747.10000",
+        "releaseDate": "2026-11-09T07:57:50.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "3.746.10001",
         "releaseDate": "2026-11-02T05:05:33.000Z",
         "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
@@ -41161,6 +41348,12 @@
       }
     ],
     "apple:529379082": [
+      {
+        "version": "2026.43.3",
+        "releaseDate": "2026-11-09T19:31:59.000Z",
+        "releaseNotes": "Thank you for using Lyft! We regularly update our app to make your experience even better. Each update to our app includes reliability and speed improvements, in addition to bug fixes and performance improvements. New features are highlighted in the app.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "2026.42.3",
         "releaseDate": "2026-11-02T19:19:18.000Z",
@@ -42377,6 +42570,12 @@
     ],
     "apple:570060128": [
       {
+        "version": "7.148.0",
+        "releaseDate": "2026-11-09T16:56:36.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
+      {
         "version": "7.147.1",
         "releaseDate": "2026-11-04T16:59:22.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
@@ -42492,6 +42691,12 @@
       }
     ],
     "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T16:42:17.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-03T16:48:24.000Z",
@@ -42684,6 +42889,12 @@
       }
     ],
     "apple:414706506": [
+      {
+        "version": "10.46.361",
+        "releaseDate": "2026-11-09T17:34:25.000Z",
+        "releaseNotes": "• Several bug fixes and usability improvements",
+        "detectedAt": "2026-11-09T20:43:50.674Z"
+      },
       {
         "version": "10.45.332",
         "releaseDate": "2026-11-02T22:38:58.000Z",
