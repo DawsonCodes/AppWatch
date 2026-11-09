@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-08T22:04:13.274Z",
+  "trainedAt": "2026-11-09T01:44:31.791Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.58,
-    0.502,
-    0.521,
-    0.583
+    0.582,
+    0.504,
+    0.523,
+    0.585
   ],
   "listings": {
     "apple:1058959277": {
@@ -986,6 +986,11 @@
       }
     },
     "google:com.twitter.android": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1184,15 +1189,10 @@
       }
     },
     "mac:homebrew:chatgpt": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 5,
-        "medianErrorDays": 0.23
+        "medianErrorDays": 0.31
       }
     },
     "mac:homebrew:claude": {
@@ -1999,11 +1999,11 @@
   },
   "replay": {
     "tests": 2955,
-    "hits": 1787,
+    "hits": 1784,
     "medianErrorDays": 2.58
   },
   "live": {
-    "forecasts": 228,
+    "forecasts": 229,
     "hits": 179,
     "medianErrorDays": 1.18
   }
