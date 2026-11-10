@@ -7000,6 +7000,12 @@
     ],
     "apple:686449807": [
       {
+        "version": "13.2.1",
+        "releaseDate": "2026-11-10T06:46:29.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-11-10T12:39:08.743Z"
+      },
+      {
         "version": "13.2",
         "releaseDate": "2026-11-05T13:22:09.000Z",
         "releaseNotes": "Bug fixes, minor improvements, and more.",
@@ -7838,6 +7844,12 @@
       }
     ],
     "mac:homebrew:discord": [
+      {
+        "version": "0.0.422",
+        "releaseDate": "2026-11-10T04:54:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T12:39:08.743Z"
+      },
       {
         "version": "0.0.421",
         "releaseDate": "2026-11-02T18:46:05.000Z",
@@ -34573,6 +34585,12 @@
     ],
     "google:com.vivaldi.browser": [
       {
+        "version": "8.3.4192.71",
+        "releaseDate": "2026-11-10T10:03:53.000Z",
+        "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
+        "detectedAt": "2026-11-10T12:39:08.743Z"
+      },
+      {
         "version": "8.3.4192.64",
         "releaseDate": "2026-11-06T13:34:56.000Z",
         "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
@@ -34592,6 +34610,13 @@
       }
     ],
     "windows:winget:Vivaldi.Vivaldi": [
+      {
+        "version": "8.3.4191.35",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": "- [Chromium] Update to 156.0.8078.99 ESR includes security fixes, such as CVE-2026-125350 (Use after free in XML) from 157.0.8103.50/51\n- [UI] Browser window fullscreen exits together with HTML5 video fullscreen VB-132228\n- [UI] Warn users still running very old Vivaldi versions VB-105706",
+        "detectedAt": "2026-11-10T12:39:08.743Z",
+        "url": "https://update.vivaldi.com/update/1.0/relnotes/8.3.4191.35.html"
+      },
       {
         "version": "8.3.4191.30",
         "releaseDate": "2026-11-06T12:00:00.000Z",
@@ -35623,6 +35648,13 @@
     ],
     "windows:winget:TorProject.TorBrowser": [
       {
+        "version": "16.0.1",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": "The full changelog since Tor Browser 16.0 is:\n\n- All Platforms\n  - Updated Tor to 0.4.9.16\n  - Updated NoScript to 13.6.38.1984\n  - Updated zlib to 1.4\n  - Bug tor-browser#45439: Rebase Tor Browser onto 153.7.0esr\n  - Bug tor-browser#45442: Backport Security Fixes from Firefox 160\n- Windows + macOS + Linux\n  - Updated Firefox to 153.7.0esr\n- Android\n  - Updated GeckoView to 153.7.0esr\n- Build System\n  - Android\n    - Bug tor-browser-build#41814: Use new apksigner from build-tools_r37_linux.zip in signing script\n    - Bug tor-browser-build#41912: Add --preserve-alignment true to apksigner sign calls",
+        "detectedAt": "2026-11-10T12:39:08.743Z",
+        "url": "https://blog.torproject.org/new-release-tor-browser-1601"
+      },
+      {
         "version": "16.0",
         "releaseDate": "2026-10-29T12:00:00.000Z",
         "releaseNotes": "Tor Browser 16.0 is now available for Desktop and Android. This is our first stable release based on Firefox ESR 153, incorporating a year's worth of changes that have been shipped upstream in Firefox. As part of this process, we've also completed our annual ESR transition audit, where we reviewed and addressed over 270 Bugzilla issues covering changes in Firefox that could negatively affect the privacy and security of Tor Browser users.\n\nWhat's new for Desktop?\n\nRedesigned Settings\nTor Browser connects millions of people to the Tor network (and by extension, the free and open internet) out of the box. However, for those who need to circumvent advanced censorship, boost their security level, or tailor their browsing experience, clear and easy-to-use Settings are essential. To that end, Tor Browser 16.0 introduces a complete redesign of the Settings experience based on a parallel redesign shipped in Firefox in June. Improvements include a cleaner layout, updated navigation, and clearer labels and descriptions aimed at making settings easier to find, understand, and manage. Other noteworthy changes include:\n- The long-standing \"General\" page has been retired, with its contents distributed across new pages for Appearance, Downloads, Tabs and browsing, Accessibility and Languages.\n- Pages and components that are unique to Tor browser like Connection and Security Level have been rebuilt from scratch using Firefox's new components so they look and feel consistent with the rest of Settings.\n- Some settings that, if enabled, could compromise your privacy or make your browser easier to fingerprint have either been hidden or feature clear warnings.\nFear not: your existing preferences will remain saved even if the original setting has moved or changed, and you can use the search bar at the top of Settings to find anything you're struggling to track down.\n\nGeneric window titles\nAnother new addition to Settings is the option to use generic window titles, which can be found under Privacy and security → Protections from third‑party applications. Like most browsers, Tor Browser uses the title of the page you're currently viewing for the names of its windows. However, other applications on your computer or your operating system itself can read these titles without special permissions. When enabled, this option simply replaces all window titles with \"Tor Browser\" — preventing other software from snooping on your browsing history. As always, for more comprehensive protection from third‑party applications on your device, we recommend using Tails.\nFor now, this option is strictly opt‑in, as we did not have sufficient time during this release cycle to properly evaluate potential side‑effects for users. In particular, we worry that enabling this setting may reduce the browser's usability for those who rely on accessibility tools (e.g. screen‑readers) or those with highly customized systems (e.g. less‑popular desktop managers, application switchers, etc). If you are one of these users, we would ask that you try using this setting, and report back any bugs or usability issues you find!\n📣 Generic window titles have also been upstreamed to Firefox as part of the Tor Uplift Project. Advanced Firefox users can enable this feature by opening about:config and setting privacy.exposeContentTitleInWindow (for normal windows) and privacy.exposeContentTitleInWindow.pbm (for private browsing windows) to false.\n\nNew user manual\nThe Tor Browser manual, which can be found by visiting about:manual or through the application menu (☰) → Help → Tor Browser manual, has also received a complete revamp. Since the release of our new Support portal in 2025, the team has had to maintain two sets of documentation: one for the traditional manual that's available to read in Tor Browser, and another for the new Support site. With this release, we've solved that problem by replacing the older material in the Tor Browser manual with our latest and greatest help content from the ne…",
@@ -35701,7 +35733,7 @@
       },
       {
         "version": "15.0.16",
-        "releaseDate": "2026-06-17T12:00:00.000Z",
+        "releaseDate": "2026-06-19T08:48:42.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
@@ -36114,6 +36146,13 @@
       }
     ],
     "mac:homebrew:tor-browser": [
+      {
+        "version": "16.0.1",
+        "releaseDate": "2026-11-10T11:59:19.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T12:39:08.743Z",
+        "url": null
+      },
       {
         "version": "16.0",
         "releaseDate": "2026-10-29T14:38:31.000Z",
@@ -45148,6 +45187,13 @@
     ],
     "windows:winget:BlenderFoundation.Blender": [
       {
+        "version": "5.3.0",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T12:39:08.743Z",
+        "url": null
+      },
+      {
         "version": "5.2.3",
         "releaseDate": "2026-10-22T12:00:00.000Z",
         "releaseNotes": null,
@@ -45380,6 +45426,12 @@
       }
     ],
     "mac:homebrew:blender": [
+      {
+        "version": "5.3.0",
+        "releaseDate": "2026-11-10T09:47:35.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T12:39:08.743Z"
+      },
       {
         "version": "5.2.3",
         "releaseDate": "2026-10-22T09:42:59.000Z",
