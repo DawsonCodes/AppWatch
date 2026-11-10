@@ -59,6 +59,12 @@
     ],
     "google:com.openai.chatgpt": [
       {
+        "version": "1.2026.307",
+        "releaseDate": "2026-11-09T22:30:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "1.2026.300",
         "releaseDate": "2026-10-30T11:32:59.000Z",
         "releaseNotes": "Minor fixes and improvements",
@@ -102,6 +108,13 @@
       }
     ],
     "windows:winget:OpenAI.ChatGPT": [
+      {
+        "version": "26.1103.7773.0",
+        "releaseDate": "2026-11-09T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
       {
         "version": "26.1103.4239.0",
         "releaseDate": "2026-11-07T12:00:00.000Z",
@@ -1825,6 +1838,13 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "4.23118.1",
+        "releaseDate": "2026-11-09T21:20:28.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
+      {
         "version": "4.23118.0",
         "releaseDate": "2026-11-05T18:53:09.000Z",
         "releaseNotes": null,
@@ -3023,6 +3043,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.55-release.00",
+        "releaseDate": "2026-11-09T14:12:38.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "1.2.54-release.02",
         "releaseDate": "2026-11-06T18:32:05.000Z",
         "releaseNotes": null,
@@ -4098,6 +4124,12 @@
     ],
     "apple:835599320": [
       {
+        "version": "47.7.0",
+        "releaseDate": "2026-11-09T23:05:06.000Z",
+        "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "47.6.0",
         "releaseDate": "2026-11-02T22:22:26.000Z",
         "releaseNotes": "Quickly find and tag your friends in comments.",
@@ -4494,6 +4526,12 @@
     ],
     "apple:1064216828": [
       {
+        "version": "2026.45.0",
+        "releaseDate": "2026-11-09T21:24:19.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "2026.44.1",
         "releaseDate": "2026-11-06T12:49:32.000Z",
         "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
@@ -4549,6 +4587,12 @@
       }
     ],
     "google:com.reddit.frontpage": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-10T01:13:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T18:25:49.000Z",
@@ -4649,6 +4693,12 @@
       }
     ],
     "google:com.pinterest": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T21:47:19.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T23:30:53.000Z",
@@ -7675,6 +7725,13 @@
     ],
     "windows:winget:Discord.Discord": [
       {
+        "version": "1.0.9268",
+        "releaseDate": "2026-11-09T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
+      {
         "version": "1.0.9267",
         "releaseDate": "2026-11-02T12:00:00.000Z",
         "releaseNotes": null,
@@ -8587,6 +8644,12 @@
       }
     ],
     "google:com.netflix.mediaclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T21:14:11.000Z",
+        "releaseNotes": "Get the best experience for enjoying recent hits and timeless classics with our latest Netflix update for your phone and tablet.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T23:22:07.000Z",
@@ -14174,6 +14237,13 @@
     ],
     "mac:homebrew:ea": [
       {
+        "version": "13.827.0.6340",
+        "releaseDate": "2026-11-09T21:55:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
+      {
         "version": "13.822.0.6335",
         "releaseDate": "2026-11-02T21:47:05.000Z",
         "releaseNotes": null,
@@ -18051,6 +18121,12 @@
     ],
     "apple:951937596": [
       {
+        "version": "5.2644.0",
+        "releaseDate": "2026-11-09T20:58:36.000Z",
+        "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "5.2643.0",
         "releaseDate": "2026-11-02T16:52:16.000Z",
         "releaseNotes": "This update includes performance improvements and bug fixes to make Outlook better for you.\n\nFeel free to send us any comments or questions by going to Settings > Help & Feedback – we’d love to hear from you.",
@@ -19370,6 +19446,13 @@
       }
     ],
     "mac:homebrew:slack": [
+      {
+        "version": "4.53.287",
+        "releaseDate": "2026-11-10T01:51:03.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
       {
         "version": "4.53.280",
         "releaseDate": "2026-11-03T22:56:53.000Z",
@@ -21698,6 +21781,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.353",
+        "releaseDate": "2026-11-10T02:54:41.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "1.7.352",
         "releaseDate": "2026-11-06T18:12:58.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -23128,6 +23217,12 @@
       }
     ],
     "apple:327630330": [
+      {
+        "version": "498.2.2",
+        "releaseDate": "2026-11-09T14:00:14.000Z",
+        "releaseNotes": "• Shared folders now keep their names when you open a link and sign in.\n• On iPhone Duo, you can now zoom images to full screen when the sidebar is hidden.\n• Referral invitations now use the account you’ve selected in Settings.\n• Team admins get a clearer message when they can’t invite someone outside their team.\n\nWe release updates regularly and are always looking for ways to make the app better. If you have any feedback or run into issues, come find us in our forums. We’re happy to help!",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
       {
         "version": "497.2.2",
         "releaseDate": "2026-11-02T14:00:12.000Z",
@@ -25333,6 +25428,12 @@
     ],
     "apple:507874739": [
       {
+        "version": "4.2645.41000",
+        "releaseDate": "2026-11-09T14:46:41.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "4.2644.41702",
         "releaseDate": "2026-11-02T21:00:53.000Z",
         "releaseNotes": "* Bug fixes and performance improvements",
@@ -26635,6 +26736,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-09T22:05:14.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-05T19:46:16.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-05T23:38:40.254Z"
@@ -27049,14 +27156,14 @@
       },
       {
         "version": "146.0.7680.72",
-        "releaseDate": "2026-03-16T09:34:56.000Z",
+        "releaseDate": "2026-03-23T15:28:08.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
       },
       {
         "version": "146.0.7680.76",
-        "releaseDate": "2026-03-16T09:34:56.000Z",
+        "releaseDate": "2026-03-23T15:28:08.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-03T05:21:21.747Z",
         "url": null
@@ -27084,6 +27191,13 @@
       }
     ],
     "mac:homebrew:google-chrome": [
+      {
+        "version": "157.0.8103.51",
+        "releaseDate": "2026-11-09T22:24:11.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
       {
         "version": "157.0.8103.39",
         "releaseDate": "2026-11-03T22:13:18.000Z",
@@ -29134,6 +29248,13 @@
     ],
     "mac:homebrew:microsoft-edge": [
       {
+        "version": "157.0.4341.46",
+        "releaseDate": "2026-11-10T01:33:23.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
+      {
         "version": "157.0.4341.42",
         "releaseDate": "2026-11-05T22:19:22.000Z",
         "releaseNotes": null,
@@ -30773,6 +30894,12 @@
     ],
     "apple:663592361": [
       {
+        "version": "7.245.0",
+        "releaseDate": "2026-11-09T11:18:04.000Z",
+        "releaseNotes": "• This update includes various bug fixes and improvements, including a few usability improvements on iPad.",
+        "detectedAt": "2026-11-10T04:07:19.231Z"
+      },
+      {
         "version": "7.244.0",
         "releaseDate": "2026-11-02T16:49:58.000Z",
         "releaseNotes": "• This update includes various bug fixes and improvements.",
@@ -30879,6 +31006,13 @@
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
       {
+        "version": "0.179.2.0",
+        "releaseDate": "2026-11-09T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": null
+      },
+      {
         "version": "0.178.3.0",
         "releaseDate": "2026-11-06T12:00:00.000Z",
         "releaseNotes": null,
@@ -30957,7 +31091,7 @@
       },
       {
         "version": "0.171.3.0",
-        "releaseDate": "2026-09-03T12:00:00.000Z",
+        "releaseDate": "2026-09-11T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -42977,6 +43111,13 @@
       }
     ],
     "windows:roblox-studio": [
+      {
+        "version": "0.747.0.7471481",
+        "releaseDate": "2026-11-10T00:54:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T04:07:19.231Z",
+        "url": "https://create.roblox.com/docs/release-notes/release-notes-747"
+      },
       {
         "version": "0.746.0.7461269",
         "releaseDate": "2026-11-05T18:19:51.000Z",
