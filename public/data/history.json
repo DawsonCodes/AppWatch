@@ -1838,6 +1838,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "5.1231.0",
+        "releaseDate": "2026-11-10T18:57:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
+      {
         "version": "4.23118.1",
         "releaseDate": "2026-11-09T21:20:28.000Z",
         "releaseNotes": null,
@@ -3223,6 +3229,13 @@
     ],
     "windows:winget:Microsoft.Copilot": [
       {
+        "version": "157.0.4341.46",
+        "releaseDate": "2026-11-10T17:37:36.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z",
+        "url": null
+      },
+      {
         "version": "157.0.4341.42",
         "releaseDate": "2026-11-06T00:22:33.000Z",
         "releaseNotes": null,
@@ -3382,6 +3395,12 @@
       }
     ],
     "mac:homebrew:perplexity": [
+      {
+        "version": "26.44.0",
+        "releaseDate": "2026-11-10T17:24:43.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "26.43.0",
         "releaseDate": "2026-10-30T19:46:48.000Z",
@@ -3689,6 +3708,12 @@
       }
     ],
     "google:com.instagram.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T14:39:16.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-02T16:18:16.000Z",
@@ -7687,6 +7712,12 @@
     ],
     "google:com.discord": [
       {
+        "version": "353.11 - Stable",
+        "releaseDate": "2026-11-07T01:02:42.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
+      {
         "version": "352.17 - Stable",
         "releaseDate": "2026-11-02T22:23:43.000Z",
         "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
@@ -10582,6 +10613,12 @@
       }
     ],
     "mac:homebrew:roblox": [
+      {
+        "version": "0.747.0.7471481",
+        "releaseDate": "2026-11-10T17:36:07.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "0.746.0.7461264",
         "releaseDate": "2026-11-04T20:05:21.000Z",
@@ -15938,6 +15975,13 @@
     "windows:steam:1172470": [
       {
         "version": null,
+        "releaseDate": "2026-11-10T18:15:47.000Z",
+        "releaseNotes": "Apex Legends: Latest Update 11/10/2026\n\nADJUSTED:\n\n•\nCrypto's drone is now able to scan through glass\n[/*]\n•\nRevive is no longer interrupted and canceled if drone timer ends\n[/*]\n\nDev note: This is the next batch of Crypto changes we alluded to last week. While we are confident this, paired with last week's changes, will give Crypto's kit a meaningful boost, we will continue to monitor match data and player sentiment - so please let us know what you think once you've been hands-on with the adjustments.\n\nREMOVED:\n\n•\nLoot Vaults have been removed from World's Edge\n[/*]\n\nDev note: While World's Edge has not been in map rotations this season, we're aware that some players have noted vault removals in private/custom matches. This was an intentional change that we missed in the most recent Patch Notes, made to keep focus on Strongholds as the main source of mid-match value and power.\n\nFIXED:\n\n•\nFixed an issue where entering Crypto's Tactical drone view triggers part of the entry animation twice\n[/*]\n•\nFixed an issue where the Ring indicator moves on the minimap when using Crypto's drone\n[/*]\n•\nFixed an issue where Mirage's decoys float in place when deployed while skydiving\n[/*]\n•\nFixed an issue where Sparrow's tracker dart could block ordnance damage\n[/*]\n•\nFixed an issue where visuals would smear when the finisher camera clips into terrain\n[/*]\n•\nFixed an issue on PC where the Ultimate input keybind is not showing in various modes\n[/*]",
+        "detectedAt": "2026-11-10T20:49:31.179Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643360717"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-06T18:48:48.000Z",
         "releaseNotes": "Apex Legends: Latest Update - 11/6/2026\n\nMAP CHANGE\n\n•\nRemoved E-District (night) from all map rotations, and rotating in E-District (day)\n[/*]\n\nDev Note: We are working on a handful of high impact changes that improve visibility on E-District night. We still want to deliver on the fantasy and atmosphere of a neon-soaked city, but feel we can do so in a way that doesn't compromise visibility. Expect reduced fog density, increased fog distance and adjusted color balance when E-District night comes back later this split.\n\nWe anticipate reimplementing an improved E-District (night) map near the end of the month. Thank you for your continued feedback.",
         "detectedAt": "2026-11-06T21:29:41.724Z",
@@ -18046,6 +18090,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T19:11:10.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-05T19:22:30.000Z",
@@ -22595,6 +22645,13 @@
     ],
     "mac:homebrew:notion": [
       {
+        "version": "7.43.0",
+        "releaseDate": "2026-11-10T19:40:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z",
+        "url": null
+      },
+      {
         "version": "7.42.3",
         "releaseDate": "2026-11-05T22:33:06.000Z",
         "releaseNotes": null,
@@ -26845,6 +26902,13 @@
     ],
     "windows:winget:Google.Chrome.EXE": [
       {
+        "version": "157.0.8103.51",
+        "releaseDate": "2026-11-07T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z",
+        "url": null
+      },
+      {
         "version": "157.0.8103.39",
         "releaseDate": "2026-11-03T12:00:00.000Z",
         "releaseNotes": null,
@@ -28187,6 +28251,12 @@
       }
     ],
     "mac:homebrew:firefox": [
+      {
+        "version": "160.0",
+        "releaseDate": "2026-11-10T16:26:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "159.0.1",
         "releaseDate": "2026-11-03T16:04:33.000Z",
@@ -30201,6 +30271,12 @@
       }
     ],
     "mac:homebrew:brave-browser": [
+      {
+        "version": "1.99.56.0",
+        "releaseDate": "2026-11-10T18:48:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "1.99.55.0",
         "releaseDate": "2026-11-05T18:46:26.000Z",
@@ -32461,6 +32537,12 @@
       }
     ],
     "mac:homebrew:opera": [
+      {
+        "version": "140.0.6074.17",
+        "releaseDate": "2026-11-10T13:35:37.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "139.0.6053.38",
         "releaseDate": "2026-11-04T10:37:15.000Z",
@@ -34942,6 +35024,12 @@
     ],
     "mac:homebrew:vivaldi": [
       {
+        "version": "8.3.4191.35",
+        "releaseDate": "2026-11-10T12:04:50.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
+      {
         "version": "8.3.4191.30",
         "releaseDate": "2026-11-06T08:04:56.000Z",
         "releaseNotes": null,
@@ -37298,6 +37386,12 @@
       }
     ],
     "mac:homebrew:arc": [
+      {
+        "version": "1.172.2",
+        "releaseDate": "2026-11-10T18:42:26.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "1.172.1",
         "releaseDate": "2026-11-05T21:34:24.000Z",
@@ -43383,6 +43477,12 @@
       }
     ],
     "mac:homebrew:robloxstudio": [
+      {
+        "version": "0.747.0.7471481",
+        "releaseDate": "2026-11-10T17:37:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-10T20:49:31.179Z"
+      },
       {
         "version": "0.746.0.7461269",
         "releaseDate": "2026-11-05T22:48:21.000Z",

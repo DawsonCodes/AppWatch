@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-10T12:39:08.743Z",
+  "trainedAt": "2026-11-10T20:49:31.179Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.579,
-    0.498,
-    0.522,
-    0.573
+    0.583,
+    0.502,
+    0.526,
+    0.577
   ],
   "listings": {
     "apple:1058959277": {
@@ -46,6 +46,11 @@
       }
     },
     "apple:1232780281": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -274,11 +279,6 @@
       }
     },
     "apple:431946152": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -416,7 +416,7 @@
     },
     "apple:6446901002": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -459,7 +459,7 @@
     },
     "apple:663592361": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -744,9 +744,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.85
+        "medianErrorDays": 2.05
       }
     },
     "google:com.disney.disneyplus": {
@@ -873,9 +873,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.9
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.49
       }
     },
     "google:com.google.android.youtube": {
@@ -892,9 +892,9 @@
     },
     "google:com.instagram.android": {
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.51
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.86
       }
     },
     "google:com.instagram.barcelona": {
@@ -1022,6 +1022,11 @@
       }
     },
     "google:com.spotify.music": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -1178,7 +1183,7 @@
     },
     "google:org.wikipedia": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -1207,9 +1212,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.11
+        "medianErrorDays": 0.85
       }
     },
     "mac:homebrew:bitwarden": {
@@ -1243,9 +1248,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.07
+        "medianErrorDays": 0.51
       }
     },
     "mac:homebrew:canva": {
@@ -1269,9 +1274,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 1,
-        "medianErrorDays": 0.61
+        "forecasts": 4,
+        "hits": 2,
+        "medianErrorDays": 0.72
       }
     },
     "mac:homebrew:discord": {
@@ -1326,9 +1331,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.07
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.11
       }
     },
     "mac:homebrew:godot": {
@@ -1419,9 +1424,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 1.68
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.29
       }
     },
     "mac:homebrew:opera": {
@@ -1431,9 +1436,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.54
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.43
       }
     },
     "mac:homebrew:opera-gx": {
@@ -1450,9 +1455,14 @@
     },
     "mac:homebrew:perplexity": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 3.78
       }
     },
     "mac:homebrew:proton-mail": {
@@ -1471,14 +1481,14 @@
     },
     "mac:homebrew:roblox": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 0.69
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 0.68
       }
     },
     "mac:homebrew:robloxstudio": {
@@ -1488,9 +1498,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 0,
-        "medianErrorDays": 2.99
+        "forecasts": 3,
+        "hits": 1,
+        "medianErrorDays": 0.97
       }
     },
     "mac:homebrew:signal": {
@@ -1572,9 +1582,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 1,
-        "medianErrorDays": 2.63
+        "medianErrorDays": 1.64
       }
     },
     "mac:homebrew:vlc": {
@@ -1662,9 +1672,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 1,
-        "medianErrorDays": 2.7
+        "forecasts": 4,
+        "hits": 2,
+        "medianErrorDays": 1.65
       }
     },
     "windows:steam:1623730": {
@@ -1815,7 +1825,7 @@
     "windows:winget:Dropbox.Dropbox": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.6,
+        "bandwidth": 0.45,
         "weekday": 1
       }
     },
@@ -1871,9 +1881,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.49
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.02
       }
     },
     "windows:winget:Google.GeminiDesktop": {
@@ -1902,9 +1912,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 0,
-        "medianErrorDays": 0.87
+        "medianErrorDays": 1.26
       }
     },
     "windows:winget:Microsoft.Edge": {
@@ -2087,13 +2097,13 @@
     }
   },
   "replay": {
-    "tests": 3008,
-    "hits": 1818,
-    "medianErrorDays": 2.52
+    "tests": 3013,
+    "hits": 1837,
+    "medianErrorDays": 2.48
   },
   "live": {
-    "forecasts": 294,
-    "hits": 230,
-    "medianErrorDays": 1.06
+    "forecasts": 310,
+    "hits": 240,
+    "medianErrorDays": 1.02
   }
 }
