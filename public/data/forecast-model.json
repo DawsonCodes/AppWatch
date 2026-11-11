@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-11T01:56:20.671Z",
+  "trainedAt": "2026-11-11T09:25:11.366Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.589,
-    0.51,
+    0.59,
+    0.513,
     0.535,
-    0.586
+    0.589
   ],
   "listings": {
     "apple:1058959277": {
@@ -690,9 +690,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 4,
-        "medianErrorDays": 2.64
+        "forecasts": 6,
+        "hits": 5,
+        "medianErrorDays": 2.3
       }
     },
     "google:com.android.chrome": {
@@ -764,7 +764,7 @@
     },
     "google:com.discord": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -881,9 +881,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 3.97
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 2.36
       }
     },
     "google:com.google.android.gm": {
@@ -934,6 +934,13 @@
         "forecasts": 2,
         "hits": 2,
         "medianErrorDays": 1.29
+      }
+    },
+    "google:com.microsoft.emmx": {
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 4.12
       }
     },
     "google:com.microsoft.office.officehubrow": {
@@ -1058,6 +1065,11 @@
         "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.4
       }
     },
     "google:com.strava": {
@@ -1282,9 +1294,9 @@
     },
     "mac:homebrew:chatgpt": {
       "live": {
-        "forecasts": 7,
+        "forecasts": 8,
         "hits": 5,
-        "medianErrorDays": 0.31
+        "medianErrorDays": 0.39
       }
     },
     "mac:homebrew:claude": {
@@ -1294,9 +1306,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 2,
-        "medianErrorDays": 0.72
+        "forecasts": 5,
+        "hits": 3,
+        "medianErrorDays": 0.83
       }
     },
     "mac:homebrew:discord": {
@@ -1819,13 +1831,13 @@
     "windows:winget:Brave.Brave": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 1.54
+        "medianErrorDays": 1.99
       }
     },
     "windows:winget:Canva.Canva": {
@@ -1971,6 +1983,11 @@
         "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 0.09
       }
     },
     "windows:winget:Notion.Notion": {
@@ -1980,9 +1997,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.02
+        "medianErrorDays": 1.73
       }
     },
     "windows:winget:OpenAI.ChatGPT": {
@@ -2028,9 +2045,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.05
+        "medianErrorDays": 0.98
       }
     },
     "windows:winget:Proton.ProtonMail": {
@@ -2047,7 +2064,7 @@
     },
     "windows:winget:Roblox.Roblox": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -2058,10 +2075,15 @@
       }
     },
     "windows:winget:SlackTechnologies.Slack": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 6.5
+        "medianErrorDays": 7.43
       }
     },
     "windows:winget:Spotify.Spotify": {
@@ -2142,13 +2164,13 @@
     }
   },
   "replay": {
-    "tests": 3033,
-    "hits": 1865,
-    "medianErrorDays": 2.45
+    "tests": 3040,
+    "hits": 1877,
+    "medianErrorDays": 2.46
   },
   "live": {
-    "forecasts": 334,
-    "hits": 253,
-    "medianErrorDays": 1
+    "forecasts": 345,
+    "hits": 259,
+    "medianErrorDays": 1.03
   }
 }

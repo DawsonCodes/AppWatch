@@ -201,6 +201,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1106.51428",
+        "releaseDate": "2026-11-11T03:45:01.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T09:25:11.366Z"
+      },
+      {
         "version": "26.1103.60933",
         "releaseDate": "2026-11-08T21:39:44.000Z",
         "releaseNotes": null,
@@ -1904,6 +1910,12 @@
       }
     ],
     "mac:homebrew:claude": [
+      {
+        "version": "5.1231.2",
+        "releaseDate": "2026-11-11T03:46:13.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T09:25:11.366Z"
+      },
       {
         "version": "5.1231.0",
         "releaseDate": "2026-11-10T18:57:08.000Z",
@@ -9008,6 +9020,12 @@
       }
     ],
     "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-11T00:02:12.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-11T09:25:11.366Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-09T06:16:34.000Z",
@@ -19053,6 +19071,13 @@
     ],
     "windows:winget:SlackTechnologies.Slack": [
       {
+        "version": "4.53.287",
+        "releaseDate": "2026-11-06T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T09:25:11.366Z",
+        "url": "https://slack.com/release-notes/windows"
+      },
+      {
         "version": "4.53.280",
         "releaseDate": "2026-11-03T12:00:00.000Z",
         "releaseNotes": "Security Guidance\n- This release includes security improvements. Updating is recommended.",
@@ -22124,6 +22149,13 @@
       }
     ],
     "windows:winget:Notion.Notion": [
+      {
+        "version": "7.43.0",
+        "releaseDate": "2026-11-09T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T09:25:11.366Z",
+        "url": null
+      },
       {
         "version": "7.42.3",
         "releaseDate": "2026-11-05T12:00:00.000Z",
@@ -28317,6 +28349,20 @@
     ],
     "windows:winget:Mozilla.Firefox": [
       {
+        "version": "160.0",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": "Version 160.0, first offered to Release channel users on November 10, 2026\n\nNew\n- The Picture-in-Picture player now has a playback speed setting, with options ranging from 0.25x to 2.0x speed. The setting appears only when the player window is medium-sized or larger.\n\n- Mini Window moves a tab or a selected part of a page into an always-on-top window while browsing. We’d appreciate feedback on Mozilla Connect as we develop and improve this early version of the feature.\n\n- History entries can now be dragged from the sidebar to the tab strip to open them in new tabs.\n- The address bar context menu now shows \"Paste and Search\" instead of \"Paste and Go\" when the copied text is a search term rather than a web address.\n- Pages saved as PDF now make mathematical content (MathML) accessible to assistive technology such as screen readers.\n- Websites that repeatedly ask to handle email (mailto:) and other links can now be blocked with a new “Never allow” button, and blocked sites can be managed in Settings.\n- Firefox now plays Matroska (MKV) files with FLAC, MP3, or PCM audio.\n- WebGL content on macOS is now rendered using Apple's Metal graphics API, which can improve performance on some sites.\n- In Smart Window, Organize Tabs is now available in French. Firefox can suggest groups of related open tabs and name each group in French.\n  This feature is part of a progressive roll out.\n  What is a progressive roll out?\n  Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.\n\nFixed\n- Fixed the first character typed into the address bar or search bar sometimes being lost when typing quickly right after clicking into it.\n- Increased the contrast between the domain name and the rest of the address in the address bar, making it easier to see which website is open.\n- Fixed Firefox freezing for several seconds when signing in to intranet sites that use NTLM or Kerberos (Negotiate) authentication.\n- Fixed double-tapping or long-pressing a word to select it, and tapping to place the cursor, not working near the cursor in text fields.\n- Fixed links opened in the background from other apps on macOS, such as RSS readers, bringing Firefox to the foreground.\n- Fixed downloaded files on macOS sometimes opening in the wrong application instead of the default one set in Finder.\n- Fixed simultaneous downloads on macOS never finishing when Firefox is set to ask where to save files. Only the first file showed a save dialog.\n- Restored meaningful filenames and the usual save workflow for PDFs opened in Preview from the macOS print dialog.\n- Various security fixes.\n\nEnterprise\n- For Firefox Enterprise updates and fixes, see the Firefox Enterprise Release Notes. For policy changes, see the Firefox admin docs changelog.\n\nDeveloper\n\nWeb Platform\n- The SpeechRecognition interface of the Web Speech API is now supported, providing on-device, real-time speech-to-text in 40 languages.\n- Firefox now supports the legacy ::-webkit-input-placeholder pseudo-element as an alias of ::placeholder, to improve compatibility with websites that use it to style placeholder text.\n\nCommunity Contributions\n- With the release of Firefox 160, we are pleased to welcome the developers who contributed their first code change to Firefox in this release, 22 of whom were brand new volunteers! Please join us in thanking each of these diligent and enthusiastic individuals, and take a look at their contributions:\n  - Ahmed ElGendy: 1327787, 2076777, 2076779\n  - Airat Makhmutov: 1321685\n  - Anton Bershanskyi: 2080310\n  - Austin Privatt: 2062135\n  - David Tamas: 1583480\n  - Davis Zeller-Pies: 2080307\n  - Felix Strüwe: 2081010\n  - Jack Boykin: 2083549\n  - James Bohan: 2071321\n  - kiasalehzadeh: 2077681\n  - Masanari Mizuno [:mznms]: 1662461\n  - Michał Fox: 1996443\n  - Mirko Kerezovic: 1297305,…",
+        "detectedAt": "2026-11-11T09:25:11.366Z",
+        "url": "https://www.firefox.com/en-US/firefox/160.0/releasenotes/"
+      },
+      {
+        "version": "159.0.1",
+        "releaseDate": "2026-11-03T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T09:25:11.366Z",
+        "url": null
+      },
+      {
         "version": "159.0",
         "releaseDate": "2026-10-27T12:00:00.000Z",
         "releaseNotes": "Version 159.0, first offered to Release channel users on October 27, 2026\n\nNew\n- Sharing on macOS now uses the native macOS share picker, which shows a preview of the page and recent contacts alongside AirDrop, Messages, and other apps. Several selected tabs can also be shared at once.\n\n- Saved passwords are now available from the sidebar by default, without having to add the Passwords tool first.\n\n- Smart Window can now watch pages for changes such as price drops or restocks. Type /watch in the chat to set one up, and Firefox sends a desktop notification when it finds a match. Watches can be managed from the Tasks button in the toolbar or the about:smartwindowtasks page.\n  This feature is part of a progressive roll out.\n  What is a progressive roll out?\n  Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.\n\nFixed\n- Fixed the file upload dialog opening in the last folder a file was saved to, such as Downloads, instead of the folder last used for uploads.\n- Fixed memory usage growing rapidly when sites such as the Zoom web app were left open in a minimized window.\n- Fixed some videos displaying incorrectly on Windows when NVIDIA RTX Video HDR is enabled.\n- Fixed bookmarks not being imported from Google Chrome profiles that are signed in to a Google account.\n- Fixed the Replace button in Apple Writing Tools on macOS inserting the clipboard contents instead of the rewritten text on some sites, such as Gmail.\n- Fixed long drop-down lists on web pages sometimes showing blank space in place of the last options until the list was scrolled.\n- Fixed some sites, such as Slack, failing to load instead of falling back to HTTP/2 when the site rejected an HTTP/3 request.\n- Fixed Firefox using excessive memory on Linux with AMD graphics when viewing map or place results on sites such as ChatGPT.\n- Fixed quick gamepad button presses sometimes being missed in web games on macOS.\n- Fixed tabs sometimes detaching into a new window when clicked on Linux with Wayland.\n- Fixed menus and panels fading in on Windows and Linux when animation effects are turned off in the operating system.\n- Various security fixes.\n\nChanged\n- On macOS, apps that sign in through the default browser, such as ChatGPT, now open their sign-in page in Firefox instead of Safari when Firefox is the default browser.\n- The AI chatbot's Summarize page option now sends the page's address to the chatbot provider instead of the page's text, so long pages are no longer cut short to a partial summary.\n- Open tabs can now be searched with a keyboard shortcut: Ctrl+Shift+A on Windows and Linux, Cmd+Shift+A on macOS. The Extensions and Themes shortcut is now Ctrl+Shift+F on Windows and Linux, and Cmd+Shift+E on macOS. These shortcuts can be changed in about:keyboard.\n- Web addresses written in the Javanese, Balinese, Canadian Aboriginal Syllabics, and N'Ko scripts are now displayed in their own script instead of as encoded \"xn--\" text.\n\nEnterprise\n- For Firefox Enterprise updates and fixes, see the Firefox Enterprise release notes. For policy changes, see the Firefox admin docs changelog.\n\nDeveloper\n- The Web Console now allows let, const, and class variables to be declared again, so a snippet can be edited and re-run without a redeclaration error.\n\nWeb Platform\n- Firefox now supports scroll-driven animations, so CSS animations and Web Animations API animations can progress with the scroll position of a container or with an element's visibility as it scrolls into view. This adds the animation-timeline, scroll-timeline, view-timeline, and animation-range properties and the ScrollTimeline and ViewTimeline interfaces.\n- Firefox now supports scoped custom element registries. A registry created with the CustomElementRegistry() constructor is separate from the global window.customElem…",
@@ -29138,6 +29184,12 @@
       }
     ],
     "google:com.microsoft.emmx": [
+      {
+        "version": "157.0.4341.42",
+        "releaseDate": "2026-11-09T02:21:03.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here’s what’s new in this release:\n• Fixed some bugs and improved stability and performance.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-11-11T09:25:11.366Z"
+      },
       {
         "version": "156.0.4314.56",
         "releaseDate": "2026-11-02T01:12:21.000Z",
@@ -30294,6 +30346,13 @@
       }
     ],
     "windows:winget:Brave.Brave": [
+      {
+        "version": "157.1.99.56",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": "- Upgraded Chromium to 157.0.8103.50. (#61672) (Changelog for 157.0.8103.50)",
+        "detectedAt": "2026-11-11T09:25:11.366Z",
+        "url": "https://brave.com/latest"
+      },
       {
         "version": "157.1.99.55",
         "releaseDate": "2026-11-04T12:00:00.000Z",
@@ -33471,6 +33530,13 @@
       }
     ],
     "windows:winget:Opera.OperaGX": [
+      {
+        "version": "139.0.6053.63",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T09:25:11.366Z",
+        "url": null
+      },
       {
         "version": "139.0.6053.42",
         "releaseDate": "2026-11-05T12:00:00.000Z",
@@ -41344,6 +41410,12 @@
     "google:com.squareup.cash": [
       {
         "version": null,
+        "releaseDate": "2026-11-06T22:01:45.000Z",
+        "releaseNotes": "Various bug fixes and improvements.",
+        "detectedAt": "2026-11-11T09:25:11.366Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-30T21:02:02.000Z",
         "releaseNotes": "Various bug fixes and improvements.",
         "detectedAt": "2026-10-31T21:13:35.336Z"
@@ -43419,6 +43491,12 @@
       }
     ],
     "google:com.google.android.apps.translate": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-10T04:50:30.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-11T09:25:11.366Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T22:01:59.000Z",
