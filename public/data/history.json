@@ -3018,6 +3018,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.64",
+        "releaseDate": "2026-11-11T14:04:38.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
         "version": "1.4.63",
         "releaseDate": "2026-11-09T19:05:59.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -3448,6 +3454,12 @@
       }
     ],
     "google:ai.perplexity.app.android": [
+      {
+        "version": "2.104.0",
+        "releaseDate": "2026-11-06T12:52:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "2.103.0",
         "releaseDate": "2026-10-30T15:48:00.000Z",
@@ -3907,6 +3919,12 @@
     "google:com.facebook.katana": [
       {
         "version": null,
+        "releaseDate": "2026-11-10T23:06:38.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-04T05:09:03.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-04T17:59:32.452Z"
@@ -3949,6 +3967,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.43",
+        "releaseDate": "2026-11-11T16:32:53.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "12.42.1",
         "releaseDate": "2026-11-09T16:22:25.000Z",
@@ -4047,6 +4071,12 @@
       }
     ],
     "google:com.twitter.android": [
+      {
+        "version": "12.42.0-prod.01",
+        "releaseDate": "2026-11-10T03:58:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "12.41.0-prod.01",
         "releaseDate": "2026-11-06T01:35:37.000Z",
@@ -4648,6 +4678,12 @@
     ],
     "apple:1064216828": [
       {
+        "version": "2026.45.1",
+        "releaseDate": "2026-11-11T14:38:32.000Z",
+        "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
         "version": "2026.45.0",
         "releaseDate": "2026-11-09T21:24:19.000Z",
         "releaseNotes": "Thanks for updating the Reddit app! We've updated our iOS app with bug fixes and changes to improve your overall experience.",
@@ -5031,6 +5067,12 @@
       }
     ],
     "apple:310633997": [
+      {
+        "version": "26.44.74",
+        "releaseDate": "2026-11-11T13:20:54.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "26.44.72",
         "releaseDate": "2026-11-09T14:07:04.000Z",
@@ -7258,6 +7300,13 @@
     ],
     "windows:winget:Telegram.TelegramDesktop": [
       {
+        "version": "7.4.2",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": "- Bug fixes and other minor improvements.",
+        "detectedAt": "2026-11-11T17:54:22.723Z",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.2"
+      },
+      {
         "version": "7.4.1",
         "releaseDate": "2026-11-06T12:00:00.000Z",
         "releaseNotes": "- Fix crash on launch on some Windows systems.\n- Bug fixes and other minor improvements.",
@@ -8652,6 +8701,12 @@
       }
     ],
     "apple:454638411": [
+      {
+        "version": "587.0.0",
+        "releaseDate": "2026-11-11T15:50:19.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "586.0.0",
         "releaseDate": "2026-11-04T21:04:47.000Z",
@@ -10498,6 +10553,13 @@
       }
     ],
     "windows:winget:Roblox.Roblox": [
+      {
+        "version": "0.747",
+        "releaseDate": "2026-11-09T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z",
+        "url": null
+      },
       {
         "version": "0.746",
         "releaseDate": "2026-11-04T12:00:00.000Z",
@@ -16874,6 +16936,13 @@
       }
     ],
     "windows:steam:553850": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-11T10:20:10.000Z",
+        "releaseNotes": "Devoid of Liberty: 7.2.3\n\nGreetings, Helldivers. Today's hotfix tackles crash and bug fixes, as well as unblocking some cosmetic modifications.\n\n🤝 Community Feedback Changes\n\n•\n\\ Fixed an issue preventing certain cosmetic mods from functioning.\n[/*]\n\n🔧 Fixes\n\nCrash Fixes\n\n•\nFixed a crash that could occur when receiving status effects such as poison or gas in Hive World caves\n[/*]\n•\n\\ Fixed a crash that could occur while exiting the game\n[/*]\n•\n\\ Fixed a crash that could occur on boot when the game had issues with writing permissions on Windows \n[/*]\n\nMisc\n\n•\nFixed issue where fire did not work and couldn’t be spread inside caves\n[/*]\n•\nFixed a level generation issue on Hive World caves where large assets could spawn outside the cave and block mission progression and stratagem call-in\n\n[/*]\n\n🧠 Known Issues",
+        "detectedAt": "2026-11-11T17:54:22.723Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144178073"
+      },
       {
         "version": null,
         "releaseDate": "2026-10-29T10:00:06.000Z",
@@ -23517,6 +23586,12 @@
     ],
     "google:com.dropbox.android": [
       {
+        "version": "498.2.2",
+        "releaseDate": "2026-11-10T17:06:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
         "version": "497.2.2",
         "releaseDate": "2026-11-03T17:05:36.000Z",
         "releaseNotes": null,
@@ -26246,6 +26321,12 @@
       }
     ],
     "mac:homebrew:google-drive": [
+      {
+        "version": "134.0.1",
+        "releaseDate": "2026-11-11T13:52:45.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "133.0.2",
         "releaseDate": "2026-10-20T04:16:50.000Z",
@@ -31290,6 +31371,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.302.0",
+        "releaseDate": "2026-11-09T09:35:47.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
         "version": "5.301.1",
         "releaseDate": "2026-11-02T21:04:42.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -32803,6 +32890,12 @@
       }
     ],
     "mac:homebrew:opera": [
+      {
+        "version": "140.0.6074.18",
+        "releaseDate": "2026-11-11T10:37:46.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "140.0.6074.17",
         "releaseDate": "2026-11-10T13:35:37.000Z",
@@ -36000,6 +36093,12 @@
       }
     ],
     "google:org.torproject.torbrowser": [
+      {
+        "version": "16.0.2 (153.7.0esr)",
+        "releaseDate": "2026-11-10T20:27:42.000Z",
+        "releaseNotes": "Tor Browser is always improving with each new release. This release includes critical security improvements. Please read the release notes for more information about what changed in this version. https://blog.torproject.org/new-release-tor-browser-1602/",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "16.0 (153.6.0esr)",
         "releaseDate": "2026-10-29T12:20:39.000Z",
@@ -40357,6 +40456,12 @@
     ],
     "apple:979659905": [
       {
+        "version": "7.12.0",
+        "releaseDate": "2026-11-11T12:46:20.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
         "version": "7.11.9",
         "releaseDate": "2026-10-30T16:43:26.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -41604,6 +41709,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-11-11T15:35:50.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-10T19:49:29.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-11-11T01:56:20.671Z"
@@ -41719,6 +41830,12 @@
     ],
     "apple:323229106": [
       {
+        "version": "5.27.5.0",
+        "releaseDate": "2026-11-11T13:18:27.000Z",
+        "releaseNotes": "Saving time & avoiding traffic is even simpler with this update:\n\nFixed a bug so times are clearly displayed when planning a drive.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
+      {
         "version": "5.27.0.0",
         "releaseDate": "2026-11-04T15:05:31.000Z",
         "releaseNotes": "This version includes several bug fixes and performance improvements.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
@@ -41762,6 +41879,12 @@
       }
     ],
     "google:com.waze": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-10T09:36:07.000Z",
+        "releaseNotes": "This version includes several bug fixes and performance improvements.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-03T12:52:32.000Z",
@@ -43127,6 +43250,12 @@
       }
     ],
     "apple:570060128": [
+      {
+        "version": "7.148.1",
+        "releaseDate": "2026-11-11T15:39:36.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-11T17:54:22.723Z"
+      },
       {
         "version": "7.148.0",
         "releaseDate": "2026-11-09T16:56:36.000Z",
