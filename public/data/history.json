@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.307",
+        "releaseDate": "2026-11-10T17:56:25.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "1.2026.300",
         "releaseDate": "2026-11-03T18:55:49.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -937,6 +943,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261109.19",
+        "releaseDate": "2026-11-10T13:52:49.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "1.261106.19",
         "releaseDate": "2026-11-08T09:22:07.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1034,6 +1046,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261109.19",
+        "releaseDate": "2026-11-10T04:17:21.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": "1.261106.19",
         "releaseDate": "2026-11-07T23:02:18.000Z",
@@ -1157,10 +1175,59 @@
     ],
     "windows:winget:Anthropic.Claude": [
       {
+        "version": "3.6556.2",
+        "releaseDate": "2026-10-23T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "3.1623.3",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "3.1623.4",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "3.6556.1",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "3.1623.1",
+        "releaseDate": "2026-10-21T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "3.1623.0",
+        "releaseDate": "2026-10-20T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
         "version": "2.42304.2",
         "releaseDate": "2026-10-19T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.42304.0",
+        "releaseDate": "2026-10-15T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
         "url": null
       },
       {
@@ -1192,6 +1259,104 @@
         "url": null
       },
       {
+        "version": "2.19675.0",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.16120.0",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.9939.4",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.9939.2",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.49585.0",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.52386.3",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.2553.1",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.2553.13",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.7032.0",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.46388.4",
+        "releaseDate": "2026-10-06T23:57:47.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.46388.3",
+        "releaseDate": "2026-10-06T23:57:30.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.46388.1",
+        "releaseDate": "2026-10-06T23:31:19.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.46388.2",
+        "releaseDate": "2026-10-06T23:31:19.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "1.44121.4",
+        "releaseDate": "2026-10-06T23:30:58.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
         "version": "2.26454.0",
         "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": null,
@@ -1201,104 +1366,6 @@
       {
         "version": "2.19675.1",
         "releaseDate": "2026-10-05T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.19675.0",
-        "releaseDate": "2026-10-01T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.16120.0",
-        "releaseDate": "2026-09-29T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.9939.4",
-        "releaseDate": "2026-09-28T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.9939.2",
-        "releaseDate": "2026-09-24T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.44121.4",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.46388.1",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.46388.2",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.46388.3",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.46388.4",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.49585.0",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.52386.3",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.2553.1",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.2553.13",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.7032.0",
-        "releaseDate": "2026-09-22T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -1780,6 +1847,13 @@
         "url": null
       },
       {
+        "version": "1.2278.0",
+        "releaseDate": "2026-04-17T21:18:02.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
         "version": "1.3036.0",
         "releaseDate": "2026-04-17T08:50:50.000Z",
         "releaseNotes": null,
@@ -1796,13 +1870,6 @@
       {
         "version": "1.2773.0",
         "releaseDate": "2026-04-15T22:23:55.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "1.2278.0",
-        "releaseDate": "2026-04-14T22:44:52.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -3049,6 +3116,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.56-release.00",
+        "releaseDate": "2026-11-10T18:24:46.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "1.2.55-release.00",
         "releaseDate": "2026-11-09T14:12:38.000Z",
         "releaseNotes": null,
@@ -3765,6 +3838,12 @@
     ],
     "apple:284882215": [
       {
+        "version": "587.0.0",
+        "releaseDate": "2026-11-10T17:34:48.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "586.0.0",
         "releaseDate": "2026-11-04T18:21:38.000Z",
         "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
@@ -4306,6 +4385,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-11-10T09:40:50.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-07T05:13:35.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-11-07T16:25:56.080Z"
@@ -4718,6 +4803,12 @@
       }
     ],
     "google:com.pinterest": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-11T00:32:25.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-09T21:47:19.000Z",
@@ -5792,6 +5883,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.36.1",
+        "releaseDate": "2026-11-10T13:56:52.000Z",
+        "releaseNotes": "• Stickers are supported in quoted replies, so you have another way to make a point that sticks around.\n• Following last week's update, consider this a duet that includes additional improvements for the iPhone Duo.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": "8.36",
         "releaseDate": "2026-11-07T15:30:45.000Z",
@@ -7068,6 +7165,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-10T16:59:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-06T21:26:01.000Z",
@@ -8750,6 +8853,12 @@
     ],
     "apple:1446075923": [
       {
+        "version": "5.21.0",
+        "releaseDate": "2026-11-10T19:17:06.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "5.20.5",
         "releaseDate": "2026-11-01T09:04:06.000Z",
         "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
@@ -8819,6 +8928,12 @@
       }
     ],
     "apple:545519333": [
+      {
+        "version": "10.156.2",
+        "releaseDate": "2026-11-10T17:02:15.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": "10.156.1",
         "releaseDate": "2026-11-08T16:11:05.000Z",
@@ -9039,6 +9154,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-09T15:04:13.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-09T10:13:18.000Z",
@@ -18301,6 +18422,12 @@
     ],
     "mac:homebrew:microsoft-outlook": [
       {
+        "version": "16.115.26110837",
+        "releaseDate": "2026-11-10T17:11:43.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "16.114.26102720",
         "releaseDate": "2026-11-04T19:38:06.000Z",
         "releaseNotes": null,
@@ -20141,6 +20268,13 @@
     ],
     "windows:winget:Microsoft.Teams": [
       {
+        "version": "26288.2004.5269.3420",
+        "releaseDate": "2026-10-23T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
         "version": "26276.513.5241.9675",
         "releaseDate": "2026-10-15T12:00:00.000Z",
         "releaseNotes": null,
@@ -21923,6 +22057,12 @@
     ],
     "google:notion.id": [
       {
+        "version": "0.6.4300",
+        "releaseDate": "2026-11-10T20:58:49.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "0.6.4288",
         "releaseDate": "2026-11-05T22:44:51.000Z",
         "releaseNotes": null,
@@ -21984,6 +22124,20 @@
       }
     ],
     "windows:winget:Notion.Notion": [
+      {
+        "version": "7.42.3",
+        "releaseDate": "2026-11-05T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "7.42.1",
+        "releaseDate": "2026-11-03T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
       {
         "version": "7.41.1",
         "releaseDate": "2026-10-27T12:00:00.000Z",
@@ -24002,6 +24156,12 @@
     ],
     "mac:homebrew:dropbox": [
       {
+        "version": "278.4.4020",
+        "releaseDate": "2026-11-10T21:55:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
         "version": "276.4.5325",
         "releaseDate": "2026-10-27T18:52:17.000Z",
         "releaseNotes": null,
@@ -25548,6 +25708,12 @@
     "google:com.google.android.apps.docs": [
       {
         "version": null,
+        "releaseDate": "2026-11-10T19:56:34.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-03T19:17:28.000Z",
         "releaseNotes": "* Bug fixes and performance improvements.",
         "detectedAt": "2026-11-04T00:37:14.451Z"
@@ -26753,6 +26919,12 @@
       }
     ],
     "apple:535886823": [
+      {
+        "version": "158.0.8127.32",
+        "releaseDate": "2026-11-10T19:22:02.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• You can now autofill more data types, including information from your passport, driver's license, national ID, or vehicle information.\n• Your new tab page customizations and address bar placement now sync automatically across your signed-in mobile devices.\n• Stability and performance improvements.",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": "157.0.8103.37",
         "releaseDate": "2026-11-03T18:36:06.000Z",
@@ -30123,11 +30295,32 @@
     ],
     "windows:winget:Brave.Brave": [
       {
+        "version": "157.1.99.55",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": "Leo\n- Improved Leo to present a list of choices when it needs clarification on a task. (#59649)\n- Improved suggested follow-up prompts. (#59650)\n- Updated AI Chat models. (#59701)\n- Fixed issue where a compromised Leo conversation frame could approve AI Chat tool-use requests without a direct user action. (#59703)\nGeneral\n- Re-enabled \"Allow split view drag-and-drop on left or right edge of window\" setting under brave://settings/braveContent. (#49752)\n- Updated icon in URL bar to magnifying glass for Brave Search. (#58178)\n- Upgraded Chromium to 157.0.8103.39. (#60882) (Changelog for 157.0.8103.39)",
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": "https://brave.com/latest"
+      },
+      {
         "version": "156.1.98.63",
         "releaseDate": "2026-10-30T12:00:00.000Z",
         "releaseNotes": "- Upgraded Chromium to 156.0.8078.80. (#60306) (Changelog for 156.0.8078.80)",
         "detectedAt": "2026-11-01T09:16:19.103Z",
         "url": "https://brave.com/latest"
+      },
+      {
+        "version": "156.1.98.62",
+        "releaseDate": "2026-10-28T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "156.1.98.60",
+        "releaseDate": "2026-10-21T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
       },
       {
         "version": "155.1.97.59",
@@ -30186,6 +30379,20 @@
         "url": null
       },
       {
+        "version": "152.1.94.119",
+        "releaseDate": "2026-09-04T21:24:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "152.1.94.117",
+        "releaseDate": "2026-09-04T21:24:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
         "version": "152.1.94.121",
         "releaseDate": "2026-09-04T12:00:00.000Z",
         "releaseNotes": null,
@@ -30193,22 +30400,8 @@
         "url": null
       },
       {
-        "version": "152.1.94.119",
-        "releaseDate": "2026-09-02T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "152.1.94.117",
-        "releaseDate": "2026-08-26T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
         "version": "151.1.93.138",
-        "releaseDate": "2026-08-26T12:00:00.000Z",
+        "releaseDate": "2026-08-28T20:06:36.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -32130,6 +32323,20 @@
     ],
     "windows:winget:Opera.Opera": [
       {
+        "version": "140.0.6074.17",
+        "releaseDate": "2026-11-10T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
+        "version": "139.0.6053.38",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z",
+        "url": null
+      },
+      {
         "version": "139.0.6053.22",
         "releaseDate": "2026-10-29T12:00:00.000Z",
         "releaseNotes": null,
@@ -32200,22 +32407,22 @@
         "url": null
       },
       {
-        "version": "135.0.5973.123",
-        "releaseDate": "2026-09-10T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-11-02T09:30:01.927Z",
-        "url": null
-      },
-      {
         "version": "135.0.5973.76",
-        "releaseDate": "2026-09-04T12:00:00.000Z",
+        "releaseDate": "2026-09-10T13:40:02.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
       },
       {
         "version": "135.0.5973.92",
-        "releaseDate": "2026-09-04T12:00:00.000Z",
+        "releaseDate": "2026-09-10T13:40:02.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-02T09:30:01.927Z",
+        "url": null
+      },
+      {
+        "version": "135.0.5973.123",
+        "releaseDate": "2026-09-10T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
@@ -33959,6 +34166,12 @@
       }
     ],
     "mac:homebrew:opera-gx": [
+      {
+        "version": "139.0.6053.63",
+        "releaseDate": "2026-11-10T22:39:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": "139.0.6053.42",
         "releaseDate": "2026-11-05T11:02:33.000Z",
@@ -41317,6 +41530,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-10T19:49:29.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-11T01:56:20.671Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T14:40:50.000Z",
