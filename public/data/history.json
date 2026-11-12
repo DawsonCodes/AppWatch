@@ -115,6 +115,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1106.6628.0",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T00:43:54.088Z",
+        "url": null
+      },
+      {
         "version": "26.1103.7773.0",
         "releaseDate": "2026-11-09T12:00:00.000Z",
         "releaseNotes": null,
@@ -193,7 +200,7 @@
       },
       {
         "version": "26.1013.4894.0",
-        "releaseDate": "2026-10-17T12:00:00.000Z",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null
@@ -1052,6 +1059,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261110.19",
+        "releaseDate": "2026-11-11T04:32:19.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "1.261109.19",
         "releaseDate": "2026-11-10T04:17:21.000Z",
@@ -3243,6 +3256,12 @@
       }
     ],
     "apple:541164041": [
+      {
+        "version": "2.116",
+        "releaseDate": "2026-11-12T00:08:56.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "2.115.3",
         "releaseDate": "2026-11-04T10:09:44.000Z",
@@ -5938,6 +5957,12 @@
     ],
     "apple:874139669": [
       {
+        "version": "8.37",
+        "releaseDate": "2026-11-11T22:13:48.000Z",
+        "releaseNotes": "• Stickers are supported in quoted replies, so you have another way to make a point that sticks around.\n• Following last week's update, consider this a duet that includes additional improvements for the iPhone Duo.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "8.36.1",
         "releaseDate": "2026-11-10T13:56:52.000Z",
         "releaseNotes": "• Stickers are supported in quoted replies, so you have another way to make a point that sticks around.\n• Following last week's update, consider this a duet that includes additional improvements for the iPhone Duo.",
@@ -6145,6 +6170,13 @@
       }
     ],
     "windows:winget:OpenWhisperSystems.Signal": [
+      {
+        "version": "8.35.0",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T00:43:54.088Z",
+        "url": null
+      },
       {
         "version": "8.34.0",
         "releaseDate": "2026-11-05T12:00:00.000Z",
@@ -10430,6 +10462,12 @@
     ],
     "apple:431946152": [
       {
+        "version": "2.747.1480",
+        "releaseDate": "2026-11-11T20:08:07.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "2.746.1264",
         "releaseDate": "2026-11-04T17:57:20.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
@@ -14487,6 +14525,12 @@
     ],
     "mac:homebrew:ea": [
       {
+        "version": "13.827.1.6341",
+        "releaseDate": "2026-11-11T18:54:55.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "13.827.0.6340",
         "releaseDate": "2026-11-09T21:55:29.000Z",
         "releaseNotes": null,
@@ -15151,6 +15195,13 @@
       }
     ],
     "windows:steam:730": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-11T23:03:20.000Z",
+        "releaseNotes": "Counter-Strike 2 Update\n\n\\[ ANIMATION ]\n\n•\nFixed some cases of popping and glitching when switching weapons and reloading at extreme angles\n[/*]\n\n\\[ MISC ]\n\n•\nFixed bot pathing issue in Retakes game mode\n[/*]\n•\nFixed a rendering hang on DX11\n[/*]\n•\nImproved avx / avx512 instruction set detection\n[/*]\n•\nMiscellaneous stability and performance improvements\n[/*]",
+        "detectedAt": "2026-11-12T00:43:54.088Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144180746"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-05T00:54:07.000Z",
@@ -19040,6 +19091,12 @@
     ],
     "apple:618783545": [
       {
+        "version": "26.11.20",
+        "releaseDate": "2026-11-11T20:04:51.000Z",
+        "releaseNotes": "Bug Fixes\n• Copying text from a canvas that included cards (like files, or links to other lists/canvases in Slack) used to copy nothing at all. Now it copies everything, just like it should.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "26.11.10",
         "releaseDate": "2026-11-04T14:05:49.000Z",
         "releaseNotes": "Bug Fixes\n• We cleaned the code to make sure that everything’s running smoothly. Slack — now with a streak-free shine.",
@@ -22150,6 +22207,12 @@
       }
     ],
     "google:notion.id": [
+      {
+        "version": "0.6.4304",
+        "releaseDate": "2026-11-11T17:57:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "0.6.4300",
         "releaseDate": "2026-11-10T20:58:49.000Z",
@@ -26984,6 +27047,12 @@
     "google:com.google.android.apps.photos": [
       {
         "version": null,
+        "releaseDate": "2026-11-11T16:50:22.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-03T22:04:52.000Z",
         "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
         "detectedAt": "2026-11-04T00:37:14.451Z"
@@ -27090,6 +27159,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-11T22:56:42.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-09T22:05:14.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-10T04:07:19.231Z"
@@ -27186,6 +27261,13 @@
       }
     ],
     "windows:winget:Google.Chrome.EXE": [
+      {
+        "version": "157.0.8103.79",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T00:43:54.088Z",
+        "url": null
+      },
       {
         "version": "157.0.8103.51",
         "releaseDate": "2026-11-07T12:00:00.000Z",
@@ -27552,6 +27634,12 @@
       }
     ],
     "mac:homebrew:google-chrome": [
+      {
+        "version": "157.0.8103.79",
+        "releaseDate": "2026-11-11T22:09:25.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "157.0.8103.51",
         "releaseDate": "2026-11-09T22:24:11.000Z",
@@ -30365,6 +30453,12 @@
       }
     ],
     "google:com.brave.browser": [
+      {
+        "version": "1.99.56",
+        "releaseDate": "2026-11-10T22:35:27.000Z",
+        "releaseNotes": "In this release we:\n- Made several general stability improvements.\n- Upgraded to Chromium 157.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "1.99.55",
         "releaseDate": "2026-11-05T21:14:01.000Z",
@@ -41076,6 +41170,12 @@
     ],
     "apple:719972451": [
       {
+        "version": "8.44.1",
+        "releaseDate": "2026-11-11T17:20:34.000Z",
+        "releaseNotes": "Minor updates and performance improvements",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "8.44.0",
         "releaseDate": "2026-11-09T06:00:23.000Z",
         "releaseNotes": "Minor updates and performance improvements",
@@ -41608,6 +41708,12 @@
     ],
     "google:com.coinbase.android": [
       {
+        "version": "14.43.39",
+        "releaseDate": "2026-11-05T22:05:17.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "14.42.24",
         "releaseDate": "2026-10-29T23:04:00.000Z",
         "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
@@ -42104,6 +42210,12 @@
     ],
     "google:me.lyft.android": [
       {
+        "version": "2026.43.3.1793777000",
+        "releaseDate": "2026-11-06T19:02:15.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
+      {
         "version": "2026.42.3.1793172413",
         "releaseDate": "2026-10-30T19:02:46.000Z",
         "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
@@ -42153,6 +42265,12 @@
       }
     ],
     "apple:401626263": [
+      {
+        "version": "26.46",
+        "releaseDate": "2026-11-11T18:45:59.000Z",
+        "releaseNotes": "Get ready to get out there. Plan, book, and travel with the Airbnb app. Now you can also book unique hotels, find a rental car, have groceries delivered when you check in, and grab tickets to exciting attractions on your trip.* Get a day-by-day view of your trip and connect with friends to share travel recommendations. And if you’re a host, there’re new, smarter, more powerful tools to help you manage and optimize your listing. \n *Where available",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "26.45",
         "releaseDate": "2026-11-05T14:51:35.000Z",
@@ -42241,6 +42359,12 @@
       }
     ],
     "apple:426826309": [
+      {
+        "version": "489.0.0",
+        "releaseDate": "2026-11-11T18:57:21.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-11-12T00:43:54.088Z"
+      },
       {
         "version": "488.0.0",
         "releaseDate": "2026-11-04T19:22:45.000Z",
