@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-12T09:50:48.258Z",
+  "trainedAt": "2026-11-12T18:19:39.547Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.588,
-    0.511,
-    0.535,
-    0.602
+    0.587,
+    0.51,
+    0.534,
+    0.601
   ],
   "listings": {
     "apple:1058959277": {
@@ -826,7 +826,7 @@
     },
     "google:com.duckduckgo.mobile.android": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -912,7 +912,7 @@
     },
     "google:com.google.android.apps.translate": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -1115,9 +1115,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 1.03
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.76
       }
     },
     "google:com.twitter.android": {
@@ -1220,9 +1220,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 6.61
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 6.41
       }
     },
     "google:org.telegram.messenger": {
@@ -1342,9 +1342,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 0.83
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 0.72
       }
     },
     "mac:homebrew:discord": {
@@ -1606,15 +1606,10 @@
       }
     },
     "mac:homebrew:spotify": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.81
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.61
       }
     },
     "mac:homebrew:telegram": {
@@ -1648,9 +1643,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 2.88
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.82
       }
     },
     "mac:homebrew:vivaldi": {
@@ -1679,9 +1674,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 3,
-        "medianErrorDays": 0.9
+        "medianErrorDays": 0.89
       }
     },
     "mac:homebrew:zen": {
@@ -1691,9 +1686,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 1.2
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 0.76
       }
     },
     "mac:homebrew:zoom": {
@@ -2205,16 +2200,23 @@
         "hits": 1,
         "medianErrorDays": 1.87
       }
+    },
+    "windows:winget:Zoom.Zoom": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
     }
   },
   "replay": {
-    "tests": 3076,
+    "tests": 3078,
     "hits": 1904,
     "medianErrorDays": 2.41
   },
   "live": {
-    "forecasts": 394,
-    "hits": 296,
-    "medianErrorDays": 1.02
+    "forecasts": 401,
+    "hits": 302,
+    "medianErrorDays": 1
   }
 }

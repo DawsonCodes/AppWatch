@@ -1930,6 +1930,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "5.11492.0",
+        "releaseDate": "2026-11-12T15:48:42.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
+      {
         "version": "5.1231.2",
         "releaseDate": "2026-11-11T03:46:13.000Z",
         "releaseNotes": null,
@@ -5271,6 +5277,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.45.21",
+        "releaseDate": "2026-11-12T14:25:55.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
       {
         "version": "26.45.13",
         "releaseDate": "2026-11-09T14:07:04.000Z",
@@ -9533,6 +9545,12 @@
       }
     ],
     "mac:homebrew:spotify": [
+      {
+        "version": "1.3.9.2055",
+        "releaseDate": "2026-11-12T10:13:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
       {
         "version": "1.3.8.620",
         "releaseDate": "2026-11-06T16:20:11.000Z",
@@ -28483,6 +28501,12 @@
     ],
     "google:org.mozilla.firefox": [
       {
+        "version": "160.0",
+        "releaseDate": "2026-11-05T13:59:30.000Z",
+        "releaseNotes": "- Local Network Access restrictions are now enabled by default. Websites must now ask for permission before connecting to devices on the local network or to apps and services on the device.\n- Fixed non-Latin web addresses displaying as encoded text.\n- Fixed web addresses containing spaces being searched for instead of opened.\n- Fixed double-tapping or long-pressing a word to select it, and tapping to place the cursor, not working near the cursor in text fields.",
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
+      {
         "version": "159.0.1",
         "releaseDate": "2026-11-02T20:39:02.000Z",
         "releaseNotes": "- Fixed passkey sign-in failing on websites that share passkeys across related sites, such as Facebook and Instagram.\n- Updated time zone data to reflect Cuba's decision not to end daylight saving time on November 1, 2026.\n- Various security & stability fixes.",
@@ -33763,6 +33787,12 @@
     "google:com.opera.gx": [
       {
         "version": null,
+        "releaseDate": "2026-11-12T14:47:52.000Z",
+        "releaseNotes": "Thanks for choosing Opera GX! This version includes latest bug fixes and improvements.",
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-02T12:34:30.000Z",
         "releaseNotes": "Thanks for choosing Opera GX! This version includes latest bug fixes and improvements.",
         "detectedAt": "2026-11-02T20:22:33.783Z"
@@ -38877,6 +38907,12 @@
     ],
     "mac:homebrew:zen": [
       {
+        "version": "1.24.2b",
+        "releaseDate": "2026-11-12T11:22:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
+      {
         "version": "1.24.1b",
         "releaseDate": "2026-11-06T20:06:07.000Z",
         "releaseNotes": null,
@@ -42474,6 +42510,12 @@
     ],
     "google:com.strava": [
       {
+        "version": null,
+        "releaseDate": "2026-11-10T07:48:03.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
+      {
         "version": "488.11",
         "releaseDate": "2026-11-02T21:12:50.000Z",
         "releaseNotes": "Log your strength workouts faster  Finished your workout? Copy a past session, or add a photo, voice note, or text of it. Your exercises, reps, and weights are logged for you, and your muscle map updates automatically.",
@@ -45324,6 +45366,12 @@
       }
     ],
     "mac:homebrew:unity": [
+      {
+        "version": "6000.6.9f1",
+        "releaseDate": "2026-11-12T11:07:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T18:19:39.547Z"
+      },
       {
         "version": "6000.6.8f1",
         "releaseDate": "2026-11-03T17:36:15.000Z",
