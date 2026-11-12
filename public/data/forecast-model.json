@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-12T00:43:54.088Z",
+  "trainedAt": "2026-11-12T09:50:48.258Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.587,
-    0.51,
-    0.534,
-    0.601
+    0.588,
+    0.511,
+    0.535,
+    0.602
   ],
   "listings": {
     "apple:1058959277": {
@@ -470,9 +470,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 1,
-        "medianErrorDays": 0.51
+        "forecasts": 4,
+        "hits": 2,
+        "medianErrorDays": 0.41
       }
     },
     "apple:6477489729": {
@@ -518,9 +518,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 2.26
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 3.37
       }
     },
     "apple:686449807": {
@@ -741,7 +741,7 @@
     "google:com.brave.browser": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -764,7 +764,7 @@
     },
     "google:com.coinbase.android": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -806,6 +806,11 @@
       }
     },
     "google:com.disney.disneyplus": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -821,7 +826,7 @@
     },
     "google:com.duckduckgo.mobile.android": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -907,7 +912,7 @@
     },
     "google:com.google.android.apps.translate": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -1055,9 +1060,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.05
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.28
       }
     },
     "google:com.shazam.android": {
@@ -1172,9 +1177,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 3,
-        "medianErrorDays": 2.47
+        "medianErrorDays": 2.07
       }
     },
     "google:com.zhiliaoapp.musically": {
@@ -1583,9 +1588,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 0.76
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 0.43
       }
     },
     "mac:homebrew:slack": {
@@ -1795,8 +1800,8 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
+        "forecasts": 2,
+        "hits": 2,
         "medianErrorDays": 0.09
       }
     },
@@ -1976,9 +1981,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 0,
-        "medianErrorDays": 8.43
+        "medianErrorDays": 7.54
       }
     },
     "windows:winget:Google.GoogleDrive": {
@@ -2070,13 +2075,13 @@
     "windows:winget:Opera.Opera": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.3,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.76
+        "medianErrorDays": 3.18
       }
     },
     "windows:winget:Opera.OperaGX": {
@@ -2128,10 +2133,15 @@
       }
     },
     "windows:winget:Spotify.Spotify": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.34
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.17
       }
     },
     "windows:winget:Telegram.TelegramDesktop": {
@@ -2195,23 +2205,16 @@
         "hits": 1,
         "medianErrorDays": 1.87
       }
-    },
-    "windows:winget:Zoom.Zoom": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      }
     }
   },
   "replay": {
-    "tests": 3070,
-    "hits": 1893,
-    "medianErrorDays": 2.42
+    "tests": 3076,
+    "hits": 1904,
+    "medianErrorDays": 2.41
   },
   "live": {
-    "forecasts": 385,
-    "hits": 290,
-    "medianErrorDays": 1.01
+    "forecasts": 394,
+    "hits": 296,
+    "medianErrorDays": 1.02
   }
 }

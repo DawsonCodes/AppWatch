@@ -956,6 +956,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261111.19",
+        "releaseDate": "2026-11-12T08:32:08.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-12T09:50:48.258Z"
+      },
+      {
         "version": "1.261109.19",
         "releaseDate": "2026-11-10T13:52:49.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -2751,6 +2757,13 @@
     ],
     "windows:winget:Google.GeminiDesktop": [
       {
+        "version": "1.19.0",
+        "releaseDate": "2026-11-04T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T09:50:48.258Z",
+        "url": "https://gemini.google/release-notes/"
+      },
+      {
         "version": "1.18.0",
         "releaseDate": "2026-10-28T12:00:00.000Z",
         "releaseNotes": null,
@@ -3622,6 +3635,12 @@
       }
     ],
     "apple:6737597349": [
+      {
+        "version": "2.8.0",
+        "releaseDate": "2026-11-12T06:26:31.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-11-12T09:50:48.258Z"
+      },
       {
         "version": "2.7.5",
         "releaseDate": "2026-11-09T12:28:32.000Z",
@@ -5162,6 +5181,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-11-12T00:38:56.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-12T09:50:48.258Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-07T03:09:32.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-11-07T21:50:13.965Z"
@@ -6515,6 +6540,12 @@
       }
     ],
     "mac:homebrew:signal": [
+      {
+        "version": "8.35.0",
+        "releaseDate": "2026-11-12T02:00:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T09:50:48.258Z"
+      },
       {
         "version": "8.34.0",
         "releaseDate": "2026-11-05T16:53:22.000Z",
@@ -9340,6 +9371,13 @@
     ],
     "windows:winget:Spotify.Spotify": [
       {
+        "version": "1.3.9.2055.g806b5b278de8",
+        "releaseDate": "2026-11-12T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T09:50:48.258Z",
+        "url": null
+      },
+      {
         "version": "1.3.8.620.g39b276d5d7ac",
         "releaseDate": "2026-11-06T12:00:00.000Z",
         "releaseNotes": null,
@@ -10529,6 +10567,12 @@
       }
     ],
     "google:com.roblox.client": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-11T20:08:38.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-11-12T09:50:48.258Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-04T17:57:33.000Z",
@@ -16691,6 +16735,13 @@
       }
     ],
     "windows:steam:2767030": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-12T09:44:14.000Z",
+        "releaseNotes": "Marvel Rivals Version 20261113 Patch Notes - Season 11 Arrives\n\nGreetings, Rivals!\n\nWorlds collide in Season 11! With two timelines on the brink of total devastation, it's time to step up. The fate of both worlds hangs in the balance, and it's up to us to save them alongside a demonic-looking saint of unwavering faith and a displaced king fighting for a home he can't return to.\n\nThis update begins on November 13th, 2026, at 09 : 00 : 00 (UTC), with estimated maintenance lasting 2 hours.\n\n \n\nAll-New Content\n\nNew Hero: Nightcrawler\nBAMF! The fuzzy elf teleports into Marvel Rivals!\n\n \n\nNew Stories\n\nNew Serial - Doomsday\nNew Nightcrawler Lore - Leap of Faith\n\n \n\nNew In Store\n\n- Nightcrawler - Steadfast Swordsman Bundle\n- Gambit - Versatile Valet Bundle\n- The Hood - Astral Oblivion Bundle\n- Nightcrawler - X-Force\n- Nightcrawler - Emoji Bundle\n- Versatile Valet - Emoji Bundle\n- Gambit - Versatile Valet Chroma Matcha Maid/Pastel Primp and Ultimate Ability VFX\n- Mantis - Chronal Harmony Chroma Sundial Shadow/Twilight Time and Ultimate Ability VFX\n- Take a Seat: New animation for Nightcrawler.\n- Nightcrawler Accessory - Pickles Plush\n\nAvailable From: November 13th, 2026, at 09 : 00 : 00 (UTC)\n\n \n\nS11 Battle Pass\n\nBrace for impact with a reality-shattering new Battle Pass: The Incursion, featuring 10 all-new sets of heroic costumes! Highlights include: Emma Frost - Seat of Winter, Mantis - Chronal Harmony, and Daredevil - The Man Without Fear.\n\n \n\nSeason Event: The Acts of Kurt Wagner\n\nThe brand-new seasonal story event, The Acts of Kurt Wagner, is about to BAMF into action! Team up with Nightcrawler to decipher Destiny's prophecy, lead daring disaster relief ops, and score a hoard of epic rewards!\n\n \n\nCollege Perks\n\nCollege Perk costumes are changing to the following:\nGroot - Yggroot, Luna Snow - Mirae 2099, Storm - Goddess of Thunder, White Fox - Yoon Ji-Woo: The Leader, Black Cat - Urban Predator, Captain America - Cursed Captain, Daredevil - Daredevil: Born Again Season 2, Moon Knight - Eclipse Knight, Emma Frost - Black Queen of the Marauders, Loki - Presidential Attire\n\n \n\nTwitch Drops\n\nAs Season 11 kicks off, get ready for a new round of Twitch Drops.\nThis round's drops include the Devil Dinosaur - Will of Galacta costume along with related bundle content.\n\nDrops Period: November 13th, 2026, at 12 : 00 : 00 (UTC) to December 11th, 2026, at 09 : 00 : 00 (UTC) \n\n \n\nRank Rewards\n\nSeason 11.0 Gold-tier costume reward is Nightcrawler - Hope Soared\n\n \n\nTournament Drops\n\nMarvel Rivals IGNITE 2026 Grand Finals\n\nThe Marvel Rivals IGNITE 2026 Grand Finals will be held from November 23rd to 29th in Stockholm, Sweden. Four teams from the Americas series, four from the EMEA Series, two from the China series, and two from the Pacific series; 12 teams in total, will gather in Stockholm for the ultimate showdown to claim the annual championship title. You can view and subscribe to specific schedules via the Marvel Rivals esports social media accounts or the in-game Esports page.\n\nGroup Stage (November 23rd to 25th)\nThe 12 teams are split into Groups A and B, with 6 teams in each. The groups will play a BO3 single round-robin format, where every match counts towards advancement. The Top 4 teams from each group will advance to the Main Event.\n\nMain Event (November 27th to 29th)\nThe 8 advancing teams enter a double-elimination stage. The first round features cross-group matchups based on Group Stage rankings. The first two rounds of the Upper Bracket are BO3, while all other matches are BO5. Ultimately, the Champion will be crowned in a BO7 Grand Final.\n\n \n\nEsports System\n\nFollowing this maintenance, all details regarding the Marvel Rivals IGNITE Series Grand Finals, including format, match schedules, participating teams, and player info, will be updated in the in-game Esports system. Feel free to check it out!\n\nThe IGNITE Grand Finals Esports Event will officially open after this maintenance. Participate in match predictions, subscribe to the…",
+        "detectedAt": "2026-11-12T09:50:48.258Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144182227"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-05T09:07:02.000Z",
@@ -32563,6 +32614,13 @@
     ],
     "windows:winget:Opera.Opera": [
       {
+        "version": "140.0.6074.18",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-12T09:50:48.258Z",
+        "url": null
+      },
+      {
         "version": "140.0.6074.17",
         "releaseDate": "2026-11-10T12:00:00.000Z",
         "releaseNotes": null,
@@ -32956,7 +33014,7 @@
       },
       {
         "version": "126.0.5750.59",
-        "releaseDate": "2026-02-02T13:10:52.000Z",
+        "releaseDate": "2026-02-11T15:52:02.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
