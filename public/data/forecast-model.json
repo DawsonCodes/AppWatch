@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-13T01:05:04.220Z",
+  "trainedAt": "2026-11-13T09:30:51.738Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.585,
-    0.508,
-    0.532,
-    0.599
+    0.587,
+    0.51,
+    0.53,
+    0.601
   ],
   "listings": {
     "apple:1058959277": {
@@ -627,6 +627,11 @@
       }
     },
     "apple:979659905": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -653,11 +658,6 @@
       }
     },
     "google:ai.perplexity.app.android": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -746,7 +746,7 @@
     "google:com.brave.browser": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.3,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
@@ -769,7 +769,7 @@
     },
     "google:com.coinbase.android": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -788,14 +788,14 @@
     },
     "google:com.deepseek.chat": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 4,
         "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 2,
-        "medianErrorDays": 3.04
+        "medianErrorDays": 2.66
       }
     },
     "google:com.discord": {
@@ -811,11 +811,6 @@
       }
     },
     "google:com.disney.disneyplus": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -831,7 +826,7 @@
     },
     "google:com.duckduckgo.mobile.android": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -903,9 +898,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 0.82
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 0.7
       }
     },
     "google:com.google.android.apps.photos": {
@@ -929,14 +924,14 @@
     },
     "google:com.google.android.gm": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 3,
-        "medianErrorDays": 0.49
+        "medianErrorDays": 0.53
       }
     },
     "google:com.google.android.youtube": {
@@ -978,10 +973,15 @@
       }
     },
     "google:com.microsoft.emmx": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 4.12
+        "medianErrorDays": 5.63
       }
     },
     "google:com.microsoft.office.officehubrow": {
@@ -1331,13 +1331,18 @@
         "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 1,
+        "medianErrorDays": 3.26
       }
     },
     "mac:homebrew:chatgpt": {
       "live": {
-        "forecasts": 8,
+        "forecasts": 9,
         "hits": 5,
-        "medianErrorDays": 0.39
+        "medianErrorDays": 0.47
       }
     },
     "mac:homebrew:claude": {
@@ -1347,9 +1352,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
-        "hits": 4,
-        "medianErrorDays": 0.72
+        "forecasts": 7,
+        "hits": 5,
+        "medianErrorDays": 0.61
       }
     },
     "mac:homebrew:discord": {
@@ -1390,9 +1395,9 @@
     },
     "mac:homebrew:ea": {
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 1.08
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 2.21
       }
     },
     "mac:homebrew:epic-games": {
@@ -1471,9 +1476,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 0.61
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 0.6
       }
     },
     "mac:homebrew:microsoft-outlook": {
@@ -1507,9 +1512,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 0.29
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 1.59
       }
     },
     "mac:homebrew:opera": {
@@ -1663,13 +1668,6 @@
         "forecasts": 3,
         "hits": 1,
         "medianErrorDays": 1.64
-      }
-    },
-    "mac:homebrew:vlc": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
       }
     },
     "mac:homebrew:whatsapp": {
@@ -1893,14 +1891,14 @@
     },
     "windows:winget:Canva.Canva": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 4,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 13.66
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 8.13
       }
     },
     "windows:winget:Discord.Discord": {
@@ -1925,13 +1923,13 @@
     "windows:winget:DuckDuckGo.DesktopBrowser": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.3,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 1,
-        "medianErrorDays": 2.98
+        "forecasts": 4,
+        "hits": 2,
+        "medianErrorDays": 3.18
       }
     },
     "windows:winget:ElectronicArts.EADesktop": {
@@ -1941,9 +1939,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 1.09
+        "medianErrorDays": 1.62
       }
     },
     "windows:winget:EpicGames.EpicGamesLauncher": {
@@ -2048,9 +2046,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 1.73
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 3.43
       }
     },
     "windows:winget:OpenAI.ChatGPT": {
@@ -2156,9 +2154,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 4,
-        "medianErrorDays": 1.82
+        "forecasts": 5,
+        "hits": 5,
+        "medianErrorDays": 1.55
       }
     },
     "windows:winget:TheBrowserCompany.Arc": {
@@ -2220,13 +2218,13 @@
     }
   },
   "replay": {
-    "tests": 3083,
-    "hits": 1909,
-    "medianErrorDays": 2.4
+    "tests": 3088,
+    "hits": 1912,
+    "medianErrorDays": 2.41
   },
   "live": {
-    "forecasts": 410,
-    "hits": 310,
-    "medianErrorDays": 0.99
+    "forecasts": 425,
+    "hits": 320,
+    "medianErrorDays": 1.01
   }
 }

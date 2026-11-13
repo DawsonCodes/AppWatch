@@ -208,6 +208,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1111.21308",
+        "releaseDate": "2026-11-13T03:53:14.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
+      {
         "version": "26.1106.51428",
         "releaseDate": "2026-11-11T03:45:01.000Z",
         "releaseNotes": null,
@@ -1290,6 +1296,13 @@
         "url": null
       },
       {
+        "version": "2.2553.0",
+        "releaseDate": "2026-10-06T23:58:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": null
+      },
+      {
         "version": "2.19675.0",
         "releaseDate": "2026-10-06T23:58:48.000Z",
         "releaseNotes": null,
@@ -1935,6 +1948,12 @@
       }
     ],
     "mac:homebrew:claude": [
+      {
+        "version": "5.11492.2",
+        "releaseDate": "2026-11-13T03:55:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": "5.11492.0",
         "releaseDate": "2026-11-12T15:48:42.000Z",
@@ -3709,6 +3728,12 @@
       }
     ],
     "google:com.deepseek.chat": [
+      {
+        "version": "2.8.0",
+        "releaseDate": "2026-11-13T05:01:09.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": "2.7.5",
         "releaseDate": "2026-11-05T12:15:45.000Z",
@@ -7392,6 +7417,13 @@
       }
     ],
     "windows:winget:Telegram.TelegramDesktop": [
+      {
+        "version": "7.4.3",
+        "releaseDate": "2026-11-12T12:00:00.000Z",
+        "releaseNotes": "- Bug fixes and other minor improvements.",
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.3"
+      },
       {
         "version": "7.4.2",
         "releaseDate": "2026-11-11T12:00:00.000Z",
@@ -13917,6 +13949,13 @@
     ],
     "windows:winget:ElectronicArts.EADesktop": [
       {
+        "version": "13.827.2.6342",
+        "releaseDate": "2026-11-13T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": null
+      },
+      {
         "version": "13.822.0.6335",
         "releaseDate": "2026-11-04T12:00:00.000Z",
         "releaseNotes": null,
@@ -14604,6 +14643,12 @@
       }
     ],
     "mac:homebrew:ea": [
+      {
+        "version": "13.827.2.6342",
+        "releaseDate": "2026-11-13T01:11:51.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": "13.827.1.6341",
         "releaseDate": "2026-11-11T18:54:55.000Z",
@@ -18443,6 +18488,12 @@
       }
     ],
     "google:com.google.android.gm": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-13T02:28:21.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-09T19:11:10.000Z",
@@ -22376,6 +22427,20 @@
     ],
     "windows:winget:Notion.Notion": [
       {
+        "version": "7.43.2",
+        "releaseDate": "2026-11-12T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": null
+      },
+      {
+        "version": "7.43.1",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": null
+      },
+      {
         "version": "7.43.0",
         "releaseDate": "2026-11-09T12:00:00.000Z",
         "releaseNotes": null,
@@ -22454,7 +22519,7 @@
       },
       {
         "version": "7.36.1",
-        "releaseDate": "2026-09-29T12:00:00.000Z",
+        "releaseDate": "2026-10-01T01:10:55.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -23056,6 +23121,12 @@
       }
     ],
     "mac:homebrew:notion": [
+      {
+        "version": "7.43.2",
+        "releaseDate": "2026-11-13T01:50:30.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": "7.43.0",
         "releaseDate": "2026-11-10T19:40:37.000Z",
@@ -25162,6 +25233,13 @@
     ],
     "windows:winget:Canva.Canva": [
       {
+        "version": "1.129.0",
+        "releaseDate": "2026-11-13T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": null
+      },
+      {
         "version": "1.128.0",
         "releaseDate": "2026-11-03T12:00:00.000Z",
         "releaseNotes": null,
@@ -25471,6 +25549,12 @@
       }
     ],
     "mac:homebrew:canva": [
+      {
+        "version": "1.129.0",
+        "releaseDate": "2026-11-13T06:45:23.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": "1.126.2",
         "releaseDate": "2026-10-21T15:54:03.000Z",
@@ -29460,6 +29544,12 @@
     ],
     "google:com.microsoft.emmx": [
       {
+        "version": "157.0.4341.53",
+        "releaseDate": "2026-11-11T15:28:54.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here’s what’s new in this release:\n• Fixed some bugs and improved stability and performance.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
+      {
         "version": "157.0.4341.42",
         "releaseDate": "2026-11-09T02:21:03.000Z",
         "releaseNotes": "Welcome to Microsoft Edge! Here’s what’s new in this release:\n• Fixed some bugs and improved stability and performance.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
@@ -29828,6 +29918,12 @@
       }
     ],
     "mac:homebrew:microsoft-edge": [
+      {
+        "version": "157.0.4341.57",
+        "releaseDate": "2026-11-13T01:46:26.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": "157.0.4341.46",
         "releaseDate": "2026-11-10T01:33:23.000Z",
@@ -31639,6 +31735,13 @@
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
       {
+        "version": "0.179.3.0",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T09:30:51.738Z",
+        "url": null
+      },
+      {
         "version": "0.179.2.0",
         "releaseDate": "2026-11-09T12:00:00.000Z",
         "releaseNotes": null,
@@ -31717,14 +31820,14 @@
       },
       {
         "version": "0.172.4.0",
-        "releaseDate": "2026-09-11T12:00:00.000Z",
+        "releaseDate": "2026-09-30T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
         "version": "0.171.3.0",
-        "releaseDate": "2026-09-11T12:00:00.000Z",
+        "releaseDate": "2026-09-30T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -41950,6 +42053,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-13T01:26:35.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-13T09:30:51.738Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-11T15:35:50.000Z",
