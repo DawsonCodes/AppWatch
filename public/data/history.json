@@ -2724,6 +2724,12 @@
     ],
     "apple:6477489729": [
       {
+        "version": "1.2026.4470202",
+        "releaseDate": "2026-11-12T09:38:17.000Z",
+        "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n- Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n- Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n- Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.\n- Performance Upgrades: Enjoy lightning-fast response times and smoother, more reliable performance across your favorite features.\n- Organize Your Inbox: Let Gemini persistently monitor, summarize, and prioritize your emails so you never miss what matters.\n- Proactive Daily Planning: Get an automated morning briefing and a smart daily planner compiled in moments from your Google apps.\n- Smart Task Automation: Set secure, persistent tasks to run on your behalf. Gemini preps the work—you always approve.\nLook what you can do with the new Gemini. Try today!",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
+      {
         "version": "1.2026.4370401",
         "releaseDate": "2026-11-04T10:30:30.000Z",
         "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n- Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n- Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n- Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.\n- Performance Upgrades: Enjoy lightning-fast response times and smoother, more reliable performance across your favorite features.\n- Organize Your Inbox: Let Gemini persistently monitor, summarize, and prioritize your emails so you never miss what matters.\n- Proactive Daily Planning: Get an automated morning briefing and a smart daily planner compiled in moments from your Google apps.\n- Smart Task Automation: Set secure, persistent tasks to run on your behalf. Gemini preps the work—you always approve.\nLook what you can do with the new Gemini. Try today!",
@@ -3074,6 +3080,12 @@
       }
     ],
     "apple:6670324846": [
+      {
+        "version": "1.4.65",
+        "releaseDate": "2026-11-12T14:06:46.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
       {
         "version": "1.4.64",
         "releaseDate": "2026-11-11T14:04:38.000Z",
@@ -4647,6 +4659,12 @@
     ],
     "apple:447188370": [
       {
+        "version": "14.32.0.53",
+        "releaseDate": "2026-11-12T12:01:59.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
+      {
         "version": "14.31.1.0",
         "releaseDate": "2026-11-06T16:53:34.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
@@ -4888,6 +4906,12 @@
       }
     ],
     "apple:429047995": [
+      {
+        "version": "14.44",
+        "releaseDate": "2026-11-12T16:42:21.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
       {
         "version": "14.43",
         "releaseDate": "2026-11-04T17:22:15.000Z",
@@ -9121,6 +9145,12 @@
     ],
     "apple:545519333": [
       {
+        "version": "10.157",
+        "releaseDate": "2026-11-13T13:07:51.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
+      {
         "version": "10.156.2",
         "releaseDate": "2026-11-10T17:02:15.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -9314,6 +9344,12 @@
       }
     ],
     "apple:324684580": [
+      {
+        "version": "9.2.0",
+        "releaseDate": "2026-11-13T13:54:31.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
       {
         "version": "9.1.98",
         "releaseDate": "2026-11-09T18:28:38.000Z",
@@ -25127,6 +25163,12 @@
     ],
     "apple:897446215": [
       {
+        "version": "4.235.0",
+        "releaseDate": "2026-11-12T22:04:07.000Z",
+        "releaseNotes": "iPhone Duo is now supported. Key benefits\n- Design for the screen your audience sees. Create a Story or Reel unfolded, then fold to preview it at true phone size.\n- Unfold to design. The 7.6\" inner screen gives Canva a full canvas for layouts, brand work and multi-page designs, with the room of a small tablet in your pocket.\n- Snap, then design. Shoot with the 48MP cameras and drop photos straight into Canva. Remove backgrounds and polish them on the big screen.\n- Cut video on a bigger timeline. Trim and sequence clips in Canva’s video editor, with silky 120Hz scrubbing.\n- Build decks inside, present outside. Design slides on the inner screen, then present or share from the cover screen.",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
+      {
         "version": "4.234.0",
         "releaseDate": "2026-11-04T01:45:53.000Z",
         "releaseNotes": "iPhone Duo is now supported. Key benefits\n- Design for the screen your audience sees. Create a Story or Reel unfolded, then fold to preview it at true phone size.\n- Unfold to design. The 7.6\" inner screen gives Canva a full canvas for layouts, brand work and multi-page designs, with the room of a small tablet in your pocket.\n- Snap, then design. Shoot with the 48MP cameras and drop photos straight into Canva. Remove backgrounds and polish them on the big screen.\n- Cut video on a bigger timeline. Trim and sequence clips in Canva’s video editor, with silky 120Hz scrubbing.\n- Build decks inside, present outside. Design slides on the inner screen, then present or share from the cover screen.",
@@ -26004,6 +26046,12 @@
       }
     ],
     "apple:507874739": [
+      {
+        "version": "4.2645.41004",
+        "releaseDate": "2026-11-12T14:41:59.000Z",
+        "releaseNotes": "* Bug fixes and performance improvements",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
       {
         "version": "4.2645.41000",
         "releaseDate": "2026-11-09T14:46:41.000Z",
@@ -27186,6 +27234,12 @@
     ],
     "apple:962194608": [
       {
+        "version": "8.1.0",
+        "releaseDate": "2026-11-13T17:11:53.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to ensure you can continue to share the moments that matter.",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
+      {
         "version": "8.0.0",
         "releaseDate": "2026-11-05T18:46:52.000Z",
         "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to provide a better sharing experience.",
@@ -27279,6 +27333,12 @@
       }
     ],
     "apple:535886823": [
+      {
+        "version": "158.0.8127.35",
+        "releaseDate": "2026-11-12T17:24:52.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This version includes:\n• You can now autofill more data types, including information from your passport, driver's license, national ID, or vehicle information.\n• Your new tab page customizations and address bar placement now sync automatically across your signed-in mobile devices.\n• Stability and performance improvements.",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
       {
         "version": "158.0.8127.32",
         "releaseDate": "2026-11-10T19:22:02.000Z",
@@ -35361,6 +35421,12 @@
     ],
     "google:com.vivaldi.browser": [
       {
+        "version": "8.3.4192.82",
+        "releaseDate": "2026-11-13T11:01:48.000Z",
+        "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
+      {
         "version": "8.3.4192.71",
         "releaseDate": "2026-11-10T10:03:53.000Z",
         "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
@@ -35386,6 +35452,13 @@
       }
     ],
     "windows:winget:Vivaldi.Vivaldi": [
+      {
+        "version": "8.3.4191.44",
+        "releaseDate": "2026-11-13T12:00:00.000Z",
+        "releaseNotes": "- [Calendar][Panel] Shows \"Add your first calendar account\" after every start VB-133191\n- [Chromium] Update to 156.0.8078.104 ESR includes security fixes from 157.0.8103.78/79\n- [macOS] The second window freezes when flipping between two windows VB-133089\n- [Mail][Feeds] Cannot display items since 8.3 update with many entries VB-133122\n- [Menus] Open Link in Private Window command no longer available VB-133092\n- [Menus][Bookmarks] New folder menu item from other bookmarks does not work VB-133081\n- [Themes][Tabs] Tabs are changing colour when they should not VB-132958",
+        "detectedAt": "2026-11-13T17:44:43.075Z",
+        "url": "https://update.vivaldi.com/update/1.0/relnotes/8.3.4191.44.html"
+      },
       {
         "version": "8.3.4191.35",
         "releaseDate": "2026-11-10T12:00:00.000Z",
@@ -41697,6 +41770,12 @@
       }
     ],
     "apple:351727428": [
+      {
+        "version": "26.27.0",
+        "releaseDate": "2026-11-12T15:40:27.000Z",
+        "releaseNotes": "In an app of great prowess, they say,\nFeatures danced in a grand display.\nBugs, once fierce, now subdued,\nTapping joyfully ensued,\nAs users hailed the fixes that day.",
+        "detectedAt": "2026-11-13T17:44:43.075Z"
+      },
       {
         "version": "26.26.0",
         "releaseDate": "2026-11-05T03:44:36.000Z",
