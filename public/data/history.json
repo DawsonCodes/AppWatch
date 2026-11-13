@@ -1066,6 +1066,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261111.19",
+        "releaseDate": "2026-11-12T03:42:20.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
+      {
         "version": "1.261110.19",
         "releaseDate": "2026-11-11T04:32:19.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -4471,6 +4477,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-11-12T23:04:17.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-10T09:40:50.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-11-11T01:56:20.671Z"
@@ -4671,6 +4683,12 @@
       }
     ],
     "google:com.snapchat.android": [
+      {
+        "version": "14.32.0.54",
+        "releaseDate": "2026-11-10T22:24:22.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
       {
         "version": "14.31.0.56",
         "releaseDate": "2026-11-04T02:21:40.000Z",
@@ -16289,6 +16307,13 @@
     "windows:steam:1172470": [
       {
         "version": null,
+        "releaseDate": "2026-11-12T21:23:07.000Z",
+        "releaseNotes": "Apex Legends: Latest Update 11/12/2026\n\n✅FIXED:\n\n-An exploit that allowed players to fire the Akimbo Wingman faster than intended\n\n-A client crash issue triggered by incorrect dropship pathing",
+        "detectedAt": "2026-11-13T01:05:04.220Z",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184669"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-10T18:15:47.000Z",
         "releaseNotes": "Apex Legends: Latest Update 11/10/2026\n\nADJUSTED:\n\n•\nCrypto's drone is now able to scan through glass\n[/*]\n•\nRevive is no longer interrupted and canceled if drone timer ends\n[/*]\n\nDev note: This is the next batch of Crypto changes we alluded to last week. While we are confident this, paired with last week's changes, will give Crypto's kit a meaningful boost, we will continue to monitor match data and player sentiment - so please let us know what you think once you've been hands-on with the adjustments.\n\nREMOVED:\n\n•\nLoot Vaults have been removed from World's Edge\n[/*]\n\nDev note: While World's Edge has not been in map rotations this season, we're aware that some players have noted vault removals in private/custom matches. This was an intentional change that we missed in the most recent Patch Notes, made to keep focus on Strongholds as the main source of mid-match value and power.\n\nFIXED:\n\n•\nFixed an issue where entering Crypto's Tactical drone view triggers part of the entry animation twice\n[/*]\n•\nFixed an issue where the Ring indicator moves on the minimap when using Crypto's drone\n[/*]\n•\nFixed an issue where Mirage's decoys float in place when deployed while skydiving\n[/*]\n•\nFixed an issue where Sparrow's tracker dart could block ordnance damage\n[/*]\n•\nFixed an issue where visuals would smear when the finisher camera clips into terrain\n[/*]\n•\nFixed an issue on PC where the Ultimate input keybind is not showing in various modes\n[/*]",
         "detectedAt": "2026-11-10T20:49:31.179Z",
@@ -27228,6 +27253,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-12T21:27:50.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-11T22:56:42.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-12T00:43:54.088Z"
@@ -30773,6 +30804,12 @@
       }
     ],
     "mac:homebrew:brave-browser": [
+      {
+        "version": "1.99.57.0",
+        "releaseDate": "2026-11-12T18:48:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
       {
         "version": "1.99.56.0",
         "releaseDate": "2026-11-10T18:48:37.000Z",
@@ -37947,6 +37984,12 @@
     ],
     "mac:homebrew:arc": [
       {
+        "version": "1.173.1",
+        "releaseDate": "2026-11-12T18:43:03.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
+      {
         "version": "1.172.2",
         "releaseDate": "2026-11-10T18:42:26.000Z",
         "releaseNotes": null,
@@ -42410,6 +42453,12 @@
     ],
     "google:com.airbnb.android": [
       {
+        "version": "26.45",
+        "releaseDate": "2026-11-04T23:16:24.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T01:05:04.220Z"
+      },
+      {
         "version": "26.44",
         "releaseDate": "2026-10-27T18:46:15.000Z",
         "releaseNotes": null,
@@ -42567,6 +42616,13 @@
       }
     ],
     "windows:respondus-lockdown-browser": [
+      {
+        "version": "2.1.6.03",
+        "releaseDate": "2026-11-12T21:56:19.000Z",
+        "releaseNotes": "LockDown Browser for Windows, version 2.1.6.03, has been released. This release includes bug fixes, stability improvements and security enhancements. \n\nExisting installs of LockDown Browser will be auto-updated shortly.  To obtain the latest version (2.1.6.03) use the \"Check for Update\" feature or run the full installation program. \n\nComplete version history for LockDown Browser can be obtained at Respondus.com > Admin Login > LockDown Browser > Support > Product Release Notes > LockDown Browser Version History.",
+        "detectedAt": "2026-11-13T01:05:04.220Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/58590799626523-LockDown-Browser-for-Windows-version-2-1-6-03"
+      },
       {
         "version": "2.1.6.02",
         "releaseDate": "2026-09-28T22:40:38.000Z",
