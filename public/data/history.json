@@ -1072,6 +1072,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261112.18",
+        "releaseDate": "2026-11-13T03:42:19.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
         "version": "1.261111.19",
         "releaseDate": "2026-11-12T03:42:20.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -3474,6 +3480,12 @@
     ],
     "apple:1668000334": [
       {
+        "version": "26.45.0",
+        "releaseDate": "2026-11-13T18:11:27.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
         "version": "26.44.0",
         "releaseDate": "2026-11-06T07:38:04.000Z",
         "releaseNotes": "Bug fixes and improvements.",
@@ -5019,6 +5031,12 @@
     ],
     "apple:288429040": [
       {
+        "version": "9.1.589",
+        "releaseDate": "2026-11-13T18:08:24.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
         "version": "9.1.588",
         "releaseDate": "2026-11-09T17:21:14.000Z",
         "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
@@ -5104,6 +5122,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1272",
+        "releaseDate": "2026-11-09T18:20:17.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
       {
         "version": "4.1.1270",
         "releaseDate": "2026-11-04T23:07:37.000Z",
@@ -5344,6 +5368,13 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.45.23",
+        "releaseDate": "2026-11-13T14:13:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T23:32:21.207Z",
+        "url": null
+      },
       {
         "version": "26.45.21",
         "releaseDate": "2026-11-12T14:25:55.000Z",
@@ -10335,6 +10366,12 @@
     "google:tv.twitch.android.app": [
       {
         "version": null,
+        "releaseDate": "2026-11-13T19:59:09.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-06T23:25:49.000Z",
         "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
         "detectedAt": "2026-11-07T01:55:57.679Z"
@@ -10439,6 +10476,12 @@
       }
     ],
     "google:com.shazam.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-13T18:34:50.000Z",
+        "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-06T17:57:31.000Z",
@@ -19328,6 +19371,12 @@
     ],
     "google:com.Slack": [
       {
+        "version": "26.11.20.0",
+        "releaseDate": "2026-11-09T22:46:27.000Z",
+        "releaseNotes": "Bug Fixes\n• Now you see them, now you don't! Old notification banners were sometimes pulling a vanishing act when a new one came in. We fixed it so they stick around long enough to, you know, notify.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
         "version": "26.11.10.0",
         "releaseDate": "2026-11-02T22:49:23.000Z",
         "releaseNotes": "Bug Fixes\n• We cleaned the code to make sure that everything’s running smoothly. Slack — now with a streak-free shine.",
@@ -27279,6 +27328,12 @@
     "google:com.google.android.apps.photos": [
       {
         "version": null,
+        "releaseDate": "2026-11-13T19:01:26.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-11T16:50:22.000Z",
         "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
         "detectedAt": "2026-11-12T00:43:54.088Z"
@@ -32112,6 +32167,13 @@
     ],
     "mac:homebrew:duckduckgo": [
       {
+        "version": "1.215.1",
+        "releaseDate": "2026-11-13T18:53:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T23:32:21.207Z",
+        "url": null
+      },
+      {
         "version": "1.215.0",
         "releaseDate": "2026-11-09T12:56:56.000Z",
         "releaseNotes": null,
@@ -35790,6 +35852,12 @@
       }
     ],
     "mac:homebrew:vivaldi": [
+      {
+        "version": "8.3.4191.44",
+        "releaseDate": "2026-11-13T14:12:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
       {
         "version": "8.3.4191.35",
         "releaseDate": "2026-11-10T12:04:50.000Z",
@@ -42071,6 +42139,12 @@
     ],
     "apple:585027354": [
       {
+        "version": "26.46.1",
+        "releaseDate": "2026-11-13T18:37:58.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
+      {
         "version": "26.45.1",
         "releaseDate": "2026-11-06T19:29:48.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
@@ -46703,6 +46777,12 @@
       }
     ],
     "apple:1050023752": [
+      {
+        "version": "2.19.1",
+        "releaseDate": "2026-11-13T20:20:26.000Z",
+        "releaseNotes": "Minor bug fixes and improvements.",
+        "detectedAt": "2026-11-13T23:32:21.207Z"
+      },
       {
         "version": "2.19.0",
         "releaseDate": "2026-11-04T15:08:52.000Z",
