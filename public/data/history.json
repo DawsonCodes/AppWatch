@@ -44544,6 +44544,12 @@
     "google:com.google.android.apps.translate": [
       {
         "version": null,
+        "releaseDate": "2026-11-14T03:31:58.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-14T15:04:36.236Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-10T04:50:30.000Z",
         "releaseNotes": "Bug fixes and improvements",
         "detectedAt": "2026-11-11T09:25:11.366Z"

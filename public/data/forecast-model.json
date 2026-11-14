@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-14T06:21:41.793Z",
+  "trainedAt": "2026-11-14T15:04:36.236Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -9,7 +9,7 @@
   },
   "masses": [
     0.594,
-    0.51,
+    0.512,
     0.532,
     0.594
   ],
@@ -662,6 +662,11 @@
       }
     },
     "google:ch.protonmail.android": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 0,
@@ -902,9 +907,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 2.36
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 2.44
       }
     },
     "google:com.google.android.gm": {
@@ -1816,6 +1821,13 @@
         "medianErrorDays": 50.05
       }
     },
+    "windows:steam:578080": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
     "windows:steam:730": {
       "params": {
         "halfLife": 4,
@@ -2183,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3137,
-    "hits": 1960,
+    "tests": 3138,
+    "hits": 1961,
     "medianErrorDays": 2.28
   },
   "live": {
-    "forecasts": 463,
-    "hits": 344,
-    "medianErrorDays": 1.04
+    "forecasts": 464,
+    "hits": 345,
+    "medianErrorDays": 1.05
   }
 }
