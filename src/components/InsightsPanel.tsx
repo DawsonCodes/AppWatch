@@ -95,7 +95,7 @@ export function InsightsPanel({
           value={lastRun ?? 'Not yet'}
           detail={status?.lastRunAt ? (formatDateTime(status.lastRunAt) ?? undefined) : undefined}
         />
-        <Stat label="Checks" value="Every 2 hours" />
+        <Stat label="Checks" value="Several a day" detail="Every 2 hours when GitHub allows" />
         {dueSoon !== null ? (
           <Stat label="Expected in the next 3 days" value={String(dueSoon)} />
         ) : null}

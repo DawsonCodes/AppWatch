@@ -113,9 +113,11 @@ describe('isDataStale', () => {
   });
 
   it('uses a window that fits the 2-hourly schedule plus scheduler delays', () => {
-    expect(STALE_AFTER_HOURS).toBe(12);
+    expect(STALE_AFTER_HOURS).toBe(24);
+    // GitHub often leaves 8 to 11 hours between scheduled runs: not stale.
     expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-14T01:00:00.000Z' }, now)).toBe(false);
-    expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-13T23:00:00.000Z' }, now)).toBe(true);
+    expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-13T13:00:00.000Z' }, now)).toBe(false);
+    expect(isDataStale({ ...validStatus, lastRunAt: '2026-07-13T11:00:00.000Z' }, now)).toBe(true);
   });
 
   it('never flags missing status', () => {

@@ -29,7 +29,7 @@ export function Footer() {
         </p>
         <p class="site-footer__note">
           No analytics, cookies or accounts. Your watchlist and theme are saved in this browser
-          only. Apps are checked every two hours.
+          only. Apps are checked several times a day.
         </p>
         <p class="site-footer__links">
           <a

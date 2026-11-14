@@ -20,6 +20,18 @@ describe('compareVersions', () => {
     expect(compareVersions('1.2.3', '1.2.3')).toBe(0);
   });
 
+  it('orders segments with letters naturally', () => {
+    // Zen Browser on winget: "1.9b" was sorting above "1.24b".
+    expect(compareVersions('1.24b', '1.9b')).toBeGreaterThan(0);
+    expect(compareVersions('1.9.1b', '1.9b')).toBeGreaterThan(0);
+    expect(compareVersions('1.24b', '1.9.1b')).toBeGreaterThan(0);
+    expect(compareVersions('6000.6.7f10', '6000.6.7f2')).toBeGreaterThan(0);
+    expect(compareVersions('1.2.3-beta10', '1.2.3-beta2')).toBeGreaterThan(0);
+    expect(compareVersions('2.1.6.02', '2.1.6.2')).toBe(0);
+    const sorted = ['1.9b', '1.24b', '1.10.1b', '1.9.1b', '1.10b'].sort(compareVersions);
+    expect(sorted).toEqual(['1.9b', '1.9.1b', '1.10b', '1.10.1b', '1.24b']);
+  });
+
   it('ignores surrounding whitespace and separator variety', () => {
     expect(compareVersions(' 1.2.3 ', '1-2-3')).toBe(0);
   });

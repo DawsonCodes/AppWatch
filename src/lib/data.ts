@@ -87,10 +87,11 @@ export async function loadForecastModel(
 
 /**
  * Hours after which the dashboard flags the data as possibly stale. Checks
- * run every 2 hours and GitHub can start scheduled runs a few hours late, so
- * 12 hours without a completed check means something is genuinely wrong.
+ * are scheduled every 2 hours, but GitHub starts scheduled runs when it has
+ * capacity: in practice every 4 to 11 hours. A full day without a completed
+ * check means something is genuinely wrong.
  */
-export const STALE_AFTER_HOURS = 12;
+export const STALE_AFTER_HOURS = 24;
 
 export function isDataStale(status: StatusFile | null, now: Date = new Date()): boolean {
   if (!status?.lastRunAt) return false;

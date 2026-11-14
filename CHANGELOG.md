@@ -9,6 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Games missed real updates and kept a few non-updates: titles alone can't
+  tell (Rust's monthly updates are named, not titled "update", so its last
+  recorded one was from February). Games now use Steam's events feed, where
+  developers mark each post as a small, regular or major update, with title
+  rules only for posts filed as plain news, and the news API as a fallback.
+  Checked against the live feeds of all 12 games.
+- Google Play listings that switch between a version number and "Varies with
+  device" (Roblox, WhatsApp, Cash App, Strava) kept showing the old version
+  next to newer release dates, stopped registering updates, and listed one
+  release twice. A newer release with no version now counts as an update and
+  clears the old version; the duplicate entries are merged.
+- Version sorting treated "1.9b" as newer than "1.24b", so Zen Browser on
+  Windows was stuck on a 2025 version. Versions now sort in natural order.
+- Homebrew dates were missing for versions committed as "gog-galaxy
+  2.1.10.56 (arm only)" or "notion: update ARM to 7.34.0" (GOG Galaxy on Mac
+  had no release date).
+- The "may be out of date" warning now appears after 24 hours without a
+  check, not 12: GitHub often leaves 8 to 11 hours between scheduled runs.
+
+### Changed
+
+- Game cards and pages name updates instead of showing "Windows —": the row
+  reads "Steam · PRINTED AND POLISHED", the history is an "Update history"
+  with each update's title, and the game's own name is trimmed from titles
+  on cards.
+- "Checked every two hours" now reads "Checked several times a day", which
+  is what GitHub's scheduler delivers.
+- Category chips fit on one row again on desktop.
+- An app's developer prefers a name in Latin letters when stores disagree
+  (DeepSeek's App Store seller is listed in Chinese).
+- README screenshots show real app icons.
+
 - Game histories kept non-update posts that a later check had added (PUBG
   esports stages, Apex anti-cheat notices, Rust and Baldur's Gate 3
   community news): posts a game's Steam record no longer counts are now

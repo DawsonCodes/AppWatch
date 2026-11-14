@@ -1,7 +1,7 @@
 {
   "name": "appwatch",
   "version": "1.0.0",
-  "description": "A modern dashboard that tracks App Store and Google Play app updates, version history, release dates, and what changed.",
+  "description": "A dashboard that tracks app and game updates on the App Store, Google Play, Windows, Mac and Steam: version history, release dates, what changed, and when the next update is likely.",
   "type": "module",
   "private": true,
   "author": "DawsonCodes",
@@ -17,6 +17,9 @@
   "keywords": [
     "app-store",
     "google-play",
+    "steam",
+    "windows",
+    "macos",
     "update-tracker",
     "version-history",
     "dashboard",

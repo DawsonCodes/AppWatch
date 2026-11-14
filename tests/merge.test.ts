@@ -209,13 +209,121 @@ describe('version-less listings (Google Play "Varies with device")', () => {
     ]);
   });
 
-  it('never treats a version change as date-only', () => {
+  it('leaves versioned listings to the version check', () => {
+    expect(
+      isDateOnlyUpdate(
+        { currentVersion: '1.0', releaseDate: '2026-09-01T00:00:00.000Z' },
+        { version: '1.0', releaseDate: '2026-09-02T00:00:00.000Z' },
+      ),
+    ).toBe(false);
+  });
+
+  it('counts a newer release when the store stops (or starts) giving a version', () => {
     expect(
       isDateOnlyUpdate(
         { currentVersion: '1.0', releaseDate: '2026-09-01T00:00:00.000Z' },
         { version: null, releaseDate: '2026-09-02T00:00:00.000Z' },
       ),
-    ).toBe(false);
+    ).toBe(true);
+    expect(
+      isDateOnlyUpdate(
+        { currentVersion: null, releaseDate: '2026-09-01T00:00:00.000Z' },
+        { version: '2.0', releaseDate: '2026-09-02T00:00:00.000Z' },
+      ),
+    ).toBe(true);
+  });
+});
+
+describe('listings that switch between a version and "Varies with device"', () => {
+  // As recorded for Roblox on Google Play: the store gave a version once,
+  // then went back to "Varies with device" for later releases.
+  const play: AppSnapshot = {
+    ...snapshot,
+    platform: 'google',
+    storeId: 'com.roblox.client',
+    version: null,
+    releaseDate: '2026-10-21T19:40:00.000Z',
+    releaseNotes: null,
+  };
+  const first = mergeSnapshot(undefined, [], play, '2026-10-22T04:44:00.000Z');
+  const withVersion = mergeSnapshot(
+    first.record,
+    first.history,
+    { ...play, version: '2.744.1081' },
+    '2026-10-22T21:35:00.000Z',
+  );
+
+  it('fills the version into the same release instead of listing it twice', () => {
+    expect(withVersion.record.currentVersion).toBe('2.744.1081');
+    expect(withVersion.outcome).toBe('unchanged');
+    expect(withVersion.history).toEqual([
+      {
+        version: '2.744.1081',
+        releaseDate: '2026-10-21T19:40:00.000Z',
+        releaseNotes: null,
+        detectedAt: '2026-10-22T04:44:00.000Z',
+      },
+    ]);
+  });
+
+  it('keeps the version while the store reports the same release without one', () => {
+    const same = mergeSnapshot(withVersion.record, withVersion.history, play, LATER);
+    expect(same.record.currentVersion).toBe('2.744.1081');
+    expect(same.outcome).toBe('unchanged');
+    expect(same.history).toHaveLength(1);
+  });
+
+  it('detects the next release and stops showing the old version for it', () => {
+    const next = mergeSnapshot(
+      withVersion.record,
+      withVersion.history,
+      { ...play, releaseDate: '2026-10-28T17:00:00.000Z' },
+      '2026-10-30T17:51:00.000Z',
+    );
+    expect(next.outcome).toBe('updated');
+    expect(next.record).toMatchObject({
+      currentVersion: null,
+      previousVersion: '2.744.1081',
+      releaseDate: '2026-10-28T17:00:00.000Z',
+      lastUpdatedAt: '2026-10-30T17:51:00.000Z',
+      updateDetected: true,
+    });
+    expect(next.history.map((entry) => entry.version)).toEqual([null, '2.744.1081']);
+  });
+
+  it('repairs records that kept an old version and duplicate entries', () => {
+    // The state the old logic left behind: three newer releases recorded,
+    // the Oct 21 release listed twice, and the Oct 21 version still "current".
+    const stale = {
+      ...withVersion.record,
+      releaseDate: '2026-11-11T20:08:38.000Z',
+      lastUpdatedAt: '2026-10-22T04:44:39.869Z',
+    };
+    const entry = (version: string | null, releaseDate: string) => ({
+      version,
+      releaseDate,
+      releaseNotes: null,
+      detectedAt: NOW,
+    });
+    const history = [
+      entry(null, '2026-11-11T20:08:38.000Z'),
+      entry(null, '2026-11-04T17:57:00.000Z'),
+      entry('2.744.1081', '2026-10-21T19:40:00.000Z'),
+      entry(null, '2026-10-21T19:40:00.000Z'),
+    ];
+    const healed = mergeSnapshot(
+      stale,
+      history,
+      { ...play, releaseDate: '2026-11-11T20:08:38.000Z' },
+      LATER,
+    );
+    expect(healed.record.currentVersion).toBeNull();
+    expect(healed.record.previousVersion).toBe('2.744.1081');
+    expect(healed.history.map((e) => [e.version, e.releaseDate?.slice(0, 10)])).toEqual([
+      [null, '2026-11-11'],
+      [null, '2026-11-04'],
+      ['2.744.1081', '2026-10-21'],
+    ]);
   });
 });
 

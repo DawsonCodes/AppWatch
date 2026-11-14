@@ -7,7 +7,7 @@ import { groupHref } from '../lib/route.ts';
 import { useDisplayVersion } from '../lib/versionDisplay.ts';
 import { AppIcon } from './AppIcon.tsx';
 import { AlertIcon } from './Icons.tsx';
-import { storeLabel } from './StoreBadge.tsx';
+import { listingLabel, shortUpdateTitle, splitUpdateTitle } from './StoreBadge.tsx';
 import { WatchButton } from './WatchButton.tsx';
 
 interface AppCardProps {
@@ -46,19 +46,30 @@ function AppCardImpl({ group, watched, hint, onToggleWatch }: AppCardProps) {
       <ul class="card__stores">
         {group.listings.map((listing) => {
           const fresh = isRecentlyUpdated(listing);
+          // Games have no version numbers; their row names the latest update.
+          const updateTitle =
+            listingLabel(listing) === 'Steam' ? splitUpdateTitle(listing.releaseNotes).title : null;
           return (
             <li class="store-row" key={listing.id}>
               <span class="store-row__store">
                 <span class={`dot dot--${listing.platform}`} aria-hidden="true" />
-                {storeLabel(listing.platform)}
+                {listingLabel(listing)}
               </span>
-              <span class="store-row__version mono" title={listing.currentVersion ?? undefined}>
-                {(listing.currentVersion && displayVersion(listing.currentVersion)) ?? (
+              {listing.currentVersion ? (
+                <span class="store-row__version mono" title={listing.currentVersion}>
+                  {displayVersion(listing.currentVersion)}
+                </span>
+              ) : updateTitle ? (
+                <span class="store-row__version store-row__update" title={updateTitle}>
+                  {shortUpdateTitle(updateTitle, group.name)}
+                </span>
+              ) : (
+                <span class="store-row__version mono">
                   <span class="store-row__varies" title="This store doesn't list one version">
                     {listing.platform === 'google' && !local ? 'Varies' : '—'}
                   </span>
-                )}
-              </span>
+                </span>
+              )}
               {listing.checkStatus === 'error' ? (
                 <span
                   class="store-row__alert"

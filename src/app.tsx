@@ -745,7 +745,7 @@ export function App() {
                 </h1>
                 <p class="intro__sub">
                   Version history and release notes for {ready ? trackedGroupCount : 'popular'} apps
-                  on the App Store, Google Play, Windows and Mac. Checked every two hours.
+                  on the App Store, Google Play, Windows and Mac. Checked several times a day.
                 </p>
               </section>
 

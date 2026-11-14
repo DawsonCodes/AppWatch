@@ -40,10 +40,6 @@
 
 </details>
 
-> Screenshots use real tracked data but were captured offline, so app icons
-> show their letter fallback (the live site loads the real icons) and the
-> newest store apps, which resolve on their first online check, aren't shown.
-
 ---
 
 ## What it does
@@ -183,18 +179,30 @@ desktop listing names where its versions come from:
   the cask's history in `Homebrew/homebrew-cask` shows when each version
   arrived (Homebrew's bot opens a "<cask> <version>" commit within hours of a
   release). Homebrew carries no release notes.
-- **Games: Steam patch notes.** Games rarely publish version numbers; what
-  they publish is patch notes, which developers post as announcements on the
-  game's Steam page. Steam's public news API returns those; the checker keeps
-  the ones that are patch notes — posts the developer tagged as patch notes,
-  or titled like an update ("Patch 1.2", "Hotfix #36", "Update 2.3 is live",
-  "Version 20261030 Patch Notes"), since developers tag inconsistently — but
-  never previews or "coming" posts, roadmaps, community and weekly news, dev
-  diaries and streams, anti-cheat notices, polls, bundles, sales or esports,
-  even when tagged. Each is recorded as an update on its date, with its
-  notes. Steam's store API adds the developer, price, genre, age rating and
-  the game's cover art, used as its icon. If a later, stricter reading drops a post,
-  it's removed from the game's history.
+- **Games: Steam update posts.** Games rarely publish version numbers; what
+  they publish is patch notes, which developers post on the game's Steam
+  page, marking each post with a type (small, regular or major update, news,
+  in-game event, stream, sale and so on). The Steam client's own "Updates"
+  filter uses those types, and so does the checker, reading the store's
+  public events feed:
+  - a post the developer marked as an update counts, whatever it's called
+    (Rust's monthly updates are named, like "PRINTED AND POLISHED");
+  - a post marked as plain news counts if it's titled or tagged like patch
+    notes, because some developers file real patches as news ("Version
+    20261105 Patch Notes", "Latest Update 11/12/2026");
+  - posts about something that hasn't shipped or isn't a game update never
+    count (previews, community news, anti-cheat notices, esports, store
+    posts), nor do streams, sales or in-game events.
+
+  Each is recorded as an update on the date it was posted, with its notes
+  and a link to the post; several posts on one day are one update. A game's
+  history follows that record: if a post is edited, or later stops counting,
+  the history changes with it. If the events feed can't be read, Steam's news
+  API is used instead and titles alone decide. Steam's store API adds the
+  developer, price, genre, age rating and the game's cover art, used as its
+  icon. On the site, games show the update's name where apps show a version
+  ("Steam · Patch 2.31").
+
 - **Release feeds** for software in none of these:
   - **LockDown Browser** — Respondus's own announcements (below).
   - **Minecraft: Java Edition** — Mojang's version list, the public file the
@@ -345,7 +353,8 @@ to third parties, and a GitHub Pages site has no server to poll continuously,
 so "instant" universal detection is not honestly possible with this
 architecture. What AppWatch does instead:
 
-- The checker runs every two hours (see the schedule below) and redeploys the
+- The checker is scheduled every two hours and in practice runs several times
+  a day (see the schedule below), and redeploys the
   site after every run, so the published "last checked" time is always real.
 - While the page is open, it revalidates the site's **own** tiny
   `status.json` every 5 minutes and whenever the tab regains focus (visible
@@ -550,7 +559,9 @@ minutes to hours after their cron time, and the top of the hour is the most
 congested (hence `:17`). The workflow therefore never depends on starting at
 an exact clock time — whenever a run starts, it checks every tracked app.
 
-In practice GitHub has been starting the two-hourly runs every 3–8 hours.
+In practice GitHub has been starting the two-hourly runs every 4–11 hours
+(the site says "checked several times a day", and only warns that data may
+be out of date after a full day without a check).
 That's fine: a run takes about five minutes (including the redeploy), Actions
 minutes are free for public repositories, and checking more often wouldn't
 make forecasts better anyway — they learn from release dates, which every

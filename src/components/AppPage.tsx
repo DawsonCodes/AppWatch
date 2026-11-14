@@ -20,7 +20,7 @@ import {
 } from './Icons.tsx';
 import { ForecastCard } from './ForecastCard.tsx';
 import { Notes } from './Notes.tsx';
-import { storeLabel } from './StoreBadge.tsx';
+import { listingLabel, splitUpdateTitle, storeLabel } from './StoreBadge.tsx';
 import { Tabs } from './Tabs.tsx';
 import { WatchButton } from './WatchButton.tsx';
 import { useDisplayVersion } from '../lib/versionDisplay.ts';
@@ -112,6 +112,7 @@ function Loading() {
 }
 
 function VersionHistory({ history, listing }: { history: HistoryState; listing: Listing }) {
+  const namedUpdates = listingLabel(listing) === 'Steam';
   const [limit, setLimit] = useState(HISTORY_PAGE);
   if (history.phase === 'loading') return <Loading />;
   if (history.phase === 'error') {
@@ -138,11 +139,17 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
             (entry.version === listing.currentVersion ||
               (entry.version === null && entry.releaseDate === listing.releaseDate));
           const oldest = index === entries.length - 1;
+          // Games name their updates: the title replaces the version chip.
+          const named =
+            !entry.version && namedUpdates ? splitUpdateTitle(entry.releaseNotes) : null;
+          const notes = named?.title ? named.body : entry.releaseNotes;
           return (
             <li class="version" key={historyEntryKey(entry) ?? entry.detectedAt}>
               <div class="version__head">
                 {entry.version ? (
                   <span class="version-chip">{entry.version}</span>
+                ) : named?.title ? (
+                  <span class="version__title">{named.title}</span>
                 ) : (
                   <span class="version-chip version-chip--none">Update</span>
                 )}
@@ -162,7 +169,7 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
                   ) : null}
                 </span>
               </div>
-              {entry.releaseNotes ? <Notes text={entry.releaseNotes} clampAt={220} /> : null}
+              {notes ? <Notes text={notes} clampAt={220} /> : null}
               {entry.url ? (
                 <a class="version__link" href={entry.url} target="_blank" rel="noopener noreferrer">
                   Release notes page <ExternalIcon size={11} />
@@ -178,7 +185,7 @@ function VersionHistory({ history, listing }: { history: HistoryState; listing: 
           class="button versions__more"
           onClick={() => setLimit((n) => n + HISTORY_PAGE * 2)}
         >
-          Show older versions ({entries.length - limit})
+          Show older {namedUpdates ? 'updates' : 'versions'} ({entries.length - limit})
         </button>
       ) : null}
     </>
@@ -236,6 +243,12 @@ export function AppPage({
   const ratingCount = formatCount(listing.ratingCount);
   const link = new URL(appHref(listing.id), location.href).toString();
   const displayVersion = useDisplayVersion();
+  const isGame = listingLabel(listing) === 'Steam';
+  // Games name their updates; the name sits in the heading, the rest below.
+  const latest =
+    !listing.currentVersion && isGame
+      ? splitUpdateTitle(listing.releaseNotes)
+      : { title: null, body: listing.releaseNotes };
 
   return (
     <article class="app-page" aria-labelledby="app-title">
@@ -298,7 +311,7 @@ export function AppPage({
             icon: <span class={`dot dot--${l.platform}`} aria-hidden="true" />,
             label: (
               <>
-                {storeLabel(l.platform)}
+                {listingLabel(l)}
                 <span class="platform-tabs__version mono">
                   {l.currentVersion
                     ? displayVersion(l.currentVersion)
@@ -356,6 +369,8 @@ export function AppPage({
                 What’s new
                 {listing.currentVersion ? (
                   <span class="section__version mono">{listing.currentVersion}</span>
+                ) : latest.title ? (
+                  <span class="section__version">{latest.title}</span>
                 ) : null}
               </h2>
               {listing.releaseDate ? (
@@ -365,9 +380,9 @@ export function AppPage({
                 </span>
               ) : null}
             </div>
-            {listing.releaseNotes ? (
-              <Notes text={listing.releaseNotes} clampAt={600} />
-            ) : (
+            {latest.body ? (
+              <Notes text={latest.body} clampAt={600} />
+            ) : latest.title ? null : (
               <p class="muted">No release notes for this version.</p>
             )}
             {listing.releaseUrl ? (
@@ -388,8 +403,8 @@ export function AppPage({
                 Track it for everyone
               </h2>
               <p class="muted">
-                Tracked apps are checked every two hours and keep their version history. Copy the
-                config entry and open a request on GitHub.
+                Tracked apps are checked several times a day and keep their version history. Copy
+                the config entry and open a request on GitHub.
               </p>
               <div class="app-actions">
                 <CopyButton
@@ -414,11 +429,12 @@ export function AppPage({
             <section class="section" aria-labelledby="history-title">
               <div class="section__head">
                 <h2 class="section__title" id="history-title">
-                  Version history
+                  {isGame ? 'Update history' : 'Version history'}
                 </h2>
                 {history.phase === 'ready' && history.entries.length > 0 ? (
                   <span class="section__meta">
-                    {history.entries.length} version{history.entries.length === 1 ? '' : 's'}
+                    {history.entries.length} {isGame ? 'update' : 'version'}
+                    {history.entries.length === 1 ? '' : 's'}
                   </span>
                 ) : null}
               </div>
@@ -433,16 +449,14 @@ export function AppPage({
               Details
             </h2>
             <dl class="facts">
-              <Fact label="Version">
-                <span class="mono">
-                  {listing.currentVersion ??
-                    (listing.platform === 'google'
-                      ? 'Varies by device'
-                      : desktop?.kind === 'steam'
-                        ? 'Not published'
-                        : 'Unknown')}
-                </span>
-              </Fact>
+              {isGame && !listing.currentVersion ? null : (
+                <Fact label="Version">
+                  <span class="mono">
+                    {listing.currentVersion ??
+                      (listing.platform === 'google' ? 'Varies by device' : 'Unknown')}
+                  </span>
+                </Fact>
+              )}
               {listing.previousVersion ? (
                 <Fact label="Before that">
                   <span class="mono">{listing.previousVersion}</span>
