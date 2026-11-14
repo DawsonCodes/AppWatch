@@ -1,25 +1,20 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-13T23:32:21.207Z",
+  "trainedAt": "2026-11-14T06:21:41.793Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
-    "bandwidth": 0.45,
+    "bandwidth": 0.3,
     "weekday": 1
   },
   "masses": [
-    0.589,
-    0.512,
+    0.594,
+    0.51,
     0.532,
-    0.603
+    0.594
   ],
   "listings": {
     "apple:1058959277": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -63,11 +58,6 @@
       }
     },
     "apple:1288723196": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -87,11 +77,6 @@
       }
     },
     "apple:1668000334": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -99,11 +84,6 @@
       }
     },
     "apple:282614216": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -111,6 +91,11 @@
       }
     },
     "apple:283646709": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -118,11 +103,6 @@
       }
     },
     "apple:284882215": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -142,6 +122,11 @@
       }
     },
     "apple:297606951": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 0,
@@ -161,11 +146,6 @@
       }
     },
     "apple:323229106": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -173,6 +153,11 @@
       }
     },
     "apple:324684580": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -192,6 +177,11 @@
       }
     },
     "apple:327630330": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -211,11 +201,6 @@
       }
     },
     "apple:351727428": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -223,6 +208,11 @@
       }
     },
     "apple:363590051": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -242,6 +232,11 @@
       }
     },
     "apple:389801252": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -249,11 +244,6 @@
       }
     },
     "apple:401626263": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -261,11 +251,6 @@
       }
     },
     "apple:414706506": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -273,11 +258,6 @@
       }
     },
     "apple:422689480": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -285,6 +265,11 @@
       }
     },
     "apple:426826309": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -292,11 +277,6 @@
       }
     },
     "apple:429047995": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -328,6 +308,11 @@
       }
     },
     "apple:454638411": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -371,6 +356,11 @@
       }
     },
     "apple:535886823": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 2,
@@ -378,11 +368,6 @@
       }
     },
     "apple:541164041": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -390,11 +375,6 @@
       }
     },
     "apple:544007664": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -462,6 +442,11 @@
       }
     },
     "apple:6448311069": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -481,11 +466,6 @@
       }
     },
     "apple:6477489729": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -553,6 +533,11 @@
       }
     },
     "apple:719972451": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 2,
@@ -560,11 +545,6 @@
       }
     },
     "apple:835599320": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -584,11 +564,6 @@
       }
     },
     "apple:886427730": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -598,7 +573,7 @@
     "apple:897446215": {
       "params": {
         "halfLife": 8,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -621,7 +596,7 @@
     },
     "apple:962194608": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.3,
         "weekday": 1
       },
@@ -632,6 +607,11 @@
       }
     },
     "apple:979659905": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -639,6 +619,11 @@
       }
     },
     "apple:985746746": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 2,
@@ -671,7 +656,7 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 1,
         "medianErrorDays": 2.01
       }
@@ -696,11 +681,6 @@
       }
     },
     "google:com.airbnb.android": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 0,
@@ -746,21 +726,16 @@
     "google:com.brave.browser": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
-      "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.85
-      }
-    },
-    "google:com.canva.editor": {
-      "params": {
-        "halfLife": 16,
         "bandwidth": 0.3,
         "weekday": 1
       },
+      "live": {
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 1.39
+      }
+    },
+    "google:com.canva.editor": {
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -780,6 +755,11 @@
       }
     },
     "google:com.dd.doordash": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -818,6 +798,11 @@
       }
     },
     "google:com.dropbox.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -861,11 +846,6 @@
       }
     },
     "google:com.facebook.katana": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -873,6 +853,11 @@
       }
     },
     "google:com.facebook.orca": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -880,11 +865,6 @@
       }
     },
     "google:com.google.android.apps.docs": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -918,7 +898,7 @@
     "google:com.google.android.apps.translate": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.6,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
@@ -929,8 +909,8 @@
     },
     "google:com.google.android.gm": {
       "params": {
-        "halfLife": 16,
-        "bandwidth": 0.6,
+        "halfLife": 32,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
@@ -946,12 +926,17 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
-        "hits": 4,
-        "medianErrorDays": 0.82
+        "forecasts": 7,
+        "hits": 5,
+        "medianErrorDays": 0.57
       }
     },
     "google:com.instagram.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -959,6 +944,11 @@
       }
     },
     "google:com.instagram.barcelona": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -990,11 +980,6 @@
       }
     },
     "google:com.microsoft.office.officehubrow": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -1002,10 +987,15 @@
       }
     },
     "google:com.microsoft.office.outlook": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 0,
-        "medianErrorDays": 3.4
+        "medianErrorDays": 3.75
       }
     },
     "google:com.netflix.mediaclient": {
@@ -1021,6 +1011,11 @@
       }
     },
     "google:com.openai.chatgpt": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 0,
@@ -1028,11 +1023,6 @@
       }
     },
     "google:com.paypal.android.p2pmobile": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -1052,11 +1042,6 @@
       }
     },
     "google:com.reddit.frontpage": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1064,11 +1049,6 @@
       }
     },
     "google:com.roblox.client": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1083,11 +1063,6 @@
       }
     },
     "google:com.snapchat.android": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1107,23 +1082,13 @@
       }
     },
     "google:com.squareup.cash": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.4
+        "medianErrorDays": 0.34
       }
     },
     "google:com.strava": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1143,11 +1108,6 @@
       }
     },
     "google:com.ubercab": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -1155,6 +1115,11 @@
       }
     },
     "google:com.ubercab.eats": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1162,6 +1127,11 @@
       }
     },
     "google:com.venmo": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 0,
@@ -1176,11 +1146,6 @@
       }
     },
     "google:com.waze": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1200,6 +1165,11 @@
       }
     },
     "google:com.zhiliaoapp.musically": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -1207,11 +1177,6 @@
       }
     },
     "google:me.lyft.android": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -1303,11 +1268,6 @@
       }
     },
     "mac:homebrew:bitwarden": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -1351,6 +1311,11 @@
       }
     },
     "mac:homebrew:chatgpt": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 9,
         "hits": 5,
@@ -1358,15 +1323,10 @@
       }
     },
     "mac:homebrew:claude": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 7,
-        "hits": 5,
-        "medianErrorDays": 0.61
+        "forecasts": 8,
+        "hits": 6,
+        "medianErrorDays": 0.72
       }
     },
     "mac:homebrew:discord": {
@@ -1406,6 +1366,11 @@
       }
     },
     "mac:homebrew:ea": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 4,
         "hits": 3,
@@ -1488,9 +1453,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.6
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.61
       }
     },
     "mac:homebrew:microsoft-outlook": {
@@ -1519,7 +1484,7 @@
     },
     "mac:homebrew:notion": {
       "params": {
-        "halfLife": 4,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
@@ -1566,6 +1531,11 @@
       }
     },
     "mac:homebrew:proton-mail": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -1635,11 +1605,6 @@
       }
     },
     "mac:homebrew:telegram": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -1661,7 +1626,7 @@
     "mac:homebrew:unity": {
       "params": {
         "halfLife": 16,
-        "bandwidth": 0.3,
+        "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
@@ -1680,13 +1645,6 @@
         "forecasts": 4,
         "hits": 2,
         "medianErrorDays": 0.94
-      }
-    },
-    "mac:homebrew:vlc": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
       }
     },
     "mac:homebrew:whatsapp": {
@@ -1720,10 +1678,24 @@
         "weekday": 1
       }
     },
+    "mac:minecraft-java": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
     "mac:respondus-lockdown-browser": {
       "params": {
         "halfLife": 4,
         "bandwidth": 0.3,
+        "weekday": 1
+      }
+    },
+    "windows:minecraft-java": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
         "weekday": 1
       }
     },
@@ -1740,11 +1712,6 @@
       }
     },
     "windows:roblox-studio": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 3,
         "hits": 2,
@@ -1789,13 +1756,6 @@
         "medianErrorDays": 75.6
       }
     },
-    "windows:steam:230410": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.6,
-        "weekday": 1
-      }
-    },
     "windows:steam:2399830": {
       "params": {
         "halfLife": 32,
@@ -1803,16 +1763,21 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 142.83
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 85.73
       }
     },
     "windows:steam:252490": {
       "params": {
         "halfLife": 8,
-        "bandwidth": 0.45,
+        "bandwidth": 0.2,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 420.06
       }
     },
     "windows:steam:2767030": {
@@ -1842,15 +1807,13 @@
     "windows:steam:570": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
-      }
-    },
-    "windows:steam:578080": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 50.05
       }
     },
     "windows:steam:730": {
@@ -1866,6 +1829,11 @@
       }
     },
     "windows:winget:Anthropic.Claude": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 1,
         "hits": 0,
@@ -1935,14 +1903,14 @@
     "windows:winget:Dropbox.Dropbox": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.6,
+        "bandwidth": 0.45,
         "weekday": 1
       }
     },
     "windows:winget:DuckDuckGo.DesktopBrowser": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -1997,11 +1965,6 @@
       }
     },
     "windows:winget:Google.GeminiDesktop": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 0,
@@ -2022,9 +1985,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 0,
-        "medianErrorDays": 1.26
+        "forecasts": 3,
+        "hits": 1,
+        "medianErrorDays": 0.87
       }
     },
     "windows:winget:Microsoft.Edge": {
@@ -2071,15 +2034,10 @@
       }
     },
     "windows:winget:OpenAI.ChatGPT": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 4,
-        "medianErrorDays": 0.62
+        "medianErrorDays": 0.72
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -2097,7 +2055,7 @@
     "windows:winget:Opera.Opera": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -2173,16 +2131,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 5,
-        "medianErrorDays": 1.55
-      }
-    },
-    "windows:winget:TheBrowserCompany.Arc": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.3,
-        "weekday": 1
+        "forecasts": 6,
+        "hits": 6,
+        "medianErrorDays": 1.87
       }
     },
     "windows:winget:TorProject.TorBrowser": {
@@ -2198,11 +2149,6 @@
       }
     },
     "windows:winget:Unity.Unity.6000": {
-      "params": {
-        "halfLife": 8,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -2227,16 +2173,23 @@
         "hits": 2,
         "medianErrorDays": 1.42
       }
+    },
+    "windows:winget:Zen-Team.Zen-Browser": {
+      "params": {
+        "halfLife": 4,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
     }
   },
   "replay": {
-    "tests": 3109,
-    "hits": 1925,
-    "medianErrorDays": 2.35
+    "tests": 3137,
+    "hits": 1960,
+    "medianErrorDays": 2.28
   },
   "live": {
-    "forecasts": 450,
-    "hits": 337,
-    "medianErrorDays": 1.02
+    "forecasts": 463,
+    "hits": 344,
+    "medianErrorDays": 1.04
   }
 }
