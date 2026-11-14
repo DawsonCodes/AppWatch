@@ -41888,6 +41888,12 @@
     "google:com.ebay.mobile": [
       {
         "version": null,
+        "releaseDate": "2026-11-12T19:54:14.000Z",
+        "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
+        "detectedAt": "2026-11-14T20:43:27.669Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-06T21:25:03.000Z",
         "releaseNotes": "Hello eBay customers - please update your app now to make the most of your eBay experience, enjoy the latest features and more!",
         "detectedAt": "2026-11-07T21:50:13.965Z"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-14T18:33:52.380Z",
+  "trainedAt": "2026-11-14T20:43:27.669Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -845,9 +845,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 2.97
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 2.48
       }
     },
     "google:com.facebook.katana": {
@@ -2195,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3139,
-    "hits": 1961,
+    "tests": 3140,
+    "hits": 1962,
     "medianErrorDays": 2.28
   },
   "live": {
-    "forecasts": 465,
-    "hits": 345,
-    "medianErrorDays": 1.04
+    "forecasts": 466,
+    "hits": 346,
+    "medianErrorDays": 1.05
   }
 }
