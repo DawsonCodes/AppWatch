@@ -161,8 +161,18 @@ export function groupIconUrl(group: AppGroup): string | null {
   );
 }
 
+/**
+ * The developer to show for an app. Stores can list a company's legal name
+ * in its home script (DeepSeek's App Store seller is in Chinese); a listing
+ * that gives the name in Latin letters is preferred when there is one.
+ */
 export function groupDeveloper(group: AppGroup): string | null {
-  return group.listings.find((l) => l.developer)?.developer ?? null;
+  const names = group.listings.map((l) => l.developer).filter((d): d is string => !!d);
+  return (
+    names.find((name) => /^[\p{Script=Latin}\p{N}\p{P}\p{Zs}\p{S}]+$/u.test(name)) ??
+    names[0] ??
+    null
+  );
 }
 
 export function isGroupRecent(group: AppGroup, now: Date = new Date()): boolean {

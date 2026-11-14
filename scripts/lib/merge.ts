@@ -28,6 +28,11 @@ export interface MergeResult {
  * Prepend a history entry unless that release is already recorded (matched
  * by version, or by release date for version-less listings). Entries with
  * neither a version nor a release date cannot be identified and are skipped.
+ *
+ * A store can report the same release with and without a version number
+ * (Google Play switches between "2.744.1081" and "Varies with device"), so
+ * an entry also matches one with the same release date when only one of the
+ * two has a version: the version is filled in rather than listed twice.
  */
 export function appendHistory(
   history: VersionHistoryEntry[],
@@ -37,7 +42,38 @@ export function appendHistory(
   if (key === null || history.some((existing) => historyEntryKey(existing) === key)) {
     return history;
   }
+  if (entry.releaseDate) {
+    const twin = history.findIndex(
+      (existing) =>
+        existing.releaseDate === entry.releaseDate && !existing.version !== !entry.version,
+    );
+    if (twin !== -1) {
+      if (!entry.version) return history; // already recorded, with its version
+      const next = [...history];
+      next[twin] = {
+        ...next[twin]!,
+        version: entry.version,
+        releaseNotes: next[twin]!.releaseNotes ?? entry.releaseNotes,
+      };
+      return next;
+    }
+  }
   return [entry, ...history];
+}
+
+/**
+ * Drop version-less entries that duplicate a versioned entry for the same
+ * release date (recorded before appendHistory matched them up).
+ */
+export function mergeSameRelease(history: VersionHistoryEntry[]): VersionHistoryEntry[] {
+  const versioned = new Set(
+    history.filter((entry) => entry.version && entry.releaseDate).map((e) => e.releaseDate),
+  );
+  if (versioned.size === 0) return history;
+  const next = history.filter(
+    (entry) => entry.version || !entry.releaseDate || !versioned.has(entry.releaseDate),
+  );
+  return next.length === history.length ? history : next;
 }
 
 /** Smaller moves in a record's dates (e.g. time zones, same-day merges) are ignored. */
@@ -88,6 +124,15 @@ export function backfillReleases(
       }
       changed = true;
       return { ...entry, releaseDate: release.releaseDate, releaseNotes: release.releaseNotes };
+    }
+    // A record without version numbers (a game's patch notes) is the only
+    // source for its entries, so they follow it: an edited post or a new link.
+    if (release.version === null) {
+      if (entry.releaseNotes === release.releaseNotes && (entry.url ?? null) === release.url) {
+        return entry;
+      }
+      changed = true;
+      return { ...entry, releaseNotes: release.releaseNotes, url: release.url };
     }
     if (learnedAt !== null && entry.detectedAt === learnedAt && release.releaseDate) {
       const before = entry.releaseDate ? Date.parse(entry.releaseDate) : Number.NaN;
@@ -154,19 +199,37 @@ function feedFields(snapshot: AppSnapshot): Pick<AppRecord, 'releaseUrl'> {
 
 /**
  * Some listings publish no single version (Google Play reports "Varies with
- * device" for many large apps). For those, a newer store release date is the
- * only reliable signal of an update. Only forward moves count, so a store
- * briefly reporting an older date can never fabricate an update.
+ * device" for many large apps, sometimes only some of the time). When either
+ * the stored record or the new snapshot has no version, a newer store release
+ * date is the only reliable signal of an update. Only forward moves count, so
+ * a store briefly reporting an older date can never fabricate an update.
  */
 export function isDateOnlyUpdate(
   previous: Pick<AppRecord, 'currentVersion' | 'releaseDate'>,
   snapshot: Pick<AppSnapshot, 'version' | 'releaseDate'>,
 ): boolean {
-  if (previous.currentVersion || snapshot.version) return false;
+  if (previous.currentVersion && snapshot.version) return false;
   if (!previous.releaseDate || !snapshot.releaseDate) return false;
   const before = Date.parse(previous.releaseDate);
   const after = Date.parse(snapshot.releaseDate);
   return !Number.isNaN(before) && !Number.isNaN(after) && after > before;
+}
+
+/**
+ * Whether the stored version describes the release the store reports now,
+ * judged by the release date that version was recorded with.
+ */
+function storedVersionStillCurrent(
+  previous: AppRecord,
+  snapshot: AppSnapshot,
+  history: readonly VersionHistoryEntry[],
+): boolean {
+  const current = Date.parse(snapshot.releaseDate ?? previous.releaseDate ?? '');
+  const recorded = Date.parse(
+    history.find((entry) => entry.version === previous.currentVersion)?.releaseDate ?? '',
+  );
+  if (Number.isNaN(current) || Number.isNaN(recorded)) return true;
+  return current <= recorded;
 }
 
 /** Merge a successful store fetch with the previous record (if any). */
@@ -224,11 +287,21 @@ export function mergeSnapshot(
   const versionChanged = isVersionChange(previous.currentVersion, snapshot.version);
   const updated = versionChanged || isDateOnlyUpdate(previous, snapshot);
   const history = backfillReleases(
-    appendHistory(previousHistory, currentEntry(snapshot, now)),
+    appendHistory(mergeSameRelease(previousHistory), currentEntry(snapshot, now)),
     snapshot.releases,
     now,
     previous.firstTrackedAt,
   );
+  // With no version in the snapshot, the stored version only still applies
+  // if it was recorded for the release the store reports now. Otherwise the
+  // store has moved on to a release it gives no version for.
+  const keptVersion =
+    snapshot.version === null && previous.currentVersion
+      ? storedVersionStillCurrent(previous, snapshot, previousHistory)
+        ? previous.currentVersion
+        : null
+      : previous.currentVersion;
+  const versionDropped = keptVersion === null && previous.currentVersion !== null;
 
   return {
     record: {
@@ -237,8 +310,9 @@ export function mergeSnapshot(
       developer: snapshot.developer ?? previous.developer,
       iconUrl: snapshot.iconUrl ?? previous.iconUrl,
       storeUrl: snapshot.storeUrl,
-      currentVersion: snapshot.version ?? previous.currentVersion,
-      previousVersion: versionChanged ? previous.currentVersion : previous.previousVersion,
+      currentVersion: snapshot.version ?? keptVersion,
+      previousVersion:
+        versionChanged || versionDropped ? previous.currentVersion : previous.previousVersion,
       releaseDate: snapshot.releaseDate ?? (versionChanged ? null : previous.releaseDate),
       releaseNotes: snapshot.releaseNotes ?? (updated ? null : previous.releaseNotes),
       category: snapshot.category ?? previous.category,

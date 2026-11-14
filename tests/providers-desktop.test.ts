@@ -331,6 +331,25 @@ describe('Homebrew casks', () => {
     expect(caskCommitVersion('spotify 1.3.5.3058', 'spotify')).toBe('1.3.5.3058');
     expect(caskCommitVersion('duckduckgo 1.212.0,845', 'duckduckgo')).toBe('1.212.0');
     expect(caskCommitVersion('google-chrome: update to 156.0.1', 'google-chrome')).toBe('156.0.1');
+    // Titles seen in homebrew-cask.
+    expect(caskCommitVersion('gog-galaxy 2.1.10.56 (arm only)', 'gog-galaxy')).toBe('2.1.10.56');
+    expect(caskCommitVersion('notion 7.34.0 (intel only)', 'notion')).toBe('7.34.0');
+    expect(caskCommitVersion('notion: update ARM to 7.34.0', 'notion')).toBe('7.34.0');
+    expect(
+      caskCommitVersion(
+        'microsoft-outlook: fix livecheck & bump to 16.111.26071325',
+        'microsoft-outlook',
+      ),
+    ).toBe('16.111.26071325');
+    for (const title of [
+      'spotify: update zap',
+      'slack: `depends_on macos: :big_sur` -> `depends_on :macos`',
+      'zoom: add Linux support',
+      'gog-galaxy: split legacy Intel version',
+      'opera-gx: depends on macOS Ventura',
+    ]) {
+      expect(caskCommitVersion(title, title.split(/[: ]/)[0]!)).toBeNull();
+    }
     expect(caskCommitVersion('spotify: update livecheck', 'spotify')).toBeNull();
     expect(
       caskCommitVersion('Merge pull request #1 from Homebrew/bump-spotify', 'spotify'),

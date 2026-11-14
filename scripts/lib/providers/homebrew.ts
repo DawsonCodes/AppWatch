@@ -28,11 +28,21 @@ export function caskVersion(raw: unknown): string | null {
   return text.split(',')[0]!.trim() || null;
 }
 
-/** The version a homebrew-cask commit bumps the cask to ("spotify 1.3.5.3058"), or null. */
+/**
+ * The version a homebrew-cask commit bumps the cask to, or null. Titles seen
+ * in the repository: "spotify 1.3.5.3058", "gog-galaxy 2.1.10.56 (arm only)",
+ * "notion: update ARM to 7.34.0", "microsoft-outlook: fix livecheck & bump to
+ * 16.111.26071325". Housekeeping commits ("spotify: update zap") have none.
+ */
 export function caskCommitVersion(message: string, token: string): string | null {
   const title = message.split('\n', 1)[0]!.trim();
   const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const match = new RegExp(`^${escaped}:?\\s+(?:update to\\s+)?v?(\\d[^\\s]*)$`, 'i').exec(title);
+  const match =
+    new RegExp(`^${escaped}:?\\s+v?(\\d\\S*)(?:\\s+\\([^)]*\\))?$`, 'i').exec(title) ??
+    new RegExp(
+      `^${escaped}:?\\s+(?:.*\\s)?(?:update(?:\\s+\\w+)?\\s+to|bump\\s+to)\\s+v?(\\d\\S*)$`,
+      'i',
+    ).exec(title);
   return match ? caskVersion(match[1]) : null;
 }
 

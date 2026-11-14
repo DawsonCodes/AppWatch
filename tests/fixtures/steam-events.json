@@ -1,0 +1,532 @@
+{
+  "252490": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "672884902358680240",
+        "event_name": "PRINTED AND POLISHED",
+        "event_type": 13,
+        "appid": 252490,
+        "rtime32_start_time": 1793903040,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "672884902358680241",
+          "headline": "PRINTED AND POLISHED",
+          "posttime": 1793903084,
+          "body": "[h2]BLUEPRINT REWORK[/h2][p][/p][p]Workbenches no longer require blueprint fragments to craft, and scrap isn’t used on the tech trees. Instead, we’re introducing three tiers of blueprints; blueprint fragments, blueprint pages and blueprint books. These are the new currencies spent to progress tech trees. One for each tech tree level.[/p][p]Items can still be researched with scrap on the research t",
+          "tags": ["mod_reviewed", "ModAct_1787316731_1793906817_0"]
+        }
+      },
+      {
+        "gid": "672883630592232568",
+        "event_name": "HALLOWEEN 2026",
+        "event_type": 35,
+        "appid": 252490,
+        "rtime32_start_time": 1792692720,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "672883630592232569",
+          "headline": "HALLOWEEN 2026",
+          "posttime": 1792692733,
+          "body": "[h2]HALLOWEEN EVENT\n[/h2][p]The yearly Halloween event is now enabled![/p][p][/p][p][img src=\"https://files.facepunch.com/paddy/20201023/halloween_ghostsheets.jpg\" style=\"box-sizing: inherit; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.2s; transform: scale(1); max-width: 100%; display: block; margin: 16",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_1827889981_1792694661_0",
+            "hide_store",
+            "hide_library_overview",
+            "hide_library_detail",
+            "ModAct_1787316731_1793908383_4"
+          ]
+        }
+      },
+      {
+        "gid": "672881728134578469",
+        "event_name": "LIVESTOCK",
+        "event_type": 13,
+        "appid": 252490,
+        "rtime32_start_time": 1790875860,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "672881728134578470",
+          "headline": "LIVESTOCK",
+          "posttime": 1790875901,
+          "body": "[p][/p][previewyoutube=\"ZF09w_v7Shw;full\"][/previewyoutube][p][/p][p][/p][h1]LIVESTOCK[/h1][p][/p][p]This patch we are introducing cows and sheep.[/p][p][img src=\"https://files.facepunch.com/kaantasan/1b3011b1/oct2026_livestock_animals_cows_sheep_2_1080%20%281%29.jpg\" style=\"box-sizing: inherit; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px; border-radius: 8px; border: 1px solid rgb",
+          "tags": ["mod_reviewed", "ModAct_1878895840_1790886754_0"]
+        }
+      },
+      {
+        "gid": "529870881777778806",
+        "event_name": "NAVAL UPDATE",
+        "event_type": 14,
+        "appid": 252490,
+        "rtime32_start_time": 1770316980,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "529870881777778807",
+          "headline": "NAVAL UPDATE",
+          "posttime": 1770316987,
+          "body": "[p][/p][p][/p][p][/p][previewyoutube=\"qVYe0pT6wJc;full\"][/previewyoutube][p][/p][h2]PLAYER MADE BOATS[/h2][p][/p][p]Player-made boats are here, providing a new way to explore the seas, including the Deep Sea![/p][p]Place the new Boat Building Station deployable in the water and get building with your shipmates! Use the new Boat Building Plan to construct your dream boat, utilising a new set of boa",
+          "tags": ["mod_reviewed", "ModAct_1827889981_1770317494_0"]
+        }
+      },
+      {
+        "gid": "496092615849018888",
+        "event_name": "COMMUNITY UPDATE 268",
+        "event_type": 28,
+        "appid": 252490,
+        "rtime32_start_time": 1769107680,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "496092615849018889",
+          "headline": "COMMUNITY UPDATE 268",
+          "posttime": 1769107730,
+          "body": "[h2]INCOMING NAVAL UPDATE - STAGING[/h2][p][/p][p]In the event you've been living under a rock the Naval Update is coming with the February wipe![/p][p][img src=\"https://files.facepunch.com/Errn/1b2011b1/staging.png\"][/img][/p][p]We're encouraging anyone with the extra time and passion for its success to go play a bit of the [url=\"https://rust.facepunch.com/staging\"]staging branch[/url] (beta) bet",
+          "tags": ["mod_reviewed", "ModAct_1294976491_1769108906_0"]
+        }
+      },
+      {
+        "gid": "507348444540569163",
+        "event_name": "Final Round of Voting - Rust in the Steam Awards",
+        "event_type": 28,
+        "appid": 252490,
+        "rtime32_start_time": 1766430000,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "507348444540569164",
+          "headline": "Final Round of Voting - Rust in the Steam Awards",
+          "posttime": 1766430051,
+          "body": "[p]We're through to the final round!  \n\nBut in case you're new here, over the years, Rust has undergone some huge changes - including graphic, physics, and engine updates and rebuilds, all because we’ve wanted to make Rust what it is, and what it could be.  \n\nWe're guided by the community, and agile enough to deliver or pivot when we need to, month after month. And this year - Rust's 12th year - w",
+          "tags": [
+            "steam_award_vote_request",
+            "mod_hide_library_overview",
+            "mod_reviewed",
+            "ModAct_1607812438_1766430237_0",
+            "hide_store",
+            "hide_library_overview",
+            "ModAct_1294976491_1769097978_4",
+            "hide_library_detail",
+            "ModAct_1294976491_1769108740_4"
+          ]
+        }
+      },
+      {
+        "gid": "511846967442145706",
+        "event_name": "WARHAMMER 40,000 X RUST DLC PACK",
+        "event_type": 15,
+        "appid": 252490,
+        "rtime32_start_time": 1761238380,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "511846967442145707",
+          "headline": "WARHAMMER 40,000 X RUST DLC PACK",
+          "posttime": 1761238433,
+          "body": "[h2][/h2][previewyoutube=\"nqY9K28y1E4;full\"][/previewyoutube][h2]THE DEATH KORPS OF KRIEG - DLC SKINS[/h2][p][/p][p]The infamous Death Korps of Krieg march into Rust, bringing their grim, war-forged resolve to the island.[/p][p][img src=\"https://files.facepunch.com/ashcoook/1b1011b1/rust_dlc_warhammer_krieg_03.jpg\"][/img][/p][p]This pack delivers battle-scarred war gear, inspired by one of Warhamm",
+          "tags": ["mod_reviewed", "ModAct_1301790999_1761239918_0"]
+        }
+      }
+    ]
+  },
+  "578080": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "719046160957836311",
+        "event_name": "Map Service Report - Update 44.1",
+        "event_type": 28,
+        "appid": 578080,
+        "rtime32_start_time": 1793685600,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "719046160957836312",
+          "headline": "Map Service Report - Update 44.1",
+          "posttime": 1793685602,
+          "body": "[img]{STEAM_CLAN_IMAGE}/27971017/c6c8adc4d5670ed2aab016cc334af385eb01a5f7.png[/img]\n\n[h2][url=https://pubg.com/news/11336]Read the full announcement here![/url][/h2]",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_1896160435_1793687079_0",
+            "ModAct_1415716708_1793779784_4"
+          ]
+        }
+      },
+      {
+        "gid": "719046160957836309",
+        "event_name": "Patch Notes - Update 44.1",
+        "event_type": 28,
+        "appid": 578080,
+        "rtime32_start_time": 1793685600,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "719046160957836310",
+          "headline": "Patch Notes - Update 44.1",
+          "posttime": 1793685602,
+          "body": "[p][img src=\"{STEAM_CLAN_IMAGE}/27971017/5acbd61a85f2abeb21e3efad8c0875b60f2eaad5.jpg\"][/img][/p][h2][url=\"https://pubg.com/news/11338\"]Read the full announcement here![/url][/h2]",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_1896160435_1793687075_0",
+            "ModAct_1415716708_1793779728_4"
+          ]
+        }
+      },
+      {
+        "gid": "677389136248700953",
+        "event_name": "PUBG: BATTLEGROUNDS Weekly Bans Notice (11/2~11/8)",
+        "event_type": 28,
+        "appid": 578080,
+        "rtime32_start_time": 1794380400,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "677389136248700954",
+          "headline": "PUBG: BATTLEGROUNDS Weekly Bans Notice (11/2~11/8)",
+          "posttime": 1794380413,
+          "body": "[img]{STEAM_CLAN_IMAGE}/27971017/6665b8db8893f3f61b8adffd82c7fa3705dd09be.png[/img]\n\n[h2][url=https://pubg.com/news/11382]Read the full announcement here![/url][/h2]",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_1415716708_1794381090_0",
+            "ModAct_1871393022_1794477418_4"
+          ]
+        }
+      },
+      {
+        "gid": "719047067319665870",
+        "event_name": "Twisted Minds crowned as PGS 12 Champions",
+        "event_type": 28,
+        "appid": 578080,
+        "rtime32_start_time": 1794323340,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "719047067319665871",
+          "headline": "Twisted Minds crowned as PGS 12 Champions",
+          "posttime": 1794323363,
+          "body": "[p][i]With PGS now firmly in the rear-view mirror, we sat down with PUBG expert and caster Jisooboy to get his take on Twisted Minds' dramatic win at PGS 12. Here's what he had to say:[/i][/p][p align=\"start\"][/p][p align=\"start\"][i][img src=\"https://wstatic-prod-boc.krafton.com/common/news/20261110/w59OxLf4.png\" style=\"border-style: none; max-width: 100%; position: relative; display: block; float",
+          "tags": [
+            "hide_library_overview",
+            "mod_reviewed",
+            "ModAct_1894626024_1794325453_0",
+            "ModAct_1598046824_1794364380_4"
+          ]
+        }
+      }
+    ]
+  },
+  "2399830": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "712291505861034387",
+        "event_name": "Community Crunch 531: Unreal Engine 5.8, Enigmasaur and Giga TLC out now!",
+        "event_type": 14,
+        "appid": 2399830,
+        "rtime32_start_time": 1794023580,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "712291505861034388",
+          "headline": "Community Crunch 531: Unreal Engine 5.8, Enigmasaur and Giga TLC out now!",
+          "posttime": 1794023598,
+          "body": "[img]{STEAM_CLAN_IMAGE}/44719856/c2760b099bfaffdb160c6bee4aa106c73fe3fe36.png[/img]\n\nWe have a lot to share in this week's Crunch, so let's dive straight in!\n[img]{STEAM_CLAN_IMAGE}/44719856/0b25cda896bf03188a5dddfe80fe3a6f99d24b9f.png[/img]\n[img]{STEAM_CLAN_IMAGE}/44719856/ff583a7cab92e6e4bc357753f8688c22eb24b1f0.png[/img]\n\n[previewyoutube=V6QRUxia3KU;full][/previewyoutube]\n\nExpand your exotic me",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_1426387032_1794023806_0",
+            "ModAct_1751656904_1794260801_4"
+          ]
+        }
+      },
+      {
+        "gid": "712290761518876669",
+        "event_name": "Community Crunch 530: Trick or Teeth",
+        "event_type": 13,
+        "appid": 2399830,
+        "rtime32_start_time": 1793405400,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "712290761518876670",
+          "headline": "Community Crunch 530: Trick or Teeth",
+          "posttime": 1793405417,
+          "body": "[img]{STEAM_CLAN_IMAGE}/44719856/c2760b099bfaffdb160c6bee4aa106c73fe3fe36.png[/img]\nFear Ascended has brought plenty of monsters to the ARKs. Next week, one of them is coming for its crown.\n\nThe [b]Giganotosaurus TLC[/b] arrives on [b]November 5[/b] as our third TLC from Extra Life's 2025 community votes. With a fearsome new look and renewed ferocity, the Giga is preparing to reclaim its place at ",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_803139239_1793407069_0",
+            "ModAct_1434573178_1793409732_4"
+          ]
+        }
+      },
+      {
+        "gid": "717917724409331789",
+        "event_name": "Therizino TLC, Cerberax and Gargantar are out now!",
+        "event_type": 14,
+        "appid": 2399830,
+        "rtime32_start_time": 1790811540,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "717917724409331790",
+          "headline": "Therizino TLC, Cerberax and Gargantar are out now!",
+          "posttime": 1790811308,
+          "body": "[img]{STEAM_CLAN_IMAGE}/44719856/14decb75883b079ef427a162df1a3649fe9cefc6.png[/img]\n\n[previewyoutube=gsWm02GX1zw;full]TRAILER[/previewyoutube]\n\nExpand your exotic menagerie with the first season of Fantastic Tames for ARK: Survival Ascended! These extraordinary oddities are forged from the ARK’s most mystical anomalies in defiance of nature.\n\nEach Fantastic Tame brings its own wondrous array of ab",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_487176015_1790812636_0",
+            "ModAct_1751692459_1790830073_4"
+          ]
+        }
+      }
+    ]
+  },
+  "1091500": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "671757730685389878",
+        "event_name": "Cyberpunk 2077's Edgerunners 2 Update (2.5) is out now!",
+        "event_type": 14,
+        "appid": 1091500,
+        "rtime32_start_time": 1792663560,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "671757730685389879",
+          "headline": "Cyberpunk 2077's Edgerunners 2 Update (2.5) is out now!",
+          "posttime": 1792663614,
+          "body": "[p]In the City of (Broken) Dreams, it’s not about how you flatline. What matters most is the impact you make with the time you’re given. [/p][p][/p][p]So how will you seize the new opportunities awaiting for you in Night City? [/p][p][/p][p]Check out the launch trailer celebrating both the second installment in the Cyberpunk: Edgerunners anime series, available now on Netflix, as well as Cyberpunk",
+          "tags": ["mod_reviewed", "ModAct_1434278705_1792664155_0"]
+        }
+      },
+      {
+        "gid": "671757730685388197",
+        "event_name": "Check out what's coming to Cyberpunk 2077 in the Edgerunners 2 Update!",
+        "event_type": 12,
+        "appid": 1091500,
+        "rtime32_start_time": 1792597500,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "671757730685388198",
+          "headline": "Check out what's coming to Cyberpunk 2077 in the Edgerunners 2 Update!",
+          "posttime": 1792597515,
+          "body": "[p]Thought you were done with Night City? Well, Night City's not quite done with you![/p][p][/p][p]Patch notes for Cyberpunk 2077's Edgerunners 2 Update (2.5) are now available for your early perusal before the update hits the streets on October 22nd. Watch the Features Overview video to see some of the new features in action:[/p][p][/p][previewyoutube=\"uMzXH1QJx6M;full\"][/previewyoutube][p][/p][p",
+          "tags": [
+            "patchnotes",
+            "mod_reviewed",
+            "ModAct_1894963720_1792599765_0",
+            "ModAct_1751656904_1792610664_4",
+            "ModAct_1434278705_1792662586_4"
+          ]
+        }
+      },
+      {
+        "gid": "671757730685393328",
+        "event_name": "REDstreams – Cyberpunk: Edgerunners 2",
+        "event_type": 11,
+        "appid": 1091500,
+        "rtime32_start_time": 1793115900,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "671757730685393329",
+          "headline": "REDstreams – Cyberpunk: Edgerunners 2",
+          "posttime": 1793025540,
+          "body": "[p]Finished watching Cyberpunk: Edgerunners 2? Good. We need to talk.[/p][p][/p][p]Join us for a special Edgerunners edition of REDstreams as we look back at Cyberpunk: Edgerunners 2 with Bartosz Sztybor and Saya Elder.[/p][p][/p][p]📅 Tuesday, October 27th, 5 PM CET[/p][p][/p][p]We will be live on Twitch, YouTube and Steam![/p][p][dynamiclink href=\"https://www.twitch.tv/cdprojektred\"][/dynamiclink",
+          "tags": ["hide_store", "mod_reviewed", "ModAct_1751692459_1793025885_0"]
+        }
+      },
+      {
+        "gid": "503961862016073928",
+        "event_name": "Patch 2.31",
+        "event_type": 13,
+        "appid": 1091500,
+        "rtime32_start_time": 1757585340,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "503961862016073929",
+          "headline": "Patch 2.31",
+          "posttime": 1757585343,
+          "body": "[p]Patch 2.31 for Cyberpunk 2077 is now live![/p][p][/p][p]This update includes an AutoDrive upgrade and Photo Mode adjustments. It also addresses common issues encountered by players. For details, check the full list of changes below:[/p][p][/p][h3]Vehicles[/h3][list][*][p]Updated AutoDrive. When driving to a selected point, the vehicle now drives smoothly, overtakes blocking vehicles and no long",
+          "tags": ["mod_reviewed", "ModAct_1425146861_1757587265_0"]
+        }
+      }
+    ]
+  },
+  "230410": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "689773669992367228",
+        "event_name": "Devstream #199",
+        "event_type": 11,
+        "appid": 230410,
+        "rtime32_start_time": 1795806000,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "689773669992367229",
+          "headline": "Devstream #199",
+          "posttime": 1794336473,
+          "body": "[p][b]Coming Soon: Devstream #199 - Tau Part Two[/b][/p][p][img src=\"{STEAM_CLAN_IMAGE}/4437469/7aeb9b28a34c75b5baf818f3bcbdd912d5bce3d7.png\"][/img][/p][p]The last Devstream of 2026 draws near, Tenno! Devstream #199 - Tau Part Two will go even deeper into the rain slicked ring-city of Fornax! Learn about the coming Tau Gamemodes, Highway system, Tau Steel Path, and much more. PLUS, don’t miss the ",
+          "tags": ["mod_reviewed", "ModAct_1878895840_1794337766_0"]
+        }
+      },
+      {
+        "gid": "681888927386175809",
+        "event_name": "The Icebind is live now!",
+        "event_type": 28,
+        "appid": 230410,
+        "rtime32_start_time": 1791387120,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "681888927386175810",
+          "headline": "The Icebind is live now!",
+          "posttime": 1791387148,
+          "body": "A new challenge arrives atop the Yuvan Peak, Tenno! Rally your squad, ring the Cryobell and overcome the Binds if you can.\n\nThe Icebind is an experimental new game mode meant to give you the space to push your loadouts and tackle cooperative objectives. Six-player Squads. Level 999+ Enemies. Randomized modifiers known as Binds. Guaranteed Riven Splicer Rewards with bonus Rewards based on Side Obje",
+          "tags": ["mod_reviewed", "ModAct_1607812438_1791387909_0"]
+        }
+      },
+      {
+        "gid": "677383425371407043",
+        "event_name": "Iceblade of Narin Available now!",
+        "event_type": 14,
+        "appid": 230410,
+        "rtime32_start_time": 1790176680,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "677383425371407044",
+          "headline": "Iceblade of Narin Available now!",
+          "posttime": 1790176720,
+          "body": "[b]Dance through the blizzard in Iceblade of Narin with the 66th Warframe Narin, and return to the Zariman to battle Entropic Eximus![/b]\n\nCheck out the full gameplay trailer, featuring voiceover from Choi Han:\n\n[previewyoutube=L13BD5Xun5c;full][/previewyoutube]\n[hr][/hr]\n[h3]Narin, Sword Dancer Warframe[/h3]\n\n[img]{STEAM_CLAN_IMAGE}/4437469/16bf4748b0864f1033d565de389e6406ecb3a45a.png[/img]\nNarin",
+          "tags": [
+            "vo_marketing_message",
+            "mod_reviewed",
+            "ModAct_1847323374_1790178569_0",
+            "ModAct_1847323374_1792079776_4",
+            "ModAct_1847323374_1792079777_1",
+            "ModAct_1847323374_1792079782_4"
+          ]
+        }
+      }
+    ]
+  },
+  "1172470": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "708914425087656297",
+        "event_name": "Apex Legends: Latest Update 11/12/2026",
+        "event_type": 28,
+        "appid": 1172470,
+        "rtime32_start_time": 1794518580,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "708914425087656298",
+          "headline": "Apex Legends: Latest Update 11/12/2026",
+          "posttime": 1794518587,
+          "body": "[p][/p][p][img src=\"{STEAM_CLAN_IMAGE}/38098458/9d73dfa006032b09820d62a26ef8fb982f44d3f4.jpg\"][/img][/p][p]✅[b]FIXED:[/b][/p][p]-An exploit that allowed players to fire the Akimbo Wingman faster than intended[/p][p]-A client crash issue triggered by incorrect dropship pathing[/p]",
+          "tags": ["mod_reviewed", "ModAct_1787316731_1794521708_0"]
+        }
+      },
+      {
+        "gid": "680766201707627239",
+        "event_name": "An Update from the Anti-Cheat Team – Nov 4, 2026",
+        "event_type": 12,
+        "appid": 1172470,
+        "rtime32_start_time": 1793811720,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "680766201707627240",
+          "headline": "An Update from the Anti-Cheat Team – Nov 4, 2026",
+          "posttime": 1793811743,
+          "body": "[h1]Ranked Integrity Update – Rookie Rank Exploit[/h1][p]We recently identified and quickly resolved an exploit that allowed some players, primarily on PlayStation 5, to enter Ranked matches as Rookie IV regardless of their actual rank.[/p][p]This caused several unintended advantages, including:[/p][list][*][p]No Ranked entry cost[/p][/*][*][p]Rookie-tier kill bonuses[/p][/*][*][p]Matchmaking Rati",
+          "tags": [
+            "patchnotes",
+            "mod_reviewed",
+            "ModAct_1894963720_1793816717_0",
+            "ModAct_1787316731_1793820755_4"
+          ]
+        }
+      }
+    ]
+  },
+  "1623730": {
+    "success": 1,
+    "events": [
+      {
+        "gid": "677387864414093594",
+        "event_name": "Palworld × Graveyard Keeper 2 Steam Bundle is Out Now!",
+        "event_type": 20,
+        "appid": 1623730,
+        "rtime32_start_time": 1793154540,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "677387864414093595",
+          "headline": "Palworld × Graveyard Keeper 2 Steam Bundle is Out Now!",
+          "posttime": 1793150513,
+          "body": "[p][img src=\"{STEAM_CLAN_IMAGE}/40671762/7b16685a6c7de8cdc3c77001fb9b65fa18e855a6.png\"][/img][/p][p]We're thrilled to announce that the Palworld × Graveyard Keeper 2 Steam Bundle is now officially available![/p][p][/p][p]Whether you'd rather explore a vast world alongside mysterious Pals or restore a town, manage a graveyard, and put the undead to work, there's plenty of adventure waiting for you!",
+          "tags": [
+            "mod_reviewed",
+            "ModAct_1751555285_1793150679_0",
+            "ModAct_1751555285_1793150784_2_20",
+            "ModAct_1598046824_1793151457_4",
+            "ModAct_1751555285_1793156269_4"
+          ]
+        }
+      },
+      {
+        "gid": "698775523599320162",
+        "event_name": "v1.0.5: Bug fixes",
+        "event_type": 12,
+        "appid": 1623730,
+        "rtime32_start_time": 1789441380,
+        "published": 1,
+        "hidden": 0,
+        "unlisted": 0,
+        "announcement_body": {
+          "gid": "698775523599320163",
+          "headline": "v1.0.5: Bug fixes",
+          "posttime": 1789441427,
+          "body": "[p]▼Bug Fixes[/p][p]・Fixed an issue where terrain, building, and other textures could load at significantly reduced resolution for some players[/p][p]・Fixed an issue where some map icon filters could unintentionally be turned off after the player respawned[/p]",
+          "tags": ["patchnotes", "mod_reviewed", "ModAct_1870293249_1789442286_0"]
+        }
+      }
+    ]
+  }
+}

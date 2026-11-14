@@ -3,13 +3,27 @@
  *
  * Games aren't versioned like apps: most never show a version number. What
  * they do publish is patch notes, and on Steam developers post those as
- * announcements on the game's news hub. Steam's public news API
- * (ISteamNews/GetNewsForApp, keyless) returns those announcements; this
- * provider keeps the ones that are patch notes and records each as an update
- * on its date, with its notes. The store API (appdetails, also keyless) adds
- * the game's developer, price, genre and age rating when it's available.
+ * announcements on the game's news hub, marking each post with a type:
+ * small update, regular update, major update, news, in-game event, stream,
+ * sale and so on. The Steam client's own "Updates" filter uses those types.
  *
- * Per listing and run: one news request and one store request.
+ * This provider reads the game's events (the store's public, keyless events
+ * feed) and keeps the ones that are updates:
+ *
+ *  - posts the developer marked as an update (small, regular or major);
+ *  - posts marked as plain news but titled or tagged like patch notes,
+ *    because some developers file real patches as news ("Version 20261105
+ *    Patch Notes", "Latest Update 11/12/2026");
+ *  - never posts about something that hasn't shipped or isn't a game update
+ *    (previews, community news, anti-cheat notices, esports, store posts),
+ *    whatever they are marked as, and never streams, sales or in-game events.
+ *
+ * Each is recorded as an update on the date it was posted, with its notes.
+ * If the events feed is unavailable, Steam's news API (ISteamNews, also
+ * keyless) is read instead and titles alone decide. The store API adds the
+ * game's developer, price, genre, age rating and cover art.
+ *
+ * Per listing and run: one events request and two store requests.
  */
 
 import { desktopSourceFor } from '../../../src/shared/desktop.ts';
@@ -19,39 +33,53 @@ import { errorMessage, fetchJson, withRetry } from '../net.ts';
 import type { AppSnapshot, OfficialRelease, ProviderFetch } from './types.ts';
 import { asNonEmptyString, ProviderError } from './types.ts';
 
+const EVENTS_API = 'https://store.steampowered.com/events/ajaxgetpartnereventspageable/';
 const NEWS_API = 'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/';
 const STORE_API = 'https://store.steampowered.com/api/appdetails';
 const ITEMS_API = 'https://api.steampowered.com/IStoreBrowseService/GetItems/v1/';
-/** Announcements read per game (patch notes are a share of them). */
+/** Events read per game (updates are a share of them). */
+const EVENT_COUNT = 100;
+/** Announcements read per game from the fallback news API. */
 const NEWS_COUNT = 200;
+
+/** Steam's event types for "small update / patch notes", "regular update" and "major update". */
+const SMALL_UPDATE = 12;
+const REGULAR_UPDATE = 13;
+const MAJOR_UPDATE = 14;
+/** Plain posts ("other" and "news"): the title decides. */
+const NEWS_TYPES = new Set([1, 28]);
 /** Patch notes kept as history per run. */
 const MAX_RELEASES = 40;
 const MAX_NOTES = 4000;
 
 /** Titles that announce a game update. */
 const PATCH_TITLE =
-  /\b(patch(?:es)?|hot ?fix(?:es)?|update[ds]?|release notes|change ?log|bug ?fix(?:es)?|fixes|balance (?:changes|post|update)|version \d|(?:is |now )live|out now)\b|\bv?\d+\.\d+(?:\.\d+)*\b/i;
-/** …and posts that only talk about one, or about something else. */
-const NOT_A_PATCH = new RegExp(
-  [
-    // Talking about an update that hasn't shipped.
-    "coming soon|coming to|is coming|are coming|what's coming|what’s coming|upcoming",
-    'roadmap|teaser|trailer|preview|sneak peek',
-    '(?:launch|releas)(?:es|ing) (?:on )?(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* \\d+',
-    // News, community and developer posts.
-    'dev(?:eloper)? ?(?:update|diary|blog|q&a|vision)|\\w*streams?|community (?:update|crunch|spotlight)',
-    'an update from|anti[- ]?cheat|newsletter|recap|known issues|patch day schedule',
-    'survey|poll|vote|steam awards|contest|challenge|wallpaper|merch',
-    // Store and esports posts.
-    'sale|discount|bundle|giveaway|free weekend|tournament|esports|grand finals?|finals? day|twitch drops',
-    'global series|pgs \\d+|(?:survival|winners|final|group|knockout|playoff) stage',
-  ]
-    .map((group) => `(?:${group})`)
-    .join('|')
-    .replace(/^/, '\\b(?:')
-    .concat(')\\b'),
-  'i',
-);
+  /\b(patch(?:es)?|hot ?fix(?:es)?|update[ds]?|release notes|change ?log|bug ?fix(?:es)?|fixes|balance (?:changes|post|update)|version \d)\b|\bv?\d+\.\d+(?:\.\d+)*\b/i;
+/**
+ * "…is live" / "…out now": only a hint. Used when a post has no type (the
+ * news API); with types, developers mark real launches as updates, and
+ * plain news saying "live" is usually an event, a stream or a store item.
+ */
+const LAUNCH_TITLE = /\b(?:(?:is |are |now )live|out now)\b/i;
+function anyOf(groups: readonly string[]): RegExp {
+  return new RegExp(`\\b(?:${groups.map((group) => `(?:${group})`).join('|')})\\b`, 'i');
+}
+
+/** Posts about an update that hasn't shipped. */
+const NOT_YET = anyOf([
+  "coming soon|coming to|is coming|are coming|what's coming|what’s coming|upcoming",
+  'roadmap|teaser|trailer|preview|sneak peek',
+  '(?:launch|releas)(?:es|ing) (?:on )?(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* \\d+',
+]);
+
+/** Posts that aren't a game update: news, community, developer, store and esports posts. */
+const NOT_AN_UPDATE = anyOf([
+  'dev(?:eloper)? ?(?:update|diary|blog|q&a|vision|letter)|\\w*streams?|community (?:update|crunch|spotlight)',
+  'an update from|anti[- ]?cheat|bans? notice|service report|newsletter|recap|known issues|patch day schedule',
+  'survey|poll|vote|steam awards|contest|challenge|wallpaper|merch|soundtrack',
+  'sale|discount|bundles?|store update|giveaway|free weekend|tournament|esports|grand finals?|finals? day|twitch drops',
+  'global series|pgs \\d+|(?:survival|winners|final|group|knockout|playoff) stage',
+]);
 
 export interface SteamNewsItem {
   title: string;
@@ -60,6 +88,8 @@ export interface SteamNewsItem {
   /** Unix seconds. */
   date: number;
   tags: string[];
+  /** Steam's event type, when read from the events feed (absent from the news API). */
+  type?: number;
 }
 
 function toNewsItem(value: unknown): SteamNewsItem | null {
@@ -80,6 +110,50 @@ function toNewsItem(value: unknown): SteamNewsItem | null {
   };
 }
 
+/** One event from the store's events feed, or null for anything unusable. */
+function toEventItem(value: unknown, appId: string): SteamNewsItem | null {
+  if (typeof value !== 'object' || value === null) return null;
+  const raw = value as Record<string, unknown>;
+  const body = (raw.announcement_body ?? {}) as Record<string, unknown>;
+  const title = asNonEmptyString(raw.event_name) ?? asNonEmptyString(body.headline);
+  const type = Number(raw.event_type);
+  // The post time is what the news API reports as the date, so records read
+  // from either source line up; events without a post fall back to their start.
+  const posted = Number(body.posttime);
+  const date = Number.isFinite(posted) && posted > 0 ? posted : Number(raw.rtime32_start_time);
+  if (!title || !Number.isInteger(type) || !Number.isFinite(date) || date <= 0) return null;
+  if (Number(raw.hidden) === 1 || Number(raw.published) === 0 || Number(raw.unlisted) === 1) {
+    return null;
+  }
+  const gid = asNonEmptyString(raw.gid);
+  let tags: string[] = [];
+  if (Array.isArray(body.tags)) {
+    tags = body.tags.filter((tag): tag is string => typeof tag === 'string');
+  } else if (typeof body.tags === 'string') {
+    tags = body.tags.match(/[\w-]+/g) ?? [];
+  }
+  return {
+    title: decodeEntities(title),
+    contents: typeof body.body === 'string' ? body.body : '',
+    url:
+      gid && /^\d+$/.test(gid)
+        ? `https://store.steampowered.com/news/app/${appId}/view/${gid}`
+        : null,
+    date,
+    tags,
+    type,
+  };
+}
+
+/** The usable events in an events-feed response, or null if it isn't one. */
+export function parseSteamEvents(payload: unknown, appId: string): SteamNewsItem[] | null {
+  const events = (payload as { events?: unknown } | null)?.events;
+  if (!Array.isArray(events)) return null;
+  return events
+    .map((event) => toEventItem(event, appId))
+    .filter((item): item is SteamNewsItem => item !== null);
+}
+
 /** Steam announcement markup (BBCode, sometimes HTML) to plain text. */
 export function steamToPlainText(contents: string): string {
   const text = contents
@@ -94,31 +168,53 @@ export function steamToPlainText(contents: string): string {
   return htmlToPlainText(text);
 }
 
-/**
- * The announcements that are patch notes: posts the developer tagged as
- * patch notes on Steam ("patchnotes"), or titled like an update ("Patch 1.2",
- * "Hotfix #36", "Update 2.3 is live", "Version 20261030 Patch Notes").
- * Developers tag inconsistently, so either is enough; posts that only talk
- * about an update (previews, roadmaps, weekly news, dev diaries) never count.
- */
-export function patchNotesOf(items: readonly SteamNewsItem[]): SteamNewsItem[] {
+/** Whether one announcement is a game update (see the notes at the top of this file). */
+export function isGameUpdate(item: SteamNewsItem): boolean {
+  if (NOT_YET.test(item.title)) return false;
+  // A post the developer marked as a major update is one, whatever its title.
+  if (item.type === MAJOR_UPDATE) return true;
+  if (NOT_AN_UPDATE.test(item.title)) return false;
+  if (item.type === SMALL_UPDATE || item.type === REGULAR_UPDATE) return true;
+  // Streams, sales, in-game events and the like are never updates.
+  if (item.type !== undefined && !NEWS_TYPES.has(item.type)) return false;
+  // Plain news (or the news API, which has no types): the title or tag decides.
+  if (item.tags.includes('patchnotes') || PATCH_TITLE.test(item.title)) return true;
+  return item.type === undefined && LAUNCH_TITLE.test(item.title);
+}
+
+/** How sure the signal is (for picking one post when several land on a day). */
+function updateWeight(item: SteamNewsItem): number {
+  if (item.type === MAJOR_UPDATE) return 3;
+  if (item.type === SMALL_UPDATE || item.type === REGULAR_UPDATE) return 2;
+  return /\bpatch notes\b/i.test(item.title) || item.tags.includes('patchnotes') ? 1 : 0;
+}
+
+/** The announcements that are game updates, newest first; nothing dated in the future. */
+export function patchNotesOf(
+  items: readonly SteamNewsItem[],
+  now: number = Date.now(),
+): SteamNewsItem[] {
   return items
-    .filter(
-      (item) =>
-        (item.tags.includes('patchnotes') || PATCH_TITLE.test(item.title)) &&
-        !NOT_A_PATCH.test(item.title),
-    )
+    .filter((item) => item.date * 1000 <= now && isGameUpdate(item))
     .sort((a, b) => b.date - a.date);
 }
 
-/** Patch notes as releases (newest first); several posts on one day are one update. */
-export function steamReleases(items: readonly SteamNewsItem[]): OfficialRelease[] {
-  const releases: OfficialRelease[] = [];
-  const days = new Set<string>();
-  for (const item of patchNotesOf(items)) {
+/**
+ * Updates as releases (newest first). Several posts on one day are one
+ * update: the one most clearly marked as an update, else the latest.
+ */
+export function steamReleases(
+  items: readonly SteamNewsItem[],
+  now: number = Date.now(),
+): OfficialRelease[] {
+  const byDay = new Map<string, SteamNewsItem>();
+  for (const item of patchNotesOf(items, now)) {
     const day = new Date(item.date * 1000).toISOString().slice(0, 10);
-    if (days.has(day)) continue;
-    days.add(day);
+    const chosen = byDay.get(day);
+    if (!chosen || updateWeight(item) > updateWeight(chosen)) byDay.set(day, item);
+  }
+  const releases: OfficialRelease[] = [];
+  for (const item of byDay.values()) {
     const body = steamToPlainText(item.contents);
     releases.push({
       version: null,
@@ -261,26 +357,48 @@ export function createSteamProvider(options: SteamProviderOptions = {}): Provide
       throw new ProviderError(`Not a Steam listing: "${target.storeId}"`);
     }
     const { appId } = source;
-    const newsUrl = `${NEWS_API}?${new URLSearchParams({
-      appid: appId,
-      count: String(NEWS_COUNT),
-      maxlength: '0',
-      feeds: 'steam_community_announcements',
-      format: 'json',
-    })}`;
-    const news = (await get(newsUrl, `steam:news:${appId}`)) as {
-      appnews?: { newsitems?: unknown[] };
-    } | null;
-    const items = (news?.appnews?.newsitems ?? [])
-      .map(toNewsItem)
-      .filter((item): item is SteamNewsItem => item !== null);
+    // Events carry the developer's own "this is an update" marking; the news
+    // API is the fallback when the events feed can't be read.
+    let items: SteamNewsItem[] | null = null;
+    try {
+      items = parseSteamEvents(
+        await get(
+          `${EVENTS_API}?${new URLSearchParams({
+            clan_accountid: '0',
+            appid: appId,
+            offset: '0',
+            count: String(EVENT_COUNT),
+            l: 'english',
+          })}`,
+          `steam:events:${appId}`,
+        ),
+        appId,
+      );
+    } catch (error) {
+      log?.(`warning: Steam events for ${appId} unavailable (${errorMessage(error)})`);
+    }
+    if (!items || items.length === 0) {
+      const newsUrl = `${NEWS_API}?${new URLSearchParams({
+        appid: appId,
+        count: String(NEWS_COUNT),
+        maxlength: '0',
+        feeds: 'steam_community_announcements',
+        format: 'json',
+      })}`;
+      const news = (await get(newsUrl, `steam:news:${appId}`)) as {
+        appnews?: { newsitems?: unknown[] };
+      } | null;
+      items = (news?.appnews?.newsitems ?? [])
+        .map(toNewsItem)
+        .filter((item): item is SteamNewsItem => item !== null);
+    }
     const releases = steamReleases(items);
     const latest = releases[0];
     if (!latest) throw new ProviderError(`No patch notes on Steam for app ${appId}`);
 
     let iconUrl: string | null = null;
     try {
-      const items = await get(
+      const storeItems = await get(
         `${ITEMS_API}?${new URLSearchParams({
           input_json: JSON.stringify({
             ids: [{ appid: Number(appId) }],
@@ -290,7 +408,7 @@ export function createSteamProvider(options: SteamProviderOptions = {}): Provide
         })}`,
         `steam:items:${appId}`,
       );
-      iconUrl = await firstImage(steamIconCandidates(items, appId));
+      iconUrl = await firstImage(steamIconCandidates(storeItems, appId));
     } catch (error) {
       log?.(`warning: Steam icon for ${appId} unavailable (${errorMessage(error)})`);
     }

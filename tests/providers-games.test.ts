@@ -11,6 +11,8 @@ import {
 } from '../scripts/lib/providers/robloxStudio.ts';
 import {
   createSteamProvider,
+  isGameUpdate,
+  parseSteamEvents,
   parseStoreDetails,
   patchNotesOf,
   steamIconCandidates,
@@ -20,6 +22,7 @@ import {
 import type { SteamNewsItem } from '../scripts/lib/providers/steam.ts';
 import { desktopSourceFor, parseDesktopRef } from '../src/shared/desktop.ts';
 import { validateHistoryFile } from '../src/shared/validate.ts';
+import steamEvents from './fixtures/steam-events.json';
 
 const target = (platform: TrackTarget['platform'], storeId: string): TrackTarget => ({
   platform,
@@ -132,6 +135,71 @@ const STORE = {
 function item(title: string, date: string, tags: string[] = []): SteamNewsItem {
   return { title, contents: '', url: null, date: day(date), tags };
 }
+
+/** Real responses from Steam's events feed (trimmed), keyed by app id. */
+const EVENTS = steamEvents as Record<string, unknown>;
+
+describe("Steam events: the developer's own update marking", () => {
+  const titlesOf = (appId: string) =>
+    steamReleases(parseSteamEvents(EVENTS[appId], appId)!, Date.parse('2026-11-13T00:00:00Z')).map(
+      (release) => release.releaseNotes!.split('\n')[0],
+    );
+
+  it('counts updates the developer marked, whatever they are called (Rust)', () => {
+    // Monthly updates are named, not titled "update"; news, votes, in-game
+    // events and DLC posts are not updates.
+    expect(titlesOf('252490')).toEqual(['PRINTED AND POLISHED', 'LIVESTOCK', 'NAVAL UPDATE']);
+  });
+
+  it('counts real patch notes filed as news, not reports, bans or esports (PUBG)', () => {
+    expect(titlesOf('578080')).toEqual(['Patch Notes - Update 44.1']);
+  });
+
+  it('keeps a major update inside a weekly news post, drops ordinary weekly news (ARK)', () => {
+    expect(titlesOf('2399830')).toEqual([
+      'Community Crunch 531: Unreal Engine 5.8, Enigmasaur and Giga TLC out now!',
+      'Therizino TLC, Cerberax and Gargantar are out now!',
+    ]);
+  });
+
+  it('drops previews and streams even when marked as updates (Cyberpunk 2077)', () => {
+    expect(titlesOf('1091500')).toEqual([
+      "Cyberpunk 2077's Edgerunners 2 Update (2.5) is out now!",
+      'Patch 2.31',
+    ]);
+  });
+
+  it('ignores "is live" news and future streams; keeps marked launches (Warframe)', () => {
+    expect(titlesOf('230410')).toEqual(['Iceblade of Narin Available now!']);
+  });
+
+  it('handles patches filed as news and notices filed as patches (Apex), and bundles (Palworld)', () => {
+    expect(titlesOf('1172470')).toEqual(['Apex Legends: Latest Update 11/12/2026']);
+    expect(titlesOf('1623730')).toEqual(['v1.0.5: Bug fixes']);
+  });
+
+  it('dates events by their post time and links to the store post', () => {
+    const [latest] = steamReleases(parseSteamEvents(EVENTS['252490'], '252490')!);
+    expect(latest).toMatchObject({
+      version: null,
+      releaseDate: '2026-11-05T18:24:44.000Z',
+      url: 'https://store.steampowered.com/news/app/252490/view/672884902358680240',
+    });
+    expect(latest!.releaseNotes).toMatch(/^PRINTED AND POLISHED\n\nBLUEPRINT REWORK/);
+  });
+
+  it('rejects responses that are not an events list', () => {
+    expect(parseSteamEvents({ success: 1 }, '1')).toBeNull();
+    expect(parseSteamEvents(null, '1')).toBeNull();
+    expect(parseSteamEvents({ events: [{ event_name: 'x' }, 7, null] }, '1')).toEqual([]);
+  });
+
+  it('never counts an event dated in the future', () => {
+    const future = { title: 'Patch 9', contents: '', url: null, date: 2e9, tags: [], type: 13 };
+    expect(isGameUpdate(future)).toBe(true);
+    expect(patchNotesOf([future], Date.parse('2026-11-12T00:00:00Z'))).toEqual([]);
+  });
+});
 
 describe('Steam patch notes', () => {
   it('reads Steam listings and store links', () => {
@@ -272,6 +340,25 @@ describe('Steam patch notes', () => {
     });
     expect(snapshot.releaseNotes).toMatch(/^Counter-Strike 2 Update\n\nMAPS/);
     expect(snapshot.releases).toHaveLength(2); // the tournament and the repost are skipped
+  });
+
+  it('prefers the events feed, with the news API as the fallback', async () => {
+    const fetchFn = jsonFetch({
+      'https://store.steampowered.com/events/ajaxgetpartnereventspageable/': EVENTS['252490'],
+      'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/': NEWS,
+    });
+    const snapshot = await createSteamProvider({ fetchFn, retries: 0 })(
+      target('windows', 'steam:252490'),
+    );
+    expect(snapshot.releaseNotes).toMatch(/^PRINTED AND POLISHED/);
+    expect(snapshot.releaseUrl).toBe(
+      'https://store.steampowered.com/news/app/252490/view/672884902358680240',
+    );
+    expect(snapshot.releases).toHaveLength(3);
+    const urls = (fetchFn as unknown as { mock: { calls: unknown[][] } }).mock.calls.map((c) =>
+      String(c[0]),
+    );
+    expect(urls.some((url) => url.includes('GetNewsForApp'))).toBe(false);
   });
 
   it('still works when the store details are unavailable', async () => {
