@@ -9303,6 +9303,12 @@
     "google:com.amazon.avod.thirdpartyclient": [
       {
         "version": null,
+        "releaseDate": "2026-11-14T17:21:53.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-14T18:33:52.380Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-11T00:02:12.000Z",
         "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
         "detectedAt": "2026-11-11T09:25:11.366Z"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-14T15:04:36.236Z",
+  "trainedAt": "2026-11-14T18:33:52.380Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -699,9 +699,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 5,
-        "medianErrorDays": 2.3
+        "medianErrorDays": 1.96
       }
     },
     "google:com.android.chrome": {
@@ -2195,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3138,
+    "tests": 3139,
     "hits": 1961,
     "medianErrorDays": 2.28
   },
   "live": {
-    "forecasts": 464,
+    "forecasts": 465,
     "hits": 345,
-    "medianErrorDays": 1.05
+    "medianErrorDays": 1.04
   }
 }
