@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-15T09:24:50.626Z",
+  "trainedAt": "2026-11-15T17:10:04.388Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -140,9 +140,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 2.88
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 2.4
       }
     },
     "apple:323229106": {
@@ -314,8 +314,8 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
+        "forecasts": 3,
+        "hits": 3,
         "medianErrorDays": 0.08
       }
     },
@@ -2195,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3147,
-    "hits": 1966,
+    "tests": 3149,
+    "hits": 1968,
     "medianErrorDays": 2.27
   },
   "live": {
-    "forecasts": 473,
-    "hits": 351,
+    "forecasts": 475,
+    "hits": 353,
     "medianErrorDays": 1.03
   }
 }

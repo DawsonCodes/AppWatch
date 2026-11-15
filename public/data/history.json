@@ -5260,6 +5260,12 @@
     ],
     "apple:310633997": [
       {
+        "version": "26.45.75",
+        "releaseDate": "2026-11-15T12:50:07.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-15T17:10:04.388Z"
+      },
+      {
         "version": "26.44.74",
         "releaseDate": "2026-11-11T13:20:54.000Z",
         "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
@@ -8951,6 +8957,12 @@
       }
     ],
     "apple:454638411": [
+      {
+        "version": "588.0.0",
+        "releaseDate": "2026-11-15T11:07:02.000Z",
+        "releaseNotes": "We update our app regularly to make it even better for you to easily connect to the people that matter. Update to the latest version to get all the new features and improvements. \n\nThis release includes:\n- Fixes for crashes within messaging experiences \n- Performance improvements to remove latency in some of our core experiences\n- iOS 26 support \n\nHave a question? Tap Help in the Messenger app or visit \n[facebook.com/help/messenger-app]",
+        "detectedAt": "2026-11-15T17:10:04.388Z"
+      },
       {
         "version": "587.0.0",
         "releaseDate": "2026-11-11T15:50:19.000Z",
