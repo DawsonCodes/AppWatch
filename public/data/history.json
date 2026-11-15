@@ -3401,6 +3401,12 @@
     ],
     "google:com.microsoft.office.officehubrow": [
       {
+        "version": "16.0.20708.20014",
+        "releaseDate": "2026-11-12T12:13:35.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-11-15T22:48:07.805Z"
+      },
+      {
         "version": "16.0.20625.20022",
         "releaseDate": "2026-11-02T04:32:14.000Z",
         "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",

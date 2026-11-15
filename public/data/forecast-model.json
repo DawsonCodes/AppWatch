@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-15T17:10:04.388Z",
+  "trainedAt": "2026-11-15T22:48:07.805Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.594,
-    0.51,
-    0.537,
-    0.594
+    0.595,
+    0.511,
+    0.538,
+    0.595
   ],
   "listings": {
     "apple:1058959277": {
@@ -986,7 +986,7 @@
     },
     "google:com.microsoft.office.officehubrow": {
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
         "medianErrorDays": 2.9
       }
@@ -2195,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3149,
-    "hits": 1968,
+    "tests": 3150,
+    "hits": 1966,
     "medianErrorDays": 2.27
   },
   "live": {
-    "forecasts": 475,
+    "forecasts": 476,
     "hits": 353,
-    "medianErrorDays": 1.03
+    "medianErrorDays": 1.04
   }
 }
