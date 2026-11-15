@@ -5335,6 +5335,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-11-14T06:30:10.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-15T09:24:50.626Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-12T00:38:56.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-11-12T09:50:48.258Z"
@@ -6252,6 +6258,12 @@
       }
     ],
     "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.35.3",
+        "releaseDate": "2026-11-13T21:41:25.000Z",
+        "releaseNotes": "★ Stickers are supported in quoted replies, so you have another way to make a point that sticks around.\n★ We added a shortcut to dismiss the media viewer by dragging up (or down) on any full-screen image or video. Now getting back to the chat is simultaneously both more and less of a drag.",
+        "detectedAt": "2026-11-15T09:24:50.626Z"
+      },
       {
         "version": "8.34.2",
         "releaseDate": "2026-11-02T13:36:11.000Z",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-15T01:55:10.471Z",
+  "trainedAt": "2026-11-15T09:24:50.626Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -10,7 +10,7 @@
   "masses": [
     0.594,
     0.51,
-    0.535,
+    0.537,
     0.594
   ],
   "listings": {
@@ -1164,9 +1164,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 3,
-        "medianErrorDays": 2.07
+        "forecasts": 5,
+        "hits": 4,
+        "medianErrorDays": 1.67
       }
     },
     "google:com.zhiliaoapp.musically": {
@@ -1226,14 +1226,14 @@
     },
     "google:org.thoughtcrime.securesms": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 1.62
+        "medianErrorDays": 2.96
       }
     },
     "google:org.wikipedia": {
@@ -1317,8 +1317,8 @@
     },
     "mac:homebrew:chatgpt": {
       "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
+        "halfLife": 16,
+        "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
@@ -2195,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3145,
-    "hits": 1965,
+    "tests": 3147,
+    "hits": 1966,
     "medianErrorDays": 2.27
   },
   "live": {
-    "forecasts": 471,
-    "hits": 350,
+    "forecasts": 473,
+    "hits": 351,
     "medianErrorDays": 1.03
   }
 }
