@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-14T20:43:27.669Z",
+  "trainedAt": "2026-11-15T01:55:10.471Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -9,8 +9,8 @@
   },
   "masses": [
     0.594,
-    0.512,
-    0.532,
+    0.51,
+    0.535,
     0.594
   ],
   "listings": {
@@ -85,9 +85,9 @@
     },
     "apple:282614216": {
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.16
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 0.15
       }
     },
     "apple:283646709": {
@@ -195,9 +195,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 6,
-        "medianErrorDays": 0.93
+        "medianErrorDays": 1.41
       }
     },
     "apple:351727428": {
@@ -460,9 +460,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 2,
-        "medianErrorDays": 0.41
+        "forecasts": 5,
+        "hits": 3,
+        "medianErrorDays": 0.3
       }
     },
     "apple:6477489729": {
@@ -719,13 +719,13 @@
     "google:com.anthropic.claude": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.3,
+        "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
-        "forecasts": 8,
-        "hits": 7,
-        "medianErrorDays": 0.98
+        "forecasts": 9,
+        "hits": 8,
+        "medianErrorDays": 0.96
       }
     },
     "google:com.brave.browser": {
@@ -766,9 +766,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 2.15
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 1.46
       }
     },
     "google:com.deepseek.chat": {
@@ -1317,8 +1317,8 @@
     },
     "mac:homebrew:chatgpt": {
       "params": {
-        "halfLife": 16,
-        "bandwidth": 0.45,
+        "halfLife": 32,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
@@ -2195,13 +2195,13 @@
     }
   },
   "replay": {
-    "tests": 3140,
-    "hits": 1962,
-    "medianErrorDays": 2.28
+    "tests": 3145,
+    "hits": 1965,
+    "medianErrorDays": 2.27
   },
   "live": {
-    "forecasts": 466,
-    "hits": 346,
-    "medianErrorDays": 1.05
+    "forecasts": 471,
+    "hits": 350,
+    "medianErrorDays": 1.03
   }
 }

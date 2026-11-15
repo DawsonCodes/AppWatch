@@ -969,6 +969,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261113.19",
+        "releaseDate": "2026-11-14T09:52:08.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-15T01:55:10.471Z"
+      },
+      {
         "version": "1.261111.19",
         "releaseDate": "2026-11-12T08:32:08.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1078,6 +1084,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261113.19",
+        "releaseDate": "2026-11-14T03:37:42.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-15T01:55:10.471Z"
+      },
       {
         "version": "1.261112.18",
         "releaseDate": "2026-11-13T03:42:19.000Z",
@@ -4099,6 +4111,12 @@
       }
     ],
     "apple:333903271": [
+      {
+        "version": "12.44",
+        "releaseDate": "2026-11-14T20:19:39.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-15T01:55:10.471Z"
+      },
       {
         "version": "12.43",
         "releaseDate": "2026-11-11T16:32:53.000Z",
@@ -41837,6 +41855,12 @@
     ],
     "apple:282614216": [
       {
+        "version": "6.282.0",
+        "releaseDate": "2026-11-14T18:04:43.000Z",
+        "releaseNotes": "The eBay app you love, now supporting iPhone Duo!\n\nBug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
+        "detectedAt": "2026-11-15T01:55:10.471Z"
+      },
+      {
         "version": "6.281.0",
         "releaseDate": "2026-11-07T18:08:25.000Z",
         "releaseNotes": "Bug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
@@ -41992,6 +42016,12 @@
       }
     ],
     "google:com.dd.doordash": [
+      {
+        "version": "15.301.6",
+        "releaseDate": "2026-11-10T17:47:03.000Z",
+        "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
+        "detectedAt": "2026-11-15T01:55:10.471Z"
+      },
       {
         "version": "15.300.7",
         "releaseDate": "2026-11-03T17:42:16.000Z",
