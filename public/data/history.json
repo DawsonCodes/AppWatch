@@ -65,6 +65,12 @@
     ],
     "google:com.openai.chatgpt": [
       {
+        "version": "1.2026.314",
+        "releaseDate": "2026-11-16T02:24:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
+      {
         "version": "1.2026.307",
         "releaseDate": "2026-11-09T22:30:17.000Z",
         "releaseNotes": null,
@@ -3357,6 +3363,12 @@
     ],
     "apple:541164041": [
       {
+        "version": "2.116.1",
+        "releaseDate": "2026-11-16T05:22:17.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
+      {
         "version": "2.116",
         "releaseDate": "2026-11-12T00:08:56.000Z",
         "releaseNotes": "• General quality and performance enhancements.",
@@ -4526,6 +4538,12 @@
     ],
     "apple:544007664": [
       {
+        "version": "21.46.3",
+        "releaseDate": "2026-11-15T17:07:14.000Z",
+        "releaseNotes": "Bug fixes, performance improvements, and more cat videos.",
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
+      {
         "version": "21.45.4",
         "releaseDate": "2026-11-08T17:09:00.000Z",
         "releaseNotes": "Fixed bugs, improved performance, explored the edges of the known universe.",
@@ -5345,6 +5363,12 @@
       }
     ],
     "google:com.whatsapp": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-15T08:14:49.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-14T06:30:10.000Z",
@@ -23588,6 +23612,12 @@
     ],
     "mac:homebrew:notion": [
       {
+        "version": "7.44.0",
+        "releaseDate": "2026-11-16T04:31:52.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
+      {
         "version": "7.43.2",
         "releaseDate": "2026-11-13T01:50:30.000Z",
         "releaseNotes": null,
@@ -25689,6 +25719,12 @@
       }
     ],
     "google:com.canva.editor": [
+      {
+        "version": "2.386.0",
+        "releaseDate": "2026-11-10T22:52:28.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes.\n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
       {
         "version": "2.385.0",
         "releaseDate": "2026-11-04T01:45:07.000Z",
@@ -29054,6 +29090,12 @@
       }
     ],
     "apple:989804926": [
+      {
+        "version": "160.1",
+        "releaseDate": "2026-11-16T03:08:21.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-11-16T06:27:44.802Z"
+      },
       {
         "version": "160.0",
         "releaseDate": "2026-11-09T03:06:32.000Z",
