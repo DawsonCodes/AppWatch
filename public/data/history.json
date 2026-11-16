@@ -2889,6 +2889,12 @@
     ],
     "mac:homebrew:google-gemini": [
       {
+        "version": "1.144.4.1467",
+        "releaseDate": "2026-11-16T07:00:03.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
+      {
         "version": "1.141.3.1394",
         "releaseDate": "2026-11-08T07:02:17.000Z",
         "releaseNotes": null,
@@ -4240,6 +4246,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.43.0-prod.01",
+        "releaseDate": "2026-11-13T00:54:41.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
+      {
         "version": "12.42.0-prod.01",
         "releaseDate": "2026-11-10T03:58:14.000Z",
         "releaseNotes": null,
@@ -4388,6 +4400,12 @@
     ],
     "google:com.instagram.barcelona": [
       {
+        "version": "455.0.0.55.72",
+        "releaseDate": "2026-11-09T21:42:25.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
+      {
         "version": "454.0.0.54.79",
         "releaseDate": "2026-11-02T18:53:39.000Z",
         "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
@@ -4475,6 +4493,12 @@
       }
     ],
     "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-12T12:41:56.000Z",
+        "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-05T10:40:13.000Z",
@@ -5462,6 +5486,12 @@
     ],
     "mac:homebrew:whatsapp": [
       {
+        "version": "26.46.12",
+        "releaseDate": "2026-11-16T14:22:29.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
+      {
         "version": "26.45.23",
         "releaseDate": "2026-11-13T14:13:33.000Z",
         "releaseNotes": null,
@@ -6294,6 +6324,12 @@
       }
     ],
     "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.35.4",
+        "releaseDate": "2026-11-16T02:45:27.000Z",
+        "releaseNotes": "★ Stickers are supported in quoted replies, so you have another way to make a point that sticks around.\n★ We added a shortcut to dismiss the media viewer by dragging up (or down) on any full-screen image or video. Now getting back to the chat is simultaneously both more and less of a drag.",
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
       {
         "version": "8.35.3",
         "releaseDate": "2026-11-13T21:41:25.000Z",
@@ -9043,6 +9079,12 @@
       }
     ],
     "google:com.facebook.orca": [
+      {
+        "version": "587.0.0.54.96",
+        "releaseDate": "2026-11-10T05:59:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
       {
         "version": "586.0.0.55.92",
         "releaseDate": "2026-11-02T21:02:41.000Z",
@@ -20422,6 +20464,12 @@
     ],
     "mac:homebrew:slack": [
       {
+        "version": "4.53.292",
+        "releaseDate": "2026-11-16T16:52:49.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
+      {
         "version": "4.53.287",
         "releaseDate": "2026-11-10T01:51:03.000Z",
         "releaseNotes": null,
@@ -22916,6 +22964,13 @@
       }
     ],
     "windows:winget:Notion.Notion": [
+      {
+        "version": "7.44.0",
+        "releaseDate": "2026-11-16T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z",
+        "url": null
+      },
       {
         "version": "7.43.2",
         "releaseDate": "2026-11-12T12:00:00.000Z",
@@ -32320,6 +32375,13 @@
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
       {
+        "version": "0.180.3.0",
+        "releaseDate": "2026-11-13T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z",
+        "url": null
+      },
+      {
         "version": "0.179.3.0",
         "releaseDate": "2026-11-11T12:00:00.000Z",
         "releaseNotes": null,
@@ -32398,21 +32460,21 @@
       },
       {
         "version": "0.174.8.0",
-        "releaseDate": "2026-09-30T12:00:00.000Z",
+        "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
         "version": "0.172.4.0",
-        "releaseDate": "2026-09-30T12:00:00.000Z",
+        "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
         "version": "0.171.3.0",
-        "releaseDate": "2026-09-30T12:00:00.000Z",
+        "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -32636,6 +32698,12 @@
       }
     ],
     "mac:homebrew:duckduckgo": [
+      {
+        "version": "1.216.0",
+        "releaseDate": "2026-11-16T13:01:52.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
       {
         "version": "1.215.1",
         "releaseDate": "2026-11-13T18:53:09.000Z",
@@ -42184,6 +42252,12 @@
     "google:com.ubercab.eats": [
       {
         "version": null,
+        "releaseDate": "2026-11-16T17:48:14.000Z",
+        "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-09T18:28:31.000Z",
         "releaseNotes": "We update the Uber Eats app as often as possible to make it faster and more reliable for you.\n\nLove the app? Rate us! Your feedback keeps the Uber Eats running.\n\nHave a question? Tap Help in the Uber Eats app or visit help.uber.com.",
         "detectedAt": "2026-11-09T20:43:50.674Z"
@@ -42978,6 +43052,12 @@
       }
     ],
     "google:com.ubercab": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-13T18:00:48.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to help make it faster and more reliable for you. This version includes several bug fixes and performance improvements.\n\nLove the app? Rate us! Your feedback helps us to improve the Uber app.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-06T17:46:48.000Z",
@@ -44414,6 +44494,12 @@
       }
     ],
     "google:com.duolingo": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-16T16:14:00.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-16T18:32:34.476Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-09T16:42:17.000Z",
