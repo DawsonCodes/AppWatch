@@ -22113,6 +22113,12 @@
     "google:us.zoom.videomeetings": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T03:55:13.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-17T13:25:22.005Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-31T16:23:51.000Z",
         "releaseNotes": "Bug fixes and improvements",
         "detectedAt": "2026-11-01T22:01:48.218Z"
@@ -32453,6 +32459,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.303.0",
+        "releaseDate": "2026-11-12T10:58:36.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-11-17T13:25:22.005Z"
+      },
+      {
         "version": "5.302.0",
         "releaseDate": "2026-11-09T09:35:47.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -41609,6 +41621,12 @@
     ],
     "apple:979659905": [
       {
+        "version": "7.12.1",
+        "releaseDate": "2026-11-17T10:11:55.000Z",
+        "releaseNotes": "Bug fixes and improvements",
+        "detectedAt": "2026-11-17T13:25:22.005Z"
+      },
+      {
         "version": "7.12.0",
         "releaseDate": "2026-11-11T12:46:20.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -41646,6 +41664,12 @@
       }
     ],
     "google:ch.protonmail.android": [
+      {
+        "version": "7.12.1",
+        "releaseDate": "2026-11-10T13:26:36.000Z",
+        "releaseNotes": "Multiple fixes and performance improvements.",
+        "detectedAt": "2026-11-17T13:25:22.005Z"
+      },
       {
         "version": "7.11.12",
         "releaseDate": "2026-10-30T16:16:02.000Z",
@@ -45004,6 +45028,13 @@
       }
     ],
     "windows:roblox-studio": [
+      {
+        "version": "0.748.0.7481526",
+        "releaseDate": "2026-11-17T07:36:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T13:25:22.005Z",
+        "url": "https://create.roblox.com/docs/release-notes/release-notes-748"
+      },
       {
         "version": "0.747.0.7471481",
         "releaseDate": "2026-11-10T00:54:27.000Z",
