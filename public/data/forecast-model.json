@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-16T18:32:34.476Z",
+  "trainedAt": "2026-11-17T02:55:57.134Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,17 +8,17 @@
     "weekday": 1
   },
   "masses": [
-    0.595,
-    0.515,
-    0.539,
-    0.595
+    0.587,
+    0.503,
+    0.534,
+    0.589
   ],
   "listings": {
     "apple:1058959277": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 1.06
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.18
       }
     },
     "apple:1064216828": {
@@ -28,9 +28,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 2,
-        "medianErrorDays": 2.2
+        "forecasts": 5,
+        "hits": 3,
+        "medianErrorDays": 1.45
       }
     },
     "apple:1113153706": {
@@ -59,9 +59,9 @@
     },
     "apple:1288723196": {
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 3.8
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 0.79
       }
     },
     "apple:1446075923": {
@@ -97,9 +97,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 2
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.55
       }
     },
     "apple:284882215": {
@@ -116,9 +116,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 1.49
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 1.09
       }
     },
     "apple:297606951": {
@@ -135,7 +135,7 @@
     },
     "apple:310633997": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
@@ -178,14 +178,14 @@
     },
     "apple:327630330": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 4.38
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 2.23
       }
     },
     "apple:333903271": {
@@ -214,9 +214,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.28
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.31
       }
     },
     "apple:368677368": {
@@ -226,21 +226,16 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 1.33
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.19
       }
     },
     "apple:389801252": {
-      "params": {
-        "halfLife": 16,
-        "bandwidth": 0.45,
-        "weekday": 1
-      },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 0.78
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 0.55
       }
     },
     "apple:401626263": {
@@ -252,16 +247,16 @@
     },
     "apple:414706506": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.9
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.14
       }
     },
     "apple:422689480": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.15
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.2
       }
     },
     "apple:426826309": {
@@ -290,9 +285,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.36
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.66
       }
     },
     "apple:447188370": {
@@ -321,14 +316,14 @@
     },
     "apple:460177396": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 4,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 1,
-        "medianErrorDays": 2.77
+        "medianErrorDays": 3.7
       }
     },
     "apple:507874739": {
@@ -350,9 +345,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 1.56
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 1.39
       }
     },
     "apple:535886823": {
@@ -400,9 +395,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 4,
-        "medianErrorDays": 2.97
+        "forecasts": 5,
+        "hits": 5,
+        "medianErrorDays": 1.91
       }
     },
     "apple:585027354": {
@@ -436,9 +431,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.39
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.21
       }
     },
     "apple:6448311069": {
@@ -479,9 +474,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.05
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.09
       }
     },
     "apple:6670324846": {
@@ -515,21 +510,21 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 3.67
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 2.63
       }
     },
     "apple:711923939": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.36
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.58
       }
     },
     "apple:719972451": {
@@ -539,16 +534,16 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.45
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.56
       }
     },
     "apple:835599320": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 3.74
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 2.45
       }
     },
     "apple:874139669": {
@@ -565,9 +560,9 @@
     },
     "apple:886427730": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 1.08
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.18
       }
     },
     "apple:897446215": {
@@ -589,9 +584,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.36
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.34
       }
     },
     "apple:962194608": {
@@ -615,9 +610,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.28
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.29
       }
     },
     "apple:989804926": {
@@ -679,7 +674,7 @@
     },
     "google:com.amazon.avod.thirdpartyclient": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.6,
         "weekday": 1
       },
@@ -733,11 +728,6 @@
       }
     },
     "google:com.coinbase.android": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 1,
@@ -769,11 +759,6 @@
       }
     },
     "google:com.discord": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 1,
@@ -800,11 +785,6 @@
       }
     },
     "google:com.duckduckgo.mobile.android": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 2,
@@ -928,9 +908,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.86
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.21
       }
     },
     "google:com.instagram.barcelona": {
@@ -995,9 +975,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.86
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.71
       }
     },
     "google:com.openai.chatgpt": {
@@ -1021,16 +1001,16 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 2.27
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 1.24
       }
     },
     "google:com.reddit.frontpage": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.43
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.26
       }
     },
     "google:com.roblox.client": {
@@ -1075,9 +1055,9 @@
     },
     "google:com.strava": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.76
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.49
       }
     },
     "google:com.twitter.android": {
@@ -1118,9 +1098,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 0,
-        "medianErrorDays": 4.61
+        "medianErrorDays": 3.77
       }
     },
     "google:com.vivaldi.browser": {
@@ -1317,13 +1297,13 @@
     "mac:homebrew:discord": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 0.66
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 0.43
       }
     },
     "mac:homebrew:dropbox": {
@@ -1870,9 +1850,9 @@
     },
     "windows:winget:Discord.Discord": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.44
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.16
       }
     },
     "windows:winget:Dropbox.Dropbox": {
@@ -2082,9 +2062,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 7.43
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 6.5
       }
     },
     "windows:winget:Spotify.Spotify": {
@@ -2158,13 +2138,13 @@
     }
   },
   "replay": {
-    "tests": 3164,
-    "hits": 1977,
-    "medianErrorDays": 2.26
+    "tests": 3195,
+    "hits": 1976,
+    "medianErrorDays": 2.21
   },
   "live": {
-    "forecasts": 497,
-    "hits": 368,
-    "medianErrorDays": 1.06
+    "forecasts": 530,
+    "hits": 399,
+    "medianErrorDays": 0.96
   }
 }
