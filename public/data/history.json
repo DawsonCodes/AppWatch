@@ -1243,6 +1243,13 @@
     ],
     "windows:winget:Anthropic.Claude": [
       {
+        "version": "4.29.0",
+        "releaseDate": "2026-10-27T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z",
+        "url": null
+      },
+      {
         "version": "3.6556.2",
         "releaseDate": "2026-10-23T12:00:00.000Z",
         "releaseNotes": null,
@@ -1314,6 +1321,13 @@
       },
       {
         "version": "2.31226.0",
+        "releaseDate": "2026-10-08T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.26454.0",
         "releaseDate": "2026-10-08T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
@@ -1427,13 +1441,6 @@
       {
         "version": "1.44121.4",
         "releaseDate": "2026-10-06T23:30:58.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.26454.0",
-        "releaseDate": "2026-10-06T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -1979,6 +1986,12 @@
       }
     ],
     "mac:homebrew:claude": [
+      {
+        "version": "6.6395.0",
+        "releaseDate": "2026-11-17T15:51:42.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "5.11492.5",
         "releaseDate": "2026-11-14T01:02:40.000Z",
@@ -4099,6 +4112,12 @@
     "google:com.facebook.katana": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T09:26:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-10T23:06:38.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-11T17:54:22.723Z"
@@ -4257,6 +4276,12 @@
       }
     ],
     "google:com.twitter.android": [
+      {
+        "version": "12.44.0-prod.01",
+        "releaseDate": "2026-11-17T01:07:44.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "12.43.0-prod.01",
         "releaseDate": "2026-11-13T00:54:41.000Z",
@@ -4517,6 +4542,12 @@
       }
     ],
     "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-17T13:28:51.000Z",
+        "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-12T12:41:56.000Z",
@@ -5117,6 +5148,12 @@
     "google:com.pinterest": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T21:03:01.000Z",
+        "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-16T20:05:40.000Z",
         "releaseNotes": "Every week we polish up the Pinterest app to make it faster and better than ever. Tell us if you like this newest version at https://help.pinterest.com/contact",
         "detectedAt": "2026-11-17T02:55:57.134Z"
@@ -5275,6 +5312,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1275",
+        "releaseDate": "2026-11-16T19:08:38.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "4.1.1272",
         "releaseDate": "2026-11-09T18:20:17.000Z",
@@ -5533,6 +5576,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.46.15",
+        "releaseDate": "2026-11-17T15:10:46.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "26.46.12",
         "releaseDate": "2026-11-16T14:22:29.000Z",
@@ -11295,6 +11344,12 @@
     ],
     "mac:homebrew:roblox": [
       {
+        "version": "0.748.0.7481526",
+        "releaseDate": "2026-11-17T19:43:05.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
         "version": "0.747.0.7471481",
         "releaseDate": "2026-11-10T17:36:07.000Z",
         "releaseNotes": null,
@@ -14994,6 +15049,12 @@
     ],
     "mac:homebrew:ea": [
       {
+        "version": "13.832.0.6345",
+        "releaseDate": "2026-11-17T19:01:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
         "version": "13.827.2.6342",
         "releaseDate": "2026-11-13T01:11:51.000Z",
         "releaseNotes": null,
@@ -17050,6 +17111,13 @@
       }
     ],
     "windows:steam:1172470": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-17T21:23:48.000Z",
+        "releaseNotes": "Apex Legends: Latest Update 11/17/2026\n\nFIXED:\n\n•\nAn issue causing a visual blur while the “Drain Gain” Wild Card is equipped\n[/*]",
+        "detectedAt": "2026-11-17T22:23:13.064Z",
+        "url": "https://store.steampowered.com/news/app/1172470/view/708914425087657817"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-12T21:23:07.000Z",
@@ -22939,6 +23007,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.354",
+        "releaseDate": "2026-11-17T20:52:26.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
         "version": "1.7.353",
         "releaseDate": "2026-11-10T02:54:41.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -23018,6 +23092,12 @@
       }
     ],
     "google:notion.id": [
+      {
+        "version": "0.6.4318",
+        "releaseDate": "2026-11-17T21:41:39.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "0.6.4304",
         "releaseDate": "2026-11-11T17:57:00.000Z",
@@ -28575,6 +28655,12 @@
     ],
     "mac:homebrew:google-chrome": [
       {
+        "version": "158.0.8127.37",
+        "releaseDate": "2026-11-17T19:14:26.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
         "version": "157.0.8103.79",
         "releaseDate": "2026-11-11T22:09:25.000Z",
         "releaseNotes": null,
@@ -29590,6 +29676,12 @@
       }
     ],
     "mac:homebrew:firefox": [
+      {
+        "version": "160.0.1",
+        "releaseDate": "2026-11-17T16:16:28.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "160.0",
         "releaseDate": "2026-11-10T16:26:06.000Z",
@@ -36173,6 +36265,12 @@
     ],
     "google:com.vivaldi.browser": [
       {
+        "version": "8.3.4192.96",
+        "releaseDate": "2026-11-17T17:46:47.000Z",
+        "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
         "version": "8.3.4192.82",
         "releaseDate": "2026-11-13T11:01:48.000Z",
         "releaseNotes": "Vivaldi 8.3 marks the start of an era with a new Ad and Tracker Blocker that's more efficient than ever! Choose bettwen Off, Light, Strong or Aggressive, or create your own custom levels.\n\nOther news:\n- Copy sanitized link to remove tracking parameters\n- Open links directly in one of your stacks\n- Better media controls displaying all your tabs with audio, for easier switching\n- Open in app if you visit a site for which you have an app on your phone\n\nLove Vivaldi? Give us 5⭐ and tell others!",
@@ -38286,6 +38384,13 @@
     ],
     "windows:winget:TheBrowserCompany.Arc": [
       {
+        "version": "1.130.0.417",
+        "releaseDate": "2026-10-28T12:00:00.000Z",
+        "releaseNotes": "Hello, and welcome! Version 1.130.0 lifts Arc to Chromium 156.0.8078.74, resolving several security issues, so it's worth installing soon. Stay safe, and see you shortly! As a reminder, Arc is being sunset on December 22nd, so now is a good time to start thinking about importing your data and settings into Dia (or exporting to your desktop, should you desire)!",
+        "detectedAt": "2026-11-17T22:23:13.064Z",
+        "url": "https://arc.net/windows/release-notes"
+      },
+      {
         "version": "1.128.0.436",
         "releaseDate": "2026-10-15T12:00:00.000Z",
         "releaseNotes": "Nice to see you again! Version 1.128.0 gets Arc onto Chromium 155.0.8059.80, sealing up a long list of security weak spots, seven of them in the most serious category, so the sites you visit have fewer openings to cause trouble. This one is purely a safety tune-up, so grab it whenever you get a moment. See you on the next one!",
@@ -38364,14 +38469,14 @@
       },
       {
         "version": "1.120.0.444",
-        "releaseDate": "2026-08-19T12:00:00.000Z",
+        "releaseDate": "2026-08-21T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
       },
       {
         "version": "1.119.0.362",
-        "releaseDate": "2026-08-19T12:00:00.000Z",
+        "releaseDate": "2026-08-21T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
@@ -42758,6 +42863,12 @@
     "google:com.squareup.cash": [
       {
         "version": null,
+        "releaseDate": "2026-11-15T02:48:09.000Z",
+        "releaseNotes": "Various bug fixes and improvements.",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-13T22:03:11.000Z",
         "releaseNotes": "Various bug fixes and improvements.",
         "detectedAt": "2026-11-14T06:21:41.793Z"
@@ -44135,6 +44246,13 @@
     ],
     "mac:respondus-lockdown-browser": [
       {
+        "version": "2.1.6.02",
+        "releaseDate": "2026-11-17T19:13:12.000Z",
+        "releaseNotes": "LockDown Browser for Mac, version 2.1.6.02, has been released.  This release includes bug fixes and security enhancements.\nExisting installs of LockDown Browser will be auto-updated shortly.  To obtain the latest version (2.1.6.02) use the \"Check for Update\" feature or run the full installation program.\nComplete version history for LockDown Browser can be obtained at Respondus.com > Admin Login > LockDown Browser > Support > Product Release Notes > LockDown Browser Version History.",
+        "detectedAt": "2026-11-17T22:23:13.064Z",
+        "url": "https://support.respondus.com/hc/en-us/articles/58808445615899-LockDown-Browser-for-Mac-version-2-1-6-02"
+      },
+      {
         "version": "2.1.6.01",
         "releaseDate": "2026-10-09T19:22:05.000Z",
         "releaseNotes": "LockDown Browser for Mac, version 2.1.6.01, has been released.  This release includes a fix for Sakai users and security enhancements.\nExisting installs of LockDown Browser will be auto-updated shortly.  To obtain the latest version (2.1.6.01) use the \"Check for Update\" feature or run the full installation program.\nComplete version history for LockDown Browser can be obtained at Respondus.com > Admin Login > LockDown Browser > Support > Product Release Notes > LockDown Browser Version History.",
@@ -44720,6 +44838,12 @@
     "google:com.duolingo": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T20:12:36.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-16T16:14:00.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
         "detectedAt": "2026-11-16T18:32:34.476Z"
@@ -45268,6 +45392,12 @@
       }
     ],
     "mac:homebrew:robloxstudio": [
+      {
+        "version": "0.748.0.7481526",
+        "releaseDate": "2026-11-17T19:44:12.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "0.747.0.7471481",
         "releaseDate": "2026-11-10T17:37:27.000Z",
@@ -47631,6 +47761,12 @@
       }
     ],
     "apple:1059218666": [
+      {
+        "version": "2.16.0",
+        "releaseDate": "2026-11-17T20:25:34.000Z",
+        "releaseNotes": "- Added ability to recover waypoint flights after changing the battery\n- Waypoint Flight browsing is now easier with search, sorting, folders, shared flights, and more\n- Added the ability to rename waypoint flights from Flight Settings\n- Added full support for iPhone Duo\n- Litchi Hub is now built into the app\n- Added support for more than 15 actions per waypoint with the Litchi engine\n- Redesigned login screen\n- Sounds and voice prompts now play in Silent mode\n- Misc improvements and bug fixes",
+        "detectedAt": "2026-11-17T22:23:13.064Z"
+      },
       {
         "version": "2.15.9",
         "releaseDate": "2026-04-02T00:33:39.000Z",
