@@ -2920,6 +2920,12 @@
     ],
     "mac:homebrew:google-gemini": [
       {
+        "version": "1.144.9.1499",
+        "releaseDate": "2026-11-18T12:04:41.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
+      {
         "version": "1.144.4.1467",
         "releaseDate": "2026-11-16T07:00:03.000Z",
         "releaseNotes": null,
@@ -5504,6 +5510,12 @@
     "google:com.whatsapp": [
       {
         "version": null,
+        "releaseDate": "2026-11-18T16:01:23.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-15T08:14:49.000Z",
         "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
         "detectedAt": "2026-11-16T06:27:44.802Z"
@@ -5600,6 +5612,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.46.17",
+        "releaseDate": "2026-11-18T14:17:27.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "26.46.15",
         "releaseDate": "2026-11-17T15:10:46.000Z",
@@ -6445,6 +6463,12 @@
       }
     ],
     "google:org.thoughtcrime.securesms": [
+      {
+        "version": "8.36.3",
+        "releaseDate": "2026-11-17T19:35:26.000Z",
+        "releaseNotes": "★ Your top stickers now have a place to remain stuck. Add any sticker to your list of favorites so it's easy to stick with the ones you love.",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "8.35.4",
         "releaseDate": "2026-11-16T02:45:27.000Z",
@@ -9488,6 +9512,12 @@
     ],
     "apple:545519333": [
       {
+        "version": "10.157.1",
+        "releaseDate": "2026-11-18T10:33:49.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
+      {
         "version": "10.157",
         "releaseDate": "2026-11-13T13:07:51.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -9823,6 +9853,13 @@
       }
     ],
     "windows:winget:Spotify.Spotify": [
+      {
+        "version": "1.3.10.2586.g81a118a22460",
+        "releaseDate": "2026-11-18T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T17:15:44.550Z",
+        "url": null
+      },
       {
         "version": "1.3.9.2055.g806b5b278de8",
         "releaseDate": "2026-11-12T12:00:00.000Z",
@@ -10786,6 +10823,12 @@
       }
     ],
     "apple:284993459": [
+      {
+        "version": "27.3",
+        "releaseDate": "2026-11-18T08:58:37.000Z",
+        "releaseNotes": "Thanks for using Shazam! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. \n\nDon’t forget to keep your Shazam History safe and in sync between your devices. Simply turn on iCloud sync in Shazam Settings. \n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.shazam.com.",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "27.2",
         "releaseDate": "2026-10-19T09:34:25.000Z",
@@ -14165,6 +14208,12 @@
       }
     ],
     "mac:homebrew:gog-galaxy": [
+      {
+        "version": "2.1.13.85",
+        "releaseDate": "2026-11-18T13:18:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "2.1.10.56",
         "releaseDate": "2026-09-15T07:49:24.000Z",
@@ -29526,6 +29575,12 @@
     ],
     "google:org.mozilla.firefox": [
       {
+        "version": "160.0.1",
+        "releaseDate": "2026-11-17T22:24:32.000Z",
+        "releaseNotes": "- Local Network Access restrictions are now enabled by default. Websites must now ask for permission before connecting to devices on the local network or to apps and services on the device.\n- Fixed non-Latin web addresses displaying as encoded text.\n- Fixed web addresses containing spaces being searched for instead of opened.\n- Fixed double-tapping or long-pressing a word to select it, and tapping to place the cursor, not working near the cursor in text fields.",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
+      {
         "version": "160.0",
         "releaseDate": "2026-11-05T13:59:30.000Z",
         "releaseNotes": "- Local Network Access restrictions are now enabled by default. Websites must now ask for permission before connecting to devices on the local network or to apps and services on the device.\n- Fixed non-Latin web addresses displaying as encoded text.\n- Fixed web addresses containing spaces being searched for instead of opened.\n- Fixed double-tapping or long-pressing a word to select it, and tapping to place the cursor, not working near the cursor in text fields.",
@@ -33730,6 +33785,12 @@
     ],
     "google:com.opera.browser": [
       {
+        "version": "104.1.5262.91393",
+        "releaseDate": "2026-11-17T10:56:14.000Z",
+        "releaseNotes": "Thanks for choosing Opera! This version introduces a visual refresh of the product, rolling out in stages to ensure the design works well before reaching everyone. If you’re seeing the new look, we’d love to hear your thoughts!\n\nMore changes/additions:\n- Chromium 156\n- Appearance settings: New font setting allowing custom system fonts\n- Live score improvements",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
+      {
         "version": "103.3.5234.91185",
         "releaseDate": "2026-11-05T08:41:07.000Z",
         "releaseNotes": "Thanks for choosing Opera! This version introduces a visual refresh of the product, rolling out in stages to ensure the design works well before reaching everyone. If you’re seeing the new look, we’d love to hear your thoughts!\n\nMore changes/additions:\n- Chromium 154\n- eSIM for travelers, now in the main menu\n- Live score improvements\n- Latest Chromium security updates (2026-11-05)",
@@ -34172,6 +34233,12 @@
       }
     ],
     "mac:homebrew:opera": [
+      {
+        "version": "140.0.6074.36",
+        "releaseDate": "2026-11-18T10:25:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "140.0.6074.18",
         "releaseDate": "2026-11-11T10:37:46.000Z",
@@ -36702,6 +36769,13 @@
       }
     ],
     "mac:homebrew:vivaldi": [
+      {
+        "version": "8.3.4191.45",
+        "releaseDate": "2026-11-18T17:03:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T17:15:44.550Z",
+        "url": null
+      },
       {
         "version": "8.3.4191.44",
         "releaseDate": "2026-11-13T14:12:08.000Z",
@@ -43282,6 +43356,12 @@
     ],
     "apple:323229106": [
       {
+        "version": "5.28.0.0",
+        "releaseDate": "2026-11-18T13:02:36.000Z",
+        "releaseNotes": "Saving time & avoiding traffic is even simpler with this update:\n\nFixed a bug so times are clearly displayed when planning a drive.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
+      {
         "version": "5.27.5.0",
         "releaseDate": "2026-11-11T13:18:27.000Z",
         "releaseNotes": "Saving time & avoiding traffic is even simpler with this update:\n\nFixed a bug so times are clearly displayed when planning a drive.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
@@ -43331,6 +43411,12 @@
       }
     ],
     "google:com.waze": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-17T22:16:20.000Z",
+        "releaseNotes": "Saving time & avoiding traffic is even simpler with this update:\n\nFixed a bug so times are clearly displayed when planning a drive.\n\nPlease note the newest version of the Waze app includes all the changes made in previous versions. Updating your Waze app to the newest Waze version means that all the changes made in previous versions will be downloaded to your device.",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-10T09:36:07.000Z",
@@ -43847,6 +43933,12 @@
       }
     ],
     "apple:659101775": [
+      {
+        "version": "14.3",
+        "releaseDate": "2026-11-18T15:09:09.000Z",
+        "releaseNotes": "- Minor bug fixes and enhancements",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "14.2",
         "releaseDate": "2026-10-08T17:09:57.000Z",
@@ -45120,6 +45212,12 @@
       }
     ],
     "apple:414706506": [
+      {
+        "version": "10.47.382",
+        "releaseDate": "2026-11-18T15:23:59.000Z",
+        "releaseNotes": "• Several bug fixes and usability improvements",
+        "detectedAt": "2026-11-18T17:15:44.550Z"
+      },
       {
         "version": "10.47.381",
         "releaseDate": "2026-11-16T08:32:42.000Z",
