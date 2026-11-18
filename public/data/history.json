@@ -221,6 +221,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1111.71025",
+        "releaseDate": "2026-11-18T01:05:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
+      {
         "version": "26.1111.21308",
         "releaseDate": "2026-11-13T03:53:14.000Z",
         "releaseNotes": null,
@@ -975,6 +981,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261116.19",
+        "releaseDate": "2026-11-18T02:47:14.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
+      {
         "version": "1.261113.19",
         "releaseDate": "2026-11-14T09:52:08.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1090,6 +1102,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261116.19",
+        "releaseDate": "2026-11-18T03:42:28.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
       {
         "version": "1.261113.19",
         "releaseDate": "2026-11-14T03:37:42.000Z",
@@ -4054,6 +4072,12 @@
       }
     ],
     "apple:284882215": [
+      {
+        "version": "588.0.0",
+        "releaseDate": "2026-11-18T00:57:32.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
       {
         "version": "587.0.0",
         "releaseDate": "2026-11-10T17:34:48.000Z",
@@ -9713,6 +9737,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-17T09:35:57.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-09T15:04:13.000Z",
@@ -15733,6 +15763,13 @@
     "windows:steam:730": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T23:40:07.000Z",
+        "releaseNotes": "Counter-Strike 2 Update\n\n[ SINGAPORE 2026 MAJOR ]\n\n• The PGL Singapore 2026 Major Hub is now available. Visit the hub to purchase tournament items, play the Pick'Em Challenge, and more.\n\n• Purchase a Singapore 2026 Viewer Pass to receive an upgradable Singapore 2026 Coin. With an active pass, you can upgrade your coin and earn rewards by playing the Pick'Em Challenge. Additionally, you will show up on the Active Pass Leaderboard where you can compare your Pick'Em Challenge performance to your friends.\n\n[ MAPS ]\n\n• Added Cobblestone map to official Casual, Competitive, Wingman, Retakes, and Deathmatch matchmaking.\n\n• Removed Boulder, Fachwerk, and Shelter from official matchmaking pool.\n\n[ MUSIC ]\n\n• Added 8 new music kits from Monstercat.\n\n[ ANIMATION ]\n\n• Fixed head dipping too low at extreme aim angles.\n\n• Restored T-side lowered aim pose.\n\n[ MISC ]\n\n• Fixed a case of defuse kits not getting correctly granted in Retakes.\n\n• Fixed T-side bots to attack CTs who try to defuse the bomb.\n\n• Added custom processing for fire effects on ground materials to apply hardening to metal surfaces, to melt snow, and so on.\n\n• Added \"health_c4_preview\" output value in player_state objects for Game State Integration.\n\n• Added MVP Anthem preview button when inspecting Music Kits in the in-game store.",
+        "detectedAt": "2026-11-18T07:27:37.245Z",
+        "url": "https://store.steampowered.com/news/app/730/view/687522235410286587"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-11T23:03:20.000Z",
         "releaseNotes": "Counter-Strike 2 Update\n\n\\[ ANIMATION ]\n\n•\nFixed some cases of popping and glitching when switching weapons and reloading at extreme angles\n[/*]\n\n\\[ MISC ]\n\n•\nFixed bot pathing issue in Retakes game mode\n[/*]\n•\nFixed a rendering hang on DX11\n[/*]\n•\nImproved avx / avx512 instruction set detection\n[/*]\n•\nMiscellaneous stability and performance improvements\n[/*]",
         "detectedAt": "2026-11-12T00:43:54.088Z",
@@ -21197,6 +21234,12 @@
       }
     ],
     "apple:1113153706": [
+      {
+        "version": "8.20.1",
+        "releaseDate": "2026-11-18T05:58:43.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
       {
         "version": "8.20.0",
         "releaseDate": "2026-11-07T17:53:19.000Z",
@@ -28049,6 +28092,12 @@
     "google:com.google.android.apps.photos": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T22:56:21.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-13T19:01:26.000Z",
         "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
         "detectedAt": "2026-11-13T23:32:21.207Z"
@@ -28173,6 +28222,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T20:07:00.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-12T21:27:50.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-13T01:05:04.220Z"
@@ -28281,6 +28336,13 @@
       }
     ],
     "windows:winget:Google.Chrome.EXE": [
+      {
+        "version": "158.0.8127.37",
+        "releaseDate": "2026-11-12T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-18T07:27:37.245Z",
+        "url": null
+      },
       {
         "version": "157.0.8103.79",
         "releaseDate": "2026-11-11T12:00:00.000Z",
@@ -43087,6 +43149,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-11-17T10:10:27.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-13T01:26:35.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-11-13T09:30:51.738Z"
@@ -43717,6 +43785,12 @@
       }
     ],
     "google:com.strava": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-18T01:04:47.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-11-18T07:27:37.245Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-16T18:33:20.000Z",
