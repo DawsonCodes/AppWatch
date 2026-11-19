@@ -1103,6 +1103,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261117.19",
+        "releaseDate": "2026-11-18T03:42:28.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "1.261116.19",
         "releaseDate": "2026-11-18T03:42:28.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -2005,6 +2011,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "6.6395.1",
+        "releaseDate": "2026-11-18T18:49:32.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "6.6395.0",
         "releaseDate": "2026-11-17T15:51:42.000Z",
         "releaseNotes": null,
@@ -2791,6 +2803,12 @@
       }
     ],
     "apple:6477489729": [
+      {
+        "version": "1.2026.4570304",
+        "releaseDate": "2026-11-18T21:05:44.000Z",
+        "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n- Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n- Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n- Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.\n- Performance Upgrades: Enjoy lightning-fast response times and smoother, more reliable performance across your favorite features.\n- Organize Your Inbox: Let Gemini persistently monitor, summarize, and prioritize your emails so you never miss what matters.\n- Proactive Daily Planning: Get an automated morning briefing and a smart daily planner compiled in moments from your Google apps.\n- Smart Task Automation: Set secure, persistent tasks to run on your behalf. Gemini preps the work—you always approve.\nLook what you can do with the new Gemini. Try today!",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "1.2026.4470202",
         "releaseDate": "2026-11-12T09:38:17.000Z",
@@ -3586,6 +3604,12 @@
     ],
     "apple:1668000334": [
       {
+        "version": "26.46.0",
+        "releaseDate": "2026-11-18T20:52:13.000Z",
+        "releaseNotes": "Bug fixes and improvements.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "26.45.0",
         "releaseDate": "2026-11-13T18:11:27.000Z",
         "releaseNotes": "Bug fixes and improvements.",
@@ -3647,6 +3671,12 @@
       }
     ],
     "google:ai.perplexity.app.android": [
+      {
+        "version": "2.105.0",
+        "releaseDate": "2026-11-18T11:48:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "2.104.0",
         "releaseDate": "2026-11-06T12:52:27.000Z",
@@ -4197,6 +4227,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.45",
+        "releaseDate": "2026-11-18T19:19:20.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "12.44",
         "releaseDate": "2026-11-14T20:19:39.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -4574,6 +4610,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-11-18T17:22:20.000Z",
+        "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-17T13:28:51.000Z",
         "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
         "detectedAt": "2026-11-17T22:23:13.064Z"
@@ -4929,6 +4971,12 @@
     ],
     "google:com.snapchat.android": [
       {
+        "version": "14.33.0.55",
+        "releaseDate": "2026-11-17T22:22:00.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "14.32.0.54",
         "releaseDate": "2026-11-10T22:24:22.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
@@ -5244,6 +5292,12 @@
       }
     ],
     "apple:288429040": [
+      {
+        "version": "9.1.591",
+        "releaseDate": "2026-11-18T18:07:55.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "9.1.590",
         "releaseDate": "2026-11-16T17:11:15.000Z",
@@ -8355,6 +8409,12 @@
     ],
     "google:com.discord": [
       {
+        "version": "354.12 - Stable",
+        "releaseDate": "2026-11-14T00:09:11.000Z",
+        "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "353.11 - Stable",
         "releaseDate": "2026-11-07T01:02:42.000Z",
         "releaseNotes": "We’ve been hard at work making Discord better for you. This includes bug fixes and performance enhancements. For more detailed information, go to your profile in the app and scroll down to “What’s New”.",
@@ -9436,6 +9496,12 @@
     ],
     "apple:1446075923": [
       {
+        "version": "5.22.0",
+        "releaseDate": "2026-11-18T20:22:55.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "5.21.0",
         "releaseDate": "2026-11-10T19:17:06.000Z",
         "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
@@ -9603,6 +9669,12 @@
       }
     ],
     "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-18T09:47:31.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-14T17:21:53.000Z",
@@ -11020,6 +11092,12 @@
     ],
     "apple:431946152": [
       {
+        "version": "2.748.1526",
+        "releaseDate": "2026-11-18T17:48:51.000Z",
+        "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "2.747.1486",
         "releaseDate": "2026-11-16T17:37:31.000Z",
         "releaseNotes": "To make Roblox work better for you, we deliver updates regularly. These updates include bug fixes and improvements for speed and reliability.",
@@ -12120,6 +12198,12 @@
       }
     ],
     "google:com.mojang.minecraftpe": [
+      {
+        "version": "1.26.66.1",
+        "releaseDate": "2026-11-18T17:29:00.000Z",
+        "releaseNotes": "What's new in 26.66: Various bug fixes!",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "1.26.62.1",
         "releaseDate": "2026-11-04T19:03:05.000Z",
@@ -16122,6 +16206,13 @@
     "windows:steam:570": [
       {
         "version": null,
+        "releaseDate": "2026-11-18T20:00:46.000Z",
+        "releaseNotes": "7.42 Gameplay Update\n\nPatch 7.42 is out now and you can check out the patch notes here.\n\nIn addition, we've made the following improvements and bug fixes:\n\n• Added functionality to bind hotkeys for individual abilities on Invoker's Invoked Spells, Largo's songs, and Kez's Sai abilities\n\n• Added unit ability hotkey settings for Lycan's Summon Wolves, Kobold Soldier, Giant Wolf, Radigull, Odobenus Frostmage, Eimermole Foreman, Ancient Croaker, Ancient Marshmage, and Ancient Ogre Seal\n\n• Added option to show silhouettes for units when they are visually obstructed\n\n• Added Hand of Midas as its own category in Dota+ Gold Received Breakdowns\n\n• Improved client performance when spawning illusions\n\n• Fixed some stat gathering code to be more performant on server, especially around hero deaths\n\n• Refactored unit behavior state machine for better server performance\n\n• Fixed being able to sell an Aghanim's Shard the same frame it is applied when transferring an Aghanim's Shard from a courier to a hero with a full inventory\n\n• Fixed being able to transfer other hero's items to and from their stash\n\n• Fixed Beastmaster permanently increasing the health and movement speed of lane creeps by selecting specific talents, creating an illusion, then disconnecting\n\n• Fixed Meepo being able to generate infinite money by reaching level 18, getting an Aghanim's scepter, refresher orb, blink dagger, and multiple sentry wards, placing one Meepo on the other side of the map, casting megameepo, casting blink dagger and poof to the Meepo on the other side of the map such that one Meepo joins the stack while the other hasn't reached yet, ending megameepo before the Meepo that hasn't reached yet makes it to the stack, waiting for the Meepo to make his cross map journey, using the refresher orb, then casting megameepo again\n\n• Fixed crash when selling all teleport scrolls on the primary Meepo while a Meepo clone was teleporting\n\n• Fixed Naga Siren killing unrelated illusions when casting Mirror Image\n\n• Fixed Oracle's Prognostication's HUD sometimes being in the wrong location",
+        "detectedAt": "2026-11-19T00:22:46.283Z",
+        "url": "https://store.steampowered.com/news/app/570/view/689773669992367212"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-10-07T00:22:41.000Z",
         "releaseNotes": "Inside the Trove of Terror\n\nSome time ago, a time now none of us can quite recall, we began to set our minds on matters of the monstrous. Our work has always concerned itself with the manufacture of frightening things, so there was no reason at that time for alarm.\n\nUntil we began to fill a new treasure chest with item sets themed around eldritch and otherworldly designs.\n\nAs each horrific creation took more defined shape, unsettling yet tantalizing inspirations took hold of us. Fantastical and Immortal glamours coalesced around each and every set; they grew more spellbinding, a vision that would remain, stuck fast in the mind's eye. Thoughts of monsters birthed thoughts of even more monstrous monsters. Our minds became gateways for greater abominations still, our hands became not our own.\n\nSoon our collection of new item sets numbered fifteen, eldritch abominations from the realm of nightmare all. We knew each thing was hideous. Not one of us could look away. Not one of us was content to stop there.\n\nTo master horrors, we required greater horrors... We required ARCANA.\n\nOur first attempt summoned the haunting shape of a Drow Ranger Arcana long thought lost to the flow of time. By some trick of the mind, she can look as she once did or assume a grave-stalking new form.\n\nOur appetites remained unsatisfied.\n\nOur second attempt unleashed something none of us had ever seen, something that hungrily emerged from a bloodstained sea: the all-new Maw of the Megalodon Arcana for the creature called Tidehunter, arriving with a new model, a host of custom animations, effects, taunts, voice lines, and dragging a familiar-looking corpse that serves as one part security blanket and one part snack. A whisper in the darkness, instructing, teasing: \"Should one master this Arcana's secrets, one would surely unlock all three of its shark-toothed designs.\"\n\nThis Trove is a doorway to things we cannot explain, let alone understand. The more of these treasures that you open, the more your own minds shine out like beacons to things lurking beyond the limits of reason. Open enough treasures and you're guaranteed to attract the gaze of an all-seeing new Tormentor. Open a number more and you'll surely summon the face of eldritch terror itself, manifesting as an incomprehensible new design for Roshan.\n\nWe must part now with one final revelation. Take it as a warning if you wish. We didn't make this treasure... It made itself. We thought we were creating something, but we were not. We were merely the conduit, unknowingly letting something into our world from the great dark beyond: The Trove of Terror — overflowing with a mind-bending number of Immortal item sets, one new and one returning Arcana, and brand-new Tormentor and Roshan appearances — available now.\n\nIf you dare, all you need to do is launch Dota to learn more.",
         "detectedAt": "2026-11-14T06:21:41.793Z",
@@ -17197,6 +17288,13 @@
       }
     ],
     "windows:steam:1172470": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-18T23:57:13.000Z",
+        "releaseNotes": "Apex Legends: Latest Update 11/16/2026\n\nFIXED:\n\nResolved an issue causing Alter, Seer and Wattson Upgrades being misplaced in their upgrade trees.",
+        "detectedAt": "2026-11-19T00:22:46.283Z",
+        "url": "https://store.steampowered.com/news/app/1172470/view/680767470935474654"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-17T21:23:48.000Z",
@@ -20030,6 +20128,12 @@
       }
     ],
     "apple:618783545": [
+      {
+        "version": "26.11.30",
+        "releaseDate": "2026-11-18T20:01:55.000Z",
+        "releaseNotes": "Bug Fixes\n• Tapping a name in a message shared from another workspace now opens the author's profile instead of kicking you out to a browser. Sorry for the detour!",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "26.11.20",
         "releaseDate": "2026-11-11T20:04:51.000Z",
@@ -23099,6 +23203,12 @@
     ],
     "apple:1232780281": [
       {
+        "version": "1.7.355",
+        "releaseDate": "2026-11-18T21:44:22.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "1.7.354",
         "releaseDate": "2026-11-17T20:52:26.000Z",
         "releaseNotes": "Bug fixes and performance improvements.",
@@ -23184,6 +23294,12 @@
       }
     ],
     "google:notion.id": [
+      {
+        "version": "0.6.4324",
+        "releaseDate": "2026-11-18T20:56:16.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "0.6.4318",
         "releaseDate": "2026-11-17T21:41:39.000Z",
@@ -24705,6 +24821,12 @@
       }
     ],
     "google:com.dropbox.android": [
+      {
+        "version": "499.2.2",
+        "releaseDate": "2026-11-17T17:05:43.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "498.2.2",
         "releaseDate": "2026-11-10T17:06:34.000Z",
@@ -28271,6 +28393,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-18T19:45:51.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-17T20:07:00.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-18T07:27:37.245Z"
@@ -31612,6 +31740,12 @@
       }
     ],
     "apple:1052879175": [
+      {
+        "version": "1.99",
+        "releaseDate": "2026-11-18T16:59:24.000Z",
+        "releaseNotes": "In this release:\n- QuickView: Ask Brave & Leo session links handling\n- Topsites\n- Duo support\n- Other enhancements, stability improvements, and security updates\n \nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know. And, as ever, thanks for using Brave!",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "1.98",
         "releaseDate": "2026-11-04T17:15:48.000Z",
@@ -36432,6 +36566,13 @@
     ],
     "windows:winget:Vivaldi.Vivaldi": [
       {
+        "version": "8.3.4191.45",
+        "releaseDate": "2026-11-18T12:00:00.000Z",
+        "releaseNotes": "- [Chromium] Update to 156.0.8078.110 ESR includes security fixes from 158.0.8127.36/37\n- [Windows][Reader Mode] Not working after upgrade to 8.3.4191.41 VB-133115",
+        "detectedAt": "2026-11-19T00:22:46.283Z",
+        "url": "https://update.vivaldi.com/update/1.0/relnotes/8.3.4191.45.html"
+      },
+      {
         "version": "8.3.4191.44",
         "releaseDate": "2026-11-13T12:00:00.000Z",
         "releaseNotes": "- [Calendar][Panel] Shows \"Add your first calendar account\" after every start VB-133191\n- [Chromium] Update to 156.0.8078.104 ESR includes security fixes from 157.0.8103.78/79\n- [macOS] The second window freezes when flipping between two windows VB-133089\n- [Mail][Feeds] Cannot display items since 8.3 update with many entries VB-133122\n- [Menus] Open Link in Private Window command no longer available VB-133092\n- [Menus][Bookmarks] New folder menu item from other bookmarks does not work VB-133081\n- [Themes][Tabs] Tabs are changing colour when they should not VB-132958",
@@ -40125,6 +40266,12 @@
     ],
     "mac:homebrew:zen": [
       {
+        "version": "1.24.3b",
+        "releaseDate": "2026-11-18T21:05:21.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "1.24.2b",
         "releaseDate": "2026-11-12T11:22:29.000Z",
         "releaseNotes": null,
@@ -43660,6 +43807,12 @@
     ],
     "google:me.lyft.android": [
       {
+        "version": "2026.44.3.1794381486",
+        "releaseDate": "2026-11-13T19:02:07.000Z",
+        "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "2026.43.3.1793777000",
         "releaseDate": "2026-11-06T19:02:15.000Z",
         "releaseNotes": "Thanks for choosing Lyft! To make your rides even better, we update the app regularly. It’s like housekeeping: squashing bugs, cleaning up code, and other small-but-mighty improvements.",
@@ -43766,6 +43919,12 @@
     ],
     "google:com.airbnb.android": [
       {
+        "version": "26.46",
+        "releaseDate": "2026-11-12T19:15:42.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "26.45",
         "releaseDate": "2026-11-04T23:16:24.000Z",
         "releaseNotes": null,
@@ -43815,6 +43974,12 @@
       }
     ],
     "apple:426826309": [
+      {
+        "version": "490.0.0",
+        "releaseDate": "2026-11-18T20:21:28.000Z",
+        "releaseNotes": "Hi there. We fixed a couple bugs and made some performance improvements, so the app should now be almost as speedy as you. Have fun out there!",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "489.0.0",
         "releaseDate": "2026-11-11T18:57:21.000Z",
@@ -44869,6 +45034,12 @@
     ],
     "apple:570060128": [
       {
+        "version": "7.149.1",
+        "releaseDate": "2026-11-18T16:14:40.000Z",
+        "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
+      {
         "version": "7.149.0",
         "releaseDate": "2026-11-16T17:16:42.000Z",
         "releaseNotes": "Our mascot owl, Duo, is trading in his usual diet of mice for bugs this week. Yup, we’re squashing those pesky bugs to make the experience better for all of you.\n\nFor more Duolingo news, contests and product releases, follow us on Facebook, Twitter, and Instagram @duolingo.",
@@ -45094,6 +45265,12 @@
       }
     ],
     "apple:324715238": [
+      {
+        "version": "2026.11.17",
+        "releaseDate": "2026-11-18T21:48:08.000Z",
+        "releaseNotes": "- Experiment: Introducing Discover - a new weekly reading list picked just for you based on either your interests, or articles you’ve read or saved. Customize Discover in the way that suits you best, if you’re part of the experiment group.\n- We resolved an error that could interrupt you from syncing saved articles after signing in\n- Bug fixes and app enhancements",
+        "detectedAt": "2026-11-19T00:22:46.283Z"
+      },
       {
         "version": "2026.11.03",
         "releaseDate": "2026-11-06T17:22:25.000Z",
