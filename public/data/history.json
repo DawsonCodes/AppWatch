@@ -127,6 +127,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1111.9664.0",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z",
+        "url": null
+      },
+      {
         "version": "26.1111.2228.0",
         "releaseDate": "2026-11-14T12:00:00.000Z",
         "releaseNotes": null,
@@ -3493,6 +3500,12 @@
     ],
     "google:com.microsoft.office.officehubrow": [
       {
+        "version": "16.0.20708.20028",
+        "releaseDate": "2026-11-17T11:20:43.000Z",
+        "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
+      {
         "version": "16.0.20708.20014",
         "releaseDate": "2026-11-12T12:13:35.000Z",
         "releaseNotes": "Thank you for using Microsoft Copilot.\n\nWe regularly release updates to the app, which include great new features, as well as improvements for speed and reliability.",
@@ -4635,6 +4648,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-11-19T14:06:59.000Z",
+        "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-18T17:22:20.000Z",
         "releaseNotes": "We've been working on making your experience on TikTok better with updates and bug fixes.",
         "detectedAt": "2026-11-19T00:22:46.283Z"
@@ -4995,6 +5014,12 @@
       }
     ],
     "google:com.snapchat.android": [
+      {
+        "version": "14.33.1.0",
+        "releaseDate": "2026-11-19T03:53:28.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly! 👻",
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": "14.33.0.55",
         "releaseDate": "2026-11-17T22:22:00.000Z",
@@ -6671,6 +6696,13 @@
     ],
     "windows:winget:OpenWhisperSystems.Signal": [
       {
+        "version": "8.36.0",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z",
+        "url": null
+      },
+      {
         "version": "8.35.0",
         "releaseDate": "2026-11-11T12:00:00.000Z",
         "releaseNotes": null,
@@ -7015,6 +7047,12 @@
       }
     ],
     "mac:homebrew:signal": [
+      {
+        "version": "8.36.0",
+        "releaseDate": "2026-11-19T17:07:33.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": "8.35.0",
         "releaseDate": "2026-11-12T02:00:48.000Z",
@@ -21520,6 +21558,12 @@
     ],
     "google:com.microsoft.teams": [
       {
+        "version": "1416/1.0.0.2026203802",
+        "releaseDate": "2026-11-16T03:12:44.000Z",
+        "releaseNotes": "Use Copilot to summarize channel meetings",
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
+      {
         "version": "1416/1.0.0.2026202302",
         "releaseDate": "2026-10-29T11:00:42.000Z",
         "releaseNotes": "Use Copilot to summarize channel meetings",
@@ -25575,6 +25619,12 @@
       }
     ],
     "mac:homebrew:dropbox": [
+      {
+        "version": "280.4.5053",
+        "releaseDate": "2026-11-19T19:07:41.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": "278.4.4020",
         "releaseDate": "2026-11-10T21:55:20.000Z",
@@ -32975,6 +33025,13 @@
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
       {
+        "version": "0.180.5.0",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z",
+        "url": null
+      },
+      {
         "version": "0.180.4.0",
         "releaseDate": "2026-11-18T12:00:00.000Z",
         "releaseNotes": null,
@@ -35232,6 +35289,13 @@
     ],
     "windows:winget:Opera.OperaGX": [
       {
+        "version": "140.0.6074.48",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z",
+        "url": null
+      },
+      {
         "version": "139.0.6053.63",
         "releaseDate": "2026-11-10T12:00:00.000Z",
         "releaseNotes": null,
@@ -35933,6 +35997,12 @@
       }
     ],
     "mac:homebrew:opera-gx": [
+      {
+        "version": "140.0.6074.48",
+        "releaseDate": "2026-11-19T10:41:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": "139.0.6053.63",
         "releaseDate": "2026-11-10T22:39:56.000Z",
@@ -39418,6 +39488,12 @@
       }
     ],
     "mac:homebrew:arc": [
+      {
+        "version": "1.174.0",
+        "releaseDate": "2026-11-19T18:45:11.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": "1.173.1",
         "releaseDate": "2026-11-12T18:43:03.000Z",
@@ -43390,6 +43466,12 @@
     ],
     "google:com.coinbase.android": [
       {
+        "version": "14.44.17",
+        "releaseDate": "2026-11-13T01:57:27.000Z",
+        "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
+      {
         "version": "14.43.39",
         "releaseDate": "2026-11-05T22:05:17.000Z",
         "releaseNotes": "Coinbase is the easiest and most trusted place to buy, sell, and manage your digital currency.",
@@ -43501,6 +43583,12 @@
       }
     ],
     "google:com.google.android.apps.maps": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-18T12:33:32.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-17T10:10:27.000Z",
@@ -47125,6 +47213,12 @@
       }
     ],
     "mac:homebrew:unity": [
+      {
+        "version": "6000.6.10f1",
+        "releaseDate": "2026-11-19T11:39:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-19T20:36:19.020Z"
+      },
       {
         "version": "6000.6.9f1",
         "releaseDate": "2026-11-12T11:07:14.000Z",
