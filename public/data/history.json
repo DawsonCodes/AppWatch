@@ -2823,6 +2823,12 @@
     ],
     "apple:6477489729": [
       {
+        "version": "1.2026.4570305",
+        "releaseDate": "2026-11-20T01:06:08.000Z",
+        "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n- Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n- Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n- Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.\n- Performance Upgrades: Enjoy lightning-fast response times and smoother, more reliable performance across your favorite features.\n- Organize Your Inbox: Let Gemini persistently monitor, summarize, and prioritize your emails so you never miss what matters.\n- Proactive Daily Planning: Get an automated morning briefing and a smart daily planner compiled in moments from your Google apps.\n- Smart Task Automation: Set secure, persistent tasks to run on your behalf. Gemini preps the work—you always approve.\nLook what you can do with the new Gemini. Try today!",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "1.2026.4570304",
         "releaseDate": "2026-11-18T21:05:44.000Z",
         "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n- Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n- Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n- Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.\n- Performance Upgrades: Enjoy lightning-fast response times and smoother, more reliable performance across your favorite features.\n- Organize Your Inbox: Let Gemini persistently monitor, summarize, and prioritize your emails so you never miss what matters.\n- Proactive Daily Planning: Get an automated morning briefing and a smart daily planner compiled in moments from your Google apps.\n- Smart Task Automation: Set secure, persistent tasks to run on your behalf. Gemini preps the work—you always approve.\nLook what you can do with the new Gemini. Try today!",
@@ -3550,6 +3556,13 @@
     ],
     "windows:winget:Microsoft.Copilot": [
       {
+        "version": "158.0.4370.33",
+        "releaseDate": "2026-11-20T02:14:10.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T03:14:36.439Z",
+        "url": null
+      },
+      {
         "version": "157.0.4341.60",
         "releaseDate": "2026-11-14T01:33:17.000Z",
         "releaseNotes": null,
@@ -4265,6 +4278,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.45.1",
+        "releaseDate": "2026-11-19T14:25:14.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "12.45",
         "releaseDate": "2026-11-18T19:19:20.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -4796,6 +4815,12 @@
     "google:com.google.android.youtube": [
       {
         "version": null,
+        "releaseDate": "2026-11-19T22:26:13.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-14T00:01:20.000Z",
         "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
         "detectedAt": "2026-11-14T06:21:41.793Z"
@@ -5219,6 +5244,12 @@
     ],
     "apple:429047995": [
       {
+        "version": "14.45",
+        "releaseDate": "2026-11-19T17:24:58.000Z",
+        "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "14.44",
         "releaseDate": "2026-11-12T16:42:21.000Z",
         "releaseNotes": "Every week, we polish up the Pinterest app. This update includes:\n- Bug fixes\n- Performance improvements\n\nTell us if you like this latest version at https://help.pinterest.com/contact",
@@ -5446,6 +5477,12 @@
       }
     ],
     "google:com.linkedin.android": [
+      {
+        "version": "4.1.1276",
+        "releaseDate": "2026-11-19T00:17:54.000Z",
+        "releaseNotes": "Thanks for using LinkedIn! We regularly update our app to fix bugs, improve performance and add new features to help you connect with your professional network and advance your career.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
       {
         "version": "4.1.1275",
         "releaseDate": "2026-11-16T19:08:38.000Z",
@@ -6463,6 +6500,12 @@
       }
     ],
     "apple:874139669": [
+      {
+        "version": "8.38",
+        "releaseDate": "2026-11-19T17:00:23.000Z",
+        "releaseNotes": "• Your top stickers now have a place to remain stuck. Add any sticker to your list of favorites so it’s easy to stick with the ones you love.\n\n• The media editor also supports removing the audio track from a video before you send it. If the pastoral slow-panorama footage from your vacation to Scotland was partially ruined by the sound of wandering sheep, with just one tap your movie can become the silence of the lambs.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
       {
         "version": "8.37",
         "releaseDate": "2026-11-11T22:13:48.000Z",
@@ -9565,6 +9608,12 @@
     ],
     "apple:1446075923": [
       {
+        "version": "5.22.1",
+        "releaseDate": "2026-11-19T20:50:57.000Z",
+        "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "5.22.0",
         "releaseDate": "2026-11-18T20:22:55.000Z",
         "releaseNotes": "Disney+ now has even more content on our never-ending quest to create and share the best stories from Disney, Pixar, Marvel, Star Wars and National Geographic. We will continue to be a place for you to feel something with every story, whatever your mood, wherever you might be.",
@@ -9614,6 +9663,12 @@
       }
     ],
     "google:com.disney.disneyplus": [
+      {
+        "version": "26.21.0+rc3-2026.11.17",
+        "releaseDate": "2026-11-17T18:16:43.000Z",
+        "releaseNotes": "We've been fixing things up. A bug fix here! An update there! We hope you find your streaming experience even better.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
       {
         "version": "26.20.0+rc3-2026.11.02",
         "releaseDate": "2026-11-03T18:46:09.000Z",
@@ -16302,7 +16357,7 @@
       {
         "version": null,
         "releaseDate": "2026-11-18T20:00:46.000Z",
-        "releaseNotes": "7.42 Gameplay Update\n\nPatch 7.42 is out now and you can check out the patch notes here.\n\nIn addition, we've made the following improvements and bug fixes:\n\n• Added functionality to bind hotkeys for individual abilities on Invoker's Invoked Spells, Largo's songs, and Kez's Sai abilities\n\n• Added unit ability hotkey settings for Lycan's Summon Wolves, Kobold Soldier, Giant Wolf, Radigull, Odobenus Frostmage, Eimermole Foreman, Ancient Croaker, Ancient Marshmage, and Ancient Ogre Seal\n\n• Added option to show silhouettes for units when they are visually obstructed\n\n• Added Hand of Midas as its own category in Dota+ Gold Received Breakdowns\n\n• Improved client performance when spawning illusions\n\n• Fixed some stat gathering code to be more performant on server, especially around hero deaths\n\n• Refactored unit behavior state machine for better server performance\n\n• Fixed being able to sell an Aghanim's Shard the same frame it is applied when transferring an Aghanim's Shard from a courier to a hero with a full inventory\n\n• Fixed being able to transfer other hero's items to and from their stash\n\n• Fixed Beastmaster permanently increasing the health and movement speed of lane creeps by selecting specific talents, creating an illusion, then disconnecting\n\n• Fixed Meepo being able to generate infinite money by reaching level 18, getting an Aghanim's scepter, refresher orb, blink dagger, and multiple sentry wards, placing one Meepo on the other side of the map, casting megameepo, casting blink dagger and poof to the Meepo on the other side of the map such that one Meepo joins the stack while the other hasn't reached yet, ending megameepo before the Meepo that hasn't reached yet makes it to the stack, waiting for the Meepo to make his cross map journey, using the refresher orb, then casting megameepo again\n\n• Fixed crash when selling all teleport scrolls on the primary Meepo while a Meepo clone was teleporting\n\n• Fixed Naga Siren killing unrelated illusions when casting Mirror Image\n\n• Fixed Oracle's Prognostication's HUD sometimes being in the wrong location",
+        "releaseNotes": "7.42 Gameplay Update\n\nPatch 7.42 is out now and you can check out the patch notes here.\n\nIn addition, we've made the following improvements and bug fixes:\n\n• Added functionality to bind hotkeys for individual abilities on Invoker's Invoked Spells, Largo's songs, and Kez's Sai abilities\n\n• Added unit ability hotkey settings for Lycan's Summon Wolves, Kobold Soldier, Giant Wolf, Radigull, Odobenus Frostmage, Eimermole Foreman, Ancient Croaker, Ancient Marshmage, and Ancient Ogre Seal\n\n• Added option to show silhouettes for units when they are visually obstructed\n\n• Added Hand of Midas as its own category in Dota+ Gold Received Breakdowns\n\n• Improved client performance when spawning illusions\n\n• Fixed some stat gathering code to be more performant on server, especially around hero deaths\n\n• Refactored unit behavior state machine for better server performance\n\n• Fixed being able to sell an Aghanim's Shard the same frame it is applied when transferring an Aghanim's Shard from a courier to a hero with a full inventory\n\n• Fixed being able to transfer other hero's items to and from their stash\n\n• Fixed Beastmaster permanently increasing the health and movement speed of lane creeps by selecting specific talents, creating an illusion, then disconnecting\n\n• Fixed Meepo being able to generate infinite money by reaching level 18, getting an Aghanim's scepter, refresher orb, blink dagger, and multiple sentry wards, placing one Meepo on the other side of the map, casting megameepo, casting blink dagger and poof to the Meepo on the other side of the map such that one Meepo joins the stack while the other hasn't reached yet, ending megameepo before the Meepo that hasn't reached yet makes it to the stack, waiting for the Meepo to make his cross map journey, using the refresher orb, then casting megameepo again\n\n• Fixed crash when selling all teleport scrolls on the primary Meepo while a Meepo clone was teleporting\n\n• Fixed Naga Siren killing unrelated illusions when casting Mirror Image\n\n• Fixed Oracle's Prognosticate's HUD sometimes being in the wrong location",
         "detectedAt": "2026-11-19T00:22:46.283Z",
         "url": "https://store.steampowered.com/news/app/570/view/689773669992367212"
       },
@@ -24974,6 +25029,13 @@
     ],
     "windows:winget:Dropbox.Dropbox": [
       {
+        "version": "280.4.5053",
+        "releaseDate": "2026-11-20T01:19:13.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T03:14:36.439Z",
+        "url": null
+      },
+      {
         "version": "279.4.5723",
         "releaseDate": "2026-11-19T03:10:05.000Z",
         "releaseNotes": null,
@@ -28352,6 +28414,12 @@
     ],
     "apple:962194608": [
       {
+        "version": "8.2.0",
+        "releaseDate": "2026-11-19T17:35:55.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to ensure your photos are automatically organized and up-to-date.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "8.1.0",
         "releaseDate": "2026-11-13T17:11:53.000Z",
         "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to ensure you can continue to share the moments that matter.",
@@ -31164,6 +31232,12 @@
       }
     ],
     "mac:homebrew:microsoft-edge": [
+      {
+        "version": "158.0.4370.33",
+        "releaseDate": "2026-11-19T22:22:02.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
       {
         "version": "157.0.4341.60",
         "releaseDate": "2026-11-14T01:48:01.000Z",
@@ -41033,6 +41107,12 @@
     ],
     "apple:1137397744": [
       {
+        "version": "2026.11.0",
+        "releaseDate": "2026-11-19T19:34:27.000Z",
+        "releaseNotes": "- Create a new login from the Generator tab\n- View your new item after saving it\n- Refreshed look with new tab icons\n- Better VoiceOver support across the app\n- Fixed autofilled text in Safari not showing until the field is tapped",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "2026.10.1",
         "releaseDate": "2026-10-29T18:45:32.000Z",
         "releaseNotes": "- Improved VoiceOver and keyboard navigation\n- Fixed autofilled fields appearing blank after unlocking with Face ID\n- Fixed login requests not appearing when notifications are turned off",
@@ -43230,6 +43310,12 @@
     ],
     "google:com.venmo": [
       {
+        "version": "26.27.1",
+        "releaseDate": "2026-11-18T15:49:30.000Z",
+        "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "26.27.0",
         "releaseDate": "2026-11-12T01:47:45.000Z",
         "releaseNotes": "Introducing Venmo Stash: A new rewards program from Venmo where the more you do, the more you get.",
@@ -43515,6 +43601,12 @@
       }
     ],
     "apple:585027354": [
+      {
+        "version": "26.47.1",
+        "releaseDate": "2026-11-19T22:10:32.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
       {
         "version": "26.46.1",
         "releaseDate": "2026-11-13T18:37:58.000Z",
@@ -43836,6 +43928,12 @@
     ],
     "apple:368677368": [
       {
+        "version": "3.748.10002",
+        "releaseDate": "2026-11-19T17:39:27.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
+      {
         "version": "3.748.10001",
         "releaseDate": "2026-11-16T16:05:07.000Z",
         "releaseNotes": "We update the Uber app as often as possible to make it faster and more reliable for you. Here are a couple of the enhancements you'll find in the latest update:\n\n- Updates to improve localization across the app\n- Various bug fixes & improvements\n  \nLove the app? Rate us! Your feedback keeps the Uber engine running.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
@@ -44089,6 +44187,12 @@
       }
     ],
     "apple:401626263": [
+      {
+        "version": "26.47",
+        "releaseDate": "2026-11-19T11:27:23.000Z",
+        "releaseNotes": "Get ready to get out there. Plan, book, and travel with the Airbnb app. Now you can also book unique hotels, find a rental car, have groceries delivered when you check in, and grab tickets to exciting attractions on your trip.* Get a day-by-day view of your trip and connect with friends to share travel recommendations. And if you’re a host, there’re new, smarter, more powerful tools to help you manage and optimize your listing. \n *Where available",
+        "detectedAt": "2026-11-20T03:14:36.439Z"
+      },
       {
         "version": "26.46",
         "releaseDate": "2026-11-11T18:45:59.000Z",
@@ -46645,6 +46749,13 @@
     ],
     "windows:winget:Unity.Unity.6000": [
       {
+        "version": "6000.6.10f1",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T03:14:36.439Z",
+        "url": "https://unity.com/releases/editor/whats-new/6000.6.10"
+      },
+      {
         "version": "6000.6.8f1",
         "releaseDate": "2026-11-03T12:00:00.000Z",
         "releaseNotes": null,
@@ -46723,21 +46834,21 @@
       },
       {
         "version": "6000.5.7f1",
-        "releaseDate": "2026-08-05T12:00:00.000Z",
+        "releaseDate": "2026-08-11T16:13:46.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null
       },
       {
         "version": "6000.5.6f1",
-        "releaseDate": "2026-08-05T12:00:00.000Z",
+        "releaseDate": "2026-08-09T11:23:26.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null
       },
       {
         "version": "6000.5.5f1",
-        "releaseDate": "2026-08-05T12:00:00.000Z",
+        "releaseDate": "2026-08-09T11:23:26.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null
