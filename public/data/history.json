@@ -127,6 +127,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1117.3838.0",
+        "releaseDate": "2026-11-20T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T21:49:32.903Z",
+        "url": null
+      },
+      {
         "version": "26.1111.9664.0",
         "releaseDate": "2026-11-19T12:00:00.000Z",
         "releaseNotes": null,
@@ -3779,6 +3786,12 @@
     ],
     "mac:homebrew:perplexity": [
       {
+        "version": "26.46.0",
+        "releaseDate": "2026-11-20T13:50:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
+      {
         "version": "26.44.0",
         "releaseDate": "2026-11-10T17:24:43.000Z",
         "releaseNotes": null,
@@ -5789,6 +5802,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.46.21",
+        "releaseDate": "2026-11-20T14:24:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
       {
         "version": "26.46.17",
         "releaseDate": "2026-11-18T14:17:27.000Z",
@@ -7874,6 +7893,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-18T23:50:07.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-10T16:59:06.000Z",
@@ -10981,6 +11006,12 @@
       }
     ],
     "google:tv.twitch.android.app": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-20T19:12:49.000Z",
+        "releaseNotes": "Bug fixes, stability fixes, and app optimizations",
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-13T19:59:09.000Z",
@@ -19740,6 +19771,12 @@
     ],
     "google:com.microsoft.office.outlook": [
       {
+        "version": "5.2645.1",
+        "releaseDate": "2026-11-18T21:31:33.000Z",
+        "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
+      {
         "version": "5.2644.1",
         "releaseDate": "2026-11-11T06:18:39.000Z",
         "releaseNotes": "Copilot helps you prepare for your meeting in minutes by summarizing key documents, tasks, and past meetings.",
@@ -20401,6 +20438,12 @@
       }
     ],
     "google:com.Slack": [
+      {
+        "version": "26.11.30.0",
+        "releaseDate": "2026-11-18T01:26:24.000Z",
+        "releaseNotes": "Bug Fixes\n• Our in-app file viewer now handles spreadsheets and tables much better. We might go so far as to say the new experience is Excel-lent.\n• Ever pulled a thread and watched the entire garment unravel? Tapping on the \"Threads\" tab was pretty reliably causing the app to crash. With this tailor-made fix, we've sewn up the problem.",
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
       {
         "version": "26.11.20.0",
         "releaseDate": "2026-11-09T22:46:27.000Z",
@@ -41841,6 +41884,12 @@
     ],
     "mac:homebrew:bitwarden": [
       {
+        "version": "2026.11.0",
+        "releaseDate": "2026-11-20T13:54:12.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
+      {
         "version": "2026.10.4",
         "releaseDate": "2026-11-05T18:44:34.000Z",
         "releaseNotes": null,
@@ -42434,6 +42483,12 @@
       }
     ],
     "google:ch.protonmail.android": [
+      {
+        "version": "7.12.2",
+        "releaseDate": "2026-11-20T12:24:26.000Z",
+        "releaseNotes": "Multiple fixes and performance improvements.",
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
       {
         "version": "7.12.1",
         "releaseDate": "2026-11-10T13:26:36.000Z",
@@ -43308,6 +43363,12 @@
       }
     ],
     "google:com.paypal.android.p2pmobile": [
+      {
+        "version": "10.21.1",
+        "releaseDate": "2026-11-11T05:45:19.000Z",
+        "releaseNotes": "Get the latest update, so you can pay, send and save smarter. Unlock cash back offers and more. With PayPal, it really adds up.",
+        "detectedAt": "2026-11-20T21:49:32.903Z"
+      },
       {
         "version": "10.20.1",
         "releaseDate": "2026-11-05T04:12:58.000Z",
