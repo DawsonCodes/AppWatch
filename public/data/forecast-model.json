@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-20T03:14:36.439Z",
+  "trainedAt": "2026-11-20T12:53:08.211Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.597,
-    0.513,
-    0.544,
-    0.608
+    0.598,
+    0.514,
+    0.546,
+    0.609
   ],
   "listings": {
     "apple:1052879175": {
@@ -53,11 +53,6 @@
       }
     },
     "apple:1137397744": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 1,
         "hits": 0,
@@ -122,10 +117,15 @@
       }
     },
     "apple:284882215": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 3,
-        "medianErrorDays": 0.15
+        "medianErrorDays": 0.4
       }
     },
     "apple:288429040": {
@@ -178,9 +178,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 4.67
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 4.41
       }
     },
     "apple:324715238": {
@@ -402,9 +402,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 7,
-        "hits": 4,
-        "medianErrorDays": 1.32
+        "forecasts": 8,
+        "hits": 5,
+        "medianErrorDays": 1.3
       }
     },
     "apple:570060128": {
@@ -676,11 +676,6 @@
       }
     },
     "google:ch.protonmail.android": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 2,
         "hits": 0,
@@ -713,9 +708,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 8,
-        "hits": 5,
-        "medianErrorDays": 1.74
+        "forecasts": 9,
+        "hits": 6,
+        "medianErrorDays": 1.51
       }
     },
     "google:com.android.chrome": {
@@ -792,9 +787,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 2.66
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 2.08
       }
     },
     "google:com.discord": {
@@ -999,11 +994,6 @@
       }
     },
     "google:com.microsoft.office.officehubrow": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 3,
         "hits": 2,
@@ -1012,7 +1002,7 @@
     },
     "google:com.microsoft.office.outlook": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
@@ -1314,9 +1304,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 2,
-        "medianErrorDays": 0.66
+        "medianErrorDays": 0.81
       }
     },
     "mac:homebrew:canva": {
@@ -1333,14 +1323,14 @@
     },
     "mac:homebrew:chatgpt": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 11,
-        "hits": 6,
-        "medianErrorDays": 0.47
+        "forecasts": 12,
+        "hits": 7,
+        "medianErrorDays": 0.39
       }
     },
     "mac:homebrew:claude": {
@@ -1350,9 +1340,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 10,
+        "forecasts": 11,
         "hits": 7,
-        "medianErrorDays": 0.6
+        "medianErrorDays": 0.58
       }
     },
     "mac:homebrew:discord": {
@@ -1472,9 +1462,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 1,
-        "medianErrorDays": 2.8
+        "forecasts": 4,
+        "hits": 2,
+        "medianErrorDays": 2.87
       }
     },
     "mac:homebrew:microsoft-edge": {
@@ -1515,14 +1505,14 @@
     },
     "mac:homebrew:notion": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
+        "forecasts": 6,
         "hits": 5,
-        "medianErrorDays": 1.26
+        "medianErrorDays": 1.66
       }
     },
     "mac:homebrew:opera": {
@@ -1673,9 +1663,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 0.55
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 1.1
       }
     },
     "mac:homebrew:whatsapp": {
@@ -1890,9 +1880,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 12.21
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 10.75
       }
     },
     "windows:winget:BlenderFoundation.Blender": {
@@ -1932,11 +1922,6 @@
       }
     },
     "windows:winget:Discord.Discord": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -2086,9 +2071,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 3,
-        "medianErrorDays": 2.04
+        "medianErrorDays": 0.81
       }
     },
     "windows:winget:OpenAI.ChatGPT": {
@@ -2232,9 +2217,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 0.97
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 0.9
       }
     },
     "windows:winget:Zen-Team.Zen-Browser": {
@@ -2251,13 +2236,13 @@
     }
   },
   "replay": {
-    "tests": 3282,
-    "hits": 2062,
-    "medianErrorDays": 2.14
+    "tests": 3287,
+    "hits": 2070,
+    "medianErrorDays": 2.12
   },
   "live": {
-    "forecasts": 658,
-    "hits": 483,
+    "forecasts": 672,
+    "hits": 492,
     "medianErrorDays": 1.02
   }
 }

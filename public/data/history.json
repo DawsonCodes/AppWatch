@@ -234,6 +234,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1117.31558",
+        "releaseDate": "2026-11-20T03:42:49.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
+      {
         "version": "26.1111.71704",
         "releaseDate": "2026-11-19T01:02:44.000Z",
         "releaseNotes": null,
@@ -2030,6 +2036,12 @@
     ],
     "mac:homebrew:claude": [
       {
+        "version": "6.28899.2",
+        "releaseDate": "2026-11-20T03:43:56.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
+      {
         "version": "6.6395.1",
         "releaseDate": "2026-11-18T18:49:32.000Z",
         "releaseNotes": null,
@@ -2969,6 +2981,12 @@
       }
     ],
     "mac:homebrew:google-gemini": [
+      {
+        "version": "1.147.5.1526",
+        "releaseDate": "2026-11-20T10:27:09.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": "1.144.9.1499",
         "releaseDate": "2026-11-18T12:04:41.000Z",
@@ -3934,6 +3952,12 @@
     ],
     "google:com.deepseek.chat": [
       {
+        "version": "2.9.0",
+        "releaseDate": "2026-11-19T09:12:18.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
+      {
         "version": "2.8.0",
         "releaseDate": "2026-11-13T05:01:09.000Z",
         "releaseNotes": "- Some known issues fixed",
@@ -4159,6 +4183,12 @@
       }
     ],
     "apple:284882215": [
+      {
+        "version": "588.1",
+        "releaseDate": "2026-11-20T07:29:44.000Z",
+        "releaseNotes": "Our teams have solved many crashes, fixed issues you’ve reported and made the app faster.",
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": "588.0.0",
         "releaseDate": "2026-11-18T00:57:32.000Z",
@@ -9702,6 +9732,12 @@
     ],
     "apple:545519333": [
       {
+        "version": "10.158",
+        "releaseDate": "2026-11-20T10:35:35.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
+      {
         "version": "10.157.1",
         "releaseDate": "2026-11-18T10:33:49.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -9793,6 +9829,12 @@
       }
     ],
     "google:com.amazon.avod.thirdpartyclient": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-20T02:15:13.000Z",
+        "releaseNotes": "Enjoy Amazon Prime Video in over 200 countries and territories around the globe!\nDownload movies and TV shows using Wi-Fi or cellular networks.",
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-18T09:47:31.000Z",
@@ -9919,6 +9961,12 @@
       }
     ],
     "apple:324684580": [
+      {
+        "version": "9.2.2",
+        "releaseDate": "2026-11-20T07:17:17.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": "9.2.0",
         "releaseDate": "2026-11-13T13:54:31.000Z",
@@ -13820,6 +13868,12 @@
       }
     ],
     "google:com.valvesoftware.android.steam.community": [
+      {
+        "version": "3.10.14",
+        "releaseDate": "2026-11-20T03:55:29.000Z",
+        "releaseNotes": "- Fixed an issue with some content not immediately loading when resuming the app from the background\n- Fixed an issue with the Move Authenticator button when in the logged out state",
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": "3.10.11",
         "releaseDate": "2026-08-28T16:55:56.000Z",
@@ -23544,6 +23598,13 @@
     ],
     "windows:winget:Notion.Notion": [
       {
+        "version": "7.44.1",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z",
+        "url": null
+      },
+      {
         "version": "7.44.0",
         "releaseDate": "2026-11-16T12:00:00.000Z",
         "releaseNotes": null,
@@ -24245,6 +24306,12 @@
       }
     ],
     "mac:homebrew:notion": [
+      {
+        "version": "7.44.1",
+        "releaseDate": "2026-11-20T04:32:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": "7.44.0",
         "releaseDate": "2026-11-16T04:31:52.000Z",
@@ -32253,6 +32320,12 @@
     ],
     "mac:homebrew:brave-browser": [
       {
+        "version": "1.100.58.0",
+        "releaseDate": "2026-11-20T08:21:45.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
+      {
         "version": "1.99.57.0",
         "releaseDate": "2026-11-12T18:48:29.000Z",
         "releaseNotes": null,
@@ -36829,6 +36902,13 @@
     ],
     "windows:winget:Vivaldi.Vivaldi": [
       {
+        "version": "8.3.4191.47",
+        "releaseDate": "2026-11-20T12:00:00.000Z",
+        "releaseNotes": "- [Ad Blocker] High CPU after adding the HaGeZi's Gambling Blocklist VB-133608\n- [Crash][Ad Blocker] Normalize the data in the stats database to lower its size VB-133436\n- [Feeds][Security] Content injection in news feeds VB-133711\n- [Proton][Extensions] When installed, but not used, notifications are still shown VAB-14066",
+        "detectedAt": "2026-11-20T12:53:08.211Z",
+        "url": "https://update.vivaldi.com/update/1.0/relnotes/8.3.4191.47.html"
+      },
+      {
         "version": "8.3.4191.45",
         "releaseDate": "2026-11-18T12:00:00.000Z",
         "releaseNotes": "- [Chromium] Update to 156.0.8078.110 ESR includes security fixes from 158.0.8127.36/37\n- [Windows][Reader Mode] Not working after upgrade to 8.3.4191.41 VB-133115",
@@ -37173,6 +37253,12 @@
       }
     ],
     "mac:homebrew:vivaldi": [
+      {
+        "version": "8.3.4191.47",
+        "releaseDate": "2026-11-20T11:07:22.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-20T12:53:08.211Z"
+      },
       {
         "version": "8.3.4191.45",
         "releaseDate": "2026-11-18T17:03:17.000Z",
@@ -41165,6 +41251,13 @@
     ],
     "windows:winget:Bitwarden.Bitwarden": [
       {
+        "version": "2026.11.0",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": "What's Changed\n- Updated the look and feel of the desktop app\n- Various under-the-hood improvements and minor bug fixes\n- Synchronized unlock for web, browser, and desktop",
+        "detectedAt": "2026-11-20T12:53:08.211Z",
+        "url": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.11.0"
+      },
+      {
         "version": "2026.10.4",
         "releaseDate": "2026-11-05T12:00:00.000Z",
         "releaseNotes": "What's Changed\n\n🐛 Bug fixes\n- [PM-46275] Default auto-start to off for Mac App Store builds (#24433) by @addisonbeck in #24441",
@@ -41726,7 +41819,7 @@
       },
       {
         "version": "2023.7.0",
-        "releaseDate": "2023-07-14T16:26:56.000Z",
+        "releaseDate": "2023-07-23T16:41:11.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
