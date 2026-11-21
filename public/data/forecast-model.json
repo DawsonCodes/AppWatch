@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-21T03:13:07.617Z",
+  "trainedAt": "2026-11-21T12:39:07.648Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.597,
-    0.514,
-    0.547,
-    0.599
+    0.6,
+    0.517,
+    0.548,
+    0.594
   ],
   "listings": {
     "apple:1052879175": {
@@ -474,9 +474,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 3,
-        "medianErrorDays": 0.41
+        "medianErrorDays": 0.51
       }
     },
     "apple:6477489729": {
@@ -522,9 +522,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 3,
-        "medianErrorDays": 3.37
+        "medianErrorDays": 3.62
       }
     },
     "apple:686449807": {
@@ -1175,9 +1175,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 8,
-        "hits": 5,
-        "medianErrorDays": 2.07
+        "forecasts": 9,
+        "hits": 6,
+        "medianErrorDays": 1.67
       }
     },
     "google:com.zhiliaoapp.musically": {
@@ -1273,9 +1273,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 3,
-        "medianErrorDays": 1
+        "medianErrorDays": 1.58
       }
     },
     "mac:homebrew:bitwarden": {
@@ -1383,7 +1383,7 @@
     },
     "mac:homebrew:ea": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
       },
@@ -1863,9 +1863,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 0,
-        "medianErrorDays": 23.1
+        "medianErrorDays": 26.4
       }
     },
     "windows:winget:Bitwarden.Bitwarden": {
@@ -2078,9 +2078,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 9,
-        "hits": 5,
-        "medianErrorDays": 0.72
+        "forecasts": 10,
+        "hits": 6,
+        "medianErrorDays": 0.7
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -2179,6 +2179,13 @@
         "medianErrorDays": 1.87
       }
     },
+    "windows:winget:TheBrowserCompany.Arc": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      }
+    },
     "windows:winget:TorProject.TorBrowser": {
       "params": {
         "halfLife": 8,
@@ -2236,13 +2243,13 @@
     }
   },
   "replay": {
-    "tests": 3303,
-    "hits": 2078,
-    "medianErrorDays": 2.12
+    "tests": 3307,
+    "hits": 2084,
+    "medianErrorDays": 2.15
   },
   "live": {
-    "forecasts": 692,
-    "hits": 507,
-    "medianErrorDays": 1.02
+    "forecasts": 698,
+    "hits": 509,
+    "medianErrorDays": 1.04
   }
 }

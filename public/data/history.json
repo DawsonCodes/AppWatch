@@ -127,6 +127,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1117.4957.0",
+        "releaseDate": "2026-11-21T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
         "version": "26.1117.3838.0",
         "releaseDate": "2026-11-20T12:00:00.000Z",
         "releaseNotes": null,
@@ -1019,6 +1026,12 @@
     ],
     "apple:6473753684": [
       {
+        "version": "1.261119.19",
+        "releaseDate": "2026-11-21T08:08:03.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-21T12:39:07.648Z"
+      },
+      {
         "version": "1.261116.19",
         "releaseDate": "2026-11-18T02:47:14.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1311,6 +1324,62 @@
     ],
     "windows:winget:Anthropic.Claude": [
       {
+        "version": "6.28899.2",
+        "releaseDate": "2026-11-20T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "5.11492.2",
+        "releaseDate": "2026-11-13T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "5.11492.5",
+        "releaseDate": "2026-11-13T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "5.11492.0",
+        "releaseDate": "2026-11-12T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "5.1231.2",
+        "releaseDate": "2026-11-11T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "4.23118.1",
+        "releaseDate": "2026-11-09T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "4.16336.0",
+        "releaseDate": "2026-11-03T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "4.4212.0",
+        "releaseDate": "2026-10-29T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
         "version": "4.29.0",
         "releaseDate": "2026-10-27T12:00:00.000Z",
         "releaseNotes": null,
@@ -1360,6 +1429,41 @@
         "url": null
       },
       {
+        "version": "2.37337.1",
+        "releaseDate": "2026-10-19T23:17:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.31226.1",
+        "releaseDate": "2026-10-19T23:17:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.31226.0",
+        "releaseDate": "2026-10-19T23:17:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.26454.0",
+        "releaseDate": "2026-10-19T23:17:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
+        "version": "2.26454.2",
+        "releaseDate": "2026-10-19T23:17:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-10-22T06:02:07.180Z",
+        "url": null
+      },
+      {
         "version": "2.42304.2",
         "releaseDate": "2026-10-19T12:00:00.000Z",
         "releaseNotes": null,
@@ -1371,41 +1475,6 @@
         "releaseDate": "2026-10-15T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-11T01:56:20.671Z",
-        "url": null
-      },
-      {
-        "version": "2.37337.1",
-        "releaseDate": "2026-10-13T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.31226.1",
-        "releaseDate": "2026-10-09T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.31226.0",
-        "releaseDate": "2026-10-08T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.26454.0",
-        "releaseDate": "2026-10-08T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
-        "url": null
-      },
-      {
-        "version": "2.26454.2",
-        "releaseDate": "2026-10-07T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
@@ -3921,6 +3990,12 @@
     ],
     "apple:6737597349": [
       {
+        "version": "2.9.0",
+        "releaseDate": "2026-11-21T09:33:17.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-11-21T12:39:07.648Z"
+      },
+      {
         "version": "2.8.0",
         "releaseDate": "2026-11-12T06:26:31.000Z",
         "releaseNotes": "- Fixed some known issues",
@@ -5722,6 +5797,12 @@
       }
     ],
     "google:com.whatsapp": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-21T02:46:11.000Z",
+        "releaseNotes": "• You can now choose to share recent group history with new members when you add them to a group\n• Group calls now include the ability to transfer calls between mobile and desktop, add a waiting room for call links, and pin a participant to a bigger tile.\n\nThese features will roll out over the coming weeks. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-21T12:39:07.648Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-18T23:16:02.000Z",
@@ -39107,11 +39188,46 @@
     ],
     "windows:winget:TheBrowserCompany.Arc": [
       {
+        "version": "1.133.1.2",
+        "releaseDate": "2026-11-20T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": "https://arc.net/windows/release-notes"
+      },
+      {
+        "version": "1.133.0.567",
+        "releaseDate": "2026-11-18T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "1.132.0.527",
+        "releaseDate": "2026-11-12T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
+        "version": "1.131.1.2",
+        "releaseDate": "2026-11-05T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
+      },
+      {
         "version": "1.130.0.417",
         "releaseDate": "2026-10-28T12:00:00.000Z",
         "releaseNotes": "Hello, and welcome! Version 1.130.0 lifts Arc to Chromium 156.0.8078.74, resolving several security issues, so it's worth installing soon. Stay safe, and see you shortly! As a reminder, Arc is being sunset on December 22nd, so now is a good time to start thinking about importing your data and settings into Dia (or exporting to your desktop, should you desire)!",
         "detectedAt": "2026-11-17T22:23:13.064Z",
         "url": "https://arc.net/windows/release-notes"
+      },
+      {
+        "version": "1.129.0.288",
+        "releaseDate": "2026-10-22T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z",
+        "url": null
       },
       {
         "version": "1.128.0.436",
@@ -39163,22 +39279,22 @@
         "url": null
       },
       {
-        "version": "1.123.0.402",
-        "releaseDate": "2026-09-10T12:00:00.000Z",
-        "releaseNotes": null,
-        "detectedAt": "2026-11-02T09:30:01.927Z",
-        "url": null
-      },
-      {
         "version": "1.122.0.383",
-        "releaseDate": "2026-09-03T12:00:00.000Z",
+        "releaseDate": "2026-09-10T21:31:20.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
       },
       {
         "version": "1.121.0.440",
-        "releaseDate": "2026-08-27T12:00:00.000Z",
+        "releaseDate": "2026-09-10T21:31:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-02T09:30:01.927Z",
+        "url": null
+      },
+      {
+        "version": "1.123.0.402",
+        "releaseDate": "2026-09-10T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
@@ -39745,6 +39861,12 @@
       }
     ],
     "mac:homebrew:arc": [
+      {
+        "version": "1.174.1",
+        "releaseDate": "2026-11-21T06:46:35.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T12:39:07.648Z"
+      },
       {
         "version": "1.174.0",
         "releaseDate": "2026-11-19T18:45:11.000Z",
