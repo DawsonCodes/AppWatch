@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-21T12:39:07.648Z",
+  "trainedAt": "2026-11-21T20:31:20.265Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.6,
-    0.517,
-    0.548,
-    0.594
+    0.598,
+    0.516,
+    0.545,
+    0.595
   ],
   "listings": {
     "apple:1052879175": {
@@ -196,6 +196,11 @@
       }
     },
     "apple:327630330": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -670,9 +675,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 1,
-        "medianErrorDays": 2.01
+        "forecasts": 5,
+        "hits": 2,
+        "medianErrorDays": 2
       }
     },
     "google:ch.protonmail.android": {
@@ -703,14 +708,14 @@
     },
     "google:com.amazon.avod.thirdpartyclient": {
       "params": {
-        "halfLife": 16,
-        "bandwidth": 0.45,
+        "halfLife": 8,
+        "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 9,
-        "hits": 6,
-        "medianErrorDays": 1.51
+        "forecasts": 10,
+        "hits": 7,
+        "medianErrorDays": 1.74
       }
     },
     "google:com.android.chrome": {
@@ -838,13 +843,13 @@
     "google:com.duolingo": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.2,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
+        "forecasts": 6,
         "hits": 3,
-        "medianErrorDays": 3.69
+        "medianErrorDays": 3.25
       }
     },
     "google:com.ebay.mobile": {
@@ -854,9 +859,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 2.48
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 1.99
       }
     },
     "google:com.facebook.katana": {
@@ -940,9 +945,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 8,
-        "hits": 5,
-        "medianErrorDays": 0.82
+        "forecasts": 9,
+        "hits": 6,
+        "medianErrorDays": 0.57
       }
     },
     "google:com.instagram.android": {
@@ -1858,7 +1863,7 @@
     },
     "windows:winget:Anthropic.Claude": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.45,
         "weekday": 1
       },
@@ -2243,13 +2248,13 @@
     }
   },
   "replay": {
-    "tests": 3307,
-    "hits": 2084,
-    "medianErrorDays": 2.15
+    "tests": 3312,
+    "hits": 2087,
+    "medianErrorDays": 2.14
   },
   "live": {
-    "forecasts": 698,
-    "hits": 509,
-    "medianErrorDays": 1.04
+    "forecasts": 703,
+    "hits": 513,
+    "medianErrorDays": 1.06
   }
 }
