@@ -241,6 +241,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1117.41037",
+        "releaseDate": "2026-11-21T01:00:08.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
+      {
         "version": "26.1117.31558",
         "releaseDate": "2026-11-20T03:42:49.000Z",
         "releaseNotes": null,
@@ -1134,6 +1140,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261119.19",
+        "releaseDate": "2026-11-20T04:07:19.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": "1.261117.19",
         "releaseDate": "2026-11-18T03:42:28.000Z",
@@ -2042,6 +2054,12 @@
       }
     ],
     "mac:homebrew:claude": [
+      {
+        "version": "6.28899.6",
+        "releaseDate": "2026-11-21T01:01:15.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": "6.28899.2",
         "releaseDate": "2026-11-20T03:43:56.000Z",
@@ -5015,6 +5033,12 @@
     ],
     "apple:447188370": [
       {
+        "version": "14.33.0.57",
+        "releaseDate": "2026-11-20T23:58:08.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
+      {
         "version": "14.32.0.53",
         "releaseDate": "2026-11-12T12:01:59.000Z",
         "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
@@ -5416,6 +5440,12 @@
       }
     ],
     "apple:288429040": [
+      {
+        "version": "9.1.592",
+        "releaseDate": "2026-11-20T19:07:03.000Z",
+        "releaseNotes": "We want you to have the best possible LinkedIn experience. This update contains bug fixes and improvements to ensure the app’s continued speed and reliability.",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": "9.1.591",
         "releaseDate": "2026-11-18T18:07:55.000Z",
@@ -7843,6 +7873,12 @@
       }
     ],
     "apple:686449807": [
+      {
+        "version": "13.3",
+        "releaseDate": "2026-11-20T15:03:02.000Z",
+        "releaseNotes": "Bug fixes, minor improvements, and more.",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": "13.2.2",
         "releaseDate": "2026-11-16T08:10:38.000Z",
@@ -21642,6 +21678,12 @@
     ],
     "apple:1113153706": [
       {
+        "version": "8.21.0",
+        "releaseDate": "2026-11-21T01:39:21.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
+      {
         "version": "8.20.1",
         "releaseDate": "2026-11-18T05:58:43.000Z",
         "releaseNotes": "Bug fixes and performance improvements",
@@ -23462,6 +23504,12 @@
       }
     ],
     "apple:1232780281": [
+      {
+        "version": "1.7.356",
+        "releaseDate": "2026-11-20T17:58:35.000Z",
+        "releaseNotes": "Bug fixes and performance improvements.",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": "1.7.355",
         "releaseDate": "2026-11-18T21:44:22.000Z",
@@ -28573,6 +28621,12 @@
       }
     ],
     "google:com.google.android.apps.photos": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-20T22:11:43.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-17T22:56:21.000Z",
@@ -43152,6 +43206,12 @@
     ],
     "google:com.dd.doordash": [
       {
+        "version": "15.302.6",
+        "releaseDate": "2026-11-16T20:31:37.000Z",
+        "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
+      {
         "version": "15.301.6",
         "releaseDate": "2026-11-10T17:47:03.000Z",
         "releaseNotes": "Our mission is to deliver good by connecting people and possibility. If we can play a small role in helping you spend more time with your friends and family or get ahead on your favorite projects, then we have delivered good.\n\nWe’re launching a new set of initiatives to deliver good within our communities, and you’ll see a new visual identity that reflects our spirit. Thank you for making DoorDash a success — we wouldn’t be here without you.\n\nUpward and onward!\nTony Xu, CEO and Co-Founder",
@@ -48652,6 +48712,12 @@
       }
     ],
     "apple:1050023752": [
+      {
+        "version": "2.19.2",
+        "releaseDate": "2026-11-21T00:06:23.000Z",
+        "releaseNotes": "Minor bug fixes and improvements.",
+        "detectedAt": "2026-11-21T03:13:07.617Z"
+      },
       {
         "version": "2.19.1",
         "releaseDate": "2026-11-13T20:20:26.000Z",
