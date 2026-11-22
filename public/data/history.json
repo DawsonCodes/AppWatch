@@ -3,6 +3,12 @@
   "entries": {
     "apple:6448311069": [
       {
+        "version": "1.2026.315",
+        "releaseDate": "2026-11-21T15:59:35.000Z",
+        "releaseNotes": "Bug fixes and small improvements.",
+        "detectedAt": "2026-11-22T02:14:40.975Z"
+      },
+      {
         "version": "1.2026.314",
         "releaseDate": "2026-11-19T07:18:48.000Z",
         "releaseNotes": "Bug fixes and small improvements.",
@@ -1154,6 +1160,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261120.19",
+        "releaseDate": "2026-11-21T04:12:22.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-22T02:14:40.975Z"
+      },
+      {
         "version": "1.261119.19",
         "releaseDate": "2026-11-20T04:07:19.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -1323,6 +1335,13 @@
       }
     ],
     "windows:winget:Anthropic.Claude": [
+      {
+        "version": "6.28899.6",
+        "releaseDate": "2026-11-20T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-22T02:14:40.975Z",
+        "url": null
+      },
       {
         "version": "6.28899.2",
         "releaseDate": "2026-11-20T12:00:00.000Z",
@@ -2004,7 +2023,7 @@
       },
       {
         "version": "1.6608.2",
-        "releaseDate": "2026-05-12T19:21:37.000Z",
+        "releaseDate": "2026-05-15T21:53:21.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
@@ -5743,6 +5762,12 @@
       }
     ],
     "apple:310633997": [
+      {
+        "version": "26.46.72",
+        "releaseDate": "2026-11-21T14:21:11.000Z",
+        "releaseNotes": "We update the app regularly to fix bugs, optimize performance and improve the experience. Thanks for using WhatsApp!",
+        "detectedAt": "2026-11-22T02:14:40.975Z"
+      },
       {
         "version": "26.45.75",
         "releaseDate": "2026-11-15T12:50:07.000Z",
@@ -10185,6 +10210,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-19T17:13:00.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-22T02:14:40.975Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-17T09:35:57.000Z",
@@ -42662,6 +42693,12 @@
     ],
     "apple:979659905": [
       {
+        "version": "7.12.2",
+        "releaseDate": "2026-11-21T13:29:58.000Z",
+        "releaseNotes": "- Fixed an issue where some message wouldn't get correctly decrypted when viewing them.\n- Performance improvements",
+        "detectedAt": "2026-11-22T02:14:40.975Z"
+      },
+      {
         "version": "7.12.1",
         "releaseDate": "2026-11-17T10:11:55.000Z",
         "releaseNotes": "Bug fixes and improvements",
@@ -43205,6 +43242,12 @@
       }
     ],
     "apple:282614216": [
+      {
+        "version": "6.283.0",
+        "releaseDate": "2026-11-21T18:04:21.000Z",
+        "releaseNotes": "The eBay app you love, now supporting iPhone Duo!\n\nBug fixes and performance improvements. We are listening! Shake your phone if you experience a problem with the app or want to send us feedback about your experience on eBay.",
+        "detectedAt": "2026-11-22T02:14:40.975Z"
+      },
       {
         "version": "6.282.0",
         "releaseDate": "2026-11-14T18:04:43.000Z",

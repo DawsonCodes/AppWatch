@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-21T20:31:20.265Z",
+  "trainedAt": "2026-11-22T02:14:40.975Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.598,
-    0.516,
-    0.545,
-    0.595
+    0.599,
+    0.517,
+    0.546,
+    0.596
   ],
   "listings": {
     "apple:1052879175": {
@@ -99,9 +99,9 @@
     },
     "apple:282614216": {
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.15
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.13
       }
     },
     "apple:283646709": {
@@ -159,9 +159,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 3,
-        "medianErrorDays": 2.4
+        "medianErrorDays": 2.68
       }
     },
     "apple:323229106": {
@@ -462,14 +462,14 @@
     },
     "apple:6448311069": {
       "params": {
-        "halfLife": 8,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 2,
-        "medianErrorDays": 0.84
+        "medianErrorDays": 1.48
       }
     },
     "apple:6473753684": {
@@ -631,10 +631,15 @@
       }
     },
     "apple:979659905": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 2,
-        "medianErrorDays": 3.22
+        "medianErrorDays": 5.78
       }
     },
     "apple:985746746": {
@@ -733,13 +738,13 @@
     "google:com.anthropic.claude": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.3,
+        "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
-        "forecasts": 11,
-        "hits": 8,
-        "medianErrorDays": 0.96
+        "forecasts": 12,
+        "hits": 9,
+        "medianErrorDays": 0.92
       }
     },
     "google:com.brave.browser": {
@@ -1097,9 +1102,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 1.67
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 2.49
       }
     },
     "google:com.squareup.cash": {
@@ -2248,13 +2253,13 @@
     }
   },
   "replay": {
-    "tests": 3312,
-    "hits": 2087,
+    "tests": 3318,
+    "hits": 2093,
     "medianErrorDays": 2.14
   },
   "live": {
-    "forecasts": 703,
-    "hits": 513,
+    "forecasts": 709,
+    "hits": 516,
     "medianErrorDays": 1.06
   }
 }
