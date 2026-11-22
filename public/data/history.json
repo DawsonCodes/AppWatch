@@ -4459,6 +4459,12 @@
     ],
     "apple:333903271": [
       {
+        "version": "12.46",
+        "releaseDate": "2026-11-22T16:20:03.000Z",
+        "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
+        "detectedAt": "2026-11-22T23:37:03.466Z"
+      },
+      {
         "version": "12.45.1",
         "releaseDate": "2026-11-19T14:25:14.000Z",
         "releaseNotes": "We made improvements and squashed bugs so X is even better for you.",
@@ -4938,6 +4944,12 @@
       }
     ],
     "apple:544007664": [
+      {
+        "version": "21.47.6",
+        "releaseDate": "2026-11-22T17:10:41.000Z",
+        "releaseNotes": "We fixed the tubes that bring you videos – and some bugs too.",
+        "detectedAt": "2026-11-22T23:37:03.466Z"
+      },
       {
         "version": "21.46.3",
         "releaseDate": "2026-11-15T17:07:14.000Z",
@@ -48966,6 +48978,12 @@
       }
     ],
     "apple:1050023752": [
+      {
+        "version": "2.19.3",
+        "releaseDate": "2026-11-22T21:16:47.000Z",
+        "releaseNotes": "Minor bug fixes and improvements.",
+        "detectedAt": "2026-11-22T23:37:03.466Z"
+      },
       {
         "version": "2.19.2",
         "releaseDate": "2026-11-21T00:06:23.000Z",
