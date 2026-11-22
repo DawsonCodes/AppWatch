@@ -3109,6 +3109,12 @@
     ],
     "mac:homebrew:google-gemini": [
       {
+        "version": "1.147.6.1557",
+        "releaseDate": "2026-11-22T11:25:11.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-22T17:50:33.270Z"
+      },
+      {
         "version": "1.147.5.1526",
         "releaseDate": "2026-11-20T10:27:09.000Z",
         "releaseNotes": null,
@@ -4575,6 +4581,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.45.1-prod.01",
+        "releaseDate": "2026-11-19T23:42:47.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-22T17:50:33.270Z"
+      },
+      {
         "version": "12.44.0-prod.01",
         "releaseDate": "2026-11-17T01:07:44.000Z",
         "releaseNotes": null,
@@ -4988,6 +5000,12 @@
       }
     ],
     "google:com.google.android.youtube": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-22T04:15:56.000Z",
+        "releaseNotes": "For new features, look for in-product education & notifications sharing the feature and how to use it!",
+        "detectedAt": "2026-11-22T17:50:33.270Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-21T05:19:00.000Z",
@@ -8061,6 +8079,12 @@
       }
     ],
     "google:org.telegram.messenger": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-21T11:54:39.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-22T17:50:33.270Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-18T23:50:07.000Z",
