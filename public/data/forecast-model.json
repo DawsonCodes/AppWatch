@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-23T07:36:48.653Z",
+  "trainedAt": "2026-11-23T20:13:44.647Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.598,
-    0.515,
-    0.545,
-    0.597
+    0.599,
+    0.516,
+    0.546,
+    0.598
   ],
   "listings": {
     "apple:1050023752": {
@@ -697,9 +697,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
+        "forecasts": 6,
         "hits": 2,
-        "medianErrorDays": 2
+        "medianErrorDays": 2.01
       }
     },
     "google:ch.protonmail.android": {
@@ -900,9 +900,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
+        "forecasts": 3,
         "hits": 2,
-        "medianErrorDays": 2.53
+        "medianErrorDays": 1.68
       }
     },
     "google:com.google.android.apps.docs": {
@@ -991,9 +991,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 3.71
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 3.29
       }
     },
     "google:com.linkedin.android": {
@@ -1060,9 +1060,9 @@
     },
     "google:com.openai.chatgpt": {
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 1.7
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 1.23
       }
     },
     "google:com.paypal.android.p2pmobile": {
@@ -1119,9 +1119,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
-        "hits": 4,
-        "medianErrorDays": 2.49
+        "forecasts": 7,
+        "hits": 5,
+        "medianErrorDays": 1.81
       }
     },
     "google:com.squareup.cash": {
@@ -1403,9 +1403,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 2,
-        "medianErrorDays": 1.42
+        "forecasts": 5,
+        "hits": 3,
+        "medianErrorDays": 0.4
       }
     },
     "mac:homebrew:ea": {
@@ -1697,9 +1697,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 10,
-        "hits": 7,
-        "medianErrorDays": 0.9
+        "forecasts": 11,
+        "hits": 8,
+        "medianErrorDays": 0.89
       }
     },
     "mac:homebrew:zen": {
@@ -2189,9 +2189,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 6,
-        "medianErrorDays": 1.87
+        "medianErrorDays": 2.19
       }
     },
     "windows:winget:TheBrowserCompany.Arc": {
@@ -2258,13 +2258,13 @@
     }
   },
   "replay": {
-    "tests": 3330,
-    "hits": 2100,
-    "medianErrorDays": 2.13
+    "tests": 3336,
+    "hits": 2107,
+    "medianErrorDays": 2.12
   },
   "live": {
-    "forecasts": 722,
-    "hits": 527,
-    "medianErrorDays": 1.04
+    "forecasts": 730,
+    "hits": 532,
+    "medianErrorDays": 1.05
   }
 }

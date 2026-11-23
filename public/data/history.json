@@ -77,6 +77,12 @@
     ],
     "google:com.openai.chatgpt": [
       {
+        "version": "1.2026.321",
+        "releaseDate": "2026-11-21T20:18:46.000Z",
+        "releaseNotes": "Minor fixes and improvements",
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
+      {
         "version": "1.2026.314",
         "releaseDate": "2026-11-16T02:24:08.000Z",
         "releaseNotes": null,
@@ -3030,6 +3036,12 @@
     ],
     "google:com.google.android.apps.bard": [
       {
+        "version": "1.0.1009090390",
+        "releaseDate": "2026-11-18T17:06:09.000Z",
+        "releaseNotes": "Meet Gemini 4 Argon — our newest, most capable frontier model!\n\n⚡ Tackle Harder Problems: Solve complex, multi-step workflows end-to-end with deep, advanced reasoning.\n\n💻 Advanced Coding & Analysis: Seamlessly write, debug, and execute code or analyze complex data in seconds.\n\n🎨 Turn Ideas into Projects: Move beyond simple chats. Go from a rough concept to a polished, ready-to-use project instantly.",
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
+      {
         "version": "1.0.995038376",
         "releaseDate": "2026-10-13T17:05:50.000Z",
         "releaseNotes": "• Unlock a new world of productivity and creativity with Gemini 3.5 Flash and Gemini Omni.\n• Gemini Spark 24/7 personal AI agent proactively manages tasks and helps you navigate your digital life.\n• Daily Brief agent gives you a personalized morning brief and organizes exactly what you need to know to start your day.\n• Show Gemini what you’re seeing and try saying “reimagine this” to dream up creative new surroundings with Nano Banana in Gemini Live.",
@@ -3490,6 +3502,12 @@
       }
     ],
     "google:ai.x.grok": [
+      {
+        "version": "1.2.59-release.00",
+        "releaseDate": "2026-11-21T21:39:20.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
       {
         "version": "1.2.58-release.00",
         "releaseDate": "2026-11-18T22:25:44.000Z",
@@ -4765,6 +4783,12 @@
     ],
     "google:com.instagram.barcelona": [
       {
+        "version": "456.0.0.57.80",
+        "releaseDate": "2026-11-17T00:27:02.000Z",
+        "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
+      {
         "version": "455.0.0.55.72",
         "releaseDate": "2026-11-09T21:42:25.000Z",
         "releaseNotes": "We’ve fixed bugs and improved performance. To experience the newest features and improvements, download the latest version of the app.",
@@ -6000,6 +6024,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.47.12",
+        "releaseDate": "2026-11-23T14:45:53.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
       {
         "version": "26.46.21",
         "releaseDate": "2026-11-20T14:24:00.000Z",
@@ -8190,6 +8220,13 @@
     ],
     "windows:winget:Telegram.TelegramDesktop": [
       {
+        "version": "7.4.6",
+        "releaseDate": "2026-11-23T12:00:00.000Z",
+        "releaseNotes": "- On-chain gifts offers and sales from your Money section.\n- Memory safe and process isolated html widgets.\n- Stories dafting and posting.\n- Bot preview stories.",
+        "detectedAt": "2026-11-23T20:13:44.647Z",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.6"
+      },
+      {
         "version": "7.4.4",
         "releaseDate": "2026-11-13T12:00:00.000Z",
         "releaseNotes": "- Bug fixes and other minor improvements.",
@@ -9687,6 +9724,12 @@
     ],
     "google:com.facebook.orca": [
       {
+        "version": "588.1.0.66.98",
+        "releaseDate": "2026-11-19T00:24:55.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
+      {
         "version": "587.0.0.54.96",
         "releaseDate": "2026-11-10T05:59:33.000Z",
         "releaseNotes": null,
@@ -10252,6 +10295,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-23T09:17:18.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-19T17:13:00.000Z",
@@ -33467,6 +33516,13 @@
     ],
     "windows:winget:DuckDuckGo.DesktopBrowser": [
       {
+        "version": "0.181.4.0",
+        "releaseDate": "2026-11-19T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-23T20:13:44.647Z",
+        "url": null
+      },
+      {
         "version": "0.180.5.0",
         "releaseDate": "2026-11-19T12:00:00.000Z",
         "releaseNotes": null,
@@ -33544,14 +33600,14 @@
         "url": null
       },
       {
-        "version": "0.175.2.0",
-        "releaseDate": "2026-10-15T12:00:00.000Z",
+        "version": "0.176.2.0",
+        "releaseDate": "2026-10-19T18:59:13.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
         "url": null
       },
       {
-        "version": "0.176.2.0",
+        "version": "0.175.2.0",
         "releaseDate": "2026-10-15T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-10-22T06:02:07.180Z",
@@ -33804,6 +33860,12 @@
       }
     ],
     "mac:homebrew:duckduckgo": [
+      {
+        "version": "1.217.0",
+        "releaseDate": "2026-11-23T15:56:43.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-23T20:13:44.647Z"
+      },
       {
         "version": "1.216.0",
         "releaseDate": "2026-11-16T13:01:52.000Z",
