@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-22T23:37:03.466Z",
+  "trainedAt": "2026-11-23T07:36:48.653Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.599,
-    0.516,
-    0.546,
-    0.596
+    0.598,
+    0.515,
+    0.545,
+    0.597
   ],
   "listings": {
     "apple:1050023752": {
@@ -85,9 +85,9 @@
     },
     "apple:1288723196": {
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.79
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.64
       }
     },
     "apple:1446075923": {
@@ -400,9 +400,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 1.12
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.71
       }
     },
     "apple:544007664": {
@@ -580,9 +580,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 3,
-        "medianErrorDays": 0.56
+        "forecasts": 5,
+        "hits": 4,
+        "medianErrorDays": 0.45
       }
     },
     "apple:835599320": {
@@ -678,9 +678,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 0.33
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 0.3
       }
     },
     "google:ai.perplexity.app.android": {
@@ -919,9 +919,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 8,
+        "forecasts": 9,
         "hits": 5,
-        "medianErrorDays": 0.77
+        "medianErrorDays": 0.73
       }
     },
     "google:com.google.android.apps.photos": {
@@ -1152,9 +1152,9 @@
     },
     "google:com.ubercab": {
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.16
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.17
       }
     },
     "google:com.ubercab.eats": {
@@ -2258,13 +2258,13 @@
     }
   },
   "replay": {
-    "tests": 3324,
-    "hits": 2099,
-    "medianErrorDays": 2.14
+    "tests": 3330,
+    "hits": 2100,
+    "medianErrorDays": 2.13
   },
   "live": {
-    "forecasts": 716,
-    "hits": 522,
-    "medianErrorDays": 1.06
+    "forecasts": 722,
+    "hits": 527,
+    "medianErrorDays": 1.04
   }
 }

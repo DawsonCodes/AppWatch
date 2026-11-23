@@ -3613,6 +3613,12 @@
     ],
     "apple:541164041": [
       {
+        "version": "2.116.2",
+        "releaseDate": "2026-11-23T04:54:28.000Z",
+        "releaseNotes": "• General quality and performance enhancements.",
+        "detectedAt": "2026-11-23T07:36:48.653Z"
+      },
+      {
         "version": "2.116.1",
         "releaseDate": "2026-11-16T05:22:17.000Z",
         "releaseNotes": "• General quality and performance enhancements.",
@@ -30151,6 +30157,12 @@
     ],
     "apple:989804926": [
       {
+        "version": "161.0",
+        "releaseDate": "2026-11-23T02:08:23.000Z",
+        "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
+        "detectedAt": "2026-11-23T07:36:48.653Z"
+      },
+      {
         "version": "160.1",
         "releaseDate": "2026-11-16T03:08:21.000Z",
         "releaseNotes": "Behind-the-scenes updates to keep your browsing steady, smooth, and responsive.\n\nEnjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation at https://connect.mozilla.org. Need help? Our volunteer support community has your back at https://mzl.la/iOSSupport.",
@@ -31157,6 +31169,12 @@
       }
     ],
     "apple:1288723196": [
+      {
+        "version": "158.4370.33",
+        "releaseDate": "2026-11-23T02:11:35.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Check out what's new in this release.\n• Bug fixes, stability and performance improvements.\nUpgrade to the latest version and enjoy a smarter and more efficient Microsoft Edge!",
+        "detectedAt": "2026-11-23T07:36:48.653Z"
+      },
       {
         "version": "157.4341.57",
         "releaseDate": "2026-11-16T07:55:07.000Z",
@@ -43397,6 +43415,12 @@
     ],
     "apple:719972451": [
       {
+        "version": "8.46.0",
+        "releaseDate": "2026-11-23T06:00:18.000Z",
+        "releaseNotes": "Minor updates and performance improvements",
+        "detectedAt": "2026-11-23T07:36:48.653Z"
+      },
+      {
         "version": "8.45.0",
         "releaseDate": "2026-11-16T06:00:39.000Z",
         "releaseNotes": "Minor updates and performance improvements",
@@ -44144,6 +44168,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-11-22T23:36:26.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-23T07:36:48.653Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-18T12:33:32.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-11-19T20:36:19.020Z"
@@ -44456,6 +44486,12 @@
       }
     ],
     "google:com.ubercab": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-20T18:11:07.000Z",
+        "releaseNotes": "We update the Uber app as often as possible to help make it faster and more reliable for you. This version includes several bug fixes and performance improvements.\n\nLove the app? Rate us! Your feedback helps us to improve the Uber app.\nHave a question? Tap Help in the Uber app or visit help.uber.com.",
+        "detectedAt": "2026-11-23T07:36:48.653Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-13T18:00:48.000Z",
