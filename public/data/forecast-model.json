@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-24T04:48:52.116Z",
+  "trainedAt": "2026-11-24T17:43:58.305Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -9,9 +9,9 @@
   },
   "masses": [
     0.599,
-    0.516,
-    0.548,
-    0.598
+    0.517,
+    0.547,
+    0.587
   ],
   "listings": {
     "apple:1050023752": {
@@ -110,11 +110,6 @@
       }
     },
     "apple:282614216": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.2,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -266,9 +261,9 @@
     },
     "apple:401626263": {
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 3,
-        "medianErrorDays": 0.42
+        "medianErrorDays": 0.52
       }
     },
     "apple:414706506": {
@@ -472,9 +467,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 3,
-        "medianErrorDays": 0.21
+        "medianErrorDays": 0.39
       }
     },
     "apple:6448311069": {
@@ -496,9 +491,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 7,
-        "hits": 3,
-        "medianErrorDays": 0.51
+        "forecasts": 8,
+        "hits": 4,
+        "medianErrorDays": 0.42
       }
     },
     "apple:6477489729": {
@@ -527,9 +522,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 0.93
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 1.17
       }
     },
     "apple:6737597349": {
@@ -654,9 +649,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 5.78
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 5.77
       }
     },
     "apple:985746746": {
@@ -703,10 +698,15 @@
       }
     },
     "google:ch.protonmail.android": {
+      "params": {
+        "halfLife": 16,
+        "bandwidth": 0.45,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 3,
+        "forecasts": 4,
         "hits": 1,
-        "medianErrorDays": 0.61
+        "medianErrorDays": 3.54
       }
     },
     "google:com.Slack": {
@@ -919,9 +919,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 9,
-        "hits": 5,
-        "medianErrorDays": 0.73
+        "forecasts": 10,
+        "hits": 6,
+        "medianErrorDays": 0.65
       }
     },
     "google:com.google.android.apps.photos": {
@@ -950,14 +950,14 @@
     },
     "google:com.google.android.gm": {
       "params": {
-        "halfLife": 32,
-        "bandwidth": 0.45,
+        "halfLife": 16,
+        "bandwidth": 0.6,
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 3,
-        "medianErrorDays": 0.53
+        "medianErrorDays": 0.56
       }
     },
     "google:com.google.android.youtube": {
@@ -1319,9 +1319,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 14.21
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 13.92
       }
     },
     "mac:homebrew:brave-browser": {
@@ -1434,9 +1434,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 0.13
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 0.14
       }
     },
     "mac:homebrew:godot": {
@@ -1692,14 +1692,14 @@
     },
     "mac:homebrew:whatsapp": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 8,
         "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
-        "forecasts": 11,
-        "hits": 8,
-        "medianErrorDays": 0.89
+        "forecasts": 12,
+        "hits": 9,
+        "medianErrorDays": 0.9
       }
     },
     "mac:homebrew:zen": {
@@ -2057,9 +2057,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 20.34
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 11.93
       }
     },
     "windows:winget:Mozilla.Firefox": {
@@ -2093,9 +2093,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 10,
-        "hits": 6,
-        "medianErrorDays": 0.7
+        "forecasts": 11,
+        "hits": 7,
+        "medianErrorDays": 0.68
       }
     },
     "windows:winget:OpenWhisperSystems.Signal": {
@@ -2258,13 +2258,13 @@
     }
   },
   "replay": {
-    "tests": 3359,
-    "hits": 2118,
+    "tests": 3368,
+    "hits": 2125,
     "medianErrorDays": 2.07
   },
   "live": {
-    "forecasts": 760,
-    "hits": 554,
+    "forecasts": 773,
+    "hits": 563,
     "medianErrorDays": 1.02
   }
 }

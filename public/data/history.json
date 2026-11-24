@@ -139,6 +139,13 @@
     ],
     "windows:winget:OpenAI.ChatGPT": [
       {
+        "version": "26.1120.5083.0",
+        "releaseDate": "2026-11-24T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-24T17:43:58.305Z",
+        "url": null
+      },
+      {
         "version": "26.1117.4957.0",
         "releaseDate": "2026-11-21T12:00:00.000Z",
         "releaseNotes": null,
@@ -1043,6 +1050,12 @@
       }
     ],
     "apple:6473753684": [
+      {
+        "version": "1.261120.51",
+        "releaseDate": "2026-11-24T09:57:09.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
       {
         "version": "1.261119.19",
         "releaseDate": "2026-11-21T08:08:03.000Z",
@@ -3387,6 +3400,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.68",
+        "releaseDate": "2026-11-24T13:44:44.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
+      {
         "version": "1.4.66",
         "releaseDate": "2026-11-23T10:25:09.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -4745,6 +4764,12 @@
     ],
     "apple:6446901002": [
       {
+        "version": "457.0",
+        "releaseDate": "2026-11-24T06:44:45.000Z",
+        "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
+      {
         "version": "456.0",
         "releaseDate": "2026-11-16T15:06:21.000Z",
         "releaseNotes": "We’re working fast to regularly update our app. To experience the newest features and improvements, download the latest version of the app.",
@@ -6054,6 +6079,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.47.15",
+        "releaseDate": "2026-11-24T11:55:06.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
       {
         "version": "26.47.12",
         "releaseDate": "2026-11-23T14:45:53.000Z",
@@ -19969,6 +20000,12 @@
     "google:com.google.android.gm": [
       {
         "version": null,
+        "releaseDate": "2026-11-23T19:00:09.000Z",
+        "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-13T02:28:21.000Z",
         "releaseNotes": "Stay on top of the work that matters with Gmail, part of Google Workspace. With secure email as the foundation, you can also chat, collaborate with a group in spaces or make voice or video calls - all in one place.",
         "detectedAt": "2026-11-13T09:30:51.738Z"
@@ -22122,6 +22159,13 @@
       }
     ],
     "windows:winget:Microsoft.Teams": [
+      {
+        "version": "26304.1207.5384.858",
+        "releaseDate": "2026-11-17T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-24T17:43:58.305Z",
+        "url": null
+      },
       {
         "version": "26288.2004.5269.3420",
         "releaseDate": "2026-10-23T12:00:00.000Z",
@@ -30658,6 +30702,12 @@
       }
     ],
     "mac:homebrew:firefox": [
+      {
+        "version": "161.0",
+        "releaseDate": "2026-11-24T16:29:21.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
       {
         "version": "160.0.1",
         "releaseDate": "2026-11-17T16:16:28.000Z",
@@ -42962,6 +43012,12 @@
     ],
     "apple:979659905": [
       {
+        "version": "7.12.3",
+        "releaseDate": "2026-11-24T10:35:46.000Z",
+        "releaseNotes": "Bug fixes and performance improvements",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
+      {
         "version": "7.12.2",
         "releaseDate": "2026-11-21T13:29:58.000Z",
         "releaseNotes": "- Fixed an issue where some message wouldn't get correctly decrypted when viewing them.\n- Performance improvements",
@@ -43011,6 +43067,12 @@
       }
     ],
     "google:ch.protonmail.android": [
+      {
+        "version": "7.12.4",
+        "releaseDate": "2026-11-24T06:36:00.000Z",
+        "releaseNotes": "Multiple fixes and performance improvements.",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
       {
         "version": "7.12.2",
         "releaseDate": "2026-11-20T12:24:26.000Z",
@@ -44401,6 +44463,12 @@
     "google:com.google.android.apps.maps": [
       {
         "version": null,
+        "releaseDate": "2026-11-24T11:33:09.000Z",
+        "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-22T23:36:26.000Z",
         "releaseNotes": "Thanks for using Google Maps! This release brings bug fixes that improve our product to help you discover new places and navigate to them.\n\nBecome a beta tester: http://goo.gl/vLUcaJ",
         "detectedAt": "2026-11-23T07:36:48.653Z"
@@ -44929,6 +44997,12 @@
       }
     ],
     "apple:401626263": [
+      {
+        "version": "26.47.1",
+        "releaseDate": "2026-11-24T11:28:54.000Z",
+        "releaseNotes": "Get ready to get out there. Plan, book, and travel with the Airbnb app. Now you can also book unique hotels, find a rental car, have groceries delivered when you check in, and grab tickets to exciting attractions on your trip.* Get a day-by-day view of your trip and connect with friends to share travel recommendations. And if you’re a host, there’re new, smarter, more powerful tools to help you manage and optimize your listing. \n *Where available",
+        "detectedAt": "2026-11-24T17:43:58.305Z"
+      },
       {
         "version": "26.47",
         "releaseDate": "2026-11-19T11:27:23.000Z",
@@ -48695,7 +48769,7 @@
       },
       {
         "version": "5.2.2",
-        "releaseDate": "2026-09-15T12:00:00.000Z",
+        "releaseDate": "2026-10-02T01:00:31.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null
@@ -48919,6 +48993,13 @@
       }
     ],
     "mac:homebrew:blender": [
+      {
+        "version": "4.5.17",
+        "releaseDate": "2026-11-24T09:46:48.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-24T17:43:58.305Z",
+        "url": null
+      },
       {
         "version": "5.3.0",
         "releaseDate": "2026-11-10T09:47:35.000Z",
