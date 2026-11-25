@@ -267,6 +267,12 @@
     ],
     "mac:homebrew:chatgpt": [
       {
+        "version": "26.1120.50957",
+        "releaseDate": "2026-11-24T21:53:10.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
+      {
         "version": "26.1120.41243",
         "releaseDate": "2026-11-24T00:58:02.000Z",
         "releaseNotes": null,
@@ -1184,6 +1190,12 @@
       }
     ],
     "google:com.anthropic.claude": [
+      {
+        "version": "1.261123.19",
+        "releaseDate": "2026-11-24T04:52:26.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "1.261120.19",
         "releaseDate": "2026-11-21T04:12:22.000Z",
@@ -2181,6 +2193,12 @@
       }
     ],
     "mac:homebrew:claude": [
+      {
+        "version": "7.37095.0",
+        "releaseDate": "2026-11-24T18:53:59.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "6.28899.6",
         "releaseDate": "2026-11-21T01:01:15.000Z",
@@ -3534,6 +3552,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.60-release.00",
+        "releaseDate": "2026-11-24T01:22:58.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
+      {
         "version": "1.2.59-release.00",
         "releaseDate": "2026-11-21T21:39:20.000Z",
         "releaseNotes": null,
@@ -4654,6 +4678,12 @@
     ],
     "google:com.twitter.android": [
       {
+        "version": "12.46.1-prod.01",
+        "releaseDate": "2026-11-24T15:23:31.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
+      {
         "version": "12.45.1-prod.01",
         "releaseDate": "2026-11-19T23:42:47.000Z",
         "releaseNotes": null,
@@ -4943,6 +4973,12 @@
       }
     ],
     "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-24T13:46:50.000Z",
+        "releaseNotes": "We polish up TikTok to make creating and browsing on our app faster and better than ever.",
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-19T14:06:59.000Z",
@@ -5267,6 +5303,12 @@
       }
     ],
     "apple:447188370": [
+      {
+        "version": "14.33.1.0",
+        "releaseDate": "2026-11-25T00:50:27.000Z",
+        "releaseNotes": "Just a little tune-up to keep everything running smoothly!",
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "14.33.0.57",
         "releaseDate": "2026-11-20T23:58:08.000Z",
@@ -16835,6 +16877,13 @@
     "windows:steam:570": [
       {
         "version": null,
+        "releaseDate": "2026-11-24T23:39:04.000Z",
+        "releaseNotes": "7.42a Gameplay Patch\n\nPatch 7.42a is out now and you can check out the patch notes here.\n\nIn addition, we've recently addressed the following issues:\n\n• Fixed a server crash related to the Tormentor dying\n\n• Fixed a server crash related to the Tormentor dying\n\n• Fixed a crash that sometimes occurred when building Ristul's Devotion\n\n• Fixed a server crash that could happen when Kez's Grappling Claw is reflected\n\n• Fixed a crash related to Techies' Sticky Bomb\n\n• Fixed pseudo-queued orders not getting the correct priority (e.g. Naga Siren's Mirror Image interrupting Power Treads toggling)\n\n• Fixed some subtle \"stop\" command behavior\n\n• Fixed a bug with turning to face a point to cast\n\n• Fixed lane creeps giving up on their path on the last segment before reaching their goal\n\n• Fixed cast attacks using the base attack range instead of the ability's cast range\n\n• Fixed sleeping neutral camps looking for and camps remembering previous targets\n\n• Fixed neutral camp behavior when attacked by invisible attackers\n\n• Fixed health restoration from neutral creeps not counting toward healing contribution tracking\n\n• Fixed custom terrain tree models not being usable with Nature's Prophet's Nature's Call\n\n• Fixed areas around the medium camps outside the Safelane Tier 1 towers being unintentionally pathable\n\n• Fixed a random arch appearing in the Dire stream on the Immortal Gardens terrain\n\n• Fixed a misaligned tile on the Autumn terrain\n\n• Fixed a visual gap in the map near the Dire fountain\n\n• Fixed Mindbreaker not working on hero clones\n\n• Fixed Mindbreaker duration not being properly modified by Item Potency\n\n• Fixed Raindrop shield particle not scaling with hero size\n\n• Fixed Silver Edge duration not being properly modified by Item Potency\n\n• Fixed Starforge's meteor burn using the Meteor Hammer burn particle\n\n• Fixed Beastmaster's Thunderhide not dying when the Summon Thunderhide ability is lost (Rubick's Spell Steal or Morphling's Replicate)\n\n• Fixed Brewmaster's Aghanim's Scepter Brewed Up not working correctly\n\n• Fixed Chaos Knight's Armageddon charge hitting while Chaos Knight is stunned, hexed, feared or hidden\n\n• Fixed Chen's Zealot not dying when the Zealot ability is lost (Rubick's Spell Steal or Morphling's Replicate)\n\n• Fixed Chen's Innate not working on units he summoned\n\n• Fixed Enchantress's Impetus spear visually going through the ground\n\n• Fixed Juggernaut having 175% Item Potency while spinning with Aghanim's Scepter instead of 75%\n\n• Fixed Largo's Encore increasing the cooldown of Caduceus' Empower Spell\n\n• Fixed Lycan's Wolf Bite permanently setting the target's max attack range to 150\n\n• Fixed Luna's Moon Glaive bounces triggering Snakebite\n\n• Fixed Meepo held by Divided We Stand being targetable and selectable\n\n• Fixed Meepo's innate not working\n\n• Fixed Morphling illusions being small if created after using Aghanim's Scepter\n\n• Fixed Morphling's Aghanim's Scepter secondary debuffs lasting longer than intended\n\n• Fixed Morphling's Aghanim's Scepter ending too early when all Shadow Shaman Shackles were cast on one target\n\n• Fixed Morphling's Aghanim's Scepter not working with Snowball, Death Seeker, Boomerang, Companion Run and Spirit Walk\n\n• Fixed Morphling's Aghanim's Scepter illusions being able to multicast\n\n• Fixed Morphling's Aghanim's Scepter vector-targeted abilities not behaving correctly\n\n• Fixed Morphling's Aghanim's Scepter incorrectly echoing Phantom Strike and Gush\n\n• Fixed removing Aghanim's Scepter from Morphling while replicated Gush projectiles are flying, leaving a permanent projectile on the map\n\n• Fixed Morphling's Aghanim's Scepter's interaction with abilities with optional unit-targetting (Breathe Fire, Dual Breath, Earth Spike, etc.) that created echoes, but did not cast anything\n\n• Fixed Rubick's Spell Steal interaction with Ahead, Armageddon and Phantasm\n\n• Fixed a stolen Disruptor Kinetic Fence not behaving properly\n\n• Fixed Sniper being unable to proc Headshot when he had multiple…",
+        "detectedAt": "2026-11-25T02:27:34.031Z",
+        "url": "https://store.steampowered.com/news/app/570/view/689774670193362169"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-18T20:00:46.000Z",
         "releaseNotes": "7.42 Gameplay Update\n\nPatch 7.42 is out now and you can check out the patch notes here.\n\nIn addition, we've made the following improvements and bug fixes:\n\n• Added functionality to bind hotkeys for individual abilities on Invoker's Invoked Spells, Largo's songs, and Kez's Sai abilities\n\n• Added unit ability hotkey settings for Lycan's Summon Wolves, Kobold Soldier, Giant Wolf, Radigull, Odobenus Frostmage, Eimermole Foreman, Ancient Croaker, Ancient Marshmage, and Ancient Ogre Seal\n\n• Added option to show silhouettes for units when they are visually obstructed\n\n• Added Hand of Midas as its own category in Dota+ Gold Received Breakdowns\n\n• Improved client performance when spawning illusions\n\n• Fixed some stat gathering code to be more performant on server, especially around hero deaths\n\n• Refactored unit behavior state machine for better server performance\n\n• Fixed being able to sell an Aghanim's Shard the same frame it is applied when transferring an Aghanim's Shard from a courier to a hero with a full inventory\n\n• Fixed being able to transfer other hero's items to and from their stash\n\n• Fixed Beastmaster permanently increasing the health and movement speed of lane creeps by selecting specific talents, creating an illusion, then disconnecting\n\n• Fixed Meepo being able to generate infinite money by reaching level 18, getting an Aghanim's scepter, refresher orb, blink dagger, and multiple sentry wards, placing one Meepo on the other side of the map, casting megameepo, casting blink dagger and poof to the Meepo on the other side of the map such that one Meepo joins the stack while the other hasn't reached yet, ending megameepo before the Meepo that hasn't reached yet makes it to the stack, waiting for the Meepo to make his cross map journey, using the refresher orb, then casting megameepo again\n\n• Fixed crash when selling all teleport scrolls on the primary Meepo while a Meepo clone was teleporting\n\n• Fixed Naga Siren killing unrelated illusions when casting Mirror Image\n\n• Fixed Oracle's Prognosticate's HUD sometimes being in the wrong location",
         "detectedAt": "2026-11-19T00:22:46.283Z",
@@ -22455,6 +22504,12 @@
       }
     ],
     "mac:homebrew:microsoft-teams": [
+      {
+        "version": "26304.1206.5384.1209",
+        "releaseDate": "2026-11-24T19:39:13.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "26289.204.5281.6363",
         "releaseDate": "2026-11-05T10:40:18.000Z",
@@ -29142,6 +29197,12 @@
     "google:com.android.chrome": [
       {
         "version": null,
+        "releaseDate": "2026-11-24T17:57:06.000Z",
+        "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-23T21:54:37.000Z",
         "releaseNotes": "Thanks for choosing Chrome! This release includes stability and performance improvements.",
         "detectedAt": "2026-11-24T04:48:52.116Z"
@@ -31442,6 +31503,12 @@
     ],
     "google:com.microsoft.emmx": [
       {
+        "version": "158.0.4370.33",
+        "releaseDate": "2026-11-23T01:17:21.000Z",
+        "releaseNotes": "Welcome to Microsoft Edge! Here's what's new in this release:\n• Sign in to Edge with an Apple account: You can now sign in to Microsoft Edge with an Apple account, in addition to a Microsoft account.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
+      {
         "version": "157.0.4341.53",
         "releaseDate": "2026-11-11T15:28:54.000Z",
         "releaseNotes": "Welcome to Microsoft Edge! Here’s what’s new in this release:\n• Fixed some bugs and improved stability and performance.\nUpgrade now to enjoy a smarter, faster, and more productive Microsoft Edge.",
@@ -32842,6 +32909,12 @@
       }
     ],
     "mac:homebrew:brave-browser": [
+      {
+        "version": "1.100.59.0",
+        "releaseDate": "2026-11-24T18:45:53.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "1.100.58.0",
         "releaseDate": "2026-11-20T08:21:45.000Z",
@@ -38539,6 +38612,13 @@
     ],
     "windows:winget:TorProject.TorBrowser": [
       {
+        "version": "16.0.3",
+        "releaseDate": "2026-11-24T12:00:00.000Z",
+        "releaseNotes": "All Platforms\nUpdated NoScript to 13.6.39.1984\nUpdated Tor to 0.4.9.17\nBug tor-browser#45428: Apply worker patches before static imports\nBug tor-browser#45429: (H1) Track SharedWorker load redirections\nBug tor-browser#45432: (H1) Remote nested worker propagation issue from blob: parent context\nBug tor-browser#45472: Protect against malicious environment tampering beyond xray wrappers\nBug tor-browser#45494: Rebase Tor Browser Stable on 153.8\nBug tor-browser#45499: Backport Security Fixes from Firefox 161\nWindows + macOS + Linux\nUpdated Firefox to 153.8.0esr\nBug tor-browser#45455: Remove console noise on some static imports.\nWindows\nBug tor-browser#45473: Windows paths can bypass local file event-based oracles protection\nAndroid\nUpdated GeckoView to 153.8.0esr\nBuild System\nAll Platforms\nBug tor-browser-build#41910: Update apt for security update (CVE-2026-109518)\nWindows + Linux + Android\nUpdated Go to 1.26.11\nWindows + Android\nBug tor-browser-build#41916: zlib updates should be listed in the relevant platforms in changelogs",
+        "detectedAt": "2026-11-25T02:27:34.031Z",
+        "url": "https://blog.torproject.org/new-release-tor-browser-1603"
+      },
+      {
         "version": "16.0.1",
         "releaseDate": "2026-11-10T12:00:00.000Z",
         "releaseNotes": "The full changelog since Tor Browser 16.0 is:\n\n- All Platforms\n  - Updated Tor to 0.4.9.16\n  - Updated NoScript to 13.6.38.1984\n  - Updated zlib to 1.4\n  - Bug tor-browser#45439: Rebase Tor Browser onto 153.7.0esr\n  - Bug tor-browser#45442: Backport Security Fixes from Firefox 160\n- Windows + macOS + Linux\n  - Updated Firefox to 153.7.0esr\n- Android\n  - Updated GeckoView to 153.7.0esr\n- Build System\n  - Android\n    - Bug tor-browser-build#41814: Use new apksigner from build-tools_r37_linux.zip in signing script\n    - Bug tor-browser-build#41912: Add --preserve-alignment true to apksigner sign calls",
@@ -39037,6 +39117,12 @@
       }
     ],
     "mac:homebrew:tor-browser": [
+      {
+        "version": "16.0.3",
+        "releaseDate": "2026-11-24T18:16:05.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "16.0.1",
         "releaseDate": "2026-11-10T11:59:19.000Z",
@@ -43553,6 +43639,12 @@
       }
     ],
     "google:com.amazon.mShop.android.shopping": [
+      {
+        "version": "32.20.2.100",
+        "releaseDate": "2026-10-27T22:12:44.000Z",
+        "releaseNotes": "Access popular pages quickly with our new shortcuts. Tap and hold the Amazon app icon to access your Orders, Daily Deals, Shopping Cart, and Search.\nEnjoy our latest update where we have fixed some bugs and improved our app to provide you a seamless shopping experience",
+        "detectedAt": "2026-11-25T02:27:34.031Z"
+      },
       {
         "version": "32.19.0.100",
         "releaseDate": "2026-10-13T20:39:10.000Z",
@@ -48769,7 +48861,7 @@
       },
       {
         "version": "5.2.2",
-        "releaseDate": "2026-10-02T01:00:31.000Z",
+        "releaseDate": "2026-09-15T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T04:33:07.571Z",
         "url": null

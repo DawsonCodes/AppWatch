@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-24T17:43:58.305Z",
+  "trainedAt": "2026-11-25T02:27:34.031Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.599,
-    0.517,
-    0.547,
-    0.587
+    0.6,
+    0.519,
+    0.548,
+    0.585
   ],
   "listings": {
     "apple:1050023752": {
@@ -323,9 +323,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
+        "forecasts": 6,
         "hits": 2,
-        "medianErrorDays": 2.28
+        "medianErrorDays": 1.87
       }
     },
     "apple:454638411": {
@@ -692,7 +692,7 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
+        "forecasts": 7,
         "hits": 2,
         "medianErrorDays": 2.01
       }
@@ -747,9 +747,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 9,
-        "hits": 7,
-        "medianErrorDays": 0.68
+        "forecasts": 10,
+        "hits": 8,
+        "medianErrorDays": 0.65
       }
     },
     "google:com.anthropic.claude": {
@@ -759,9 +759,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 12,
-        "hits": 9,
-        "medianErrorDays": 0.92
+        "forecasts": 13,
+        "hits": 10,
+        "medianErrorDays": 0.88
       }
     },
     "google:com.brave.browser": {
@@ -1015,9 +1015,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 5.63
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 4.12
       }
     },
     "google:com.microsoft.office.officehubrow": {
@@ -1145,9 +1145,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
-        "hits": 6,
-        "medianErrorDays": 0.47
+        "forecasts": 7,
+        "hits": 7,
+        "medianErrorDays": 0.41
       }
     },
     "google:com.ubercab": {
@@ -1209,9 +1209,9 @@
     },
     "google:com.zhiliaoapp.musically": {
       "live": {
-        "forecasts": 7,
-        "hits": 6,
-        "medianErrorDays": 1.15
+        "forecasts": 8,
+        "hits": 7,
+        "medianErrorDays": 0.87
       }
     },
     "google:me.lyft.android": {
@@ -1331,9 +1331,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 2,
-        "medianErrorDays": 0.81
+        "medianErrorDays": 0.95
       }
     },
     "mac:homebrew:canva": {
@@ -1351,25 +1351,25 @@
     "mac:homebrew:chatgpt": {
       "params": {
         "halfLife": 32,
-        "bandwidth": 0.45,
+        "bandwidth": 0.3,
         "weekday": 1
       },
       "live": {
-        "forecasts": 14,
-        "hits": 8,
-        "medianErrorDays": 0.39
+        "forecasts": 15,
+        "hits": 9,
+        "medianErrorDays": 0.47
       }
     },
     "mac:homebrew:claude": {
       "params": {
-        "halfLife": 16,
+        "halfLife": 32,
         "bandwidth": 0.2,
         "weekday": 1
       },
       "live": {
-        "forecasts": 12,
+        "forecasts": 13,
         "hits": 8,
-        "medianErrorDays": 0.6
+        "medianErrorDays": 0.61
       }
     },
     "mac:homebrew:discord": {
@@ -1525,9 +1525,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.1
+        "medianErrorDays": 3.61
       }
     },
     "mac:homebrew:notion": {
@@ -1661,9 +1661,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
+        "forecasts": 2,
         "hits": 1,
-        "medianErrorDays": 0.05
+        "medianErrorDays": 2.76
       }
     },
     "mac:homebrew:unity": {
@@ -1859,9 +1859,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 28.12
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 14.77
       }
     },
     "windows:steam:730": {
@@ -2208,9 +2208,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 1,
-        "medianErrorDays": 0.12
+        "forecasts": 2,
+        "hits": 2,
+        "medianErrorDays": 2.29
       }
     },
     "windows:winget:Unity.Unity.6000": {
@@ -2258,13 +2258,13 @@
     }
   },
   "replay": {
-    "tests": 3368,
-    "hits": 2125,
-    "medianErrorDays": 2.07
+    "tests": 3375,
+    "hits": 2136,
+    "medianErrorDays": 2.04
   },
   "live": {
-    "forecasts": 773,
-    "hits": 563,
-    "medianErrorDays": 1.02
+    "forecasts": 787,
+    "hits": 571,
+    "medianErrorDays": 1.04
   }
 }
