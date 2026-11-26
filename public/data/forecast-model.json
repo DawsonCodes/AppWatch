@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-26T00:20:27.092Z",
+  "trainedAt": "2026-11-26T10:53:19.511Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.598,
-    0.518,
+    0.6,
+    0.519,
     0.548,
-    0.584
+    0.6
   ],
   "listings": {
     "apple:1050023752": {
@@ -514,11 +514,6 @@
       }
     },
     "apple:663592361": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 4,
         "hits": 4,
@@ -532,9 +527,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 6,
-        "hits": 4,
-        "medianErrorDays": 1.17
+        "forecasts": 7,
+        "hits": 5,
+        "medianErrorDays": 0.93
       }
     },
     "apple:6737597349": {
@@ -690,9 +685,9 @@
     },
     "google:ai.perplexity.app.android": {
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 2.74
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 2.16
       }
     },
     "google:ai.x.grok": {
@@ -781,9 +776,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 4,
-        "medianErrorDays": 1.31
+        "medianErrorDays": 1.39
       }
     },
     "google:com.canva.editor": {
@@ -824,9 +819,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 3,
-        "medianErrorDays": 2.08
+        "forecasts": 5,
+        "hits": 4,
+        "medianErrorDays": 1.49
       }
     },
     "google:com.discord": {
@@ -941,9 +936,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
+        "forecasts": 6,
         "hits": 4,
-        "medianErrorDays": 1.66
+        "medianErrorDays": 1.38
       }
     },
     "google:com.google.android.apps.translate": {
@@ -1134,9 +1129,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 7,
-        "hits": 5,
-        "medianErrorDays": 1.81
+        "forecasts": 8,
+        "hits": 6,
+        "medianErrorDays": 2.16
       }
     },
     "google:com.squareup.cash": {
@@ -1267,7 +1262,7 @@
     },
     "google:org.telegram.messenger": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
@@ -1521,9 +1516,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
+        "forecasts": 6,
         "hits": 4,
-        "medianErrorDays": 0.62
+        "medianErrorDays": 0.82
       }
     },
     "mac:homebrew:microsoft-outlook": {
@@ -1855,9 +1850,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 0.08
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 0.06
       }
     },
     "windows:steam:553850": {
@@ -2053,14 +2048,14 @@
     },
     "windows:winget:Microsoft.Copilot": {
       "params": {
-        "halfLife": 32,
+        "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
+        "forecasts": 5,
         "hits": 2,
-        "medianErrorDays": 1.26
+        "medianErrorDays": 1.66
       }
     },
     "windows:winget:Microsoft.Edge": {
@@ -2278,13 +2273,13 @@
     }
   },
   "replay": {
-    "tests": 3394,
-    "hits": 2144,
+    "tests": 3401,
+    "hits": 2150,
     "medianErrorDays": 2.04
   },
   "live": {
-    "forecasts": 810,
-    "hits": 588,
-    "medianErrorDays": 1.02
+    "forecasts": 819,
+    "hits": 593,
+    "medianErrorDays": 1.04
   }
 }

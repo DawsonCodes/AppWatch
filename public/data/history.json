@@ -3443,6 +3443,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.69",
+        "releaseDate": "2026-11-26T08:30:57.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
+      {
         "version": "1.4.68",
         "releaseDate": "2026-11-24T13:44:44.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -3823,6 +3829,13 @@
     ],
     "windows:winget:Microsoft.Copilot": [
       {
+        "version": "158.0.4370.45",
+        "releaseDate": "2026-11-26T00:37:34.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T10:53:19.511Z",
+        "url": null
+      },
+      {
         "version": "158.0.4370.33",
         "releaseDate": "2026-11-20T02:14:10.000Z",
         "releaseNotes": null,
@@ -3983,6 +3996,12 @@
       }
     ],
     "google:ai.perplexity.app.android": [
+      {
+        "version": "2.106.0",
+        "releaseDate": "2026-11-25T16:54:54.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
       {
         "version": "2.105.0",
         "releaseDate": "2026-11-18T11:48:06.000Z",
@@ -4212,6 +4231,12 @@
       }
     ],
     "google:com.deepseek.chat": [
+      {
+        "version": "2.10.0",
+        "releaseDate": "2026-11-25T12:47:45.000Z",
+        "releaseNotes": "- Some known issues fixed",
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
       {
         "version": "2.9.0",
         "releaseDate": "2026-11-19T09:12:18.000Z",
@@ -10514,6 +10539,12 @@
       }
     ],
     "google:com.spotify.music": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-24T13:53:28.000Z",
+        "releaseNotes": "We’re always making changes and improvements to Spotify. To make sure you don’t miss a thing, just keep your Updates turned on.",
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-23T09:17:18.000Z",
@@ -18488,6 +18519,13 @@
       }
     ],
     "windows:steam:2767030": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-26T10:14:05.000Z",
+        "releaseNotes": "Marvel Rivals Version 20261126 Patch Notes\n\nGreetings, Rivals!\n\nWe're thrilled to announce the upcoming patch drops on November 26th, 2026, at 09 : 00 : 00 (UTC)! No server downtime; just patch and play!\n\nHere's what's coming your way:\n\n \n\nAll-New Content\n\nNew In Store\n\n- Lady Loki - Envious Emerald Bundle\n- Scarlet Witch - Virtual Insanity Bundle\n- Moon Knight - Moonjack Hacker Bundle\n\nAvailability: November 26th, 2026, 09 : 00 : 00 to December 25th 2026, 02 : 00 : 00 (UTC)\n\n- Lady Loki - Envious Emerald Chroma Crimson Cunning/Indigo Illusion and Ultimate Ability VFX\n- Deadpool - Moment Stealer Chroma Gilded Gunner/Blue Blades and Ultimate Ability VFX\n- Cloak & Dagger - Gilded Agate Chroma Garnet Gleam/Malachite Mist and Ultimate Ability VFX\n\nAvailable From: November 26th, 2026, at 09 : 00 : 00 (UTC)\n\n \n\nNew Map: Incursion Point\n\nThe iron mask has fallen, and the cannon fire has begun to fade. Yet the storm clouds of doomsday are far from gone. With the Chronovium reserves exhausted, neither side's Anti-Matter Cannon can fire again, even as the Incursion continues to spiral toward catastrophe. Now, Doom 2099 has chosen the most ruthless solution imaginable: unleashing his full armada in an all-out invasion of the present timeline to physically annihilate one Earth and secure the survival of the other. The hour of reckoning is upon us...seize control of the battlefield before it's too late!\n\nHeroes, assemble for your timeline! The all-new map Incursion Point storms into Marvel Rivals for an all-out, Chronoverse-shaking 18 vs. 18 Chrono Annihilation showdown!\n\n(Note: Due to hardware performance limitations, this new map and mode will not be available on PS4.)\n\n \n\nMarvel Rivals Anniversary Celebration - Rivals' Day 2026\n\nThis week, our cosmic anniversary hub, the Galactic Center, opens its doors in full! An entire galaxy of fun-filled modes and blockbuster festivities is kicking into overdrive, with a treasure trove of rewards (including heaps of Units) waiting to be claimed! Whether you're a street-level vigilante or a cosmic powerhouse, we hope every Rival finds their own kind of fun here and makes truly Marvel-ous, unforgettable anniversary memories with their friends!\n\n \n\nGhostworks Arcade: Grand Opening\n\nInsert Coin, Rivals Assemble! The newest hotspot in the Times Square Galactic Center, Ghostworks Arcade, is officially open! Six hero-powered arcade mini-games have united under one neon-lit roof, giving Earth's Mightiest Heroes a place to hang up their capes, step away from the crossfire, and dive into pure retro arcade mayhem. Smash your personal high scores and cheer on your fellow heroes' clutch plays, because the record they just set might be the next one you shatter! Round up your squad, hit the cabinets, and ignite the battle in a whole new kind of rivalry!\n\nConquer a series of action-packed mini-game challenges to score themed Sprays and exclusive Titles, and collect Arcade Stamps along the way to claim an extra 400 Units and the Arcade Ace Title!\n\nOpens On: November 26th, 2026, at 09 : 00 : 00 (UTC)\n\n- JEFF'S CHOMPING CHAIN\nA Jeff here, a Jeff there... Hey! quit wandering off! Fall in behind Moon Girl and Devil Dinosaur and let's roll out together!\n- LAND SHARK SNACKER\nAn all-you-can-eat undersea feast might sink the submarine of friendship for good. Since it's going down anyway, you might as well eat to your heart's content!\n- BIG SHOT RIVALS\nThe showdown between Cap and The Hood rages on...and this time, the hoop will be the judge!\n- ROCKET'S JOYRIDE\nSome mystery creep is trying to hijack the arcade cabinet Rocket was hauling! Show off your pinball wizardry and teach him a lesson!\n- HULK CAN JUMP!\nLoki stole Hulk's favorite beans! Wait... those beans are magic beans?! Hurry and help Hulk leap across the pillars to get them back!\n- GALACTIC BEATS\nWho doesn't want to be the dance champion of the cosmos? Hit every beat and light up the galaxy with your moves!\n\n \n\nOther Events\n\nVan Dyne's: Idea Matrix\n\nMove over,…",
+        "detectedAt": "2026-11-26T10:53:19.511Z",
+        "url": "https://store.steampowered.com/news/app/2767030/view/703286102818030278"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-19T09:20:25.000Z",
@@ -29166,6 +29204,12 @@
     "google:com.google.android.apps.photos": [
       {
         "version": null,
+        "releaseDate": "2026-11-26T00:58:43.000Z",
+        "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-20T22:11:43.000Z",
         "releaseNotes": "We are introducing a new storage management tool to help you easily manage the photos that count toward your storage quota. This tool will surface photos or videos you might want to delete — like blurry photos, screenshots and large videos.",
         "detectedAt": "2026-11-21T03:13:07.617Z"
@@ -31995,6 +32039,12 @@
     ],
     "mac:homebrew:microsoft-edge": [
       {
+        "version": "158.0.4370.45",
+        "releaseDate": "2026-11-26T05:23:52.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
+      {
         "version": "158.0.4370.33",
         "releaseDate": "2026-11-19T22:22:02.000Z",
         "releaseNotes": null,
@@ -32749,6 +32799,12 @@
       }
     ],
     "google:com.brave.browser": [
+      {
+        "version": "1.100.59",
+        "releaseDate": "2026-11-24T19:21:26.000Z",
+        "releaseNotes": "In this release we:\n- Made UX improvements for foldable devices.\n- Made several general stability improvements.\n- Upgraded to Chromium 158.\nHave questions, comments, or suggestions for future releases? Visit the Brave Community (https://community.brave.com) to let us know.",
+        "detectedAt": "2026-11-26T10:53:19.511Z"
+      },
       {
         "version": "1.100.58",
         "releaseDate": "2026-11-20T00:16:48.000Z",
