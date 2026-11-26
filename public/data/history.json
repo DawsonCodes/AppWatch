@@ -3183,6 +3183,12 @@
     ],
     "mac:homebrew:google-gemini": [
       {
+        "version": "1.150.3.1601",
+        "releaseDate": "2026-11-26T09:17:46.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
+      {
         "version": "1.147.6.1557",
         "releaseDate": "2026-11-22T11:25:11.000Z",
         "releaseNotes": null,
@@ -5037,6 +5043,12 @@
     "google:com.zhiliaoapp.musically": [
       {
         "version": null,
+        "releaseDate": "2026-11-26T12:18:17.000Z",
+        "releaseNotes": "We polish up TikTok to make creating and browsing on our app faster and better than ever.",
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
+      {
+        "version": null,
         "releaseDate": "2026-11-25T14:53:00.000Z",
         "releaseNotes": "We polish up TikTok to make creating and browsing on our app faster and better than ever.",
         "detectedAt": "2026-11-26T00:20:27.092Z"
@@ -6201,6 +6213,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.47.21",
+        "releaseDate": "2026-11-26T12:08:17.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
       {
         "version": "26.47.19",
         "releaseDate": "2026-11-25T11:27:54.000Z",
@@ -29153,6 +29171,12 @@
     ],
     "apple:962194608": [
       {
+        "version": "8.2.1",
+        "releaseDate": "2026-11-26T18:52:46.000Z",
+        "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to ensure your photos are automatically organized and up-to-date.",
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
+      {
         "version": "8.2.0",
         "releaseDate": "2026-11-19T17:35:55.000Z",
         "releaseNotes": "Thanks for using Google Photos. This release includes bug fixes and performance improvements.\n\nWe fixed user-reported issues and added new features to ensure your photos are automatically organized and up-to-date.",
@@ -35009,6 +35033,12 @@
     ],
     "apple:1411869974": [
       {
+        "version": "6.8.3",
+        "releaseDate": "2026-11-26T14:09:52.000Z",
+        "releaseNotes": "- Improvements to Data Saver and Free Data functionality\n- UI improvements and bug fixes",
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
+      {
         "version": "6.8.2",
         "releaseDate": "2026-11-03T16:02:54.000Z",
         "releaseNotes": "- Data Saver\n- Data Saver settings\n- Free Data support (offered on select carriers)\n- Menu Update (Facelift, Data Savings switch, Sign in and sync banner)\n- History Sync (Enable in Account settings)\n- Bug fixes and other improvements",
@@ -35042,6 +35072,13 @@
       }
     ],
     "windows:winget:Opera.Opera": [
+      {
+        "version": "141.0.6089.28",
+        "releaseDate": "2026-11-26T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z",
+        "url": null
+      },
       {
         "version": "140.0.6074.36",
         "releaseDate": "2026-11-18T12:00:00.000Z",
@@ -35478,6 +35515,12 @@
       }
     ],
     "mac:homebrew:opera": [
+      {
+        "version": "141.0.6089.28",
+        "releaseDate": "2026-11-26T17:14:47.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
       {
         "version": "140.0.6074.36",
         "releaseDate": "2026-11-18T10:25:06.000Z",
@@ -36224,6 +36267,13 @@
     ],
     "windows:winget:Opera.OperaGX": [
       {
+        "version": "140.0.6074.73",
+        "releaseDate": "2026-11-26T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z",
+        "url": null
+      },
+      {
         "version": "140.0.6074.48",
         "releaseDate": "2026-11-19T12:00:00.000Z",
         "releaseNotes": null,
@@ -36932,6 +36982,12 @@
       }
     ],
     "mac:homebrew:opera-gx": [
+      {
+        "version": "140.0.6074.73",
+        "releaseDate": "2026-11-26T12:08:59.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
       {
         "version": "140.0.6074.48",
         "releaseDate": "2026-11-19T10:41:20.000Z",
@@ -39822,6 +39878,13 @@
       }
     ],
     "windows:winget:TheBrowserCompany.Arc": [
+      {
+        "version": "1.133.2.2",
+        "releaseDate": "2026-11-24T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z",
+        "url": "https://arc.net/windows/release-notes"
+      },
       {
         "version": "1.133.1.2",
         "releaseDate": "2026-11-20T12:00:00.000Z",
@@ -47884,6 +47947,13 @@
     ],
     "windows:winget:Unity.Unity.6000": [
       {
+        "version": "6000.6.11f1",
+        "releaseDate": "2026-11-26T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z",
+        "url": "https://unity.com/releases/editor/whats-new/6000.6.11"
+      },
+      {
         "version": "6000.6.10f1",
         "releaseDate": "2026-11-19T12:00:00.000Z",
         "releaseNotes": null,
@@ -48466,6 +48536,12 @@
       }
     ],
     "mac:homebrew:unity": [
+      {
+        "version": "6000.6.11f1",
+        "releaseDate": "2026-11-26T12:08:49.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-26T21:30:50.291Z"
+      },
       {
         "version": "6000.6.10f1",
         "releaseDate": "2026-11-19T11:39:56.000Z",

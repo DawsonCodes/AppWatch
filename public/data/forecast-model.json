@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-26T10:53:19.511Z",
+  "trainedAt": "2026-11-26T21:30:50.291Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.6,
-    0.519,
-    0.548,
-    0.6
+    0.597,
+    0.517,
+    0.547,
+    0.595
   ],
   "listings": {
     "apple:1050023752": {
@@ -642,9 +642,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 1.04
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.63
       }
     },
     "apple:979659905": {
@@ -1224,9 +1224,9 @@
     },
     "google:com.zhiliaoapp.musically": {
       "live": {
-        "forecasts": 9,
-        "hits": 8,
-        "medianErrorDays": 0.58
+        "forecasts": 10,
+        "hits": 9,
+        "medianErrorDays": 0.56
       }
     },
     "google:me.lyft.android": {
@@ -1504,9 +1504,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 5,
-        "hits": 3,
-        "medianErrorDays": 2.94
+        "forecasts": 6,
+        "hits": 4,
+        "medianErrorDays": 2.87
       }
     },
     "mac:homebrew:microsoft-edge": {
@@ -1564,9 +1564,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 3,
-        "medianErrorDays": 0.7
+        "forecasts": 5,
+        "hits": 4,
+        "medianErrorDays": 0.86
       }
     },
     "mac:homebrew:opera-gx": {
@@ -1576,9 +1576,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 1.47
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 0.78
       }
     },
     "mac:homebrew:perplexity": {
@@ -1688,9 +1688,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 0.76
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 0.5
       }
     },
     "mac:homebrew:vivaldi": {
@@ -1712,8 +1712,8 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 13,
-        "hits": 10,
+        "forecasts": 14,
+        "hits": 11,
         "medianErrorDays": 0.9
       }
     },
@@ -2132,9 +2132,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 0.76
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 1
       }
     },
     "windows:winget:Opera.OperaGX": {
@@ -2144,9 +2144,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 2,
-        "medianErrorDays": 1.91
+        "forecasts": 4,
+        "hits": 3,
+        "medianErrorDays": 1.01
       }
     },
     "windows:winget:Proton.ProtonMail": {
@@ -2214,6 +2214,11 @@
         "halfLife": 16,
         "bandwidth": 0.45,
         "weekday": 1
+      },
+      "live": {
+        "forecasts": 1,
+        "hits": 0,
+        "medianErrorDays": 2.43
       }
     },
     "windows:winget:TorProject.TorBrowser": {
@@ -2235,9 +2240,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 1,
-        "medianErrorDays": 4.81
+        "forecasts": 3,
+        "hits": 2,
+        "medianErrorDays": 2.46
       }
     },
     "windows:winget:VideoLAN.VLC": {
@@ -2273,13 +2278,13 @@
     }
   },
   "replay": {
-    "tests": 3401,
-    "hits": 2150,
-    "medianErrorDays": 2.04
+    "tests": 3403,
+    "hits": 2149,
+    "medianErrorDays": 2.02
   },
   "live": {
-    "forecasts": 819,
-    "hits": 593,
-    "medianErrorDays": 1.04
+    "forecasts": 830,
+    "hits": 603,
+    "medianErrorDays": 1.02
   }
 }
