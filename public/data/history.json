@@ -1210,6 +1210,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261125.19",
+        "releaseDate": "2026-11-26T04:17:27.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-27T04:15:13.493Z"
+      },
+      {
         "version": "1.261124.19",
         "releaseDate": "2026-11-25T04:32:42.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -18113,6 +18119,13 @@
       }
     ],
     "windows:steam:1172470": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-26T21:37:42.000Z",
+        "releaseNotes": "Competitive Integrity Update: Modified PlayStation 4 Consoles\n\nWe have confirmed the use of modified PlayStation 4 consoles to gain an unfair advantage in Apex Legends. Our Anti-Cheat team has implemented dedicated detection measures to identify players using these modifications and we have been in contact with Sony. Players identified using modified hardware to cheat will receive hardware bans on their consoles. \n\nWe understand the frustration this has caused. Playing on console does not provide an exemption from detection or enforcement.\n\nThank you to everyone who continues to report suspicious behavior and helps keep Apex Legends fair.",
+        "detectedAt": "2026-11-27T04:15:13.493Z",
+        "url": "https://store.steampowered.com/news/app/1172470/view/680768104678032875"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-25T18:02:15.000Z",
@@ -39879,6 +39892,13 @@
     ],
     "windows:winget:TheBrowserCompany.Arc": [
       {
+        "version": "1.133.3.2",
+        "releaseDate": "2026-11-24T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T04:15:13.493Z",
+        "url": "https://arc.net/windows/release-notes"
+      },
+      {
         "version": "1.133.2.2",
         "releaseDate": "2026-11-24T12:00:00.000Z",
         "releaseNotes": null,
@@ -39957,14 +39977,14 @@
       },
       {
         "version": "1.126.1.2",
-        "releaseDate": "2026-10-02T12:00:00.000Z",
+        "releaseDate": "2026-10-08T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null
       },
       {
         "version": "1.126.0.382",
-        "releaseDate": "2026-10-01T12:00:00.000Z",
+        "releaseDate": "2026-10-08T12:00:00.000Z",
         "releaseNotes": null,
         "detectedAt": "2026-11-02T09:30:01.927Z",
         "url": null

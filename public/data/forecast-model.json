@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-26T21:30:50.291Z",
+  "trainedAt": "2026-11-27T04:15:13.493Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -9,9 +9,9 @@
   },
   "masses": [
     0.597,
-    0.517,
+    0.516,
     0.547,
-    0.595
+    0.599
   ],
   "listings": {
     "apple:1050023752": {
@@ -764,9 +764,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 14,
-        "hits": 11,
-        "medianErrorDays": 0.83
+        "forecasts": 15,
+        "hits": 12,
+        "medianErrorDays": 0.77
       }
     },
     "google:com.brave.browser": {
@@ -1802,9 +1802,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 8,
-        "hits": 4,
-        "medianErrorDays": 1.08
+        "forecasts": 9,
+        "hits": 5,
+        "medianErrorDays": 1.45
       }
     },
     "windows:steam:1623730": {
@@ -2278,13 +2278,13 @@
     }
   },
   "replay": {
-    "tests": 3403,
+    "tests": 3404,
     "hits": 2149,
     "medianErrorDays": 2.02
   },
   "live": {
-    "forecasts": 830,
-    "hits": 603,
+    "forecasts": 832,
+    "hits": 605,
     "medianErrorDays": 1.02
   }
 }
