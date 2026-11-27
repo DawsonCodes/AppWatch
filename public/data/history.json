@@ -3595,6 +3595,12 @@
     ],
     "google:ai.x.grok": [
       {
+        "version": "1.2.60-release.01",
+        "releaseDate": "2026-11-27T13:15:46.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T22:43:19.148Z"
+      },
+      {
         "version": "1.2.60-release.00",
         "releaseDate": "2026-11-24T01:22:58.000Z",
         "releaseNotes": null,
@@ -6225,6 +6231,12 @@
       }
     ],
     "mac:homebrew:whatsapp": [
+      {
+        "version": "26.48.12",
+        "releaseDate": "2026-11-27T15:05:57.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T22:43:19.148Z"
+      },
       {
         "version": "26.47.21",
         "releaseDate": "2026-11-26T12:08:17.000Z",
@@ -10858,6 +10870,12 @@
     ],
     "mac:homebrew:spotify": [
       {
+        "version": "1.3.11.2657",
+        "releaseDate": "2026-11-27T14:45:24.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T22:43:19.148Z"
+      },
+      {
         "version": "1.3.10.2586",
         "releaseDate": "2026-11-19T08:53:06.000Z",
         "releaseNotes": null,
@@ -11707,6 +11725,12 @@
       }
     ],
     "google:com.shazam.android": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-27T17:41:34.000Z",
+        "releaseNotes": "Thanks for Shazaming! We’re always working hard to make the app faster and better than ever. Update to the most recent version to enjoy the latest and greatest Shazam. Don’t forget to keep your Shazams safe and in sync between your devices. Simply create an account and we’ll back up your Shazams so you’ll never lose them.\n\nLove the app? Rate us! Your feedback is music to our ears, and it helps us make Shazam even better. Got a question? Visit support.apple.com/guide/shazam",
+        "detectedAt": "2026-11-27T22:43:19.148Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-25T08:11:46.000Z",
@@ -33936,6 +33960,12 @@
     ],
     "google:com.duckduckgo.mobile.android": [
       {
+        "version": "5.305.0",
+        "releaseDate": "2026-11-24T14:13:50.000Z",
+        "releaseNotes": "What's new:\nBug fixes and other improvements",
+        "detectedAt": "2026-11-27T22:43:19.148Z"
+      },
+      {
         "version": "5.304.0",
         "releaseDate": "2026-11-19T09:47:55.000Z",
         "releaseNotes": "What's new:\nBug fixes and other improvements",
@@ -35118,6 +35148,13 @@
     ],
     "windows:winget:Opera.Opera": [
       {
+        "version": "141.0.6089.33",
+        "releaseDate": "2026-11-27T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T22:43:19.148Z",
+        "url": null
+      },
+      {
         "version": "141.0.6089.28",
         "releaseDate": "2026-11-26T12:00:00.000Z",
         "releaseNotes": null,
@@ -35560,6 +35597,12 @@
       }
     ],
     "mac:homebrew:opera": [
+      {
+        "version": "141.0.6089.33",
+        "releaseDate": "2026-11-27T15:05:35.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T22:43:19.148Z"
+      },
       {
         "version": "141.0.6089.28",
         "releaseDate": "2026-11-26T17:14:47.000Z",
