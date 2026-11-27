@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-27T04:15:13.493Z",
+  "trainedAt": "2026-11-27T13:55:23.315Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.597,
-    0.516,
-    0.547,
-    0.599
+    0.596,
+    0.515,
+    0.546,
+    0.598
   ],
   "listings": {
     "apple:1050023752": {
@@ -207,9 +207,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 2,
-        "hits": 2,
-        "medianErrorDays": 2.55
+        "forecasts": 3,
+        "hits": 3,
+        "medianErrorDays": 4.67
       }
     },
     "apple:327630330": {
@@ -514,6 +514,11 @@
       }
     },
     "apple:663592361": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 4,
         "hits": 4,
@@ -539,9 +544,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 4,
-        "hits": 3,
-        "medianErrorDays": 3.62
+        "forecasts": 5,
+        "hits": 4,
+        "medianErrorDays": 3.37
       }
     },
     "apple:686449807": {
@@ -782,10 +787,15 @@
       }
     },
     "google:com.canva.editor": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.2,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 0.31
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 0.3
       }
     },
     "google:com.coinbase.android": {
@@ -1064,6 +1074,11 @@
       }
     },
     "google:com.openai.chatgpt": {
+      "params": {
+        "halfLife": 32,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
         "forecasts": 3,
         "hits": 2,
@@ -2192,9 +2207,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 3,
-        "hits": 3,
-        "medianErrorDays": 1.78
+        "forecasts": 4,
+        "hits": 4,
+        "medianErrorDays": 1.46
       }
     },
     "windows:winget:Telegram.TelegramDesktop": {
@@ -2204,9 +2219,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 7,
-        "hits": 6,
-        "medianErrorDays": 2.19
+        "forecasts": 8,
+        "hits": 7,
+        "medianErrorDays": 1.87
       }
     },
     "windows:winget:TheBrowserCompany.Arc": {
@@ -2278,13 +2293,13 @@
     }
   },
   "replay": {
-    "tests": 3404,
-    "hits": 2149,
-    "medianErrorDays": 2.02
+    "tests": 3409,
+    "hits": 2152,
+    "medianErrorDays": 2.01
   },
   "live": {
-    "forecasts": 832,
-    "hits": 605,
+    "forecasts": 837,
+    "hits": 610,
     "medianErrorDays": 1.02
   }
 }

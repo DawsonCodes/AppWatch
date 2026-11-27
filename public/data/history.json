@@ -4176,6 +4176,12 @@
     ],
     "apple:6737597349": [
       {
+        "version": "2.10.0",
+        "releaseDate": "2026-11-27T07:25:35.000Z",
+        "releaseNotes": "- Fixed some known issues",
+        "detectedAt": "2026-11-27T13:55:23.315Z"
+      },
+      {
         "version": "2.9.0",
         "releaseDate": "2026-11-21T09:33:17.000Z",
         "releaseNotes": "- Fixed some known issues",
@@ -8445,6 +8451,13 @@
     ],
     "windows:winget:Telegram.TelegramDesktop": [
       {
+        "version": "7.4.7",
+        "releaseDate": "2026-11-26T12:00:00.000Z",
+        "releaseNotes": "- Add music to stories.\n- Cancel story uploads from the stories list.\n- Improve text rendering on Windows.\n- Several crash fixes.\n- Bug fixes and other minor improvements.",
+        "detectedAt": "2026-11-27T13:55:23.315Z",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.7"
+      },
+      {
         "version": "7.4.6",
         "releaseDate": "2026-11-23T12:00:00.000Z",
         "releaseNotes": "- On-chain gifts offers and sales from your Money section.\n- Memory safe and process isolated html widgets.\n- Stories dafting and posting.\n- Bot preview stories.",
@@ -10667,6 +10680,13 @@
       }
     ],
     "windows:winget:Spotify.Spotify": [
+      {
+        "version": "1.3.11.2657.gab535a3f4acc",
+        "releaseDate": "2026-11-27T12:00:00.000Z",
+        "releaseNotes": null,
+        "detectedAt": "2026-11-27T13:55:23.315Z",
+        "url": null
+      },
       {
         "version": "1.3.10.2586.g81a118a22460",
         "releaseDate": "2026-11-18T12:00:00.000Z",
@@ -27156,6 +27176,12 @@
     ],
     "google:com.canva.editor": [
       {
+        "version": "2.388.0",
+        "releaseDate": "2026-11-25T05:21:15.000Z",
+        "releaseNotes": "We’re working on bigger and better features. Meanwhile, we freshened up the app with new content and minor bug fixes.\n\nGot a question in mind? Let us know at canva.com/help\n\nHappy designing!",
+        "detectedAt": "2026-11-27T13:55:23.315Z"
+      },
+      {
         "version": "2.387.0",
         "releaseDate": "2026-11-18T01:01:50.000Z",
         "releaseNotes": null,
@@ -35065,6 +35091,12 @@
       }
     ],
     "google:com.opera.browser": [
+      {
+        "version": "104.2.5262.91581",
+        "releaseDate": "2026-11-26T14:04:54.000Z",
+        "releaseNotes": "Thanks for choosing Opera! This version introduces a visual refresh of the product, rolling out in stages to ensure the design works well before reaching everyone. If you’re seeing the new look, we’d love to hear your thoughts!\n\nMore changes/additions:\n- Chromium 156\n- Appearance settings: New font setting allowing custom system fonts\n- Live score improvements\n- Latest Chromium security updates (2026-11-26)",
+        "detectedAt": "2026-11-27T13:55:23.315Z"
+      },
       {
         "version": "104.1.5262.91393",
         "releaseDate": "2026-11-17T10:56:14.000Z",
@@ -46809,6 +46841,12 @@
     ],
     "apple:324715238": [
       {
+        "version": "2026.11.24",
+        "releaseDate": "2026-11-27T10:19:06.000Z",
+        "releaseNotes": "Wikipedia Year in Review arrives on December 1! Look back on 2026 through the lens of Wikipedia and see insights about the articles you read and the edits you made. Find it in the Activity tab.",
+        "detectedAt": "2026-11-27T13:55:23.315Z"
+      },
+      {
         "version": "2026.11.17",
         "releaseDate": "2026-11-18T21:48:08.000Z",
         "releaseNotes": "- Experiment: Introducing Discover - a new weekly reading list picked just for you based on either your interests, or articles you’ve read or saved. Customize Discover in the way that suits you best, if you’re part of the experiment group.\n- We resolved an error that could interrupt you from syncing saved articles after signing in\n- Bug fixes and app enhancements",
@@ -49775,6 +49813,12 @@
       }
     ],
     "google:com.uavforecast": [
+      {
+        "version": "2.19.2",
+        "releaseDate": "2026-11-20T17:54:17.000Z",
+        "releaseNotes": "Minor bug fixes and improvements.",
+        "detectedAt": "2026-11-27T13:55:23.315Z"
+      },
       {
         "version": "2.18.3",
         "releaseDate": "2026-10-19T02:31:51.000Z",
