@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "trainedAt": "2026-11-27T22:43:19.148Z",
+  "trainedAt": "2026-11-28T07:47:46.028Z",
   "target": 0.6667,
   "params": {
     "halfLife": 16,
@@ -8,10 +8,10 @@
     "weekday": 1
   },
   "masses": [
-    0.597,
-    0.516,
-    0.547,
-    0.599
+    0.598,
+    0.517,
+    0.548,
+    0.6
   ],
   "listings": {
     "apple:1050023752": {
@@ -21,9 +21,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 1,
-        "hits": 0,
-        "medianErrorDays": 7.79
+        "forecasts": 2,
+        "hits": 1,
+        "medianErrorDays": 4.75
       }
     },
     "apple:1052879175": {
@@ -527,9 +527,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 7,
-        "hits": 5,
-        "medianErrorDays": 0.93
+        "forecasts": 8,
+        "hits": 6,
+        "medianErrorDays": 0.73
       }
     },
     "apple:6737597349": {
@@ -636,11 +636,6 @@
       }
     },
     "apple:962194608": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 4,
         "hits": 3,
@@ -764,9 +759,9 @@
         "weekday": 1
       },
       "live": {
-        "forecasts": 15,
+        "forecasts": 16,
         "hits": 12,
-        "medianErrorDays": 0.77
+        "medianErrorDays": 0.72
       }
     },
     "google:com.brave.browser": {
@@ -885,11 +880,6 @@
       }
     },
     "google:com.ebay.mobile": {
-      "params": {
-        "halfLife": 32,
-        "bandwidth": 0.3,
-        "weekday": 1
-      },
       "live": {
         "forecasts": 3,
         "hits": 3,
@@ -1228,10 +1218,15 @@
       }
     },
     "google:com.zhiliaoapp.musically": {
+      "params": {
+        "halfLife": 8,
+        "bandwidth": 0.3,
+        "weekday": 1
+      },
       "live": {
-        "forecasts": 10,
+        "forecasts": 11,
         "hits": 9,
-        "medianErrorDays": 0.56
+        "medianErrorDays": 0.58
       }
     },
     "google:me.lyft.android": {
@@ -2283,13 +2278,13 @@
     }
   },
   "replay": {
-    "tests": 3412,
-    "hits": 2155,
+    "tests": 3416,
+    "hits": 2166,
     "medianErrorDays": 2.02
   },
   "live": {
-    "forecasts": 844,
-    "hits": 613,
+    "forecasts": 848,
+    "hits": 615,
     "medianErrorDays": 1.02
   }
 }

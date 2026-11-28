@@ -1210,6 +1210,12 @@
     ],
     "google:com.anthropic.claude": [
       {
+        "version": "1.261126.19",
+        "releaseDate": "2026-11-28T04:52:23.000Z",
+        "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
+        "detectedAt": "2026-11-28T07:47:46.028Z"
+      },
+      {
         "version": "1.261125.19",
         "releaseDate": "2026-11-26T04:17:27.000Z",
         "releaseNotes": "Squashed some bugs and improved the overall experience. Yours, Claude",
@@ -3455,6 +3461,12 @@
     ],
     "apple:6670324846": [
       {
+        "version": "1.4.70",
+        "releaseDate": "2026-11-27T20:25:12.000Z",
+        "releaseNotes": "- Improvements to Chat, Voice and Imagine",
+        "detectedAt": "2026-11-28T07:47:46.028Z"
+      },
+      {
         "version": "1.4.69",
         "releaseDate": "2026-11-26T08:30:57.000Z",
         "releaseNotes": "- Improvements to Chat, Voice and Imagine",
@@ -5059,6 +5071,12 @@
       }
     ],
     "google:com.zhiliaoapp.musically": [
+      {
+        "version": null,
+        "releaseDate": "2026-11-27T15:53:14.000Z",
+        "releaseNotes": "We polish up TikTok to make creating and browsing on our app faster and better than ever.",
+        "detectedAt": "2026-11-28T07:47:46.028Z"
+      },
       {
         "version": null,
         "releaseDate": "2026-11-26T12:18:17.000Z",
@@ -49824,6 +49842,12 @@
       }
     ],
     "apple:1050023752": [
+      {
+        "version": "2.19.4",
+        "releaseDate": "2026-11-28T02:08:35.000Z",
+        "releaseNotes": "Minor bug fixes and improvements.",
+        "detectedAt": "2026-11-28T07:47:46.028Z"
+      },
       {
         "version": "2.19.3",
         "releaseDate": "2026-11-22T21:16:47.000Z",
